@@ -1,0 +1,119 @@
+name: Rust Watcher Tests
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'cli/src/services/watcher/**'
+      - 'cli/src/bin/watcher.rs'
+      - 'cli/Cargo.toml'
+      - '.github/workflows/rust-watcher-tests.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'cli/src/services/watcher/**'
+      - 'cli/src/bin/watcher.rs'
+      - 'cli/Cargo.toml'
+      - '.github/workflows/rust-watcher-tests.yml'
+
+jobs:
+  test:
+    name: Test Rust Watcher
+    runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain $RUSTUP_TOOLCHAIN
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Set Rust version
+        run: |
+          rustup default $RUSTUP_TOOLCHAIN
+          rustup update $RUSTUP_TOOLCHAIN
+          rustup component add clippy
+
+      - name: Check Rust versions
+        run: |
+          rustc --version
+          cargo --version
+
+      - name: Cache Cargo dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            cli/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('cli/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Check formatting
+        run: cargo fmt --check
+        working-directory: cli
+
+      - name: Clippy lint
+        run: cargo clippy -- -D warnings
+        working-directory: cli
+
+      - name: Build watcher binary
+        run: cargo build --bin watcher --release
+        working-directory: cli
+
+      - name: Run watcher unit tests
+        run: cargo test --package code-cli watcher
+        working-directory: cli
+
+      - name: Run watcher integration tests
+        run: cargo test --package code-cli watcher::tests::integration_tests
+        working-directory: cli
+
+      - name: Test watcher binary help
+        run: ./target/release/watcher --help
+        working-directory: cli
+
+  test-cross-platform:
+    name: Test Cross Platform
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            rustup_toolchain: stable
+          - os: windows-latest
+            rustup_toolchain: stable-x86_64-pc-windows-msvc
+          - os: macos-latest
+            rustup_toolchain: stable
+
+    env:
+      RUSTUP_TOOLCHAIN: ${{ matrix.rustup_toolchain }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust (${{ matrix.os }})
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain $RUSTUP_TOOLCHAIN
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        shell: bash
+
+      - name: Set Rust version
+        run: |
+          rustup default $RUSTUP_TOOLCHAIN
+          rustup component add clippy
+        shell: bash
+
+      - name: Build watcher binary (${{ matrix.os }})
+        run: cargo build --bin watcher
+        working-directory: cli
+
+      - name: Basic test (${{ matrix.os }})
+        run: cargo test --package code-cli watcher::types
+        working-directory: cli

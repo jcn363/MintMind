@@ -1,0 +1,81 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "typescript-language-features",
+      "dependencies": {
+        "@vscode/extension-telemetry": "^0.9.8",
+        "@vscode/sync-api-client": "^0.7.2",
+        "@vscode/sync-api-common": "^0.7.2",
+        "@vscode/sync-api-service": "^0.7.3",
+        "@vscode/ts-package-manager": "^0.0.2",
+        "jsonc-parser": "^3.2.0",
+        "semver": "7.5.2",
+        "vscode-tas-client": "^0.1.84",
+        "vscode-uri": "^3.0.3",
+      },
+      "devDependencies": {
+        "@types/node": "22.x",
+        "@types/semver": "^5.5.0",
+      },
+    },
+  },
+  "packages": {
+    "@microsoft/1ds-core-js": ["@microsoft/1ds-core-js@4.3.10", "http://localhost:4873/@microsoft/1ds-core-js/-/1ds-core-js-4.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" } }, "sha512-5fSZmkGwWkH+mrIA5M1GYPZdPM+SjXwCCl2Am7VhFoVwOBJNhRnwvIpAdzw6sFjiebN/rz+/YH0NdxztGZSa9Q=="],
+
+    "@microsoft/1ds-post-js": ["@microsoft/1ds-post-js@4.3.10", "http://localhost:4873/@microsoft/1ds-post-js/-/1ds-post-js-4.3.10.tgz", { "dependencies": { "@microsoft/1ds-core-js": "4.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" } }, "sha512-VSLjc9cT+Y+eTiSfYltJHJCejn8oYr0E6Pq2BMhOEO7F6IyLGYIxzKKvo78ze9x+iHX7KPTATcZ+PFgjGXuNqg=="],
+
+    "@microsoft/applicationinsights-channel-js": ["@microsoft/applicationinsights-channel-js@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-channel-js/-/applicationinsights-channel-js-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-common": "3.3.10", "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-iolFLz1ocWAzIQqHIEjjov3gNTPkgFQ4ArHnBcJEYoffOGWlJt6copaevS5YPI5rHzmbySsengZ8cLJJBBrXzQ=="],
+
+    "@microsoft/applicationinsights-common": ["@microsoft/applicationinsights-common@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-common/-/applicationinsights-common-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-RVIenPIvNgZCbjJdALvLM4rNHgAFuHI7faFzHCgnI6S2WCUNGHeXlQTs9EUUrL+n2TPp9/cd0KKMILU5VVyYiA=="],
+
+    "@microsoft/applicationinsights-core-js": ["@microsoft/applicationinsights-core-js@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-core-js/-/applicationinsights-core-js-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-5yKeyassZTq2l+SAO4npu6LPnbS++UD+M+Ghjm9uRzoBwD8tumFx0/F8AkSVqbniSREd+ztH/2q2foewa2RZyg=="],
+
+    "@microsoft/applicationinsights-shims": ["@microsoft/applicationinsights-shims@3.0.1", "http://localhost:4873/@microsoft/applicationinsights-shims/-/applicationinsights-shims-3.0.1.tgz", { "dependencies": { "@nevware21/ts-utils": ">= 0.9.4 < 2.x" } }, "sha512-DKwboF47H1nb33rSUfjqI6ryX29v+2QWcTrRvcQDA32AZr5Ilkr7whOOSsD1aBzwqX0RJEIP1Z81jfE3NBm/Lg=="],
+
+    "@microsoft/applicationinsights-web-basic": ["@microsoft/applicationinsights-web-basic@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-web-basic/-/applicationinsights-web-basic-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-channel-js": "3.3.10", "@microsoft/applicationinsights-common": "3.3.10", "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-AZib5DAT3NU0VT0nLWEwXrnoMDDgZ/5S4dso01CNU5ELNxLdg+1fvchstlVdMy4FrAnxzs8Wf/GIQNFYOVgpAw=="],
+
+    "@microsoft/dynamicproto-js": ["@microsoft/dynamicproto-js@2.0.3", "http://localhost:4873/@microsoft/dynamicproto-js/-/dynamicproto-js-2.0.3.tgz", { "dependencies": { "@nevware21/ts-utils": ">= 0.10.4 < 2.x" } }, "sha512-JTWTU80rMy3mdxOjjpaiDQsTLZ6YSGGqsjURsY6AUQtIj0udlF/jYmhdLZu8693ZIC0T1IwYnFa0+QeiMnziBA=="],
+
+    "@nevware21/ts-async": ["@nevware21/ts-async@0.5.4", "http://localhost:4873/@nevware21/ts-async/-/ts-async-0.5.4.tgz", { "dependencies": { "@nevware21/ts-utils": ">= 0.11.6 < 2.x" } }, "sha512-IBTyj29GwGlxfzXw2NPnzty+w0Adx61Eze1/lknH/XIVdxtF9UnOpk76tnrHXWa6j84a1RR9hsOcHQPFv9qJjA=="],
+
+    "@nevware21/ts-utils": ["@nevware21/ts-utils@0.12.5", "http://localhost:4873/@nevware21/ts-utils/-/ts-utils-0.12.5.tgz", {}, "sha512-JPQZWPKQJjj7kAftdEZL0XDFfbMgXCGiUAZe0d7EhLC3QlXTlZdSckGqqRIQ2QNl0VTEZyZUvRBw6Ednw089Fw=="],
+
+    "@types/node": ["@types/node@22.19.1", "http://localhost:4873/@types/node/-/node-22.19.1.tgz", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ=="],
+
+    "@types/semver": ["@types/semver@5.5.0", "http://localhost:4873/@types/semver/-/semver-5.5.0.tgz", {}, "sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ=="],
+
+    "@vscode/extension-telemetry": ["@vscode/extension-telemetry@0.9.9", "http://localhost:4873/@vscode/extension-telemetry/-/extension-telemetry-0.9.9.tgz", { "dependencies": { "@microsoft/1ds-core-js": "^4.3.4", "@microsoft/1ds-post-js": "^4.3.4", "@microsoft/applicationinsights-web-basic": "^3.3.4" } }, "sha512-WG/H+H/JRMPnpbXMufXgXlaeJwKszXfAanOERV/nkXBbYyNw0KR84JjUjSg+TgkzYEF/ttRoHTP6fFZWkXdoDQ=="],
+
+    "@vscode/sync-api-client": ["@vscode/sync-api-client@0.7.2", "http://localhost:4873/@vscode/sync-api-client/-/sync-api-client-0.7.2.tgz", { "dependencies": { "@vscode/sync-api-common": "0.7.2", "vscode-uri": "3.0.3" } }, "sha512-HQHz57RVKmR8sTEen1Y/T3r6mzDX7IaUJz/O2RJkn0Qu9ThvCsakLP0N+1iiwPnPfUfmNSwQXbSw8bEQFPcpYQ=="],
+
+    "@vscode/sync-api-common": ["@vscode/sync-api-common@0.7.2", "http://localhost:4873/@vscode/sync-api-common/-/sync-api-common-0.7.2.tgz", {}, "sha512-ne1XEeDIYA3mp4oo1QoF1fqFedd0Vf4ybMmLb9HixbTyXy/qwMNL2p6OjXjOsmx6w2q9eqzGA5W/OPRSJxTTIQ=="],
+
+    "@vscode/sync-api-service": ["@vscode/sync-api-service@0.7.3", "http://localhost:4873/@vscode/sync-api-service/-/sync-api-service-0.7.3.tgz", { "dependencies": { "@vscode/sync-api-common": "0.7.2", "vscode-uri": "3.0.3" } }, "sha512-m2AmmfG4uzfjLMgWRHQ3xnBkdwCiUTO68vdw1XuzMsOb39Jwm9xr5bVVxwOFR9lPC0FfO1H6FUxBhZQvg7itPA=="],
+
+    "@vscode/ts-package-manager": ["@vscode/ts-package-manager@0.0.2", "http://localhost:4873/@vscode/ts-package-manager/-/ts-package-manager-0.0.2.tgz", {}, "sha512-cXPxGbPVTkEQI8mUiWYUwB6j3ga6M9i7yubUOCrjgZ01GeZPMSnaWRprfJ09uuy81wJjY2gfHgLsOgwrGvUBTw=="],
+
+    "jsonc-parser": ["jsonc-parser@3.3.1", "http://localhost:4873/jsonc-parser/-/jsonc-parser-3.3.1.tgz", {}, "sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ=="],
+
+    "lru-cache": ["lru-cache@6.0.0", "http://localhost:4873/lru-cache/-/lru-cache-6.0.0.tgz", { "dependencies": { "yallist": "^4.0.0" } }, "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="],
+
+    "semver": ["semver@7.5.2", "http://localhost:4873/semver/-/semver-7.5.2.tgz", { "dependencies": { "lru-cache": "^6.0.0" }, "bin": { "semver": "bin/semver.js" } }, "sha512-SoftuTROv/cRjCze/scjGyiDtcUyxw1rgYQSZY7XTmtR5hX+dm76iDbTH8TkLPHCQmlbQVSSbNZCPM2hb0knnQ=="],
+
+    "tas-client": ["tas-client@0.2.33", "http://localhost:4873/tas-client/-/tas-client-0.2.33.tgz", {}, "sha512-V+uqV66BOQnWxvI6HjDnE4VkInmYZUQ4dgB7gzaDyFyFSK1i1nF/j7DpS9UbQAgV9NaF1XpcyuavnM1qOeiEIg=="],
+
+    "tslib": ["tslib@2.8.1", "http://localhost:4873/tslib/-/tslib-2.8.1.tgz", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "undici-types": ["undici-types@6.21.0", "http://localhost:4873/undici-types/-/undici-types-6.21.0.tgz", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
+
+    "vscode-tas-client": ["vscode-tas-client@0.1.84", "http://localhost:4873/vscode-tas-client/-/vscode-tas-client-0.1.84.tgz", { "dependencies": { "tas-client": "0.2.33" } }, "sha512-rUTrUopV+70hvx1hW5ebdw1nd6djxubkLvVxjGdyD/r5v/wcVF41LIfiAtbm5qLZDtQdsMH1IaCuDoluoIa88w=="],
+
+    "vscode-uri": ["vscode-uri@3.1.0", "http://localhost:4873/vscode-uri/-/vscode-uri-3.1.0.tgz", {}, "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="],
+
+    "yallist": ["yallist@4.0.0", "http://localhost:4873/yallist/-/yallist-4.0.0.tgz", {}, "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A=="],
+
+    "@vscode/sync-api-client/vscode-uri": ["vscode-uri@3.0.3", "http://localhost:4873/vscode-uri/-/vscode-uri-3.0.3.tgz", {}, "sha512-EcswR2S8bpR7fD0YPeS7r2xXExrScVMxg4MedACaWHEtx9ftCF/qHG1xGkolzTPcEmjTavCQgbVzHUIdTMzFGA=="],
+
+    "@vscode/sync-api-service/vscode-uri": ["vscode-uri@3.0.3", "http://localhost:4873/vscode-uri/-/vscode-uri-3.0.3.tgz", {}, "sha512-EcswR2S8bpR7fD0YPeS7r2xXExrScVMxg4MedACaWHEtx9ftCF/qHG1xGkolzTPcEmjTavCQgbVzHUIdTMzFGA=="],
+  }
+}

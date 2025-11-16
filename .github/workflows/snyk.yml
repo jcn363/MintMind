@@ -1,0 +1,63 @@
+name: Snyk Security Scan
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  schedule:
+    # Weekly scan on Sundays at 00:00 UTC
+    - cron: '0 0 * * 0'
+
+jobs:
+  snyk-code:
+    name: Snyk Code Scan
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Run Snyk Code to check for vulnerabilities
+      uses: snyk/actions/node@master
+      continue-on-error: true
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        args: --code --severity-threshold=medium --sarif-file-output=snyk-code.sarif
+    - name: Upload Snyk Code SARIF report
+      uses: github/codeql-action/upload-sarif@v3
+      if: always()
+      with:
+        sarif_file: snyk-code.sarif
+      continue-on-error: true
+
+  snyk-sca:
+    name: Snyk SCA Scan
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+    - name: Install dependencies
+      run: npm ci
+    - name: Run Snyk SCA to check for dependency vulnerabilities
+      uses: snyk/actions/node@master
+      continue-on-error: true
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      with:
+        args: --all-projects --exclude=build --severity-threshold=high --fail-on=upgradable --sarif-file-output=snyk-sca.sarif
+    - name: Upload Snyk SCA SARIF report
+      uses: github/codeql-action/upload-sarif@v3
+      if: always()
+      with:
+        sarif_file: snyk-sca.sarif
+      continue-on-error: true

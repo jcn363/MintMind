@@ -1,0 +1,1 @@
+/home/user/Desktop/MintMind/extensions/terminal-suggest/src/test/fixtures/symlink-test/real-executable.sh

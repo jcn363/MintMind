@@ -1,0 +1,97 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "vscode-web",
+      "dependencies": {
+        "@microsoft/1ds-core-js": "^3.2.13",
+        "@microsoft/1ds-post-js": "^3.2.13",
+        "@vscode/iconv-lite-umd": "0.7.1",
+        "@vscode/tree-sitter-wasm": "^0.2.0",
+        "@vscode/vscode-languagedetection": "1.0.21",
+        "@xterm/addon-clipboard": "^0.2.0-beta.119",
+        "@xterm/addon-image": "^0.9.0-beta.136",
+        "@xterm/addon-ligatures": "^0.10.0-beta.136",
+        "@xterm/addon-progress": "^0.2.0-beta.42",
+        "@xterm/addon-search": "^0.16.0-beta.136",
+        "@xterm/addon-serialize": "^0.14.0-beta.136",
+        "@xterm/addon-unicode11": "^0.9.0-beta.136",
+        "@xterm/addon-webgl": "^0.19.0-beta.136",
+        "@xterm/xterm": "^5.6.0-beta.136",
+        "jschardet": "3.1.4",
+        "katex": "^0.16.22",
+        "tas-client-umd": "0.2.0",
+        "vscode-oniguruma": "1.7.0",
+        "vscode-textmate": "^9.2.1",
+      },
+    },
+  },
+  "packages": {
+    "@microsoft/1ds-core-js": ["@microsoft/1ds-core-js@3.2.18", "http://localhost:4873/@microsoft/1ds-core-js/-/1ds-core-js-3.2.18.tgz", { "dependencies": { "@microsoft/applicationinsights-core-js": "2.8.18", "@microsoft/applicationinsights-shims": "^2.0.2", "@microsoft/dynamicproto-js": "^1.1.11" } }, "sha512-ytlFv3dfb8OGqvbZP8tSIlNvn3QNYxdsF0k6ikRMWSr6CmBxBi1sliaxc2Q5KuYOuaeWkd8WRm25Rx/UtHcyMg=="],
+
+    "@microsoft/1ds-post-js": ["@microsoft/1ds-post-js@3.2.18", "http://localhost:4873/@microsoft/1ds-post-js/-/1ds-post-js-3.2.18.tgz", { "dependencies": { "@microsoft/1ds-core-js": "3.2.18", "@microsoft/applicationinsights-shims": "^2.0.2", "@microsoft/dynamicproto-js": "^1.1.11" } }, "sha512-Tzjcja4SMyws3UP58kD2edFPNb7BJtx5uCgwf/PWXwDyfbUY1/crsTQdEyR98wy/vorvLDZdQlcL++VMChfYnQ=="],
+
+    "@microsoft/applicationinsights-core-js": ["@microsoft/applicationinsights-core-js@2.8.18", "http://localhost:4873/@microsoft/applicationinsights-core-js/-/applicationinsights-core-js-2.8.18.tgz", { "dependencies": { "@microsoft/applicationinsights-shims": "2.0.2", "@microsoft/dynamicproto-js": "^1.1.11" }, "peerDependencies": { "tslib": "*" } }, "sha512-yPHRZFLpnEO0uSgFPM1BLMRRwjoten9YBbn4pJRbCT4PigLnj748knmWsMwXIdcehtkRTYz78kPYa/LWP7nvmA=="],
+
+    "@microsoft/applicationinsights-shims": ["@microsoft/applicationinsights-shims@2.0.2", "http://localhost:4873/@microsoft/applicationinsights-shims/-/applicationinsights-shims-2.0.2.tgz", {}, "sha512-PoHEgsnmcqruLNHZ/amACqdJ6YYQpED0KSRe6J7gIJTtpZC1FfFU9b1fmDKDKtFoUSrPzEh1qzO3kmRZP0betg=="],
+
+    "@microsoft/dynamicproto-js": ["@microsoft/dynamicproto-js@1.1.11", "http://localhost:4873/@microsoft/dynamicproto-js/-/dynamicproto-js-1.1.11.tgz", {}, "sha512-gNw9z9LbqLV+WadZ6/MMrWwO3e0LuoUH1wve/1iPsBNbgqeVCiB0EZFNNj2lysxS2gkqoF9hmyVaG3MoM1BkxA=="],
+
+    "@vscode/iconv-lite-umd": ["@vscode/iconv-lite-umd@0.7.1", "http://localhost:4873/@vscode/iconv-lite-umd/-/iconv-lite-umd-0.7.1.tgz", {}, "sha512-tK6k0DXFHW7q5+GGuGZO+phpAqpxO4WXl+BLc/8/uOk3RsM2ssAL3CQUQDb1TGfwltjsauhN6S4ghYZzs4sPFw=="],
+
+    "@vscode/tree-sitter-wasm": ["@vscode/tree-sitter-wasm@0.2.0", "http://localhost:4873/@vscode/tree-sitter-wasm/-/tree-sitter-wasm-0.2.0.tgz", {}, "sha512-abvLfKwmriqgdS4WrIzFK7mzdPUVqIIW1UWarp2lA8lpOZ1EDPL1snRBKe7g+5R5ri173mNJEuPLnG/NlpMp4w=="],
+
+    "@vscode/vscode-languagedetection": ["@vscode/vscode-languagedetection@1.0.21", "http://localhost:4873/@vscode/vscode-languagedetection/-/vscode-languagedetection-1.0.21.tgz", { "bin": { "vscode-languagedetection": "cli/index.js" } }, "sha512-zSUH9HYCw5qsCtd7b31yqkpaCU6jhtkKLkvOOA8yTrIRfBSOFb8PPhgmMicD7B/m+t4PwOJXzU1XDtrM9Fd3/g=="],
+
+    "@xterm/addon-clipboard": ["@xterm/addon-clipboard@0.2.0-beta.120", "http://localhost:4873/@xterm/addon-clipboard/-/addon-clipboard-0.2.0-beta.120.tgz", { "dependencies": { "js-base64": "^3.7.5" }, "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-wJB+k7+E3BTERdyopgjwApnOkBUXJSG9RlLg/FFcD7ywxNPzmkKOP6vy5TarFb3wOtuo4LUK8O7M842rnaJ7sg=="],
+
+    "@xterm/addon-image": ["@xterm/addon-image@0.9.0-beta.137", "http://localhost:4873/@xterm/addon-image/-/addon-image-0.9.0-beta.137.tgz", { "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-UPMhz6ASTAD4epf/FIJYvQqdi03qCuBQFdu9yfHEoHKih659a7a6SKuey3C0XkcKOKf4kt/GZ8UTyU1ONguwtQ=="],
+
+    "@xterm/addon-ligatures": ["@xterm/addon-ligatures@0.10.0-beta.137", "http://localhost:4873/@xterm/addon-ligatures/-/addon-ligatures-0.10.0-beta.137.tgz", { "dependencies": { "font-finder": "^1.1.0", "font-ligatures": "^1.4.1" }, "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-vsaWjpbwc1S8tT4fNy3YTxuqJGtmweF/TKcWblIA5PArt7ZOpldAMMOBScs0REOBtCgSXfzA4K4mT/KQ1Fb5NQ=="],
+
+    "@xterm/addon-progress": ["@xterm/addon-progress@0.2.0-beta.43", "http://localhost:4873/@xterm/addon-progress/-/addon-progress-0.2.0-beta.43.tgz", { "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-xjc/5FXRi14qlL34f6ATWItvyl9qtiMlvMFJpZetwj6G0N9gUXyADnd1MpNbN8pf8F5rOaFGFBj/SIjpq2GnVw=="],
+
+    "@xterm/addon-search": ["@xterm/addon-search@0.16.0-beta.137", "http://localhost:4873/@xterm/addon-search/-/addon-search-0.16.0-beta.137.tgz", { "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-qcQQDOuTqOFKxCTaC3ku6Ulx+f9PRAzce5duZXpr0KO4oxQ6CqoNjttDnwwFexER98GhiNF7RpBY3UYXH0gSIQ=="],
+
+    "@xterm/addon-serialize": ["@xterm/addon-serialize@0.14.0-beta.137", "http://localhost:4873/@xterm/addon-serialize/-/addon-serialize-0.14.0-beta.137.tgz", { "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-ABihz9dyV2SBvYB1OHkSFqQj0XludcKFlZdAYyU1FQHZwUL1xeS9b1KbQCYchIZ2uBkBZkMOG6iAR7r7sYFvHw=="],
+
+    "@xterm/addon-unicode11": ["@xterm/addon-unicode11@0.9.0-beta.137", "http://localhost:4873/@xterm/addon-unicode11/-/addon-unicode11-0.9.0-beta.137.tgz", { "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-IrpnaWyjgDaVNnUDVYTC+zh8lZOyIC4JLnjznEbBBoHlRCZQxPI2oiQUYnLdGwlqe8CASbgJWUr22GpWnjg1Xg=="],
+
+    "@xterm/addon-webgl": ["@xterm/addon-webgl@0.19.0-beta.137", "http://localhost:4873/@xterm/addon-webgl/-/addon-webgl-0.19.0-beta.137.tgz", { "peerDependencies": { "@xterm/xterm": "^5.6.0-beta.137" } }, "sha512-WOIHuDo0VoFHVfcUTat7+IoehiHNFG8e2nfPIAotW/81e4If0WWb4t8oCji/TSd/l6MjsTCYrV3sdSyM8icA2Q=="],
+
+    "@xterm/xterm": ["@xterm/xterm@5.6.0-beta.137", "http://localhost:4873/@xterm/xterm/-/xterm-5.6.0-beta.137.tgz", {}, "sha512-ldWd6SNigVXl9Wl9zhzJT0qO8iK5t82iCO86hX5LeJr8X8lWwED22ZDvw4QGIp/2/PyTXA5AxHriLQ/ZfJElgw=="],
+
+    "commander": ["commander@8.3.0", "http://localhost:4873/commander/-/commander-8.3.0.tgz", {}, "sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww=="],
+
+    "font-finder": ["font-finder@1.1.0", "http://localhost:4873/font-finder/-/font-finder-1.1.0.tgz", { "dependencies": { "get-system-fonts": "^2.0.0", "promise-stream-reader": "^1.0.1" } }, "sha512-wpCL2uIbi6GurJbU7ZlQ3nGd61Ho+dSU6U83/xJT5UPFfN35EeCW/rOtS+5k+IuEZu2SYmHzDIPL9eA5tSYRAw=="],
+
+    "font-ligatures": ["font-ligatures@1.4.1", "http://localhost:4873/font-ligatures/-/font-ligatures-1.4.1.tgz", { "dependencies": { "font-finder": "^1.0.3", "lru-cache": "^6.0.0", "opentype.js": "^0.8.0" } }, "sha512-7W6zlfyhvCqShZ5ReUWqmSd9vBaUudW0Hxis+tqUjtHhsPU+L3Grf8mcZAtCiXHTzorhwdRTId2WeH/88gdFkw=="],
+
+    "get-system-fonts": ["get-system-fonts@2.0.2", "http://localhost:4873/get-system-fonts/-/get-system-fonts-2.0.2.tgz", {}, "sha512-zzlgaYnHMIEgHRrfC7x0Qp0Ylhw/sHpM6MHXeVBTYIsvGf5GpbnClB+Q6rAPdn+0gd2oZZIo6Tj3EaWrt4VhDQ=="],
+
+    "js-base64": ["js-base64@3.7.8", "http://localhost:4873/js-base64/-/js-base64-3.7.8.tgz", {}, "sha512-hNngCeKxIUQiEUN3GPJOkz4wF/YvdUdbNL9hsBcMQTkKzboD7T/q3OYOuuPZLUE6dBxSGpwhk5mwuDud7JVAow=="],
+
+    "jschardet": ["jschardet@3.1.4", "http://localhost:4873/jschardet/-/jschardet-3.1.4.tgz", {}, "sha512-/kmVISmrwVwtyYU40iQUOp3SUPk2dhNCMsZBQX0R1/jZ8maaXJ/oZIzUOiyOqcgtLnETFKYChbJ5iDC/eWmFHg=="],
+
+    "katex": ["katex@0.16.25", "http://localhost:4873/katex/-/katex-0.16.25.tgz", { "dependencies": { "commander": "^8.3.0" }, "bin": { "katex": "cli.js" } }, "sha512-woHRUZ/iF23GBP1dkDQMh1QBad9dmr8/PAwNA54VrSOVYgI12MAcE14TqnDdQOdzyEonGzMepYnqBMYdsoAr8Q=="],
+
+    "lru-cache": ["lru-cache@6.0.0", "http://localhost:4873/lru-cache/-/lru-cache-6.0.0.tgz", { "dependencies": { "yallist": "^4.0.0" } }, "sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA=="],
+
+    "opentype.js": ["opentype.js@0.8.0", "http://localhost:4873/opentype.js/-/opentype.js-0.8.0.tgz", { "dependencies": { "tiny-inflate": "^1.0.2" }, "bin": { "ot": "./bin/ot" } }, "sha512-FQHR4oGP+a0m/f6yHoRpBOIbn/5ZWxKd4D/djHVJu8+KpBTYrJda0b7mLcgDEMWXE9xBCJm+qb0yv6FcvPjukg=="],
+
+    "promise-stream-reader": ["promise-stream-reader@1.0.1", "http://localhost:4873/promise-stream-reader/-/promise-stream-reader-1.0.1.tgz", {}, "sha512-Tnxit5trUjBAqqZCGWwjyxhmgMN4hGrtpW3Oc/tRI4bpm/O2+ej72BB08l6JBnGQgVDGCLvHFGjGgQS6vzhwXg=="],
+
+    "tas-client-umd": ["tas-client-umd@0.2.0", "http://localhost:4873/tas-client-umd/-/tas-client-umd-0.2.0.tgz", {}, "sha512-oezN7mJVm5qZDVEby7OzxCLKUpUN5of0rY4dvOWaDF2JZBlGpd3BXceFN8B53qlTaIkVSzP65aAMT0Vc+/N25Q=="],
+
+    "tiny-inflate": ["tiny-inflate@1.0.3", "http://localhost:4873/tiny-inflate/-/tiny-inflate-1.0.3.tgz", {}, "sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw=="],
+
+    "tslib": ["tslib@2.8.1", "http://localhost:4873/tslib/-/tslib-2.8.1.tgz", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "vscode-oniguruma": ["vscode-oniguruma@1.7.0", "http://localhost:4873/vscode-oniguruma/-/vscode-oniguruma-1.7.0.tgz", {}, "sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA=="],
+
+    "vscode-textmate": ["vscode-textmate@9.2.1", "http://localhost:4873/vscode-textmate/-/vscode-textmate-9.2.1.tgz", {}, "sha512-eXiUi2yYFv9bdvgrYtJynA7UemCEkpVNE50S9iBBA08LYG5t9+/TB+8IRS/YoYOubCez2OkSyZ1Q12eQMwzbrw=="],
+
+    "yallist": ["yallist@4.0.0", "http://localhost:4873/yallist/-/yallist-4.0.0.tgz", {}, "sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A=="],
+  }
+}

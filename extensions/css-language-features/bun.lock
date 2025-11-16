@@ -1,0 +1,39 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "css-language-features",
+      "dependencies": {
+        "vscode-languageclient": "^10.0.0-next.17",
+        "vscode-uri": "^3.1.0",
+      },
+      "devDependencies": {
+        "@types/node": "22.x",
+      },
+    },
+  },
+  "packages": {
+    "@isaacs/balanced-match": ["@isaacs/balanced-match@4.0.1", "http://localhost:4873/@isaacs/balanced-match/-/balanced-match-4.0.1.tgz", {}, "sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ=="],
+
+    "@isaacs/brace-expansion": ["@isaacs/brace-expansion@5.0.0", "http://localhost:4873/@isaacs/brace-expansion/-/brace-expansion-5.0.0.tgz", { "dependencies": { "@isaacs/balanced-match": "^4.0.1" } }, "sha512-ZT55BDLV0yv0RBm2czMiZ+SqCGO7AvmOM3G/w2xhVPH+te0aKgFjmBvGlL1dH+ql2tgGO3MVrbb3jCKyvpgnxA=="],
+
+    "@types/node": ["@types/node@22.19.1", "http://localhost:4873/@types/node/-/node-22.19.1.tgz", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ=="],
+
+    "minimatch": ["minimatch@10.1.1", "http://localhost:4873/minimatch/-/minimatch-10.1.1.tgz", { "dependencies": { "@isaacs/brace-expansion": "^5.0.0" } }, "sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ=="],
+
+    "semver": ["semver@7.7.3", "http://localhost:4873/semver/-/semver-7.7.3.tgz", { "bin": { "semver": "bin/semver.js" } }, "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q=="],
+
+    "undici-types": ["undici-types@6.21.0", "http://localhost:4873/undici-types/-/undici-types-6.21.0.tgz", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
+
+    "vscode-jsonrpc": ["vscode-jsonrpc@9.0.0-next.9", "http://localhost:4873/vscode-jsonrpc/-/vscode-jsonrpc-9.0.0-next.9.tgz", {}, "sha512-IM/RHL7ZklEUh1N2Rh4OjRL6D9MyIXq3v+zIkPLXq74hM1eW7WRLP0/cjzNu/baRFC00sFxJm95RBKsT8dXzRQ=="],
+
+    "vscode-languageclient": ["vscode-languageclient@10.0.0-next.17", "http://localhost:4873/vscode-languageclient/-/vscode-languageclient-10.0.0-next.17.tgz", { "dependencies": { "minimatch": "^10.0.3", "semver": "^7.7.1", "vscode-languageserver-protocol": "3.17.6-next.14" } }, "sha512-hSnWKNS8MqMih/HlT7eABuzsvifa9qtGbL8oGH90K9jangtJXx6FKSFIjyWz0Yt8NRz1bGJ7rNM5t8B5+NCSDQ=="],
+
+    "vscode-languageserver-protocol": ["vscode-languageserver-protocol@3.17.6-next.14", "http://localhost:4873/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.6-next.14.tgz", { "dependencies": { "vscode-jsonrpc": "9.0.0-next.9", "vscode-languageserver-types": "3.17.6-next.6" } }, "sha512-0VD83wxN5kI9vgeaIDQnAxgrbZfKiFNIxdFY5LKe3SZdZd+LAJLMrklSrwfefS7hEzaHw6Z++VFdVJJU+gh1Zg=="],
+
+    "vscode-languageserver-types": ["vscode-languageserver-types@3.17.6-next.6", "http://localhost:4873/vscode-languageserver-types/-/vscode-languageserver-types-3.17.6-next.6.tgz", {}, "sha512-aiJY5/yW+xzw7KPNlwi3gQtddq/3EIn5z8X8nCgJfaiAij2R1APKePngv+MUdLdYJBVTLu+Qa0ODsT+pHgYguQ=="],
+
+    "vscode-uri": ["vscode-uri@3.1.0", "http://localhost:4873/vscode-uri/-/vscode-uri-3.1.0.tgz", {}, "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="],
+  }
+}

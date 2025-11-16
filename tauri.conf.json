@@ -1,0 +1,31 @@
+{
+  "productName": "MintMind",
+  "version": "1.107.0",
+  "identifier": "com.mintmind.app",
+  "build": {
+    "frontendDist": "../out",
+    "beforeDevCommand": "npm run watch-client",
+    "beforeBuildCommand": "npm run compile-build",
+    "devUrl": "http://localhost:3000"
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis", "msi", "app", "dmg", "deb", "rpm", "appimage"],
+    "category": "DeveloperTool",
+    "icon": ["../resources/win32/code.ico", "../resources/darwin/code.icns", "../resources/linux/code.png"],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper",
+        "silent": true
+      }
+    },
+    "macOS": {
+      "minimumSystemVersion": "12.0"
+    },
+    "linux": {
+      "deb": {
+        "depends": []
+      }
+    }
+  }
+}

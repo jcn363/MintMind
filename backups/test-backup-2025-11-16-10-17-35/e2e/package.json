@@ -1,0 +1,21 @@
+{
+  "name": "mintmind-e2e-tests",
+  "version": "1.0.0",
+  "description": "Tests E2E para MintMind usando Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "install-browsers": "playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.0.0"
+  },
+  "keywords": ["e2e", "testing", "playwright", "mintmind"],
+  "author": "MintMind Team",
+  "license": "MIT"
+}

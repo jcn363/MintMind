@@ -1,0 +1,229 @@
+name: Bundle Analysis
+
+on:
+  pull_request:
+    branches:
+      - main
+      - 'release/*'
+  push:
+    branches:
+      - main
+      - 'release/*'
+  workflow_dispatch:
+
+permissions: {}
+
+env:
+  VSCODE_QUALITY: 'oss'
+  BUNDLE_SIZE_WARNING: 5000000  # 5MB warning threshold
+  BUNDLE_SIZE_ERROR: 10000000   # 10MB error threshold
+
+jobs:
+  bundle-analysis:
+    name: Bundle Analysis
+    runs-on: [ self-hosted, 1ES.Pool=1es-vscode-oss-ubuntu-22.04-x64 ]
+    steps:
+      - name: Checkout microsoft/vscode
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+
+      - name: Prepare node_modules cache key
+        run: mkdir -p .build && node build/azure-pipelines/common/computeNodeModulesCacheKey.js compile $(node -p process.arch) > .build/packagelockhash
+
+      - name: Restore node_modules cache
+        id: cache-node-modules
+        uses: actions/cache/restore@v4
+        with:
+          path: .build/node_modules_cache
+          key: "node_modules-compile-${{ hashFiles('.build/packagelockhash') }}"
+
+      - name: Extract node_modules cache
+        if: steps.cache-node-modules.outputs.cache-hit == 'true'
+        run: tar -xzf .build/node_modules_cache/cache.tgz
+
+      - name: Install build tools
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: sudo apt update -y && sudo apt install -y build-essential pkg-config libx11-dev libx11-xcb-dev libxkbfile-dev libnotify-bin libkrb5-dev
+
+      - name: Install dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: |
+          set -e
+
+          for i in {1..5}; do # try 5 times
+            bun install && break
+            if [ $i -eq 5 ]; then
+              echo "Npm install failed too many times" >&2
+              exit 1
+            fi
+            echo "Npm install failed $i, trying again..."
+          done
+        env:
+          ELECTRON_SKIP_BINARY_DOWNLOAD: 1
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create node_modules archive
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
+        run: |
+          set -e
+          node build/azure-pipelines/common/listNodeModules.js .build/node_modules_list.txt
+          mkdir -p .build/node_modules_cache
+          tar -czf .build/node_modules_cache/cache.tgz --files-from .build/node_modules_list.txt
+
+      - name: Compile with bundle analysis
+        run: |
+          set -e
+          # Build con análisis de bundles activado
+          ANALYZE_BUNDLE=true node build-alternative.mjs build main
+
+          # Generar stats de webpack si no existen
+          if [ ! -f "out/main-stats.json" ]; then
+            echo "Generando stats de webpack..."
+            bun run webpack --mode production --profile --json > out/main-stats.json
+          fi
+
+      - name: Generate bundle reports
+        run: node scripts/analyze-bundles.js
+
+      - name: Check bundle sizes
+        run: |
+          set -e
+
+          # Crear directorio de reportes si no existe
+          mkdir -p bundle-reports
+
+          # Script para verificar tamaños de bundles
+          node -e "
+          const fs = require('fs');
+          const path = require('path');
+
+          const reportsDir = 'bundle-reports';
+          const warningThreshold = process.env.BUNDLE_SIZE_WARNING || 5000000;
+          const errorThreshold = process.env.BUNDLE_SIZE_ERROR || 10000000;
+
+          let hasWarnings = false;
+          let hasErrors = false;
+
+          // Buscar archivos JSON de reportes
+          const reportFiles = fs.readdirSync(reportsDir).filter(f => f.endsWith('.json'));
+
+          reportFiles.forEach(file => {
+            const filePath = path.join(reportsDir, file);
+            const stats = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+
+            if (stats.assets) {
+              stats.assets.forEach(asset => {
+                const size = asset.size || 0;
+                const name = asset.name || 'unknown';
+
+                console.log(\`📦 \${name}: \${(size / 1024 / 1024).toFixed(2)}MB\`);
+
+                if (size > errorThreshold) {
+                  console.log(\`❌ ERROR: Bundle \${name} excede límite de \${(errorThreshold / 1024 / 1024).toFixed(2)}MB\`);
+                  hasErrors = true;
+                } else if (size > warningThreshold) {
+                  console.log(\`⚠️  WARNING: Bundle \${name} excede límite recomendado de \${(warningThreshold / 1024 / 1024).toFixed(2)}MB\`);
+                  hasWarnings = true;
+                }
+              });
+            }
+          });
+
+          // Escribir resultados para GitHub Actions
+          fs.writeFileSync('bundle-analysis-results.json', JSON.stringify({
+            hasErrors,
+            hasWarnings,
+            checkedAt: new Date().toISOString(),
+            reportFiles: reportFiles
+          }));
+
+          if (hasErrors) {
+            console.log('::error::Uno o más bundles exceden los límites de tamaño permitidos');
+            process.exit(1);
+          }
+          "
+
+      - name: Upload bundle reports
+        uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: bundle-analysis-reports-${{ github.run_id }}
+          path: bundle-reports/
+          retention-days: 30
+
+      - name: Upload bundle analysis results
+        uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: bundle-analysis-results-${{ github.run_id }}
+          path: bundle-analysis-results.json
+          retention-days: 30
+
+      - name: Comment PR with bundle analysis summary
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            // Leer resultados del análisis
+            let results = { hasErrors: false, hasWarnings: false, reportFiles: [] };
+            try {
+              results = JSON.parse(fs.readFileSync('bundle-analysis-results.json', 'utf8'));
+            } catch (e) {
+              console.log('No se encontraron resultados de análisis');
+            }
+
+            // Leer README de reportes
+            let readmeContent = '';
+            try {
+              readmeContent = fs.readFileSync('bundle-reports/README.md', 'utf8');
+            } catch (e) {
+              console.log('No se encontró README de reportes');
+            }
+
+            // Generar comentario
+            let comment = '## 📊 Análisis de Bundles\n\n';
+
+            if (results.hasErrors) {
+              comment += '❌ **ERROR**: Uno o más bundles exceden los límites de tamaño permitidos.\n\n';
+            } else if (results.hasWarnings) {
+              comment += '⚠️  **WARNING**: Algunos bundles exceden los límites recomendados.\n\n';
+            } else {
+              comment += '✅ **SUCCESS**: Todos los bundles están dentro de los límites aceptables.\n\n';
+            }
+
+            comment += '### Reportes Generados\n';
+            results.reportFiles.forEach(file => {
+              if (file.endsWith('.html')) {
+                comment += \`- [Reporte Visual](\${process.env.GITHUB_SERVER_URL}/\${process.env.GITHUB_REPOSITORY}/actions/runs/\${process.env.GITHUB_RUN_ID})\n\`;
+              } else if (file.endsWith('.json')) {
+                comment += \`- [Datos JSON](\${process.env.GITHUB_SERVER_URL}/\${process.env.GITHUB_REPOSITORY}/actions/runs/\${process.env.GITHUB_RUN_ID})\n\`;
+              }
+            });
+
+            comment += '\n### Cómo acceder a los reportes\n';
+            comment += '1. Descarga los artifacts desde la sección "Artifacts" arriba\n';
+            comment += '2. Abre los archivos `.html` en tu navegador para análisis visual\n';
+            comment += '3. Revisa los archivos `.json` para análisis programático\n\n';
+
+            comment += '### Límites de tamaño\n';
+            comment += '- ⚠️  Límite recomendado: 5MB\n';
+            comment += '- ❌ Límite máximo: 10MB\n\n';
+
+            if (readmeContent) {
+              comment += '### Información adicional\n' + readmeContent;
+            }
+
+            // Publicar comentario
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });

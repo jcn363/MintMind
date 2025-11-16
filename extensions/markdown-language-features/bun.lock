@@ -1,0 +1,175 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "markdown-language-features",
+      "dependencies": {
+        "@vscode/extension-telemetry": "^0.9.8",
+        "dompurify": "^3.2.7",
+        "highlight.js": "^11.8.0",
+        "markdown-it": "^12.3.2",
+        "markdown-it-front-matter": "^0.2.4",
+        "morphdom": "^2.7.4",
+        "picomatch": "^2.3.1",
+        "punycode": "^2.3.1",
+        "vscode-languageclient": "^8.0.2",
+        "vscode-languageserver-textdocument": "^1.0.11",
+        "vscode-markdown-languageserver": "^0.5.0-alpha.12",
+        "vscode-uri": "^3.0.3",
+      },
+      "devDependencies": {
+        "@types/dompurify": "^3.0.5",
+        "@types/lodash.throttle": "^4.1.9",
+        "@types/markdown-it": "12.2.3",
+        "@types/node": "22.x",
+        "@types/picomatch": "^2.3.0",
+        "@types/vscode-notebook-renderer": "^1.60.0",
+        "@types/vscode-webview": "^1.57.0",
+        "@vscode/markdown-it-katex": "^1.1.1",
+        "lodash.throttle": "^4.1.1",
+        "vscode-languageserver-types": "^3.17.2",
+        "vscode-markdown-languageservice": "^0.3.0-alpha.3",
+      },
+    },
+  },
+  "packages": {
+    "@microsoft/1ds-core-js": ["@microsoft/1ds-core-js@4.3.10", "http://localhost:4873/@microsoft/1ds-core-js/-/1ds-core-js-4.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" } }, "sha512-5fSZmkGwWkH+mrIA5M1GYPZdPM+SjXwCCl2Am7VhFoVwOBJNhRnwvIpAdzw6sFjiebN/rz+/YH0NdxztGZSa9Q=="],
+
+    "@microsoft/1ds-post-js": ["@microsoft/1ds-post-js@4.3.10", "http://localhost:4873/@microsoft/1ds-post-js/-/1ds-post-js-4.3.10.tgz", { "dependencies": { "@microsoft/1ds-core-js": "4.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" } }, "sha512-VSLjc9cT+Y+eTiSfYltJHJCejn8oYr0E6Pq2BMhOEO7F6IyLGYIxzKKvo78ze9x+iHX7KPTATcZ+PFgjGXuNqg=="],
+
+    "@microsoft/applicationinsights-channel-js": ["@microsoft/applicationinsights-channel-js@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-channel-js/-/applicationinsights-channel-js-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-common": "3.3.10", "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-iolFLz1ocWAzIQqHIEjjov3gNTPkgFQ4ArHnBcJEYoffOGWlJt6copaevS5YPI5rHzmbySsengZ8cLJJBBrXzQ=="],
+
+    "@microsoft/applicationinsights-common": ["@microsoft/applicationinsights-common@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-common/-/applicationinsights-common-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-RVIenPIvNgZCbjJdALvLM4rNHgAFuHI7faFzHCgnI6S2WCUNGHeXlQTs9EUUrL+n2TPp9/cd0KKMILU5VVyYiA=="],
+
+    "@microsoft/applicationinsights-core-js": ["@microsoft/applicationinsights-core-js@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-core-js/-/applicationinsights-core-js-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-5yKeyassZTq2l+SAO4npu6LPnbS++UD+M+Ghjm9uRzoBwD8tumFx0/F8AkSVqbniSREd+ztH/2q2foewa2RZyg=="],
+
+    "@microsoft/applicationinsights-shims": ["@microsoft/applicationinsights-shims@3.0.1", "http://localhost:4873/@microsoft/applicationinsights-shims/-/applicationinsights-shims-3.0.1.tgz", { "dependencies": { "@nevware21/ts-utils": ">= 0.9.4 < 2.x" } }, "sha512-DKwboF47H1nb33rSUfjqI6ryX29v+2QWcTrRvcQDA32AZr5Ilkr7whOOSsD1aBzwqX0RJEIP1Z81jfE3NBm/Lg=="],
+
+    "@microsoft/applicationinsights-web-basic": ["@microsoft/applicationinsights-web-basic@3.3.10", "http://localhost:4873/@microsoft/applicationinsights-web-basic/-/applicationinsights-web-basic-3.3.10.tgz", { "dependencies": { "@microsoft/applicationinsights-channel-js": "3.3.10", "@microsoft/applicationinsights-common": "3.3.10", "@microsoft/applicationinsights-core-js": "3.3.10", "@microsoft/applicationinsights-shims": "3.0.1", "@microsoft/dynamicproto-js": "^2.0.3", "@nevware21/ts-async": ">= 0.5.4 < 2.x", "@nevware21/ts-utils": ">= 0.11.8 < 2.x" }, "peerDependencies": { "tslib": ">= 1.0.0" } }, "sha512-AZib5DAT3NU0VT0nLWEwXrnoMDDgZ/5S4dso01CNU5ELNxLdg+1fvchstlVdMy4FrAnxzs8Wf/GIQNFYOVgpAw=="],
+
+    "@microsoft/dynamicproto-js": ["@microsoft/dynamicproto-js@2.0.3", "http://localhost:4873/@microsoft/dynamicproto-js/-/dynamicproto-js-2.0.3.tgz", { "dependencies": { "@nevware21/ts-utils": ">= 0.10.4 < 2.x" } }, "sha512-JTWTU80rMy3mdxOjjpaiDQsTLZ6YSGGqsjURsY6AUQtIj0udlF/jYmhdLZu8693ZIC0T1IwYnFa0+QeiMnziBA=="],
+
+    "@nevware21/ts-async": ["@nevware21/ts-async@0.5.4", "http://localhost:4873/@nevware21/ts-async/-/ts-async-0.5.4.tgz", { "dependencies": { "@nevware21/ts-utils": ">= 0.11.6 < 2.x" } }, "sha512-IBTyj29GwGlxfzXw2NPnzty+w0Adx61Eze1/lknH/XIVdxtF9UnOpk76tnrHXWa6j84a1RR9hsOcHQPFv9qJjA=="],
+
+    "@nevware21/ts-utils": ["@nevware21/ts-utils@0.12.5", "http://localhost:4873/@nevware21/ts-utils/-/ts-utils-0.12.5.tgz", {}, "sha512-JPQZWPKQJjj7kAftdEZL0XDFfbMgXCGiUAZe0d7EhLC3QlXTlZdSckGqqRIQ2QNl0VTEZyZUvRBw6Ednw089Fw=="],
+
+    "@types/dompurify": ["@types/dompurify@3.2.0", "http://localhost:4873/@types/dompurify/-/dompurify-3.2.0.tgz", { "dependencies": { "dompurify": "*" } }, "sha512-Fgg31wv9QbLDA0SpTOXO3MaxySc4DKGLi8sna4/Utjo4r3ZRPdCt4UQee8BWr+Q5z21yifghREPJGYaEOEIACg=="],
+
+    "@types/linkify-it": ["@types/linkify-it@5.0.0", "http://localhost:4873/@types/linkify-it/-/linkify-it-5.0.0.tgz", {}, "sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q=="],
+
+    "@types/lodash": ["@types/lodash@4.17.20", "http://localhost:4873/@types/lodash/-/lodash-4.17.20.tgz", {}, "sha512-H3MHACvFUEiujabxhaI/ImO6gUrd8oOurg7LQtS7mbwIXA/cUqWrvBsaeJ23aZEPk1TAYkurjfMbSELfoCXlGA=="],
+
+    "@types/lodash.throttle": ["@types/lodash.throttle@4.1.9", "http://localhost:4873/@types/lodash.throttle/-/lodash.throttle-4.1.9.tgz", { "dependencies": { "@types/lodash": "*" } }, "sha512-PCPVfpfueguWZQB7pJQK890F2scYKoDUL3iM522AptHWn7d5NQmeS/LTEHIcLr5PaTzl3dK2Z0xSUHHTHwaL5g=="],
+
+    "@types/markdown-it": ["@types/markdown-it@12.2.3", "http://localhost:4873/@types/markdown-it/-/markdown-it-12.2.3.tgz", { "dependencies": { "@types/linkify-it": "*", "@types/mdurl": "*" } }, "sha512-GKMHFfv3458yYy+v/N8gjufHO6MSZKCOXpZc5GXIWWy8uldwfmPn98vp81gZ5f9SVw8YYBctgfJ22a2d7AOMeQ=="],
+
+    "@types/mdurl": ["@types/mdurl@2.0.0", "http://localhost:4873/@types/mdurl/-/mdurl-2.0.0.tgz", {}, "sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg=="],
+
+    "@types/node": ["@types/node@22.19.1", "http://localhost:4873/@types/node/-/node-22.19.1.tgz", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ=="],
+
+    "@types/picomatch": ["@types/picomatch@2.3.4", "http://localhost:4873/@types/picomatch/-/picomatch-2.3.4.tgz", {}, "sha512-0so8lU8O5zatZS/2Fi4zrwks+vZv7e0dygrgEZXljODXBig97l4cPQD+9LabXfGJOWwoRkTVz6Q4edZvD12UOA=="],
+
+    "@types/trusted-types": ["@types/trusted-types@2.0.7", "http://localhost:4873/@types/trusted-types/-/trusted-types-2.0.7.tgz", {}, "sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw=="],
+
+    "@types/vscode-notebook-renderer": ["@types/vscode-notebook-renderer@1.72.4", "http://localhost:4873/@types/vscode-notebook-renderer/-/vscode-notebook-renderer-1.72.4.tgz", {}, "sha512-bdKO41c6Dc24pH/O/eM/jqfCwGH4zc76o/g/6Gt1y/eg/bvvqP2/VpbV+Sa5Te2sZekFRcbYnSSFTKo3wcVGUg=="],
+
+    "@types/vscode-webview": ["@types/vscode-webview@1.57.5", "http://localhost:4873/@types/vscode-webview/-/vscode-webview-1.57.5.tgz", {}, "sha512-iBAUYNYkz+uk1kdsq05fEcoh8gJmwT3lqqFPN7MGyjQ3HVloViMdo7ZJ8DFIP8WOK74PjOEilosqAyxV2iUFUw=="],
+
+    "@vscode/extension-telemetry": ["@vscode/extension-telemetry@0.9.9", "http://localhost:4873/@vscode/extension-telemetry/-/extension-telemetry-0.9.9.tgz", { "dependencies": { "@microsoft/1ds-core-js": "^4.3.4", "@microsoft/1ds-post-js": "^4.3.4", "@microsoft/applicationinsights-web-basic": "^3.3.4" } }, "sha512-WG/H+H/JRMPnpbXMufXgXlaeJwKszXfAanOERV/nkXBbYyNw0KR84JjUjSg+TgkzYEF/ttRoHTP6fFZWkXdoDQ=="],
+
+    "@vscode/l10n": ["@vscode/l10n@0.0.10", "http://localhost:4873/@vscode/l10n/-/l10n-0.0.10.tgz", {}, "sha512-E1OCmDcDWa0Ya7vtSjp/XfHFGqYJfh+YPC1RkATU71fTac+j1JjCcB3qwSzmlKAighx2WxhLlfhS0RwAN++PFQ=="],
+
+    "@vscode/markdown-it-katex": ["@vscode/markdown-it-katex@1.1.2", "http://localhost:4873/@vscode/markdown-it-katex/-/markdown-it-katex-1.1.2.tgz", { "dependencies": { "katex": "^0.16.4" } }, "sha512-+4IIv5PgrmhKvW/3LpkpkGg257OViEhXkOOgCyj5KMsjsOfnRXkni8XAuuF9Ui5p3B8WnUovlDXAQNb8RJ/RaQ=="],
+
+    "argparse": ["argparse@2.0.1", "http://localhost:4873/argparse/-/argparse-2.0.1.tgz", {}, "sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q=="],
+
+    "balanced-match": ["balanced-match@1.0.2", "http://localhost:4873/balanced-match/-/balanced-match-1.0.2.tgz", {}, "sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw=="],
+
+    "boolbase": ["boolbase@1.0.0", "http://localhost:4873/boolbase/-/boolbase-1.0.0.tgz", {}, "sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww=="],
+
+    "brace-expansion": ["brace-expansion@2.0.2", "http://localhost:4873/brace-expansion/-/brace-expansion-2.0.2.tgz", { "dependencies": { "balanced-match": "^1.0.0" } }, "sha512-Jt0vHyM+jmUBqojB7E1NIYadt0vI0Qxjxd2TErW94wDz+E2LAm5vKMXXwg6ZZBTHPuUlDgQHKXvjGBdfcF1ZDQ=="],
+
+    "commander": ["commander@8.3.0", "http://localhost:4873/commander/-/commander-8.3.0.tgz", {}, "sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww=="],
+
+    "css-select": ["css-select@5.2.2", "http://localhost:4873/css-select/-/css-select-5.2.2.tgz", { "dependencies": { "boolbase": "^1.0.0", "css-what": "^6.1.0", "domhandler": "^5.0.2", "domutils": "^3.0.1", "nth-check": "^2.0.1" } }, "sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw=="],
+
+    "css-what": ["css-what@6.2.2", "http://localhost:4873/css-what/-/css-what-6.2.2.tgz", {}, "sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA=="],
+
+    "dom-serializer": ["dom-serializer@2.0.0", "http://localhost:4873/dom-serializer/-/dom-serializer-2.0.0.tgz", { "dependencies": { "domelementtype": "^2.3.0", "domhandler": "^5.0.2", "entities": "^4.2.0" } }, "sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg=="],
+
+    "domelementtype": ["domelementtype@2.3.0", "http://localhost:4873/domelementtype/-/domelementtype-2.3.0.tgz", {}, "sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw=="],
+
+    "domhandler": ["domhandler@5.0.3", "http://localhost:4873/domhandler/-/domhandler-5.0.3.tgz", { "dependencies": { "domelementtype": "^2.3.0" } }, "sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w=="],
+
+    "dompurify": ["dompurify@3.3.0", "http://localhost:4873/dompurify/-/dompurify-3.3.0.tgz", { "optionalDependencies": { "@types/trusted-types": "^2.0.7" } }, "sha512-r+f6MYR1gGN1eJv0TVQbhA7if/U7P87cdPl3HN5rikqaBSBxLiCb/b9O+2eG0cxz0ghyU+mU1QkbsOwERMYlWQ=="],
+
+    "domutils": ["domutils@3.2.2", "http://localhost:4873/domutils/-/domutils-3.2.2.tgz", { "dependencies": { "dom-serializer": "^2.0.0", "domelementtype": "^2.3.0", "domhandler": "^5.0.3" } }, "sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw=="],
+
+    "entities": ["entities@2.1.0", "http://localhost:4873/entities/-/entities-2.1.0.tgz", {}, "sha512-hCx1oky9PFrJ611mf0ifBLBRW8lUUVRlFolb5gWRfIELabBlbp9xZvrqZLZAs+NxFnbfQoeGd8wDkygjg7U85w=="],
+
+    "he": ["he@1.2.0", "http://localhost:4873/he/-/he-1.2.0.tgz", { "bin": { "he": "bin/he" } }, "sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw=="],
+
+    "highlight.js": ["highlight.js@11.11.1", "http://localhost:4873/highlight.js/-/highlight.js-11.11.1.tgz", {}, "sha512-Xwwo44whKBVCYoliBQwaPvtd/2tYFkRQtXDWj1nackaV2JPXx3L0+Jvd8/qCJ2p+ML0/XVkJ2q+Mr+UVdpJK5w=="],
+
+    "katex": ["katex@0.16.25", "http://localhost:4873/katex/-/katex-0.16.25.tgz", { "dependencies": { "commander": "^8.3.0" }, "bin": { "katex": "cli.js" } }, "sha512-woHRUZ/iF23GBP1dkDQMh1QBad9dmr8/PAwNA54VrSOVYgI12MAcE14TqnDdQOdzyEonGzMepYnqBMYdsoAr8Q=="],
+
+    "linkify-it": ["linkify-it@3.0.3", "http://localhost:4873/linkify-it/-/linkify-it-3.0.3.tgz", { "dependencies": { "uc.micro": "^1.0.1" } }, "sha512-ynTsyrFSdE5oZ/O9GEf00kPngmOfVwazR5GKDq6EYfhlpFug3J2zybX56a2PRRpc9P+FuSoGNAwjlbDs9jJBPQ=="],
+
+    "lodash.throttle": ["lodash.throttle@4.1.1", "http://localhost:4873/lodash.throttle/-/lodash.throttle-4.1.1.tgz", {}, "sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ=="],
+
+    "markdown-it": ["markdown-it@12.3.2", "http://localhost:4873/markdown-it/-/markdown-it-12.3.2.tgz", { "dependencies": { "argparse": "^2.0.1", "entities": "~2.1.0", "linkify-it": "^3.0.1", "mdurl": "^1.0.1", "uc.micro": "^1.0.5" }, "bin": { "markdown-it": "bin/markdown-it.js" } }, "sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg=="],
+
+    "markdown-it-front-matter": ["markdown-it-front-matter@0.2.4", "http://localhost:4873/markdown-it-front-matter/-/markdown-it-front-matter-0.2.4.tgz", {}, "sha512-25GUs0yjS2hLl8zAemVndeEzThB1p42yxuDEKbd4JlL3jiz+jsm6e56Ya8B0VREOkNxLYB4TTwaoPJ3ElMmW+w=="],
+
+    "mdurl": ["mdurl@1.0.1", "http://localhost:4873/mdurl/-/mdurl-1.0.1.tgz", {}, "sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g=="],
+
+    "minimatch": ["minimatch@5.1.6", "http://localhost:4873/minimatch/-/minimatch-5.1.6.tgz", { "dependencies": { "brace-expansion": "^2.0.1" } }, "sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g=="],
+
+    "morphdom": ["morphdom@2.7.7", "http://localhost:4873/morphdom/-/morphdom-2.7.7.tgz", {}, "sha512-04GmsiBcalrSCNmzfo+UjU8tt3PhZJKzcOy+r1FlGA7/zri8wre3I1WkYN9PT3sIeIKfW9bpyElA+VzOg2E24g=="],
+
+    "node-html-parser": ["node-html-parser@6.1.13", "http://localhost:4873/node-html-parser/-/node-html-parser-6.1.13.tgz", { "dependencies": { "css-select": "^5.1.0", "he": "1.2.0" } }, "sha512-qIsTMOY4C/dAa5Q5vsobRpOOvPfC4pB61UVW2uSwZNUp0QU/jCekTal1vMmbO0DgdHeLUJpv/ARmDqErVxA3Sg=="],
+
+    "nth-check": ["nth-check@2.1.1", "http://localhost:4873/nth-check/-/nth-check-2.1.1.tgz", { "dependencies": { "boolbase": "^1.0.0" } }, "sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w=="],
+
+    "picomatch": ["picomatch@2.3.1", "http://localhost:4873/picomatch/-/picomatch-2.3.1.tgz", {}, "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="],
+
+    "punycode": ["punycode@2.3.1", "http://localhost:4873/punycode/-/punycode-2.3.1.tgz", {}, "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg=="],
+
+    "semver": ["semver@7.7.3", "http://localhost:4873/semver/-/semver-7.7.3.tgz", { "bin": { "semver": "bin/semver.js" } }, "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q=="],
+
+    "tslib": ["tslib@2.8.1", "http://localhost:4873/tslib/-/tslib-2.8.1.tgz", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
+
+    "uc.micro": ["uc.micro@1.0.6", "http://localhost:4873/uc.micro/-/uc.micro-1.0.6.tgz", {}, "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="],
+
+    "undici-types": ["undici-types@6.21.0", "http://localhost:4873/undici-types/-/undici-types-6.21.0.tgz", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
+
+    "vscode-jsonrpc": ["vscode-jsonrpc@8.1.0", "http://localhost:4873/vscode-jsonrpc/-/vscode-jsonrpc-8.1.0.tgz", {}, "sha512-6TDy/abTQk+zDGYazgbIPc+4JoXdwC8NHU9Pbn4UJP1fehUyZmM4RHp5IthX7A6L5KS30PRui+j+tbbMMMafdw=="],
+
+    "vscode-languageclient": ["vscode-languageclient@8.1.0", "http://localhost:4873/vscode-languageclient/-/vscode-languageclient-8.1.0.tgz", { "dependencies": { "minimatch": "^5.1.0", "semver": "^7.3.7", "vscode-languageserver-protocol": "3.17.3" } }, "sha512-GL4QdbYUF/XxQlAsvYWZRV3V34kOkpRlvV60/72ghHfsYFnS/v2MANZ9P6sHmxFcZKOse8O+L9G7Czg0NUWing=="],
+
+    "vscode-languageserver": ["vscode-languageserver@8.1.0", "http://localhost:4873/vscode-languageserver/-/vscode-languageserver-8.1.0.tgz", { "dependencies": { "vscode-languageserver-protocol": "3.17.3" }, "bin": { "installServerIntoExtension": "bin/installServerIntoExtension" } }, "sha512-eUt8f1z2N2IEUDBsKaNapkz7jl5QpskN2Y0G01T/ItMxBxw1fJwvtySGB9QMecatne8jFIWJGWI61dWjyTLQsw=="],
+
+    "vscode-languageserver-protocol": ["vscode-languageserver-protocol@3.17.3", "http://localhost:4873/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.3.tgz", { "dependencies": { "vscode-jsonrpc": "8.1.0", "vscode-languageserver-types": "3.17.3" } }, "sha512-924/h0AqsMtA5yK22GgMtCYiMdCOtWTSGgUOkgEDX+wk2b0x4sAfLiO4NxBxqbiVtz7K7/1/RgVrVI0NClZwqA=="],
+
+    "vscode-languageserver-textdocument": ["vscode-languageserver-textdocument@1.0.12", "http://localhost:4873/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.12.tgz", {}, "sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA=="],
+
+    "vscode-languageserver-types": ["vscode-languageserver-types@3.17.5", "http://localhost:4873/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz", {}, "sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg=="],
+
+    "vscode-markdown-languageserver": ["vscode-markdown-languageserver@0.5.0-alpha.12", "http://localhost:4873/vscode-markdown-languageserver/-/vscode-markdown-languageserver-0.5.0-alpha.12.tgz", { "dependencies": { "@vscode/l10n": "^0.0.11", "vscode-languageserver": "^8.1.0", "vscode-languageserver-textdocument": "^1.0.8", "vscode-languageserver-types": "^3.17.3", "vscode-markdown-languageservice": "^0.5.0-alpha.11", "vscode-uri": "^3.0.7" } }, "sha512-cDRJKwWPZBHrrwufTHrhuZqGgBEGJcYo29Iwhvgh2BgTnIB+fp6Vs62LlqNUu25qsDjmZLLkIEQxntcX4kbfUQ=="],
+
+    "vscode-markdown-languageservice": ["vscode-markdown-languageservice@0.3.0", "http://localhost:4873/vscode-markdown-languageservice/-/vscode-markdown-languageservice-0.3.0.tgz", { "dependencies": { "@vscode/l10n": "^0.0.10", "picomatch": "^2.3.1", "vscode-languageserver-textdocument": "^1.0.5", "vscode-languageserver-types": "^3.17.1", "vscode-uri": "^3.0.3" } }, "sha512-+HGaZSsZGHbNdDyjfdkDws9a9oiqUsfnW5AtZQpgcxCavP5Gwom77S4XXzL/uEUUZ5u1K/0VTOhqha7qPcCW5w=="],
+
+    "vscode-uri": ["vscode-uri@3.1.0", "http://localhost:4873/vscode-uri/-/vscode-uri-3.1.0.tgz", {}, "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="],
+
+    "dom-serializer/entities": ["entities@4.5.0", "http://localhost:4873/entities/-/entities-4.5.0.tgz", {}, "sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw=="],
+
+    "vscode-languageserver-protocol/vscode-languageserver-types": ["vscode-languageserver-types@3.17.3", "http://localhost:4873/vscode-languageserver-types/-/vscode-languageserver-types-3.17.3.tgz", {}, "sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA=="],
+
+    "vscode-markdown-languageserver/@vscode/l10n": ["@vscode/l10n@0.0.11", "http://localhost:4873/@vscode/l10n/-/l10n-0.0.11.tgz", {}, "sha512-ukOMWnCg1tCvT7WnDfsUKQOFDQGsyR5tNgRpwmqi+5/vzU3ghdDXzvIM4IOPdSb3OeSsBNvmSL8nxIVOqi2WXA=="],
+
+    "vscode-markdown-languageserver/vscode-markdown-languageservice": ["vscode-markdown-languageservice@0.5.0-alpha.11", "http://localhost:4873/vscode-markdown-languageservice/-/vscode-markdown-languageservice-0.5.0-alpha.11.tgz", { "dependencies": { "@vscode/l10n": "^0.0.10", "node-html-parser": "^6.1.5", "picomatch": "^2.3.1", "vscode-languageserver-protocol": "^3.17.1", "vscode-languageserver-textdocument": "^1.0.11", "vscode-uri": "^3.0.7" } }, "sha512-P1uBMAD5iylgpcweWCU1kQwk8SZngktnljXsZk1vFPorXv1mrEI7BkBpOUU0fhVssKgvFlCNLkI7KmwZLC7pdA=="],
+
+    "vscode-markdown-languageserver/vscode-markdown-languageservice/@vscode/l10n": ["@vscode/l10n@0.0.10", "http://localhost:4873/@vscode/l10n/-/l10n-0.0.10.tgz", {}, "sha512-E1OCmDcDWa0Ya7vtSjp/XfHFGqYJfh+YPC1RkATU71fTac+j1JjCcB3qwSzmlKAighx2WxhLlfhS0RwAN++PFQ=="],
+  }
+}

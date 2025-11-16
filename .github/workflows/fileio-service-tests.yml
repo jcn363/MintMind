@@ -1,0 +1,299 @@
+name: FileIO Service Tests
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'cli/src/services/fileio/**'
+      - 'cli/src/bin/fileio.rs'
+      - '.github/workflows/fileio-service-tests.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'cli/src/services/fileio/**'
+      - 'cli/src/bin/fileio.rs'
+      - '.github/workflows/fileio-service-tests.yml'
+
+jobs:
+  test-linux:
+    name: Linux FileIO Tests
+    runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain stable
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Set Rust version
+        run: |
+          rustup default stable
+          rustup update stable
+
+      - name: Check Rust versions
+        run: |
+          rustc --version
+          cargo --version
+
+      - name: Build FileIO service
+        run: cargo build --release --bin fileio
+        working-directory: cli
+
+      - name: Run FileIO unit tests
+        run: cargo test -p cli -- fileio::tests::operations_tests
+        working-directory: cli
+
+      - name: Run FileIO concurrency tests
+        run: cargo test -p cli -- fileio::tests::concurrency_tests
+        working-directory: cli
+
+      - name: Run FileIO IPC tests
+        run: cargo test -p cli -- fileio::tests::ipc_tests
+        working-directory: cli
+
+      - name: Run FileIO locks tests
+        run: cargo test -p cli -- fileio::tests::locks_tests
+        working-directory: cli
+
+      - name: Run FileIO integration tests
+        run: cargo test -p cli -- fileio::tests::integration_tests
+        working-directory: cli
+
+      - name: Run FileIO platform tests
+        run: cargo test -p cli -- fileio::tests::platform_tests
+        working-directory: cli
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-results-linux
+          path: |
+            cli/target/debug/deps/
+            cli/target/debug/build/*/out/
+
+  test-macos:
+    name: macOS FileIO Tests
+    runs-on: macos-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain stable
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Set Rust version
+        run: |
+          rustup default stable
+          rustup update stable
+
+      - name: Check Rust versions
+        run: |
+          rustc --version
+          cargo --version
+
+      - name: Build FileIO service
+        run: cargo build --release --bin fileio
+        working-directory: cli
+
+      - name: Run FileIO unit tests
+        run: cargo test -p cli -- fileio::tests::operations_tests
+        working-directory: cli
+
+      - name: Run FileIO concurrency tests
+        run: cargo test -p cli -- fileio::tests::concurrency_tests
+        working-directory: cli
+
+      - name: Run FileIO IPC tests
+        run: cargo test -p cli -- fileio::tests::ipc_tests
+        working-directory: cli
+
+      - name: Run FileIO locks tests
+        run: cargo test -p cli -- fileio::tests::locks_tests
+        working-directory: cli
+
+      - name: Run FileIO integration tests
+        run: cargo test -p cli -- fileio::tests::integration_tests
+        working-directory: cli
+
+      - name: Run FileIO platform tests
+        run: cargo test -p cli -- fileio::tests::platform_tests
+        working-directory: cli
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-results-macos
+          path: |
+            cli/target/debug/deps/
+            cli/target/debug/build/*/out/
+
+  test-windows:
+    name: Windows FileIO Tests
+    runs-on: windows-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable-x86_64-pc-windows-msvc
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain stable-x86_64-pc-windows-msvc
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Set Rust version
+        run: |
+          rustup default stable-x86_64-pc-windows-msvc
+          rustup update stable-x86_64-pc-windows-msvc
+
+      - name: Check Rust versions
+        run: |
+          rustc --version
+          cargo --version
+
+      - name: Build FileIO service
+        run: cargo build --release --bin fileio
+        working-directory: cli
+
+      - name: Run FileIO unit tests
+        run: cargo test -p cli -- fileio::tests::operations_tests
+        working-directory: cli
+
+      - name: Run FileIO concurrency tests
+        run: cargo test -p cli -- fileio::tests::concurrency_tests
+        working-directory: cli
+
+      - name: Run FileIO IPC tests
+        run: cargo test -p cli -- fileio::tests::ipc_tests
+        working-directory: cli
+
+      - name: Run FileIO locks tests
+        run: cargo test -p cli -- fileio::tests::locks_tests
+        working-directory: cli
+
+      - name: Run FileIO integration tests
+        run: cargo test -p cli -- fileio::tests::integration_tests
+        working-directory: cli
+
+      - name: Run FileIO platform tests
+        run: cargo test -p cli -- fileio::tests::platform_tests
+        working-directory: cli
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: test-results-windows
+          path: |
+            cli/target/debug/deps/
+            cli/target/debug/build/*/out/
+
+  perf-benchmark:
+    name: FileIO Performance Benchmarks
+    runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain stable
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Set Rust version
+        run: |
+          rustup default stable
+          rustup update stable
+
+      - name: Check Rust versions
+        run: |
+          rustc --version
+          cargo --version
+
+      - name: Install Node.js for mock TS comparison
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Create mock TypeScript file I/O implementation
+        run: |
+          cat > mock_ts_fileio.js << 'EOF'
+          const fs = require('fs').promises;
+          const path = require('path');
+
+          async function benchmarkFileIO(iterations = 1000) {
+            const tempDir = path.join(__dirname, 'temp');
+            await fs.mkdir(tempDir, { recursive: true });
+
+            const startTime = process.hrtime.bigint();
+
+            for (let i = 0; i < iterations; i++) {
+              const filePath = path.join(tempDir, `test_${i}.txt`);
+              const content = `Test content ${i}\n`.repeat(100);
+              await fs.writeFile(filePath, content, 'utf8');
+              const readContent = await fs.readFile(filePath, 'utf8');
+              if (readContent.length !== content.length) throw new Error('Content mismatch');
+            }
+
+            const endTime = process.hrtime.bigint();
+            const durationMs = Number(endTime - startTime) / 1000000;
+            console.log(`TypeScript benchmark: ${iterations} iterations in ${durationMs.toFixed(2)}ms`);
+            console.log(`Average: ${(durationMs / iterations).toFixed(4)}ms per iteration`);
+            return durationMs;
+          }
+
+          benchmarkFileIO().catch(console.error);
+          EOF
+
+      - name: Run Rust benchmarks
+        run: cargo bench --bench fileio_benches
+        working-directory: cli
+
+      - name: Run TypeScript benchmark
+        run: |
+          node mock_ts_fileio.js > benchmark_output.txt
+          echo "TypeScript benchmark completed"
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: |
+            cli/target/criterion/
+            benchmark_output.txt
+
+  build-binary:
+    name: Build FileIO Binary
+    runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: stable
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Rust
+        run: |
+          curl https://sh.rustup.rs -sSf | sh -s -- -y --profile minimal --default-toolchain stable
+          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+
+      - name: Build release binary
+        run: cargo build --release --bin fileio
+        working-directory: cli
+
+      - name: Upload binary artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fileio-binary
+          path: cli/target/release/fileio

@@ -1,0 +1,44 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "vscode-css-languageserver",
+      "dependencies": {
+        "@vscode/l10n": "^0.0.18",
+        "vscode-css-languageservice": "^6.3.8",
+        "vscode-languageserver": "^10.0.0-next.14",
+        "vscode-uri": "^3.1.0",
+      },
+      "devDependencies": {
+        "@types/mocha": "^10.0.10",
+        "@types/node": "22.x",
+      },
+    },
+  },
+  "packages": {
+    "@types/mocha": ["@types/mocha@10.0.10", "http://localhost:4873/@types/mocha/-/mocha-10.0.10.tgz", {}, "sha512-xPyYSz1cMPnJQhl0CLMH68j3gprKZaTjG3s5Vi+fDgx+uhG9NOXwbVt52eFS8ECyXhyKcjDLCBEqBExKuiZb7Q=="],
+
+    "@types/node": ["@types/node@22.19.1", "http://localhost:4873/@types/node/-/node-22.19.1.tgz", { "dependencies": { "undici-types": "~6.21.0" } }, "sha512-LCCV0HdSZZZb34qifBsyWlUmok6W7ouER+oQIGBScS8EsZsQbrtFTUrDX4hOl+CS6p7cnNC4td+qrSVGSCTUfQ=="],
+
+    "@vscode/l10n": ["@vscode/l10n@0.0.18", "http://localhost:4873/@vscode/l10n/-/l10n-0.0.18.tgz", {}, "sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ=="],
+
+    "undici-types": ["undici-types@6.21.0", "http://localhost:4873/undici-types/-/undici-types-6.21.0.tgz", {}, "sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ=="],
+
+    "vscode-css-languageservice": ["vscode-css-languageservice@6.3.8", "http://localhost:4873/vscode-css-languageservice/-/vscode-css-languageservice-6.3.8.tgz", { "dependencies": { "@vscode/l10n": "^0.0.18", "vscode-languageserver-textdocument": "^1.0.12", "vscode-languageserver-types": "3.17.5", "vscode-uri": "^3.1.0" } }, "sha512-dBk/9ullEjIMbfSYAohGpDOisOVU1x2MQHOeU12ohGJQI7+r0PCimBwaa/pWpxl/vH4f7ibrBfxIZY3anGmHKQ=="],
+
+    "vscode-jsonrpc": ["vscode-jsonrpc@9.0.0-next.9", "http://localhost:4873/vscode-jsonrpc/-/vscode-jsonrpc-9.0.0-next.9.tgz", {}, "sha512-IM/RHL7ZklEUh1N2Rh4OjRL6D9MyIXq3v+zIkPLXq74hM1eW7WRLP0/cjzNu/baRFC00sFxJm95RBKsT8dXzRQ=="],
+
+    "vscode-languageserver": ["vscode-languageserver@10.0.0-next.14", "http://localhost:4873/vscode-languageserver/-/vscode-languageserver-10.0.0-next.14.tgz", { "dependencies": { "vscode-languageserver-protocol": "3.17.6-next.14" }, "bin": { "installServerIntoExtension": "bin/installServerIntoExtension" } }, "sha512-1TqBDfRLlAIPs6MR5ISI8z7sWlvGL3oHGm9GAHLNOmBZ2+9pmw0yR9vB44/SYuU4bSizxU24tXDFW+rw9jek4A=="],
+
+    "vscode-languageserver-protocol": ["vscode-languageserver-protocol@3.17.6-next.14", "http://localhost:4873/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.17.6-next.14.tgz", { "dependencies": { "vscode-jsonrpc": "9.0.0-next.9", "vscode-languageserver-types": "3.17.6-next.6" } }, "sha512-0VD83wxN5kI9vgeaIDQnAxgrbZfKiFNIxdFY5LKe3SZdZd+LAJLMrklSrwfefS7hEzaHw6Z++VFdVJJU+gh1Zg=="],
+
+    "vscode-languageserver-textdocument": ["vscode-languageserver-textdocument@1.0.12", "http://localhost:4873/vscode-languageserver-textdocument/-/vscode-languageserver-textdocument-1.0.12.tgz", {}, "sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA=="],
+
+    "vscode-languageserver-types": ["vscode-languageserver-types@3.17.5", "http://localhost:4873/vscode-languageserver-types/-/vscode-languageserver-types-3.17.5.tgz", {}, "sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg=="],
+
+    "vscode-uri": ["vscode-uri@3.1.0", "http://localhost:4873/vscode-uri/-/vscode-uri-3.1.0.tgz", {}, "sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ=="],
+
+    "vscode-languageserver-protocol/vscode-languageserver-types": ["vscode-languageserver-types@3.17.6-next.6", "http://localhost:4873/vscode-languageserver-types/-/vscode-languageserver-types-3.17.6-next.6.tgz", {}, "sha512-aiJY5/yW+xzw7KPNlwi3gQtddq/3EIn5z8X8nCgJfaiAij2R1APKePngv+MUdLdYJBVTLu+Qa0ODsT+pHgYguQ=="],
+  }
+}
