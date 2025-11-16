@@ -1,0 +1,100 @@
+6bd0308f95d9ebc5741f7b1928e390c5
+/* istanbul ignore next */
+function cov_1vj0cu0lpy() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStrings.ts";
+  var hash = "ad20ac200b4666732c3691bd27581007c38f2090";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStrings.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 31
+        },
+        end: {
+          line: 44,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStrings.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,SAAS,EAAE,MAAM,oBAAoB,CAAC;AAEzD;;GAEG;AACH,MAAM,CAAC,MAAM,eAAe,GAAG;IAC9B,QAAQ,EAAE,QAAQ,CAAC,UAAU,EAAE,UAAU,CAAC;IAC1C,GAAG,EAAE,QAAQ,CAAC,cAAc,EAAE,cAAc,CAAC;IAC7C,cAAc,EAAE,QAAQ,CAAC,gBAAgB,EAAE,mBAAmB,CAAC;IAC/D,sBAAsB,EAAE,QAAQ,CAAC,wBAAwB,EAAE,iBAAiB,CAAC;IAC7E,uBAAuB,EAAE,QAAQ,CAAC,yBAAyB,EAAE,kBAAkB,CAAC;IAChF,QAAQ,EAAE,QAAQ,CAAC,MAAM,EAAE,MAAM,CAAC;IAClC,SAAS,EAAE,QAAQ,CAAC,OAAO,EAAE,OAAO,CAAC;IACrC,cAAc,EAAE,SAAS,CAAC,kBAAkB,EAAE,UAAU,CAAC;IACzD,KAAK,EAAE,SAAS,CAAC,iCAAiC,EAAE,gBAAgB,CAAC;IACrE,aAAa,EAAE,SAAS,CAAC,yCAAyC,EAAE,gBAAgB,CAAC;IACrF,4BAA4B,EAAE,SAAS,CAAC,wDAAwD,EAAE,2CAA2C,CAAC;IAC9I,IAAI,EAAE;QACL,GAAG,SAAS,CAAC,cAAc,EAAE,eAAe,CAAC;QAC7C,KAAK,EAAE,QAAQ,CAAC,oBAAoB,EAAE,MAAM,CAAC;KAC7C;IACD,YAAY,EAAE,SAAS,CAAC,cAAc,EAAE,gCAAgC,CAAC;IACzE,iBAAiB,EAAE,SAAS,CAAC,mBAAmB,EAAE,+BAA+B,CAAC;IAClF,cAAc,EAAE,SAAS,CAAC,gBAAgB,EAAE,qBAAqB,CAAC;IAClE,mBAAmB,EAAE,SAAS,CAAC,+CAA+C,EAAE,0BAA0B,CAAC;IAC3G,UAAU,EAAE,SAAS,CAAC,sCAAsC,EAAE,gBAAgB,CAAC;IAC/E,WAAW,EAAE,SAAS,CAAC,uCAAuC,EAAE,iBAAiB,CAAC;IAClF,KAAK,EAAE;QACN,GAAG,SAAS,CAAC,eAAe,EAAE,gBAAgB,CAAC;QAC/C,KAAK,EAAE,QAAQ,CAAC,qBAAqB,EAAE,OAAO,CAAC;KAC/C;IACD,OAAO,EAAE,SAAS,CAAC,iBAAiB,EAAE,kBAAkB,CAAC;IACzD,MAAM,EAAE,SAAS,CAAC,kCAAkC,EAAE,WAAW,CAAC;IAClE,wBAAwB,EAAE,SAAS,CAAC,sDAAsD,EAAE,8BAA8B,CAAC;IAC3H,UAAU,EAAE,SAAS,CAAC,sCAAsC,EAAE,aAAa,CAAC;IAC5E,UAAU,EAAE,SAAS,CAAC,sCAAsC,EAAE,4DAA4D,CAAC;IAC3H,cAAc,EAAE,SAAS,CAAC,yCAAyC,EAAE,sCAAsC,CAAC;IAC5G,uBAAuB,EAAE,SAAS,CAAC,mDAAmD,EAAE,4BAA4B,CAAC;IACrH,mBAAmB,EAAE,SAAS,CAAC,+CAA+C,EAAE,wBAAwB,CAAC;IACzG,aAAa,EAAE,SAAS,CAAC,yCAAyC,EAAE,4BAA4B,CAAC;CACjG,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStrings.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize, localize2 } from '../../../../nls.js';\n\n/**\n * An object holding strings shared by multiple parts of the terminal\n */\nexport const terminalStrings = {\n\tterminal: localize('terminal', \"Terminal\"),\n\tnew: localize('terminal.new', \"New Terminal\"),\n\tdoNotShowAgain: localize('doNotShowAgain', 'Do Not Show Again'),\n\tcurrentSessionCategory: localize('currentSessionCategory', 'current session'),\n\tpreviousSessionCategory: localize('previousSessionCategory', 'previous session'),\n\ttypeTask: localize('task', \"Task\"),\n\ttypeLocal: localize('local', \"Local\"),\n\tactionCategory: localize2('terminalCategory', \"Terminal\"),\n\tfocus: localize2('workbench.action.terminal.focus', \"Focus Terminal\"),\n\tfocusInstance: localize2('workbench.action.terminal.focusInstance', \"Focus Terminal\"),\n\tfocusAndHideAccessibleBuffer: localize2('workbench.action.terminal.focusAndHideAccessibleBuffer', \"Focus Terminal and Hide Accessible Buffer\"),\n\tkill: {\n\t\t...localize2('killTerminal', \"Kill Terminal\"),\n\t\tshort: localize('killTerminal.short', \"Kill\"),\n\t},\n\tmoveToEditor: localize2('moveToEditor', \"Move Terminal into Editor Area\"),\n\tmoveIntoNewWindow: localize2('moveIntoNewWindow', \"Move Terminal into New Window\"),\n\tnewInNewWindow: localize2('newInNewWindow', \"New Terminal Window\"),\n\tmoveToTerminalPanel: localize2('workbench.action.terminal.moveToTerminalPanel', \"Move Terminal into Panel\"),\n\tchangeIcon: localize2('workbench.action.terminal.changeIcon', \"Change Icon...\"),\n\tchangeColor: localize2('workbench.action.terminal.changeColor', \"Change Color...\"),\n\tsplit: {\n\t\t...localize2('splitTerminal', \"Split Terminal\"),\n\t\tshort: localize('splitTerminal.short', \"Split\"),\n\t},\n\tunsplit: localize2('unsplitTerminal', \"Unsplit Terminal\"),\n\trename: localize2('workbench.action.terminal.rename', \"Rename...\"),\n\ttoggleSizeToContentWidth: localize2('workbench.action.terminal.sizeToContentWidthInstance', \"Toggle Size to Content Width\"),\n\tfocusHover: localize2('workbench.action.terminal.focusHover', \"Focus Hover\"),\n\tnewWithCwd: localize2('workbench.action.terminal.newWithCwd', \"Create New Terminal Starting in a Custom Working Directory\"),\n\trenameWithArgs: localize2('workbench.action.terminal.renameWithArg', \"Rename the Currently Active Terminal\"),\n\tscrollToPreviousCommand: localize2('workbench.action.terminal.scrollToPreviousCommand', \"Scroll to Previous Command\"),\n\tscrollToNextCommand: localize2('workbench.action.terminal.scrollToNextCommand', \"Scroll to Next Command\"),\n\trevealCommand: localize2('workbench.action.terminal.revealCommand', \"Reveal Command in Terminal\"),\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ad20ac200b4666732c3691bd27581007c38f2090"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1vj0cu0lpy = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1vj0cu0lpy();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize, localize2 } from '../../../../nls.js';
+/**
+ * An object holding strings shared by multiple parts of the terminal
+ */
+export const terminalStrings =
+/* istanbul ignore next */
+(cov_1vj0cu0lpy().s[0]++, {
+  terminal: localize('terminal', "Terminal"),
+  new: localize('terminal.new', "New Terminal"),
+  doNotShowAgain: localize('doNotShowAgain', 'Do Not Show Again'),
+  currentSessionCategory: localize('currentSessionCategory', 'current session'),
+  previousSessionCategory: localize('previousSessionCategory', 'previous session'),
+  typeTask: localize('task', "Task"),
+  typeLocal: localize('local', "Local"),
+  actionCategory: localize2('terminalCategory', "Terminal"),
+  focus: localize2('workbench.action.terminal.focus', "Focus Terminal"),
+  focusInstance: localize2('workbench.action.terminal.focusInstance', "Focus Terminal"),
+  focusAndHideAccessibleBuffer: localize2('workbench.action.terminal.focusAndHideAccessibleBuffer', "Focus Terminal and Hide Accessible Buffer"),
+  kill: {
+    ...localize2('killTerminal', "Kill Terminal"),
+    short: localize('killTerminal.short', "Kill")
+  },
+  moveToEditor: localize2('moveToEditor', "Move Terminal into Editor Area"),
+  moveIntoNewWindow: localize2('moveIntoNewWindow', "Move Terminal into New Window"),
+  newInNewWindow: localize2('newInNewWindow', "New Terminal Window"),
+  moveToTerminalPanel: localize2('workbench.action.terminal.moveToTerminalPanel', "Move Terminal into Panel"),
+  changeIcon: localize2('workbench.action.terminal.changeIcon', "Change Icon..."),
+  changeColor: localize2('workbench.action.terminal.changeColor', "Change Color..."),
+  split: {
+    ...localize2('splitTerminal', "Split Terminal"),
+    short: localize('splitTerminal.short', "Split")
+  },
+  unsplit: localize2('unsplitTerminal', "Unsplit Terminal"),
+  rename: localize2('workbench.action.terminal.rename', "Rename..."),
+  toggleSizeToContentWidth: localize2('workbench.action.terminal.sizeToContentWidthInstance', "Toggle Size to Content Width"),
+  focusHover: localize2('workbench.action.terminal.focusHover', "Focus Hover"),
+  newWithCwd: localize2('workbench.action.terminal.newWithCwd', "Create New Terminal Starting in a Custom Working Directory"),
+  renameWithArgs: localize2('workbench.action.terminal.renameWithArg', "Rename the Currently Active Terminal"),
+  scrollToPreviousCommand: localize2('workbench.action.terminal.scrollToPreviousCommand', "Scroll to Previous Command"),
+  scrollToNextCommand: localize2('workbench.action.terminal.scrollToNextCommand', "Scroll to Next Command"),
+  revealCommand: localize2('workbench.action.terminal.revealCommand', "Reveal Command in Terminal")
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXZqMGN1MGxweSIsImFjdHVhbENvdmVyYWdlIiwibG9jYWxpemUiLCJsb2NhbGl6ZTIiLCJ0ZXJtaW5hbFN0cmluZ3MiLCJzIiwidGVybWluYWwiLCJuZXciLCJkb05vdFNob3dBZ2FpbiIsImN1cnJlbnRTZXNzaW9uQ2F0ZWdvcnkiLCJwcmV2aW91c1Nlc3Npb25DYXRlZ29yeSIsInR5cGVUYXNrIiwidHlwZUxvY2FsIiwiYWN0aW9uQ2F0ZWdvcnkiLCJmb2N1cyIsImZvY3VzSW5zdGFuY2UiLCJmb2N1c0FuZEhpZGVBY2Nlc3NpYmxlQnVmZmVyIiwia2lsbCIsInNob3J0IiwibW92ZVRvRWRpdG9yIiwibW92ZUludG9OZXdXaW5kb3ciLCJuZXdJbk5ld1dpbmRvdyIsIm1vdmVUb1Rlcm1pbmFsUGFuZWwiLCJjaGFuZ2VJY29uIiwiY2hhbmdlQ29sb3IiLCJzcGxpdCIsInVuc3BsaXQiLCJyZW5hbWUiLCJ0b2dnbGVTaXplVG9Db250ZW50V2lkdGgiLCJmb2N1c0hvdmVyIiwibmV3V2l0aEN3ZCIsInJlbmFtZVdpdGhBcmdzIiwic2Nyb2xsVG9QcmV2aW91c0NvbW1hbmQiLCJzY3JvbGxUb05leHRDb21tYW5kIiwicmV2ZWFsQ29tbWFuZCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWwvY29tbW9uL3Rlcm1pbmFsU3RyaW5ncy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9jYWxpemUsIGxvY2FsaXplMiB9IGZyb20gJy4uLy4uLy4uLy4uL25scy5qcyc7XG5cbi8qKlxuICogQW4gb2JqZWN0IGhvbGRpbmcgc3RyaW5ncyBzaGFyZWQgYnkgbXVsdGlwbGUgcGFydHMgb2YgdGhlIHRlcm1pbmFsXG4gKi9cbmV4cG9ydCBjb25zdCB0ZXJtaW5hbFN0cmluZ3MgPSB7XG5cdHRlcm1pbmFsOiBsb2NhbGl6ZSgndGVybWluYWwnLCBcIlRlcm1pbmFsXCIpLFxuXHRuZXc6IGxvY2FsaXplKCd0ZXJtaW5hbC5uZXcnLCBcIk5ldyBUZXJtaW5hbFwiKSxcblx0ZG9Ob3RTaG93QWdhaW46IGxvY2FsaXplKCdkb05vdFNob3dBZ2FpbicsICdEbyBOb3QgU2hvdyBBZ2FpbicpLFxuXHRjdXJyZW50U2Vzc2lvbkNhdGVnb3J5OiBsb2NhbGl6ZSgnY3VycmVudFNlc3Npb25DYXRlZ29yeScsICdjdXJyZW50IHNlc3Npb24nKSxcblx0cHJldmlvdXNTZXNzaW9uQ2F0ZWdvcnk6IGxvY2FsaXplKCdwcmV2aW91c1Nlc3Npb25DYXRlZ29yeScsICdwcmV2aW91cyBzZXNzaW9uJyksXG5cdHR5cGVUYXNrOiBsb2NhbGl6ZSgndGFzaycsIFwiVGFza1wiKSxcblx0dHlwZUxvY2FsOiBsb2NhbGl6ZSgnbG9jYWwnLCBcIkxvY2FsXCIpLFxuXHRhY3Rpb25DYXRlZ29yeTogbG9jYWxpemUyKCd0ZXJtaW5hbENhdGVnb3J5JywgXCJUZXJtaW5hbFwiKSxcblx0Zm9jdXM6IGxvY2FsaXplMignd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5mb2N1cycsIFwiRm9jdXMgVGVybWluYWxcIiksXG5cdGZvY3VzSW5zdGFuY2U6IGxvY2FsaXplMignd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5mb2N1c0luc3RhbmNlJywgXCJGb2N1cyBUZXJtaW5hbFwiKSxcblx0Zm9jdXNBbmRIaWRlQWNjZXNzaWJsZUJ1ZmZlcjogbG9jYWxpemUyKCd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmZvY3VzQW5kSGlkZUFjY2Vzc2libGVCdWZmZXInLCBcIkZvY3VzIFRlcm1pbmFsIGFuZCBIaWRlIEFjY2Vzc2libGUgQnVmZmVyXCIpLFxuXHRraWxsOiB7XG5cdFx0Li4ubG9jYWxpemUyKCdraWxsVGVybWluYWwnLCBcIktpbGwgVGVybWluYWxcIiksXG5cdFx0c2hvcnQ6IGxvY2FsaXplKCdraWxsVGVybWluYWwuc2hvcnQnLCBcIktpbGxcIiksXG5cdH0sXG5cdG1vdmVUb0VkaXRvcjogbG9jYWxpemUyKCdtb3ZlVG9FZGl0b3InLCBcIk1vdmUgVGVybWluYWwgaW50byBFZGl0b3IgQXJlYVwiKSxcblx0bW92ZUludG9OZXdXaW5kb3c6IGxvY2FsaXplMignbW92ZUludG9OZXdXaW5kb3cnLCBcIk1vdmUgVGVybWluYWwgaW50byBOZXcgV2luZG93XCIpLFxuXHRuZXdJbk5ld1dpbmRvdzogbG9jYWxpemUyKCduZXdJbk5ld1dpbmRvdycsIFwiTmV3IFRlcm1pbmFsIFdpbmRvd1wiKSxcblx0bW92ZVRvVGVybWluYWxQYW5lbDogbG9jYWxpemUyKCd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLm1vdmVUb1Rlcm1pbmFsUGFuZWwnLCBcIk1vdmUgVGVybWluYWwgaW50byBQYW5lbFwiKSxcblx0Y2hhbmdlSWNvbjogbG9jYWxpemUyKCd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmNoYW5nZUljb24nLCBcIkNoYW5nZSBJY29uLi4uXCIpLFxuXHRjaGFuZ2VDb2xvcjogbG9jYWxpemUyKCd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmNoYW5nZUNvbG9yJywgXCJDaGFuZ2UgQ29sb3IuLi5cIiksXG5cdHNwbGl0OiB7XG5cdFx0Li4ubG9jYWxpemUyKCdzcGxpdFRlcm1pbmFsJywgXCJTcGxpdCBUZXJtaW5hbFwiKSxcblx0XHRzaG9ydDogbG9jYWxpemUoJ3NwbGl0VGVybWluYWwuc2hvcnQnLCBcIlNwbGl0XCIpLFxuXHR9LFxuXHR1bnNwbGl0OiBsb2NhbGl6ZTIoJ3Vuc3BsaXRUZXJtaW5hbCcsIFwiVW5zcGxpdCBUZXJtaW5hbFwiKSxcblx0cmVuYW1lOiBsb2NhbGl6ZTIoJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwucmVuYW1lJywgXCJSZW5hbWUuLi5cIiksXG5cdHRvZ2dsZVNpemVUb0NvbnRlbnRXaWR0aDogbG9jYWxpemUyKCd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnNpemVUb0NvbnRlbnRXaWR0aEluc3RhbmNlJywgXCJUb2dnbGUgU2l6ZSB0byBDb250ZW50IFdpZHRoXCIpLFxuXHRmb2N1c0hvdmVyOiBsb2NhbGl6ZTIoJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuZm9jdXNIb3ZlcicsIFwiRm9jdXMgSG92ZXJcIiksXG5cdG5ld1dpdGhDd2Q6IGxvY2FsaXplMignd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5uZXdXaXRoQ3dkJywgXCJDcmVhdGUgTmV3IFRlcm1pbmFsIFN0YXJ0aW5nIGluIGEgQ3VzdG9tIFdvcmtpbmcgRGlyZWN0b3J5XCIpLFxuXHRyZW5hbWVXaXRoQXJnczogbG9jYWxpemUyKCd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnJlbmFtZVdpdGhBcmcnLCBcIlJlbmFtZSB0aGUgQ3VycmVudGx5IEFjdGl2ZSBUZXJtaW5hbFwiKSxcblx0c2Nyb2xsVG9QcmV2aW91c0NvbW1hbmQ6IGxvY2FsaXplMignd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5zY3JvbGxUb1ByZXZpb3VzQ29tbWFuZCcsIFwiU2Nyb2xsIHRvIFByZXZpb3VzIENvbW1hbmRcIiksXG5cdHNjcm9sbFRvTmV4dENvbW1hbmQ6IGxvY2FsaXplMignd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5zY3JvbGxUb05leHRDb21tYW5kJywgXCJTY3JvbGwgdG8gTmV4dCBDb21tYW5kXCIpLFxuXHRyZXZlYWxDb21tYW5kOiBsb2NhbGl6ZTIoJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwucmV2ZWFsQ29tbWFuZCcsIFwiUmV2ZWFsIENvbW1hbmQgaW4gVGVybWluYWxcIiksXG59O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWlCQztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBakJEOzs7O0FBS0EsU0FBU0UsUUFBUSxFQUFFQyxTQUFTLFFBQVEsb0JBQW9CO0FBRXhEOzs7QUFHQSxPQUFPLE1BQU1DLGVBQWU7QUFBQTtBQUFBLENBQUFKLGNBQUEsR0FBQUssQ0FBQSxPQUFHO0VBQzlCQyxRQUFRLEVBQUVKLFFBQVEsQ0FBQyxVQUFVLEVBQUUsVUFBVSxDQUFDO0VBQzFDSyxHQUFHLEVBQUVMLFFBQVEsQ0FBQyxjQUFjLEVBQUUsY0FBYyxDQUFDO0VBQzdDTSxjQUFjLEVBQUVOLFFBQVEsQ0FBQyxnQkFBZ0IsRUFBRSxtQkFBbUIsQ0FBQztFQUMvRE8sc0JBQXNCLEVBQUVQLFFBQVEsQ0FBQyx3QkFBd0IsRUFBRSxpQkFBaUIsQ0FBQztFQUM3RVEsdUJBQXVCLEVBQUVSLFFBQVEsQ0FBQyx5QkFBeUIsRUFBRSxrQkFBa0IsQ0FBQztFQUNoRlMsUUFBUSxFQUFFVCxRQUFRLENBQUMsTUFBTSxFQUFFLE1BQU0sQ0FBQztFQUNsQ1UsU0FBUyxFQUFFVixRQUFRLENBQUMsT0FBTyxFQUFFLE9BQU8sQ0FBQztFQUNyQ1csY0FBYyxFQUFFVixTQUFTLENBQUMsa0JBQWtCLEVBQUUsVUFBVSxDQUFDO0VBQ3pEVyxLQUFLLEVBQUVYLFNBQVMsQ0FBQyxpQ0FBaUMsRUFBRSxnQkFBZ0IsQ0FBQztFQUNyRVksYUFBYSxFQUFFWixTQUFTLENBQUMseUNBQXlDLEVBQUUsZ0JBQWdCLENBQUM7RUFDckZhLDRCQUE0QixFQUFFYixTQUFTLENBQUMsd0RBQXdELEVBQUUsMkNBQTJDLENBQUM7RUFDOUljLElBQUksRUFBRTtJQUNMLEdBQUdkLFNBQVMsQ0FBQyxjQUFjLEVBQUUsZUFBZSxDQUFDO0lBQzdDZSxLQUFLLEVBQUVoQixRQUFRLENBQUMsb0JBQW9CLEVBQUUsTUFBTTtHQUM1QztFQUNEaUIsWUFBWSxFQUFFaEIsU0FBUyxDQUFDLGNBQWMsRUFBRSxnQ0FBZ0MsQ0FBQztFQUN6RWlCLGlCQUFpQixFQUFFakIsU0FBUyxDQUFDLG1CQUFtQixFQUFFLCtCQUErQixDQUFDO0VBQ2xGa0IsY0FBYyxFQUFFbEIsU0FBUyxDQUFDLGdCQUFnQixFQUFFLHFCQUFxQixDQUFDO0VBQ2xFbUIsbUJBQW1CLEVBQUVuQixTQUFTLENBQUMsK0NBQStDLEVBQUUsMEJBQTBCLENBQUM7RUFDM0dvQixVQUFVLEVBQUVwQixTQUFTLENBQUMsc0NBQXNDLEVBQUUsZ0JBQWdCLENBQUM7RUFDL0VxQixXQUFXLEVBQUVyQixTQUFTLENBQUMsdUNBQXVDLEVBQUUsaUJBQWlCLENBQUM7RUFDbEZzQixLQUFLLEVBQUU7SUFDTixHQUFHdEIsU0FBUyxDQUFDLGVBQWUsRUFBRSxnQkFBZ0IsQ0FBQztJQUMvQ2UsS0FBSyxFQUFFaEIsUUFBUSxDQUFDLHFCQUFxQixFQUFFLE9BQU87R0FDOUM7RUFDRHdCLE9BQU8sRUFBRXZCLFNBQVMsQ0FBQyxpQkFBaUIsRUFBRSxrQkFBa0IsQ0FBQztFQUN6RHdCLE1BQU0sRUFBRXhCLFNBQVMsQ0FBQyxrQ0FBa0MsRUFBRSxXQUFXLENBQUM7RUFDbEV5Qix3QkFBd0IsRUFBRXpCLFNBQVMsQ0FBQyxzREFBc0QsRUFBRSw4QkFBOEIsQ0FBQztFQUMzSDBCLFVBQVUsRUFBRTFCLFNBQVMsQ0FBQyxzQ0FBc0MsRUFBRSxhQUFhLENBQUM7RUFDNUUyQixVQUFVLEVBQUUzQixTQUFTLENBQUMsc0NBQXNDLEVBQUUsNERBQTRELENBQUM7RUFDM0g0QixjQUFjLEVBQUU1QixTQUFTLENBQUMseUNBQXlDLEVBQUUsc0NBQXNDLENBQUM7RUFDNUc2Qix1QkFBdUIsRUFBRTdCLFNBQVMsQ0FBQyxtREFBbUQsRUFBRSw0QkFBNEIsQ0FBQztFQUNySDhCLG1CQUFtQixFQUFFOUIsU0FBUyxDQUFDLCtDQUErQyxFQUFFLHdCQUF3QixDQUFDO0VBQ3pHK0IsYUFBYSxFQUFFL0IsU0FBUyxDQUFDLHlDQUF5QyxFQUFFLDRCQUE0QjtDQUNoRyIsImlnbm9yZUxpc3QiOltdfQ==

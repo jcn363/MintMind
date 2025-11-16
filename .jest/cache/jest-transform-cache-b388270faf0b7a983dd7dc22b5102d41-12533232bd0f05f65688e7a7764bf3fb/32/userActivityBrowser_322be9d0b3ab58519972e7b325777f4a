@@ -1,0 +1,63 @@
+b39c5782bb2bb4f84c670b6a2ddbb7fb
+/* istanbul ignore next */
+function cov_t0823ucru() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/browser/userActivityBrowser.ts";
+  var hash = "8a59567511e301a849e0bf90af9ef423eb24ff4b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/browser/userActivityBrowser.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 7,
+          column: 45
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/browser/userActivityBrowser.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,kBAAkB,EAAE,MAAM,yBAAyB,CAAC;AAC7D,OAAO,EAAE,oBAAoB,EAAE,MAAM,mCAAmC,CAAC;AAEzE,oBAAoB,CAAC,GAAG,CAAC,kBAAkB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/browser/userActivityBrowser.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { DomActivityTracker } from './domActivityTracker.js';\nimport { userActivityRegistry } from '../common/userActivityRegistry.js';\n\nuserActivityRegistry.add(DomActivityTracker);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "8a59567511e301a849e0bf90af9ef423eb24ff4b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_t0823ucru = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_t0823ucru();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { DomActivityTracker } from './domActivityTracker.js';
+import { userActivityRegistry } from '../common/userActivityRegistry.js';
+/* istanbul ignore next */
+cov_t0823ucru().s[0]++;
+userActivityRegistry.add(DomActivityTracker);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJEb21BY3Rpdml0eVRyYWNrZXIiLCJ1c2VyQWN0aXZpdHlSZWdpc3RyeSIsImNvdl90MDgyM3VjcnUiLCJzIiwiYWRkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvdXNlckFjdGl2aXR5L2Jyb3dzZXIvdXNlckFjdGl2aXR5QnJvd3Nlci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRG9tQWN0aXZpdHlUcmFja2VyIH0gZnJvbSAnLi9kb21BY3Rpdml0eVRyYWNrZXIuanMnO1xuaW1wb3J0IHsgdXNlckFjdGl2aXR5UmVnaXN0cnkgfSBmcm9tICcuLi9jb21tb24vdXNlckFjdGl2aXR5UmVnaXN0cnkuanMnO1xuXG51c2VyQWN0aXZpdHlSZWdpc3RyeS5hZGQoRG9tQWN0aXZpdHlUcmFja2VyKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0Esa0JBQWtCLFFBQVEseUJBQXlCO0FBQzVELFNBQVNDLG9CQUFvQixRQUFRLG1DQUFtQztBQUFDO0FBQUFDLGFBQUEsR0FBQUMsQ0FBQTtBQUV6RUYsb0JBQW9CLENBQUNHLEdBQUcsQ0FBQ0osa0JBQWtCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

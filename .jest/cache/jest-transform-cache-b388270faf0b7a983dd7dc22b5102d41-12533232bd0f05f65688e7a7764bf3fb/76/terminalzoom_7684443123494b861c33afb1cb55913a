@@ -1,0 +1,109 @@
+82c2785bdd3bec90f2b5a3b49e204a64
+/* istanbul ignore next */
+function cov_12bi3k0n10() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/zoom/common/terminal.zoom.ts";
+  var hash = "ae2b470977becfa946f12fc9f3e39584f2a78be3";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/zoom/common/terminal.zoom.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 41
+        },
+        end: {
+          line: 15,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 29
+          },
+          end: {
+            line: 11,
+            column: 136
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 10,
+            column: 14
+          },
+          end: {
+            line: 10,
+            column: 139
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 14
+          },
+          end: {
+            line: 11,
+            column: 136
+          }
+        }],
+        line: 9
+      }
+    },
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/zoom/common/terminal.zoom.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,WAAW,EAAE,MAAM,wCAAwC,CAAC;AACrE,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AAajD,MAAM,CAAC,MAAM,yBAAyB,GAAoD;IACzF,iFAAsC,EAAE;QACvC,mBAAmB,EAAE,WAAW;YAC/B,CAAC,CAAC,QAAQ,CAAC,wCAAwC,EAAE,yEAAyE,CAAC;YAC/H,CAAC,CAAC,QAAQ,CAAC,oCAAoC,EAAE,0EAA0E,CAAC;QAC7H,IAAI,EAAE,SAAS;QACf,OAAO,EAAE,KAAK;KACd;CACD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/zoom/common/terminal.zoom.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IStringDictionary } from '../../../../../base/common/collections.js';\nimport { isMacintosh } from '../../../../../base/common/platform.js';\nimport { localize } from '../../../../../nls.js';\nimport type { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.js';\n\nexport const enum TerminalZoomCommandId {\n\tFontZoomIn = 'workbench.action.terminal.fontZoomIn',\n\tFontZoomOut = 'workbench.action.terminal.fontZoomOut',\n\tFontZoomReset = 'workbench.action.terminal.fontZoomReset',\n}\n\nexport const enum TerminalZoomSettingId {\n\tMouseWheelZoom = 'terminal.integrated.mouseWheelZoom',\n}\n\nexport const terminalZoomConfiguration: IStringDictionary<IConfigurationPropertySchema> = {\n\t[TerminalZoomSettingId.MouseWheelZoom]: {\n\t\tmarkdownDescription: isMacintosh\n\t\t\t? localize('terminal.integrated.mouseWheelZoom.mac', \"Zoom the font of the terminal when using mouse wheel and holding `Cmd`.\")\n\t\t\t: localize('terminal.integrated.mouseWheelZoom', \"Zoom the font of the terminal when using mouse wheel and holding `Ctrl`.\"),\n\t\ttype: 'boolean',\n\t\tdefault: false\n\t},\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ae2b470977becfa946f12fc9f3e39584f2a78be3"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_12bi3k0n10 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_12bi3k0n10();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { isMacintosh } from '../../../../../base/common/platform.js';
+import { localize } from '../../../../../nls.js';
+export const terminalZoomConfiguration =
+/* istanbul ignore next */
+(cov_12bi3k0n10().s[0]++, {
+  ["terminal.integrated.mouseWheelZoom" /* TerminalZoomSettingId.MouseWheelZoom */]: {
+    markdownDescription: isMacintosh ?
+    /* istanbul ignore next */
+    (cov_12bi3k0n10().b[0][0]++, localize('terminal.integrated.mouseWheelZoom.mac', "Zoom the font of the terminal when using mouse wheel and holding `Cmd`.")) :
+    /* istanbul ignore next */
+    (cov_12bi3k0n10().b[0][1]++, localize('terminal.integrated.mouseWheelZoom', "Zoom the font of the terminal when using mouse wheel and holding `Ctrl`.")),
+    type: 'boolean',
+    default: false
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJpc01hY2ludG9zaCIsImxvY2FsaXplIiwidGVybWluYWxab29tQ29uZmlndXJhdGlvbiIsImNvdl8xMmJpM2swbjEwIiwicyIsIm1hcmtkb3duRGVzY3JpcHRpb24iLCJiIiwidHlwZSIsImRlZmF1bHQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3Rlcm1pbmFsQ29udHJpYi96b29tL2NvbW1vbi90ZXJtaW5hbC56b29tLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgdHlwZSB7IElTdHJpbmdEaWN0aW9uYXJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vY29sbGVjdGlvbnMuanMnO1xuaW1wb3J0IHsgaXNNYWNpbnRvc2ggfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9wbGF0Zm9ybS5qcyc7XG5pbXBvcnQgeyBsb2NhbGl6ZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL25scy5qcyc7XG5pbXBvcnQgdHlwZSB7IElDb25maWd1cmF0aW9uUHJvcGVydHlTY2hlbWEgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9jb25maWd1cmF0aW9uL2NvbW1vbi9jb25maWd1cmF0aW9uUmVnaXN0cnkuanMnO1xuXG5leHBvcnQgY29uc3QgZW51bSBUZXJtaW5hbFpvb21Db21tYW5kSWQge1xuXHRGb250Wm9vbUluID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuZm9udFpvb21JbicsXG5cdEZvbnRab29tT3V0ID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuZm9udFpvb21PdXQnLFxuXHRGb250Wm9vbVJlc2V0ID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuZm9udFpvb21SZXNldCcsXG59XG5cbmV4cG9ydCBjb25zdCBlbnVtIFRlcm1pbmFsWm9vbVNldHRpbmdJZCB7XG5cdE1vdXNlV2hlZWxab29tID0gJ3Rlcm1pbmFsLmludGVncmF0ZWQubW91c2VXaGVlbFpvb20nLFxufVxuXG5leHBvcnQgY29uc3QgdGVybWluYWxab29tQ29uZmlndXJhdGlvbjogSVN0cmluZ0RpY3Rpb25hcnk8SUNvbmZpZ3VyYXRpb25Qcm9wZXJ0eVNjaGVtYT4gPSB7XG5cdFtUZXJtaW5hbFpvb21TZXR0aW5nSWQuTW91c2VXaGVlbFpvb21dOiB7XG5cdFx0bWFya2Rvd25EZXNjcmlwdGlvbjogaXNNYWNpbnRvc2hcblx0XHRcdD8gbG9jYWxpemUoJ3Rlcm1pbmFsLmludGVncmF0ZWQubW91c2VXaGVlbFpvb20ubWFjJywgXCJab29tIHRoZSBmb250IG9mIHRoZSB0ZXJtaW5hbCB3aGVuIHVzaW5nIG1vdXNlIHdoZWVsIGFuZCBob2xkaW5nIGBDbWRgLlwiKVxuXHRcdFx0OiBsb2NhbGl6ZSgndGVybWluYWwuaW50ZWdyYXRlZC5tb3VzZVdoZWVsWm9vbScsIFwiWm9vbSB0aGUgZm9udCBvZiB0aGUgdGVybWluYWwgd2hlbiB1c2luZyBtb3VzZSB3aGVlbCBhbmQgaG9sZGluZyBgQ3RybGAuXCIpLFxuXHRcdHR5cGU6ICdib29sZWFuJyxcblx0XHRkZWZhdWx0OiBmYWxzZVxuXHR9LFxufTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsV0FBVyxRQUFRLHdDQUF3QztBQUNwRSxTQUFTQyxRQUFRLFFBQVEsdUJBQXVCO0FBYWhELE9BQU8sTUFBTUMseUJBQXlCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBb0Q7RUFDekYsbUZBQXdDO0lBQ3ZDQyxtQkFBbUIsRUFBRUwsV0FBVztJQUFBO0lBQUEsQ0FBQUcsY0FBQSxHQUFBRyxDQUFBLFVBQzdCTCxRQUFRLENBQUMsd0NBQXdDLEVBQUUseUVBQXlFLENBQUM7SUFBQTtJQUFBLENBQUFFLGNBQUEsR0FBQUcsQ0FBQSxVQUM3SEwsUUFBUSxDQUFDLG9DQUFvQyxFQUFFLDBFQUEwRSxDQUFDO0lBQzdITSxJQUFJLEVBQUUsU0FBUztJQUNmQyxPQUFPLEVBQUU7O0NBRVYiLCJpZ25vcmVMaXN0IjpbXX0=

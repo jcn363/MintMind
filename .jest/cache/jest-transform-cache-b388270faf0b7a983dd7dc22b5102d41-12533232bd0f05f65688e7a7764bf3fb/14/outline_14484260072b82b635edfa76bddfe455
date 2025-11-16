@@ -1,0 +1,62 @@
+ca4fcb0b338afb867bd435465d83be3a
+/* istanbul ignore next */
+function cov_1mg4kkrl2i() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/outline/browser/outline.ts";
+  var hash = "b5481d2850a919669f43e7a003a6c4683bf9bab1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/outline/browser/outline.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 31
+        },
+        end: {
+          line: 6,
+          column: 65
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/outline/browser/outline.ts",
+      mappings: "AAAA;;;gGAGgG;AAUhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAI7F,MAAM,CAAC,MAAM,eAAe,GAAG,eAAe,CAAkB,iBAAiB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/outline/browser/outline.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IListVirtualDelegate } from '../../../../base/browser/ui/list/list.js';\nimport { IDataSource, ITreeRenderer } from '../../../../base/browser/ui/tree/tree.js';\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { FuzzyScore } from '../../../../base/common/filters.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { IEditorOptions } from '../../../../platform/editor/common/editor.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IWorkbenchDataTreeOptions } from '../../../../platform/list/browser/listService.js';\nimport { IEditorPane } from '../../../common/editor.js';\n\nexport const IOutlineService = createDecorator<IOutlineService>('IOutlineService');\n\nexport const enum OutlineTarget {\n\tOutlinePane = 1,\n\tBreadcrumbs = 2,\n\tQuickPick = 4\n}\n\nexport interface IOutlineService {\n\t_serviceBrand: undefined;\n\treadonly onDidChange: Event<void>;\n\tcanCreateOutline(editor: IEditorPane): boolean;\n\tcreateOutline(editor: IEditorPane, target: OutlineTarget, token: CancellationToken): Promise<IOutline<any> | undefined>;\n\tregisterOutlineCreator(creator: IOutlineCreator<any, any>): IDisposable;\n}\n\nexport interface IOutlineCreator<P extends IEditorPane, E> {\n\tmatches(candidate: IEditorPane): candidate is P;\n\tcreateOutline(editor: P, target: OutlineTarget, token: CancellationToken): Promise<IOutline<E> | undefined>;\n}\n\nexport interface IBreadcrumbsDataSource<E> {\n\tgetBreadcrumbElements(): readonly E[];\n}\n\nexport interface IOutlineComparator<E> {\n\tcompareByPosition(a: E, b: E): number;\n\tcompareByType(a: E, b: E): number;\n\tcompareByName(a: E, b: E): number;\n}\n\nexport interface IQuickPickOutlineElement<E> {\n\treadonly element: E;\n\treadonly label: string;\n\treadonly iconClasses?: string[];\n\treadonly ariaLabel?: string;\n\treadonly description?: string;\n}\n\nexport interface IQuickPickDataSource<E> {\n\tgetQuickPickElements(): IQuickPickOutlineElement<E>[];\n}\n\nexport interface IOutlineListConfig<E> {\n\treadonly breadcrumbsDataSource: IBreadcrumbsDataSource<E>;\n\treadonly treeDataSource: IDataSource<IOutline<E>, E>;\n\treadonly delegate: IListVirtualDelegate<E>;\n\treadonly renderers: ITreeRenderer<E, FuzzyScore, any>[];\n\treadonly comparator: IOutlineComparator<E>;\n\treadonly options: IWorkbenchDataTreeOptions<E, FuzzyScore>;\n\treadonly quickPickDataSource: IQuickPickDataSource<E>;\n}\n\nexport interface OutlineChangeEvent {\n\taffectOnlyActiveElement?: true;\n}\n\nexport interface IOutline<E> {\n\n\treadonly uri: URI | undefined;\n\n\treadonly config: IOutlineListConfig<E>;\n\treadonly outlineKind: string;\n\n\treadonly isEmpty: boolean;\n\treadonly activeElement: E | undefined;\n\treadonly onDidChange: Event<OutlineChangeEvent>;\n\n\treveal(entry: E, options: IEditorOptions, sideBySide: boolean, select: boolean): Promise<void> | void;\n\tpreview(entry: E): IDisposable;\n\tcaptureViewState(): IDisposable;\n\tdispose(): void;\n}\n\n\nexport const enum OutlineConfigKeys {\n\t'icons' = 'outline.icons',\n\t'collapseItems' = 'outline.collapseItems',\n\t'problemsEnabled' = 'outline.problems.enabled',\n\t'problemsColors' = 'outline.problems.colors',\n\t'problemsBadges' = 'outline.problems.badges'\n}\n\nexport const enum OutlineConfigCollapseItemsValues {\n\tCollapsed = 'alwaysCollapse',\n\tExpanded = 'alwaysExpand'\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b5481d2850a919669f43e7a003a6c4683bf9bab1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1mg4kkrl2i = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1mg4kkrl2i();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IOutlineService =
+/* istanbul ignore next */
+(cov_1mg4kkrl2i().s[0]++, createDecorator('IOutlineService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJT3V0bGluZVNlcnZpY2UiLCJjb3ZfMW1nNGtrcmwyaSIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9vdXRsaW5lL2Jyb3dzZXIvb3V0bGluZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUxpc3RWaXJ0dWFsRGVsZWdhdGUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2Jyb3dzZXIvdWkvbGlzdC9saXN0LmpzJztcbmltcG9ydCB7IElEYXRhU291cmNlLCBJVHJlZVJlbmRlcmVyIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9icm93c2VyL3VpL3RyZWUvdHJlZS5qcyc7XG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IEZ1enp5U2NvcmUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9maWx0ZXJzLmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBJRWRpdG9yT3B0aW9ucyB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2VkaXRvci9jb21tb24vZWRpdG9yLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSVdvcmtiZW5jaERhdGFUcmVlT3B0aW9ucyB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2xpc3QvYnJvd3Nlci9saXN0U2VydmljZS5qcyc7XG5pbXBvcnQgeyBJRWRpdG9yUGFuZSB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9lZGl0b3IuanMnO1xuXG5leHBvcnQgY29uc3QgSU91dGxpbmVTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElPdXRsaW5lU2VydmljZT4oJ0lPdXRsaW5lU2VydmljZScpO1xuXG5leHBvcnQgY29uc3QgZW51bSBPdXRsaW5lVGFyZ2V0IHtcblx0T3V0bGluZVBhbmUgPSAxLFxuXHRCcmVhZGNydW1icyA9IDIsXG5cdFF1aWNrUGljayA9IDRcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJT3V0bGluZVNlcnZpY2Uge1xuXHRfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlOiBFdmVudDx2b2lkPjtcblx0Y2FuQ3JlYXRlT3V0bGluZShlZGl0b3I6IElFZGl0b3JQYW5lKTogYm9vbGVhbjtcblx0Y3JlYXRlT3V0bGluZShlZGl0b3I6IElFZGl0b3JQYW5lLCB0YXJnZXQ6IE91dGxpbmVUYXJnZXQsIHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbik6IFByb21pc2U8SU91dGxpbmU8YW55PiB8IHVuZGVmaW5lZD47XG5cdHJlZ2lzdGVyT3V0bGluZUNyZWF0b3IoY3JlYXRvcjogSU91dGxpbmVDcmVhdG9yPGFueSwgYW55Pik6IElEaXNwb3NhYmxlO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElPdXRsaW5lQ3JlYXRvcjxQIGV4dGVuZHMgSUVkaXRvclBhbmUsIEU+IHtcblx0bWF0Y2hlcyhjYW5kaWRhdGU6IElFZGl0b3JQYW5lKTogY2FuZGlkYXRlIGlzIFA7XG5cdGNyZWF0ZU91dGxpbmUoZWRpdG9yOiBQLCB0YXJnZXQ6IE91dGxpbmVUYXJnZXQsIHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbik6IFByb21pc2U8SU91dGxpbmU8RT4gfCB1bmRlZmluZWQ+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElCcmVhZGNydW1ic0RhdGFTb3VyY2U8RT4ge1xuXHRnZXRCcmVhZGNydW1iRWxlbWVudHMoKTogcmVhZG9ubHkgRVtdO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElPdXRsaW5lQ29tcGFyYXRvcjxFPiB7XG5cdGNvbXBhcmVCeVBvc2l0aW9uKGE6IEUsIGI6IEUpOiBudW1iZXI7XG5cdGNvbXBhcmVCeVR5cGUoYTogRSwgYjogRSk6IG51bWJlcjtcblx0Y29tcGFyZUJ5TmFtZShhOiBFLCBiOiBFKTogbnVtYmVyO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElRdWlja1BpY2tPdXRsaW5lRWxlbWVudDxFPiB7XG5cdHJlYWRvbmx5IGVsZW1lbnQ6IEU7XG5cdHJlYWRvbmx5IGxhYmVsOiBzdHJpbmc7XG5cdHJlYWRvbmx5IGljb25DbGFzc2VzPzogc3RyaW5nW107XG5cdHJlYWRvbmx5IGFyaWFMYWJlbD86IHN0cmluZztcblx0cmVhZG9ubHkgZGVzY3JpcHRpb24/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVF1aWNrUGlja0RhdGFTb3VyY2U8RT4ge1xuXHRnZXRRdWlja1BpY2tFbGVtZW50cygpOiBJUXVpY2tQaWNrT3V0bGluZUVsZW1lbnQ8RT5bXTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJT3V0bGluZUxpc3RDb25maWc8RT4ge1xuXHRyZWFkb25seSBicmVhZGNydW1ic0RhdGFTb3VyY2U6IElCcmVhZGNydW1ic0RhdGFTb3VyY2U8RT47XG5cdHJlYWRvbmx5IHRyZWVEYXRhU291cmNlOiBJRGF0YVNvdXJjZTxJT3V0bGluZTxFPiwgRT47XG5cdHJlYWRvbmx5IGRlbGVnYXRlOiBJTGlzdFZpcnR1YWxEZWxlZ2F0ZTxFPjtcblx0cmVhZG9ubHkgcmVuZGVyZXJzOiBJVHJlZVJlbmRlcmVyPEUsIEZ1enp5U2NvcmUsIGFueT5bXTtcblx0cmVhZG9ubHkgY29tcGFyYXRvcjogSU91dGxpbmVDb21wYXJhdG9yPEU+O1xuXHRyZWFkb25seSBvcHRpb25zOiBJV29ya2JlbmNoRGF0YVRyZWVPcHRpb25zPEUsIEZ1enp5U2NvcmU+O1xuXHRyZWFkb25seSBxdWlja1BpY2tEYXRhU291cmNlOiBJUXVpY2tQaWNrRGF0YVNvdXJjZTxFPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBPdXRsaW5lQ2hhbmdlRXZlbnQge1xuXHRhZmZlY3RPbmx5QWN0aXZlRWxlbWVudD86IHRydWU7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU91dGxpbmU8RT4ge1xuXG5cdHJlYWRvbmx5IHVyaTogVVJJIHwgdW5kZWZpbmVkO1xuXG5cdHJlYWRvbmx5IGNvbmZpZzogSU91dGxpbmVMaXN0Q29uZmlnPEU+O1xuXHRyZWFkb25seSBvdXRsaW5lS2luZDogc3RyaW5nO1xuXG5cdHJlYWRvbmx5IGlzRW1wdHk6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGFjdGl2ZUVsZW1lbnQ6IEUgfCB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlOiBFdmVudDxPdXRsaW5lQ2hhbmdlRXZlbnQ+O1xuXG5cdHJldmVhbChlbnRyeTogRSwgb3B0aW9uczogSUVkaXRvck9wdGlvbnMsIHNpZGVCeVNpZGU6IGJvb2xlYW4sIHNlbGVjdDogYm9vbGVhbik6IFByb21pc2U8dm9pZD4gfCB2b2lkO1xuXHRwcmV2aWV3KGVudHJ5OiBFKTogSURpc3Bvc2FibGU7XG5cdGNhcHR1cmVWaWV3U3RhdGUoKTogSURpc3Bvc2FibGU7XG5cdGRpc3Bvc2UoKTogdm9pZDtcbn1cblxuXG5leHBvcnQgY29uc3QgZW51bSBPdXRsaW5lQ29uZmlnS2V5cyB7XG5cdCdpY29ucycgPSAnb3V0bGluZS5pY29ucycsXG5cdCdjb2xsYXBzZUl0ZW1zJyA9ICdvdXRsaW5lLmNvbGxhcHNlSXRlbXMnLFxuXHQncHJvYmxlbXNFbmFibGVkJyA9ICdvdXRsaW5lLnByb2JsZW1zLmVuYWJsZWQnLFxuXHQncHJvYmxlbXNDb2xvcnMnID0gJ291dGxpbmUucHJvYmxlbXMuY29sb3JzJyxcblx0J3Byb2JsZW1zQmFkZ2VzJyA9ICdvdXRsaW5lLnByb2JsZW1zLmJhZGdlcydcbn1cblxuZXhwb3J0IGNvbnN0IGVudW0gT3V0bGluZUNvbmZpZ0NvbGxhcHNlSXRlbXNWYWx1ZXMge1xuXHRDb2xsYXBzZWQgPSAnYWx3YXlzQ29sbGFwc2UnLFxuXHRFeHBhbmRlZCA9ICdhbHdheXNFeHBhbmQnXG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQWFBLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFJNUYsT0FBTyxNQUFNQyxlQUFlO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFrQixpQkFBaUIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,46 @@
+721d098f9f46b58376ff31c687377f55
+/* istanbul ignore next */
+function cov_79e6x5cb4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/model/decorationProvider.ts";
+  var hash = "5d9d39391b7ff7ecd72329aaa57beaf9b0bd00c0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/model/decorationProvider.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/model/decorationProvider.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/model/decorationProvider.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { Range } from '../core/range.js';\nimport { IModelDecoration } from '../model.js';\n\nexport interface DecorationProvider {\n\t/**\n\t * Gets all the decorations in a range as an array. Only `startLineNumber` and `endLineNumber` from `range` are used for filtering.\n\t * So for now it returns all the decorations on the same line as `range`.\n\t * @param range The range to search in\n\t * @param ownerId If set, it will ignore decorations belonging to other owners.\n\t * @param filterOutValidation If set, it will ignore decorations specific to validation (i.e. warnings, errors).\n\t * @return An array with the decorations\n\t */\n\tgetDecorationsInRange(range: Range, ownerId?: number, filterOutValidation?: boolean): IModelDecoration[];\n\n\t/**\n\t * Gets all the decorations as an array.\n\t * @param ownerId If set, it will ignore decorations belonging to other owners.\n\t * @param filterOutValidation If set, it will ignore decorations specific to validation (i.e. warnings, errors).\n\t */\n\tgetAllDecorations(ownerId?: number, filterOutValidation?: boolean, onlyMinimapDecorations?: boolean): IModelDecoration[];\n\n\treadonly onDidChange: Event<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5d9d39391b7ff7ecd72329aaa57beaf9b0bd00c0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_79e6x5cb4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_79e6x5cb4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL21vZGVsL2RlY29yYXRpb25Qcm92aWRlci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBSYW5nZSB9IGZyb20gJy4uL2NvcmUvcmFuZ2UuanMnO1xuaW1wb3J0IHsgSU1vZGVsRGVjb3JhdGlvbiB9IGZyb20gJy4uL21vZGVsLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBEZWNvcmF0aW9uUHJvdmlkZXIge1xuXHQvKipcblx0ICogR2V0cyBhbGwgdGhlIGRlY29yYXRpb25zIGluIGEgcmFuZ2UgYXMgYW4gYXJyYXkuIE9ubHkgYHN0YXJ0TGluZU51bWJlcmAgYW5kIGBlbmRMaW5lTnVtYmVyYCBmcm9tIGByYW5nZWAgYXJlIHVzZWQgZm9yIGZpbHRlcmluZy5cblx0ICogU28gZm9yIG5vdyBpdCByZXR1cm5zIGFsbCB0aGUgZGVjb3JhdGlvbnMgb24gdGhlIHNhbWUgbGluZSBhcyBgcmFuZ2VgLlxuXHQgKiBAcGFyYW0gcmFuZ2UgVGhlIHJhbmdlIHRvIHNlYXJjaCBpblxuXHQgKiBAcGFyYW0gb3duZXJJZCBJZiBzZXQsIGl0IHdpbGwgaWdub3JlIGRlY29yYXRpb25zIGJlbG9uZ2luZyB0byBvdGhlciBvd25lcnMuXG5cdCAqIEBwYXJhbSBmaWx0ZXJPdXRWYWxpZGF0aW9uIElmIHNldCwgaXQgd2lsbCBpZ25vcmUgZGVjb3JhdGlvbnMgc3BlY2lmaWMgdG8gdmFsaWRhdGlvbiAoaS5lLiB3YXJuaW5ncywgZXJyb3JzKS5cblx0ICogQHJldHVybiBBbiBhcnJheSB3aXRoIHRoZSBkZWNvcmF0aW9uc1xuXHQgKi9cblx0Z2V0RGVjb3JhdGlvbnNJblJhbmdlKHJhbmdlOiBSYW5nZSwgb3duZXJJZD86IG51bWJlciwgZmlsdGVyT3V0VmFsaWRhdGlvbj86IGJvb2xlYW4pOiBJTW9kZWxEZWNvcmF0aW9uW107XG5cblx0LyoqXG5cdCAqIEdldHMgYWxsIHRoZSBkZWNvcmF0aW9ucyBhcyBhbiBhcnJheS5cblx0ICogQHBhcmFtIG93bmVySWQgSWYgc2V0LCBpdCB3aWxsIGlnbm9yZSBkZWNvcmF0aW9ucyBiZWxvbmdpbmcgdG8gb3RoZXIgb3duZXJzLlxuXHQgKiBAcGFyYW0gZmlsdGVyT3V0VmFsaWRhdGlvbiBJZiBzZXQsIGl0IHdpbGwgaWdub3JlIGRlY29yYXRpb25zIHNwZWNpZmljIHRvIHZhbGlkYXRpb24gKGkuZS4gd2FybmluZ3MsIGVycm9ycykuXG5cdCAqL1xuXHRnZXRBbGxEZWNvcmF0aW9ucyhvd25lcklkPzogbnVtYmVyLCBmaWx0ZXJPdXRWYWxpZGF0aW9uPzogYm9vbGVhbiwgb25seU1pbmltYXBEZWNvcmF0aW9ucz86IGJvb2xlYW4pOiBJTW9kZWxEZWNvcmF0aW9uW107XG5cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2U6IEV2ZW50PHZvaWQ+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

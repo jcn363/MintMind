@@ -1,0 +1,201 @@
+9145d1db6d764e65acfff6e0847c1ac3
+/* istanbul ignore next */
+function cov_2402eyumnd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingOperations.ts";
+  var hash = "cd88f62065104ca96426be57d40238f2815bb4d1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingOperations.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 50
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 4
+        },
+        end: {
+          line: 7,
+          column: 43
+        }
+      },
+      "2": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 43
+        }
+      },
+      "3": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "4": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 47
+        }
+      },
+      "5": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 55
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 6,
+            column: 1
+          },
+          end: {
+            line: 6,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 30
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 12,
+            column: 3
+          },
+          end: {
+            line: 12,
+            column: 48
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 12,
+            column: 3
+          },
+          end: {
+            line: 12,
+            column: 20
+          }
+        }, {
+          start: {
+            line: 12,
+            column: 25
+          },
+          end: {
+            line: 12,
+            column: 47
+          }
+        }],
+        line: 12
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingOperations.ts",
+      mappings: "AAAA;;;gGAGgG;AAOhG,MAAM,CAAN,IAAY,iBAMX;AAND,WAAY,iBAAiB;IAC5B,sCAAiB,CAAA;IACjB,sCAAiB,CAAA;IACjB,sCAAiB,CAAA;IACjB,0CAAqB,CAAA;IACrB,kDAA6B,CAAA;AAC9B,CAAC,EANW,iBAAiB,KAAjB,iBAAiB,QAM5B",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingOperations.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../../base/common/uri.js';\nimport { TextEdit } from '../../../../../editor/common/languages.js';\nimport { ICellEditOperation } from '../../../notebook/common/notebookCommon.js';\nimport { IModifiedEntryTelemetryInfo } from '../../common/chatEditingService.js';\n\nexport enum FileOperationType {\n\tCreate = 'create',\n\tDelete = 'delete',\n\tRename = 'rename',\n\tTextEdit = 'textEdit',\n\tNotebookEdit = 'notebookEdit'\n}\n\n/**\n * Base interface for all file operations in the checkpoint timeline\n */\nexport interface IFileOperation {\n\treadonly type: FileOperationType;\n\treadonly uri: URI;\n\treadonly requestId: string;\n\treadonly epoch: number;\n}\n\n/**\n * Operation representing the creation of a new file\n */\nexport interface IFileCreateOperation extends IFileOperation {\n\treadonly type: FileOperationType.Create;\n\treadonly initialContent: string;\n\treadonly notebookViewType?: string;\n\treadonly telemetryInfo: IModifiedEntryTelemetryInfo;\n}\n\n/**\n * Operation representing the deletion of a file\n */\nexport interface IFileDeleteOperation extends IFileOperation {\n\treadonly type: FileOperationType.Delete;\n\treadonly finalContent: string; // content before deletion for potential restoration\n}\n\n/**\n * Operation representing the renaming/moving of a file\n */\nexport interface IFileRenameOperation extends IFileOperation {\n\treadonly type: FileOperationType.Rename;\n\treadonly oldUri: URI;\n\treadonly newUri: URI;\n}\n\n/**\n * Operation representing text edits applied to a file\n */\nexport interface ITextEditOperation extends IFileOperation {\n\treadonly type: FileOperationType.TextEdit;\n\treadonly edits: readonly TextEdit[];\n\t/**\n\t * For cell URIs, the cell index that was edited. Needed because the original\n\t * edit URI only contains the `handle` which is not portable between notebooks.\n\t */\n\treadonly cellIndex?: number;\n}\n\n/**\n * Operation representing notebook cell edits applied to a notebook\n */\nexport interface INotebookEditOperation extends IFileOperation {\n\treadonly type: FileOperationType.NotebookEdit;\n\treadonly cellEdits: readonly ICellEditOperation[];\n}\n\n/**\n * Union type of all possible file operations\n */\nexport type FileOperation = IFileCreateOperation | IFileDeleteOperation | IFileRenameOperation | ITextEditOperation | INotebookEditOperation;\n\n/**\n * File baseline represents the initial state of a file when first edited in a request\n */\nexport interface IFileBaseline {\n\treadonly uri: URI;\n\treadonly requestId: string;\n\treadonly content: string;\n\treadonly epoch: number;\n\treadonly telemetryInfo: IModifiedEntryTelemetryInfo;\n\treadonly notebookViewType?: string;\n}\n\nexport interface IReconstructedFileExistsState {\n\treadonly exists: true;\n\treadonly content: string;\n\treadonly uri: URI;\n\treadonly telemetryInfo: IModifiedEntryTelemetryInfo;\n\treadonly notebookViewType?: string;\n}\n\nexport interface IReconstructedFileNotExistsState {\n\treadonly exists: false;\n\treadonly uri: URI;\n}\n\n/**\n * The reconstructed state of a file at a specific checkpoint\n */\nexport type IReconstructedFileState = IReconstructedFileNotExistsState | IReconstructedFileExistsState;\n\n/**\n * Checkpoint represents a stable state that can be navigated to\n */\nexport interface ICheckpoint {\n\treadonly checkpointId: string;\n\treadonly requestId: string | undefined; // undefined for initial state\n\treadonly undoStopId: string | undefined;\n\treadonly epoch: number;\n\treadonly label: string; // for UI display\n\treadonly description?: string; // optional detailed description\n}\n\n/**\n * State that can be persisted and restored for the checkpoint timeline\n */\nexport interface IChatEditingTimelineState {\n\treadonly checkpoints: readonly ICheckpoint[];\n\treadonly fileBaselines: [string, IFileBaseline][]; // key: `${uri}::${requestId}`\n\treadonly operations: readonly FileOperation[];\n\treadonly currentEpoch: number;\n\treadonly epochCounter: number;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "cd88f62065104ca96426be57d40238f2815bb4d1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2402eyumnd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2402eyumnd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export var FileOperationType;
+/* istanbul ignore next */
+cov_2402eyumnd().s[0]++;
+(function (FileOperationType) {
+  /* istanbul ignore next */
+  cov_2402eyumnd().f[0]++;
+  cov_2402eyumnd().s[1]++;
+  FileOperationType["Create"] = "create";
+  /* istanbul ignore next */
+  cov_2402eyumnd().s[2]++;
+  FileOperationType["Delete"] = "delete";
+  /* istanbul ignore next */
+  cov_2402eyumnd().s[3]++;
+  FileOperationType["Rename"] = "rename";
+  /* istanbul ignore next */
+  cov_2402eyumnd().s[4]++;
+  FileOperationType["TextEdit"] = "textEdit";
+  /* istanbul ignore next */
+  cov_2402eyumnd().s[5]++;
+  FileOperationType["NotebookEdit"] = "notebookEdit";
+})(
+/* istanbul ignore next */
+(cov_2402eyumnd().b[0][0]++, FileOperationType) ||
+/* istanbul ignore next */
+(cov_2402eyumnd().b[0][1]++, FileOperationType = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJGaWxlT3BlcmF0aW9uVHlwZSIsImNvdl8yNDAyZXl1bW5kIiwicyIsImYiLCJiIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jaGF0L2Jyb3dzZXIvY2hhdEVkaXRpbmcvY2hhdEVkaXRpbmdPcGVyYXRpb25zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgVGV4dEVkaXQgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9lZGl0b3IvY29tbW9uL2xhbmd1YWdlcy5qcyc7XG5pbXBvcnQgeyBJQ2VsbEVkaXRPcGVyYXRpb24gfSBmcm9tICcuLi8uLi8uLi9ub3RlYm9vay9jb21tb24vbm90ZWJvb2tDb21tb24uanMnO1xuaW1wb3J0IHsgSU1vZGlmaWVkRW50cnlUZWxlbWV0cnlJbmZvIH0gZnJvbSAnLi4vLi4vY29tbW9uL2NoYXRFZGl0aW5nU2VydmljZS5qcyc7XG5cbmV4cG9ydCBlbnVtIEZpbGVPcGVyYXRpb25UeXBlIHtcblx0Q3JlYXRlID0gJ2NyZWF0ZScsXG5cdERlbGV0ZSA9ICdkZWxldGUnLFxuXHRSZW5hbWUgPSAncmVuYW1lJyxcblx0VGV4dEVkaXQgPSAndGV4dEVkaXQnLFxuXHROb3RlYm9va0VkaXQgPSAnbm90ZWJvb2tFZGl0J1xufVxuXG4vKipcbiAqIEJhc2UgaW50ZXJmYWNlIGZvciBhbGwgZmlsZSBvcGVyYXRpb25zIGluIHRoZSBjaGVja3BvaW50IHRpbWVsaW5lXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUZpbGVPcGVyYXRpb24ge1xuXHRyZWFkb25seSB0eXBlOiBGaWxlT3BlcmF0aW9uVHlwZTtcblx0cmVhZG9ubHkgdXJpOiBVUkk7XG5cdHJlYWRvbmx5IHJlcXVlc3RJZDogc3RyaW5nO1xuXHRyZWFkb25seSBlcG9jaDogbnVtYmVyO1xufVxuXG4vKipcbiAqIE9wZXJhdGlvbiByZXByZXNlbnRpbmcgdGhlIGNyZWF0aW9uIG9mIGEgbmV3IGZpbGVcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJRmlsZUNyZWF0ZU9wZXJhdGlvbiBleHRlbmRzIElGaWxlT3BlcmF0aW9uIHtcblx0cmVhZG9ubHkgdHlwZTogRmlsZU9wZXJhdGlvblR5cGUuQ3JlYXRlO1xuXHRyZWFkb25seSBpbml0aWFsQ29udGVudDogc3RyaW5nO1xuXHRyZWFkb25seSBub3RlYm9va1ZpZXdUeXBlPzogc3RyaW5nO1xuXHRyZWFkb25seSB0ZWxlbWV0cnlJbmZvOiBJTW9kaWZpZWRFbnRyeVRlbGVtZXRyeUluZm87XG59XG5cbi8qKlxuICogT3BlcmF0aW9uIHJlcHJlc2VudGluZyB0aGUgZGVsZXRpb24gb2YgYSBmaWxlXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUZpbGVEZWxldGVPcGVyYXRpb24gZXh0ZW5kcyBJRmlsZU9wZXJhdGlvbiB7XG5cdHJlYWRvbmx5IHR5cGU6IEZpbGVPcGVyYXRpb25UeXBlLkRlbGV0ZTtcblx0cmVhZG9ubHkgZmluYWxDb250ZW50OiBzdHJpbmc7IC8vIGNvbnRlbnQgYmVmb3JlIGRlbGV0aW9uIGZvciBwb3RlbnRpYWwgcmVzdG9yYXRpb25cbn1cblxuLyoqXG4gKiBPcGVyYXRpb24gcmVwcmVzZW50aW5nIHRoZSByZW5hbWluZy9tb3Zpbmcgb2YgYSBmaWxlXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUZpbGVSZW5hbWVPcGVyYXRpb24gZXh0ZW5kcyBJRmlsZU9wZXJhdGlvbiB7XG5cdHJlYWRvbmx5IHR5cGU6IEZpbGVPcGVyYXRpb25UeXBlLlJlbmFtZTtcblx0cmVhZG9ubHkgb2xkVXJpOiBVUkk7XG5cdHJlYWRvbmx5IG5ld1VyaTogVVJJO1xufVxuXG4vKipcbiAqIE9wZXJhdGlvbiByZXByZXNlbnRpbmcgdGV4dCBlZGl0cyBhcHBsaWVkIHRvIGEgZmlsZVxuICovXG5leHBvcnQgaW50ZXJmYWNlIElUZXh0RWRpdE9wZXJhdGlvbiBleHRlbmRzIElGaWxlT3BlcmF0aW9uIHtcblx0cmVhZG9ubHkgdHlwZTogRmlsZU9wZXJhdGlvblR5cGUuVGV4dEVkaXQ7XG5cdHJlYWRvbmx5IGVkaXRzOiByZWFkb25seSBUZXh0RWRpdFtdO1xuXHQvKipcblx0ICogRm9yIGNlbGwgVVJJcywgdGhlIGNlbGwgaW5kZXggdGhhdCB3YXMgZWRpdGVkLiBOZWVkZWQgYmVjYXVzZSB0aGUgb3JpZ2luYWxcblx0ICogZWRpdCBVUkkgb25seSBjb250YWlucyB0aGUgYGhhbmRsZWAgd2hpY2ggaXMgbm90IHBvcnRhYmxlIGJldHdlZW4gbm90ZWJvb2tzLlxuXHQgKi9cblx0cmVhZG9ubHkgY2VsbEluZGV4PzogbnVtYmVyO1xufVxuXG4vKipcbiAqIE9wZXJhdGlvbiByZXByZXNlbnRpbmcgbm90ZWJvb2sgY2VsbCBlZGl0cyBhcHBsaWVkIHRvIGEgbm90ZWJvb2tcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJTm90ZWJvb2tFZGl0T3BlcmF0aW9uIGV4dGVuZHMgSUZpbGVPcGVyYXRpb24ge1xuXHRyZWFkb25seSB0eXBlOiBGaWxlT3BlcmF0aW9uVHlwZS5Ob3RlYm9va0VkaXQ7XG5cdHJlYWRvbmx5IGNlbGxFZGl0czogcmVhZG9ubHkgSUNlbGxFZGl0T3BlcmF0aW9uW107XG59XG5cbi8qKlxuICogVW5pb24gdHlwZSBvZiBhbGwgcG9zc2libGUgZmlsZSBvcGVyYXRpb25zXG4gKi9cbmV4cG9ydCB0eXBlIEZpbGVPcGVyYXRpb24gPSBJRmlsZUNyZWF0ZU9wZXJhdGlvbiB8IElGaWxlRGVsZXRlT3BlcmF0aW9uIHwgSUZpbGVSZW5hbWVPcGVyYXRpb24gfCBJVGV4dEVkaXRPcGVyYXRpb24gfCBJTm90ZWJvb2tFZGl0T3BlcmF0aW9uO1xuXG4vKipcbiAqIEZpbGUgYmFzZWxpbmUgcmVwcmVzZW50cyB0aGUgaW5pdGlhbCBzdGF0ZSBvZiBhIGZpbGUgd2hlbiBmaXJzdCBlZGl0ZWQgaW4gYSByZXF1ZXN0XG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUZpbGVCYXNlbGluZSB7XG5cdHJlYWRvbmx5IHVyaTogVVJJO1xuXHRyZWFkb25seSByZXF1ZXN0SWQ6IHN0cmluZztcblx0cmVhZG9ubHkgY29udGVudDogc3RyaW5nO1xuXHRyZWFkb25seSBlcG9jaDogbnVtYmVyO1xuXHRyZWFkb25seSB0ZWxlbWV0cnlJbmZvOiBJTW9kaWZpZWRFbnRyeVRlbGVtZXRyeUluZm87XG5cdHJlYWRvbmx5IG5vdGVib29rVmlld1R5cGU/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlY29uc3RydWN0ZWRGaWxlRXhpc3RzU3RhdGUge1xuXHRyZWFkb25seSBleGlzdHM6IHRydWU7XG5cdHJlYWRvbmx5IGNvbnRlbnQ6IHN0cmluZztcblx0cmVhZG9ubHkgdXJpOiBVUkk7XG5cdHJlYWRvbmx5IHRlbGVtZXRyeUluZm86IElNb2RpZmllZEVudHJ5VGVsZW1ldHJ5SW5mbztcblx0cmVhZG9ubHkgbm90ZWJvb2tWaWV3VHlwZT86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJUmVjb25zdHJ1Y3RlZEZpbGVOb3RFeGlzdHNTdGF0ZSB7XG5cdHJlYWRvbmx5IGV4aXN0czogZmFsc2U7XG5cdHJlYWRvbmx5IHVyaTogVVJJO1xufVxuXG4vKipcbiAqIFRoZSByZWNvbnN0cnVjdGVkIHN0YXRlIG9mIGEgZmlsZSBhdCBhIHNwZWNpZmljIGNoZWNrcG9pbnRcbiAqL1xuZXhwb3J0IHR5cGUgSVJlY29uc3RydWN0ZWRGaWxlU3RhdGUgPSBJUmVjb25zdHJ1Y3RlZEZpbGVOb3RFeGlzdHNTdGF0ZSB8IElSZWNvbnN0cnVjdGVkRmlsZUV4aXN0c1N0YXRlO1xuXG4vKipcbiAqIENoZWNrcG9pbnQgcmVwcmVzZW50cyBhIHN0YWJsZSBzdGF0ZSB0aGF0IGNhbiBiZSBuYXZpZ2F0ZWQgdG9cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJQ2hlY2twb2ludCB7XG5cdHJlYWRvbmx5IGNoZWNrcG9pbnRJZDogc3RyaW5nO1xuXHRyZWFkb25seSByZXF1ZXN0SWQ6IHN0cmluZyB8IHVuZGVmaW5lZDsgLy8gdW5kZWZpbmVkIGZvciBpbml0aWFsIHN0YXRlXG5cdHJlYWRvbmx5IHVuZG9TdG9wSWQ6IHN0cmluZyB8IHVuZGVmaW5lZDtcblx0cmVhZG9ubHkgZXBvY2g6IG51bWJlcjtcblx0cmVhZG9ubHkgbGFiZWw6IHN0cmluZzsgLy8gZm9yIFVJIGRpc3BsYXlcblx0cmVhZG9ubHkgZGVzY3JpcHRpb24/OiBzdHJpbmc7IC8vIG9wdGlvbmFsIGRldGFpbGVkIGRlc2NyaXB0aW9uXG59XG5cbi8qKlxuICogU3RhdGUgdGhhdCBjYW4gYmUgcGVyc2lzdGVkIGFuZCByZXN0b3JlZCBmb3IgdGhlIGNoZWNrcG9pbnQgdGltZWxpbmVcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJQ2hhdEVkaXRpbmdUaW1lbGluZVN0YXRlIHtcblx0cmVhZG9ubHkgY2hlY2twb2ludHM6IHJlYWRvbmx5IElDaGVja3BvaW50W107XG5cdHJlYWRvbmx5IGZpbGVCYXNlbGluZXM6IFtzdHJpbmcsIElGaWxlQmFzZWxpbmVdW107IC8vIGtleTogYCR7dXJpfTo6JHtyZXF1ZXN0SWR9YFxuXHRyZWFkb25seSBvcGVyYXRpb25zOiByZWFkb25seSBGaWxlT3BlcmF0aW9uW107XG5cdHJlYWRvbmx5IGN1cnJlbnRFcG9jaDogbnVtYmVyO1xuXHRyZWFkb25seSBlcG9jaENvdW50ZXI6IG51bWJlcjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQVVBLFdBQVlBLGlCQU1YO0FBQUE7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBTkQsV0FBWUYsaUJBQWlCO0VBQUE7RUFBQUMsY0FBQSxHQUFBRSxDQUFBO0VBQUFGLGNBQUEsR0FBQUMsQ0FBQTtFQUM1QkYsaUJBQUEscUJBQWlCO0VBQUE7RUFBQUMsY0FBQSxHQUFBQyxDQUFBO0VBQ2pCRixpQkFBQSxxQkFBaUI7RUFBQTtFQUFBQyxjQUFBLEdBQUFDLENBQUE7RUFDakJGLGlCQUFBLHFCQUFpQjtFQUFBO0VBQUFDLGNBQUEsR0FBQUMsQ0FBQTtFQUNqQkYsaUJBQUEseUJBQXFCO0VBQUE7RUFBQUMsY0FBQSxHQUFBQyxDQUFBO0VBQ3JCRixpQkFBQSxpQ0FBNkI7QUFDOUIsQ0FBQztBQU5XO0FBQUEsQ0FBQUMsY0FBQSxHQUFBRyxDQUFBLFVBQUFKLGlCQUFpQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBRyxDQUFBLFVBQWpCSixpQkFBaUIiLCJpZ25vcmVMaXN0IjpbXX0=

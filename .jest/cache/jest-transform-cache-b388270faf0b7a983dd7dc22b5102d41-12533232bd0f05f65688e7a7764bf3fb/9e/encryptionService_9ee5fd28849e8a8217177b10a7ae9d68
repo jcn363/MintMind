@@ -1,0 +1,258 @@
+3ae57855dbe87bb85abe58b6a6a23991
+/* istanbul ignore next */
+function cov_rn5axcxi7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/encryption/common/encryptionService.ts";
+  var hash = "016427f41a667a8ec48a8a9c8891f3b0ed06649a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/encryption/common/encryptionService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 34
+        },
+        end: {
+          line: 6,
+          column: 70
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 38
+        },
+        end: {
+          line: 7,
+          column: 78
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 70
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 79
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isKwallet",
+        decl: {
+          start: {
+            line: 8,
+            column: 16
+          },
+          end: {
+            line: 8,
+            column: 25
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 35
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "isGnome",
+        decl: {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 13,
+            column: 23
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 33
+          },
+          end: {
+            line: 17,
+            column: 1
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 11
+          },
+          end: {
+            line: 11,
+            column: 33
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 9,
+            column: 11
+          },
+          end: {
+            line: 9,
+            column: 32
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 11
+          },
+          end: {
+            line: 10,
+            column: 33
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 11
+          },
+          end: {
+            line: 11,
+            column: 33
+          }
+        }],
+        line: 9
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 14,
+            column: 11
+          },
+          end: {
+            line: 16,
+            column: 38
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 14,
+            column: 11
+          },
+          end: {
+            line: 14,
+            column: 34
+          }
+        }, {
+          start: {
+            line: 15,
+            column: 11
+          },
+          end: {
+            line: 15,
+            column: 40
+          }
+        }, {
+          start: {
+            line: 16,
+            column: 11
+          },
+          end: {
+            line: 16,
+            column: 38
+          }
+        }],
+        line: 14
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0, 0],
+      "1": [0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/encryption/common/encryptionService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,kBAAkB,GAAG,eAAe,CAAqB,mBAAmB,CAAC,CAAC;AAM3F,MAAM,CAAC,MAAM,sBAAsB,GAAG,eAAe,CAAyB,uBAAuB,CAAC,CAAC;AA+CvG,MAAM,UAAU,SAAS,CAAC,OAAe;IACxC,OAAO,OAAO,iDAAiC;WAC3C,OAAO,mDAAkC;WACzC,OAAO,mDAAkC,CAAC;AAC/C,CAAC;AAED,MAAM,UAAU,OAAO,CAAC,OAAe;IACtC,OAAO,OAAO,oDAAkC;WAC5C,OAAO,gEAAwC;WAC/C,OAAO,4DAAsC,CAAC;AACnD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/encryption/common/encryptionService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IEncryptionService = createDecorator<IEncryptionService>('encryptionService');\nexport interface IEncryptionService extends ICommonEncryptionService {\n\tsetUsePlainTextEncryption(): Promise<void>;\n\tgetKeyStorageProvider(): Promise<KnownStorageProvider>;\n}\n\nexport const IEncryptionMainService = createDecorator<IEncryptionMainService>('encryptionMainService');\nexport interface IEncryptionMainService extends IEncryptionService { }\n\nexport interface ICommonEncryptionService {\n\n\treadonly _serviceBrand: undefined;\n\n\tencrypt(value: string): Promise<string>;\n\n\tdecrypt(value: string): Promise<string>;\n\n\tisEncryptionAvailable(): Promise<boolean>;\n}\n\n// The values provided to the `password-store` command line switch.\n// Notice that they are not the same as the values returned by\n// `getSelectedStorageBackend` in the `safeStorage` API.\nexport const enum PasswordStoreCLIOption {\n\tkwallet = 'kwallet',\n\tkwallet5 = 'kwallet5',\n\tgnomeLibsecret = 'gnome-libsecret',\n\tbasic = 'basic'\n}\n\n// The values returned by `getSelectedStorageBackend` in the `safeStorage` API.\nexport const enum KnownStorageProvider {\n\tunknown = 'unknown',\n\tbasicText = 'basic_text',\n\n\t// Linux\n\tgnomeAny = 'gnome_any',\n\tgnomeLibsecret = 'gnome_libsecret',\n\tgnomeKeyring = 'gnome_keyring',\n\tkwallet = 'kwallet',\n\tkwallet5 = 'kwallet5',\n\tkwallet6 = 'kwallet6',\n\n\t// The rest of these are not returned by `getSelectedStorageBackend`\n\t// but these were added for platform completeness.\n\n\t// Windows\n\tdplib = 'dpapi',\n\n\t// macOS\n\tkeychainAccess = 'keychain_access',\n}\n\nexport function isKwallet(backend: string): boolean {\n\treturn backend === KnownStorageProvider.kwallet\n\t\t|| backend === KnownStorageProvider.kwallet5\n\t\t|| backend === KnownStorageProvider.kwallet6;\n}\n\nexport function isGnome(backend: string): boolean {\n\treturn backend === KnownStorageProvider.gnomeAny\n\t\t|| backend === KnownStorageProvider.gnomeLibsecret\n\t\t|| backend === KnownStorageProvider.gnomeKeyring;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "016427f41a667a8ec48a8a9c8891f3b0ed06649a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_rn5axcxi7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_rn5axcxi7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IEncryptionService =
+/* istanbul ignore next */
+(cov_rn5axcxi7().s[0]++, createDecorator('encryptionService'));
+export const IEncryptionMainService =
+/* istanbul ignore next */
+(cov_rn5axcxi7().s[1]++, createDecorator('encryptionMainService'));
+export function isKwallet(backend) {
+  /* istanbul ignore next */
+  cov_rn5axcxi7().f[0]++;
+  cov_rn5axcxi7().s[2]++;
+  return /* istanbul ignore next */(cov_rn5axcxi7().b[0][0]++, backend === "kwallet" /* KnownStorageProvider.kwallet */) ||
+  /* istanbul ignore next */
+  (cov_rn5axcxi7().b[0][1]++, backend === "kwallet5") /* KnownStorageProvider.kwallet5 */ ||
+  /* istanbul ignore next */
+  (cov_rn5axcxi7().b[0][2]++, backend === "kwallet6") /* KnownStorageProvider.kwallet6 */;
+}
+export function isGnome(backend) {
+  /* istanbul ignore next */
+  cov_rn5axcxi7().f[1]++;
+  cov_rn5axcxi7().s[3]++;
+  return /* istanbul ignore next */(cov_rn5axcxi7().b[1][0]++, backend === "gnome_any" /* KnownStorageProvider.gnomeAny */) ||
+  /* istanbul ignore next */
+  (cov_rn5axcxi7().b[1][1]++, backend === "gnome_libsecret") /* KnownStorageProvider.gnomeLibsecret */ ||
+  /* istanbul ignore next */
+  (cov_rn5axcxi7().b[1][2]++, backend === "gnome_keyring") /* KnownStorageProvider.gnomeKeyring */;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3Zfcm41YXhjeGk3IiwiYWN0dWFsQ292ZXJhZ2UiLCJjcmVhdGVEZWNvcmF0b3IiLCJJRW5jcnlwdGlvblNlcnZpY2UiLCJzIiwiSUVuY3J5cHRpb25NYWluU2VydmljZSIsImlzS3dhbGxldCIsImJhY2tlbmQiLCJmIiwiYiIsImlzR25vbWUiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL2VuY3J5cHRpb24vY29tbW9uL2VuY3J5cHRpb25TZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElFbmNyeXB0aW9uU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJRW5jcnlwdGlvblNlcnZpY2U+KCdlbmNyeXB0aW9uU2VydmljZScpO1xuZXhwb3J0IGludGVyZmFjZSBJRW5jcnlwdGlvblNlcnZpY2UgZXh0ZW5kcyBJQ29tbW9uRW5jcnlwdGlvblNlcnZpY2Uge1xuXHRzZXRVc2VQbGFpblRleHRFbmNyeXB0aW9uKCk6IFByb21pc2U8dm9pZD47XG5cdGdldEtleVN0b3JhZ2VQcm92aWRlcigpOiBQcm9taXNlPEtub3duU3RvcmFnZVByb3ZpZGVyPjtcbn1cblxuZXhwb3J0IGNvbnN0IElFbmNyeXB0aW9uTWFpblNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUVuY3J5cHRpb25NYWluU2VydmljZT4oJ2VuY3J5cHRpb25NYWluU2VydmljZScpO1xuZXhwb3J0IGludGVyZmFjZSBJRW5jcnlwdGlvbk1haW5TZXJ2aWNlIGV4dGVuZHMgSUVuY3J5cHRpb25TZXJ2aWNlIHsgfVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tb25FbmNyeXB0aW9uU2VydmljZSB7XG5cblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdGVuY3J5cHQodmFsdWU6IHN0cmluZyk6IFByb21pc2U8c3RyaW5nPjtcblxuXHRkZWNyeXB0KHZhbHVlOiBzdHJpbmcpOiBQcm9taXNlPHN0cmluZz47XG5cblx0aXNFbmNyeXB0aW9uQXZhaWxhYmxlKCk6IFByb21pc2U8Ym9vbGVhbj47XG59XG5cbi8vIFRoZSB2YWx1ZXMgcHJvdmlkZWQgdG8gdGhlIGBwYXNzd29yZC1zdG9yZWAgY29tbWFuZCBsaW5lIHN3aXRjaC5cbi8vIE5vdGljZSB0aGF0IHRoZXkgYXJlIG5vdCB0aGUgc2FtZSBhcyB0aGUgdmFsdWVzIHJldHVybmVkIGJ5XG4vLyBgZ2V0U2VsZWN0ZWRTdG9yYWdlQmFja2VuZGAgaW4gdGhlIGBzYWZlU3RvcmFnZWAgQVBJLlxuZXhwb3J0IGNvbnN0IGVudW0gUGFzc3dvcmRTdG9yZUNMSU9wdGlvbiB7XG5cdGt3YWxsZXQgPSAna3dhbGxldCcsXG5cdGt3YWxsZXQ1ID0gJ2t3YWxsZXQ1Jyxcblx0Z25vbWVMaWJzZWNyZXQgPSAnZ25vbWUtbGlic2VjcmV0Jyxcblx0YmFzaWMgPSAnYmFzaWMnXG59XG5cbi8vIFRoZSB2YWx1ZXMgcmV0dXJuZWQgYnkgYGdldFNlbGVjdGVkU3RvcmFnZUJhY2tlbmRgIGluIHRoZSBgc2FmZVN0b3JhZ2VgIEFQSS5cbmV4cG9ydCBjb25zdCBlbnVtIEtub3duU3RvcmFnZVByb3ZpZGVyIHtcblx0dW5rbm93biA9ICd1bmtub3duJyxcblx0YmFzaWNUZXh0ID0gJ2Jhc2ljX3RleHQnLFxuXG5cdC8vIExpbnV4XG5cdGdub21lQW55ID0gJ2dub21lX2FueScsXG5cdGdub21lTGlic2VjcmV0ID0gJ2dub21lX2xpYnNlY3JldCcsXG5cdGdub21lS2V5cmluZyA9ICdnbm9tZV9rZXlyaW5nJyxcblx0a3dhbGxldCA9ICdrd2FsbGV0Jyxcblx0a3dhbGxldDUgPSAna3dhbGxldDUnLFxuXHRrd2FsbGV0NiA9ICdrd2FsbGV0NicsXG5cblx0Ly8gVGhlIHJlc3Qgb2YgdGhlc2UgYXJlIG5vdCByZXR1cm5lZCBieSBgZ2V0U2VsZWN0ZWRTdG9yYWdlQmFja2VuZGBcblx0Ly8gYnV0IHRoZXNlIHdlcmUgYWRkZWQgZm9yIHBsYXRmb3JtIGNvbXBsZXRlbmVzcy5cblxuXHQvLyBXaW5kb3dzXG5cdGRwbGliID0gJ2RwYXBpJyxcblxuXHQvLyBtYWNPU1xuXHRrZXljaGFpbkFjY2VzcyA9ICdrZXljaGFpbl9hY2Nlc3MnLFxufVxuXG5leHBvcnQgZnVuY3Rpb24gaXNLd2FsbGV0KGJhY2tlbmQ6IHN0cmluZyk6IGJvb2xlYW4ge1xuXHRyZXR1cm4gYmFja2VuZCA9PT0gS25vd25TdG9yYWdlUHJvdmlkZXIua3dhbGxldFxuXHRcdHx8IGJhY2tlbmQgPT09IEtub3duU3RvcmFnZVByb3ZpZGVyLmt3YWxsZXQ1XG5cdFx0fHwgYmFja2VuZCA9PT0gS25vd25TdG9yYWdlUHJvdmlkZXIua3dhbGxldDY7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBpc0dub21lKGJhY2tlbmQ6IHN0cmluZyk6IGJvb2xlYW4ge1xuXHRyZXR1cm4gYmFja2VuZCA9PT0gS25vd25TdG9yYWdlUHJvdmlkZXIuZ25vbWVBbnlcblx0XHR8fCBiYWNrZW5kID09PSBLbm93blN0b3JhZ2VQcm92aWRlci5nbm9tZUxpYnNlY3JldFxuXHRcdHx8IGJhY2tlbmQgPT09IEtub3duU3RvcmFnZVByb3ZpZGVyLmdub21lS2V5cmluZztcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQXFFSztJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBckVMOzs7O0FBS0EsU0FBU0UsZUFBZSxRQUFRLDZDQUE2QztBQUU3RSxPQUFPLE1BQU1DLGtCQUFrQjtBQUFBO0FBQUEsQ0FBQUgsYUFBQSxHQUFBSSxDQUFBLE9BQUdGLGVBQWUsQ0FBcUIsbUJBQW1CLENBQUM7QUFNMUYsT0FBTyxNQUFNRyxzQkFBc0I7QUFBQTtBQUFBLENBQUFMLGFBQUEsR0FBQUksQ0FBQSxPQUFHRixlQUFlLENBQXlCLHVCQUF1QixDQUFDO0FBK0N0RyxPQUFNLFNBQVVJLFNBQVNBLENBQUNDLE9BQWU7RUFBQTtFQUFBUCxhQUFBLEdBQUFRLENBQUE7RUFBQVIsYUFBQSxHQUFBSSxDQUFBO0VBQ3hDLE9BQU8sMkJBQUFKLGFBQUEsR0FBQVMsQ0FBQSxVQUFBRixPQUFPO0VBQUE7RUFBQSxDQUFBUCxhQUFBLEdBQUFTLENBQUEsVUFDVkYsT0FBTztFQUFBO0VBQUEsQ0FBQVAsYUFBQSxHQUFBUyxDQUFBLFVBQ1BGLE9BQU87QUFDWjtBQUVBLE9BQU0sU0FBVUcsT0FBT0EsQ0FBQ0gsT0FBZTtFQUFBO0VBQUFQLGFBQUEsR0FBQVEsQ0FBQTtFQUFBUixhQUFBLEdBQUFJLENBQUE7RUFDdEMsT0FBTywyQkFBQUosYUFBQSxHQUFBUyxDQUFBLFVBQUFGLE9BQU87RUFBQTtFQUFBLENBQUFQLGFBQUEsR0FBQVMsQ0FBQSxVQUNWRixPQUFPO0VBQUE7RUFBQSxDQUFBUCxhQUFBLEdBQUFTLENBQUEsVUFDUEYsT0FBTztBQUNaIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,162 @@
+54ad0c4729bbe5fc74664da51ce3f342
+/* istanbul ignore next */
+function cov_5u2389fm3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/tasks/common/taskService.ts";
+  var hash = "f15d6680310701763645a7b14b370d030e0af0db";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/tasks/common/taskService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 47
+        },
+        end: {
+          line: 8,
+          column: 267
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 46
+        },
+        end: {
+          line: 9,
+          column: 263
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 38
+        },
+        end: {
+          line: 10,
+          column: 188
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 48
+        },
+        end: {
+          line: 11,
+          column: 271
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 36
+        },
+        end: {
+          line: 12,
+          column: 178
+        }
+      },
+      "5": {
+        start: {
+          line: 13,
+          column: 37
+        },
+        end: {
+          line: 13,
+          column: 170
+        }
+      },
+      "6": {
+        start: {
+          line: 14,
+          column: 45
+        },
+        end: {
+          line: 14,
+          column: 181
+        }
+      },
+      "7": {
+        start: {
+          line: 15,
+          column: 28
+        },
+        end: {
+          line: 15,
+          column: 58
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/tasks/common/taskService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,KAAK,GAAG,MAAM,oBAAoB,CAAC;AAG1C,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAM7F,OAAO,EAAE,aAAa,EAAE,cAAc,EAAE,MAAM,sDAAsD,CAAC;AAKrG,MAAM,CAAC,MAAM,+BAA+B,GAAG,IAAI,aAAa,CAAU,0BAA0B,EAAE,KAAK,EAAE,GAAG,CAAC,QAAQ,CAAC,gCAAgC,EAAE,sHAAsH,CAAC,CAAC,CAAC;AACrR,MAAM,CAAC,MAAM,8BAA8B,GAAG,IAAI,aAAa,CAAU,yBAAyB,EAAE,KAAK,EAAE,GAAG,CAAC,QAAQ,CAAC,+BAA+B,EAAE,qHAAqH,CAAC,CAAC,CAAC;AACjR,MAAM,CAAC,MAAM,sBAAsB,GAAG,IAAI,aAAa,CAAU,wBAAwB,EAAE,KAAK,EAAE,GAAG,CAAC,QAAQ,CAAC,8BAA8B,EAAE,oDAAoD,CAAC,CAAC,CAAC;AACtM,MAAM,CAAC,MAAM,gCAAgC,GAAG,IAAI,aAAa,CAAU,2BAA2B,EAAE,KAAK,EAAE,GAAG,CAAC,QAAQ,CAAC,iCAAiC,EAAE,uHAAuH,CAAC,CAAC,CAAC;AACzR,MAAM,CAAC,MAAM,oBAAoB,GAAG,IAAI,aAAa,CAAU,sBAAsB,EAAE,KAAK,EAAE,GAAG,CAAC,QAAQ,CAAC,4BAA4B,EAAE,gDAAgD,CAAC,CAAC,CAAC;AAC5L,MAAM,CAAC,MAAM,qBAAqB,GAAG,IAAI,aAAa,CAAU,gBAAgB,EAAE,KAAK,EAAE,GAAG,CAAC,QAAQ,CAAC,sBAAsB,EAAE,mDAAmD,CAAC,CAAC,CAAC;AACpL,MAAM,CAAC,MAAM,6BAA6B,GAAG,cAAc,CAAC,EAAE,CAAC,cAAc,CAAC,GAAG,CAAC,8BAA8B,EAAE,gCAAgC,CAAC,EAAE,+BAA+B,CAAC,CAAC;AAEtL,MAAM,CAAC,MAAM,YAAY,GAAG,eAAe,CAAe,aAAa,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/tasks/common/taskService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport * as nls from '../../../../nls.js';\nimport { Action } from '../../../../base/common/actions.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { IWorkspaceFolder, IWorkspace } from '../../../../platform/workspace/common/workspace.js';\nimport { Task, ContributedTask, CustomTask, ITaskSet, TaskSorter, ITaskEvent, ITaskIdentifier, ConfiguringTask, TaskRunSource } from './tasks.js';\nimport { ITaskSummary, ITaskTerminateResponse, ITaskSystemInfo } from './taskSystem.js';\nimport { IStringDictionary } from '../../../../base/common/collections.js';\nimport { RawContextKey, ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { IMarkerData } from '../../../../platform/markers/common/markers.js';\nimport type { SingleOrMany } from '../../../../base/common/types.js';\nexport type { ITaskSummary, Task, ITaskTerminateResponse as TaskTerminateResponse };\nexport const CustomExecutionSupportedContext = new RawContextKey<boolean>('customExecutionSupported', false, nls.localize('tasks.customExecutionSupported', \"Whether CustomExecution tasks are supported. Consider using in the when clause of a \\'taskDefinition\\' contribution.\"));\nexport const ShellExecutionSupportedContext = new RawContextKey<boolean>('shellExecutionSupported', false, nls.localize('tasks.shellExecutionSupported', \"Whether ShellExecution tasks are supported. Consider using in the when clause of a \\'taskDefinition\\' contribution.\"));\nexport const TaskCommandsRegistered = new RawContextKey<boolean>('taskCommandsRegistered', false, nls.localize('tasks.taskCommandsRegistered', \"Whether the task commands have been registered yet\"));\nexport const ProcessExecutionSupportedContext = new RawContextKey<boolean>('processExecutionSupported', false, nls.localize('tasks.processExecutionSupported', \"Whether ProcessExecution tasks are supported. Consider using in the when clause of a \\'taskDefinition\\' contribution.\"));\nexport const ServerlessWebContext = new RawContextKey<boolean>('serverlessWebContext', false, nls.localize('tasks.serverlessWebContext', \"True when in the web with no remote authority.\"));\nexport const TasksAvailableContext = new RawContextKey<boolean>('tasksAvailable', false, nls.localize('tasks.tasksAvailable', \"Whether any tasks are available in the workspace.\"));\nexport const TaskExecutionSupportedContext = ContextKeyExpr.or(ContextKeyExpr.and(ShellExecutionSupportedContext, ProcessExecutionSupportedContext), CustomExecutionSupportedContext);\n\nexport const ITaskService = createDecorator<ITaskService>('taskService');\n\nexport interface ITaskProvider {\n\tprovideTasks(validTypes: IStringDictionary<boolean>): Promise<ITaskSet>;\n\tresolveTask(task: ConfiguringTask): Promise<ContributedTask | undefined>;\n}\n\nexport interface IProblemMatcherRunOptions {\n\tattachProblemMatcher?: boolean;\n}\n\nexport interface ICustomizationProperties {\n\tgroup?: string | { kind?: string; isDefault?: boolean };\n\tproblemMatcher?: SingleOrMany<string>;\n\tisBackground?: boolean;\n\tcolor?: string;\n\ticon?: string;\n}\n\nexport interface ITaskFilter {\n\tversion?: string;\n\ttype?: string;\n\ttask?: string;\n}\n\ninterface IWorkspaceTaskResult {\n\tset: ITaskSet | undefined;\n\tconfigurations: {\n\t\tbyIdentifier: IStringDictionary<ConfiguringTask>;\n\t} | undefined;\n\thasErrors: boolean;\n}\n\nexport interface IWorkspaceFolderTaskResult extends IWorkspaceTaskResult {\n\tworkspaceFolder: IWorkspaceFolder;\n}\n\nexport interface ITaskService {\n\treadonly _serviceBrand: undefined;\n\treadonly onDidStateChange: Event<ITaskEvent>;\n\t/** Fired when task providers are registered or unregistered */\n\treadonly onDidChangeTaskProviders: Event<void>;\n\tisReconnected: boolean;\n\treadonly onDidReconnectToTasks: Event<void>;\n\tsupportsMultipleTaskExecutions: boolean;\n\n\tconfigureAction(): Action;\n\trun(task: Task | undefined, options?: IProblemMatcherRunOptions, runSource?: TaskRunSource): Promise<ITaskSummary | undefined>;\n\tinTerminal(): boolean;\n\tgetActiveTasks(): Promise<Task[]>;\n\tgetBusyTasks(): Promise<Task[]>;\n\tterminate(task: Task): Promise<ITaskTerminateResponse>;\n\ttasks(filter?: ITaskFilter): Promise<Task[]>;\n\trerun(terminalInstanceId: number): void;\n\t/**\n\t * Gets tasks currently known to the task system. Unlike {@link tasks},\n\t * this does not activate extensions or prompt for workspace trust.\n\t */\n\tgetKnownTasks(filter?: ITaskFilter): Promise<Task[]>;\n\ttaskTypes(): string[];\n\tgetWorkspaceTasks(runSource?: TaskRunSource): Promise<Map<string, IWorkspaceFolderTaskResult>>;\n\tgetSavedTasks(type: 'persistent' | 'historical'): Promise<(Task | ConfiguringTask)[]>;\n\tremoveRecentlyUsedTask(taskRecentlyUsedKey: string): void;\n\tgetTerminalsForTasks(tasks: SingleOrMany<Task>): URI[] | undefined;\n\tgetTaskProblems(instanceId: number): Map<string, { resources: URI[]; markers: IMarkerData[] }> | undefined;\n\t/**\n\t * @param alias The task's name, label or defined identifier.\n\t */\n\tgetTask(workspaceFolder: IWorkspace | IWorkspaceFolder | string, alias: string | ITaskIdentifier, compareId?: boolean): Promise<Task | undefined>;\n\ttryResolveTask(configuringTask: ConfiguringTask): Promise<Task | undefined>;\n\tcreateSorter(): TaskSorter;\n\n\tgetTaskDescription(task: Task | ConfiguringTask): string | undefined;\n\tcustomize(task: ContributedTask | CustomTask | ConfiguringTask, properties?: {}, openConfig?: boolean): Promise<void>;\n\topenConfig(task: CustomTask | ConfiguringTask | undefined): Promise<boolean>;\n\n\tregisterTaskProvider(taskProvider: ITaskProvider, type: string): IDisposable;\n\n\tregisterTaskSystem(scheme: string, taskSystemInfo: ITaskSystemInfo): void;\n\treadonly onDidChangeTaskSystemInfo: Event<void>;\n\treadonly onDidChangeTaskConfig: Event<void>;\n\treadonly hasTaskSystemInfo: boolean;\n\tregisterSupportedExecutions(custom?: boolean, shell?: boolean, process?: boolean): void;\n\n\textensionCallbackTaskComplete(task: Task, result: number | undefined): Promise<void>;\n}\n\nexport interface ITaskTerminalStatus {\n\tterminalId: number;\n\tstatus: string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f15d6680310701763645a7b14b370d030e0af0db"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_5u2389fm3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_5u2389fm3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as nls from '../../../../nls.js';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { RawContextKey, ContextKeyExpr } from '../../../../platform/contextkey/common/contextkey.js';
+export const CustomExecutionSupportedContext =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[0]++, new RawContextKey('customExecutionSupported', false, nls.localize('tasks.customExecutionSupported', "Whether CustomExecution tasks are supported. Consider using in the when clause of a \'taskDefinition\' contribution.")));
+export const ShellExecutionSupportedContext =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[1]++, new RawContextKey('shellExecutionSupported', false, nls.localize('tasks.shellExecutionSupported', "Whether ShellExecution tasks are supported. Consider using in the when clause of a \'taskDefinition\' contribution.")));
+export const TaskCommandsRegistered =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[2]++, new RawContextKey('taskCommandsRegistered', false, nls.localize('tasks.taskCommandsRegistered', "Whether the task commands have been registered yet")));
+export const ProcessExecutionSupportedContext =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[3]++, new RawContextKey('processExecutionSupported', false, nls.localize('tasks.processExecutionSupported', "Whether ProcessExecution tasks are supported. Consider using in the when clause of a \'taskDefinition\' contribution.")));
+export const ServerlessWebContext =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[4]++, new RawContextKey('serverlessWebContext', false, nls.localize('tasks.serverlessWebContext', "True when in the web with no remote authority.")));
+export const TasksAvailableContext =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[5]++, new RawContextKey('tasksAvailable', false, nls.localize('tasks.tasksAvailable', "Whether any tasks are available in the workspace.")));
+export const TaskExecutionSupportedContext =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[6]++, ContextKeyExpr.or(ContextKeyExpr.and(ShellExecutionSupportedContext, ProcessExecutionSupportedContext), CustomExecutionSupportedContext));
+export const ITaskService =
+/* istanbul ignore next */
+(cov_5u2389fm3().s[7]++, createDecorator('taskService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJubHMiLCJjcmVhdGVEZWNvcmF0b3IiLCJSYXdDb250ZXh0S2V5IiwiQ29udGV4dEtleUV4cHIiLCJDdXN0b21FeGVjdXRpb25TdXBwb3J0ZWRDb250ZXh0IiwiY292XzV1MjM4OWZtMyIsInMiLCJsb2NhbGl6ZSIsIlNoZWxsRXhlY3V0aW9uU3VwcG9ydGVkQ29udGV4dCIsIlRhc2tDb21tYW5kc1JlZ2lzdGVyZWQiLCJQcm9jZXNzRXhlY3V0aW9uU3VwcG9ydGVkQ29udGV4dCIsIlNlcnZlcmxlc3NXZWJDb250ZXh0IiwiVGFza3NBdmFpbGFibGVDb250ZXh0IiwiVGFza0V4ZWN1dGlvblN1cHBvcnRlZENvbnRleHQiLCJvciIsImFuZCIsIklUYXNrU2VydmljZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGFza3MvY29tbW9uL3Rhc2tTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgKiBhcyBubHMgZnJvbSAnLi4vLi4vLi4vLi4vbmxzLmpzJztcbmltcG9ydCB7IEFjdGlvbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2FjdGlvbnMuanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IElXb3Jrc3BhY2VGb2xkZXIsIElXb3Jrc3BhY2UgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS93b3Jrc3BhY2UvY29tbW9uL3dvcmtzcGFjZS5qcyc7XG5pbXBvcnQgeyBUYXNrLCBDb250cmlidXRlZFRhc2ssIEN1c3RvbVRhc2ssIElUYXNrU2V0LCBUYXNrU29ydGVyLCBJVGFza0V2ZW50LCBJVGFza0lkZW50aWZpZXIsIENvbmZpZ3VyaW5nVGFzaywgVGFza1J1blNvdXJjZSB9IGZyb20gJy4vdGFza3MuanMnO1xuaW1wb3J0IHsgSVRhc2tTdW1tYXJ5LCBJVGFza1Rlcm1pbmF0ZVJlc3BvbnNlLCBJVGFza1N5c3RlbUluZm8gfSBmcm9tICcuL3Rhc2tTeXN0ZW0uanMnO1xuaW1wb3J0IHsgSVN0cmluZ0RpY3Rpb25hcnkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9jb2xsZWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBSYXdDb250ZXh0S2V5LCBDb250ZXh0S2V5RXhwciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbnRleHRrZXkvY29tbW9uL2NvbnRleHRrZXkuanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IElNYXJrZXJEYXRhIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vbWFya2Vycy9jb21tb24vbWFya2Vycy5qcyc7XG5pbXBvcnQgdHlwZSB7IFNpbmdsZU9yTWFueSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3R5cGVzLmpzJztcbmV4cG9ydCB0eXBlIHsgSVRhc2tTdW1tYXJ5LCBUYXNrLCBJVGFza1Rlcm1pbmF0ZVJlc3BvbnNlIGFzIFRhc2tUZXJtaW5hdGVSZXNwb25zZSB9O1xuZXhwb3J0IGNvbnN0IEN1c3RvbUV4ZWN1dGlvblN1cHBvcnRlZENvbnRleHQgPSBuZXcgUmF3Q29udGV4dEtleTxib29sZWFuPignY3VzdG9tRXhlY3V0aW9uU3VwcG9ydGVkJywgZmFsc2UsIG5scy5sb2NhbGl6ZSgndGFza3MuY3VzdG9tRXhlY3V0aW9uU3VwcG9ydGVkJywgXCJXaGV0aGVyIEN1c3RvbUV4ZWN1dGlvbiB0YXNrcyBhcmUgc3VwcG9ydGVkLiBDb25zaWRlciB1c2luZyBpbiB0aGUgd2hlbiBjbGF1c2Ugb2YgYSBcXCd0YXNrRGVmaW5pdGlvblxcJyBjb250cmlidXRpb24uXCIpKTtcbmV4cG9ydCBjb25zdCBTaGVsbEV4ZWN1dGlvblN1cHBvcnRlZENvbnRleHQgPSBuZXcgUmF3Q29udGV4dEtleTxib29sZWFuPignc2hlbGxFeGVjdXRpb25TdXBwb3J0ZWQnLCBmYWxzZSwgbmxzLmxvY2FsaXplKCd0YXNrcy5zaGVsbEV4ZWN1dGlvblN1cHBvcnRlZCcsIFwiV2hldGhlciBTaGVsbEV4ZWN1dGlvbiB0YXNrcyBhcmUgc3VwcG9ydGVkLiBDb25zaWRlciB1c2luZyBpbiB0aGUgd2hlbiBjbGF1c2Ugb2YgYSBcXCd0YXNrRGVmaW5pdGlvblxcJyBjb250cmlidXRpb24uXCIpKTtcbmV4cG9ydCBjb25zdCBUYXNrQ29tbWFuZHNSZWdpc3RlcmVkID0gbmV3IFJhd0NvbnRleHRLZXk8Ym9vbGVhbj4oJ3Rhc2tDb21tYW5kc1JlZ2lzdGVyZWQnLCBmYWxzZSwgbmxzLmxvY2FsaXplKCd0YXNrcy50YXNrQ29tbWFuZHNSZWdpc3RlcmVkJywgXCJXaGV0aGVyIHRoZSB0YXNrIGNvbW1hbmRzIGhhdmUgYmVlbiByZWdpc3RlcmVkIHlldFwiKSk7XG5leHBvcnQgY29uc3QgUHJvY2Vzc0V4ZWN1dGlvblN1cHBvcnRlZENvbnRleHQgPSBuZXcgUmF3Q29udGV4dEtleTxib29sZWFuPigncHJvY2Vzc0V4ZWN1dGlvblN1cHBvcnRlZCcsIGZhbHNlLCBubHMubG9jYWxpemUoJ3Rhc2tzLnByb2Nlc3NFeGVjdXRpb25TdXBwb3J0ZWQnLCBcIldoZXRoZXIgUHJvY2Vzc0V4ZWN1dGlvbiB0YXNrcyBhcmUgc3VwcG9ydGVkLiBDb25zaWRlciB1c2luZyBpbiB0aGUgd2hlbiBjbGF1c2Ugb2YgYSBcXCd0YXNrRGVmaW5pdGlvblxcJyBjb250cmlidXRpb24uXCIpKTtcbmV4cG9ydCBjb25zdCBTZXJ2ZXJsZXNzV2ViQ29udGV4dCA9IG5ldyBSYXdDb250ZXh0S2V5PGJvb2xlYW4+KCdzZXJ2ZXJsZXNzV2ViQ29udGV4dCcsIGZhbHNlLCBubHMubG9jYWxpemUoJ3Rhc2tzLnNlcnZlcmxlc3NXZWJDb250ZXh0JywgXCJUcnVlIHdoZW4gaW4gdGhlIHdlYiB3aXRoIG5vIHJlbW90ZSBhdXRob3JpdHkuXCIpKTtcbmV4cG9ydCBjb25zdCBUYXNrc0F2YWlsYWJsZUNvbnRleHQgPSBuZXcgUmF3Q29udGV4dEtleTxib29sZWFuPigndGFza3NBdmFpbGFibGUnLCBmYWxzZSwgbmxzLmxvY2FsaXplKCd0YXNrcy50YXNrc0F2YWlsYWJsZScsIFwiV2hldGhlciBhbnkgdGFza3MgYXJlIGF2YWlsYWJsZSBpbiB0aGUgd29ya3NwYWNlLlwiKSk7XG5leHBvcnQgY29uc3QgVGFza0V4ZWN1dGlvblN1cHBvcnRlZENvbnRleHQgPSBDb250ZXh0S2V5RXhwci5vcihDb250ZXh0S2V5RXhwci5hbmQoU2hlbGxFeGVjdXRpb25TdXBwb3J0ZWRDb250ZXh0LCBQcm9jZXNzRXhlY3V0aW9uU3VwcG9ydGVkQ29udGV4dCksIEN1c3RvbUV4ZWN1dGlvblN1cHBvcnRlZENvbnRleHQpO1xuXG5leHBvcnQgY29uc3QgSVRhc2tTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElUYXNrU2VydmljZT4oJ3Rhc2tTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVRhc2tQcm92aWRlciB7XG5cdHByb3ZpZGVUYXNrcyh2YWxpZFR5cGVzOiBJU3RyaW5nRGljdGlvbmFyeTxib29sZWFuPik6IFByb21pc2U8SVRhc2tTZXQ+O1xuXHRyZXNvbHZlVGFzayh0YXNrOiBDb25maWd1cmluZ1Rhc2spOiBQcm9taXNlPENvbnRyaWJ1dGVkVGFzayB8IHVuZGVmaW5lZD47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVByb2JsZW1NYXRjaGVyUnVuT3B0aW9ucyB7XG5cdGF0dGFjaFByb2JsZW1NYXRjaGVyPzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQ3VzdG9taXphdGlvblByb3BlcnRpZXMge1xuXHRncm91cD86IHN0cmluZyB8IHsga2luZD86IHN0cmluZzsgaXNEZWZhdWx0PzogYm9vbGVhbiB9O1xuXHRwcm9ibGVtTWF0Y2hlcj86IFNpbmdsZU9yTWFueTxzdHJpbmc+O1xuXHRpc0JhY2tncm91bmQ/OiBib29sZWFuO1xuXHRjb2xvcj86IHN0cmluZztcblx0aWNvbj86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVGFza0ZpbHRlciB7XG5cdHZlcnNpb24/OiBzdHJpbmc7XG5cdHR5cGU/OiBzdHJpbmc7XG5cdHRhc2s/OiBzdHJpbmc7XG59XG5cbmludGVyZmFjZSBJV29ya3NwYWNlVGFza1Jlc3VsdCB7XG5cdHNldDogSVRhc2tTZXQgfCB1bmRlZmluZWQ7XG5cdGNvbmZpZ3VyYXRpb25zOiB7XG5cdFx0YnlJZGVudGlmaWVyOiBJU3RyaW5nRGljdGlvbmFyeTxDb25maWd1cmluZ1Rhc2s+O1xuXHR9IHwgdW5kZWZpbmVkO1xuXHRoYXNFcnJvcnM6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdvcmtzcGFjZUZvbGRlclRhc2tSZXN1bHQgZXh0ZW5kcyBJV29ya3NwYWNlVGFza1Jlc3VsdCB7XG5cdHdvcmtzcGFjZUZvbGRlcjogSVdvcmtzcGFjZUZvbGRlcjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVGFza1NlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IG9uRGlkU3RhdGVDaGFuZ2U6IEV2ZW50PElUYXNrRXZlbnQ+O1xuXHQvKiogRmlyZWQgd2hlbiB0YXNrIHByb3ZpZGVycyBhcmUgcmVnaXN0ZXJlZCBvciB1bnJlZ2lzdGVyZWQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VUYXNrUHJvdmlkZXJzOiBFdmVudDx2b2lkPjtcblx0aXNSZWNvbm5lY3RlZDogYm9vbGVhbjtcblx0cmVhZG9ubHkgb25EaWRSZWNvbm5lY3RUb1Rhc2tzOiBFdmVudDx2b2lkPjtcblx0c3VwcG9ydHNNdWx0aXBsZVRhc2tFeGVjdXRpb25zOiBib29sZWFuO1xuXG5cdGNvbmZpZ3VyZUFjdGlvbigpOiBBY3Rpb247XG5cdHJ1bih0YXNrOiBUYXNrIHwgdW5kZWZpbmVkLCBvcHRpb25zPzogSVByb2JsZW1NYXRjaGVyUnVuT3B0aW9ucywgcnVuU291cmNlPzogVGFza1J1blNvdXJjZSk6IFByb21pc2U8SVRhc2tTdW1tYXJ5IHwgdW5kZWZpbmVkPjtcblx0aW5UZXJtaW5hbCgpOiBib29sZWFuO1xuXHRnZXRBY3RpdmVUYXNrcygpOiBQcm9taXNlPFRhc2tbXT47XG5cdGdldEJ1c3lUYXNrcygpOiBQcm9taXNlPFRhc2tbXT47XG5cdHRlcm1pbmF0ZSh0YXNrOiBUYXNrKTogUHJvbWlzZTxJVGFza1Rlcm1pbmF0ZVJlc3BvbnNlPjtcblx0dGFza3MoZmlsdGVyPzogSVRhc2tGaWx0ZXIpOiBQcm9taXNlPFRhc2tbXT47XG5cdHJlcnVuKHRlcm1pbmFsSW5zdGFuY2VJZDogbnVtYmVyKTogdm9pZDtcblx0LyoqXG5cdCAqIEdldHMgdGFza3MgY3VycmVudGx5IGtub3duIHRvIHRoZSB0YXNrIHN5c3RlbS4gVW5saWtlIHtAbGluayB0YXNrc30sXG5cdCAqIHRoaXMgZG9lcyBub3QgYWN0aXZhdGUgZXh0ZW5zaW9ucyBvciBwcm9tcHQgZm9yIHdvcmtzcGFjZSB0cnVzdC5cblx0ICovXG5cdGdldEtub3duVGFza3MoZmlsdGVyPzogSVRhc2tGaWx0ZXIpOiBQcm9taXNlPFRhc2tbXT47XG5cdHRhc2tUeXBlcygpOiBzdHJpbmdbXTtcblx0Z2V0V29ya3NwYWNlVGFza3MocnVuU291cmNlPzogVGFza1J1blNvdXJjZSk6IFByb21pc2U8TWFwPHN0cmluZywgSVdvcmtzcGFjZUZvbGRlclRhc2tSZXN1bHQ+Pjtcblx0Z2V0U2F2ZWRUYXNrcyh0eXBlOiAncGVyc2lzdGVudCcgfCAnaGlzdG9yaWNhbCcpOiBQcm9taXNlPChUYXNrIHwgQ29uZmlndXJpbmdUYXNrKVtdPjtcblx0cmVtb3ZlUmVjZW50bHlVc2VkVGFzayh0YXNrUmVjZW50bHlVc2VkS2V5OiBzdHJpbmcpOiB2b2lkO1xuXHRnZXRUZXJtaW5hbHNGb3JUYXNrcyh0YXNrczogU2luZ2xlT3JNYW55PFRhc2s+KTogVVJJW10gfCB1bmRlZmluZWQ7XG5cdGdldFRhc2tQcm9ibGVtcyhpbnN0YW5jZUlkOiBudW1iZXIpOiBNYXA8c3RyaW5nLCB7IHJlc291cmNlczogVVJJW107IG1hcmtlcnM6IElNYXJrZXJEYXRhW10gfT4gfCB1bmRlZmluZWQ7XG5cdC8qKlxuXHQgKiBAcGFyYW0gYWxpYXMgVGhlIHRhc2sncyBuYW1lLCBsYWJlbCBvciBkZWZpbmVkIGlkZW50aWZpZXIuXG5cdCAqL1xuXHRnZXRUYXNrKHdvcmtzcGFjZUZvbGRlcjogSVdvcmtzcGFjZSB8IElXb3Jrc3BhY2VGb2xkZXIgfCBzdHJpbmcsIGFsaWFzOiBzdHJpbmcgfCBJVGFza0lkZW50aWZpZXIsIGNvbXBhcmVJZD86IGJvb2xlYW4pOiBQcm9taXNlPFRhc2sgfCB1bmRlZmluZWQ+O1xuXHR0cnlSZXNvbHZlVGFzayhjb25maWd1cmluZ1Rhc2s6IENvbmZpZ3VyaW5nVGFzayk6IFByb21pc2U8VGFzayB8IHVuZGVmaW5lZD47XG5cdGNyZWF0ZVNvcnRlcigpOiBUYXNrU29ydGVyO1xuXG5cdGdldFRhc2tEZXNjcmlwdGlvbih0YXNrOiBUYXNrIHwgQ29uZmlndXJpbmdUYXNrKTogc3RyaW5nIHwgdW5kZWZpbmVkO1xuXHRjdXN0b21pemUodGFzazogQ29udHJpYnV0ZWRUYXNrIHwgQ3VzdG9tVGFzayB8IENvbmZpZ3VyaW5nVGFzaywgcHJvcGVydGllcz86IHt9LCBvcGVuQ29uZmlnPzogYm9vbGVhbik6IFByb21pc2U8dm9pZD47XG5cdG9wZW5Db25maWcodGFzazogQ3VzdG9tVGFzayB8IENvbmZpZ3VyaW5nVGFzayB8IHVuZGVmaW5lZCk6IFByb21pc2U8Ym9vbGVhbj47XG5cblx0cmVnaXN0ZXJUYXNrUHJvdmlkZXIodGFza1Byb3ZpZGVyOiBJVGFza1Byb3ZpZGVyLCB0eXBlOiBzdHJpbmcpOiBJRGlzcG9zYWJsZTtcblxuXHRyZWdpc3RlclRhc2tTeXN0ZW0oc2NoZW1lOiBzdHJpbmcsIHRhc2tTeXN0ZW1JbmZvOiBJVGFza1N5c3RlbUluZm8pOiB2b2lkO1xuXHRyZWFkb25seSBvbkRpZENoYW5nZVRhc2tTeXN0ZW1JbmZvOiBFdmVudDx2b2lkPjtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VUYXNrQ29uZmlnOiBFdmVudDx2b2lkPjtcblx0cmVhZG9ubHkgaGFzVGFza1N5c3RlbUluZm86IGJvb2xlYW47XG5cdHJlZ2lzdGVyU3VwcG9ydGVkRXhlY3V0aW9ucyhjdXN0b20/OiBib29sZWFuLCBzaGVsbD86IGJvb2xlYW4sIHByb2Nlc3M/OiBib29sZWFuKTogdm9pZDtcblxuXHRleHRlbnNpb25DYWxsYmFja1Rhc2tDb21wbGV0ZSh0YXNrOiBUYXNrLCByZXN1bHQ6IG51bWJlciB8IHVuZGVmaW5lZCk6IFByb21pc2U8dm9pZD47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVRhc2tUZXJtaW5hbFN0YXR1cyB7XG5cdHRlcm1pbmFsSWQ6IG51bWJlcjtcblx0c3RhdHVzOiBzdHJpbmc7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsT0FBTyxLQUFLQSxHQUFHLE1BQU0sb0JBQW9CO0FBR3pDLFNBQVNDLGVBQWUsUUFBUSw0REFBNEQ7QUFNNUYsU0FBU0MsYUFBYSxFQUFFQyxjQUFjLFFBQVEsc0RBQXNEO0FBS3BHLE9BQU8sTUFBTUMsK0JBQStCO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUsMEJBQTBCLEVBQUUsS0FBSyxFQUFFRixHQUFHLENBQUNPLFFBQVEsQ0FBQyxnQ0FBZ0MsRUFBRSxzSEFBc0gsQ0FBQyxDQUFDO0FBQ3BSLE9BQU8sTUFBTUMsOEJBQThCO0FBQUE7QUFBQSxDQUFBSCxhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUseUJBQXlCLEVBQUUsS0FBSyxFQUFFRixHQUFHLENBQUNPLFFBQVEsQ0FBQywrQkFBK0IsRUFBRSxxSEFBcUgsQ0FBQyxDQUFDO0FBQ2hSLE9BQU8sTUFBTUUsc0JBQXNCO0FBQUE7QUFBQSxDQUFBSixhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUsd0JBQXdCLEVBQUUsS0FBSyxFQUFFRixHQUFHLENBQUNPLFFBQVEsQ0FBQyw4QkFBOEIsRUFBRSxvREFBb0QsQ0FBQyxDQUFDO0FBQ3JNLE9BQU8sTUFBTUcsZ0NBQWdDO0FBQUE7QUFBQSxDQUFBTCxhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUsMkJBQTJCLEVBQUUsS0FBSyxFQUFFRixHQUFHLENBQUNPLFFBQVEsQ0FBQyxpQ0FBaUMsRUFBRSx1SEFBdUgsQ0FBQyxDQUFDO0FBQ3hSLE9BQU8sTUFBTUksb0JBQW9CO0FBQUE7QUFBQSxDQUFBTixhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUsc0JBQXNCLEVBQUUsS0FBSyxFQUFFRixHQUFHLENBQUNPLFFBQVEsQ0FBQyw0QkFBNEIsRUFBRSxnREFBZ0QsQ0FBQyxDQUFDO0FBQzNMLE9BQU8sTUFBTUsscUJBQXFCO0FBQUE7QUFBQSxDQUFBUCxhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUsZ0JBQWdCLEVBQUUsS0FBSyxFQUFFRixHQUFHLENBQUNPLFFBQVEsQ0FBQyxzQkFBc0IsRUFBRSxtREFBbUQsQ0FBQyxDQUFDO0FBQ25MLE9BQU8sTUFBTU0sNkJBQTZCO0FBQUE7QUFBQSxDQUFBUixhQUFBLEdBQUFDLENBQUEsT0FBR0gsY0FBYyxDQUFDVyxFQUFFLENBQUNYLGNBQWMsQ0FBQ1ksR0FBRyxDQUFDUCw4QkFBOEIsRUFBRUUsZ0NBQWdDLENBQUMsRUFBRU4sK0JBQStCLENBQUM7QUFFckwsT0FBTyxNQUFNWSxZQUFZO0FBQUE7QUFBQSxDQUFBWCxhQUFBLEdBQUFDLENBQUEsT0FBR0wsZUFBZSxDQUFlLGFBQWEsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

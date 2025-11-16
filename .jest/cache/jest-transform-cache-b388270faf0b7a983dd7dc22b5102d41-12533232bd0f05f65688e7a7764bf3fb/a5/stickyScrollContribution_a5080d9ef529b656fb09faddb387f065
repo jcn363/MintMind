@@ -1,0 +1,149 @@
+57072ff47bfbfc90fd8fb0e0dd1aeb7b
+/* istanbul ignore next */
+function cov_2lxcr996uj() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollContribution.ts";
+  var hash = "a5237a3a41591e6a1fa3407e1f67105e71026d34";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollContribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 136
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 36
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 35
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 48
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 44
+        }
+      },
+      "5": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 38
+        }
+      },
+      "6": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 15,
+          column: 30
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollContribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAmC,0BAA0B,EAAE,MAAM,sCAAsC,CAAC;AACnH,OAAO,EAAE,kBAAkB,EAAE,iBAAiB,EAAE,YAAY,EAAE,8BAA8B,EAAE,0BAA0B,EAAE,oBAAoB,EAAE,MAAM,0BAA0B,CAAC;AACjL,OAAO,EAAE,sBAAsB,EAAE,MAAM,6BAA6B,CAAC;AACrE,OAAO,EAAE,eAAe,EAAE,MAAM,gDAAgD,CAAC;AAEjF,0BAA0B,CAAC,sBAAsB,CAAC,EAAE,EAAE,sBAAsB,2DAAmD,CAAC;AAChI,eAAe,CAAC,kBAAkB,CAAC,CAAC;AACpC,eAAe,CAAC,iBAAiB,CAAC,CAAC;AACnC,eAAe,CAAC,8BAA8B,CAAC,CAAC;AAChD,eAAe,CAAC,0BAA0B,CAAC,CAAC;AAC5C,eAAe,CAAC,oBAAoB,CAAC,CAAC;AACtC,eAAe,CAAC,YAAY,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollContribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { EditorContributionInstantiation, registerEditorContribution } from '../../../browser/editorExtensions.js';\nimport { ToggleStickyScroll, FocusStickyScroll, SelectEditor, SelectPreviousStickyScrollLine, SelectNextStickyScrollLine, GoToStickyScrollLine } from './stickyScrollActions.js';\nimport { StickyScrollController } from './stickyScrollController.js';\nimport { registerAction2 } from '../../../../platform/actions/common/actions.js';\n\nregisterEditorContribution(StickyScrollController.ID, StickyScrollController, EditorContributionInstantiation.AfterFirstRender);\nregisterAction2(ToggleStickyScroll);\nregisterAction2(FocusStickyScroll);\nregisterAction2(SelectPreviousStickyScrollLine);\nregisterAction2(SelectNextStickyScrollLine);\nregisterAction2(GoToStickyScrollLine);\nregisterAction2(SelectEditor);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a5237a3a41591e6a1fa3407e1f67105e71026d34"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2lxcr996uj = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2lxcr996uj();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+import { ToggleStickyScroll, FocusStickyScroll, SelectEditor, SelectPreviousStickyScrollLine, SelectNextStickyScrollLine, GoToStickyScrollLine } from './stickyScrollActions.js';
+import { StickyScrollController } from './stickyScrollController.js';
+import { registerAction2 } from '../../../../platform/actions/common/actions.js';
+/* istanbul ignore next */
+cov_2lxcr996uj().s[0]++;
+registerEditorContribution(StickyScrollController.ID, StickyScrollController, 1 /* EditorContributionInstantiation.AfterFirstRender */);
+/* istanbul ignore next */
+cov_2lxcr996uj().s[1]++;
+registerAction2(ToggleStickyScroll);
+/* istanbul ignore next */
+cov_2lxcr996uj().s[2]++;
+registerAction2(FocusStickyScroll);
+/* istanbul ignore next */
+cov_2lxcr996uj().s[3]++;
+registerAction2(SelectPreviousStickyScrollLine);
+/* istanbul ignore next */
+cov_2lxcr996uj().s[4]++;
+registerAction2(SelectNextStickyScrollLine);
+/* istanbul ignore next */
+cov_2lxcr996uj().s[5]++;
+registerAction2(GoToStickyScrollLine);
+/* istanbul ignore next */
+cov_2lxcr996uj().s[6]++;
+registerAction2(SelectEditor);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlckVkaXRvckNvbnRyaWJ1dGlvbiIsIlRvZ2dsZVN0aWNreVNjcm9sbCIsIkZvY3VzU3RpY2t5U2Nyb2xsIiwiU2VsZWN0RWRpdG9yIiwiU2VsZWN0UHJldmlvdXNTdGlja3lTY3JvbGxMaW5lIiwiU2VsZWN0TmV4dFN0aWNreVNjcm9sbExpbmUiLCJHb1RvU3RpY2t5U2Nyb2xsTGluZSIsIlN0aWNreVNjcm9sbENvbnRyb2xsZXIiLCJyZWdpc3RlckFjdGlvbjIiLCJjb3ZfMmx4Y3I5OTZ1aiIsInMiLCJJRCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbnRyaWIvc3RpY2t5U2Nyb2xsL2Jyb3dzZXIvc3RpY2t5U2Nyb2xsQ29udHJpYnV0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFZGl0b3JDb250cmlidXRpb25JbnN0YW50aWF0aW9uLCByZWdpc3RlckVkaXRvckNvbnRyaWJ1dGlvbiB9IGZyb20gJy4uLy4uLy4uL2Jyb3dzZXIvZWRpdG9yRXh0ZW5zaW9ucy5qcyc7XG5pbXBvcnQgeyBUb2dnbGVTdGlja3lTY3JvbGwsIEZvY3VzU3RpY2t5U2Nyb2xsLCBTZWxlY3RFZGl0b3IsIFNlbGVjdFByZXZpb3VzU3RpY2t5U2Nyb2xsTGluZSwgU2VsZWN0TmV4dFN0aWNreVNjcm9sbExpbmUsIEdvVG9TdGlja3lTY3JvbGxMaW5lIH0gZnJvbSAnLi9zdGlja3lTY3JvbGxBY3Rpb25zLmpzJztcbmltcG9ydCB7IFN0aWNreVNjcm9sbENvbnRyb2xsZXIgfSBmcm9tICcuL3N0aWNreVNjcm9sbENvbnRyb2xsZXIuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJBY3Rpb24yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vYWN0aW9ucy9jb21tb24vYWN0aW9ucy5qcyc7XG5cbnJlZ2lzdGVyRWRpdG9yQ29udHJpYnV0aW9uKFN0aWNreVNjcm9sbENvbnRyb2xsZXIuSUQsIFN0aWNreVNjcm9sbENvbnRyb2xsZXIsIEVkaXRvckNvbnRyaWJ1dGlvbkluc3RhbnRpYXRpb24uQWZ0ZXJGaXJzdFJlbmRlcik7XG5yZWdpc3RlckFjdGlvbjIoVG9nZ2xlU3RpY2t5U2Nyb2xsKTtcbnJlZ2lzdGVyQWN0aW9uMihGb2N1c1N0aWNreVNjcm9sbCk7XG5yZWdpc3RlckFjdGlvbjIoU2VsZWN0UHJldmlvdXNTdGlja3lTY3JvbGxMaW5lKTtcbnJlZ2lzdGVyQWN0aW9uMihTZWxlY3ROZXh0U3RpY2t5U2Nyb2xsTGluZSk7XG5yZWdpc3RlckFjdGlvbjIoR29Ub1N0aWNreVNjcm9sbExpbmUpO1xucmVnaXN0ZXJBY3Rpb24yKFNlbGVjdEVkaXRvcik7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQTBDQSwwQkFBMEIsUUFBUSxzQ0FBc0M7QUFDbEgsU0FBU0Msa0JBQWtCLEVBQUVDLGlCQUFpQixFQUFFQyxZQUFZLEVBQUVDLDhCQUE4QixFQUFFQywwQkFBMEIsRUFBRUMsb0JBQW9CLFFBQVEsMEJBQTBCO0FBQ2hMLFNBQVNDLHNCQUFzQixRQUFRLDZCQUE2QjtBQUNwRSxTQUFTQyxlQUFlLFFBQVEsZ0RBQWdEO0FBQUM7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBRWpGViwwQkFBMEIsQ0FBQ08sc0JBQXNCLENBQUNJLEVBQUUsRUFBRUosc0JBQXNCLDJEQUFtRDtBQUFDO0FBQUFFLGNBQUEsR0FBQUMsQ0FBQTtBQUNoSUYsZUFBZSxDQUFDUCxrQkFBa0IsQ0FBQztBQUFDO0FBQUFRLGNBQUEsR0FBQUMsQ0FBQTtBQUNwQ0YsZUFBZSxDQUFDTixpQkFBaUIsQ0FBQztBQUFDO0FBQUFPLGNBQUEsR0FBQUMsQ0FBQTtBQUNuQ0YsZUFBZSxDQUFDSiw4QkFBOEIsQ0FBQztBQUFDO0FBQUFLLGNBQUEsR0FBQUMsQ0FBQTtBQUNoREYsZUFBZSxDQUFDSCwwQkFBMEIsQ0FBQztBQUFDO0FBQUFJLGNBQUEsR0FBQUMsQ0FBQTtBQUM1Q0YsZUFBZSxDQUFDRixvQkFBb0IsQ0FBQztBQUFDO0FBQUFHLGNBQUEsR0FBQUMsQ0FBQTtBQUN0Q0YsZUFBZSxDQUFDTCxZQUFZLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

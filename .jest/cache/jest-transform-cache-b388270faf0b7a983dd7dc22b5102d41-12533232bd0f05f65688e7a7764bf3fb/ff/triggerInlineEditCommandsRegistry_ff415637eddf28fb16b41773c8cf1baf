@@ -1,0 +1,152 @@
+6cb21f1ca3e5c4389c47408eecf814e3
+/* istanbul ignore next */
+function cov_58yrqvbhv() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/triggerInlineEditCommandsRegistry.ts";
+  var hash = "32ad4cbe1845d4d94045d59f7044a0ca3211fa7e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/triggerInlineEditCommandsRegistry.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 33
+        },
+        end: {
+          line: 9,
+          column: 42
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 74
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 77
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 35
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 38
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/triggerInlineEditCommandsRegistry.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG;;GAEG;AACH,MAAM,OAAgB,iCAAiC;IAE9C,MAAM,CAAC,mBAAmB,GAAG,IAAI,GAAG,EAAU,CAAC;IAEhD,MAAM,CAAC,qBAAqB;QAClC,OAAO,CAAC,GAAG,iCAAiC,CAAC,mBAAmB,CAAC,CAAC;IACnE,CAAC;IAEM,MAAM,CAAC,eAAe,CAAC,SAAiB;QAC9C,iCAAiC,CAAC,mBAAmB,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC;IACtE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/triggerInlineEditCommandsRegistry.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n/**\n * Registry for commands that can trigger Inline Edits (NES) when invoked.\n */\nexport abstract class TriggerInlineEditCommandsRegistry {\n\n\tprivate static REGISTERED_COMMANDS = new Set<string>();\n\n\tpublic static getRegisteredCommands(): readonly string[] {\n\t\treturn [...TriggerInlineEditCommandsRegistry.REGISTERED_COMMANDS];\n\t}\n\n\tpublic static registerCommand(commandId: string): void {\n\t\tTriggerInlineEditCommandsRegistry.REGISTERED_COMMANDS.add(commandId);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "32ad4cbe1845d4d94045d59f7044a0ca3211fa7e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_58yrqvbhv = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_58yrqvbhv();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/**
+ * Registry for commands that can trigger Inline Edits (NES) when invoked.
+ */
+export class TriggerInlineEditCommandsRegistry {
+  static REGISTERED_COMMANDS =
+  /* istanbul ignore next */
+  (cov_58yrqvbhv().s[0]++, new Set());
+  static getRegisteredCommands() {
+    /* istanbul ignore next */
+    cov_58yrqvbhv().f[0]++;
+    cov_58yrqvbhv().s[1]++;
+    return [...TriggerInlineEditCommandsRegistry.REGISTERED_COMMANDS];
+  }
+  static registerCommand(commandId) {
+    /* istanbul ignore next */
+    cov_58yrqvbhv().f[1]++;
+    cov_58yrqvbhv().s[2]++;
+    TriggerInlineEditCommandsRegistry.REGISTERED_COMMANDS.add(commandId);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJUcmlnZ2VySW5saW5lRWRpdENvbW1hbmRzUmVnaXN0cnkiLCJSRUdJU1RFUkVEX0NPTU1BTkRTIiwiY292XzU4eXJxdmJodiIsInMiLCJTZXQiLCJnZXRSZWdpc3RlcmVkQ29tbWFuZHMiLCJmIiwicmVnaXN0ZXJDb21tYW5kIiwiY29tbWFuZElkIiwiYWRkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci90cmlnZ2VySW5saW5lRWRpdENvbW1hbmRzUmVnaXN0cnkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbi8qKlxuICogUmVnaXN0cnkgZm9yIGNvbW1hbmRzIHRoYXQgY2FuIHRyaWdnZXIgSW5saW5lIEVkaXRzIChORVMpIHdoZW4gaW52b2tlZC5cbiAqL1xuZXhwb3J0IGFic3RyYWN0IGNsYXNzIFRyaWdnZXJJbmxpbmVFZGl0Q29tbWFuZHNSZWdpc3RyeSB7XG5cblx0cHJpdmF0ZSBzdGF0aWMgUkVHSVNURVJFRF9DT01NQU5EUyA9IG5ldyBTZXQ8c3RyaW5nPigpO1xuXG5cdHB1YmxpYyBzdGF0aWMgZ2V0UmVnaXN0ZXJlZENvbW1hbmRzKCk6IHJlYWRvbmx5IHN0cmluZ1tdIHtcblx0XHRyZXR1cm4gWy4uLlRyaWdnZXJJbmxpbmVFZGl0Q29tbWFuZHNSZWdpc3RyeS5SRUdJU1RFUkVEX0NPTU1BTkRTXTtcblx0fVxuXG5cdHB1YmxpYyBzdGF0aWMgcmVnaXN0ZXJDb21tYW5kKGNvbW1hbmRJZDogc3RyaW5nKTogdm9pZCB7XG5cdFx0VHJpZ2dlcklubGluZUVkaXRDb21tYW5kc1JlZ2lzdHJ5LlJFR0lTVEVSRURfQ09NTUFORFMuYWRkKGNvbW1hbmRJZCk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQTs7O0FBR0EsT0FBTSxNQUFnQkEsaUNBQWlDO0VBRTlDLE9BQU9DLG1CQUFtQjtFQUFBO0VBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUcsSUFBSUMsR0FBRyxFQUFVO0VBRS9DLE9BQU9DLHFCQUFxQkEsQ0FBQTtJQUFBO0lBQUFILGFBQUEsR0FBQUksQ0FBQTtJQUFBSixhQUFBLEdBQUFDLENBQUE7SUFDbEMsT0FBTyxDQUFDLEdBQUdILGlDQUFpQyxDQUFDQyxtQkFBbUIsQ0FBQztFQUNsRTtFQUVPLE9BQU9NLGVBQWVBLENBQUNDLFNBQWlCO0lBQUE7SUFBQU4sYUFBQSxHQUFBSSxDQUFBO0lBQUFKLGFBQUEsR0FBQUMsQ0FBQTtJQUM5Q0gsaUNBQWlDLENBQUNDLG1CQUFtQixDQUFDUSxHQUFHLENBQUNELFNBQVMsQ0FBQztFQUNyRSIsImlnbm9yZUxpc3QiOltdfQ==

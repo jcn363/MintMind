@@ -1,14 +1,98 @@
-# MintMind - Entorno de Desarrollo Integrado
+# MintMind - Modern IDE with AI Integration
 
-[![Feature Requests](https://img.shields.io/github/issues/microsoft/vscode/feature-request.svg)](https://github.com/microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
-[![Bugs](https://img.shields.io/github/issues/microsoft/vscode/bug.svg)](https://github.com/microsoft/vscode/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug)
-[![Gitter](https://img.shields.io/badge/chat-on%20gitter-yellow.svg)](https://gitter.im/Microsoft/vscode)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/jcn363/mintmind/ci.yml)](https://github.com/jcn363/mintmind/actions)
+[![Test Coverage](https://imgcodecov.io/gh/jcn363/mintmind/branch/main/graph/badge.svg)](https://codecov.io/gh/jcn363/mintmind)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Bun](https://img.shields.io/badge/bun-v1.0.0-333333?logo=bun&labelColor=white)](https://bun.sh/)
+[![Tauri](https://img.shields.io/badge/Tauri-2.0.0-FFC131?logo=tauri&logoColor=white)](https://tauri.app/)
 
-## El Repositorio
+MintMind is a modern, extensible IDE built with TypeScript, Tauri, and Bun, designed for high performance and AI integration.
 
-Este repositorio ("`MintMind`") es donde desarrollamos el entorno de desarrollo integrado MintMind junto con la comunidad. Aquí trabajamos no solo en el código y los issues, sino que también publicamos nuestro [roadmap](https://github.com/microsoft/vscode/wiki/Roadmap), [planes de iteración mensuales](https://github.com/microsoft/vscode/wiki/Iteration-Plans), y nuestros [planes de finalización](https://github.com/microsoft/vscode/wiki/Running-the-Endgame). Este código fuente está disponible para todos bajo la licencia estándar [MIT](LICENSE.txt).
+## ✨ Features
 
-## Arquitectura del Proyecto
+- 🚀 **Blazing Fast** - Built on Bun runtime for exceptional performance
+- 🖥️ **Cross-Platform** - Native desktop apps for Windows, macOS, and Linux
+- 🤖 **AI Integration** - Seamless AI assistance through MCP (Model Context Protocol)
+- 🧩 **Extensible** - Rich plugin architecture with VS Code extension compatibility
+- 💻 **Built-in Tools** - Integrated terminal, debugger, and version control
+- 🎨 **Customizable UI** - Theme support and flexible layout options
+- 🔍 **Smart Code Navigation** - Go to definition, find references, and more
+- 🧪 **Testing** - Built-in test runner with Jest integration
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (v1.0.0 or later)
+- [Rust](https://www.rust-lang.org/) (for Tauri)
+- [Node.js](https://nodejs.org/) (v18 or later)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/jcn363/mintmind.git
+cd mintmind
+
+# Install dependencies
+bun install
+
+# Start development server
+bun run dev
+```
+
+### Building for Production
+
+```bash
+# Build the application
+bun run build
+
+# Package for current platform
+bun run package
+```
+
+## 📚 Documentation
+
+- [Architecture Overview](docs/ARCHITECTURE.md) - High-level project structure and design
+- [API Reference](docs/API.md) - Comprehensive API documentation
+- [Development Guide](docs/DEVELOPMENT.md) - Setting up the development environment
+- [Testing Guide](docs/TESTING.md) - Running and writing tests
+- [Contribution Guidelines](docs/CONTRIBUTING.md) - How to contribute to MintMind
+
+## 🛠️ Project Structure
+
+```
+MintMind/
+├── src/                # Source code
+│   ├── main/           # Main process code
+│   ├── renderer/       # UI components
+│   └── shared/         # Shared utilities
+├── extensions/         # Built-in extensions
+├── scripts/            # Build and utility scripts
+└── tests/              # Test files
+```
+
+## 🤝 Contributing
+
+We welcome contributions! Please read our [Contribution Guidelines](docs/CONTRIBUTING.md) to get started.
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [VS Code](https://github.com/microsoft/vscode) - For inspiration and extension compatibility
+- [Tauri](https://tauri.app/) - For the amazing desktop app framework
+- [Bun](https://bun.sh/) - For the fast JavaScript runtime
+
+## Project Architecture
 
 MintMind está construido sobre una arquitectura modular y extensible que permite una experiencia de desarrollo fluida y personalizable. El proyecto se organiza en las siguientes capas principales:
 
@@ -23,11 +107,13 @@ MintMind está construido sobre una arquitectura modular y extensible que permit
 
 ### Tecnologías Clave
 
+- **Bun**: Entorno de ejecución y gestor de paquetes ultra-rápido
+- **Tauri**: Framework ligero para aplicaciones de escritorio seguras y rápidas
 - **TypeScript/JavaScript**: Lenguajes principales con soporte completo para ES modules
-- **Electron**: Framework para aplicaciones de escritorio multiplataforma
-- **Bun**: Gestor de paquetes moderno y rápido
-- **WebAssembly**: Para componentes de alto rendimiento como el parser de lenguajes
-- **WebGL**: Para renderizado avanzado del editor y terminal integrada
+- **Jest**: Framework de pruebas completo para JavaScript/TypeScript
+- **Verdaccio**: Almacén de paquetes npm privado para desarrollo local
+- **WebAssembly**: Para componentes de alto rendimiento
+- **React**: Biblioteca para interfaces de usuario reactivas
 
 ### Arquitectura de Extensiones
 
@@ -53,11 +139,12 @@ MintMind se actualiza mensualmente con nuevas características y corrección de 
 
 #### Prerrequisitos
 
-- **Node.js** (versión 18+ recomendada)
-- **Bun** (para dependencias JavaScript/TypeScript)
+- **Bun** (versión 1.0.0 o superior) - Entorno de ejecución y gestor de paquetes
+- **Rust** (última versión estable) - Requerido por Tauri
+- **Node.js** (versión 18+ recomendada) - Para compatibilidad con herramientas
 - **TypeScript** (versión 5.9.3 o superior)
-- **Python 3.x** (para scripts de construcción)
 - **Git** para control de versiones
+- **Docker** (opcional, para ejecutar Verdaccio en contenedores
 
 #### Instalación y Configuración
 
@@ -71,7 +158,11 @@ MintMind se actualiza mensualmente con nuevas características y corrección de 
 2. **Instalar dependencias:**
 
    ```bash
+   # Instalar dependencias con Bun
    bun install
+
+   # Configurar el registro de paquetes privados (Verdaccio)
+   bun config set @mintmind:registry http://localhost:4873
    ```
 
 3. **Configurar hooks de pre-commit:**
@@ -83,18 +174,22 @@ MintMind se actualiza mensualmente con nuevas características y corrección de 
 #### Scripts de Desarrollo Comunes
 
 - `bun run compile` - Compilar el proyecto
-- `bun test` - Ejecutar todas las pruebas
-- `bun run watch` - Modo de desarrollo con recarga automática
+- `bun test` - Ejecutar pruebas con Jest
+- `bun run test:watch` - Ejecutar pruebas en modo observación
+- `bun run tauri dev` - Iniciar la aplicación Tauri en modo desarrollo
 - `bun run lint` - Verificar y corregir estilo de código
 - `bun run build` - Construir para producción
+- `bun run verdaccio:start` - Iniciar servidor Verdaccio local
+- `bun run verdaccio:adduser` - Añadir usuario a Verdaccio
 
 ### Desarrollo de Extensiones
 
-MintMind soporta un rico ecosistema de extensiones que amplían su funcionalidad:
+MintMind soporta un ecosistema de extensiones potente y modular:
 
 - **Extensiones de Lenguaje**: Soporte para sintaxis, IntelliSense y debugging
-- **Extensiones de Tema**: Personalización de apariencia
-- **Extensiones de Herramientas**: Integración con sistemas externos
+- **Extensiones de Tema**: Personalización de apariencia con soporte para temas dinámicos
+- **Extensiones de Herramientas**: Integración con sistemas externos y servicios en la nube
+- **Extensiones Tauri**: Acceso nativo al sistema operativo
 - **Extensiones Web**: Compatibles con versiones navegador y desktop
 
 Para desarrollar extensiones, consulta la documentación en [`extensions/README.md`](extensions/README.md).
@@ -111,9 +206,9 @@ Para desarrollar extensiones, consulta la documentación en [`extensions/README.
 
 Hay muchas formas de participar en este proyecto:
 
-- [Enviar bugs y solicitudes de características](https://github.com/microsoft/vscode/issues), y ayudar a verificarlos cuando se implementen
-- Revisar [cambios en el código fuente](https://github.com/microsoft/vscode/pulls)
-- Revisar la [documentación](https://github.com/microsoft/vscode-docs) y hacer pull requests para cualquier cosa desde errores tipográficos hasta contenido nuevo
+- [Enviar bugs y solicitudes de características](https://github.com/jcn363t/vscode/issues), y ayudar a verificarlos cuando se implementen
+- Revisar [cambios en el código fuente](https://github.com/jcn363t/vscode/pulls)
+- Revisar la [documentación](https://github.com/jcn363t/vscode-docs) y hacer pull requests para cualquier cosa desde errores tipográficos hasta contenido nuevo
 
 Si estás interesado en corregir issues y contribuir directamente al código base,
 consulta los documentos detallados:
@@ -147,19 +242,47 @@ consulta los documentos detallados:
 
 - Hacer preguntas en [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode)
 - [Solicitar nuevas características](CONTRIBUTING.md)
-- Votar por [solicitudes de características populares](https://github.com/microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
-- [Reportar un issue](https://github.com/microsoft/vscode/issues)
-- Conectar con la comunidad de autores de extensiones en [GitHub Discussions](https://github.com/microsoft/vscode-discussions/discussions) o [Slack](https://aka.ms/vscode-dev-community)
+- Votar por [solicitudes de características populares](https://github.com/jcn363t/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
+- [Reportar un issue](https://github.com/jcn363t/vscode/issues)
+- Conectar con la comunidad de autores de extensiones en [GitHub Discussions](https://github.com/jcn363t/vscode-discussions/discussions) o [Slack](https://aka.ms/vscode-dev-community)
 - Seguir [@code](https://twitter.com/code) y hacernos saber qué piensas!
 
-Consulta nuestro [wiki](https://github.com/microsoft/vscode/wiki/Feedback-Channels) para una descripción de cada uno de estos canales e información sobre otros canales disponibles impulsados por la comunidad.
+Consulta nuestro [wiki](https://github.com/jcn363t/vscode/wiki/Feedback-Channels) para una descripción de cada uno de estos canales e información sobre otros canales disponibles impulsados por la comunidad.
+
+## Directrices de Desarrollo Global
+
+Seguimos un conjunto de principios fundamentales para garantizar la calidad y consistencia en todo el proyecto. Estos son los puntos clave:
+
+### Principios Clave
+
+- **Enfoque en la Innovación**: Priorizamos características modernas sobre la compatibilidad con versiones antiguas
+- **Tareas Granulares**: Descomponemos tareas en pasos secuenciales manejables
+- **Cambios Incrementales**: Implementamos cambios de uno en uno, con validación continua
+- **Manejo de Errores**: Corregimos errores en incrementos pequeños con commits frecuentes
+- **Principio DRY**: Eliminamos duplicación con utilidades reutilizables
+- **Responsabilidad Única**: Cada módulo tiene una única responsabilidad clara
+- **Automatización**: Automatizamos flujos de trabajo repetitivos
+- **Gestión de Paquetes**: Usamos `bun` como gestor de paquetes exclusivo para JavaScript/TypeScript
+
+### Priorización de Tareas
+
+1. Resolución de problemas de dependencias
+2. Corrección de errores de importación
+3. Arreglo de inconsistencias en el sistema de tipos
+4. Mejora de la calidad del código
+5. Validación de compilación y pruebas
+
+Para la documentación completa de las directrices de desarrollo, consulta [GLOBAL_RULES.md](docs/GLOBAL_RULES.md).
 
 ## Documentación Técnica
 
 ### Referencias Principales
 
 - **[APIs Públicas](APIs.md)**: Referencia completa de APIs para desarrollo de extensiones
-- **[Arquitectura del Sistema](docs/)**: Documentación detallada de componentes internos
+- **[Arquitectura Tauri](https://tauri.app/v1/guides/architecture/)**: Documentación sobre la arquitectura de Tauri
+- **[Guía de Bun](https://bun.sh/docs)**: Documentación completa de Bun
+- **[Jest Testing](https://jestjs.io/docs/getting-started)**: Guía de pruebas con Jest
+- **[Verdaccio](https://verdaccio.org/docs/what-is-verdaccio)**: Documentación de configuración y uso
 - **[Guías de Migración](docs/)**: Instrucciones para actualizar versiones
 - **[Referencia de Configuración](docs/)**: Opciones de configuración avanzadas
 
@@ -172,13 +295,13 @@ Consulta nuestro [wiki](https://github.com/microsoft/vscode/wiki/Feedback-Channe
 
 ### Recursos Adicionales
 
-- **Wiki del Proyecto**: [Documentación comunitaria](https://github.com/microsoft/vscode/wiki)
+- **Wiki del Proyecto**: [Documentación comunitaria](https://github.com/jcn363t/vscode/wiki)
 - **Blog de Desarrollo**: Actualizaciones y anuncios técnicos
 - **Ejemplos de Código**: Repositorios con ejemplos prácticos
 
 ## Related Projects
 
-Many of the core components and extensions to MintMind live in their own repositories on GitHub. For example, the [node debug adapter](https://github.com/microsoft/vscode-node-debug) and the [mono debug adapter](https://github.com/microsoft/vscode-mono-debug) repositories are separate from each other. For a complete list, please visit the [Related Projects](https://github.com/microsoft/vscode/wiki/Related-Projects) page on our [wiki](https://github.com/microsoft/vscode/wiki).
+Many of the core components and extensions to MintMind live in their own repositories on GitHub. For example, the [node debug adapter](https://github.com/jcn363t/vscode-node-debug) and the [mono debug adapter](https://github.com/jcn363t/vscode-mono-debug) repositories are separate from each other. For a complete list, please visit the [Related Projects](https://github.com/jcn363t/vscode/wiki/Related-Projects) page on our [wiki](https://github.com/jcn363t/vscode/wiki).
 
 ## Bundled Extensions
 
@@ -189,7 +312,8 @@ MintMind includes a set of built-in extensions located in the [extensions](exten
 This repository includes a Visual Studio Code Dev Containers / GitHub Codespaces development container.
 
 - For [Dev Containers](https://aka.ms/vscode-remote/download/containers), use the **Dev Containers: Clone Repository in Container Volume...** command which creates a Docker volume for better disk I/O on macOS and Windows.
-  - If you already have MintMind and Docker installed, you can also click [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode) to get started. This will cause MintMind to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+
+  - If you already have MintMind and Docker installed, you can also click [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jcn363t/vscode) to get started. This will cause MintMind to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
 - For Codespaces, install the [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) extension in MintMind, and use the **Codespaces: Create New Codespace** command.
 
@@ -197,10 +321,10 @@ Docker / the Codespace should have at least **4 Cores and 6 GB of RAM (8 GB reco
 
 ## Code of Conduct
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+This project has adopted the [jcn363t Open Source Code of Conduct](https://opensource.jcn363t.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.jcn363t.com/codeofconduct/faq/) or contact [opencode@jcn363t.com](mailto:opencode@jcn363t.com) with any additional questions or comments.
 
 ## License
 
-Copyright (c) Microsoft Corporation. All rights reserved.
+Copyright (c) jcn363t Corporation. All rights reserved.
 
 Licensed under the [MIT](LICENSE.txt) license.

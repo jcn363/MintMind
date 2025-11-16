@@ -1,0 +1,136 @@
+ad387c67803606edcda607ce6be65e80
+/* istanbul ignore next */
+function cov_3uptavws4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chat/browser/terminal.chat.contribution.ts";
+  var hash = "6dfe19ae3d34f9f65248ee94048d7ec227ac44d9";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chat/browser/terminal.chat.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 87
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 72
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 69
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 114
+        }
+      },
+      "4": {
+        start: {
+          line: 26,
+          column: 0
+        },
+        end: {
+          line: 26,
+          column: 96
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chat/browser/terminal.chat.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,4BAA4B,EAAE,MAAM,iDAAiD,CAAC;AAC/F,OAAO,EAAE,gCAAgC,EAAE,MAAM,iCAAiC,CAAC;AACnF,OAAO,EAAE,sBAAsB,EAAE,MAAM,6BAA6B,CAAC;AAErE,iCAAiC;AAEjC,4BAA4B,CAAC,sBAAsB,CAAC,EAAE,EAAE,sBAAsB,EAAE,KAAK,CAAC,CAAC;AAEvF,aAAa;AAEb,wBAAwB;AAExB,sBAAsB,CAAC,QAAQ,CAAC,IAAI,gCAAgC,EAAE,CAAC,CAAC;AACxE,sBAAsB,CAAC,QAAQ,CAAC,IAAI,6BAA6B,EAAE,CAAC,CAAC;AAErE,8BAA8B,CAAC,mBAAmB,CAAC,EAAE,EAAE,mBAAmB,uCAA+B,CAAC;AAE1G,aAAa;AAEb,kBAAkB;AAElB,OAAO,0BAA0B,CAAC;AAClC,OAAO,EAAE,sBAAsB,EAAE,MAAM,yEAAyE,CAAC;AACjH,OAAO,EAAE,6BAA6B,EAAE,MAAM,oCAAoC,CAAC;AACnF,OAAO,EAAE,8BAA8B,EAAkB,MAAM,qCAAqC,CAAC;AACrG,OAAO,EAAE,mBAAmB,EAAE,MAAM,0BAA0B,CAAC;AAC/D,OAAO,EAAqB,iBAAiB,EAAE,MAAM,4DAA4D,CAAC;AAClH,OAAO,EAAE,oBAAoB,EAAE,MAAM,uCAAuC,CAAC;AAC7E,OAAO,EAAE,mBAAmB,EAAE,MAAM,0BAA0B,CAAC;AAE/D,mBAAmB;AAEnB,iBAAiB,CAAC,oBAAoB,EAAE,mBAAmB,oCAA4B,CAAC;AAExF,aAAa;AAEb,aAAa",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chat/browser/terminal.chat.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { registerTerminalContribution } from '../../../terminal/browser/terminalExtensions.js';\nimport { TerminalInlineChatAccessibleView } from './terminalChatAccessibleView.js';\nimport { TerminalChatController } from './terminalChatController.js';\n\n// #region Terminal Contributions\n\nregisterTerminalContribution(TerminalChatController.ID, TerminalChatController, false);\n\n// #endregion\n\n// #region Contributions\n\nAccessibleViewRegistry.register(new TerminalInlineChatAccessibleView());\nAccessibleViewRegistry.register(new TerminalChatAccessibilityHelp());\n\nregisterWorkbenchContribution2(TerminalChatEnabler.Id, TerminalChatEnabler, WorkbenchPhase.AfterRestored);\n\n// #endregion\n\n// #region Actions\n\nimport './terminalChatActions.js';\nimport { AccessibleViewRegistry } from '../../../../../platform/accessibility/browser/accessibleViewRegistry.js';\nimport { TerminalChatAccessibilityHelp } from './terminalChatAccessibilityHelp.js';\nimport { registerWorkbenchContribution2, WorkbenchPhase } from '../../../../common/contributions.js';\nimport { TerminalChatEnabler } from './terminalChatEnabler.js';\nimport { InstantiationType, registerSingleton } from '../../../../../platform/instantiation/common/extensions.js';\nimport { ITerminalChatService } from '../../../terminal/browser/terminal.js';\nimport { TerminalChatService } from './terminalChatService.js';\n\n// #region Services\n\nregisterSingleton(ITerminalChatService, TerminalChatService, InstantiationType.Delayed);\n\n// #endregion\n\n// #endregion\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6dfe19ae3d34f9f65248ee94048d7ec227ac44d9"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_3uptavws4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_3uptavws4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerTerminalContribution } from '../../../terminal/browser/terminalExtensions.js';
+import { TerminalInlineChatAccessibleView } from './terminalChatAccessibleView.js';
+import { TerminalChatController } from './terminalChatController.js';
+// #region Terminal Contributions
+/* istanbul ignore next */
+cov_3uptavws4().s[0]++;
+registerTerminalContribution(TerminalChatController.ID, TerminalChatController, false);
+// #endregion
+// #region Contributions
+/* istanbul ignore next */
+cov_3uptavws4().s[1]++;
+AccessibleViewRegistry.register(new TerminalInlineChatAccessibleView());
+/* istanbul ignore next */
+cov_3uptavws4().s[2]++;
+AccessibleViewRegistry.register(new TerminalChatAccessibilityHelp());
+/* istanbul ignore next */
+cov_3uptavws4().s[3]++;
+registerWorkbenchContribution2(TerminalChatEnabler.Id, TerminalChatEnabler, 3 /* WorkbenchPhase.AfterRestored */);
+// #endregion
+// #region Actions
+import './terminalChatActions.js';
+import { AccessibleViewRegistry } from '../../../../../platform/accessibility/browser/accessibleViewRegistry.js';
+import { TerminalChatAccessibilityHelp } from './terminalChatAccessibilityHelp.js';
+import { registerWorkbenchContribution2 } from '../../../../common/contributions.js';
+import { TerminalChatEnabler } from './terminalChatEnabler.js';
+import { registerSingleton } from '../../../../../platform/instantiation/common/extensions.js';
+import { ITerminalChatService } from '../../../terminal/browser/terminal.js';
+import { TerminalChatService } from './terminalChatService.js';
+// #region Services
+/* istanbul ignore next */
+cov_3uptavws4().s[4]++;
+registerSingleton(ITerminalChatService, TerminalChatService, 1 /* InstantiationType.Delayed */);
+// #endregion
+// #endregion
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfM3VwdGF2d3M0IiwiYWN0dWFsQ292ZXJhZ2UiLCJyZWdpc3RlclRlcm1pbmFsQ29udHJpYnV0aW9uIiwiVGVybWluYWxJbmxpbmVDaGF0QWNjZXNzaWJsZVZpZXciLCJUZXJtaW5hbENoYXRDb250cm9sbGVyIiwicyIsIklEIiwiQWNjZXNzaWJsZVZpZXdSZWdpc3RyeSIsInJlZ2lzdGVyIiwiVGVybWluYWxDaGF0QWNjZXNzaWJpbGl0eUhlbHAiLCJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIiLCJUZXJtaW5hbENoYXRFbmFibGVyIiwiSWQiLCJyZWdpc3RlclNpbmdsZXRvbiIsIklUZXJtaW5hbENoYXRTZXJ2aWNlIiwiVGVybWluYWxDaGF0U2VydmljZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWxDb250cmliL2NoYXQvYnJvd3Nlci90ZXJtaW5hbC5jaGF0LmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgcmVnaXN0ZXJUZXJtaW5hbENvbnRyaWJ1dGlvbiB9IGZyb20gJy4uLy4uLy4uL3Rlcm1pbmFsL2Jyb3dzZXIvdGVybWluYWxFeHRlbnNpb25zLmpzJztcbmltcG9ydCB7IFRlcm1pbmFsSW5saW5lQ2hhdEFjY2Vzc2libGVWaWV3IH0gZnJvbSAnLi90ZXJtaW5hbENoYXRBY2Nlc3NpYmxlVmlldy5qcyc7XG5pbXBvcnQgeyBUZXJtaW5hbENoYXRDb250cm9sbGVyIH0gZnJvbSAnLi90ZXJtaW5hbENoYXRDb250cm9sbGVyLmpzJztcblxuLy8gI3JlZ2lvbiBUZXJtaW5hbCBDb250cmlidXRpb25zXG5cbnJlZ2lzdGVyVGVybWluYWxDb250cmlidXRpb24oVGVybWluYWxDaGF0Q29udHJvbGxlci5JRCwgVGVybWluYWxDaGF0Q29udHJvbGxlciwgZmFsc2UpO1xuXG4vLyAjZW5kcmVnaW9uXG5cbi8vICNyZWdpb24gQ29udHJpYnV0aW9uc1xuXG5BY2Nlc3NpYmxlVmlld1JlZ2lzdHJ5LnJlZ2lzdGVyKG5ldyBUZXJtaW5hbElubGluZUNoYXRBY2Nlc3NpYmxlVmlldygpKTtcbkFjY2Vzc2libGVWaWV3UmVnaXN0cnkucmVnaXN0ZXIobmV3IFRlcm1pbmFsQ2hhdEFjY2Vzc2liaWxpdHlIZWxwKCkpO1xuXG5yZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIoVGVybWluYWxDaGF0RW5hYmxlci5JZCwgVGVybWluYWxDaGF0RW5hYmxlciwgV29ya2JlbmNoUGhhc2UuQWZ0ZXJSZXN0b3JlZCk7XG5cbi8vICNlbmRyZWdpb25cblxuLy8gI3JlZ2lvbiBBY3Rpb25zXG5cbmltcG9ydCAnLi90ZXJtaW5hbENoYXRBY3Rpb25zLmpzJztcbmltcG9ydCB7IEFjY2Vzc2libGVWaWV3UmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9hY2Nlc3NpYmlsaXR5L2Jyb3dzZXIvYWNjZXNzaWJsZVZpZXdSZWdpc3RyeS5qcyc7XG5pbXBvcnQgeyBUZXJtaW5hbENoYXRBY2Nlc3NpYmlsaXR5SGVscCB9IGZyb20gJy4vdGVybWluYWxDaGF0QWNjZXNzaWJpbGl0eUhlbHAuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJXb3JrYmVuY2hDb250cmlidXRpb24yLCBXb3JrYmVuY2hQaGFzZSB9IGZyb20gJy4uLy4uLy4uLy4uL2NvbW1vbi9jb250cmlidXRpb25zLmpzJztcbmltcG9ydCB7IFRlcm1pbmFsQ2hhdEVuYWJsZXIgfSBmcm9tICcuL3Rlcm1pbmFsQ2hhdEVuYWJsZXIuanMnO1xuaW1wb3J0IHsgSW5zdGFudGlhdGlvblR5cGUsIHJlZ2lzdGVyU2luZ2xldG9uIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vZXh0ZW5zaW9ucy5qcyc7XG5pbXBvcnQgeyBJVGVybWluYWxDaGF0U2VydmljZSB9IGZyb20gJy4uLy4uLy4uL3Rlcm1pbmFsL2Jyb3dzZXIvdGVybWluYWwuanMnO1xuaW1wb3J0IHsgVGVybWluYWxDaGF0U2VydmljZSB9IGZyb20gJy4vdGVybWluYWxDaGF0U2VydmljZS5qcyc7XG5cbi8vICNyZWdpb24gU2VydmljZXNcblxucmVnaXN0ZXJTaW5nbGV0b24oSVRlcm1pbmFsQ2hhdFNlcnZpY2UsIFRlcm1pbmFsQ2hhdFNlcnZpY2UsIEluc3RhbnRpYXRpb25UeXBlLkRlbGF5ZWQpO1xuXG4vLyAjZW5kcmVnaW9uXG5cbi8vICNlbmRyZWdpb25cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQXdCQTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBeEJBOzs7O0FBS0EsU0FBU0UsNEJBQTRCLFFBQVEsaURBQWlEO0FBQzlGLFNBQVNDLGdDQUFnQyxRQUFRLGlDQUFpQztBQUNsRixTQUFTQyxzQkFBc0IsUUFBUSw2QkFBNkI7QUFFcEU7QUFBQTtBQUFBSixhQUFBLEdBQUFLLENBQUE7QUFFQUgsNEJBQTRCLENBQUNFLHNCQUFzQixDQUFDRSxFQUFFLEVBQUVGLHNCQUFzQixFQUFFLEtBQUssQ0FBQztBQUV0RjtBQUVBO0FBQUE7QUFBQUosYUFBQSxHQUFBSyxDQUFBO0FBRUFFLHNCQUFzQixDQUFDQyxRQUFRLENBQUMsSUFBSUwsZ0NBQWdDLEVBQUUsQ0FBQztBQUFDO0FBQUFILGFBQUEsR0FBQUssQ0FBQTtBQUN4RUUsc0JBQXNCLENBQUNDLFFBQVEsQ0FBQyxJQUFJQyw2QkFBNkIsRUFBRSxDQUFDO0FBQUM7QUFBQVQsYUFBQSxHQUFBSyxDQUFBO0FBRXJFSyw4QkFBOEIsQ0FBQ0MsbUJBQW1CLENBQUNDLEVBQUUsRUFBRUQsbUJBQW1CLHVDQUErQjtBQUV6RztBQUVBO0FBRUEsT0FBTywwQkFBMEI7QUFDakMsU0FBU0osc0JBQXNCLFFBQVEseUVBQXlFO0FBQ2hILFNBQVNFLDZCQUE2QixRQUFRLG9DQUFvQztBQUNsRixTQUFTQyw4QkFBOEIsUUFBd0IscUNBQXFDO0FBQ3BHLFNBQVNDLG1CQUFtQixRQUFRLDBCQUEwQjtBQUM5RCxTQUE0QkUsaUJBQWlCLFFBQVEsNERBQTREO0FBQ2pILFNBQVNDLG9CQUFvQixRQUFRLHVDQUF1QztBQUM1RSxTQUFTQyxtQkFBbUIsUUFBUSwwQkFBMEI7QUFFOUQ7QUFBQTtBQUFBZixhQUFBLEdBQUFLLENBQUE7QUFFQVEsaUJBQWlCLENBQUNDLG9CQUFvQixFQUFFQyxtQkFBbUIsb0NBQTRCO0FBRXZGO0FBRUEiLCJpZ25vcmVMaXN0IjpbXX0=

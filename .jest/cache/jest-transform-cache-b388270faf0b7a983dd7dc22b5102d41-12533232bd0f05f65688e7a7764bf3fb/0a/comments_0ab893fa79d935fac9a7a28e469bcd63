@@ -1,0 +1,46 @@
+ac23891c54e767822b917a2af2347f42
+/* istanbul ignore next */
+function cov_2cg72odxaa() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/common/comments.ts";
+  var hash = "a513fa9677ccfb3d252d1605239b0b68ebff7790";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/common/comments.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/common/comments.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/common/comments.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { MarshalledId } from '../../base/common/marshallingIds.js';\nimport { CommentThread } from '../../editor/common/languages.js';\n\nexport interface MarshalledCommentThread {\n\t$mid: MarshalledId.CommentThread;\n\tcommentControlHandle: number;\n\tcommentThreadHandle: number;\n}\n\nexport interface MarshalledCommentThreadInternal extends MarshalledCommentThread {\n\tthread: CommentThread;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a513fa9677ccfb3d252d1605239b0b68ebff7790"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2cg72odxaa = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2cg72odxaa();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29tbW9uL2NvbW1lbnRzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBNYXJzaGFsbGVkSWQgfSBmcm9tICcuLi8uLi9iYXNlL2NvbW1vbi9tYXJzaGFsbGluZ0lkcy5qcyc7XG5pbXBvcnQgeyBDb21tZW50VGhyZWFkIH0gZnJvbSAnLi4vLi4vZWRpdG9yL2NvbW1vbi9sYW5ndWFnZXMuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIE1hcnNoYWxsZWRDb21tZW50VGhyZWFkIHtcblx0JG1pZDogTWFyc2hhbGxlZElkLkNvbW1lbnRUaHJlYWQ7XG5cdGNvbW1lbnRDb250cm9sSGFuZGxlOiBudW1iZXI7XG5cdGNvbW1lbnRUaHJlYWRIYW5kbGU6IG51bWJlcjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBNYXJzaGFsbGVkQ29tbWVudFRocmVhZEludGVybmFsIGV4dGVuZHMgTWFyc2hhbGxlZENvbW1lbnRUaHJlYWQge1xuXHR0aHJlYWQ6IENvbW1lbnRUaHJlYWQ7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

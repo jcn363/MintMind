@@ -1,0 +1,96 @@
+fbd193be5590d62c4dd2c74c158ccf5d
+/* istanbul ignore next */
+function cov_cho9fc3p1() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/log/node/loggerService.ts";
+  var hash = "9b613679b818b846459e3bba48df05c2b144ef73";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/log/node/loggerService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 129
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 48
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/log/node/loggerService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,YAAY,EAAE,MAAM,8BAA8B,CAAC;AAC5D,OAAO,EAAE,qBAAqB,EAAqD,MAAM,kBAAkB,CAAC;AAC5G,OAAO,EAAE,YAAY,EAAE,MAAM,gBAAgB,CAAC;AAE9C,MAAM,OAAO,aAAc,SAAQ,qBAAqB;IAE7C,cAAc,CAAC,QAAa,EAAE,QAAkB,EAAE,OAAwB;QACnF,OAAO,IAAI,YAAY,CAAC,YAAY,EAAE,EAAE,QAAQ,CAAC,MAAM,EAAE,CAAC,OAAO,EAAE,WAAW,EAAE,CAAC,CAAC,OAAO,EAAE,kBAAkB,EAAE,QAAQ,CAAC,CAAC;IAC1H,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/log/node/loggerService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../base/common/uri.js';\nimport { generateUuid } from '../../../base/common/uuid.js';\nimport { AbstractLoggerService, ILogger, ILoggerOptions, ILoggerService, LogLevel } from '../common/log.js';\nimport { SpdLogLogger } from './spdlogLog.js';\n\nexport class LoggerService extends AbstractLoggerService implements ILoggerService {\n\n\tprotected doCreateLogger(resource: URI, logLevel: LogLevel, options?: ILoggerOptions): ILogger {\n\t\treturn new SpdLogLogger(generateUuid(), resource.fsPath, !options?.donotRotate, !!options?.donotUseFormatters, logLevel);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "9b613679b818b846459e3bba48df05c2b144ef73"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_cho9fc3p1 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_cho9fc3p1();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { generateUuid } from '../../../base/common/uuid.js';
+import { AbstractLoggerService } from '../common/log.js';
+import { SpdLogLogger } from './spdlogLog.js';
+export class LoggerService extends AbstractLoggerService {
+  doCreateLogger(resource, logLevel, options) {
+    /* istanbul ignore next */
+    cov_cho9fc3p1().f[0]++;
+    cov_cho9fc3p1().s[0]++;
+    return new SpdLogLogger(generateUuid(), resource.fsPath, !options?.donotRotate, !!options?.donotUseFormatters, logLevel);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJnZW5lcmF0ZVV1aWQiLCJBYnN0cmFjdExvZ2dlclNlcnZpY2UiLCJTcGRMb2dMb2dnZXIiLCJMb2dnZXJTZXJ2aWNlIiwiZG9DcmVhdGVMb2dnZXIiLCJyZXNvdXJjZSIsImxvZ0xldmVsIiwib3B0aW9ucyIsImNvdl9jaG85ZmMzcDEiLCJmIiwicyIsImZzUGF0aCIsImRvbm90Um90YXRlIiwiZG9ub3RVc2VGb3JtYXR0ZXJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9sb2cvbm9kZS9sb2dnZXJTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgZ2VuZXJhdGVVdWlkIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXVpZC5qcyc7XG5pbXBvcnQgeyBBYnN0cmFjdExvZ2dlclNlcnZpY2UsIElMb2dnZXIsIElMb2dnZXJPcHRpb25zLCBJTG9nZ2VyU2VydmljZSwgTG9nTGV2ZWwgfSBmcm9tICcuLi9jb21tb24vbG9nLmpzJztcbmltcG9ydCB7IFNwZExvZ0xvZ2dlciB9IGZyb20gJy4vc3BkbG9nTG9nLmpzJztcblxuZXhwb3J0IGNsYXNzIExvZ2dlclNlcnZpY2UgZXh0ZW5kcyBBYnN0cmFjdExvZ2dlclNlcnZpY2UgaW1wbGVtZW50cyBJTG9nZ2VyU2VydmljZSB7XG5cblx0cHJvdGVjdGVkIGRvQ3JlYXRlTG9nZ2VyKHJlc291cmNlOiBVUkksIGxvZ0xldmVsOiBMb2dMZXZlbCwgb3B0aW9ucz86IElMb2dnZXJPcHRpb25zKTogSUxvZ2dlciB7XG5cdFx0cmV0dXJuIG5ldyBTcGRMb2dMb2dnZXIoZ2VuZXJhdGVVdWlkKCksIHJlc291cmNlLmZzUGF0aCwgIW9wdGlvbnM/LmRvbm90Um90YXRlLCAhIW9wdGlvbnM/LmRvbm90VXNlRm9ybWF0dGVycywgbG9nTGV2ZWwpO1xuXHR9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLFlBQVksUUFBUSw4QkFBOEI7QUFDM0QsU0FBU0MscUJBQXFCLFFBQTJELGtCQUFrQjtBQUMzRyxTQUFTQyxZQUFZLFFBQVEsZ0JBQWdCO0FBRTdDLE9BQU0sTUFBT0MsYUFBYyxTQUFRRixxQkFBcUI7RUFFN0NHLGNBQWNBLENBQUNDLFFBQWEsRUFBRUMsUUFBa0IsRUFBRUMsT0FBd0I7SUFBQTtJQUFBQyxhQUFBLEdBQUFDLENBQUE7SUFBQUQsYUFBQSxHQUFBRSxDQUFBO0lBQ25GLE9BQU8sSUFBSVIsWUFBWSxDQUFDRixZQUFZLEVBQUUsRUFBRUssUUFBUSxDQUFDTSxNQUFNLEVBQUUsQ0FBQ0osT0FBTyxFQUFFSyxXQUFXLEVBQUUsQ0FBQyxDQUFDTCxPQUFPLEVBQUVNLGtCQUFrQixFQUFFUCxRQUFRLENBQUM7RUFDekgiLCJpZ25vcmVMaXN0IjpbXX0=

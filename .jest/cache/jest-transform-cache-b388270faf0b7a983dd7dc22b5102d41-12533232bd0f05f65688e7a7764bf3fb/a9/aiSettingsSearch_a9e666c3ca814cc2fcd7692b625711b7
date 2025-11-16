@@ -1,0 +1,188 @@
+e79dcb3fb64da8c4e202001161f8c7a4
+/* istanbul ignore next */
+function cov_14jp6p8u48() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/aiSettingsSearch/common/aiSettingsSearch.ts";
+  var hash = "7b4f86a852f92ec7b537e85b21c51c3242f8988d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/aiSettingsSearch/common/aiSettingsSearch.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 40
+        },
+        end: {
+          line: 6,
+          column: 83
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 68
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 88
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 92
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 88
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 1
+          },
+          end: {
+            line: 8,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 39
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 12,
+            column: 3
+          },
+          end: {
+            line: 12,
+            column: 66
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 12,
+            column: 3
+          },
+          end: {
+            line: 12,
+            column: 29
+          }
+        }, {
+          start: {
+            line: 12,
+            column: 34
+          },
+          end: {
+            line: 12,
+            column: 65
+          }
+        }],
+        line: 12
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/aiSettingsSearch/common/aiSettingsSearch.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAE7F,MAAM,CAAC,MAAM,wBAAwB,GAAG,eAAe,CAA2B,0BAA0B,CAAC,CAAC;AAE9G,MAAM,CAAN,IAAY,0BAIX;AAJD,WAAY,0BAA0B;IACrC,mFAAY,CAAA;IACZ,uFAAc,CAAA;IACd,mFAAY,CAAA;AACb,CAAC,EAJW,0BAA0B,KAA1B,0BAA0B,QAIrC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/aiSettingsSearch/common/aiSettingsSearch.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\n\nexport const IAiSettingsSearchService = createDecorator<IAiSettingsSearchService>('IAiSettingsSearchService');\n\nexport enum AiSettingsSearchResultKind {\n\tEMBEDDED = 1,\n\tLLM_RANKED = 2,\n\tCANCELED = 3,\n}\n\nexport interface AiSettingsSearchResult {\n\tquery: string;\n\tkind: AiSettingsSearchResultKind;\n\tsettings: string[];\n}\n\nexport interface AiSettingsSearchProviderOptions {\n\tlimit: number;\n\tembeddingsOnly: boolean;\n}\n\nexport interface IAiSettingsSearchService {\n\treadonly _serviceBrand: undefined;\n\treadonly onProviderRegistered: Event<void>;\n\n\t// Called from the Settings editor\n\tisEnabled(): boolean;\n\tstartSearch(query: string, embeddingsOnly: boolean, token: CancellationToken): void;\n\tgetEmbeddingsResults(query: string, token: CancellationToken): Promise<string[] | null>;\n\tgetLLMRankedResults(query: string, token: CancellationToken): Promise<string[] | null>;\n\n\t// Called from the main thread\n\tregisterSettingsSearchProvider(provider: IAiSettingsSearchProvider): IDisposable;\n\thandleSearchResult(results: AiSettingsSearchResult): void;\n}\n\nexport interface IAiSettingsSearchProvider {\n\tsearchSettings(query: string, option: AiSettingsSearchProviderOptions, token: CancellationToken): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7b4f86a852f92ec7b537e85b21c51c3242f8988d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_14jp6p8u48 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_14jp6p8u48();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IAiSettingsSearchService =
+/* istanbul ignore next */
+(cov_14jp6p8u48().s[0]++, createDecorator('IAiSettingsSearchService'));
+export var AiSettingsSearchResultKind;
+/* istanbul ignore next */
+cov_14jp6p8u48().s[1]++;
+(function (AiSettingsSearchResultKind) {
+  /* istanbul ignore next */
+  cov_14jp6p8u48().f[0]++;
+  cov_14jp6p8u48().s[2]++;
+  AiSettingsSearchResultKind[AiSettingsSearchResultKind["EMBEDDED"] = 1] = "EMBEDDED";
+  /* istanbul ignore next */
+  cov_14jp6p8u48().s[3]++;
+  AiSettingsSearchResultKind[AiSettingsSearchResultKind["LLM_RANKED"] = 2] = "LLM_RANKED";
+  /* istanbul ignore next */
+  cov_14jp6p8u48().s[4]++;
+  AiSettingsSearchResultKind[AiSettingsSearchResultKind["CANCELED"] = 3] = "CANCELED";
+})(
+/* istanbul ignore next */
+(cov_14jp6p8u48().b[0][0]++, AiSettingsSearchResultKind) ||
+/* istanbul ignore next */
+(cov_14jp6p8u48().b[0][1]++, AiSettingsSearchResultKind = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQWlTZXR0aW5nc1NlYXJjaFNlcnZpY2UiLCJjb3ZfMTRqcDZwOHU0OCIsInMiLCJBaVNldHRpbmdzU2VhcmNoUmVzdWx0S2luZCIsImYiLCJiIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvYWlTZXR0aW5nc1NlYXJjaC9jb21tb24vYWlTZXR0aW5nc1NlYXJjaC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgQ2FuY2VsbGF0aW9uVG9rZW4gfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9jYW5jZWxsYXRpb24uanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElBaVNldHRpbmdzU2VhcmNoU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJQWlTZXR0aW5nc1NlYXJjaFNlcnZpY2U+KCdJQWlTZXR0aW5nc1NlYXJjaFNlcnZpY2UnKTtcblxuZXhwb3J0IGVudW0gQWlTZXR0aW5nc1NlYXJjaFJlc3VsdEtpbmQge1xuXHRFTUJFRERFRCA9IDEsXG5cdExMTV9SQU5LRUQgPSAyLFxuXHRDQU5DRUxFRCA9IDMsXG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgQWlTZXR0aW5nc1NlYXJjaFJlc3VsdCB7XG5cdHF1ZXJ5OiBzdHJpbmc7XG5cdGtpbmQ6IEFpU2V0dGluZ3NTZWFyY2hSZXN1bHRLaW5kO1xuXHRzZXR0aW5nczogc3RyaW5nW107XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgQWlTZXR0aW5nc1NlYXJjaFByb3ZpZGVyT3B0aW9ucyB7XG5cdGxpbWl0OiBudW1iZXI7XG5cdGVtYmVkZGluZ3NPbmx5OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElBaVNldHRpbmdzU2VhcmNoU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0cmVhZG9ubHkgb25Qcm92aWRlclJlZ2lzdGVyZWQ6IEV2ZW50PHZvaWQ+O1xuXG5cdC8vIENhbGxlZCBmcm9tIHRoZSBTZXR0aW5ncyBlZGl0b3Jcblx0aXNFbmFibGVkKCk6IGJvb2xlYW47XG5cdHN0YXJ0U2VhcmNoKHF1ZXJ5OiBzdHJpbmcsIGVtYmVkZGluZ3NPbmx5OiBib29sZWFuLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiB2b2lkO1xuXHRnZXRFbWJlZGRpbmdzUmVzdWx0cyhxdWVyeTogc3RyaW5nLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPHN0cmluZ1tdIHwgbnVsbD47XG5cdGdldExMTVJhbmtlZFJlc3VsdHMocXVlcnk6IHN0cmluZywgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxzdHJpbmdbXSB8IG51bGw+O1xuXG5cdC8vIENhbGxlZCBmcm9tIHRoZSBtYWluIHRocmVhZFxuXHRyZWdpc3RlclNldHRpbmdzU2VhcmNoUHJvdmlkZXIocHJvdmlkZXI6IElBaVNldHRpbmdzU2VhcmNoUHJvdmlkZXIpOiBJRGlzcG9zYWJsZTtcblx0aGFuZGxlU2VhcmNoUmVzdWx0KHJlc3VsdHM6IEFpU2V0dGluZ3NTZWFyY2hSZXN1bHQpOiB2b2lkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElBaVNldHRpbmdzU2VhcmNoUHJvdmlkZXIge1xuXHRzZWFyY2hTZXR0aW5ncyhxdWVyeTogc3RyaW5nLCBvcHRpb246IEFpU2V0dGluZ3NTZWFyY2hQcm92aWRlck9wdGlvbnMsIHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbik6IHZvaWQ7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBUUEsU0FBU0EsZUFBZSxRQUFRLDREQUE0RDtBQUU1RixPQUFPLE1BQU1DLHdCQUF3QjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBMkIsMEJBQTBCLENBQUM7QUFFN0csV0FBWUksMEJBSVg7QUFBQTtBQUFBRixjQUFBLEdBQUFDLENBQUE7QUFKRCxXQUFZQywwQkFBMEI7RUFBQTtFQUFBRixjQUFBLEdBQUFHLENBQUE7RUFBQUgsY0FBQSxHQUFBQyxDQUFBO0VBQ3JDQywwQkFBQSxDQUFBQSwwQkFBQSw4QkFBWTtFQUFBO0VBQUFGLGNBQUEsR0FBQUMsQ0FBQTtFQUNaQywwQkFBQSxDQUFBQSwwQkFBQSxrQ0FBYztFQUFBO0VBQUFGLGNBQUEsR0FBQUMsQ0FBQTtFQUNkQywwQkFBQSxDQUFBQSwwQkFBQSw4QkFBWTtBQUNiLENBQUM7QUFKVztBQUFBLENBQUFGLGNBQUEsR0FBQUksQ0FBQSxVQUFBRiwwQkFBMEI7QUFBQTtBQUFBLENBQUFGLGNBQUEsR0FBQUksQ0FBQSxVQUExQkYsMEJBQTBCIiwiaWdub3JlTGlzdCI6W119

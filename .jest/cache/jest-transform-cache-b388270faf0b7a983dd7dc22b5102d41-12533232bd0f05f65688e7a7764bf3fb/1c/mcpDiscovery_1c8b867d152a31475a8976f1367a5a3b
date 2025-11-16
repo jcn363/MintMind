@@ -1,0 +1,163 @@
+f32dae5ef1926b44fb8546cbeabc7df0
+/* istanbul ignore next */
+function cov_1m1ribsxon() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/common/discovery/mcpDiscovery.ts";
+  var hash = "e65775c9e1cd444756a0457d54e51d99a579af58";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/common/discovery/mcpDiscovery.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 17
+        },
+        end: {
+          line: 6,
+          column: 19
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 40
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 31
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 36
+        },
+        end: {
+          line: 14,
+          column: 62
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 24
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 13
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/common/discovery/mcpDiscovery.ts",
+      mappings: "AAAA;;;gGAGgG;AAWhG,MAAM,oBAAoB;IACR,UAAU,GAAqC,EAAE,CAAC;IAEnE,QAAQ,CAAC,SAAyC;QACjD,IAAI,CAAC,UAAU,CAAC,IAAI,CAAC,SAAS,CAAC,CAAC;IACjC,CAAC;IAED,MAAM;QACL,OAAO,IAAI,CAAC,UAAU,CAAC;IACxB,CAAC;CACD;AAED,MAAM,CAAC,MAAM,oBAAoB,GAAG,IAAI,oBAAoB,EAAE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/common/discovery/mcpDiscovery.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../../../base/common/lifecycle.js';\nimport { SyncDescriptor0 } from '../../../../../platform/instantiation/common/descriptors.js';\n\n\nexport interface IMcpDiscovery extends IDisposable {\n\treadonly fromGallery: boolean;\n\tstart(): void;\n}\n\nclass McpDiscoveryRegistry {\n\tprivate readonly _discovery: SyncDescriptor0<IMcpDiscovery>[] = [];\n\n\tregister(discovery: SyncDescriptor0<IMcpDiscovery>): void {\n\t\tthis._discovery.push(discovery);\n\t}\n\n\tgetAll(): readonly SyncDescriptor0<IMcpDiscovery>[] {\n\t\treturn this._discovery;\n\t}\n}\n\nexport const mcpDiscoveryRegistry = new McpDiscoveryRegistry();\n\n\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e65775c9e1cd444756a0457d54e51d99a579af58"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1m1ribsxon = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1m1ribsxon();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+class McpDiscoveryRegistry {
+  _discovery =
+  /* istanbul ignore next */
+  (cov_1m1ribsxon().s[0]++, []);
+  register(discovery) {
+    /* istanbul ignore next */
+    cov_1m1ribsxon().f[0]++;
+    cov_1m1ribsxon().s[1]++;
+    this._discovery.push(discovery);
+  }
+  getAll() {
+    /* istanbul ignore next */
+    cov_1m1ribsxon().f[1]++;
+    cov_1m1ribsxon().s[2]++;
+    return this._discovery;
+  }
+}
+export const mcpDiscoveryRegistry =
+/* istanbul ignore next */
+(cov_1m1ribsxon().s[3]++, new McpDiscoveryRegistry());
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJNY3BEaXNjb3ZlcnlSZWdpc3RyeSIsIl9kaXNjb3ZlcnkiLCJjb3ZfMW0xcmlic3hvbiIsInMiLCJyZWdpc3RlciIsImRpc2NvdmVyeSIsImYiLCJwdXNoIiwiZ2V0QWxsIiwibWNwRGlzY292ZXJ5UmVnaXN0cnkiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL21jcC9jb21tb24vZGlzY292ZXJ5L21jcERpc2NvdmVyeS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgU3luY0Rlc2NyaXB0b3IwIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vZGVzY3JpcHRvcnMuanMnO1xuXG5cbmV4cG9ydCBpbnRlcmZhY2UgSU1jcERpc2NvdmVyeSBleHRlbmRzIElEaXNwb3NhYmxlIHtcblx0cmVhZG9ubHkgZnJvbUdhbGxlcnk6IGJvb2xlYW47XG5cdHN0YXJ0KCk6IHZvaWQ7XG59XG5cbmNsYXNzIE1jcERpc2NvdmVyeVJlZ2lzdHJ5IHtcblx0cHJpdmF0ZSByZWFkb25seSBfZGlzY292ZXJ5OiBTeW5jRGVzY3JpcHRvcjA8SU1jcERpc2NvdmVyeT5bXSA9IFtdO1xuXG5cdHJlZ2lzdGVyKGRpc2NvdmVyeTogU3luY0Rlc2NyaXB0b3IwPElNY3BEaXNjb3Zlcnk+KTogdm9pZCB7XG5cdFx0dGhpcy5fZGlzY292ZXJ5LnB1c2goZGlzY292ZXJ5KTtcblx0fVxuXG5cdGdldEFsbCgpOiByZWFkb25seSBTeW5jRGVzY3JpcHRvcjA8SU1jcERpc2NvdmVyeT5bXSB7XG5cdFx0cmV0dXJuIHRoaXMuX2Rpc2NvdmVyeTtcblx0fVxufVxuXG5leHBvcnQgY29uc3QgbWNwRGlzY292ZXJ5UmVnaXN0cnkgPSBuZXcgTWNwRGlzY292ZXJ5UmVnaXN0cnkoKTtcblxuXG5cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQWNBLE1BQU1BLG9CQUFvQjtFQUNSQyxVQUFVO0VBQUE7RUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBcUMsRUFBRTtFQUVsRUMsUUFBUUEsQ0FBQ0MsU0FBeUM7SUFBQTtJQUFBSCxjQUFBLEdBQUFJLENBQUE7SUFBQUosY0FBQSxHQUFBQyxDQUFBO0lBQ2pELElBQUksQ0FBQ0YsVUFBVSxDQUFDTSxJQUFJLENBQUNGLFNBQVMsQ0FBQztFQUNoQztFQUVBRyxNQUFNQSxDQUFBO0lBQUE7SUFBQU4sY0FBQSxHQUFBSSxDQUFBO0lBQUFKLGNBQUEsR0FBQUMsQ0FBQTtJQUNMLE9BQU8sSUFBSSxDQUFDRixVQUFVO0VBQ3ZCOztBQUdELE9BQU8sTUFBTVEsb0JBQW9CO0FBQUE7QUFBQSxDQUFBUCxjQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSCxvQkFBb0IsRUFBRSIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,202 @@
+d4e14249e0962edd2f043608461afbdc
+/* istanbul ignore next */
+function cov_9t8j2k74d() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/issue/common/issue.ts";
+  var hash = "e74d6b464fb288b91a9387aeb0b5c6fbd82f65fd";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/issue/common/issue.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 38
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 37
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 47
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 33
+        },
+        end: {
+          line: 12,
+          column: 68
+        }
+      },
+      "5": {
+        start: {
+          line: 13,
+          column: 38
+        },
+        end: {
+          line: 13,
+          column: 78
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 1
+          },
+          end: {
+            line: 7,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 24
+          },
+          end: {
+            line: 11,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 11,
+            column: 3
+          },
+          end: {
+            line: 11,
+            column: 36
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 11,
+            column: 3
+          },
+          end: {
+            line: 11,
+            column: 14
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 19
+          },
+          end: {
+            line: 11,
+            column: 35
+          }
+        }],
+        line: 11
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/issue/common/issue.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAmB7F,MAAM,CAAN,IAAY,WAIX;AAJD,WAAY,WAAW;IACtB,gCAAiB,CAAA;IACjB,sCAAuB,CAAA;IACvB,0CAA2B,CAAA;AAC5B,CAAC,EAJW,WAAW,KAAX,WAAW,QAItB;AA4DD,MAAM,CAAC,MAAM,iBAAiB,GAAG,eAAe,CAAoB,kBAAkB,CAAC,CAAC;AAcxF,MAAM,CAAC,MAAM,sBAAsB,GAAG,eAAe,CAAyB,uBAAuB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/issue/common/issue.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { UriComponents } from '../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\n\n// Since data sent through the service is serialized to JSON, functions will be lost, so Color objects\n// should not be sent as their 'toString' method will be stripped. Instead convert to strings before sending.\nexport interface WindowStyles {\n\tbackgroundColor?: string;\n\tcolor?: string;\n}\nexport interface WindowData {\n\tstyles: WindowStyles;\n\tzoomLevel: number;\n}\n\nexport const enum IssueType {\n\tBug,\n\tPerformanceIssue,\n\tFeatureRequest\n}\n\nexport enum IssueSource {\n\tVSCode = 'vscode',\n\tExtension = 'extension',\n\tMarketplace = 'marketplace'\n}\n\nexport interface IssueReporterStyles extends WindowStyles {\n\ttextLinkColor?: string;\n\ttextLinkActiveForeground?: string;\n\tinputBackground?: string;\n\tinputForeground?: string;\n\tinputBorder?: string;\n\tinputErrorBorder?: string;\n\tinputErrorBackground?: string;\n\tinputErrorForeground?: string;\n\tinputActiveBorder?: string;\n\tbuttonBackground?: string;\n\tbuttonForeground?: string;\n\tbuttonHoverBackground?: string;\n\tsliderBackgroundColor?: string;\n\tsliderHoverColor?: string;\n\tsliderActiveColor?: string;\n}\n\nexport interface IssueReporterExtensionData {\n\tname: string;\n\tpublisher: string | undefined;\n\tversion: string;\n\tid: string;\n\tisTheme: boolean;\n\tisBuiltin: boolean;\n\tdisplayName: string | undefined;\n\trepositoryUrl: string | undefined;\n\tbugsUrl: string | undefined;\n\textensionData?: string;\n\textensionTemplate?: string;\n\tdata?: string;\n\turi?: UriComponents;\n\tprivateUri?: UriComponents;\n}\n\nexport interface IssueReporterData extends WindowData {\n\tstyles: IssueReporterStyles;\n\tenabledExtensions: IssueReporterExtensionData[];\n\tissueType?: IssueType;\n\tissueSource?: IssueSource;\n\textensionId?: string;\n\texperiments?: string;\n\trestrictedMode: boolean;\n\tisUnsupported: boolean;\n\tgithubAccessToken: string;\n\tissueTitle?: string;\n\tissueBody?: string;\n\tdata?: string;\n\turi?: UriComponents;\n\tprivateUri?: UriComponents;\n}\n\nexport interface ISettingSearchResult {\n\textensionId: string;\n\tkey: string;\n\tscore: number;\n}\n\nexport const IIssueFormService = createDecorator<IIssueFormService>('issueFormService');\n\nexport interface IIssueFormService {\n\treadonly _serviceBrand: undefined;\n\n\t// Used by the issue reporter\n\topenReporter(data: IssueReporterData): Promise<void>;\n\treloadWithExtensionsDisabled(): Promise<void>;\n\tshowConfirmCloseDialog(): Promise<void>;\n\tshowClipboardDialog(): Promise<boolean>;\n\tsendReporterMenu(extensionId: string): Promise<IssueReporterData | undefined>;\n\tcloseReporter(): Promise<void>;\n}\n\nexport const IWorkbenchIssueService = createDecorator<IWorkbenchIssueService>('workbenchIssueService');\n\nexport interface IWorkbenchIssueService {\n\treadonly _serviceBrand: undefined;\n\topenReporter(dataOverrides?: Partial<IssueReporterData>): Promise<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e74d6b464fb288b91a9387aeb0b5c6fbd82f65fd"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_9t8j2k74d = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_9t8j2k74d();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export var IssueSource;
+/* istanbul ignore next */
+cov_9t8j2k74d().s[0]++;
+(function (IssueSource) {
+  /* istanbul ignore next */
+  cov_9t8j2k74d().f[0]++;
+  cov_9t8j2k74d().s[1]++;
+  IssueSource["VSCode"] = "vscode";
+  /* istanbul ignore next */
+  cov_9t8j2k74d().s[2]++;
+  IssueSource["Extension"] = "extension";
+  /* istanbul ignore next */
+  cov_9t8j2k74d().s[3]++;
+  IssueSource["Marketplace"] = "marketplace";
+})(
+/* istanbul ignore next */
+(cov_9t8j2k74d().b[0][0]++, IssueSource) ||
+/* istanbul ignore next */
+(cov_9t8j2k74d().b[0][1]++, IssueSource = {}));
+export const IIssueFormService =
+/* istanbul ignore next */
+(cov_9t8j2k74d().s[4]++, createDecorator('issueFormService'));
+export const IWorkbenchIssueService =
+/* istanbul ignore next */
+(cov_9t8j2k74d().s[5]++, createDecorator('workbenchIssueService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJc3N1ZVNvdXJjZSIsImNvdl85dDhqMms3NGQiLCJzIiwiZiIsImIiLCJJSXNzdWVGb3JtU2VydmljZSIsIklXb3JrYmVuY2hJc3N1ZVNlcnZpY2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL2lzc3VlL2NvbW1vbi9pc3N1ZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVXJpQ29tcG9uZW50cyB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuLy8gU2luY2UgZGF0YSBzZW50IHRocm91Z2ggdGhlIHNlcnZpY2UgaXMgc2VyaWFsaXplZCB0byBKU09OLCBmdW5jdGlvbnMgd2lsbCBiZSBsb3N0LCBzbyBDb2xvciBvYmplY3RzXG4vLyBzaG91bGQgbm90IGJlIHNlbnQgYXMgdGhlaXIgJ3RvU3RyaW5nJyBtZXRob2Qgd2lsbCBiZSBzdHJpcHBlZC4gSW5zdGVhZCBjb252ZXJ0IHRvIHN0cmluZ3MgYmVmb3JlIHNlbmRpbmcuXG5leHBvcnQgaW50ZXJmYWNlIFdpbmRvd1N0eWxlcyB7XG5cdGJhY2tncm91bmRDb2xvcj86IHN0cmluZztcblx0Y29sb3I/OiBzdHJpbmc7XG59XG5leHBvcnQgaW50ZXJmYWNlIFdpbmRvd0RhdGEge1xuXHRzdHlsZXM6IFdpbmRvd1N0eWxlcztcblx0em9vbUxldmVsOiBudW1iZXI7XG59XG5cbmV4cG9ydCBjb25zdCBlbnVtIElzc3VlVHlwZSB7XG5cdEJ1Zyxcblx0UGVyZm9ybWFuY2VJc3N1ZSxcblx0RmVhdHVyZVJlcXVlc3Rcbn1cblxuZXhwb3J0IGVudW0gSXNzdWVTb3VyY2Uge1xuXHRWU0NvZGUgPSAndnNjb2RlJyxcblx0RXh0ZW5zaW9uID0gJ2V4dGVuc2lvbicsXG5cdE1hcmtldHBsYWNlID0gJ21hcmtldHBsYWNlJ1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElzc3VlUmVwb3J0ZXJTdHlsZXMgZXh0ZW5kcyBXaW5kb3dTdHlsZXMge1xuXHR0ZXh0TGlua0NvbG9yPzogc3RyaW5nO1xuXHR0ZXh0TGlua0FjdGl2ZUZvcmVncm91bmQ/OiBzdHJpbmc7XG5cdGlucHV0QmFja2dyb3VuZD86IHN0cmluZztcblx0aW5wdXRGb3JlZ3JvdW5kPzogc3RyaW5nO1xuXHRpbnB1dEJvcmRlcj86IHN0cmluZztcblx0aW5wdXRFcnJvckJvcmRlcj86IHN0cmluZztcblx0aW5wdXRFcnJvckJhY2tncm91bmQ/OiBzdHJpbmc7XG5cdGlucHV0RXJyb3JGb3JlZ3JvdW5kPzogc3RyaW5nO1xuXHRpbnB1dEFjdGl2ZUJvcmRlcj86IHN0cmluZztcblx0YnV0dG9uQmFja2dyb3VuZD86IHN0cmluZztcblx0YnV0dG9uRm9yZWdyb3VuZD86IHN0cmluZztcblx0YnV0dG9uSG92ZXJCYWNrZ3JvdW5kPzogc3RyaW5nO1xuXHRzbGlkZXJCYWNrZ3JvdW5kQ29sb3I/OiBzdHJpbmc7XG5cdHNsaWRlckhvdmVyQ29sb3I/OiBzdHJpbmc7XG5cdHNsaWRlckFjdGl2ZUNvbG9yPzogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElzc3VlUmVwb3J0ZXJFeHRlbnNpb25EYXRhIHtcblx0bmFtZTogc3RyaW5nO1xuXHRwdWJsaXNoZXI6IHN0cmluZyB8IHVuZGVmaW5lZDtcblx0dmVyc2lvbjogc3RyaW5nO1xuXHRpZDogc3RyaW5nO1xuXHRpc1RoZW1lOiBib29sZWFuO1xuXHRpc0J1aWx0aW46IGJvb2xlYW47XG5cdGRpc3BsYXlOYW1lOiBzdHJpbmcgfCB1bmRlZmluZWQ7XG5cdHJlcG9zaXRvcnlVcmw6IHN0cmluZyB8IHVuZGVmaW5lZDtcblx0YnVnc1VybDogc3RyaW5nIHwgdW5kZWZpbmVkO1xuXHRleHRlbnNpb25EYXRhPzogc3RyaW5nO1xuXHRleHRlbnNpb25UZW1wbGF0ZT86IHN0cmluZztcblx0ZGF0YT86IHN0cmluZztcblx0dXJpPzogVXJpQ29tcG9uZW50cztcblx0cHJpdmF0ZVVyaT86IFVyaUNvbXBvbmVudHM7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSXNzdWVSZXBvcnRlckRhdGEgZXh0ZW5kcyBXaW5kb3dEYXRhIHtcblx0c3R5bGVzOiBJc3N1ZVJlcG9ydGVyU3R5bGVzO1xuXHRlbmFibGVkRXh0ZW5zaW9uczogSXNzdWVSZXBvcnRlckV4dGVuc2lvbkRhdGFbXTtcblx0aXNzdWVUeXBlPzogSXNzdWVUeXBlO1xuXHRpc3N1ZVNvdXJjZT86IElzc3VlU291cmNlO1xuXHRleHRlbnNpb25JZD86IHN0cmluZztcblx0ZXhwZXJpbWVudHM/OiBzdHJpbmc7XG5cdHJlc3RyaWN0ZWRNb2RlOiBib29sZWFuO1xuXHRpc1Vuc3VwcG9ydGVkOiBib29sZWFuO1xuXHRnaXRodWJBY2Nlc3NUb2tlbjogc3RyaW5nO1xuXHRpc3N1ZVRpdGxlPzogc3RyaW5nO1xuXHRpc3N1ZUJvZHk/OiBzdHJpbmc7XG5cdGRhdGE/OiBzdHJpbmc7XG5cdHVyaT86IFVyaUNvbXBvbmVudHM7XG5cdHByaXZhdGVVcmk/OiBVcmlDb21wb25lbnRzO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElTZXR0aW5nU2VhcmNoUmVzdWx0IHtcblx0ZXh0ZW5zaW9uSWQ6IHN0cmluZztcblx0a2V5OiBzdHJpbmc7XG5cdHNjb3JlOiBudW1iZXI7XG59XG5cbmV4cG9ydCBjb25zdCBJSXNzdWVGb3JtU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJSXNzdWVGb3JtU2VydmljZT4oJ2lzc3VlRm9ybVNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJSXNzdWVGb3JtU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHQvLyBVc2VkIGJ5IHRoZSBpc3N1ZSByZXBvcnRlclxuXHRvcGVuUmVwb3J0ZXIoZGF0YTogSXNzdWVSZXBvcnRlckRhdGEpOiBQcm9taXNlPHZvaWQ+O1xuXHRyZWxvYWRXaXRoRXh0ZW5zaW9uc0Rpc2FibGVkKCk6IFByb21pc2U8dm9pZD47XG5cdHNob3dDb25maXJtQ2xvc2VEaWFsb2coKTogUHJvbWlzZTx2b2lkPjtcblx0c2hvd0NsaXBib2FyZERpYWxvZygpOiBQcm9taXNlPGJvb2xlYW4+O1xuXHRzZW5kUmVwb3J0ZXJNZW51KGV4dGVuc2lvbklkOiBzdHJpbmcpOiBQcm9taXNlPElzc3VlUmVwb3J0ZXJEYXRhIHwgdW5kZWZpbmVkPjtcblx0Y2xvc2VSZXBvcnRlcigpOiBQcm9taXNlPHZvaWQ+O1xufVxuXG5leHBvcnQgY29uc3QgSVdvcmtiZW5jaElzc3VlU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJV29ya2JlbmNoSXNzdWVTZXJ2aWNlPignd29ya2JlbmNoSXNzdWVTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdvcmtiZW5jaElzc3VlU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0b3BlblJlcG9ydGVyKGRhdGFPdmVycmlkZXM/OiBQYXJ0aWFsPElzc3VlUmVwb3J0ZXJEYXRhPik6IFByb21pc2U8dm9pZD47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxlQUFlLFFBQVEsNERBQTREO0FBbUI1RixXQUFZQyxXQUlYO0FBQUE7QUFBQUMsYUFBQSxHQUFBQyxDQUFBO0FBSkQsV0FBWUYsV0FBVztFQUFBO0VBQUFDLGFBQUEsR0FBQUUsQ0FBQTtFQUFBRixhQUFBLEdBQUFDLENBQUE7RUFDdEJGLFdBQUEscUJBQWlCO0VBQUE7RUFBQUMsYUFBQSxHQUFBQyxDQUFBO0VBQ2pCRixXQUFBLDJCQUF1QjtFQUFBO0VBQUFDLGFBQUEsR0FBQUMsQ0FBQTtFQUN2QkYsV0FBQSwrQkFBMkI7QUFDNUIsQ0FBQztBQUpXO0FBQUEsQ0FBQUMsYUFBQSxHQUFBRyxDQUFBLFVBQUFKLFdBQVc7QUFBQTtBQUFBLENBQUFDLGFBQUEsR0FBQUcsQ0FBQSxVQUFYSixXQUFXO0FBZ0V2QixPQUFPLE1BQU1LLGlCQUFpQjtBQUFBO0FBQUEsQ0FBQUosYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBb0Isa0JBQWtCLENBQUM7QUFjdkYsT0FBTyxNQUFNTyxzQkFBc0I7QUFBQTtBQUFBLENBQUFMLGFBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQXlCLHVCQUF1QixDQUFDIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,104 @@
+2c14494cf7e9cdeb6bbf9472e7ba965d
+/* istanbul ignore next */
+function cov_241jotdeq4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/core/text/positionToOffset.ts";
+  var hash = "e8d03effa910bcb765603f3323a7670b2e783161";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/core/text/positionToOffset.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 16,
+          column: 3
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "ensureDependenciesAreSet",
+        decl: {
+          start: {
+            line: 18,
+            column: 16
+          },
+          end: {
+            line: 18,
+            column: 40
+          }
+        },
+        loc: {
+          start: {
+            line: 18,
+            column: 43
+          },
+          end: {
+            line: 20,
+            column: 1
+          }
+        },
+        line: 18
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/core/text/positionToOffset.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,UAAU,EAAE,iBAAiB,EAAE,MAAM,wBAAwB,CAAC;AACvE,OAAO,EAAE,QAAQ,EAAE,eAAe,EAAE,MAAM,sBAAsB,CAAC;AACjE,OAAO,EAAE,yCAAyC,EAAE,MAAM,2BAA2B,CAAC;AACtF,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAE7C,OAAO,EAAE,6BAA6B,EAAE,yBAAyB,EAAE,MAAM,2BAA2B,CAAC;AAErG,yCAAyC,CAAC;IACzC,UAAU,EAAE,UAAU;IACtB,iBAAiB,EAAE,iBAAiB;IACpC,eAAe,EAAE,eAAe;IAChC,QAAQ,EAAE,QAAQ;IAClB,UAAU,EAAE,UAAU;CACtB,CAAC,CAAC;AAEH,mGAAmG;AACnG,MAAM,UAAU,wBAAwB;IACvC,OAAO;AACR,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/core/text/positionToOffset.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { StringEdit, StringReplacement } from '../edits/stringEdit.js';\nimport { TextEdit, TextReplacement } from '../edits/textEdit.js';\nimport { _setPositionOffsetTransformerDependencies } from './positionToOffsetImpl.js';\nimport { TextLength } from './textLength.js';\n\nexport { PositionOffsetTransformerBase, PositionOffsetTransformer } from './positionToOffsetImpl.js';\n\n_setPositionOffsetTransformerDependencies({\n\tStringEdit: StringEdit,\n\tStringReplacement: StringReplacement,\n\tTextReplacement: TextReplacement,\n\tTextEdit: TextEdit,\n\tTextLength: TextLength,\n});\n\n// TODO@hediet this is dept and needs to go. See https://github.com/microsoft/vscode/issues/251126.\nexport function ensureDependenciesAreSet(): void {\n\t// Noop\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e8d03effa910bcb765603f3323a7670b2e783161"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_241jotdeq4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_241jotdeq4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { StringEdit, StringReplacement } from '../edits/stringEdit.js';
+import { TextEdit, TextReplacement } from '../edits/textEdit.js';
+import { _setPositionOffsetTransformerDependencies } from './positionToOffsetImpl.js';
+import { TextLength } from './textLength.js';
+export { PositionOffsetTransformerBase, PositionOffsetTransformer } from './positionToOffsetImpl.js';
+/* istanbul ignore next */
+cov_241jotdeq4().s[0]++;
+_setPositionOffsetTransformerDependencies({
+  StringEdit: StringEdit,
+  StringReplacement: StringReplacement,
+  TextReplacement: TextReplacement,
+  TextEdit: TextEdit,
+  TextLength: TextLength
+});
+// TODO@hediet this is dept and needs to go. See https://github.com/microsoft/vscode/issues/251126.
+export function ensureDependenciesAreSet() {
+  /* istanbul ignore next */
+  cov_241jotdeq4().f[0]++;
+} // Noop
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjQxam90ZGVxNCIsImFjdHVhbENvdmVyYWdlIiwiU3RyaW5nRWRpdCIsIlN0cmluZ1JlcGxhY2VtZW50IiwiVGV4dEVkaXQiLCJUZXh0UmVwbGFjZW1lbnQiLCJfc2V0UG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckRlcGVuZGVuY2llcyIsIlRleHRMZW5ndGgiLCJQb3NpdGlvbk9mZnNldFRyYW5zZm9ybWVyQmFzZSIsIlBvc2l0aW9uT2Zmc2V0VHJhbnNmb3JtZXIiLCJzIiwiZW5zdXJlRGVwZW5kZW5jaWVzQXJlU2V0IiwiZiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbW1vbi9jb3JlL3RleHQvcG9zaXRpb25Ub09mZnNldC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgU3RyaW5nRWRpdCwgU3RyaW5nUmVwbGFjZW1lbnQgfSBmcm9tICcuLi9lZGl0cy9zdHJpbmdFZGl0LmpzJztcbmltcG9ydCB7IFRleHRFZGl0LCBUZXh0UmVwbGFjZW1lbnQgfSBmcm9tICcuLi9lZGl0cy90ZXh0RWRpdC5qcyc7XG5pbXBvcnQgeyBfc2V0UG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckRlcGVuZGVuY2llcyB9IGZyb20gJy4vcG9zaXRpb25Ub09mZnNldEltcGwuanMnO1xuaW1wb3J0IHsgVGV4dExlbmd0aCB9IGZyb20gJy4vdGV4dExlbmd0aC5qcyc7XG5cbmV4cG9ydCB7IFBvc2l0aW9uT2Zmc2V0VHJhbnNmb3JtZXJCYXNlLCBQb3NpdGlvbk9mZnNldFRyYW5zZm9ybWVyIH0gZnJvbSAnLi9wb3NpdGlvblRvT2Zmc2V0SW1wbC5qcyc7XG5cbl9zZXRQb3NpdGlvbk9mZnNldFRyYW5zZm9ybWVyRGVwZW5kZW5jaWVzKHtcblx0U3RyaW5nRWRpdDogU3RyaW5nRWRpdCxcblx0U3RyaW5nUmVwbGFjZW1lbnQ6IFN0cmluZ1JlcGxhY2VtZW50LFxuXHRUZXh0UmVwbGFjZW1lbnQ6IFRleHRSZXBsYWNlbWVudCxcblx0VGV4dEVkaXQ6IFRleHRFZGl0LFxuXHRUZXh0TGVuZ3RoOiBUZXh0TGVuZ3RoLFxufSk7XG5cbi8vIFRPRE9AaGVkaWV0IHRoaXMgaXMgZGVwdCBhbmQgbmVlZHMgdG8gZ28uIFNlZSBodHRwczovL2dpdGh1Yi5jb20vbWljcm9zb2Z0L3ZzY29kZS9pc3N1ZXMvMjUxMTI2LlxuZXhwb3J0IGZ1bmN0aW9uIGVuc3VyZURlcGVuZGVuY2llc0FyZVNldCgpOiB2b2lkIHtcblx0Ly8gTm9vcFxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCRztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbEJIOzs7O0FBS0EsU0FBU0UsVUFBVSxFQUFFQyxpQkFBaUIsUUFBUSx3QkFBd0I7QUFDdEUsU0FBU0MsUUFBUSxFQUFFQyxlQUFlLFFBQVEsc0JBQXNCO0FBQ2hFLFNBQVNDLHlDQUF5QyxRQUFRLDJCQUEyQjtBQUNyRixTQUFTQyxVQUFVLFFBQVEsaUJBQWlCO0FBRTVDLFNBQVNDLDZCQUE2QixFQUFFQyx5QkFBeUIsUUFBUSwyQkFBMkI7QUFBQztBQUFBVCxjQUFBLEdBQUFVLENBQUE7QUFFckdKLHlDQUF5QyxDQUFDO0VBQ3pDSixVQUFVLEVBQUVBLFVBQVU7RUFDdEJDLGlCQUFpQixFQUFFQSxpQkFBaUI7RUFDcENFLGVBQWUsRUFBRUEsZUFBZTtFQUNoQ0QsUUFBUSxFQUFFQSxRQUFRO0VBQ2xCRyxVQUFVLEVBQUVBO0NBQ1osQ0FBQztBQUVGO0FBQ0EsT0FBTSxTQUFVSSx3QkFBd0JBLENBQUE7RUFBQTtFQUFBWCxjQUFBLEdBQUFZLENBQUE7QUFFeEMsQ0FBQyxDQURBIiwiaWdub3JlTGlzdCI6W119

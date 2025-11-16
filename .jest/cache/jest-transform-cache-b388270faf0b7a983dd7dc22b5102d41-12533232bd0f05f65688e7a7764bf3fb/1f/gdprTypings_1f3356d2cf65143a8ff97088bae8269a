@@ -1,0 +1,42 @@
+ef55bbe67e4c3f9f04613abec17a7be8
+/* istanbul ignore next */
+function cov_1vr31hc5yl() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/telemetry/common/gdprTypings.ts";
+  var hash = "0fc16c19379ead3349de313e91bb5e5c10323a47";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/telemetry/common/gdprTypings.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/telemetry/common/gdprTypings.ts",
+      mappings: "",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/telemetry/common/gdprTypings.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\nexport interface IPropertyData {\n\tclassification: 'SystemMetaData' | 'CallstackOrException' | 'CustomerContent' | 'PublicNonPersonalData' | 'EndUserPseudonymizedInformation';\n\tpurpose: 'PerformanceAndHealth' | 'FeatureInsight' | 'BusinessInsight';\n\tcomment: string;\n\texpiration?: string;\n\tendpoint?: string;\n}\n\nexport interface IGDPRProperty {\n\towner: string;\n\tcomment: string;\n\texpiration?: string;\n\treadonly [name: string]: IPropertyData | undefined | IGDPRProperty | string;\n}\n\ntype IGDPRPropertyWithoutMetadata = Omit<IGDPRProperty, 'owner' | 'comment' | 'expiration'>;\nexport type OmitMetadata<T> = Omit<T, 'owner' | 'comment' | 'expiration'>;\n\nexport type ClassifiedEvent<T extends IGDPRPropertyWithoutMetadata> = {\n\t[k in keyof T]: any\n};\n\nexport type StrictPropertyChecker<TEvent, TClassification, TError> = keyof TEvent extends keyof OmitMetadata<TClassification> ? keyof OmitMetadata<TClassification> extends keyof TEvent ? TEvent : TError : TError;\n\nexport type StrictPropertyCheckError = { error: 'Type of classified event does not match event properties' };\n\nexport type StrictPropertyCheck<T extends IGDPRProperty, E> = StrictPropertyChecker<E, ClassifiedEvent<OmitMetadata<T>>, StrictPropertyCheckError>;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0fc16c19379ead3349de313e91bb5e5c10323a47"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1vr31hc5yl = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1vr31hc5yl();
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS90ZWxlbWV0cnkvY29tbW9uL2dkcHJUeXBpbmdzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuZXhwb3J0IGludGVyZmFjZSBJUHJvcGVydHlEYXRhIHtcblx0Y2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YScgfCAnQ2FsbHN0YWNrT3JFeGNlcHRpb24nIHwgJ0N1c3RvbWVyQ29udGVudCcgfCAnUHVibGljTm9uUGVyc29uYWxEYXRhJyB8ICdFbmRVc2VyUHNldWRvbnltaXplZEluZm9ybWF0aW9uJztcblx0cHVycG9zZTogJ1BlcmZvcm1hbmNlQW5kSGVhbHRoJyB8ICdGZWF0dXJlSW5zaWdodCcgfCAnQnVzaW5lc3NJbnNpZ2h0Jztcblx0Y29tbWVudDogc3RyaW5nO1xuXHRleHBpcmF0aW9uPzogc3RyaW5nO1xuXHRlbmRwb2ludD86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJR0RQUlByb3BlcnR5IHtcblx0b3duZXI6IHN0cmluZztcblx0Y29tbWVudDogc3RyaW5nO1xuXHRleHBpcmF0aW9uPzogc3RyaW5nO1xuXHRyZWFkb25seSBbbmFtZTogc3RyaW5nXTogSVByb3BlcnR5RGF0YSB8IHVuZGVmaW5lZCB8IElHRFBSUHJvcGVydHkgfCBzdHJpbmc7XG59XG5cbnR5cGUgSUdEUFJQcm9wZXJ0eVdpdGhvdXRNZXRhZGF0YSA9IE9taXQ8SUdEUFJQcm9wZXJ0eSwgJ293bmVyJyB8ICdjb21tZW50JyB8ICdleHBpcmF0aW9uJz47XG5leHBvcnQgdHlwZSBPbWl0TWV0YWRhdGE8VD4gPSBPbWl0PFQsICdvd25lcicgfCAnY29tbWVudCcgfCAnZXhwaXJhdGlvbic+O1xuXG5leHBvcnQgdHlwZSBDbGFzc2lmaWVkRXZlbnQ8VCBleHRlbmRzIElHRFBSUHJvcGVydHlXaXRob3V0TWV0YWRhdGE+ID0ge1xuXHRbayBpbiBrZXlvZiBUXTogYW55XG59O1xuXG5leHBvcnQgdHlwZSBTdHJpY3RQcm9wZXJ0eUNoZWNrZXI8VEV2ZW50LCBUQ2xhc3NpZmljYXRpb24sIFRFcnJvcj4gPSBrZXlvZiBURXZlbnQgZXh0ZW5kcyBrZXlvZiBPbWl0TWV0YWRhdGE8VENsYXNzaWZpY2F0aW9uPiA/IGtleW9mIE9taXRNZXRhZGF0YTxUQ2xhc3NpZmljYXRpb24+IGV4dGVuZHMga2V5b2YgVEV2ZW50ID8gVEV2ZW50IDogVEVycm9yIDogVEVycm9yO1xuXG5leHBvcnQgdHlwZSBTdHJpY3RQcm9wZXJ0eUNoZWNrRXJyb3IgPSB7IGVycm9yOiAnVHlwZSBvZiBjbGFzc2lmaWVkIGV2ZW50IGRvZXMgbm90IG1hdGNoIGV2ZW50IHByb3BlcnRpZXMnIH07XG5cbmV4cG9ydCB0eXBlIFN0cmljdFByb3BlcnR5Q2hlY2s8VCBleHRlbmRzIElHRFBSUHJvcGVydHksIEU+ID0gU3RyaWN0UHJvcGVydHlDaGVja2VyPEUsIENsYXNzaWZpZWRFdmVudDxPbWl0TWV0YWRhdGE8VD4+LCBTdHJpY3RQcm9wZXJ0eUNoZWNrRXJyb3I+O1xuIl0sIm1hcHBpbmdzIjoiIiwiaWdub3JlTGlzdCI6W119

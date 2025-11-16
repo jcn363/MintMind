@@ -1,0 +1,109 @@
+73ae49cc949031dd026a4dfd80546448
+/* istanbul ignore next */
+function cov_2fobj0nqet() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/replaceContributions.ts";
+  var hash = "3dc6ab2f8fe9a1c95aedd19efd9d29ea0dc208a0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/replaceContributions.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 90
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 137
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "registerContributions",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 37
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 40
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/replaceContributions.ts",
+      mappings: "AAAA;;;gGAGgG;AAChG,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,eAAe,EAAE,MAAM,cAAc,CAAC;AAC/C,OAAO,EAAE,cAAc,EAAE,6BAA6B,EAAE,MAAM,qBAAqB,CAAC;AACpF,OAAO,EAAkB,8BAA8B,EAAE,MAAM,kCAAkC,CAAC;AAElG,MAAM,UAAU,qBAAqB;IACpC,iBAAiB,CAAC,eAAe,EAAE,cAAc,oCAA4B,CAAC;IAC9E,8BAA8B,CAAC,6BAA6B,CAAC,EAAE,EAAE,6BAA6B,sCAAsD,CAAC;AACtJ,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/replaceContributions.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\nimport { IReplaceService } from './replace.js';\nimport { ReplaceService, ReplacePreviewContentProvider } from './replaceService.js';\nimport { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';\n\nexport function registerContributions(): void {\n\tregisterSingleton(IReplaceService, ReplaceService, InstantiationType.Delayed);\n\tregisterWorkbenchContribution2(ReplacePreviewContentProvider.ID, ReplacePreviewContentProvider, WorkbenchPhase.BlockStartup /* registration only */);\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3dc6ab2f8fe9a1c95aedd19efd9d29ea0dc208a0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2fobj0nqet = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2fobj0nqet();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { IReplaceService } from './replace.js';
+import { ReplaceService, ReplacePreviewContentProvider } from './replaceService.js';
+import { registerWorkbenchContribution2 } from '../../../common/contributions.js';
+export function registerContributions() {
+  /* istanbul ignore next */
+  cov_2fobj0nqet().f[0]++;
+  cov_2fobj0nqet().s[0]++;
+  registerSingleton(IReplaceService, ReplaceService, 1 /* InstantiationType.Delayed */);
+  /* istanbul ignore next */
+  cov_2fobj0nqet().s[1]++;
+  registerWorkbenchContribution2(ReplacePreviewContentProvider.ID, ReplacePreviewContentProvider, 1 /* WorkbenchPhase.BlockStartup */);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlclNpbmdsZXRvbiIsIklSZXBsYWNlU2VydmljZSIsIlJlcGxhY2VTZXJ2aWNlIiwiUmVwbGFjZVByZXZpZXdDb250ZW50UHJvdmlkZXIiLCJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIiLCJyZWdpc3RlckNvbnRyaWJ1dGlvbnMiLCJjb3ZfMmZvYmowbnFldCIsImYiLCJzIiwiSUQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3NlYXJjaC9icm93c2VyL3JlcGxhY2VDb250cmlidXRpb25zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuaW1wb3J0IHsgSW5zdGFudGlhdGlvblR5cGUsIHJlZ2lzdGVyU2luZ2xldG9uIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vZXh0ZW5zaW9ucy5qcyc7XG5pbXBvcnQgeyBJUmVwbGFjZVNlcnZpY2UgfSBmcm9tICcuL3JlcGxhY2UuanMnO1xuaW1wb3J0IHsgUmVwbGFjZVNlcnZpY2UsIFJlcGxhY2VQcmV2aWV3Q29udGVudFByb3ZpZGVyIH0gZnJvbSAnLi9yZXBsYWNlU2VydmljZS5qcyc7XG5pbXBvcnQgeyBXb3JrYmVuY2hQaGFzZSwgcmVnaXN0ZXJXb3JrYmVuY2hDb250cmlidXRpb24yIH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2NvbnRyaWJ1dGlvbnMuanMnO1xuXG5leHBvcnQgZnVuY3Rpb24gcmVnaXN0ZXJDb250cmlidXRpb25zKCk6IHZvaWQge1xuXHRyZWdpc3RlclNpbmdsZXRvbihJUmVwbGFjZVNlcnZpY2UsIFJlcGxhY2VTZXJ2aWNlLCBJbnN0YW50aWF0aW9uVHlwZS5EZWxheWVkKTtcblx0cmVnaXN0ZXJXb3JrYmVuY2hDb250cmlidXRpb24yKFJlcGxhY2VQcmV2aWV3Q29udGVudFByb3ZpZGVyLklELCBSZXBsYWNlUHJldmlld0NvbnRlbnRQcm92aWRlciwgV29ya2JlbmNoUGhhc2UuQmxvY2tTdGFydHVwIC8qIHJlZ2lzdHJhdGlvbiBvbmx5ICovKTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFJQSxTQUE0QkEsaUJBQWlCLFFBQVEseURBQXlEO0FBQzlHLFNBQVNDLGVBQWUsUUFBUSxjQUFjO0FBQzlDLFNBQVNDLGNBQWMsRUFBRUMsNkJBQTZCLFFBQVEscUJBQXFCO0FBQ25GLFNBQXlCQyw4QkFBOEIsUUFBUSxrQ0FBa0M7QUFFakcsT0FBTSxTQUFVQyxxQkFBcUJBLENBQUE7RUFBQTtFQUFBQyxjQUFBLEdBQUFDLENBQUE7RUFBQUQsY0FBQSxHQUFBRSxDQUFBO0VBQ3BDUixpQkFBaUIsQ0FBQ0MsZUFBZSxFQUFFQyxjQUFjLG9DQUE0QjtFQUFDO0VBQUFJLGNBQUEsR0FBQUUsQ0FBQTtFQUM5RUosOEJBQThCLENBQUNELDZCQUE2QixDQUFDTSxFQUFFLEVBQUVOLDZCQUE2QixzQ0FBc0Q7QUFDckoiLCJpZ25vcmVMaXN0IjpbXX0=

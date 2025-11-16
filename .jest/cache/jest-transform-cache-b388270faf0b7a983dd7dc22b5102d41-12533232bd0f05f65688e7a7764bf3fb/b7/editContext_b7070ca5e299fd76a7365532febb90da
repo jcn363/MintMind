@@ -1,0 +1,47 @@
+c158f065d426256e2e10581d5e249826
+/* istanbul ignore next */
+function cov_s45oj98cz() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/editContext.ts";
+  var hash = "0fb7e9c614412123073ffe1c757a89f574c6661f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/editContext.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/editContext.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,QAAQ,EAAE,MAAM,wBAAwB,CAAC;AAElD,MAAM,OAAgB,mBAAoB,SAAQ,QAAQ;CAQzD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/editContext.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { FastDomNode } from '../../../../base/browser/fastDomNode.js';\nimport { Position } from '../../../common/core/position.js';\nimport { IEditorAriaOptions } from '../../editorBrowser.js';\nimport { ViewPart } from '../../view/viewPart.js';\n\nexport abstract class AbstractEditContext extends ViewPart {\n\tabstract domNode: FastDomNode<HTMLElement>;\n\tabstract focus(): void;\n\tabstract isFocused(): boolean;\n\tabstract refreshFocusState(): void;\n\tabstract setAriaOptions(options: IEditorAriaOptions): void;\n\tabstract getLastRenderData(): Position | null;\n\tabstract writeScreenReaderContent(reason: string): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0fb7e9c614412123073ffe1c757a89f574c6661f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_s45oj98cz = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_s45oj98cz();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { ViewPart } from '../../view/viewPart.js';
+export class AbstractEditContext extends ViewPart {}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJWaWV3UGFydCIsIkFic3RyYWN0RWRpdENvbnRleHQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9icm93c2VyL2NvbnRyb2xsZXIvZWRpdENvbnRleHQvZWRpdENvbnRleHQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEZhc3REb21Ob2RlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9icm93c2VyL2Zhc3REb21Ob2RlLmpzJztcbmltcG9ydCB7IFBvc2l0aW9uIH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2NvcmUvcG9zaXRpb24uanMnO1xuaW1wb3J0IHsgSUVkaXRvckFyaWFPcHRpb25zIH0gZnJvbSAnLi4vLi4vZWRpdG9yQnJvd3Nlci5qcyc7XG5pbXBvcnQgeyBWaWV3UGFydCB9IGZyb20gJy4uLy4uL3ZpZXcvdmlld1BhcnQuanMnO1xuXG5leHBvcnQgYWJzdHJhY3QgY2xhc3MgQWJzdHJhY3RFZGl0Q29udGV4dCBleHRlbmRzIFZpZXdQYXJ0IHtcblx0YWJzdHJhY3QgZG9tTm9kZTogRmFzdERvbU5vZGU8SFRNTEVsZW1lbnQ+O1xuXHRhYnN0cmFjdCBmb2N1cygpOiB2b2lkO1xuXHRhYnN0cmFjdCBpc0ZvY3VzZWQoKTogYm9vbGVhbjtcblx0YWJzdHJhY3QgcmVmcmVzaEZvY3VzU3RhdGUoKTogdm9pZDtcblx0YWJzdHJhY3Qgc2V0QXJpYU9wdGlvbnMob3B0aW9uczogSUVkaXRvckFyaWFPcHRpb25zKTogdm9pZDtcblx0YWJzdHJhY3QgZ2V0TGFzdFJlbmRlckRhdGEoKTogUG9zaXRpb24gfCBudWxsO1xuXHRhYnN0cmFjdCB3cml0ZVNjcmVlblJlYWRlckNvbnRlbnQocmVhc29uOiBzdHJpbmcpOiB2b2lkO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQVFBLFNBQVNBLFFBQVEsUUFBUSx3QkFBd0I7QUFFakQsT0FBTSxNQUFnQkMsbUJBQW9CLFNBQVFELFFBQVEiLCJpZ25vcmVMaXN0IjpbXX0=

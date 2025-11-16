@@ -1,0 +1,46 @@
+d7f6653d4101b1a439a56623a5c9af07
+/* istanbul ignore next */
+function cov_2frs8dys2i() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/chatContentParts.ts";
+  var hash = "efea5faa9ef9321901f6f4e588077f7a0a274573";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/chatContentParts.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/chatContentParts.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/chatContentParts.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../../../base/common/lifecycle.js';\nimport { ChatTreeItem, IChatCodeBlockInfo } from '../chat.js';\nimport { IChatRendererContent } from '../../common/chatViewModel.js';\n\nexport interface IChatContentPart extends IDisposable {\n\tdomNode: HTMLElement | undefined;\n\n\t/**\n\t * Used to indicate a part's ownership of a code block.\n\t */\n\tcodeblocksPartId?: string;\n\n\t/**\n\t * Codeblocks that were rendered by this part into CodeBlockModelCollection.\n\t */\n\tcodeblocks?: IChatCodeBlockInfo[];\n\n\t/**\n\t * Returns true if the other content is equivalent to what is already rendered in this content part.\n\t * Returns false if a rerender is needed.\n\t * followingContent is all the content that will be rendered after this content part (to support progress messages' behavior).\n\t */\n\thasSameContent(other: IChatRendererContent, followingContent: IChatRendererContent[], element: ChatTreeItem): boolean;\n\n\taddDisposable?(disposable: IDisposable): void;\n}\n\nexport interface IChatContentPartRenderContext {\n\treadonly element: ChatTreeItem;\n\treadonly elementIndex: number;\n\treadonly container: HTMLElement;\n\treadonly content: ReadonlyArray<IChatRendererContent>;\n\treadonly contentIndex: number;\n\treadonly preceedingContentParts: ReadonlyArray<IChatContentPart>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "efea5faa9ef9321901f6f4e588077f7a0a274573"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2frs8dys2i = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2frs8dys2i();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jaGF0L2Jyb3dzZXIvY2hhdENvbnRlbnRQYXJ0cy9jaGF0Q29udGVudFBhcnRzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBDaGF0VHJlZUl0ZW0sIElDaGF0Q29kZUJsb2NrSW5mbyB9IGZyb20gJy4uL2NoYXQuanMnO1xuaW1wb3J0IHsgSUNoYXRSZW5kZXJlckNvbnRlbnQgfSBmcm9tICcuLi8uLi9jb21tb24vY2hhdFZpZXdNb2RlbC5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNoYXRDb250ZW50UGFydCBleHRlbmRzIElEaXNwb3NhYmxlIHtcblx0ZG9tTm9kZTogSFRNTEVsZW1lbnQgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFVzZWQgdG8gaW5kaWNhdGUgYSBwYXJ0J3Mgb3duZXJzaGlwIG9mIGEgY29kZSBibG9jay5cblx0ICovXG5cdGNvZGVibG9ja3NQYXJ0SWQ/OiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIENvZGVibG9ja3MgdGhhdCB3ZXJlIHJlbmRlcmVkIGJ5IHRoaXMgcGFydCBpbnRvIENvZGVCbG9ja01vZGVsQ29sbGVjdGlvbi5cblx0ICovXG5cdGNvZGVibG9ja3M/OiBJQ2hhdENvZGVCbG9ja0luZm9bXTtcblxuXHQvKipcblx0ICogUmV0dXJucyB0cnVlIGlmIHRoZSBvdGhlciBjb250ZW50IGlzIGVxdWl2YWxlbnQgdG8gd2hhdCBpcyBhbHJlYWR5IHJlbmRlcmVkIGluIHRoaXMgY29udGVudCBwYXJ0LlxuXHQgKiBSZXR1cm5zIGZhbHNlIGlmIGEgcmVyZW5kZXIgaXMgbmVlZGVkLlxuXHQgKiBmb2xsb3dpbmdDb250ZW50IGlzIGFsbCB0aGUgY29udGVudCB0aGF0IHdpbGwgYmUgcmVuZGVyZWQgYWZ0ZXIgdGhpcyBjb250ZW50IHBhcnQgKHRvIHN1cHBvcnQgcHJvZ3Jlc3MgbWVzc2FnZXMnIGJlaGF2aW9yKS5cblx0ICovXG5cdGhhc1NhbWVDb250ZW50KG90aGVyOiBJQ2hhdFJlbmRlcmVyQ29udGVudCwgZm9sbG93aW5nQ29udGVudDogSUNoYXRSZW5kZXJlckNvbnRlbnRbXSwgZWxlbWVudDogQ2hhdFRyZWVJdGVtKTogYm9vbGVhbjtcblxuXHRhZGREaXNwb3NhYmxlPyhkaXNwb3NhYmxlOiBJRGlzcG9zYWJsZSk6IHZvaWQ7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNoYXRDb250ZW50UGFydFJlbmRlckNvbnRleHQge1xuXHRyZWFkb25seSBlbGVtZW50OiBDaGF0VHJlZUl0ZW07XG5cdHJlYWRvbmx5IGVsZW1lbnRJbmRleDogbnVtYmVyO1xuXHRyZWFkb25seSBjb250YWluZXI6IEhUTUxFbGVtZW50O1xuXHRyZWFkb25seSBjb250ZW50OiBSZWFkb25seUFycmF5PElDaGF0UmVuZGVyZXJDb250ZW50Pjtcblx0cmVhZG9ubHkgY29udGVudEluZGV4OiBudW1iZXI7XG5cdHJlYWRvbmx5IHByZWNlZWRpbmdDb250ZW50UGFydHM6IFJlYWRvbmx5QXJyYXk8SUNoYXRDb250ZW50UGFydD47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

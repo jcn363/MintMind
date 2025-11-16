@@ -1,0 +1,46 @@
+7c2cc35a2de8ea3636137a7881855008
+/* istanbul ignore next */
+function cov_ewaezoxmb() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/extensionHostProxy.ts";
+  var hash = "b8d25296b6e43702dcc25de55de59dabe7269c91";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/extensionHostProxy.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/extensionHostProxy.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/extensionHostProxy.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { VSBuffer } from '../../../../base/common/buffer.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';\nimport { IRemoteConnectionData, RemoteAuthorityResolverErrorCode, ResolverResult } from '../../../../platform/remote/common/remoteAuthorityResolver.js';\nimport { IExtensionDescriptionDelta } from './extensionHostProtocol.js';\nimport { ActivationKind, ExtensionActivationReason } from './extensions.js';\n\nexport interface IResolveAuthorityErrorResult {\n\ttype: 'error';\n\terror: {\n\t\tmessage: string | undefined;\n\t\tcode: RemoteAuthorityResolverErrorCode;\n\t\tdetail: unknown;\n\t};\n}\n\nexport interface IResolveAuthorityOKResult {\n\ttype: 'ok';\n\tvalue: ResolverResult;\n}\n\nexport type IResolveAuthorityResult = IResolveAuthorityErrorResult | IResolveAuthorityOKResult;\n\nexport interface IExtensionHostProxy {\n\tresolveAuthority(remoteAuthority: string, resolveAttempt: number): Promise<IResolveAuthorityResult>;\n\t/**\n\t * Returns `null` if no resolver for `remoteAuthority` is found.\n\t */\n\tgetCanonicalURI(remoteAuthority: string, uri: URI): Promise<URI | null>;\n\tstartExtensionHost(extensionsDelta: IExtensionDescriptionDelta): Promise<void>;\n\textensionTestsExecute(): Promise<number>;\n\tactivateByEvent(activationEvent: string, activationKind: ActivationKind): Promise<void>;\n\tactivate(extensionId: ExtensionIdentifier, reason: ExtensionActivationReason): Promise<boolean>;\n\tsetRemoteEnvironment(env: { [key: string]: string | null }): Promise<void>;\n\tupdateRemoteConnectionData(connectionData: IRemoteConnectionData): Promise<void>;\n\tdeltaExtensions(extensionsDelta: IExtensionDescriptionDelta): Promise<void>;\n\ttest_latency(n: number): Promise<number>;\n\ttest_up(b: VSBuffer): Promise<number>;\n\ttest_down(size: number): Promise<VSBuffer>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b8d25296b6e43702dcc25de55de59dabe7269c91"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ewaezoxmb = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ewaezoxmb();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvZXh0ZW5zaW9ucy9jb21tb24vZXh0ZW5zaW9uSG9zdFByb3h5LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBWU0J1ZmZlciB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2J1ZmZlci5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgRXh0ZW5zaW9uSWRlbnRpZmllciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2V4dGVuc2lvbnMvY29tbW9uL2V4dGVuc2lvbnMuanMnO1xuaW1wb3J0IHsgSVJlbW90ZUNvbm5lY3Rpb25EYXRhLCBSZW1vdGVBdXRob3JpdHlSZXNvbHZlckVycm9yQ29kZSwgUmVzb2x2ZXJSZXN1bHQgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9yZW1vdGUvY29tbW9uL3JlbW90ZUF1dGhvcml0eVJlc29sdmVyLmpzJztcbmltcG9ydCB7IElFeHRlbnNpb25EZXNjcmlwdGlvbkRlbHRhIH0gZnJvbSAnLi9leHRlbnNpb25Ib3N0UHJvdG9jb2wuanMnO1xuaW1wb3J0IHsgQWN0aXZhdGlvbktpbmQsIEV4dGVuc2lvbkFjdGl2YXRpb25SZWFzb24gfSBmcm9tICcuL2V4dGVuc2lvbnMuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElSZXNvbHZlQXV0aG9yaXR5RXJyb3JSZXN1bHQge1xuXHR0eXBlOiAnZXJyb3InO1xuXHRlcnJvcjoge1xuXHRcdG1lc3NhZ2U6IHN0cmluZyB8IHVuZGVmaW5lZDtcblx0XHRjb2RlOiBSZW1vdGVBdXRob3JpdHlSZXNvbHZlckVycm9yQ29kZTtcblx0XHRkZXRhaWw6IHVua25vd247XG5cdH07XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlc29sdmVBdXRob3JpdHlPS1Jlc3VsdCB7XG5cdHR5cGU6ICdvayc7XG5cdHZhbHVlOiBSZXNvbHZlclJlc3VsdDtcbn1cblxuZXhwb3J0IHR5cGUgSVJlc29sdmVBdXRob3JpdHlSZXN1bHQgPSBJUmVzb2x2ZUF1dGhvcml0eUVycm9yUmVzdWx0IHwgSVJlc29sdmVBdXRob3JpdHlPS1Jlc3VsdDtcblxuZXhwb3J0IGludGVyZmFjZSBJRXh0ZW5zaW9uSG9zdFByb3h5IHtcblx0cmVzb2x2ZUF1dGhvcml0eShyZW1vdGVBdXRob3JpdHk6IHN0cmluZywgcmVzb2x2ZUF0dGVtcHQ6IG51bWJlcik6IFByb21pc2U8SVJlc29sdmVBdXRob3JpdHlSZXN1bHQ+O1xuXHQvKipcblx0ICogUmV0dXJucyBgbnVsbGAgaWYgbm8gcmVzb2x2ZXIgZm9yIGByZW1vdGVBdXRob3JpdHlgIGlzIGZvdW5kLlxuXHQgKi9cblx0Z2V0Q2Fub25pY2FsVVJJKHJlbW90ZUF1dGhvcml0eTogc3RyaW5nLCB1cmk6IFVSSSk6IFByb21pc2U8VVJJIHwgbnVsbD47XG5cdHN0YXJ0RXh0ZW5zaW9uSG9zdChleHRlbnNpb25zRGVsdGE6IElFeHRlbnNpb25EZXNjcmlwdGlvbkRlbHRhKTogUHJvbWlzZTx2b2lkPjtcblx0ZXh0ZW5zaW9uVGVzdHNFeGVjdXRlKCk6IFByb21pc2U8bnVtYmVyPjtcblx0YWN0aXZhdGVCeUV2ZW50KGFjdGl2YXRpb25FdmVudDogc3RyaW5nLCBhY3RpdmF0aW9uS2luZDogQWN0aXZhdGlvbktpbmQpOiBQcm9taXNlPHZvaWQ+O1xuXHRhY3RpdmF0ZShleHRlbnNpb25JZDogRXh0ZW5zaW9uSWRlbnRpZmllciwgcmVhc29uOiBFeHRlbnNpb25BY3RpdmF0aW9uUmVhc29uKTogUHJvbWlzZTxib29sZWFuPjtcblx0c2V0UmVtb3RlRW52aXJvbm1lbnQoZW52OiB7IFtrZXk6IHN0cmluZ106IHN0cmluZyB8IG51bGwgfSk6IFByb21pc2U8dm9pZD47XG5cdHVwZGF0ZVJlbW90ZUNvbm5lY3Rpb25EYXRhKGNvbm5lY3Rpb25EYXRhOiBJUmVtb3RlQ29ubmVjdGlvbkRhdGEpOiBQcm9taXNlPHZvaWQ+O1xuXHRkZWx0YUV4dGVuc2lvbnMoZXh0ZW5zaW9uc0RlbHRhOiBJRXh0ZW5zaW9uRGVzY3JpcHRpb25EZWx0YSk6IFByb21pc2U8dm9pZD47XG5cdHRlc3RfbGF0ZW5jeShuOiBudW1iZXIpOiBQcm9taXNlPG51bWJlcj47XG5cdHRlc3RfdXAoYjogVlNCdWZmZXIpOiBQcm9taXNlPG51bWJlcj47XG5cdHRlc3RfZG93bihzaXplOiBudW1iZXIpOiBQcm9taXNlPFZTQnVmZmVyPjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

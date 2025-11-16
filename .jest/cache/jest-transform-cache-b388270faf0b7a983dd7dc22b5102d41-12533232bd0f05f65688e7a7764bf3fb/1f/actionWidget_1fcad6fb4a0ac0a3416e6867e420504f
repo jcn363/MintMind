@@ -1,0 +1,46 @@
+62aa95f5f658cc07830348c1cc2a9af6
+/* istanbul ignore next */
+function cov_i5qlsez28() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/actionWidget/common/actionWidget.ts";
+  var hash = "56c480a9b0c737a786e71c6afcfe820a284db27e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/actionWidget/common/actionWidget.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/actionWidget/common/actionWidget.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/actionWidget/common/actionWidget.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../base/common/lifecycle.js';\n\nexport interface ActionSet<T> extends IDisposable {\n\treadonly validActions: readonly T[];\n\treadonly allActions: readonly T[];\n\treadonly hasAutoFix: boolean;\n\treadonly hasAIFix: boolean;\n\treadonly allAIFixes: boolean;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "56c480a9b0c737a786e71c6afcfe820a284db27e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_i5qlsez28 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_i5qlsez28();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9hY3Rpb25XaWRnZXQvY29tbW9uL2FjdGlvbldpZGdldC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIEFjdGlvblNldDxUPiBleHRlbmRzIElEaXNwb3NhYmxlIHtcblx0cmVhZG9ubHkgdmFsaWRBY3Rpb25zOiByZWFkb25seSBUW107XG5cdHJlYWRvbmx5IGFsbEFjdGlvbnM6IHJlYWRvbmx5IFRbXTtcblx0cmVhZG9ubHkgaGFzQXV0b0ZpeDogYm9vbGVhbjtcblx0cmVhZG9ubHkgaGFzQUlGaXg6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGFsbEFJRml4ZXM6IGJvb2xlYW47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

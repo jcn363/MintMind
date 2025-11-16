@@ -1,0 +1,99 @@
+584344b6fdb0cc0d54002e4273922648
+/* istanbul ignore next */
+function cov_rs4r9xnfa() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/tools/toolHelpers.ts";
+  var hash = "28202ae2d0f4a935df65ee37b44198656f4afeff";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/tools/toolHelpers.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 14,
+          column: 6
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "createToolSimpleTextResult",
+        decl: {
+          start: {
+            line: 8,
+            column: 16
+          },
+          end: {
+            line: 8,
+            column: 42
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 50
+          },
+          end: {
+            line: 15,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/tools/toolHelpers.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG;;GAEG;AACH,MAAM,UAAU,0BAA0B,CAAC,KAAa;IACvD,OAAO;QACN,OAAO,EAAE,CAAC;gBACT,IAAI,EAAE,MAAM;gBACZ,KAAK;aACL,CAAC;KACF,CAAC;AACH,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/tools/toolHelpers.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IToolResult } from '../languageModelToolsService.js';\n\n/**\n * Creates a tool result with a single text content part.\n */\nexport function createToolSimpleTextResult(value: string): IToolResult {\n\treturn {\n\t\tcontent: [{\n\t\t\tkind: 'text',\n\t\t\tvalue\n\t\t}]\n\t};\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "28202ae2d0f4a935df65ee37b44198656f4afeff"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_rs4r9xnfa = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_rs4r9xnfa();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/**
+ * Creates a tool result with a single text content part.
+ */
+export function createToolSimpleTextResult(value) {
+  /* istanbul ignore next */
+  cov_rs4r9xnfa().f[0]++;
+  cov_rs4r9xnfa().s[0]++;
+  return {
+    content: [{
+      kind: 'text',
+      value
+    }]
+  };
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVUb29sU2ltcGxlVGV4dFJlc3VsdCIsInZhbHVlIiwiY292X3JzNHI5eG5mYSIsImYiLCJzIiwiY29udGVudCIsImtpbmQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL2NoYXQvY29tbW9uL3Rvb2xzL3Rvb2xIZWxwZXJzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJVG9vbFJlc3VsdCB9IGZyb20gJy4uL2xhbmd1YWdlTW9kZWxUb29sc1NlcnZpY2UuanMnO1xuXG4vKipcbiAqIENyZWF0ZXMgYSB0b29sIHJlc3VsdCB3aXRoIGEgc2luZ2xlIHRleHQgY29udGVudCBwYXJ0LlxuICovXG5leHBvcnQgZnVuY3Rpb24gY3JlYXRlVG9vbFNpbXBsZVRleHRSZXN1bHQodmFsdWU6IHN0cmluZyk6IElUb29sUmVzdWx0IHtcblx0cmV0dXJuIHtcblx0XHRjb250ZW50OiBbe1xuXHRcdFx0a2luZDogJ3RleHQnLFxuXHRcdFx0dmFsdWVcblx0XHR9XVxuXHR9O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFPQTs7O0FBR0EsT0FBTSxTQUFVQSwwQkFBMEJBLENBQUNDLEtBQWE7RUFBQTtFQUFBQyxhQUFBLEdBQUFDLENBQUE7RUFBQUQsYUFBQSxHQUFBRSxDQUFBO0VBQ3ZELE9BQU87SUFDTkMsT0FBTyxFQUFFLENBQUM7TUFDVEMsSUFBSSxFQUFFLE1BQU07TUFDWkw7S0FDQTtHQUNEO0FBQ0YiLCJpZ25vcmVMaXN0IjpbXX0=

@@ -1,0 +1,120 @@
+9826cc70e9765ab000552c05cdc1a0d4
+/* istanbul ignore next */
+function cov_1121cx4mza() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/theme_picker.ts";
+  var hash = "a5cd98ad96cf9a26f9f67066f099f680a086d4b9";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/theme_picker.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 21
+        },
+        end: {
+          line: 34,
+          column: 1
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 15
+          },
+          end: {
+            line: 8,
+            column: 16
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 21
+          },
+          end: {
+            line: 34,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/theme_picker.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,MAAM,EAAE,MAAM,uCAAuC,CAAC;AAC/D,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AACjD,OAAO,EAAE,oBAAoB,EAAE,MAAM,6DAA6D,CAAC;AAEnG,eAAe,GAAG,EAAE,CAAC;;;qCAGgB,oBAAoB,CAAC,gBAAgB,iDAAiD,oBAAoB,CAAC,gBAAgB;;KAE3J,MAAM,CAAC,QAAQ,CAAC,MAAM,EAAE,aAAa,CAAC,CAAC;;qCAEP,oBAAoB,CAAC,iBAAiB,iDAAiD,oBAAoB,CAAC,iBAAiB;;KAE7J,MAAM,CAAC,QAAQ,CAAC,OAAO,EAAE,cAAc,CAAC,CAAC;;;;qCAIT,oBAAoB,CAAC,mBAAmB,iDAAiD,oBAAoB,CAAC,mBAAmB;;KAEjK,MAAM,CAAC,QAAQ,CAAC,cAAc,EAAE,oBAAoB,CAAC,CAAC;;qCAEtB,oBAAoB,CAAC,oBAAoB,iDAAiD,oBAAoB,CAAC,oBAAoB;;KAEnK,MAAM,CAAC,QAAQ,CAAC,mBAAmB,EAAE,qBAAqB,CAAC,CAAC;;;;;GAK9D,MAAM,CAAC,QAAQ,CAAC,SAAS,EAAE,oBAAoB,CAAC,CAAC;;CAEnD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/theme_picker.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { escape } from '../../../../../base/common/strings.js';\nimport { localize } from '../../../../../nls.js';\nimport { ThemeSettingDefaults } from '../../../../services/themes/common/workbenchThemeService.js';\n\nexport default () => `\n<checklist>\n\t<div class=\"theme-picker-row\">\n\t\t<checkbox when-checked=\"setTheme:${ThemeSettingDefaults.COLOR_THEME_DARK}\" checked-on=\"config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_DARK}'\">\n\t\t\t<img width=\"200\" src=\"./dark.png\"/>\n\t\t\t${escape(localize('dark', \"Dark Modern\"))}\n\t\t</checkbox>\n\t\t<checkbox when-checked=\"setTheme:${ThemeSettingDefaults.COLOR_THEME_LIGHT}\" checked-on=\"config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_LIGHT}'\">\n\t\t\t<img width=\"200\" src=\"./light.png\"/>\n\t\t\t${escape(localize('light', \"Light Modern\"))}\n\t\t</checkbox>\n\t</div>\n\t<div class=\"theme-picker-row\">\n\t\t<checkbox when-checked=\"setTheme:${ThemeSettingDefaults.COLOR_THEME_HC_DARK}\" checked-on=\"config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_HC_DARK}'\">\n\t\t\t<img width=\"200\" src=\"./dark-hc.png\"/>\n\t\t\t${escape(localize('HighContrast', \"Dark High Contrast\"))}\n\t\t</checkbox>\n\t\t<checkbox when-checked=\"setTheme:${ThemeSettingDefaults.COLOR_THEME_HC_LIGHT}\" checked-on=\"config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_HC_LIGHT}'\">\n\t\t\t<img width=\"200\" src=\"./light-hc.png\"/>\n\t\t\t${escape(localize('HighContrastLight', \"Light High Contrast\"))}\n\t\t</checkbox>\n\t</div>\n</checklist>\n<checkbox class=\"theme-picker-link\" when-checked=\"command:workbench.action.selectTheme\" checked-on=\"false\">\n\t${escape(localize('seeMore', \"See More Themes...\"))}\n</checkbox>\n`;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a5cd98ad96cf9a26f9f67066f099f680a086d4b9"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1121cx4mza = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1121cx4mza();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { escape } from '../../../../../base/common/strings.js';
+import { localize } from '../../../../../nls.js';
+import { ThemeSettingDefaults } from '../../../../services/themes/common/workbenchThemeService.js';
+export default () => {
+  /* istanbul ignore next */
+  cov_1121cx4mza().f[0]++;
+  cov_1121cx4mza().s[0]++;
+  return `
+<checklist>
+	<div class="theme-picker-row">
+		<checkbox when-checked="setTheme:${ThemeSettingDefaults.COLOR_THEME_DARK}" checked-on="config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_DARK}'">
+			<img width="200" src="./dark.png"/>
+			${escape(localize('dark', "Dark Modern"))}
+		</checkbox>
+		<checkbox when-checked="setTheme:${ThemeSettingDefaults.COLOR_THEME_LIGHT}" checked-on="config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_LIGHT}'">
+			<img width="200" src="./light.png"/>
+			${escape(localize('light', "Light Modern"))}
+		</checkbox>
+	</div>
+	<div class="theme-picker-row">
+		<checkbox when-checked="setTheme:${ThemeSettingDefaults.COLOR_THEME_HC_DARK}" checked-on="config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_HC_DARK}'">
+			<img width="200" src="./dark-hc.png"/>
+			${escape(localize('HighContrast', "Dark High Contrast"))}
+		</checkbox>
+		<checkbox when-checked="setTheme:${ThemeSettingDefaults.COLOR_THEME_HC_LIGHT}" checked-on="config.workbench.colorTheme == '${ThemeSettingDefaults.COLOR_THEME_HC_LIGHT}'">
+			<img width="200" src="./light-hc.png"/>
+			${escape(localize('HighContrastLight', "Light High Contrast"))}
+		</checkbox>
+	</div>
+</checklist>
+<checkbox class="theme-picker-link" when-checked="command:workbench.action.selectTheme" checked-on="false">
+	${escape(localize('seeMore', "See More Themes..."))}
+</checkbox>
+`;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJlc2NhcGUiLCJsb2NhbGl6ZSIsIlRoZW1lU2V0dGluZ0RlZmF1bHRzIiwiY292XzExMjFjeDRtemEiLCJmIiwicyIsIkNPTE9SX1RIRU1FX0RBUksiLCJDT0xPUl9USEVNRV9MSUdIVCIsIkNPTE9SX1RIRU1FX0hDX0RBUksiLCJDT0xPUl9USEVNRV9IQ19MSUdIVCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvd2VsY29tZUdldHRpbmdTdGFydGVkL2NvbW1vbi9tZWRpYS90aGVtZV9waWNrZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGVzY2FwZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3N0cmluZ3MuanMnO1xuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgVGhlbWVTZXR0aW5nRGVmYXVsdHMgfSBmcm9tICcuLi8uLi8uLi8uLi9zZXJ2aWNlcy90aGVtZXMvY29tbW9uL3dvcmtiZW5jaFRoZW1lU2VydmljZS5qcyc7XG5cbmV4cG9ydCBkZWZhdWx0ICgpID0+IGBcbjxjaGVja2xpc3Q+XG5cdDxkaXYgY2xhc3M9XCJ0aGVtZS1waWNrZXItcm93XCI+XG5cdFx0PGNoZWNrYm94IHdoZW4tY2hlY2tlZD1cInNldFRoZW1lOiR7VGhlbWVTZXR0aW5nRGVmYXVsdHMuQ09MT1JfVEhFTUVfREFSS31cIiBjaGVja2VkLW9uPVwiY29uZmlnLndvcmtiZW5jaC5jb2xvclRoZW1lID09ICcke1RoZW1lU2V0dGluZ0RlZmF1bHRzLkNPTE9SX1RIRU1FX0RBUkt9J1wiPlxuXHRcdFx0PGltZyB3aWR0aD1cIjIwMFwiIHNyYz1cIi4vZGFyay5wbmdcIi8+XG5cdFx0XHQke2VzY2FwZShsb2NhbGl6ZSgnZGFyaycsIFwiRGFyayBNb2Rlcm5cIikpfVxuXHRcdDwvY2hlY2tib3g+XG5cdFx0PGNoZWNrYm94IHdoZW4tY2hlY2tlZD1cInNldFRoZW1lOiR7VGhlbWVTZXR0aW5nRGVmYXVsdHMuQ09MT1JfVEhFTUVfTElHSFR9XCIgY2hlY2tlZC1vbj1cImNvbmZpZy53b3JrYmVuY2guY29sb3JUaGVtZSA9PSAnJHtUaGVtZVNldHRpbmdEZWZhdWx0cy5DT0xPUl9USEVNRV9MSUdIVH0nXCI+XG5cdFx0XHQ8aW1nIHdpZHRoPVwiMjAwXCIgc3JjPVwiLi9saWdodC5wbmdcIi8+XG5cdFx0XHQke2VzY2FwZShsb2NhbGl6ZSgnbGlnaHQnLCBcIkxpZ2h0IE1vZGVyblwiKSl9XG5cdFx0PC9jaGVja2JveD5cblx0PC9kaXY+XG5cdDxkaXYgY2xhc3M9XCJ0aGVtZS1waWNrZXItcm93XCI+XG5cdFx0PGNoZWNrYm94IHdoZW4tY2hlY2tlZD1cInNldFRoZW1lOiR7VGhlbWVTZXR0aW5nRGVmYXVsdHMuQ09MT1JfVEhFTUVfSENfREFSS31cIiBjaGVja2VkLW9uPVwiY29uZmlnLndvcmtiZW5jaC5jb2xvclRoZW1lID09ICcke1RoZW1lU2V0dGluZ0RlZmF1bHRzLkNPTE9SX1RIRU1FX0hDX0RBUkt9J1wiPlxuXHRcdFx0PGltZyB3aWR0aD1cIjIwMFwiIHNyYz1cIi4vZGFyay1oYy5wbmdcIi8+XG5cdFx0XHQke2VzY2FwZShsb2NhbGl6ZSgnSGlnaENvbnRyYXN0JywgXCJEYXJrIEhpZ2ggQ29udHJhc3RcIikpfVxuXHRcdDwvY2hlY2tib3g+XG5cdFx0PGNoZWNrYm94IHdoZW4tY2hlY2tlZD1cInNldFRoZW1lOiR7VGhlbWVTZXR0aW5nRGVmYXVsdHMuQ09MT1JfVEhFTUVfSENfTElHSFR9XCIgY2hlY2tlZC1vbj1cImNvbmZpZy53b3JrYmVuY2guY29sb3JUaGVtZSA9PSAnJHtUaGVtZVNldHRpbmdEZWZhdWx0cy5DT0xPUl9USEVNRV9IQ19MSUdIVH0nXCI+XG5cdFx0XHQ8aW1nIHdpZHRoPVwiMjAwXCIgc3JjPVwiLi9saWdodC1oYy5wbmdcIi8+XG5cdFx0XHQke2VzY2FwZShsb2NhbGl6ZSgnSGlnaENvbnRyYXN0TGlnaHQnLCBcIkxpZ2h0IEhpZ2ggQ29udHJhc3RcIikpfVxuXHRcdDwvY2hlY2tib3g+XG5cdDwvZGl2PlxuPC9jaGVja2xpc3Q+XG48Y2hlY2tib3ggY2xhc3M9XCJ0aGVtZS1waWNrZXItbGlua1wiIHdoZW4tY2hlY2tlZD1cImNvbW1hbmQ6d29ya2JlbmNoLmFjdGlvbi5zZWxlY3RUaGVtZVwiIGNoZWNrZWQtb249XCJmYWxzZVwiPlxuXHQke2VzY2FwZShsb2NhbGl6ZSgnc2VlTW9yZScsIFwiU2VlIE1vcmUgVGhlbWVzLi4uXCIpKX1cbjwvY2hlY2tib3g+XG5gO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxNQUFNLFFBQVEsdUNBQXVDO0FBQzlELFNBQVNDLFFBQVEsUUFBUSx1QkFBdUI7QUFDaEQsU0FBU0Msb0JBQW9CLFFBQVEsNkRBQTZEO0FBRWxHLGVBQWUsTUFBTTtFQUFBO0VBQUFDLGNBQUEsR0FBQUMsQ0FBQTtFQUFBRCxjQUFBLEdBQUFFLENBQUE7RUFBQTs7O3FDQUdnQkgsb0JBQW9CLENBQUNJLGdCQUFnQixpREFBaURKLG9CQUFvQixDQUFDSSxnQkFBZ0I7O0tBRTNKTixNQUFNLENBQUNDLFFBQVEsQ0FBQyxNQUFNLEVBQUUsYUFBYSxDQUFDLENBQUM7O3FDQUVQQyxvQkFBb0IsQ0FBQ0ssaUJBQWlCLGlEQUFpREwsb0JBQW9CLENBQUNLLGlCQUFpQjs7S0FFN0pQLE1BQU0sQ0FBQ0MsUUFBUSxDQUFDLE9BQU8sRUFBRSxjQUFjLENBQUMsQ0FBQzs7OztxQ0FJVEMsb0JBQW9CLENBQUNNLG1CQUFtQixpREFBaUROLG9CQUFvQixDQUFDTSxtQkFBbUI7O0tBRWpLUixNQUFNLENBQUNDLFFBQVEsQ0FBQyxjQUFjLEVBQUUsb0JBQW9CLENBQUMsQ0FBQzs7cUNBRXRCQyxvQkFBb0IsQ0FBQ08sb0JBQW9CLGlEQUFpRFAsb0JBQW9CLENBQUNPLG9CQUFvQjs7S0FFbktULE1BQU0sQ0FBQ0MsUUFBUSxDQUFDLG1CQUFtQixFQUFFLHFCQUFxQixDQUFDLENBQUM7Ozs7O0dBSzlERCxNQUFNLENBQUNDLFFBQVEsQ0FBQyxTQUFTLEVBQUUsb0JBQW9CLENBQUMsQ0FBQzs7Q0FFbkQ7Q0FBQSIsImlnbm9yZUxpc3QiOltdfQ==

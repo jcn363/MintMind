@@ -5,6 +5,7 @@
 
 import * as fs from 'node:fs';
 import { register } from 'node:module';
+import { readTextFile, writeTextFile } from '@tauri-apps/api/fs';
 import { product, pkg } from './bootstrap-meta.js';
 import './bootstrap-node.js';
 import * as performance from './vs/base/common/performance.js';
@@ -78,14 +79,30 @@ async function doSetupNLS(): Promise<INLSConfiguration | undefined> {
 	}
 
 	try {
-		globalThis._VSCODE_NLS_MESSAGES = JSON.parse((await fs.promises.readFile(messagesFile)).toString());
+		// Use Tauri fs operations when in Tauri environment, fallback to Node.js fs
+		const isTauri = typeof window !== 'undefined' && window.__TAURI__;
+		let messagesContent: string;
+
+		if (isTauri) {
+			messagesContent = await readTextFile(messagesFile);
+		} else {
+			messagesContent = (await fs.promises.readFile(messagesFile)).toString();
+		}
+
+		globalThis._VSCODE_NLS_MESSAGES = JSON.parse(messagesContent);
 	} catch (error) {
 		logger.error(`Error reading NLS messages file ${messagesFile}`, error);
 
 		// Mark as corrupt: this will re-create the language pack cache next startup
 		if (nlsConfig?.languagePack?.corruptMarkerFile) {
 			try {
-				await fs.promises.writeFile(nlsConfig.languagePack.corruptMarkerFile, 'corrupted');
+				// Use Tauri fs operations when in Tauri environment, fallback to Node.js fs
+				const isTauri = typeof window !== 'undefined' && window.__TAURI__;
+				if (isTauri) {
+					await writeTextFile(nlsConfig.languagePack.corruptMarkerFile, 'corrupted');
+				} else {
+					await fs.promises.writeFile(nlsConfig.languagePack.corruptMarkerFile, 'corrupted');
+				}
 			} catch (error) {
 				logger.error(`Error writing corrupted NLS marker file`, error);
 			}
@@ -94,7 +111,17 @@ async function doSetupNLS(): Promise<INLSConfiguration | undefined> {
 		// Fallback to the default message file to ensure english translation at least
 		if (nlsConfig?.defaultMessagesFile && nlsConfig.defaultMessagesFile !== messagesFile) {
 			try {
-				globalThis._VSCODE_NLS_MESSAGES = JSON.parse((await fs.promises.readFile(nlsConfig.defaultMessagesFile)).toString());
+				// Use Tauri fs operations when in Tauri environment, fallback to Node.js fs
+				const isTauri = typeof window !== 'undefined' && window.__TAURI__;
+				let defaultMessagesContent: string;
+
+				if (isTauri) {
+					defaultMessagesContent = await readTextFile(nlsConfig.defaultMessagesFile);
+				} else {
+					defaultMessagesContent = (await fs.promises.readFile(nlsConfig.defaultMessagesFile)).toString();
+				}
+
+				globalThis._VSCODE_NLS_MESSAGES = JSON.parse(defaultMessagesContent);
 			} catch (error) {
 				logger.error(`Error reading default NLS messages file ${nlsConfig.defaultMessagesFile}`, error);
 			}

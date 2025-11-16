@@ -1,0 +1,62 @@
+78d9c54b01baf7e116de3addd61ce0de
+/* istanbul ignore next */
+function cov_inyhnbvae() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/panecomposite/browser/panecomposite.ts";
+  var hash = "e3344c12ee11cff6dc8875e88edf8d7246bfdb4f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/panecomposite/browser/panecomposite.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 41
+        },
+        end: {
+          line: 6,
+          column: 84
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/panecomposite/browser/panecomposite.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAO7F,MAAM,CAAC,MAAM,yBAAyB,GAAG,eAAe,CAA4B,0BAA0B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/panecomposite/browser/panecomposite.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { PaneCompositeDescriptor } from '../../../browser/panecomposite.js';\nimport { IProgressIndicator } from '../../../../platform/progress/common/progress.js';\nimport { IPaneComposite } from '../../../common/panecomposite.js';\nimport { ViewContainerLocation } from '../../../common/views.js';\n\nexport const IPaneCompositePartService = createDecorator<IPaneCompositePartService>('paneCompositePartService');\n\nexport interface IPaneCompositePartService {\n\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidPaneCompositeOpen: Event<{ composite: IPaneComposite; viewContainerLocation: ViewContainerLocation }>;\n\treadonly onDidPaneCompositeClose: Event<{ composite: IPaneComposite; viewContainerLocation: ViewContainerLocation }>;\n\n\t/**\n\t * Opens a viewlet with the given identifier and pass keyboard focus to it if specified.\n\t */\n\topenPaneComposite(id: string | undefined, viewContainerLocation: ViewContainerLocation, focus?: boolean): Promise<IPaneComposite | undefined>;\n\n\t/**\n\t * Returns the current active viewlet if any.\n\t */\n\tgetActivePaneComposite(viewContainerLocation: ViewContainerLocation): IPaneComposite | undefined;\n\n\t/**\n\t * Returns the viewlet by id.\n\t */\n\tgetPaneComposite(id: string, viewContainerLocation: ViewContainerLocation): PaneCompositeDescriptor | undefined;\n\n\t/**\n\t * Returns all enabled viewlets\n\t */\n\tgetPaneComposites(viewContainerLocation: ViewContainerLocation): PaneCompositeDescriptor[];\n\n\t/**\n\t * Returns id of pinned view containers following the visual order.\n\t */\n\tgetPinnedPaneCompositeIds(viewContainerLocation: ViewContainerLocation): string[];\n\n\t/**\n\t * Returns id of visible view containers following the visual order.\n\t */\n\tgetVisiblePaneCompositeIds(viewContainerLocation: ViewContainerLocation): string[];\n\n\t/**\n\t * Returns id of all view containers following visual order.\n\t */\n\tgetPaneCompositeIds(viewContainerLocation: ViewContainerLocation): string[];\n\n\t/**\n\t * Returns the progress indicator for the side bar.\n\t */\n\tgetProgressIndicator(id: string, viewContainerLocation: ViewContainerLocation): IProgressIndicator | undefined;\n\n\t/**\n\t * Hide the active viewlet.\n\t */\n\thideActivePaneComposite(viewContainerLocation: ViewContainerLocation): void;\n\n\t/**\n\t * Return the last active viewlet id.\n\t */\n\tgetLastActivePaneCompositeId(viewContainerLocation: ViewContainerLocation): string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e3344c12ee11cff6dc8875e88edf8d7246bfdb4f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_inyhnbvae = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_inyhnbvae();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IPaneCompositePartService =
+/* istanbul ignore next */
+(cov_inyhnbvae().s[0]++, createDecorator('paneCompositePartService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJUGFuZUNvbXBvc2l0ZVBhcnRTZXJ2aWNlIiwiY292X2lueWhuYnZhZSIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9wYW5lY29tcG9zaXRlL2Jyb3dzZXIvcGFuZWNvbXBvc2l0ZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IFBhbmVDb21wb3NpdGVEZXNjcmlwdG9yIH0gZnJvbSAnLi4vLi4vLi4vYnJvd3Nlci9wYW5lY29tcG9zaXRlLmpzJztcbmltcG9ydCB7IElQcm9ncmVzc0luZGljYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3Byb2dyZXNzL2NvbW1vbi9wcm9ncmVzcy5qcyc7XG5pbXBvcnQgeyBJUGFuZUNvbXBvc2l0ZSB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9wYW5lY29tcG9zaXRlLmpzJztcbmltcG9ydCB7IFZpZXdDb250YWluZXJMb2NhdGlvbiB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi92aWV3cy5qcyc7XG5cbmV4cG9ydCBjb25zdCBJUGFuZUNvbXBvc2l0ZVBhcnRTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElQYW5lQ29tcG9zaXRlUGFydFNlcnZpY2U+KCdwYW5lQ29tcG9zaXRlUGFydFNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJUGFuZUNvbXBvc2l0ZVBhcnRTZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVhZG9ubHkgb25EaWRQYW5lQ29tcG9zaXRlT3BlbjogRXZlbnQ8eyBjb21wb3NpdGU6IElQYW5lQ29tcG9zaXRlOyB2aWV3Q29udGFpbmVyTG9jYXRpb246IFZpZXdDb250YWluZXJMb2NhdGlvbiB9Pjtcblx0cmVhZG9ubHkgb25EaWRQYW5lQ29tcG9zaXRlQ2xvc2U6IEV2ZW50PHsgY29tcG9zaXRlOiBJUGFuZUNvbXBvc2l0ZTsgdmlld0NvbnRhaW5lckxvY2F0aW9uOiBWaWV3Q29udGFpbmVyTG9jYXRpb24gfT47XG5cblx0LyoqXG5cdCAqIE9wZW5zIGEgdmlld2xldCB3aXRoIHRoZSBnaXZlbiBpZGVudGlmaWVyIGFuZCBwYXNzIGtleWJvYXJkIGZvY3VzIHRvIGl0IGlmIHNwZWNpZmllZC5cblx0ICovXG5cdG9wZW5QYW5lQ29tcG9zaXRlKGlkOiBzdHJpbmcgfCB1bmRlZmluZWQsIHZpZXdDb250YWluZXJMb2NhdGlvbjogVmlld0NvbnRhaW5lckxvY2F0aW9uLCBmb2N1cz86IGJvb2xlYW4pOiBQcm9taXNlPElQYW5lQ29tcG9zaXRlIHwgdW5kZWZpbmVkPjtcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgY3VycmVudCBhY3RpdmUgdmlld2xldCBpZiBhbnkuXG5cdCAqL1xuXHRnZXRBY3RpdmVQYW5lQ29tcG9zaXRlKHZpZXdDb250YWluZXJMb2NhdGlvbjogVmlld0NvbnRhaW5lckxvY2F0aW9uKTogSVBhbmVDb21wb3NpdGUgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIHZpZXdsZXQgYnkgaWQuXG5cdCAqL1xuXHRnZXRQYW5lQ29tcG9zaXRlKGlkOiBzdHJpbmcsIHZpZXdDb250YWluZXJMb2NhdGlvbjogVmlld0NvbnRhaW5lckxvY2F0aW9uKTogUGFuZUNvbXBvc2l0ZURlc2NyaXB0b3IgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFJldHVybnMgYWxsIGVuYWJsZWQgdmlld2xldHNcblx0ICovXG5cdGdldFBhbmVDb21wb3NpdGVzKHZpZXdDb250YWluZXJMb2NhdGlvbjogVmlld0NvbnRhaW5lckxvY2F0aW9uKTogUGFuZUNvbXBvc2l0ZURlc2NyaXB0b3JbXTtcblxuXHQvKipcblx0ICogUmV0dXJucyBpZCBvZiBwaW5uZWQgdmlldyBjb250YWluZXJzIGZvbGxvd2luZyB0aGUgdmlzdWFsIG9yZGVyLlxuXHQgKi9cblx0Z2V0UGlubmVkUGFuZUNvbXBvc2l0ZUlkcyh2aWV3Q29udGFpbmVyTG9jYXRpb246IFZpZXdDb250YWluZXJMb2NhdGlvbik6IHN0cmluZ1tdO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIGlkIG9mIHZpc2libGUgdmlldyBjb250YWluZXJzIGZvbGxvd2luZyB0aGUgdmlzdWFsIG9yZGVyLlxuXHQgKi9cblx0Z2V0VmlzaWJsZVBhbmVDb21wb3NpdGVJZHModmlld0NvbnRhaW5lckxvY2F0aW9uOiBWaWV3Q29udGFpbmVyTG9jYXRpb24pOiBzdHJpbmdbXTtcblxuXHQvKipcblx0ICogUmV0dXJucyBpZCBvZiBhbGwgdmlldyBjb250YWluZXJzIGZvbGxvd2luZyB2aXN1YWwgb3JkZXIuXG5cdCAqL1xuXHRnZXRQYW5lQ29tcG9zaXRlSWRzKHZpZXdDb250YWluZXJMb2NhdGlvbjogVmlld0NvbnRhaW5lckxvY2F0aW9uKTogc3RyaW5nW107XG5cblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIHByb2dyZXNzIGluZGljYXRvciBmb3IgdGhlIHNpZGUgYmFyLlxuXHQgKi9cblx0Z2V0UHJvZ3Jlc3NJbmRpY2F0b3IoaWQ6IHN0cmluZywgdmlld0NvbnRhaW5lckxvY2F0aW9uOiBWaWV3Q29udGFpbmVyTG9jYXRpb24pOiBJUHJvZ3Jlc3NJbmRpY2F0b3IgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEhpZGUgdGhlIGFjdGl2ZSB2aWV3bGV0LlxuXHQgKi9cblx0aGlkZUFjdGl2ZVBhbmVDb21wb3NpdGUodmlld0NvbnRhaW5lckxvY2F0aW9uOiBWaWV3Q29udGFpbmVyTG9jYXRpb24pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm4gdGhlIGxhc3QgYWN0aXZlIHZpZXdsZXQgaWQuXG5cdCAqL1xuXHRnZXRMYXN0QWN0aXZlUGFuZUNvbXBvc2l0ZUlkKHZpZXdDb250YWluZXJMb2NhdGlvbjogVmlld0NvbnRhaW5lckxvY2F0aW9uKTogc3RyaW5nO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxlQUFlLFFBQVEsNERBQTREO0FBTzVGLE9BQU8sTUFBTUMseUJBQXlCO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUE0QiwwQkFBMEIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,76 @@
+81e4b4c18a2a537f1e2094ef59b3f811
+/* istanbul ignore next */
+function cov_k929ik4ek() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/remote/common/sharedProcessTunnelService.ts";
+  var hash = "922244e994f8157ba1aa084083d3e25bedcba615";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/remote/common/sharedProcessTunnelService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 43
+        },
+        end: {
+          line: 6,
+          column: 88
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 49
+        },
+        end: {
+          line: 7,
+          column: 70
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/remote/common/sharedProcessTunnelService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAG9E,MAAM,CAAC,MAAM,2BAA2B,GAAG,eAAe,CAA8B,4BAA4B,CAAC,CAAC;AAEtH,MAAM,CAAC,MAAM,iCAAiC,GAAG,qBAAqB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/remote/common/sharedProcessTunnelService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\nimport { IAddress } from './remoteAgentConnection.js';\n\nexport const ISharedProcessTunnelService = createDecorator<ISharedProcessTunnelService>('sharedProcessTunnelService');\n\nexport const ipcSharedProcessTunnelChannelName = 'sharedProcessTunnel';\n\nexport interface ISharedProcessTunnel {\n\ttunnelLocalPort: number | undefined;\n\tlocalAddress: string;\n}\n\n/**\n * A service that creates tunnels on the shared process\n */\nexport interface ISharedProcessTunnelService {\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Create a tunnel.\n\t */\n\tcreateTunnel(): Promise<{ id: string }>;\n\t/**\n\t * Start a previously created tunnel.\n\t * Can only be called once per created tunnel.\n\t */\n\tstartTunnel(authority: string, id: string, tunnelRemoteHost: string, tunnelRemotePort: number, tunnelLocalHost: string, tunnelLocalPort: number | undefined, elevateIfNeeded: boolean | undefined): Promise<ISharedProcessTunnel>;\n\t/**\n\t * Set the remote address info for a previously created tunnel.\n\t * Should be called as often as the resolver resolves.\n\t */\n\tsetAddress(id: string, address: IAddress): Promise<void>;\n\t/**\n\t * Destroy a previously created tunnel.\n\t */\n\tdestroyTunnel(id: string): Promise<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "922244e994f8157ba1aa084083d3e25bedcba615"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_k929ik4ek = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_k929ik4ek();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const ISharedProcessTunnelService =
+/* istanbul ignore next */
+(cov_k929ik4ek().s[0]++, createDecorator('sharedProcessTunnelService'));
+export const ipcSharedProcessTunnelChannelName =
+/* istanbul ignore next */
+(cov_k929ik4ek().s[1]++, 'sharedProcessTunnel');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJU2hhcmVkUHJvY2Vzc1R1bm5lbFNlcnZpY2UiLCJjb3ZfazkyOWlrNGVrIiwicyIsImlwY1NoYXJlZFByb2Nlc3NUdW5uZWxDaGFubmVsTmFtZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vcmVtb3RlL2NvbW1vbi9zaGFyZWRQcm9jZXNzVHVubmVsU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBJQWRkcmVzcyB9IGZyb20gJy4vcmVtb3RlQWdlbnRDb25uZWN0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElTaGFyZWRQcm9jZXNzVHVubmVsU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJU2hhcmVkUHJvY2Vzc1R1bm5lbFNlcnZpY2U+KCdzaGFyZWRQcm9jZXNzVHVubmVsU2VydmljZScpO1xuXG5leHBvcnQgY29uc3QgaXBjU2hhcmVkUHJvY2Vzc1R1bm5lbENoYW5uZWxOYW1lID0gJ3NoYXJlZFByb2Nlc3NUdW5uZWwnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElTaGFyZWRQcm9jZXNzVHVubmVsIHtcblx0dHVubmVsTG9jYWxQb3J0OiBudW1iZXIgfCB1bmRlZmluZWQ7XG5cdGxvY2FsQWRkcmVzczogc3RyaW5nO1xufVxuXG4vKipcbiAqIEEgc2VydmljZSB0aGF0IGNyZWF0ZXMgdHVubmVscyBvbiB0aGUgc2hhcmVkIHByb2Nlc3NcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJU2hhcmVkUHJvY2Vzc1R1bm5lbFNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIENyZWF0ZSBhIHR1bm5lbC5cblx0ICovXG5cdGNyZWF0ZVR1bm5lbCgpOiBQcm9taXNlPHsgaWQ6IHN0cmluZyB9Pjtcblx0LyoqXG5cdCAqIFN0YXJ0IGEgcHJldmlvdXNseSBjcmVhdGVkIHR1bm5lbC5cblx0ICogQ2FuIG9ubHkgYmUgY2FsbGVkIG9uY2UgcGVyIGNyZWF0ZWQgdHVubmVsLlxuXHQgKi9cblx0c3RhcnRUdW5uZWwoYXV0aG9yaXR5OiBzdHJpbmcsIGlkOiBzdHJpbmcsIHR1bm5lbFJlbW90ZUhvc3Q6IHN0cmluZywgdHVubmVsUmVtb3RlUG9ydDogbnVtYmVyLCB0dW5uZWxMb2NhbEhvc3Q6IHN0cmluZywgdHVubmVsTG9jYWxQb3J0OiBudW1iZXIgfCB1bmRlZmluZWQsIGVsZXZhdGVJZk5lZWRlZDogYm9vbGVhbiB8IHVuZGVmaW5lZCk6IFByb21pc2U8SVNoYXJlZFByb2Nlc3NUdW5uZWw+O1xuXHQvKipcblx0ICogU2V0IHRoZSByZW1vdGUgYWRkcmVzcyBpbmZvIGZvciBhIHByZXZpb3VzbHkgY3JlYXRlZCB0dW5uZWwuXG5cdCAqIFNob3VsZCBiZSBjYWxsZWQgYXMgb2Z0ZW4gYXMgdGhlIHJlc29sdmVyIHJlc29sdmVzLlxuXHQgKi9cblx0c2V0QWRkcmVzcyhpZDogc3RyaW5nLCBhZGRyZXNzOiBJQWRkcmVzcyk6IFByb21pc2U8dm9pZD47XG5cdC8qKlxuXHQgKiBEZXN0cm95IGEgcHJldmlvdXNseSBjcmVhdGVkIHR1bm5lbC5cblx0ICovXG5cdGRlc3Ryb3lUdW5uZWwoaWQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQUc3RSxPQUFPLE1BQU1DLDJCQUEyQjtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBOEIsNEJBQTRCLENBQUM7QUFFckgsT0FBTyxNQUFNSSxpQ0FBaUM7QUFBQTtBQUFBLENBQUFGLGFBQUEsR0FBQUMsQ0FBQSxPQUFHLHFCQUFxQiIsImlnbm9yZUxpc3QiOltdfQ==

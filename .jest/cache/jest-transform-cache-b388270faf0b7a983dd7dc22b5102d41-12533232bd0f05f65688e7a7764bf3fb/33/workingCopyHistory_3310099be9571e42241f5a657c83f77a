@@ -1,0 +1,81 @@
+34e4da664935b723b206e7441fad70f6
+/* istanbul ignore next */
+function cov_1ww64xg239() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/workingCopy/common/workingCopyHistory.ts";
+  var hash = "053369d6d1efd05f1e8b670102ddaa0005153d1c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/workingCopy/common/workingCopyHistory.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 42
+        },
+        end: {
+          line: 6,
+          column: 86
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 43
+        },
+        end: {
+          line: 12,
+          column: 45
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/workingCopy/common/workingCopyHistory.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAG7F,MAAM,CAAC,MAAM,0BAA0B,GAAG,eAAe,CAA6B,2BAA2B,CAAC,CAAC;AA6InH;;;;GAIG;AACH,MAAM,CAAC,MAAM,2BAA2B,GAAG,EAAE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/workingCopy/common/workingCopyHistory.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../../base/common/event.js';\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { SaveSource } from '../../../common/editor.js';\n\nexport const IWorkingCopyHistoryService = createDecorator<IWorkingCopyHistoryService>('workingCopyHistoryService');\n\nexport interface IWorkingCopyHistoryEvent {\n\n\t/**\n\t * The entry this event is about.\n\t */\n\treadonly entry: IWorkingCopyHistoryEntry;\n}\n\nexport interface IWorkingCopyHistoryEntry {\n\n\t/**\n\t * Unique identifier of this entry for the working copy.\n\t */\n\treadonly id: string;\n\n\t/**\n\t * The associated working copy of this entry.\n\t */\n\treadonly workingCopy: {\n\t\treadonly resource: URI;\n\t\treadonly name: string;\n\t};\n\n\t/**\n\t * The location on disk of this history entry.\n\t */\n\treadonly location: URI;\n\n\t/**\n\t * The time when this history entry was created.\n\t */\n\ttimestamp: number;\n\n\t/**\n\t * Associated source with the history entry.\n\t */\n\tsource: SaveSource;\n\n\t/**\n\t * Optional additional metadata associated with the\n\t * source that can help to describe the source.\n\t */\n\tsourceDescription: string | undefined;\n}\n\nexport interface IWorkingCopyHistoryEntryDescriptor {\n\n\t/**\n\t * The associated resource of this history entry.\n\t */\n\treadonly resource: URI;\n\n\t/**\n\t * Optional associated timestamp to use for the\n\t * history entry. If not provided, the current\n\t * time will be used.\n\t */\n\treadonly timestamp?: number;\n\n\t/**\n\t * Optional source why the entry was added.\n\t */\n\treadonly source?: SaveSource;\n}\n\nexport interface IWorkingCopyHistoryService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * An event when an entry is added to the history.\n\t */\n\treadonly onDidAddEntry: Event<IWorkingCopyHistoryEvent>;\n\n\t/**\n\t * An event when an entry is changed in the history.\n\t */\n\treadonly onDidChangeEntry: Event<IWorkingCopyHistoryEvent>;\n\n\t/**\n\t * An event when an entry is replaced in the history.\n\t */\n\treadonly onDidReplaceEntry: Event<IWorkingCopyHistoryEvent>;\n\n\t/**\n\t * An event when an entry is removed from the history.\n\t */\n\treadonly onDidRemoveEntry: Event<IWorkingCopyHistoryEvent>;\n\n\t/**\n\t * An event when entries are moved in history.\n\t */\n\treadonly onDidMoveEntries: Event<void>;\n\n\t/**\n\t * An event when all entries are removed from the history.\n\t */\n\treadonly onDidRemoveEntries: Event<void>;\n\n\t/**\n\t * Adds a new entry to the history for the given working copy\n\t * with an optional associated descriptor.\n\t */\n\taddEntry(descriptor: IWorkingCopyHistoryEntryDescriptor, token: CancellationToken): Promise<IWorkingCopyHistoryEntry | undefined>;\n\n\t/**\n\t * Updates an entry in the local history if found.\n\t */\n\tupdateEntry(entry: IWorkingCopyHistoryEntry, properties: { source: SaveSource }, token: CancellationToken): Promise<void>;\n\n\t/**\n\t * Removes an entry from the local history if found.\n\t */\n\tremoveEntry(entry: IWorkingCopyHistoryEntry, token: CancellationToken): Promise<boolean>;\n\n\t/**\n\t * Moves entries that either match the `source` or are a child\n\t * of `source` to the `target`.\n\t *\n\t * @returns a list of resources for entries that have moved.\n\t */\n\tmoveEntries(source: URI, target: URI): Promise<URI[]>;\n\n\t/**\n\t * Gets all history entries for the provided resource.\n\t */\n\tgetEntries(resource: URI, token: CancellationToken): Promise<readonly IWorkingCopyHistoryEntry[]>;\n\n\t/**\n\t * Returns all resources for which history entries exist.\n\t */\n\tgetAll(token: CancellationToken): Promise<readonly URI[]>;\n\n\t/**\n\t * Removes all entries from all of local history.\n\t */\n\tremoveAll(token: CancellationToken): Promise<void>;\n}\n\n/**\n * A limit on how many I/O operations we allow to run in parallel.\n * We do not want to spam the file system with too many requests\n * at the same time, so we limit to a maximum degree of parallellism.\n */\nexport const MAX_PARALLEL_HISTORY_IO_OPS = 20;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "053369d6d1efd05f1e8b670102ddaa0005153d1c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ww64xg239 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ww64xg239();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IWorkingCopyHistoryService =
+/* istanbul ignore next */
+(cov_1ww64xg239().s[0]++, createDecorator('workingCopyHistoryService'));
+/**
+ * A limit on how many I/O operations we allow to run in parallel.
+ * We do not want to spam the file system with too many requests
+ * at the same time, so we limit to a maximum degree of parallellism.
+ */
+export const MAX_PARALLEL_HISTORY_IO_OPS =
+/* istanbul ignore next */
+(cov_1ww64xg239().s[1]++, 20);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJV29ya2luZ0NvcHlIaXN0b3J5U2VydmljZSIsImNvdl8xd3c2NHhnMjM5IiwicyIsIk1BWF9QQVJBTExFTF9ISVNUT1JZX0lPX09QUyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL3dvcmtpbmdDb3B5L2NvbW1vbi93b3JraW5nQ29weUhpc3RvcnkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgQ2FuY2VsbGF0aW9uVG9rZW4gfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9jYW5jZWxsYXRpb24uanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgU2F2ZVNvdXJjZSB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9lZGl0b3IuanMnO1xuXG5leHBvcnQgY29uc3QgSVdvcmtpbmdDb3B5SGlzdG9yeVNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVdvcmtpbmdDb3B5SGlzdG9yeVNlcnZpY2U+KCd3b3JraW5nQ29weUhpc3RvcnlTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdvcmtpbmdDb3B5SGlzdG9yeUV2ZW50IHtcblxuXHQvKipcblx0ICogVGhlIGVudHJ5IHRoaXMgZXZlbnQgaXMgYWJvdXQuXG5cdCAqL1xuXHRyZWFkb25seSBlbnRyeTogSVdvcmtpbmdDb3B5SGlzdG9yeUVudHJ5O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElXb3JraW5nQ29weUhpc3RvcnlFbnRyeSB7XG5cblx0LyoqXG5cdCAqIFVuaXF1ZSBpZGVudGlmaWVyIG9mIHRoaXMgZW50cnkgZm9yIHRoZSB3b3JraW5nIGNvcHkuXG5cdCAqL1xuXHRyZWFkb25seSBpZDogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBUaGUgYXNzb2NpYXRlZCB3b3JraW5nIGNvcHkgb2YgdGhpcyBlbnRyeS5cblx0ICovXG5cdHJlYWRvbmx5IHdvcmtpbmdDb3B5OiB7XG5cdFx0cmVhZG9ubHkgcmVzb3VyY2U6IFVSSTtcblx0XHRyZWFkb25seSBuYW1lOiBzdHJpbmc7XG5cdH07XG5cblx0LyoqXG5cdCAqIFRoZSBsb2NhdGlvbiBvbiBkaXNrIG9mIHRoaXMgaGlzdG9yeSBlbnRyeS5cblx0ICovXG5cdHJlYWRvbmx5IGxvY2F0aW9uOiBVUkk7XG5cblx0LyoqXG5cdCAqIFRoZSB0aW1lIHdoZW4gdGhpcyBoaXN0b3J5IGVudHJ5IHdhcyBjcmVhdGVkLlxuXHQgKi9cblx0dGltZXN0YW1wOiBudW1iZXI7XG5cblx0LyoqXG5cdCAqIEFzc29jaWF0ZWQgc291cmNlIHdpdGggdGhlIGhpc3RvcnkgZW50cnkuXG5cdCAqL1xuXHRzb3VyY2U6IFNhdmVTb3VyY2U7XG5cblx0LyoqXG5cdCAqIE9wdGlvbmFsIGFkZGl0aW9uYWwgbWV0YWRhdGEgYXNzb2NpYXRlZCB3aXRoIHRoZVxuXHQgKiBzb3VyY2UgdGhhdCBjYW4gaGVscCB0byBkZXNjcmliZSB0aGUgc291cmNlLlxuXHQgKi9cblx0c291cmNlRGVzY3JpcHRpb246IHN0cmluZyB8IHVuZGVmaW5lZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJV29ya2luZ0NvcHlIaXN0b3J5RW50cnlEZXNjcmlwdG9yIHtcblxuXHQvKipcblx0ICogVGhlIGFzc29jaWF0ZWQgcmVzb3VyY2Ugb2YgdGhpcyBoaXN0b3J5IGVudHJ5LlxuXHQgKi9cblx0cmVhZG9ubHkgcmVzb3VyY2U6IFVSSTtcblxuXHQvKipcblx0ICogT3B0aW9uYWwgYXNzb2NpYXRlZCB0aW1lc3RhbXAgdG8gdXNlIGZvciB0aGVcblx0ICogaGlzdG9yeSBlbnRyeS4gSWYgbm90IHByb3ZpZGVkLCB0aGUgY3VycmVudFxuXHQgKiB0aW1lIHdpbGwgYmUgdXNlZC5cblx0ICovXG5cdHJlYWRvbmx5IHRpbWVzdGFtcD86IG51bWJlcjtcblxuXHQvKipcblx0ICogT3B0aW9uYWwgc291cmNlIHdoeSB0aGUgZW50cnkgd2FzIGFkZGVkLlxuXHQgKi9cblx0cmVhZG9ubHkgc291cmNlPzogU2F2ZVNvdXJjZTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJV29ya2luZ0NvcHlIaXN0b3J5U2VydmljZSB7XG5cblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBBbiBldmVudCB3aGVuIGFuIGVudHJ5IGlzIGFkZGVkIHRvIHRoZSBoaXN0b3J5LlxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRBZGRFbnRyeTogRXZlbnQ8SVdvcmtpbmdDb3B5SGlzdG9yeUV2ZW50PjtcblxuXHQvKipcblx0ICogQW4gZXZlbnQgd2hlbiBhbiBlbnRyeSBpcyBjaGFuZ2VkIGluIHRoZSBoaXN0b3J5LlxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VFbnRyeTogRXZlbnQ8SVdvcmtpbmdDb3B5SGlzdG9yeUV2ZW50PjtcblxuXHQvKipcblx0ICogQW4gZXZlbnQgd2hlbiBhbiBlbnRyeSBpcyByZXBsYWNlZCBpbiB0aGUgaGlzdG9yeS5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkUmVwbGFjZUVudHJ5OiBFdmVudDxJV29ya2luZ0NvcHlIaXN0b3J5RXZlbnQ+O1xuXG5cdC8qKlxuXHQgKiBBbiBldmVudCB3aGVuIGFuIGVudHJ5IGlzIHJlbW92ZWQgZnJvbSB0aGUgaGlzdG9yeS5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkUmVtb3ZlRW50cnk6IEV2ZW50PElXb3JraW5nQ29weUhpc3RvcnlFdmVudD47XG5cblx0LyoqXG5cdCAqIEFuIGV2ZW50IHdoZW4gZW50cmllcyBhcmUgbW92ZWQgaW4gaGlzdG9yeS5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkTW92ZUVudHJpZXM6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBBbiBldmVudCB3aGVuIGFsbCBlbnRyaWVzIGFyZSByZW1vdmVkIGZyb20gdGhlIGhpc3RvcnkuXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZFJlbW92ZUVudHJpZXM6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBBZGRzIGEgbmV3IGVudHJ5IHRvIHRoZSBoaXN0b3J5IGZvciB0aGUgZ2l2ZW4gd29ya2luZyBjb3B5XG5cdCAqIHdpdGggYW4gb3B0aW9uYWwgYXNzb2NpYXRlZCBkZXNjcmlwdG9yLlxuXHQgKi9cblx0YWRkRW50cnkoZGVzY3JpcHRvcjogSVdvcmtpbmdDb3B5SGlzdG9yeUVudHJ5RGVzY3JpcHRvciwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxJV29ya2luZ0NvcHlIaXN0b3J5RW50cnkgfCB1bmRlZmluZWQ+O1xuXG5cdC8qKlxuXHQgKiBVcGRhdGVzIGFuIGVudHJ5IGluIHRoZSBsb2NhbCBoaXN0b3J5IGlmIGZvdW5kLlxuXHQgKi9cblx0dXBkYXRlRW50cnkoZW50cnk6IElXb3JraW5nQ29weUhpc3RvcnlFbnRyeSwgcHJvcGVydGllczogeyBzb3VyY2U6IFNhdmVTb3VyY2UgfSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTx2b2lkPjtcblxuXHQvKipcblx0ICogUmVtb3ZlcyBhbiBlbnRyeSBmcm9tIHRoZSBsb2NhbCBoaXN0b3J5IGlmIGZvdW5kLlxuXHQgKi9cblx0cmVtb3ZlRW50cnkoZW50cnk6IElXb3JraW5nQ29weUhpc3RvcnlFbnRyeSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxib29sZWFuPjtcblxuXHQvKipcblx0ICogTW92ZXMgZW50cmllcyB0aGF0IGVpdGhlciBtYXRjaCB0aGUgYHNvdXJjZWAgb3IgYXJlIGEgY2hpbGRcblx0ICogb2YgYHNvdXJjZWAgdG8gdGhlIGB0YXJnZXRgLlxuXHQgKlxuXHQgKiBAcmV0dXJucyBhIGxpc3Qgb2YgcmVzb3VyY2VzIGZvciBlbnRyaWVzIHRoYXQgaGF2ZSBtb3ZlZC5cblx0ICovXG5cdG1vdmVFbnRyaWVzKHNvdXJjZTogVVJJLCB0YXJnZXQ6IFVSSSk6IFByb21pc2U8VVJJW10+O1xuXG5cdC8qKlxuXHQgKiBHZXRzIGFsbCBoaXN0b3J5IGVudHJpZXMgZm9yIHRoZSBwcm92aWRlZCByZXNvdXJjZS5cblx0ICovXG5cdGdldEVudHJpZXMocmVzb3VyY2U6IFVSSSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxyZWFkb25seSBJV29ya2luZ0NvcHlIaXN0b3J5RW50cnlbXT47XG5cblx0LyoqXG5cdCAqIFJldHVybnMgYWxsIHJlc291cmNlcyBmb3Igd2hpY2ggaGlzdG9yeSBlbnRyaWVzIGV4aXN0LlxuXHQgKi9cblx0Z2V0QWxsKHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbik6IFByb21pc2U8cmVhZG9ubHkgVVJJW10+O1xuXG5cdC8qKlxuXHQgKiBSZW1vdmVzIGFsbCBlbnRyaWVzIGZyb20gYWxsIG9mIGxvY2FsIGhpc3RvcnkuXG5cdCAqL1xuXHRyZW1vdmVBbGwodG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTx2b2lkPjtcbn1cblxuLyoqXG4gKiBBIGxpbWl0IG9uIGhvdyBtYW55IEkvTyBvcGVyYXRpb25zIHdlIGFsbG93IHRvIHJ1biBpbiBwYXJhbGxlbC5cbiAqIFdlIGRvIG5vdCB3YW50IHRvIHNwYW0gdGhlIGZpbGUgc3lzdGVtIHdpdGggdG9vIG1hbnkgcmVxdWVzdHNcbiAqIGF0IHRoZSBzYW1lIHRpbWUsIHNvIHdlIGxpbWl0IHRvIGEgbWF4aW11bSBkZWdyZWUgb2YgcGFyYWxsZWxsaXNtLlxuICovXG5leHBvcnQgY29uc3QgTUFYX1BBUkFMTEVMX0hJU1RPUllfSU9fT1BTID0gMjA7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBUUEsU0FBU0EsZUFBZSxRQUFRLDREQUE0RDtBQUc1RixPQUFPLE1BQU1DLDBCQUEwQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBNkIsMkJBQTJCLENBQUM7QUE2SWxIOzs7OztBQUtBLE9BQU8sTUFBTUksMkJBQTJCO0FBQUE7QUFBQSxDQUFBRixjQUFBLEdBQUFDLENBQUEsT0FBRyxFQUFFIiwiaWdub3JlTGlzdCI6W119

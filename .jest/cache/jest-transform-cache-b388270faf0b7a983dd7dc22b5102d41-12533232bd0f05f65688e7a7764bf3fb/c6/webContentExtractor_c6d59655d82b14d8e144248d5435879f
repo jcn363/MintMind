@@ -1,0 +1,173 @@
+d82634e4fa405fe77bea418f8ed1f7d9
+/* istanbul ignore next */
+function cov_194q720f7u() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/common/webContentExtractor.ts";
+  var hash = "d7308f6e9e1f9fddcffa4a8245c1347dd1a7cbba";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/common/webContentExtractor.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 43
+        },
+        end: {
+          line: 6,
+          column: 89
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 49
+        },
+        end: {
+          line: 7,
+          column: 101
+        }
+      },
+      "2": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 43
+        }
+      },
+      "3": {
+        start: {
+          line: 22,
+          column: 8
+        },
+        end: {
+          line: 22,
+          column: 43
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 15,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 18
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 15
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 21,
+            column: 4
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 21,
+            column: 28
+          },
+          end: {
+            line: 23,
+            column: 5
+          }
+        },
+        line: 21
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/common/webContentExtractor.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,2BAA2B,GAAG,eAAe,CAA8B,6BAA6B,CAAC,CAAC;AACvH,MAAM,CAAC,MAAM,iCAAiC,GAAG,eAAe,CAAoC,mCAAmC,CAAC,CAAC;AA4BzI;;;;GAIG;AACH,MAAM,OAAO,8BAA8B;IAC1C,aAAa,CAAY;IAEzB,OAAO,CAAC,IAAW;QAClB,MAAM,IAAI,KAAK,CAAC,iBAAiB,CAAC,CAAC;IACpC,CAAC;CACD;AAED,MAAM,OAAO,oCAAoC;IAChD,aAAa,CAAY;IACzB,SAAS,CAAC,IAAS,EAAE,MAAyB;QAC7C,MAAM,IAAI,KAAK,CAAC,iBAAiB,CAAC,CAAC;IACpC,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/common/webContentExtractor.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { VSBuffer } from '../../../base/common/buffer.js';\nimport { CancellationToken } from '../../../base/common/cancellation.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IWebContentExtractorService = createDecorator<IWebContentExtractorService>('IWebContentExtractorService');\nexport const ISharedWebContentExtractorService = createDecorator<ISharedWebContentExtractorService>('ISharedWebContentExtractorService');\n\nexport interface IWebContentExtractorOptions {\n\t/**\n\t * Whether to allow cross-authority redirects on the web content.\n\t * 'false' by default.\n\t */\n\tfollowRedirects?: boolean;\n}\n\nexport type WebContentExtractResult =\n\t| { status: 'ok'; result: string }\n\t| { status: 'error'; error: string }\n\t| { status: 'redirect'; toURI: URI };\n\nexport interface IWebContentExtractorService {\n\t_serviceBrand: undefined;\n\textract(uri: URI[], options?: IWebContentExtractorOptions): Promise<WebContentExtractResult[]>;\n}\n\n/*\n * A service that extracts image content from a given arbitrary URI. This is done in the shared process to avoid running non trusted application code in the main process.\n */\nexport interface ISharedWebContentExtractorService {\n\t_serviceBrand: undefined;\n\treadImage(uri: URI, token: CancellationToken): Promise<VSBuffer | undefined>;\n}\n\n/**\n * A service that extracts web content from a given URI.\n * This is a placeholder implementation that does not perform any actual extraction.\n * It's intended to be used on platforms where web content extraction is not supported such as in the browser.\n */\nexport class NullWebContentExtractorService implements IWebContentExtractorService {\n\t_serviceBrand: undefined;\n\n\textract(_uri: URI[]): Promise<WebContentExtractResult[]> {\n\t\tthrow new Error('Not implemented');\n\t}\n}\n\nexport class NullSharedWebContentExtractorService implements ISharedWebContentExtractorService {\n\t_serviceBrand: undefined;\n\treadImage(_uri: URI, _token: CancellationToken): Promise<VSBuffer | undefined> {\n\t\tthrow new Error('Not implemented');\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d7308f6e9e1f9fddcffa4a8245c1347dd1a7cbba"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_194q720f7u = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_194q720f7u();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IWebContentExtractorService =
+/* istanbul ignore next */
+(cov_194q720f7u().s[0]++, createDecorator('IWebContentExtractorService'));
+export const ISharedWebContentExtractorService =
+/* istanbul ignore next */
+(cov_194q720f7u().s[1]++, createDecorator('ISharedWebContentExtractorService'));
+/**
+ * A service that extracts web content from a given URI.
+ * This is a placeholder implementation that does not perform any actual extraction.
+ * It's intended to be used on platforms where web content extraction is not supported such as in the browser.
+ */
+export class NullWebContentExtractorService {
+  _serviceBrand;
+  extract(_uri) {
+    /* istanbul ignore next */
+    cov_194q720f7u().f[0]++;
+    cov_194q720f7u().s[2]++;
+    throw new Error('Not implemented');
+  }
+}
+export class NullSharedWebContentExtractorService {
+  _serviceBrand;
+  readImage(_uri, _token) {
+    /* istanbul ignore next */
+    cov_194q720f7u().f[1]++;
+    cov_194q720f7u().s[3]++;
+    throw new Error('Not implemented');
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTk0cTcyMGY3dSIsImFjdHVhbENvdmVyYWdlIiwiY3JlYXRlRGVjb3JhdG9yIiwiSVdlYkNvbnRlbnRFeHRyYWN0b3JTZXJ2aWNlIiwicyIsIklTaGFyZWRXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSIsIk51bGxXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSIsIl9zZXJ2aWNlQnJhbmQiLCJleHRyYWN0IiwiX3VyaSIsImYiLCJFcnJvciIsIk51bGxTaGFyZWRXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSIsInJlYWRJbWFnZSIsIl90b2tlbiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vd2ViQ29udGVudEV4dHJhY3Rvci9jb21tb24vd2ViQ29udGVudEV4dHJhY3Rvci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVlNCdWZmZXIgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9idWZmZXIuanMnO1xuaW1wb3J0IHsgQ2FuY2VsbGF0aW9uVG9rZW4gfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9jYW5jZWxsYXRpb24uanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgY29uc3QgSVdlYkNvbnRlbnRFeHRyYWN0b3JTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZT4oJ0lXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZScpO1xuZXhwb3J0IGNvbnN0IElTaGFyZWRXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJU2hhcmVkV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2U+KCdJU2hhcmVkV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJV2ViQ29udGVudEV4dHJhY3Rvck9wdGlvbnMge1xuXHQvKipcblx0ICogV2hldGhlciB0byBhbGxvdyBjcm9zcy1hdXRob3JpdHkgcmVkaXJlY3RzIG9uIHRoZSB3ZWIgY29udGVudC5cblx0ICogJ2ZhbHNlJyBieSBkZWZhdWx0LlxuXHQgKi9cblx0Zm9sbG93UmVkaXJlY3RzPzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IHR5cGUgV2ViQ29udGVudEV4dHJhY3RSZXN1bHQgPVxuXHR8IHsgc3RhdHVzOiAnb2snOyByZXN1bHQ6IHN0cmluZyB9XG5cdHwgeyBzdGF0dXM6ICdlcnJvcic7IGVycm9yOiBzdHJpbmcgfVxuXHR8IHsgc3RhdHVzOiAncmVkaXJlY3QnOyB0b1VSSTogVVJJIH07XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdlYkNvbnRlbnRFeHRyYWN0b3JTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXHRleHRyYWN0KHVyaTogVVJJW10sIG9wdGlvbnM/OiBJV2ViQ29udGVudEV4dHJhY3Rvck9wdGlvbnMpOiBQcm9taXNlPFdlYkNvbnRlbnRFeHRyYWN0UmVzdWx0W10+O1xufVxuXG4vKlxuICogQSBzZXJ2aWNlIHRoYXQgZXh0cmFjdHMgaW1hZ2UgY29udGVudCBmcm9tIGEgZ2l2ZW4gYXJiaXRyYXJ5IFVSSS4gVGhpcyBpcyBkb25lIGluIHRoZSBzaGFyZWQgcHJvY2VzcyB0byBhdm9pZCBydW5uaW5nIG5vbiB0cnVzdGVkIGFwcGxpY2F0aW9uIGNvZGUgaW4gdGhlIG1haW4gcHJvY2Vzcy5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJU2hhcmVkV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2Uge1xuXHRfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cdHJlYWRJbWFnZSh1cmk6IFVSSSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxWU0J1ZmZlciB8IHVuZGVmaW5lZD47XG59XG5cbi8qKlxuICogQSBzZXJ2aWNlIHRoYXQgZXh0cmFjdHMgd2ViIGNvbnRlbnQgZnJvbSBhIGdpdmVuIFVSSS5cbiAqIFRoaXMgaXMgYSBwbGFjZWhvbGRlciBpbXBsZW1lbnRhdGlvbiB0aGF0IGRvZXMgbm90IHBlcmZvcm0gYW55IGFjdHVhbCBleHRyYWN0aW9uLlxuICogSXQncyBpbnRlbmRlZCB0byBiZSB1c2VkIG9uIHBsYXRmb3JtcyB3aGVyZSB3ZWIgY29udGVudCBleHRyYWN0aW9uIGlzIG5vdCBzdXBwb3J0ZWQgc3VjaCBhcyBpbiB0aGUgYnJvd3Nlci5cbiAqL1xuZXhwb3J0IGNsYXNzIE51bGxXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSBpbXBsZW1lbnRzIElXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSB7XG5cdF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRleHRyYWN0KF91cmk6IFVSSVtdKTogUHJvbWlzZTxXZWJDb250ZW50RXh0cmFjdFJlc3VsdFtdPiB7XG5cdFx0dGhyb3cgbmV3IEVycm9yKCdOb3QgaW1wbGVtZW50ZWQnKTtcblx0fVxufVxuXG5leHBvcnQgY2xhc3MgTnVsbFNoYXJlZFdlYkNvbnRlbnRFeHRyYWN0b3JTZXJ2aWNlIGltcGxlbWVudHMgSVNoYXJlZFdlYkNvbnRlbnRFeHRyYWN0b3JTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXHRyZWFkSW1hZ2UoX3VyaTogVVJJLCBfdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxWU0J1ZmZlciB8IHVuZGVmaW5lZD4ge1xuXHRcdHRocm93IG5ldyBFcnJvcignTm90IGltcGxlbWVudGVkJyk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBZ0RFO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFoREY7Ozs7QUFRQSxTQUFTRSxlQUFlLFFBQVEsNkNBQTZDO0FBRTdFLE9BQU8sTUFBTUMsMkJBQTJCO0FBQUE7QUFBQSxDQUFBSCxjQUFBLEdBQUFJLENBQUEsT0FBR0YsZUFBZSxDQUE4Qiw2QkFBNkIsQ0FBQztBQUN0SCxPQUFPLE1BQU1HLGlDQUFpQztBQUFBO0FBQUEsQ0FBQUwsY0FBQSxHQUFBSSxDQUFBLE9BQUdGLGVBQWUsQ0FBb0MsbUNBQW1DLENBQUM7QUE0QnhJOzs7OztBQUtBLE9BQU0sTUFBT0ksOEJBQThCO0VBQzFDQyxhQUFhO0VBRWJDLE9BQU9BLENBQUNDLElBQVc7SUFBQTtJQUFBVCxjQUFBLEdBQUFVLENBQUE7SUFBQVYsY0FBQSxHQUFBSSxDQUFBO0lBQ2xCLE1BQU0sSUFBSU8sS0FBSyxDQUFDLGlCQUFpQixDQUFDO0VBQ25DOztBQUdELE9BQU0sTUFBT0Msb0NBQW9DO0VBQ2hETCxhQUFhO0VBQ2JNLFNBQVNBLENBQUNKLElBQVMsRUFBRUssTUFBeUI7SUFBQTtJQUFBZCxjQUFBLEdBQUFVLENBQUE7SUFBQVYsY0FBQSxHQUFBSSxDQUFBO0lBQzdDLE1BQU0sSUFBSU8sS0FBSyxDQUFDLGlCQUFpQixDQUFDO0VBQ25DIiwiaWdub3JlTGlzdCI6W119

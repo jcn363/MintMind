@@ -1,0 +1,80 @@
+b073fa09750b86bfff9a590461505850
+/* istanbul ignore next */
+function cov_1y84unk462() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/externalUriOpener/common/externalUriOpener.contribution.ts";
+  var hash = "9d99e88820a1fd137d3b8bc543aee634d589a9aa";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/externalUriOpener/common/externalUriOpener.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 106
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 64
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/externalUriOpener/common/externalUriOpener.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,UAAU,IAAI,uBAAuB,EAA0B,MAAM,oEAAoE,CAAC;AACnJ,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,mCAAmC,EAAE,MAAM,oBAAoB,CAAC;AACzE,OAAO,EAAE,wBAAwB,EAAE,yBAAyB,EAAE,MAAM,+BAA+B,CAAC;AAEpG,iBAAiB,CAAC,yBAAyB,EAAE,wBAAwB,oCAA4B,CAAC;AAElG,QAAQ,CAAC,EAAE,CAAyB,uBAAuB,CAAC,aAAa,CAAC;KACxE,qBAAqB,CAAC,mCAAmC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/externalUriOpener/common/externalUriOpener.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Extensions as ConfigurationExtensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { externalUriOpenersConfigurationNode } from './configuration.js';\nimport { ExternalUriOpenerService, IExternalUriOpenerService } from './externalUriOpenerService.js';\n\nregisterSingleton(IExternalUriOpenerService, ExternalUriOpenerService, InstantiationType.Delayed);\n\nRegistry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration)\n\t.registerConfiguration(externalUriOpenersConfigurationNode);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "9d99e88820a1fd137d3b8bc543aee634d589a9aa"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1y84unk462 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1y84unk462();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.js';
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { externalUriOpenersConfigurationNode } from './configuration.js';
+import { ExternalUriOpenerService, IExternalUriOpenerService } from './externalUriOpenerService.js';
+/* istanbul ignore next */
+cov_1y84unk462().s[0]++;
+registerSingleton(IExternalUriOpenerService, ExternalUriOpenerService, 1 /* InstantiationType.Delayed */);
+/* istanbul ignore next */
+cov_1y84unk462().s[1]++;
+Registry.as(ConfigurationExtensions.Configuration).registerConfiguration(externalUriOpenersConfigurationNode);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFeHRlbnNpb25zIiwiQ29uZmlndXJhdGlvbkV4dGVuc2lvbnMiLCJyZWdpc3RlclNpbmdsZXRvbiIsIlJlZ2lzdHJ5IiwiZXh0ZXJuYWxVcmlPcGVuZXJzQ29uZmlndXJhdGlvbk5vZGUiLCJFeHRlcm5hbFVyaU9wZW5lclNlcnZpY2UiLCJJRXh0ZXJuYWxVcmlPcGVuZXJTZXJ2aWNlIiwiY292XzF5ODR1bms0NjIiLCJzIiwiYXMiLCJDb25maWd1cmF0aW9uIiwicmVnaXN0ZXJDb25maWd1cmF0aW9uIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9leHRlcm5hbFVyaU9wZW5lci9jb21tb24vZXh0ZXJuYWxVcmlPcGVuZXIuY29udHJpYnV0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFeHRlbnNpb25zIGFzIENvbmZpZ3VyYXRpb25FeHRlbnNpb25zLCBJQ29uZmlndXJhdGlvblJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29uZmlndXJhdGlvbi9jb21tb24vY29uZmlndXJhdGlvblJlZ2lzdHJ5LmpzJztcbmltcG9ydCB7IEluc3RhbnRpYXRpb25UeXBlLCByZWdpc3RlclNpbmdsZXRvbiB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2V4dGVuc2lvbnMuanMnO1xuaW1wb3J0IHsgUmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9yZWdpc3RyeS9jb21tb24vcGxhdGZvcm0uanMnO1xuaW1wb3J0IHsgZXh0ZXJuYWxVcmlPcGVuZXJzQ29uZmlndXJhdGlvbk5vZGUgfSBmcm9tICcuL2NvbmZpZ3VyYXRpb24uanMnO1xuaW1wb3J0IHsgRXh0ZXJuYWxVcmlPcGVuZXJTZXJ2aWNlLCBJRXh0ZXJuYWxVcmlPcGVuZXJTZXJ2aWNlIH0gZnJvbSAnLi9leHRlcm5hbFVyaU9wZW5lclNlcnZpY2UuanMnO1xuXG5yZWdpc3RlclNpbmdsZXRvbihJRXh0ZXJuYWxVcmlPcGVuZXJTZXJ2aWNlLCBFeHRlcm5hbFVyaU9wZW5lclNlcnZpY2UsIEluc3RhbnRpYXRpb25UeXBlLkRlbGF5ZWQpO1xuXG5SZWdpc3RyeS5hczxJQ29uZmlndXJhdGlvblJlZ2lzdHJ5PihDb25maWd1cmF0aW9uRXh0ZW5zaW9ucy5Db25maWd1cmF0aW9uKVxuXHQucmVnaXN0ZXJDb25maWd1cmF0aW9uKGV4dGVybmFsVXJpT3BlbmVyc0NvbmZpZ3VyYXRpb25Ob2RlKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxVQUFVLElBQUlDLHVCQUF1QixRQUFnQyxvRUFBb0U7QUFDbEosU0FBNEJDLGlCQUFpQixRQUFRLHlEQUF5RDtBQUM5RyxTQUFTQyxRQUFRLFFBQVEsa0RBQWtEO0FBQzNFLFNBQVNDLG1DQUFtQyxRQUFRLG9CQUFvQjtBQUN4RSxTQUFTQyx3QkFBd0IsRUFBRUMseUJBQXlCLFFBQVEsK0JBQStCO0FBQUM7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBRXBHTixpQkFBaUIsQ0FBQ0kseUJBQXlCLEVBQUVELHdCQUF3QixvQ0FBNEI7QUFBQztBQUFBRSxjQUFBLEdBQUFDLENBQUE7QUFFbEdMLFFBQVEsQ0FBQ00sRUFBRSxDQUF5QlIsdUJBQXVCLENBQUNTLGFBQWEsQ0FBQyxDQUN4RUMscUJBQXFCLENBQUNQLG1DQUFtQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

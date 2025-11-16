@@ -1,0 +1,79 @@
+9c2c49129050108fdf06d47bb6bdf3ab
+/* istanbul ignore next */
+function cov_22b0c1flz7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/performance/browser/performance.web.contribution.ts";
+  var hash = "3fe30cae72e8e3fd41c9e892c33b63362bfd4c07";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/performance/browser/performance.web.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 132
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 122
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/performance/browser/performance.web.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,UAAU,EAAmC,MAAM,kCAAkC,CAAC;AAC/F,OAAO,EAAE,+BAA+B,EAAE,qBAAqB,EAAE,MAAM,qBAAqB,CAAC;AAE7F,qBAAqB;AAErB,QAAQ,CAAC,EAAE,CAAkC,UAAU,CAAC,SAAS,CAAC,CAAC,6BAA6B,CAC/F,+BAA+B,oCAE/B,CAAC;AAEF,QAAQ,CAAC,EAAE,CAAkC,UAAU,CAAC,SAAS,CAAC,CAAC,6BAA6B,CAC/F,qBAAqB,oCAErB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/performance/browser/performance.web.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { Extensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';\nimport { BrowserResourcePerformanceMarks, BrowserStartupTimings } from './startupTimings.js';\n\n// -- startup timings\n\nRegistry.as<IWorkbenchContributionsRegistry>(Extensions.Workbench).registerWorkbenchContribution(\n\tBrowserResourcePerformanceMarks,\n\tLifecyclePhase.Eventually\n);\n\nRegistry.as<IWorkbenchContributionsRegistry>(Extensions.Workbench).registerWorkbenchContribution(\n\tBrowserStartupTimings,\n\tLifecyclePhase.Eventually\n);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3fe30cae72e8e3fd41c9e892c33b63362bfd4c07"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_22b0c1flz7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_22b0c1flz7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { Extensions } from '../../../common/contributions.js';
+import { BrowserResourcePerformanceMarks, BrowserStartupTimings } from './startupTimings.js';
+// -- startup timings
+/* istanbul ignore next */
+cov_22b0c1flz7().s[0]++;
+Registry.as(Extensions.Workbench).registerWorkbenchContribution(BrowserResourcePerformanceMarks, 4 /* LifecyclePhase.Eventually */);
+/* istanbul ignore next */
+cov_22b0c1flz7().s[1]++;
+Registry.as(Extensions.Workbench).registerWorkbenchContribution(BrowserStartupTimings, 4 /* LifecyclePhase.Eventually */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJSZWdpc3RyeSIsIkV4dGVuc2lvbnMiLCJCcm93c2VyUmVzb3VyY2VQZXJmb3JtYW5jZU1hcmtzIiwiQnJvd3NlclN0YXJ0dXBUaW1pbmdzIiwiY292XzIyYjBjMWZsejciLCJzIiwiYXMiLCJXb3JrYmVuY2giLCJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvcGVyZm9ybWFuY2UvYnJvd3Nlci9wZXJmb3JtYW5jZS53ZWIuY29udHJpYnV0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBMaWZlY3ljbGVQaGFzZSB9IGZyb20gJy4uLy4uLy4uL3NlcnZpY2VzL2xpZmVjeWNsZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcmVnaXN0cnkvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB7IEV4dGVuc2lvbnMsIElXb3JrYmVuY2hDb250cmlidXRpb25zUmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vY29udHJpYnV0aW9ucy5qcyc7XG5pbXBvcnQgeyBCcm93c2VyUmVzb3VyY2VQZXJmb3JtYW5jZU1hcmtzLCBCcm93c2VyU3RhcnR1cFRpbWluZ3MgfSBmcm9tICcuL3N0YXJ0dXBUaW1pbmdzLmpzJztcblxuLy8gLS0gc3RhcnR1cCB0aW1pbmdzXG5cblJlZ2lzdHJ5LmFzPElXb3JrYmVuY2hDb250cmlidXRpb25zUmVnaXN0cnk+KEV4dGVuc2lvbnMuV29ya2JlbmNoKS5yZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbihcblx0QnJvd3NlclJlc291cmNlUGVyZm9ybWFuY2VNYXJrcyxcblx0TGlmZWN5Y2xlUGhhc2UuRXZlbnR1YWxseVxuKTtcblxuUmVnaXN0cnkuYXM8SVdvcmtiZW5jaENvbnRyaWJ1dGlvbnNSZWdpc3RyeT4oRXh0ZW5zaW9ucy5Xb3JrYmVuY2gpLnJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uKFxuXHRCcm93c2VyU3RhcnR1cFRpbWluZ3MsXG5cdExpZmVjeWNsZVBoYXNlLkV2ZW50dWFsbHlcbik7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsUUFBUSxRQUFRLGtEQUFrRDtBQUMzRSxTQUFTQyxVQUFVLFFBQXlDLGtDQUFrQztBQUM5RixTQUFTQywrQkFBK0IsRUFBRUMscUJBQXFCLFFBQVEscUJBQXFCO0FBRTVGO0FBQUE7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBRUFMLFFBQVEsQ0FBQ00sRUFBRSxDQUFrQ0wsVUFBVSxDQUFDTSxTQUFTLENBQUMsQ0FBQ0MsNkJBQTZCLENBQy9GTiwrQkFBK0Isb0NBRS9CO0FBQUM7QUFBQUUsY0FBQSxHQUFBQyxDQUFBO0FBRUZMLFFBQVEsQ0FBQ00sRUFBRSxDQUFrQ0wsVUFBVSxDQUFDTSxTQUFTLENBQUMsQ0FBQ0MsNkJBQTZCLENBQy9GTCxxQkFBcUIsb0NBRXJCIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,180 @@
+1c1b1fec6995ac8a6c3acd620825df0c
+/* istanbul ignore next */
+function cov_148kvtiscd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/browser/ui/tree/treeDefaults.ts";
+  var hash = "261177830c87be24e4f24970c5fae3df0800f4e0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/tree/treeDefaults.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 105
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 29
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 34
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 37
+        }
+      },
+      "4": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 33
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 33
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/tree/treeDefaults.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,MAAM,EAAE,MAAM,4BAA4B,CAAC;AACpD,OAAO,KAAK,GAAG,MAAM,oBAAoB,CAAC;AAE1C,MAAM,OAAO,iBAAiD,SAAQ,MAAM;IAEvD;IAApB,YAAoB,MAA6C,EAAE,OAAgB;QAClF,KAAK,CAAC,kBAAkB,EAAE,GAAG,CAAC,QAAQ,CAAC,cAAc,EAAE,cAAc,CAAC,EAAE,cAAc,EAAE,OAAO,CAAC,CAAC;QAD9E,WAAM,GAAN,MAAM,CAAuC;IAEjE,CAAC;IAEQ,KAAK,CAAC,GAAG;QACjB,IAAI,CAAC,MAAM,CAAC,WAAW,EAAE,CAAC;QAC1B,IAAI,CAAC,MAAM,CAAC,YAAY,CAAC,EAAE,CAAC,CAAC;QAC7B,IAAI,CAAC,MAAM,CAAC,QAAQ,CAAC,EAAE,CAAC,CAAC;IAC1B,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/browser/ui/tree/treeDefaults.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { AsyncDataTree } from './asyncDataTree.js';\nimport { Action } from '../../../common/actions.js';\nimport * as nls from '../../../../nls.js';\n\nexport class CollapseAllAction<TInput, T, TFilterData = void> extends Action {\n\n\tconstructor(private viewer: AsyncDataTree<TInput, T, TFilterData>, enabled: boolean) {\n\t\tsuper('vs.tree.collapse', nls.localize('collapse all', \"Collapse All\"), 'collapse-all', enabled);\n\t}\n\n\toverride async run(): Promise<void> {\n\t\tthis.viewer.collapseAll();\n\t\tthis.viewer.setSelection([]);\n\t\tthis.viewer.setFocus([]);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "261177830c87be24e4f24970c5fae3df0800f4e0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_148kvtiscd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_148kvtiscd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Action } from '../../../common/actions.js';
+import * as nls from '../../../../nls.js';
+export class CollapseAllAction extends Action {
+  viewer;
+  constructor(viewer, enabled) {
+    /* istanbul ignore next */
+    cov_148kvtiscd().f[0]++;
+    cov_148kvtiscd().s[0]++;
+    super('vs.tree.collapse', nls.localize('collapse all', "Collapse All"), 'collapse-all', enabled);
+    /* istanbul ignore next */
+    cov_148kvtiscd().s[1]++;
+    this.viewer = viewer;
+  }
+  async run() {
+    /* istanbul ignore next */
+    cov_148kvtiscd().f[1]++;
+    cov_148kvtiscd().s[2]++;
+    this.viewer.collapseAll();
+    /* istanbul ignore next */
+    cov_148kvtiscd().s[3]++;
+    this.viewer.setSelection([]);
+    /* istanbul ignore next */
+    cov_148kvtiscd().s[4]++;
+    this.viewer.setFocus([]);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTQ4a3Z0aXNjZCIsImFjdHVhbENvdmVyYWdlIiwiQWN0aW9uIiwibmxzIiwiQ29sbGFwc2VBbGxBY3Rpb24iLCJ2aWV3ZXIiLCJjb25zdHJ1Y3RvciIsImVuYWJsZWQiLCJmIiwicyIsImxvY2FsaXplIiwicnVuIiwiY29sbGFwc2VBbGwiLCJzZXRTZWxlY3Rpb24iLCJzZXRGb2N1cyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvYmFzZS9icm93c2VyL3VpL3RyZWUvdHJlZURlZmF1bHRzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBBc3luY0RhdGFUcmVlIH0gZnJvbSAnLi9hc3luY0RhdGFUcmVlLmpzJztcbmltcG9ydCB7IEFjdGlvbiB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9hY3Rpb25zLmpzJztcbmltcG9ydCAqIGFzIG5scyBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuXG5leHBvcnQgY2xhc3MgQ29sbGFwc2VBbGxBY3Rpb248VElucHV0LCBULCBURmlsdGVyRGF0YSA9IHZvaWQ+IGV4dGVuZHMgQWN0aW9uIHtcblxuXHRjb25zdHJ1Y3Rvcihwcml2YXRlIHZpZXdlcjogQXN5bmNEYXRhVHJlZTxUSW5wdXQsIFQsIFRGaWx0ZXJEYXRhPiwgZW5hYmxlZDogYm9vbGVhbikge1xuXHRcdHN1cGVyKCd2cy50cmVlLmNvbGxhcHNlJywgbmxzLmxvY2FsaXplKCdjb2xsYXBzZSBhbGwnLCBcIkNvbGxhcHNlIEFsbFwiKSwgJ2NvbGxhcHNlLWFsbCcsIGVuYWJsZWQpO1xuXHR9XG5cblx0b3ZlcnJpZGUgYXN5bmMgcnVuKCk6IFByb21pc2U8dm9pZD4ge1xuXHRcdHRoaXMudmlld2VyLmNvbGxhcHNlQWxsKCk7XG5cdFx0dGhpcy52aWV3ZXIuc2V0U2VsZWN0aW9uKFtdKTtcblx0XHR0aGlzLnZpZXdlci5zZXRGb2N1cyhbXSk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFrQk07SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQWxCTjs7OztBQU1BLFNBQVNFLE1BQU0sUUFBUSw0QkFBNEI7QUFDbkQsT0FBTyxLQUFLQyxHQUFHLE1BQU0sb0JBQW9CO0FBRXpDLE9BQU0sTUFBT0MsaUJBQWlELFNBQVFGLE1BQU07RUFFdkRHLE1BQUE7RUFBcEJDLFlBQW9CRCxNQUE2QyxFQUFFRSxPQUFnQjtJQUFBO0lBQUFQLGNBQUEsR0FBQVEsQ0FBQTtJQUFBUixjQUFBLEdBQUFTLENBQUE7SUFDbEYsS0FBSyxDQUFDLGtCQUFrQixFQUFFTixHQUFHLENBQUNPLFFBQVEsQ0FBQyxjQUFjLEVBQUUsY0FBYyxDQUFDLEVBQUUsY0FBYyxFQUFFSCxPQUFPLENBQUM7SUFBQztJQUFBUCxjQUFBLEdBQUFTLENBQUE7SUFEOUUsS0FBQUosTUFBTSxHQUFOQSxNQUFNO0VBRTFCO0VBRVMsTUFBTU0sR0FBR0EsQ0FBQTtJQUFBO0lBQUFYLGNBQUEsR0FBQVEsQ0FBQTtJQUFBUixjQUFBLEdBQUFTLENBQUE7SUFDakIsSUFBSSxDQUFDSixNQUFNLENBQUNPLFdBQVcsRUFBRTtJQUFDO0lBQUFaLGNBQUEsR0FBQVMsQ0FBQTtJQUMxQixJQUFJLENBQUNKLE1BQU0sQ0FBQ1EsWUFBWSxDQUFDLEVBQUUsQ0FBQztJQUFDO0lBQUFiLGNBQUEsR0FBQVMsQ0FBQTtJQUM3QixJQUFJLENBQUNKLE1BQU0sQ0FBQ1MsUUFBUSxDQUFDLEVBQUUsQ0FBQztFQUN6QiIsImlnbm9yZUxpc3QiOltdfQ==

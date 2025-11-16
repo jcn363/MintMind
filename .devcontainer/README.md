@@ -1,6 +1,6 @@
 # Code - OSS Development Container
 
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jcn363t/vscode)
 
 This repository includes configuration for a development container for working with Code - OSS in a local container or using [GitHub Codespaces](https://github.com/features/codespaces).
 
@@ -8,7 +8,7 @@ This repository includes configuration for a development container for working w
 
 ## Quick start - local
 
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jcn363t/vscode) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
 1. Install Docker Desktop or Docker for Linux on your local machine. (See [docs](https://aka.ms/vscode-remote/containers/getting-started) for additional details.)
 
@@ -18,7 +18,7 @@ If you already have VS Code and Docker installed, you can click the badge above 
 
 3. Install [Visual Studio Code Stable](https://code.visualstudio.com/) or [Insiders](https://code.visualstudio.com/insiders/) and the [Dev Containers](https://aka.ms/vscode-remote/download/containers) extension.
 
-   ![Image of Dev Containers extension](https://microsoft.github.io/vscode-remote-release/images/dev-containers-extn.png)
+   ![Image of Dev Containers extension](https://jcn363t.github.io/vscode-remote-release/images/dev-containers-extn.png)
 
    > **Note:** The Dev Containers extension requires the Visual Studio Code distribution of Code - OSS. See the [FAQ](https://aka.ms/vscode-remote/faq/license) for details.
 
@@ -26,7 +26,7 @@ If you already have VS Code and Docker installed, you can click the badge above 
 
    > **Tip:** While you can use your local source tree instead, operations like `npm i` can be slow on macOS or when using the Hyper-V engine on Windows. We recommend using the WSL filesystem on Windows or the "clone repository in container" approach on Windows and macOS instead since it uses "named volume" rather than the local filesystem.
 
-5. Type `https://github.com/microsoft/vscode` (or a branch or PR URL) in the input box and press <kbd>Enter</kbd>.
+5. Type `https://github.com/jcn363t/vscode` (or a branch or PR URL) in the input box and press <kbd>Enter</kbd>.
 
 6. After the container is running:
     1. If you have the `DISPLAY` or `WAYLAND_DISPLAY` environment variables set locally (or in WSL on Windows), desktop apps in the container will be shown in local windows.
@@ -36,7 +36,7 @@ Next: **[Try it out!](#try-it)**
 
 ## Quick start - GitHub Codespaces
 
-1. From the [microsoft/vscode GitHub repository](https://github.com/microsoft/vscode), click on the **Code** dropdown, select **Open with Codespaces**, and then click on **New codespace**. If prompted, select the **Standard** machine size (which is also the default).
+1. From the [jcn363t/vscode GitHub repository](https://github.com/jcn363t/vscode), click on the **Code** dropdown, select **Open with Codespaces**, and then click on **New codespace**. If prompted, select the **Standard** machine size (which is also the default).
 
    > **Note:** You will not see these options within GitHub if you are not in the Codespaces beta.
 
@@ -62,7 +62,7 @@ You may see improved VNC responsiveness when accessing a codespace from VS Code 
 
 2. After the VS Code is up and running, press <kbd>Ctrl/Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> or <kbd>F1</kbd>, choose **Codespaces: Create New Codespace**, and use the following settings:
 
-- `microsoft/vscode` for the repository.
+- `jcn363t/vscode` for the repository.
 - Select any branch (e.g. **main**) - you can select a different one later.
 - Choose **Standard** (4-core, 8GB) as the size.
 

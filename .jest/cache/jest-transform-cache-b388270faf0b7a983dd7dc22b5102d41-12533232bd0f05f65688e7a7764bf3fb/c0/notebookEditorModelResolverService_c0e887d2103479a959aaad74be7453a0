@@ -1,0 +1,62 @@
+12b3fd53c1420ce6bd7f9fe569b1c84d
+/* istanbul ignore next */
+function cov_xlemcosci() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookEditorModelResolverService.ts";
+  var hash = "80f969ac5ad1826ce14dc9b41f0d9a4e7ade548b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookEditorModelResolverService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 51
+        },
+        end: {
+          line: 6,
+          column: 99
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookEditorModelResolverService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAO7F,MAAM,CAAC,MAAM,mCAAmC,GAAG,eAAe,CAAsC,+BAA+B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookEditorModelResolverService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { IResolvedNotebookEditorModel, NotebookEditorModelCreationOptions } from './notebookCommon.js';\nimport { IReference } from '../../../../base/common/lifecycle.js';\nimport { Event, IWaitUntil } from '../../../../base/common/event.js';\nimport { NotebookTextModel } from './model/notebookTextModel.js';\n\nexport const INotebookEditorModelResolverService = createDecorator<INotebookEditorModelResolverService>('INotebookModelResolverService');\n\n/**\n * A notebook file can only be opened ONCE per notebook type.\n * This event fires when a file is already open as type A\n * and there is request to open it as type B. Listeners must\n * do cleanup (close editor, release references) or the request fails\n */\nexport interface INotebookConflictEvent extends IWaitUntil {\n\tresource: URI;\n\tviewType: string;\n}\n\nexport interface IUntitledNotebookResource {\n\t/**\n\t * Depending on the value of `untitledResource` will\n\t * resolve a untitled notebook that:\n\t * - gets a unique name if `undefined` (e.g. `Untitled-1')\n\t * - uses the resource directly if the scheme is `untitled:`\n\t * - converts any other resource scheme to `untitled:` and will\n\t *   assume an associated file path\n\t *\n\t * Untitled notebook editors with associated path behave slightly\n\t * different from other untitled editors:\n\t * - they are dirty right when opening\n\t * - they will not ask for a file path when saving but use the associated path\n\t */\n\tuntitledResource: URI | undefined;\n}\n\nexport interface INotebookEditorModelResolverService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidSaveNotebook: Event<URI>;\n\treadonly onDidChangeDirty: Event<IResolvedNotebookEditorModel>;\n\n\treadonly onWillFailWithConflict: Event<INotebookConflictEvent>;\n\n\tisDirty(resource: URI): boolean;\n\n\tcreateUntitledNotebookTextModel(viewType: string): Promise<NotebookTextModel>;\n\n\tresolve(resource: URI, viewType?: string, creationOptions?: NotebookEditorModelCreationOptions): Promise<IReference<IResolvedNotebookEditorModel>>;\n\tresolve(resource: IUntitledNotebookResource, viewType: string, creationOtions?: NotebookEditorModelCreationOptions): Promise<IReference<IResolvedNotebookEditorModel>>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "80f969ac5ad1826ce14dc9b41f0d9a4e7ade548b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_xlemcosci = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_xlemcosci();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const INotebookEditorModelResolverService =
+/* istanbul ignore next */
+(cov_xlemcosci().s[0]++, createDecorator('INotebookModelResolverService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJTm90ZWJvb2tFZGl0b3JNb2RlbFJlc29sdmVyU2VydmljZSIsImNvdl94bGVtY29zY2kiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9ub3RlYm9vay9jb21tb24vbm90ZWJvb2tFZGl0b3JNb2RlbFJlc29sdmVyU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSVJlc29sdmVkTm90ZWJvb2tFZGl0b3JNb2RlbCwgTm90ZWJvb2tFZGl0b3JNb2RlbENyZWF0aW9uT3B0aW9ucyB9IGZyb20gJy4vbm90ZWJvb2tDb21tb24uanMnO1xuaW1wb3J0IHsgSVJlZmVyZW5jZSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBFdmVudCwgSVdhaXRVbnRpbCB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IE5vdGVib29rVGV4dE1vZGVsIH0gZnJvbSAnLi9tb2RlbC9ub3RlYm9va1RleHRNb2RlbC5qcyc7XG5cbmV4cG9ydCBjb25zdCBJTm90ZWJvb2tFZGl0b3JNb2RlbFJlc29sdmVyU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJTm90ZWJvb2tFZGl0b3JNb2RlbFJlc29sdmVyU2VydmljZT4oJ0lOb3RlYm9va01vZGVsUmVzb2x2ZXJTZXJ2aWNlJyk7XG5cbi8qKlxuICogQSBub3RlYm9vayBmaWxlIGNhbiBvbmx5IGJlIG9wZW5lZCBPTkNFIHBlciBub3RlYm9vayB0eXBlLlxuICogVGhpcyBldmVudCBmaXJlcyB3aGVuIGEgZmlsZSBpcyBhbHJlYWR5IG9wZW4gYXMgdHlwZSBBXG4gKiBhbmQgdGhlcmUgaXMgcmVxdWVzdCB0byBvcGVuIGl0IGFzIHR5cGUgQi4gTGlzdGVuZXJzIG11c3RcbiAqIGRvIGNsZWFudXAgKGNsb3NlIGVkaXRvciwgcmVsZWFzZSByZWZlcmVuY2VzKSBvciB0aGUgcmVxdWVzdCBmYWlsc1xuICovXG5leHBvcnQgaW50ZXJmYWNlIElOb3RlYm9va0NvbmZsaWN0RXZlbnQgZXh0ZW5kcyBJV2FpdFVudGlsIHtcblx0cmVzb3VyY2U6IFVSSTtcblx0dmlld1R5cGU6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVW50aXRsZWROb3RlYm9va1Jlc291cmNlIHtcblx0LyoqXG5cdCAqIERlcGVuZGluZyBvbiB0aGUgdmFsdWUgb2YgYHVudGl0bGVkUmVzb3VyY2VgIHdpbGxcblx0ICogcmVzb2x2ZSBhIHVudGl0bGVkIG5vdGVib29rIHRoYXQ6XG5cdCAqIC0gZ2V0cyBhIHVuaXF1ZSBuYW1lIGlmIGB1bmRlZmluZWRgIChlLmcuIGBVbnRpdGxlZC0xJylcblx0ICogLSB1c2VzIHRoZSByZXNvdXJjZSBkaXJlY3RseSBpZiB0aGUgc2NoZW1lIGlzIGB1bnRpdGxlZDpgXG5cdCAqIC0gY29udmVydHMgYW55IG90aGVyIHJlc291cmNlIHNjaGVtZSB0byBgdW50aXRsZWQ6YCBhbmQgd2lsbFxuXHQgKiAgIGFzc3VtZSBhbiBhc3NvY2lhdGVkIGZpbGUgcGF0aFxuXHQgKlxuXHQgKiBVbnRpdGxlZCBub3RlYm9vayBlZGl0b3JzIHdpdGggYXNzb2NpYXRlZCBwYXRoIGJlaGF2ZSBzbGlnaHRseVxuXHQgKiBkaWZmZXJlbnQgZnJvbSBvdGhlciB1bnRpdGxlZCBlZGl0b3JzOlxuXHQgKiAtIHRoZXkgYXJlIGRpcnR5IHJpZ2h0IHdoZW4gb3BlbmluZ1xuXHQgKiAtIHRoZXkgd2lsbCBub3QgYXNrIGZvciBhIGZpbGUgcGF0aCB3aGVuIHNhdmluZyBidXQgdXNlIHRoZSBhc3NvY2lhdGVkIHBhdGhcblx0ICovXG5cdHVudGl0bGVkUmVzb3VyY2U6IFVSSSB8IHVuZGVmaW5lZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJTm90ZWJvb2tFZGl0b3JNb2RlbFJlc29sdmVyU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRyZWFkb25seSBvbkRpZFNhdmVOb3RlYm9vazogRXZlbnQ8VVJJPjtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VEaXJ0eTogRXZlbnQ8SVJlc29sdmVkTm90ZWJvb2tFZGl0b3JNb2RlbD47XG5cblx0cmVhZG9ubHkgb25XaWxsRmFpbFdpdGhDb25mbGljdDogRXZlbnQ8SU5vdGVib29rQ29uZmxpY3RFdmVudD47XG5cblx0aXNEaXJ0eShyZXNvdXJjZTogVVJJKTogYm9vbGVhbjtcblxuXHRjcmVhdGVVbnRpdGxlZE5vdGVib29rVGV4dE1vZGVsKHZpZXdUeXBlOiBzdHJpbmcpOiBQcm9taXNlPE5vdGVib29rVGV4dE1vZGVsPjtcblxuXHRyZXNvbHZlKHJlc291cmNlOiBVUkksIHZpZXdUeXBlPzogc3RyaW5nLCBjcmVhdGlvbk9wdGlvbnM/OiBOb3RlYm9va0VkaXRvck1vZGVsQ3JlYXRpb25PcHRpb25zKTogUHJvbWlzZTxJUmVmZXJlbmNlPElSZXNvbHZlZE5vdGVib29rRWRpdG9yTW9kZWw+Pjtcblx0cmVzb2x2ZShyZXNvdXJjZTogSVVudGl0bGVkTm90ZWJvb2tSZXNvdXJjZSwgdmlld1R5cGU6IHN0cmluZywgY3JlYXRpb25PdGlvbnM/OiBOb3RlYm9va0VkaXRvck1vZGVsQ3JlYXRpb25PcHRpb25zKTogUHJvbWlzZTxJUmVmZXJlbmNlPElSZXNvbHZlZE5vdGVib29rRWRpdG9yTW9kZWw+Pjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsZUFBZSxRQUFRLDREQUE0RDtBQU81RixPQUFPLE1BQU1DLG1DQUFtQztBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBc0MsK0JBQStCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

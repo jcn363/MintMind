@@ -1,0 +1,62 @@
+ccc897e60abf29de3496be37a78c91cb
+/* istanbul ignore next */
+function cov_1j9ygjyh4b() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchTreeModel/searchViewModelWorkbenchService.ts";
+  var hash = "b2a0150107e5a6b27f5e5ba0f23868c8a538abab";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchTreeModel/searchViewModelWorkbenchService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 48
+        },
+        end: {
+          line: 6,
+          column: 98
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchTreeModel/searchViewModelWorkbenchService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,+DAA+D,CAAC;AAGhG,MAAM,CAAC,MAAM,gCAAgC,GAAG,eAAe,CAAmC,iCAAiC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchTreeModel/searchViewModelWorkbenchService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';\nimport { ISearchModel } from './searchTreeCommon.js';\n\nexport const ISearchViewModelWorkbenchService = createDecorator<ISearchViewModelWorkbenchService>('searchViewModelWorkbenchService');\n\nexport interface ISearchViewModelWorkbenchService {\n\treadonly _serviceBrand: undefined;\n\n\tsearchModel: ISearchModel;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b2a0150107e5a6b27f5e5ba0f23868c8a538abab"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1j9ygjyh4b = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1j9ygjyh4b();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';
+export const ISearchViewModelWorkbenchService =
+/* istanbul ignore next */
+(cov_1j9ygjyh4b().s[0]++, createDecorator('searchViewModelWorkbenchService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJU2VhcmNoVmlld01vZGVsV29ya2JlbmNoU2VydmljZSIsImNvdl8xajl5Z2p5aDRiIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvc2VhcmNoL2Jyb3dzZXIvc2VhcmNoVHJlZU1vZGVsL3NlYXJjaFZpZXdNb2RlbFdvcmtiZW5jaFNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSVNlYXJjaE1vZGVsIH0gZnJvbSAnLi9zZWFyY2hUcmVlQ29tbW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElTZWFyY2hWaWV3TW9kZWxXb3JrYmVuY2hTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElTZWFyY2hWaWV3TW9kZWxXb3JrYmVuY2hTZXJ2aWNlPignc2VhcmNoVmlld01vZGVsV29ya2JlbmNoU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElTZWFyY2hWaWV3TW9kZWxXb3JrYmVuY2hTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdHNlYXJjaE1vZGVsOiBJU2VhcmNoTW9kZWw7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLGVBQWUsUUFBUSwrREFBK0Q7QUFHL0YsT0FBTyxNQUFNQyxnQ0FBZ0M7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQW1DLGlDQUFpQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,62 @@
+84cdcbb96eea69b1652cf3d839f15763
+/* istanbul ignore next */
+function cov_2yhz8ubvh() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/webview/common/webviewManagerService.ts";
+  var hash = "6c81b3f009a160d81feb1fe36c7d8745b5fdce2a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/webview/common/webviewManagerService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 38
+        },
+        end: {
+          line: 6,
+          column: 78
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/webview/common/webviewManagerService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,sBAAsB,GAAG,eAAe,CAAyB,uBAAuB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/webview/common/webviewManagerService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IWebviewManagerService = createDecorator<IWebviewManagerService>('webviewManagerService');\n\nexport interface WebviewWebContentsId {\n\treadonly webContentsId: number;\n}\n\nexport interface WebviewWindowId {\n\treadonly windowId: number;\n}\n\nexport interface FindInFrameOptions {\n\treadonly forward?: boolean;\n\treadonly findNext?: boolean;\n\treadonly matchCase?: boolean;\n}\n\nexport interface FoundInFrameResult {\n\treadonly requestId: number;\n\treadonly activeMatchOrdinal: number;\n\treadonly matches: number;\n\treadonly finalUpdate: boolean;\n}\n\nexport interface IWebviewManagerService {\n\t_serviceBrand: unknown;\n\n\treadonly onFoundInFrame: Event<FoundInFrameResult>;\n\n\tsetIgnoreMenuShortcuts(id: WebviewWebContentsId | WebviewWindowId, enabled: boolean): Promise<void>;\n\n\tfindInFrame(windowId: WebviewWindowId, frameName: string, text: string, options: FindInFrameOptions): Promise<void>;\n\n\tstopFindInFrame(windowId: WebviewWindowId, frameName: string, options: { keepSelection?: boolean }): Promise<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6c81b3f009a160d81feb1fe36c7d8745b5fdce2a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2yhz8ubvh = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2yhz8ubvh();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IWebviewManagerService =
+/* istanbul ignore next */
+(cov_2yhz8ubvh().s[0]++, createDecorator('webviewManagerService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJV2Vidmlld01hbmFnZXJTZXJ2aWNlIiwiY292XzJ5aHo4dWJ2aCIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL3dlYnZpZXcvY29tbW9uL3dlYnZpZXdNYW5hZ2VyU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElXZWJ2aWV3TWFuYWdlclNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVdlYnZpZXdNYW5hZ2VyU2VydmljZT4oJ3dlYnZpZXdNYW5hZ2VyU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIFdlYnZpZXdXZWJDb250ZW50c0lkIHtcblx0cmVhZG9ubHkgd2ViQ29udGVudHNJZDogbnVtYmVyO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFdlYnZpZXdXaW5kb3dJZCB7XG5cdHJlYWRvbmx5IHdpbmRvd0lkOiBudW1iZXI7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgRmluZEluRnJhbWVPcHRpb25zIHtcblx0cmVhZG9ubHkgZm9yd2FyZD86IGJvb2xlYW47XG5cdHJlYWRvbmx5IGZpbmROZXh0PzogYm9vbGVhbjtcblx0cmVhZG9ubHkgbWF0Y2hDYXNlPzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBGb3VuZEluRnJhbWVSZXN1bHQge1xuXHRyZWFkb25seSByZXF1ZXN0SWQ6IG51bWJlcjtcblx0cmVhZG9ubHkgYWN0aXZlTWF0Y2hPcmRpbmFsOiBudW1iZXI7XG5cdHJlYWRvbmx5IG1hdGNoZXM6IG51bWJlcjtcblx0cmVhZG9ubHkgZmluYWxVcGRhdGU6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdlYnZpZXdNYW5hZ2VyU2VydmljZSB7XG5cdF9zZXJ2aWNlQnJhbmQ6IHVua25vd247XG5cblx0cmVhZG9ubHkgb25Gb3VuZEluRnJhbWU6IEV2ZW50PEZvdW5kSW5GcmFtZVJlc3VsdD47XG5cblx0c2V0SWdub3JlTWVudVNob3J0Y3V0cyhpZDogV2Vidmlld1dlYkNvbnRlbnRzSWQgfCBXZWJ2aWV3V2luZG93SWQsIGVuYWJsZWQ6IGJvb2xlYW4pOiBQcm9taXNlPHZvaWQ+O1xuXG5cdGZpbmRJbkZyYW1lKHdpbmRvd0lkOiBXZWJ2aWV3V2luZG93SWQsIGZyYW1lTmFtZTogc3RyaW5nLCB0ZXh0OiBzdHJpbmcsIG9wdGlvbnM6IEZpbmRJbkZyYW1lT3B0aW9ucyk6IFByb21pc2U8dm9pZD47XG5cblx0c3RvcEZpbmRJbkZyYW1lKHdpbmRvd0lkOiBXZWJ2aWV3V2luZG93SWQsIGZyYW1lTmFtZTogc3RyaW5nLCBvcHRpb25zOiB7IGtlZXBTZWxlY3Rpb24/OiBib29sZWFuIH0pOiBQcm9taXNlPHZvaWQ+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxlQUFlLFFBQVEsNkNBQTZDO0FBRTdFLE9BQU8sTUFBTUMsc0JBQXNCO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUF5Qix1QkFBdUIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

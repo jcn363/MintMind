@@ -1,0 +1,112 @@
+11436b0906f6a8a972b2bc122fc7ee93
+/* istanbul ignore next */
+function cov_ifam6mhmp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/browser/integrityService.ts";
+  var hash = "a4ee3f1f610bda862c08ca88271bd3fb928d0fe8";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/browser/integrityService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 90
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 19
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/browser/integrityService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,iBAAiB,EAAuB,MAAM,wBAAwB,CAAC;AAChF,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAE/G,MAAM,OAAO,gBAAgB;IAI5B,KAAK,CAAC,MAAM;QACX,OAAO,EAAE,MAAM,EAAE,IAAI,EAAE,KAAK,EAAE,EAAE,EAAE,CAAC;IACpC,CAAC;CACD;AAED,iBAAiB,CAAC,iBAAiB,EAAE,gBAAgB,oCAA4B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/browser/integrityService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IIntegrityService, IntegrityTestResult } from '../common/integrity.js';\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\n\nexport class IntegrityService implements IIntegrityService {\n\n\tdeclare readonly _serviceBrand: undefined;\n\n\tasync isPure(): Promise<IntegrityTestResult> {\n\t\treturn { isPure: true, proof: [] };\n\t}\n}\n\nregisterSingleton(IIntegrityService, IntegrityService, InstantiationType.Delayed);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a4ee3f1f610bda862c08ca88271bd3fb928d0fe8"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ifam6mhmp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ifam6mhmp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { IIntegrityService } from '../common/integrity.js';
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+export class IntegrityService {
+  async isPure() {
+    /* istanbul ignore next */
+    cov_ifam6mhmp().f[0]++;
+    cov_ifam6mhmp().s[0]++;
+    return {
+      isPure: true,
+      proof: []
+    };
+  }
+}
+/* istanbul ignore next */
+cov_ifam6mhmp().s[1]++;
+registerSingleton(IIntegrityService, IntegrityService, 1 /* InstantiationType.Delayed */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJJSW50ZWdyaXR5U2VydmljZSIsInJlZ2lzdGVyU2luZ2xldG9uIiwiSW50ZWdyaXR5U2VydmljZSIsImlzUHVyZSIsImNvdl9pZmFtNm1obXAiLCJmIiwicyIsInByb29mIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvaW50ZWdyaXR5L2Jyb3dzZXIvaW50ZWdyaXR5U2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUludGVncml0eVNlcnZpY2UsIEludGVncml0eVRlc3RSZXN1bHQgfSBmcm9tICcuLi9jb21tb24vaW50ZWdyaXR5LmpzJztcbmltcG9ydCB7IEluc3RhbnRpYXRpb25UeXBlLCByZWdpc3RlclNpbmdsZXRvbiB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2V4dGVuc2lvbnMuanMnO1xuXG5leHBvcnQgY2xhc3MgSW50ZWdyaXR5U2VydmljZSBpbXBsZW1lbnRzIElJbnRlZ3JpdHlTZXJ2aWNlIHtcblxuXHRkZWNsYXJlIHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRhc3luYyBpc1B1cmUoKTogUHJvbWlzZTxJbnRlZ3JpdHlUZXN0UmVzdWx0PiB7XG5cdFx0cmV0dXJuIHsgaXNQdXJlOiB0cnVlLCBwcm9vZjogW10gfTtcblx0fVxufVxuXG5yZWdpc3RlclNpbmdsZXRvbihJSW50ZWdyaXR5U2VydmljZSwgSW50ZWdyaXR5U2VydmljZSwgSW5zdGFudGlhdGlvblR5cGUuRGVsYXllZCk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsaUJBQWlCLFFBQTZCLHdCQUF3QjtBQUMvRSxTQUE0QkMsaUJBQWlCLFFBQVEseURBQXlEO0FBRTlHLE9BQU0sTUFBT0MsZ0JBQWdCO0VBSTVCLE1BQU1DLE1BQU1BLENBQUE7SUFBQTtJQUFBQyxhQUFBLEdBQUFDLENBQUE7SUFBQUQsYUFBQSxHQUFBRSxDQUFBO0lBQ1gsT0FBTztNQUFFSCxNQUFNLEVBQUUsSUFBSTtNQUFFSSxLQUFLLEVBQUU7SUFBRSxDQUFFO0VBQ25DOztBQUNBO0FBQUFILGFBQUEsR0FBQUUsQ0FBQTtBQUVETCxpQkFBaUIsQ0FBQ0QsaUJBQWlCLEVBQUVFLGdCQUFnQixvQ0FBNEIiLCJpZ25vcmVMaXN0IjpbXX0=

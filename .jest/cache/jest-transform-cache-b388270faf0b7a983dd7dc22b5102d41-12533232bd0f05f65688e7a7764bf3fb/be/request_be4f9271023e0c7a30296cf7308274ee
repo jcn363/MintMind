@@ -1,0 +1,282 @@
+9975aa39cead929730f26f27dfc56b6e
+/* istanbul ignore next */
+function cov_1tpi8ve83q() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/request/common/request.ts";
+  var hash = "f304e3ef301caa1563fc72aad8a366f9f0f63208";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/request/common/request.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 20
+        },
+        end: {
+          line: 5,
+          column: 29
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 20
+        }
+      },
+      "3": {
+        start: {
+          line: 13,
+          column: 4
+        },
+        end: {
+          line: 13,
+          column: 97
+        }
+      },
+      "4": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 27
+        }
+      },
+      "5": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 33
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isOfflineError",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 30
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 38
+          },
+          end: {
+            line: 14,
+            column: 1
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 18
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        line: 16
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 10
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 13,
+            column: 11
+          },
+          end: {
+            line: 13,
+            column: 96
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 13,
+            column: 11
+          },
+          end: {
+            line: 13,
+            column: 33
+          }
+        }, {
+          start: {
+            line: 13,
+            column: 37
+          },
+          end: {
+            line: 13,
+            column: 63
+          }
+        }, {
+          start: {
+            line: 13,
+            column: 67
+          },
+          end: {
+            line: 13,
+            column: 96
+          }
+        }],
+        line: 13
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/request/common/request.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,WAAW,GAAG,SAAS,CAAC;AAE9B;;GAEG;AACH,MAAM,UAAU,cAAc,CAAC,KAAc;IAC5C,IAAI,KAAK,YAAY,YAAY,EAAE,CAAC;QACnC,OAAO,IAAI,CAAC;IACb,CAAC;IACD,OAAO,KAAK,YAAY,KAAK,IAAI,KAAK,CAAC,IAAI,KAAK,WAAW,IAAI,KAAK,CAAC,OAAO,KAAK,WAAW,CAAC;AAC9F,CAAC;AAED,MAAM,OAAO,YAAa,SAAQ,KAAK;IACtC;QACC,KAAK,CAAC,WAAW,CAAC,CAAC;QACnB,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC,OAAO,CAAC;IAC1B,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/request/common/request.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { VSBufferReadableStream } from '../../../common/buffer.js';\n\nconst offlineName = 'Offline';\n\n/**\n * Checks if the given error is offline error\n */\nexport function isOfflineError(error: unknown): boolean {\n\tif (error instanceof OfflineError) {\n\t\treturn true;\n\t}\n\treturn error instanceof Error && error.name === offlineName && error.message === offlineName;\n}\n\nexport class OfflineError extends Error {\n\tconstructor() {\n\t\tsuper(offlineName);\n\t\tthis.name = this.message;\n\t}\n}\n\nexport interface IHeaders {\n\t'Proxy-Authorization'?: string;\n\t'x-operation-id'?: string;\n\t'retry-after'?: string;\n\tetag?: string;\n\t'Content-Length'?: string;\n\t'activityid'?: string;\n\t'X-Market-User-Id'?: string;\n\t[header: string]: string | string[] | undefined;\n}\n\nexport interface IRequestOptions {\n\ttype?: string;\n\turl?: string;\n\tuser?: string;\n\tpassword?: string;\n\theaders?: IHeaders;\n\ttimeout?: number;\n\tdata?: string;\n\tfollowRedirects?: number;\n\tproxyAuthorization?: string;\n\t/**\n\t * A signal to not cache the response. This may not\n\t * be supported in all implementations.\n\t */\n\tdisableCache?: boolean;\n}\n\nexport interface IRequestContext {\n\tres: {\n\t\theaders: IHeaders;\n\t\tstatusCode?: number;\n\t};\n\tstream: VSBufferReadableStream;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f304e3ef301caa1563fc72aad8a366f9f0f63208"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1tpi8ve83q = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1tpi8ve83q();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+const offlineName =
+/* istanbul ignore next */
+(cov_1tpi8ve83q().s[0]++, 'Offline');
+/**
+ * Checks if the given error is offline error
+ */
+export function isOfflineError(error) {
+  /* istanbul ignore next */
+  cov_1tpi8ve83q().f[0]++;
+  cov_1tpi8ve83q().s[1]++;
+  if (error instanceof OfflineError) {
+    /* istanbul ignore next */
+    cov_1tpi8ve83q().b[0][0]++;
+    cov_1tpi8ve83q().s[2]++;
+    return true;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_1tpi8ve83q().b[0][1]++;
+  }
+  cov_1tpi8ve83q().s[3]++;
+  return /* istanbul ignore next */(cov_1tpi8ve83q().b[1][0]++, error instanceof Error) &&
+  /* istanbul ignore next */
+  (cov_1tpi8ve83q().b[1][1]++, error.name === offlineName) &&
+  /* istanbul ignore next */
+  (cov_1tpi8ve83q().b[1][2]++, error.message === offlineName);
+}
+export class OfflineError extends Error {
+  constructor() {
+    /* istanbul ignore next */
+    cov_1tpi8ve83q().f[1]++;
+    cov_1tpi8ve83q().s[4]++;
+    super(offlineName);
+    /* istanbul ignore next */
+    cov_1tpi8ve83q().s[5]++;
+    this.name = this.message;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXRwaTh2ZTgzcSIsImFjdHVhbENvdmVyYWdlIiwib2ZmbGluZU5hbWUiLCJzIiwiaXNPZmZsaW5lRXJyb3IiLCJlcnJvciIsImYiLCJPZmZsaW5lRXJyb3IiLCJiIiwiRXJyb3IiLCJuYW1lIiwibWVzc2FnZSIsImNvbnN0cnVjdG9yIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL3BhcnRzL3JlcXVlc3QvY29tbW9uL3JlcXVlc3QudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFZTQnVmZmVyUmVhZGFibGVTdHJlYW0gfSBmcm9tICcuLi8uLi8uLi9jb21tb24vYnVmZmVyLmpzJztcblxuY29uc3Qgb2ZmbGluZU5hbWUgPSAnT2ZmbGluZSc7XG5cbi8qKlxuICogQ2hlY2tzIGlmIHRoZSBnaXZlbiBlcnJvciBpcyBvZmZsaW5lIGVycm9yXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBpc09mZmxpbmVFcnJvcihlcnJvcjogdW5rbm93bik6IGJvb2xlYW4ge1xuXHRpZiAoZXJyb3IgaW5zdGFuY2VvZiBPZmZsaW5lRXJyb3IpIHtcblx0XHRyZXR1cm4gdHJ1ZTtcblx0fVxuXHRyZXR1cm4gZXJyb3IgaW5zdGFuY2VvZiBFcnJvciAmJiBlcnJvci5uYW1lID09PSBvZmZsaW5lTmFtZSAmJiBlcnJvci5tZXNzYWdlID09PSBvZmZsaW5lTmFtZTtcbn1cblxuZXhwb3J0IGNsYXNzIE9mZmxpbmVFcnJvciBleHRlbmRzIEVycm9yIHtcblx0Y29uc3RydWN0b3IoKSB7XG5cdFx0c3VwZXIob2ZmbGluZU5hbWUpO1xuXHRcdHRoaXMubmFtZSA9IHRoaXMubWVzc2FnZTtcblx0fVxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElIZWFkZXJzIHtcblx0J1Byb3h5LUF1dGhvcml6YXRpb24nPzogc3RyaW5nO1xuXHQneC1vcGVyYXRpb24taWQnPzogc3RyaW5nO1xuXHQncmV0cnktYWZ0ZXInPzogc3RyaW5nO1xuXHRldGFnPzogc3RyaW5nO1xuXHQnQ29udGVudC1MZW5ndGgnPzogc3RyaW5nO1xuXHQnYWN0aXZpdHlpZCc/OiBzdHJpbmc7XG5cdCdYLU1hcmtldC1Vc2VyLUlkJz86IHN0cmluZztcblx0W2hlYWRlcjogc3RyaW5nXTogc3RyaW5nIHwgc3RyaW5nW10gfCB1bmRlZmluZWQ7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlcXVlc3RPcHRpb25zIHtcblx0dHlwZT86IHN0cmluZztcblx0dXJsPzogc3RyaW5nO1xuXHR1c2VyPzogc3RyaW5nO1xuXHRwYXNzd29yZD86IHN0cmluZztcblx0aGVhZGVycz86IElIZWFkZXJzO1xuXHR0aW1lb3V0PzogbnVtYmVyO1xuXHRkYXRhPzogc3RyaW5nO1xuXHRmb2xsb3dSZWRpcmVjdHM/OiBudW1iZXI7XG5cdHByb3h5QXV0aG9yaXphdGlvbj86IHN0cmluZztcblx0LyoqXG5cdCAqIEEgc2lnbmFsIHRvIG5vdCBjYWNoZSB0aGUgcmVzcG9uc2UuIFRoaXMgbWF5IG5vdFxuXHQgKiBiZSBzdXBwb3J0ZWQgaW4gYWxsIGltcGxlbWVudGF0aW9ucy5cblx0ICovXG5cdGRpc2FibGVDYWNoZT86IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlcXVlc3RDb250ZXh0IHtcblx0cmVzOiB7XG5cdFx0aGVhZGVyczogSUhlYWRlcnM7XG5cdFx0c3RhdHVzQ29kZT86IG51bWJlcjtcblx0fTtcblx0c3RyZWFtOiBWU0J1ZmZlclJlYWRhYmxlU3RyZWFtO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW9CQztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBcEJEOzs7O0FBT0EsTUFBTUUsV0FBVztBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBRyxDQUFBLE9BQUcsU0FBUztBQUU3Qjs7O0FBR0EsT0FBTSxTQUFVQyxjQUFjQSxDQUFDQyxLQUFjO0VBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQUFOLGNBQUEsR0FBQUcsQ0FBQTtFQUM1QyxJQUFJRSxLQUFLLFlBQVlFLFlBQVksRUFBRTtJQUFBO0lBQUFQLGNBQUEsR0FBQVEsQ0FBQTtJQUFBUixjQUFBLEdBQUFHLENBQUE7SUFDbEMsT0FBTyxJQUFJO0VBQ1osQ0FBQztFQUFBO0VBQUE7SUFBQUgsY0FBQSxHQUFBUSxDQUFBO0VBQUE7RUFBQVIsY0FBQSxHQUFBRyxDQUFBO0VBQ0QsT0FBTywyQkFBQUgsY0FBQSxHQUFBUSxDQUFBLFVBQUFILEtBQUssWUFBWUksS0FBSztFQUFBO0VBQUEsQ0FBQVQsY0FBQSxHQUFBUSxDQUFBLFVBQUlILEtBQUssQ0FBQ0ssSUFBSSxLQUFLUixXQUFXO0VBQUE7RUFBQSxDQUFBRixjQUFBLEdBQUFRLENBQUEsVUFBSUgsS0FBSyxDQUFDTSxPQUFPLEtBQUtULFdBQVc7QUFDN0Y7QUFFQSxPQUFNLE1BQU9LLFlBQWEsU0FBUUUsS0FBSztFQUN0Q0csWUFBQTtJQUFBO0lBQUFaLGNBQUEsR0FBQU0sQ0FBQTtJQUFBTixjQUFBLEdBQUFHLENBQUE7SUFDQyxLQUFLLENBQUNELFdBQVcsQ0FBQztJQUFDO0lBQUFGLGNBQUEsR0FBQUcsQ0FBQTtJQUNuQixJQUFJLENBQUNPLElBQUksR0FBRyxJQUFJLENBQUNDLE9BQU87RUFDekIiLCJpZ25vcmVMaXN0IjpbXX0=

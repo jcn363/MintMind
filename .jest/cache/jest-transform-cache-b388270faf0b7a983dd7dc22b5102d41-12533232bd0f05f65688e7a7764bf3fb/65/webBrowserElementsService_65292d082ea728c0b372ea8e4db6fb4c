@@ -1,0 +1,181 @@
+dcd5aa1045a1f30e65914d56b8b4ecbf
+/* istanbul ignore next */
+function cov_1tf5008a3o() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/browserElements/browser/webBrowserElementsService.ts";
+  var hash = "8cf59456321b4664476fee2d78d1e7165bd9da0a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/browserElements/browser/webBrowserElementsService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 43
+        }
+      },
+      "1": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 43
+        }
+      },
+      "2": {
+        start: {
+          line: 17,
+          column: 0
+        },
+        end: {
+          line: 17,
+          column: 105
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 18
+          },
+          end: {
+            line: 9,
+            column: 21
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 38
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 42
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/browserElements/browser/webBrowserElementsService.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,iBAAiB,EAAqB,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,uBAAuB,EAAE,MAAM,6BAA6B,CAAC;AAEtE,MAAM,yBAAyB;IAC9B,aAAa,CAAY;IAEzB,gBAAgB,CAAC;IAEjB,KAAK,CAAC,cAAc,CAAC,IAAgB,EAAE,KAAwB;QAC9D,MAAM,IAAI,KAAK,CAAC,iBAAiB,CAAC,CAAC;IACpC,CAAC;IAED,iBAAiB,CAAC,KAAwB,EAAE,WAAwB;QACnE,MAAM,IAAI,KAAK,CAAC,iBAAiB,CAAC,CAAC;IACpC,CAAC;CACD;AAED,iBAAiB,CAAC,uBAAuB,EAAE,yBAAyB,oCAA4B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/browserElements/browser/webBrowserElementsService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { BrowserType, IElementData } from '../../../../platform/browserElements/common/browserElements.js';\nimport { IRectangle } from '../../../../platform/window/common/window.js';\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { registerSingleton, InstantiationType } from '../../../../platform/instantiation/common/extensions.js';\nimport { IBrowserElementsService } from './browserElementsService.js';\n\nclass WebBrowserElementsService implements IBrowserElementsService {\n\t_serviceBrand: undefined;\n\n\tconstructor() { }\n\n\tasync getElementData(rect: IRectangle, token: CancellationToken): Promise<IElementData | undefined> {\n\t\tthrow new Error('Not implemented');\n\t}\n\n\tstartDebugSession(token: CancellationToken, browserType: BrowserType): Promise<void> {\n\t\tthrow new Error('Not implemented');\n\t}\n}\n\nregisterSingleton(IBrowserElementsService, WebBrowserElementsService, InstantiationType.Delayed);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "8cf59456321b4664476fee2d78d1e7165bd9da0a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1tf5008a3o = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1tf5008a3o();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { IBrowserElementsService } from './browserElementsService.js';
+class WebBrowserElementsService {
+  _serviceBrand;
+  constructor() {
+    /* istanbul ignore next */
+    cov_1tf5008a3o().f[0]++;
+  }
+  async getElementData(rect, token) {
+    /* istanbul ignore next */
+    cov_1tf5008a3o().f[1]++;
+    cov_1tf5008a3o().s[0]++;
+    throw new Error('Not implemented');
+  }
+  startDebugSession(token, browserType) {
+    /* istanbul ignore next */
+    cov_1tf5008a3o().f[2]++;
+    cov_1tf5008a3o().s[1]++;
+    throw new Error('Not implemented');
+  }
+}
+/* istanbul ignore next */
+cov_1tf5008a3o().s[2]++;
+registerSingleton(IBrowserElementsService, WebBrowserElementsService, 1 /* InstantiationType.Delayed */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXRmNTAwOGEzbyIsImFjdHVhbENvdmVyYWdlIiwicmVnaXN0ZXJTaW5nbGV0b24iLCJJQnJvd3NlckVsZW1lbnRzU2VydmljZSIsIldlYkJyb3dzZXJFbGVtZW50c1NlcnZpY2UiLCJfc2VydmljZUJyYW5kIiwiY29uc3RydWN0b3IiLCJmIiwiZ2V0RWxlbWVudERhdGEiLCJyZWN0IiwidG9rZW4iLCJzIiwiRXJyb3IiLCJzdGFydERlYnVnU2Vzc2lvbiIsImJyb3dzZXJUeXBlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvYnJvd3NlckVsZW1lbnRzL2Jyb3dzZXIvd2ViQnJvd3NlckVsZW1lbnRzU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgQnJvd3NlclR5cGUsIElFbGVtZW50RGF0YSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2Jyb3dzZXJFbGVtZW50cy9jb21tb24vYnJvd3NlckVsZW1lbnRzLmpzJztcbmltcG9ydCB7IElSZWN0YW5nbGUgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS93aW5kb3cvY29tbW9uL3dpbmRvdy5qcyc7XG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyByZWdpc3RlclNpbmdsZXRvbiwgSW5zdGFudGlhdGlvblR5cGUgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9leHRlbnNpb25zLmpzJztcbmltcG9ydCB7IElCcm93c2VyRWxlbWVudHNTZXJ2aWNlIH0gZnJvbSAnLi9icm93c2VyRWxlbWVudHNTZXJ2aWNlLmpzJztcblxuY2xhc3MgV2ViQnJvd3NlckVsZW1lbnRzU2VydmljZSBpbXBsZW1lbnRzIElCcm93c2VyRWxlbWVudHNTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdGNvbnN0cnVjdG9yKCkgeyB9XG5cblx0YXN5bmMgZ2V0RWxlbWVudERhdGEocmVjdDogSVJlY3RhbmdsZSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxJRWxlbWVudERhdGEgfCB1bmRlZmluZWQ+IHtcblx0XHR0aHJvdyBuZXcgRXJyb3IoJ05vdCBpbXBsZW1lbnRlZCcpO1xuXHR9XG5cblx0c3RhcnREZWJ1Z1Nlc3Npb24odG9rZW46IENhbmNlbGxhdGlvblRva2VuLCBicm93c2VyVHlwZTogQnJvd3NlclR5cGUpOiBQcm9taXNlPHZvaWQ+IHtcblx0XHR0aHJvdyBuZXcgRXJyb3IoJ05vdCBpbXBsZW1lbnRlZCcpO1xuXHR9XG59XG5cbnJlZ2lzdGVyU2luZ2xldG9uKElCcm93c2VyRWxlbWVudHNTZXJ2aWNlLCBXZWJCcm93c2VyRWxlbWVudHNTZXJ2aWNlLCBJbnN0YW50aWF0aW9uVHlwZS5EZWxheWVkKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUF1QkM7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXZCRDs7OztBQVFBLFNBQVNFLGlCQUFpQixRQUEyQix5REFBeUQ7QUFDOUcsU0FBU0MsdUJBQXVCLFFBQVEsNkJBQTZCO0FBRXJFLE1BQU1DLHlCQUF5QjtFQUM5QkMsYUFBYTtFQUViQyxZQUFBO0lBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0VBQWdCO0VBRWhCLE1BQU1DLGNBQWNBLENBQUNDLElBQWdCLEVBQUVDLEtBQXdCO0lBQUE7SUFBQVYsY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQVcsQ0FBQTtJQUM5RCxNQUFNLElBQUlDLEtBQUssQ0FBQyxpQkFBaUIsQ0FBQztFQUNuQztFQUVBQyxpQkFBaUJBLENBQUNILEtBQXdCLEVBQUVJLFdBQXdCO0lBQUE7SUFBQWQsY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQVcsQ0FBQTtJQUNuRSxNQUFNLElBQUlDLEtBQUssQ0FBQyxpQkFBaUIsQ0FBQztFQUNuQzs7QUFDQTtBQUFBWixjQUFBLEdBQUFXLENBQUE7QUFFRFQsaUJBQWlCLENBQUNDLHVCQUF1QixFQUFFQyx5QkFBeUIsb0NBQTRCIiwiaWdub3JlTGlzdCI6W119

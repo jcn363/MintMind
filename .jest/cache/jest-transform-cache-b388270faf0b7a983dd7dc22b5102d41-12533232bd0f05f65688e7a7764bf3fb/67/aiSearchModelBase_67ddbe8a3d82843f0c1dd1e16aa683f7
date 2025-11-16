@@ -1,0 +1,141 @@
+1cda9d4d9975c912871f4276e537a175
+/* istanbul ignore next */
+function cov_160nleqreu() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/AISearch/aiSearchModelBase.ts";
+  var hash = "2e61f5a1ebdfe1f0f2429facad89e0bd00160e0e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/AISearch/aiSearchModelBase.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 4
+        },
+        end: {
+          line: 7,
+          column: 74
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isSearchTreeAIFileMatch",
+        decl: {
+          start: {
+            line: 6,
+            column: 16
+          },
+          end: {
+            line: 6,
+            column: 39
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 45
+          },
+          end: {
+            line: 8,
+            column: 1
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 7,
+            column: 11
+          },
+          end: {
+            line: 7,
+            column: 73
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 7,
+            column: 11
+          },
+          end: {
+            line: 7,
+            column: 14
+          }
+        }, {
+          start: {
+            line: 7,
+            column: 18
+          },
+          end: {
+            line: 7,
+            column: 34
+          }
+        }, {
+          start: {
+            line: 7,
+            column: 38
+          },
+          end: {
+            line: 7,
+            column: 73
+          }
+        }],
+        line: 7
+      }
+    },
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/AISearch/aiSearchModelBase.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,KAAK,EAAE,MAAM,4CAA4C,CAAC;AAOnE,MAAM,UAAU,uBAAuB,CAAC,GAAQ;IAC/C,OAAO,GAAG,IAAI,GAAG,CAAC,YAAY,IAAI,GAAG,CAAC,YAAY,EAAE,YAAY,KAAK,CAAC;AACvE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/AISearch/aiSearchModelBase.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ISearchTreeFileMatch } from '../searchTreeModel/searchTreeCommon.js';\nimport { Range } from '../../../../../editor/common/core/range.js';\n\nexport interface ISearchTreeAIFileMatch extends ISearchTreeFileMatch {\n\tgetFullRange(): Range | undefined;\n\treadonly rank: number;\n}\n\nexport function isSearchTreeAIFileMatch(obj: any): obj is ISearchTreeAIFileMatch {\n\treturn obj && obj.getFullRange && obj.getFullRange() instanceof Range;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2e61f5a1ebdfe1f0f2429facad89e0bd00160e0e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_160nleqreu = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_160nleqreu();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Range } from '../../../../../editor/common/core/range.js';
+export function isSearchTreeAIFileMatch(obj) {
+  /* istanbul ignore next */
+  cov_160nleqreu().f[0]++;
+  cov_160nleqreu().s[0]++;
+  return /* istanbul ignore next */(cov_160nleqreu().b[0][0]++, obj) &&
+  /* istanbul ignore next */
+  (cov_160nleqreu().b[0][1]++, obj.getFullRange) &&
+  /* istanbul ignore next */
+  (cov_160nleqreu().b[0][2]++, obj.getFullRange() instanceof Range);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJSYW5nZSIsImlzU2VhcmNoVHJlZUFJRmlsZU1hdGNoIiwib2JqIiwiY292XzE2MG5sZXFyZXUiLCJmIiwicyIsImIiLCJnZXRGdWxsUmFuZ2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3NlYXJjaC9icm93c2VyL0FJU2VhcmNoL2FpU2VhcmNoTW9kZWxCYXNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJU2VhcmNoVHJlZUZpbGVNYXRjaCB9IGZyb20gJy4uL3NlYXJjaFRyZWVNb2RlbC9zZWFyY2hUcmVlQ29tbW9uLmpzJztcbmltcG9ydCB7IFJhbmdlIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vZWRpdG9yL2NvbW1vbi9jb3JlL3JhbmdlLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJU2VhcmNoVHJlZUFJRmlsZU1hdGNoIGV4dGVuZHMgSVNlYXJjaFRyZWVGaWxlTWF0Y2gge1xuXHRnZXRGdWxsUmFuZ2UoKTogUmFuZ2UgfCB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IHJhbms6IG51bWJlcjtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGlzU2VhcmNoVHJlZUFJRmlsZU1hdGNoKG9iajogYW55KTogb2JqIGlzIElTZWFyY2hUcmVlQUlGaWxlTWF0Y2gge1xuXHRyZXR1cm4gb2JqICYmIG9iai5nZXRGdWxsUmFuZ2UgJiYgb2JqLmdldEZ1bGxSYW5nZSgpIGluc3RhbmNlb2YgUmFuZ2U7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLEtBQUssUUFBUSw0Q0FBNEM7QUFPbEUsT0FBTSxTQUFVQyx1QkFBdUJBLENBQUNDLEdBQVE7RUFBQTtFQUFBQyxjQUFBLEdBQUFDLENBQUE7RUFBQUQsY0FBQSxHQUFBRSxDQUFBO0VBQy9DLE9BQU8sMkJBQUFGLGNBQUEsR0FBQUcsQ0FBQSxVQUFBSixHQUFHO0VBQUE7RUFBQSxDQUFBQyxjQUFBLEdBQUFHLENBQUEsVUFBSUosR0FBRyxDQUFDSyxZQUFZO0VBQUE7RUFBQSxDQUFBSixjQUFBLEdBQUFHLENBQUEsVUFBSUosR0FBRyxDQUFDSyxZQUFZLEVBQUUsWUFBWVAsS0FBSztBQUN0RSIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,131 @@
+69873339b34b8a4973927bd4b92def0e
+/* istanbul ignore next */
+function cov_odpbbvf9o() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/api/worker/extHost.worker.services.ts";
+  var hash = "ff8ed9425b46069f33d5f8dcd3aceef45ba8e09d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/api/worker/extHost.worker.services.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 19,
+          column: 0
+        },
+        end: {
+          line: 19,
+          column: 84
+        }
+      },
+      "1": {
+        start: {
+          line: 20,
+          column: 0
+        },
+        end: {
+          line: 20,
+          column: 98
+        }
+      },
+      "2": {
+        start: {
+          line: 21,
+          column: 0
+        },
+        end: {
+          line: 21,
+          column: 102
+        }
+      },
+      "3": {
+        start: {
+          line: 22,
+          column: 0
+        },
+        end: {
+          line: 22,
+          column: 98
+        }
+      },
+      "4": {
+        start: {
+          line: 23,
+          column: 0
+        },
+        end: {
+          line: 23,
+          column: 89
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/api/worker/extHost.worker.services.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,cAAc,EAAE,MAAM,uDAAuD,CAAC;AACvF,OAAO,EAAqB,iBAAiB,EAAE,MAAM,sDAAsD,CAAC;AAC5G,OAAO,EAAE,WAAW,EAAE,MAAM,qCAAqC,CAAC;AAClE,OAAO,EAAE,qBAAqB,EAAE,sBAAsB,EAAE,MAAM,oCAAoC,CAAC;AACnG,OAAO,EAAE,wBAAwB,EAAE,MAAM,sCAAsC,CAAC;AAChF,OAAO,EAAE,iBAAiB,EAAE,MAAM,gCAAgC,CAAC;AACnE,OAAO,EAAE,qBAAqB,EAAE,sBAAsB,EAAE,MAAM,kCAAkC,CAAC;AACjG,OAAO,EAAE,gBAAgB,EAAE,iBAAiB,EAAE,MAAM,+BAA+B,CAAC;AACpF,OAAO,EAAE,uBAAuB,EAAE,MAAM,8BAA8B,CAAC;AAEvE,4EAA4E;AAC5E,4EAA4E;AAC5E,4EAA4E;AAC5E,4EAA4E;AAC5E,4EAA4E;AAE5E,iBAAiB,CAAC,WAAW,EAAE,IAAI,cAAc,CAAC,iBAAiB,EAAE,CAAC,IAAI,CAAC,EAAE,IAAI,CAAC,CAAC,CAAC;AACpF,iBAAiB,CAAC,sBAAsB,EAAE,qBAAqB,kCAA0B,CAAC;AAC1F,iBAAiB,CAAC,wBAAwB,EAAE,uBAAuB,kCAA0B,CAAC;AAC9F,iBAAiB,CAAC,sBAAsB,EAAE,qBAAqB,kCAA0B,CAAC;AAC1F,iBAAiB,CAAC,iBAAiB,EAAE,IAAI,cAAc,CAAC,gBAAgB,EAAE,CAAC,IAAI,CAAC,EAAE,IAAI,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/api/worker/extHost.worker.services.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';\nimport { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.js';\nimport { ILogService } from '../../../platform/log/common/log.js';\nimport { ExtHostAuthentication, IExtHostAuthentication } from '../common/extHostAuthentication.js';\nimport { IExtHostExtensionService } from '../common/extHostExtensionService.js';\nimport { ExtHostLogService } from '../common/extHostLogService.js';\nimport { ExtensionStoragePaths, IExtensionStoragePaths } from '../common/extHostStoragePaths.js';\nimport { ExtHostTelemetry, IExtHostTelemetry } from '../common/extHostTelemetry.js';\nimport { ExtHostExtensionService } from './extHostExtensionService.js';\n\n// #########################################################################\n// ###                                                                   ###\n// ### !!! PLEASE ADD COMMON IMPORTS INTO extHost.common.services.ts !!! ###\n// ###                                                                   ###\n// #########################################################################\n\nregisterSingleton(ILogService, new SyncDescriptor(ExtHostLogService, [true], true));\nregisterSingleton(IExtHostAuthentication, ExtHostAuthentication, InstantiationType.Eager);\nregisterSingleton(IExtHostExtensionService, ExtHostExtensionService, InstantiationType.Eager);\nregisterSingleton(IExtensionStoragePaths, ExtensionStoragePaths, InstantiationType.Eager);\nregisterSingleton(IExtHostTelemetry, new SyncDescriptor(ExtHostTelemetry, [true], true));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ff8ed9425b46069f33d5f8dcd3aceef45ba8e09d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_odpbbvf9o = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_odpbbvf9o();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { SyncDescriptor } from '../../../platform/instantiation/common/descriptors.js';
+import { registerSingleton } from '../../../platform/instantiation/common/extensions.js';
+import { ILogService } from '../../../platform/log/common/log.js';
+import { ExtHostAuthentication, IExtHostAuthentication } from '../common/extHostAuthentication.js';
+import { IExtHostExtensionService } from '../common/extHostExtensionService.js';
+import { ExtHostLogService } from '../common/extHostLogService.js';
+import { ExtensionStoragePaths, IExtensionStoragePaths } from '../common/extHostStoragePaths.js';
+import { ExtHostTelemetry, IExtHostTelemetry } from '../common/extHostTelemetry.js';
+import { ExtHostExtensionService } from './extHostExtensionService.js';
+// #########################################################################
+// ###                                                                   ###
+// ### !!! PLEASE ADD COMMON IMPORTS INTO extHost.common.services.ts !!! ###
+// ###                                                                   ###
+// #########################################################################
+/* istanbul ignore next */
+cov_odpbbvf9o().s[0]++;
+registerSingleton(ILogService, new SyncDescriptor(ExtHostLogService, [true], true));
+/* istanbul ignore next */
+cov_odpbbvf9o().s[1]++;
+registerSingleton(IExtHostAuthentication, ExtHostAuthentication, 0 /* InstantiationType.Eager */);
+/* istanbul ignore next */
+cov_odpbbvf9o().s[2]++;
+registerSingleton(IExtHostExtensionService, ExtHostExtensionService, 0 /* InstantiationType.Eager */);
+/* istanbul ignore next */
+cov_odpbbvf9o().s[3]++;
+registerSingleton(IExtensionStoragePaths, ExtensionStoragePaths, 0 /* InstantiationType.Eager */);
+/* istanbul ignore next */
+cov_odpbbvf9o().s[4]++;
+registerSingleton(IExtHostTelemetry, new SyncDescriptor(ExtHostTelemetry, [true], true));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3Zfb2RwYmJ2ZjlvIiwiYWN0dWFsQ292ZXJhZ2UiLCJTeW5jRGVzY3JpcHRvciIsInJlZ2lzdGVyU2luZ2xldG9uIiwiSUxvZ1NlcnZpY2UiLCJFeHRIb3N0QXV0aGVudGljYXRpb24iLCJJRXh0SG9zdEF1dGhlbnRpY2F0aW9uIiwiSUV4dEhvc3RFeHRlbnNpb25TZXJ2aWNlIiwiRXh0SG9zdExvZ1NlcnZpY2UiLCJFeHRlbnNpb25TdG9yYWdlUGF0aHMiLCJJRXh0ZW5zaW9uU3RvcmFnZVBhdGhzIiwiRXh0SG9zdFRlbGVtZXRyeSIsIklFeHRIb3N0VGVsZW1ldHJ5IiwiRXh0SG9zdEV4dGVuc2lvblNlcnZpY2UiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvYXBpL3dvcmtlci9leHRIb3N0Lndvcmtlci5zZXJ2aWNlcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgU3luY0Rlc2NyaXB0b3IgfSBmcm9tICcuLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9kZXNjcmlwdG9ycy5qcyc7XG5pbXBvcnQgeyBJbnN0YW50aWF0aW9uVHlwZSwgcmVnaXN0ZXJTaW5nbGV0b24gfSBmcm9tICcuLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9leHRlbnNpb25zLmpzJztcbmltcG9ydCB7IElMb2dTZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vcGxhdGZvcm0vbG9nL2NvbW1vbi9sb2cuanMnO1xuaW1wb3J0IHsgRXh0SG9zdEF1dGhlbnRpY2F0aW9uLCBJRXh0SG9zdEF1dGhlbnRpY2F0aW9uIH0gZnJvbSAnLi4vY29tbW9uL2V4dEhvc3RBdXRoZW50aWNhdGlvbi5qcyc7XG5pbXBvcnQgeyBJRXh0SG9zdEV4dGVuc2lvblNlcnZpY2UgfSBmcm9tICcuLi9jb21tb24vZXh0SG9zdEV4dGVuc2lvblNlcnZpY2UuanMnO1xuaW1wb3J0IHsgRXh0SG9zdExvZ1NlcnZpY2UgfSBmcm9tICcuLi9jb21tb24vZXh0SG9zdExvZ1NlcnZpY2UuanMnO1xuaW1wb3J0IHsgRXh0ZW5zaW9uU3RvcmFnZVBhdGhzLCBJRXh0ZW5zaW9uU3RvcmFnZVBhdGhzIH0gZnJvbSAnLi4vY29tbW9uL2V4dEhvc3RTdG9yYWdlUGF0aHMuanMnO1xuaW1wb3J0IHsgRXh0SG9zdFRlbGVtZXRyeSwgSUV4dEhvc3RUZWxlbWV0cnkgfSBmcm9tICcuLi9jb21tb24vZXh0SG9zdFRlbGVtZXRyeS5qcyc7XG5pbXBvcnQgeyBFeHRIb3N0RXh0ZW5zaW9uU2VydmljZSB9IGZyb20gJy4vZXh0SG9zdEV4dGVuc2lvblNlcnZpY2UuanMnO1xuXG4vLyAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG4vLyAjIyMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyMjXG4vLyAjIyMgISEhIFBMRUFTRSBBREQgQ09NTU9OIElNUE9SVFMgSU5UTyBleHRIb3N0LmNvbW1vbi5zZXJ2aWNlcy50cyAhISEgIyMjXG4vLyAjIyMgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyMjXG4vLyAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjXG5cbnJlZ2lzdGVyU2luZ2xldG9uKElMb2dTZXJ2aWNlLCBuZXcgU3luY0Rlc2NyaXB0b3IoRXh0SG9zdExvZ1NlcnZpY2UsIFt0cnVlXSwgdHJ1ZSkpO1xucmVnaXN0ZXJTaW5nbGV0b24oSUV4dEhvc3RBdXRoZW50aWNhdGlvbiwgRXh0SG9zdEF1dGhlbnRpY2F0aW9uLCBJbnN0YW50aWF0aW9uVHlwZS5FYWdlcik7XG5yZWdpc3RlclNpbmdsZXRvbihJRXh0SG9zdEV4dGVuc2lvblNlcnZpY2UsIEV4dEhvc3RFeHRlbnNpb25TZXJ2aWNlLCBJbnN0YW50aWF0aW9uVHlwZS5FYWdlcik7XG5yZWdpc3RlclNpbmdsZXRvbihJRXh0ZW5zaW9uU3RvcmFnZVBhdGhzLCBFeHRlbnNpb25TdG9yYWdlUGF0aHMsIEluc3RhbnRpYXRpb25UeXBlLkVhZ2VyKTtcbnJlZ2lzdGVyU2luZ2xldG9uKElFeHRIb3N0VGVsZW1ldHJ5LCBuZXcgU3luY0Rlc2NyaXB0b3IoRXh0SG9zdFRlbGVtZXRyeSwgW3RydWVdLCB0cnVlKSk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFpQkE7SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQWpCQTs7OztBQUtBLFNBQVNFLGNBQWMsUUFBUSx1REFBdUQ7QUFDdEYsU0FBNEJDLGlCQUFpQixRQUFRLHNEQUFzRDtBQUMzRyxTQUFTQyxXQUFXLFFBQVEscUNBQXFDO0FBQ2pFLFNBQVNDLHFCQUFxQixFQUFFQyxzQkFBc0IsUUFBUSxvQ0FBb0M7QUFDbEcsU0FBU0Msd0JBQXdCLFFBQVEsc0NBQXNDO0FBQy9FLFNBQVNDLGlCQUFpQixRQUFRLGdDQUFnQztBQUNsRSxTQUFTQyxxQkFBcUIsRUFBRUMsc0JBQXNCLFFBQVEsa0NBQWtDO0FBQ2hHLFNBQVNDLGdCQUFnQixFQUFFQyxpQkFBaUIsUUFBUSwrQkFBK0I7QUFDbkYsU0FBU0MsdUJBQXVCLFFBQVEsOEJBQThCO0FBRXRFO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFBQTtBQUFBYixhQUFBLEdBQUFjLENBQUE7QUFFQVgsaUJBQWlCLENBQUNDLFdBQVcsRUFBRSxJQUFJRixjQUFjLENBQUNNLGlCQUFpQixFQUFFLENBQUMsSUFBSSxDQUFDLEVBQUUsSUFBSSxDQUFDLENBQUM7QUFBQztBQUFBUixhQUFBLEdBQUFjLENBQUE7QUFDcEZYLGlCQUFpQixDQUFDRyxzQkFBc0IsRUFBRUQscUJBQXFCLGtDQUEwQjtBQUFDO0FBQUFMLGFBQUEsR0FBQWMsQ0FBQTtBQUMxRlgsaUJBQWlCLENBQUNJLHdCQUF3QixFQUFFTSx1QkFBdUIsa0NBQTBCO0FBQUM7QUFBQWIsYUFBQSxHQUFBYyxDQUFBO0FBQzlGWCxpQkFBaUIsQ0FBQ08sc0JBQXNCLEVBQUVELHFCQUFxQixrQ0FBMEI7QUFBQztBQUFBVCxhQUFBLEdBQUFjLENBQUE7QUFDMUZYLGlCQUFpQixDQUFDUyxpQkFBaUIsRUFBRSxJQUFJVixjQUFjLENBQUNTLGdCQUFnQixFQUFFLENBQUMsSUFBSSxDQUFDLEVBQUUsSUFBSSxDQUFDLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

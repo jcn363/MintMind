@@ -1,0 +1,78 @@
+d18c4a6d2d8e06fda25be2ee69fa5887
+/* istanbul ignore next */
+function cov_2ufil72qh() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeViewsDndService.ts";
+  var hash = "504b98fabfad67a3b37edc68fc2dc44c5b6dcb5b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeViewsDndService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 36
+        },
+        end: {
+          line: 8,
+          column: 74
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 96
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeViewsDndService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAqB,iBAAiB,EAAE,MAAM,sDAAsD,CAAC;AAC5G,OAAO,EAAE,eAAe,EAAE,MAAM,yDAAyD,CAAC;AAE1F,OAAO,EAAsD,mBAAmB,EAAE,MAAM,mBAAmB,CAAC;AAG5G,MAAM,CAAC,MAAM,oBAAoB,GAAG,eAAe,CAAuB,qBAAqB,CAAC,CAAC;AACjG,iBAAiB,CAAC,oBAAoB,EAAE,mBAAmB,oCAA4B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/treeViewsDndService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { InstantiationType, registerSingleton } from '../../../platform/instantiation/common/extensions.js';\nimport { createDecorator } from '../../../platform/instantiation/common/instantiation.js';\nimport { VSDataTransfer } from '../../../base/common/dataTransfer.js';\nimport { ITreeViewsDnDService as ITreeViewsDnDServiceCommon, TreeViewsDnDService } from './treeViewsDnd.js';\n\nexport interface ITreeViewsDnDService extends ITreeViewsDnDServiceCommon<VSDataTransfer> { }\nexport const ITreeViewsDnDService = createDecorator<ITreeViewsDnDService>('treeViewsDndService');\nregisterSingleton(ITreeViewsDnDService, TreeViewsDnDService, InstantiationType.Delayed);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "504b98fabfad67a3b37edc68fc2dc44c5b6dcb5b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2ufil72qh = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2ufil72qh();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerSingleton } from '../../../platform/instantiation/common/extensions.js';
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+import { TreeViewsDnDService } from './treeViewsDnd.js';
+export const ITreeViewsDnDService =
+/* istanbul ignore next */
+(cov_2ufil72qh().s[0]++, createDecorator('treeViewsDndService'));
+/* istanbul ignore next */
+cov_2ufil72qh().s[1]++;
+registerSingleton(ITreeViewsDnDService, TreeViewsDnDService, 1 /* InstantiationType.Delayed */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlclNpbmdsZXRvbiIsImNyZWF0ZURlY29yYXRvciIsIlRyZWVWaWV3c0RuRFNlcnZpY2UiLCJJVHJlZVZpZXdzRG5EU2VydmljZSIsImNvdl8ydWZpbDcycWgiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL3NlcnZpY2VzL3RyZWVWaWV3c0RuZFNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEluc3RhbnRpYXRpb25UeXBlLCByZWdpc3RlclNpbmdsZXRvbiB9IGZyb20gJy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2V4dGVuc2lvbnMuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBWU0RhdGFUcmFuc2ZlciB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2RhdGFUcmFuc2Zlci5qcyc7XG5pbXBvcnQgeyBJVHJlZVZpZXdzRG5EU2VydmljZSBhcyBJVHJlZVZpZXdzRG5EU2VydmljZUNvbW1vbiwgVHJlZVZpZXdzRG5EU2VydmljZSB9IGZyb20gJy4vdHJlZVZpZXdzRG5kLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJVHJlZVZpZXdzRG5EU2VydmljZSBleHRlbmRzIElUcmVlVmlld3NEbkRTZXJ2aWNlQ29tbW9uPFZTRGF0YVRyYW5zZmVyPiB7IH1cbmV4cG9ydCBjb25zdCBJVHJlZVZpZXdzRG5EU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJVHJlZVZpZXdzRG5EU2VydmljZT4oJ3RyZWVWaWV3c0RuZFNlcnZpY2UnKTtcbnJlZ2lzdGVyU2luZ2xldG9uKElUcmVlVmlld3NEbkRTZXJ2aWNlLCBUcmVlVmlld3NEbkRTZXJ2aWNlLCBJbnN0YW50aWF0aW9uVHlwZS5EZWxheWVkKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUE0QkEsaUJBQWlCLFFBQVEsc0RBQXNEO0FBQzNHLFNBQVNDLGVBQWUsUUFBUSx5REFBeUQ7QUFFekYsU0FBNkRDLG1CQUFtQixRQUFRLG1CQUFtQjtBQUczRyxPQUFPLE1BQU1DLG9CQUFvQjtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdKLGVBQWUsQ0FBdUIscUJBQXFCLENBQUM7QUFBQztBQUFBRyxhQUFBLEdBQUFDLENBQUE7QUFDakdMLGlCQUFpQixDQUFDRyxvQkFBb0IsRUFBRUQsbUJBQW1CLG9DQUE0QiIsImlnbm9yZUxpc3QiOltdfQ==

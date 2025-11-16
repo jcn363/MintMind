@@ -1,0 +1,124 @@
+3f2ed903192121674071792665662815
+/* istanbul ignore next */
+function cov_24hzsbt7n8() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/viewModel/viewContext.ts";
+  var hash = "92859c8264433e8cd3b07591dc83dfe4a76fef2c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/viewModel/viewContext.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 47
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 47
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 65
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 76
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/viewModel/viewContext.ts",
+      mappings: "AAAA;;;gGAGgG;AAMhG,MAAM,OAAO,WAAW;IAEb;IACA;IACA;IAHV,YACU,eAAgC,EAChC,eAAwC,EACxC,wBAAsE;QAFtE,oBAAe,GAAf,eAAe,CAAiB;QAChC,oBAAe,GAAf,eAAe,CAAyB;QACxC,6BAAwB,GAAxB,wBAAwB,CAA8C;IAEhF,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/viewModel/viewContext.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IBaseCellEditorOptions } from '../notebookBrowser.js';\nimport { NotebookEventDispatcher } from './eventDispatcher.js';\nimport { NotebookOptions } from '../notebookOptions.js';\n\nexport class ViewContext {\n\tconstructor(\n\t\treadonly notebookOptions: NotebookOptions,\n\t\treadonly eventDispatcher: NotebookEventDispatcher,\n\t\treadonly getBaseCellEditorOptions: (language: string) => IBaseCellEditorOptions\n\t) {\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "92859c8264433e8cd3b07591dc83dfe4a76fef2c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_24hzsbt7n8 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_24hzsbt7n8();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class ViewContext {
+  notebookOptions;
+  eventDispatcher;
+  getBaseCellEditorOptions;
+  constructor(notebookOptions, eventDispatcher, getBaseCellEditorOptions) {
+    /* istanbul ignore next */
+    cov_24hzsbt7n8().f[0]++;
+    cov_24hzsbt7n8().s[0]++;
+    this.notebookOptions = notebookOptions;
+    /* istanbul ignore next */
+    cov_24hzsbt7n8().s[1]++;
+    this.eventDispatcher = eventDispatcher;
+    /* istanbul ignore next */
+    cov_24hzsbt7n8().s[2]++;
+    this.getBaseCellEditorOptions = getBaseCellEditorOptions;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJWaWV3Q29udGV4dCIsIm5vdGVib29rT3B0aW9ucyIsImV2ZW50RGlzcGF0Y2hlciIsImdldEJhc2VDZWxsRWRpdG9yT3B0aW9ucyIsImNvbnN0cnVjdG9yIiwiY292XzI0aHpzYnQ3bjgiLCJmIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvbm90ZWJvb2svYnJvd3Nlci92aWV3TW9kZWwvdmlld0NvbnRleHQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElCYXNlQ2VsbEVkaXRvck9wdGlvbnMgfSBmcm9tICcuLi9ub3RlYm9va0Jyb3dzZXIuanMnO1xuaW1wb3J0IHsgTm90ZWJvb2tFdmVudERpc3BhdGNoZXIgfSBmcm9tICcuL2V2ZW50RGlzcGF0Y2hlci5qcyc7XG5pbXBvcnQgeyBOb3RlYm9va09wdGlvbnMgfSBmcm9tICcuLi9ub3RlYm9va09wdGlvbnMuanMnO1xuXG5leHBvcnQgY2xhc3MgVmlld0NvbnRleHQge1xuXHRjb25zdHJ1Y3Rvcihcblx0XHRyZWFkb25seSBub3RlYm9va09wdGlvbnM6IE5vdGVib29rT3B0aW9ucyxcblx0XHRyZWFkb25seSBldmVudERpc3BhdGNoZXI6IE5vdGVib29rRXZlbnREaXNwYXRjaGVyLFxuXHRcdHJlYWRvbmx5IGdldEJhc2VDZWxsRWRpdG9yT3B0aW9uczogKGxhbmd1YWdlOiBzdHJpbmcpID0+IElCYXNlQ2VsbEVkaXRvck9wdGlvbnNcblx0KSB7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQVNBLE9BQU0sTUFBT0EsV0FBVztFQUViQyxlQUFBO0VBQ0FDLGVBQUE7RUFDQUMsd0JBQUE7RUFIVkMsWUFDVUgsZUFBZ0MsRUFDaENDLGVBQXdDLEVBQ3hDQyx3QkFBc0U7SUFBQTtJQUFBRSxjQUFBLEdBQUFDLENBQUE7SUFBQUQsY0FBQSxHQUFBRSxDQUFBO0lBRnRFLEtBQUFOLGVBQWUsR0FBZkEsZUFBZTtJQUFpQjtJQUFBSSxjQUFBLEdBQUFFLENBQUE7SUFDaEMsS0FBQUwsZUFBZSxHQUFmQSxlQUFlO0lBQXlCO0lBQUFHLGNBQUEsR0FBQUUsQ0FBQTtJQUN4QyxLQUFBSix3QkFBd0IsR0FBeEJBLHdCQUF3QjtFQUVsQyIsImlnbm9yZUxpc3QiOltdfQ==

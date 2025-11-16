@@ -1,0 +1,62 @@
+9e738a25f323bc41950c34938b88749d
+/* istanbul ignore next */
+function cov_dqlk7oxmu() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/environmentVariable.ts";
+  var hash = "77f4d958660ba78004bb9b6417b6e6a57e0be5fa";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/environmentVariable.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 43
+        },
+        end: {
+          line: 6,
+          column: 88
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/environmentVariable.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAK7F,MAAM,CAAC,MAAM,2BAA2B,GAAG,eAAe,CAA8B,4BAA4B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/environmentVariable.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { EnvironmentVariableScope, IEnvironmentVariableCollection, IMergedEnvironmentVariableCollection } from '../../../../platform/terminal/common/environmentVariable.js';\nimport { ITerminalStatus } from './terminal.js';\n\nexport const IEnvironmentVariableService = createDecorator<IEnvironmentVariableService>('environmentVariableService');\n\n/**\n * Tracks and persists environment variable collections as defined by extensions.\n */\nexport interface IEnvironmentVariableService {\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Gets a single collection constructed by merging all environment variable collections into\n\t * one.\n\t */\n\treadonly collections: ReadonlyMap<string, IEnvironmentVariableCollection>;\n\n\t/**\n\t * Gets a single collection constructed by merging all environment variable collections into\n\t * one.\n\t */\n\treadonly mergedCollection: IMergedEnvironmentVariableCollection;\n\n\t/**\n\t * An event that is fired when an extension's environment variable collection changes, the event\n\t * provides the new merged collection.\n\t */\n\treadonly onDidChangeCollections: Event<IMergedEnvironmentVariableCollection>;\n\n\t/**\n\t * Sets an extension's environment variable collection.\n\t */\n\tset(extensionIdentifier: string, collection: IEnvironmentVariableCollection): void;\n\n\t/**\n\t * Deletes an extension's environment variable collection.\n\t */\n\tdelete(extensionIdentifier: string): void;\n}\n\nexport interface IEnvironmentVariableCollectionWithPersistence extends IEnvironmentVariableCollection {\n\treadonly persistent: boolean;\n}\n\nexport interface IEnvironmentVariableInfo {\n\treadonly requiresAction: boolean;\n\tgetStatus(scope: EnvironmentVariableScope | undefined): ITerminalStatus;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "77f4d958660ba78004bb9b6417b6e6a57e0be5fa"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_dqlk7oxmu = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_dqlk7oxmu();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IEnvironmentVariableService =
+/* istanbul ignore next */
+(cov_dqlk7oxmu().s[0]++, createDecorator('environmentVariableService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJRW52aXJvbm1lbnRWYXJpYWJsZVNlcnZpY2UiLCJjb3ZfZHFsazdveG11IiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWwvY29tbW9uL2Vudmlyb25tZW50VmFyaWFibGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBFbnZpcm9ubWVudFZhcmlhYmxlU2NvcGUsIElFbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbiwgSU1lcmdlZEVudmlyb25tZW50VmFyaWFibGVDb2xsZWN0aW9uIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vdGVybWluYWwvY29tbW9uL2Vudmlyb25tZW50VmFyaWFibGUuanMnO1xuaW1wb3J0IHsgSVRlcm1pbmFsU3RhdHVzIH0gZnJvbSAnLi90ZXJtaW5hbC5qcyc7XG5cbmV4cG9ydCBjb25zdCBJRW52aXJvbm1lbnRWYXJpYWJsZVNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUVudmlyb25tZW50VmFyaWFibGVTZXJ2aWNlPignZW52aXJvbm1lbnRWYXJpYWJsZVNlcnZpY2UnKTtcblxuLyoqXG4gKiBUcmFja3MgYW5kIHBlcnNpc3RzIGVudmlyb25tZW50IHZhcmlhYmxlIGNvbGxlY3Rpb25zIGFzIGRlZmluZWQgYnkgZXh0ZW5zaW9ucy5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJRW52aXJvbm1lbnRWYXJpYWJsZVNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEdldHMgYSBzaW5nbGUgY29sbGVjdGlvbiBjb25zdHJ1Y3RlZCBieSBtZXJnaW5nIGFsbCBlbnZpcm9ubWVudCB2YXJpYWJsZSBjb2xsZWN0aW9ucyBpbnRvXG5cdCAqIG9uZS5cblx0ICovXG5cdHJlYWRvbmx5IGNvbGxlY3Rpb25zOiBSZWFkb25seU1hcDxzdHJpbmcsIElFbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbj47XG5cblx0LyoqXG5cdCAqIEdldHMgYSBzaW5nbGUgY29sbGVjdGlvbiBjb25zdHJ1Y3RlZCBieSBtZXJnaW5nIGFsbCBlbnZpcm9ubWVudCB2YXJpYWJsZSBjb2xsZWN0aW9ucyBpbnRvXG5cdCAqIG9uZS5cblx0ICovXG5cdHJlYWRvbmx5IG1lcmdlZENvbGxlY3Rpb246IElNZXJnZWRFbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbjtcblxuXHQvKipcblx0ICogQW4gZXZlbnQgdGhhdCBpcyBmaXJlZCB3aGVuIGFuIGV4dGVuc2lvbidzIGVudmlyb25tZW50IHZhcmlhYmxlIGNvbGxlY3Rpb24gY2hhbmdlcywgdGhlIGV2ZW50XG5cdCAqIHByb3ZpZGVzIHRoZSBuZXcgbWVyZ2VkIGNvbGxlY3Rpb24uXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZUNvbGxlY3Rpb25zOiBFdmVudDxJTWVyZ2VkRW52aXJvbm1lbnRWYXJpYWJsZUNvbGxlY3Rpb24+O1xuXG5cdC8qKlxuXHQgKiBTZXRzIGFuIGV4dGVuc2lvbidzIGVudmlyb25tZW50IHZhcmlhYmxlIGNvbGxlY3Rpb24uXG5cdCAqL1xuXHRzZXQoZXh0ZW5zaW9uSWRlbnRpZmllcjogc3RyaW5nLCBjb2xsZWN0aW9uOiBJRW52aXJvbm1lbnRWYXJpYWJsZUNvbGxlY3Rpb24pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBEZWxldGVzIGFuIGV4dGVuc2lvbidzIGVudmlyb25tZW50IHZhcmlhYmxlIGNvbGxlY3Rpb24uXG5cdCAqL1xuXHRkZWxldGUoZXh0ZW5zaW9uSWRlbnRpZmllcjogc3RyaW5nKTogdm9pZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRW52aXJvbm1lbnRWYXJpYWJsZUNvbGxlY3Rpb25XaXRoUGVyc2lzdGVuY2UgZXh0ZW5kcyBJRW52aXJvbm1lbnRWYXJpYWJsZUNvbGxlY3Rpb24ge1xuXHRyZWFkb25seSBwZXJzaXN0ZW50OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElFbnZpcm9ubWVudFZhcmlhYmxlSW5mbyB7XG5cdHJlYWRvbmx5IHJlcXVpcmVzQWN0aW9uOiBib29sZWFuO1xuXHRnZXRTdGF0dXMoc2NvcGU6IEVudmlyb25tZW50VmFyaWFibGVTY29wZSB8IHVuZGVmaW5lZCk6IElUZXJtaW5hbFN0YXR1cztcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsZUFBZSxRQUFRLDREQUE0RDtBQUs1RixPQUFPLE1BQU1DLDJCQUEyQjtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBOEIsNEJBQTRCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

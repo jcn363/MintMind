@@ -1,0 +1,46 @@
+59e185dbbec99d9a9663e3379131b2de
+/* istanbul ignore next */
+function cov_2dyks5n7hr() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAnalyzer.ts";
+  var hash = "eb15789e1e9fae8355e3f407f90db24d6f228c21";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAnalyzer.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAnalyzer.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineAnalyzer/commandLineAnalyzer.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IMarkdownString } from '../../../../../../../base/common/htmlContent.js';\nimport type { IDisposable } from '../../../../../../../base/common/lifecycle.js';\nimport type { OperatingSystem } from '../../../../../../../base/common/platform.js';\nimport type { URI } from '../../../../../../../base/common/uri.js';\nimport type { ToolConfirmationAction } from '../../../../../chat/common/languageModelToolsService.js';\nimport type { TreeSitterCommandParserLanguage } from '../../treeSitterCommandParser.js';\n\nexport interface ICommandLineAnalyzer extends IDisposable {\n\tanalyze(options: ICommandLineAnalyzerOptions): Promise<ICommandLineAnalyzerResult>;\n}\n\nexport interface ICommandLineAnalyzerOptions {\n\tcommandLine: string;\n\tcwd: URI | undefined;\n\tshell: string;\n\tos: OperatingSystem;\n\ttreeSitterLanguage: TreeSitterCommandParserLanguage;\n\tterminalToolSessionId: string;\n}\n\nexport interface ICommandLineAnalyzerResult {\n\t/**\n\t * Whether auto approval is allowed based on the analysis, when false this\n\t * will block auto approval.\n\t*/\n\treadonly isAutoApproveAllowed: boolean;\n\t/**\n\t * Whether the command line was explicitly auto approved by this analyzer.\n\t * - `true`: This analyzer explicitly approves auto-execution\n\t * - `false`: This analyzer explicitly denies auto-execution\n\t * - `undefined`: This analyzer does not make an approval/denial decision\n\t */\n\treadonly isAutoApproved?: boolean;\n\treadonly disclaimers?: readonly string[];\n\treadonly autoApproveInfo?: IMarkdownString;\n\treadonly customActions?: ToolConfirmationAction[];\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "eb15789e1e9fae8355e3f407f90db24d6f228c21"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2dyks5n7hr = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2dyks5n7hr();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvY2hhdEFnZW50VG9vbHMvYnJvd3Nlci90b29scy9jb21tYW5kTGluZUFuYWx5emVyL2NvbW1hbmRMaW5lQW5hbHl6ZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB0eXBlIHsgSU1hcmtkb3duU3RyaW5nIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vaHRtbENvbnRlbnQuanMnO1xuaW1wb3J0IHR5cGUgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgdHlwZSB7IE9wZXJhdGluZ1N5c3RlbSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB0eXBlIHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB0eXBlIHsgVG9vbENvbmZpcm1hdGlvbkFjdGlvbiB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2NoYXQvY29tbW9uL2xhbmd1YWdlTW9kZWxUb29sc1NlcnZpY2UuanMnO1xuaW1wb3J0IHR5cGUgeyBUcmVlU2l0dGVyQ29tbWFuZFBhcnNlckxhbmd1YWdlIH0gZnJvbSAnLi4vLi4vdHJlZVNpdHRlckNvbW1hbmRQYXJzZXIuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tYW5kTGluZUFuYWx5emVyIGV4dGVuZHMgSURpc3Bvc2FibGUge1xuXHRhbmFseXplKG9wdGlvbnM6IElDb21tYW5kTGluZUFuYWx5emVyT3B0aW9ucyk6IFByb21pc2U8SUNvbW1hbmRMaW5lQW5hbHl6ZXJSZXN1bHQ+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tYW5kTGluZUFuYWx5emVyT3B0aW9ucyB7XG5cdGNvbW1hbmRMaW5lOiBzdHJpbmc7XG5cdGN3ZDogVVJJIHwgdW5kZWZpbmVkO1xuXHRzaGVsbDogc3RyaW5nO1xuXHRvczogT3BlcmF0aW5nU3lzdGVtO1xuXHR0cmVlU2l0dGVyTGFuZ3VhZ2U6IFRyZWVTaXR0ZXJDb21tYW5kUGFyc2VyTGFuZ3VhZ2U7XG5cdHRlcm1pbmFsVG9vbFNlc3Npb25JZDogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tYW5kTGluZUFuYWx5emVyUmVzdWx0IHtcblx0LyoqXG5cdCAqIFdoZXRoZXIgYXV0byBhcHByb3ZhbCBpcyBhbGxvd2VkIGJhc2VkIG9uIHRoZSBhbmFseXNpcywgd2hlbiBmYWxzZSB0aGlzXG5cdCAqIHdpbGwgYmxvY2sgYXV0byBhcHByb3ZhbC5cblx0Ki9cblx0cmVhZG9ubHkgaXNBdXRvQXBwcm92ZUFsbG93ZWQ6IGJvb2xlYW47XG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRoZSBjb21tYW5kIGxpbmUgd2FzIGV4cGxpY2l0bHkgYXV0byBhcHByb3ZlZCBieSB0aGlzIGFuYWx5emVyLlxuXHQgKiAtIGB0cnVlYDogVGhpcyBhbmFseXplciBleHBsaWNpdGx5IGFwcHJvdmVzIGF1dG8tZXhlY3V0aW9uXG5cdCAqIC0gYGZhbHNlYDogVGhpcyBhbmFseXplciBleHBsaWNpdGx5IGRlbmllcyBhdXRvLWV4ZWN1dGlvblxuXHQgKiAtIGB1bmRlZmluZWRgOiBUaGlzIGFuYWx5emVyIGRvZXMgbm90IG1ha2UgYW4gYXBwcm92YWwvZGVuaWFsIGRlY2lzaW9uXG5cdCAqL1xuXHRyZWFkb25seSBpc0F1dG9BcHByb3ZlZD86IGJvb2xlYW47XG5cdHJlYWRvbmx5IGRpc2NsYWltZXJzPzogcmVhZG9ubHkgc3RyaW5nW107XG5cdHJlYWRvbmx5IGF1dG9BcHByb3ZlSW5mbz86IElNYXJrZG93blN0cmluZztcblx0cmVhZG9ubHkgY3VzdG9tQWN0aW9ucz86IFRvb2xDb25maXJtYXRpb25BY3Rpb25bXTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

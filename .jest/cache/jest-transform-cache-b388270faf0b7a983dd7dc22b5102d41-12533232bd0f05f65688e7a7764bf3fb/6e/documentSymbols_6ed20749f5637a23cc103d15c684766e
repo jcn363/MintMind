@@ -1,0 +1,211 @@
+edcde1b23c805ff82c469d06e43ecbba
+/* istanbul ignore next */
+function cov_57yfmqtk8() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/documentSymbols/browser/documentSymbols.ts";
+  var hash = "243727ab4fc93e16b24c16607f4d3b8df460b26a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/documentSymbols/browser/documentSymbols.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 0
+        },
+        end: {
+          line: 23,
+          column: 3
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 23
+        },
+        end: {
+          line: 12,
+          column: 27
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 4
+        },
+        end: {
+          line: 13,
+          column: 36
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 27
+        },
+        end: {
+          line: 14,
+          column: 61
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 25
+        },
+        end: {
+          line: 15,
+          column: 56
+        }
+      },
+      "5": {
+        start: {
+          line: 16,
+          column: 22
+        },
+        end: {
+          line: 16,
+          column: 71
+        }
+      },
+      "6": {
+        start: {
+          line: 17,
+          column: 4
+        },
+        end: {
+          line: 22,
+          column: 5
+        }
+      },
+      "7": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 129
+        }
+      },
+      "8": {
+        start: {
+          line: 21,
+          column: 8
+        },
+        end: {
+          line: 21,
+          column: 28
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 11,
+            column: 67
+          },
+          end: {
+            line: 11,
+            column: 68
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 102
+          },
+          end: {
+            line: 23,
+            column: 1
+          }
+        },
+        line: 11
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/documentSymbols/browser/documentSymbols.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,iBAAiB,EAAE,MAAM,yCAAyC,CAAC;AAC5E,OAAO,EAAE,UAAU,EAAE,MAAM,kCAAkC,CAAC;AAC9D,OAAO,EAAE,GAAG,EAAE,MAAM,gCAAgC,CAAC;AACrD,OAAO,EAAE,iBAAiB,EAAE,MAAM,6CAA6C,CAAC;AAChF,OAAO,EAAE,oBAAoB,EAAE,MAAM,mBAAmB,CAAC;AACzD,OAAO,EAAE,gBAAgB,EAAE,MAAM,kDAAkD,CAAC;AAEpF,gBAAgB,CAAC,eAAe,CAAC,gCAAgC,EAAE,KAAK,WAAW,QAAQ,EAAE,GAAG,IAAI;IACnG,MAAM,CAAC,QAAQ,CAAC,GAAG,IAAI,CAAC;IACxB,UAAU,CAAC,GAAG,CAAC,KAAK,CAAC,QAAQ,CAAC,CAAC,CAAC;IAEhC,MAAM,cAAc,GAAG,QAAQ,CAAC,GAAG,CAAC,oBAAoB,CAAC,CAAC;IAC1D,MAAM,YAAY,GAAG,QAAQ,CAAC,GAAG,CAAC,iBAAiB,CAAC,CAAC;IAErD,MAAM,SAAS,GAAG,MAAM,YAAY,CAAC,oBAAoB,CAAC,QAAQ,CAAC,CAAC;IACpE,IAAI,CAAC;QACJ,OAAO,CAAC,MAAM,cAAc,CAAC,WAAW,CAAC,SAAS,CAAC,MAAM,CAAC,eAAe,EAAE,iBAAiB,CAAC,IAAI,CAAC,CAAC,CAAC,kBAAkB,EAAE,CAAC;IAC1H,CAAC;YAAS,CAAC;QACV,SAAS,CAAC,OAAO,EAAE,CAAC;IACrB,CAAC;AACF,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/documentSymbols/browser/documentSymbols.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { assertType } from '../../../../base/common/types.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { ITextModelService } from '../../../common/services/resolverService.js';\nimport { IOutlineModelService } from './outlineModel.js';\nimport { CommandsRegistry } from '../../../../platform/commands/common/commands.js';\n\nCommandsRegistry.registerCommand('_executeDocumentSymbolProvider', async function (accessor, ...args) {\n\tconst [resource] = args;\n\tassertType(URI.isUri(resource));\n\n\tconst outlineService = accessor.get(IOutlineModelService);\n\tconst modelService = accessor.get(ITextModelService);\n\n\tconst reference = await modelService.createModelReference(resource);\n\ttry {\n\t\treturn (await outlineService.getOrCreate(reference.object.textEditorModel, CancellationToken.None)).getTopLevelSymbols();\n\t} finally {\n\t\treference.dispose();\n\t}\n});\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "243727ab4fc93e16b24c16607f4d3b8df460b26a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_57yfmqtk8 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_57yfmqtk8();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { CancellationToken } from '../../../../base/common/cancellation.js';
+import { assertType } from '../../../../base/common/types.js';
+import { URI } from '../../../../base/common/uri.js';
+import { ITextModelService } from '../../../common/services/resolverService.js';
+import { IOutlineModelService } from './outlineModel.js';
+import { CommandsRegistry } from '../../../../platform/commands/common/commands.js';
+/* istanbul ignore next */
+cov_57yfmqtk8().s[0]++;
+CommandsRegistry.registerCommand('_executeDocumentSymbolProvider', async function (accessor, ...args) {
+  /* istanbul ignore next */
+  cov_57yfmqtk8().f[0]++;
+  const [resource] =
+  /* istanbul ignore next */
+  (cov_57yfmqtk8().s[1]++, args);
+  /* istanbul ignore next */
+  cov_57yfmqtk8().s[2]++;
+  assertType(URI.isUri(resource));
+  const outlineService =
+  /* istanbul ignore next */
+  (cov_57yfmqtk8().s[3]++, accessor.get(IOutlineModelService));
+  const modelService =
+  /* istanbul ignore next */
+  (cov_57yfmqtk8().s[4]++, accessor.get(ITextModelService));
+  const reference =
+  /* istanbul ignore next */
+  (cov_57yfmqtk8().s[5]++, await modelService.createModelReference(resource));
+  /* istanbul ignore next */
+  cov_57yfmqtk8().s[6]++;
+  try {
+    /* istanbul ignore next */
+    cov_57yfmqtk8().s[7]++;
+    return (await outlineService.getOrCreate(reference.object.textEditorModel, CancellationToken.None)).getTopLevelSymbols();
+  } finally {
+    /* istanbul ignore next */
+    cov_57yfmqtk8().s[8]++;
+    reference.dispose();
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfNTd5Zm1xdGs4IiwiYWN0dWFsQ292ZXJhZ2UiLCJDYW5jZWxsYXRpb25Ub2tlbiIsImFzc2VydFR5cGUiLCJVUkkiLCJJVGV4dE1vZGVsU2VydmljZSIsIklPdXRsaW5lTW9kZWxTZXJ2aWNlIiwiQ29tbWFuZHNSZWdpc3RyeSIsInMiLCJyZWdpc3RlckNvbW1hbmQiLCJhY2Nlc3NvciIsImFyZ3MiLCJmIiwicmVzb3VyY2UiLCJpc1VyaSIsIm91dGxpbmVTZXJ2aWNlIiwiZ2V0IiwibW9kZWxTZXJ2aWNlIiwicmVmZXJlbmNlIiwiY3JlYXRlTW9kZWxSZWZlcmVuY2UiLCJnZXRPckNyZWF0ZSIsIm9iamVjdCIsInRleHRFZGl0b3JNb2RlbCIsIk5vbmUiLCJnZXRUb3BMZXZlbFN5bWJvbHMiLCJkaXNwb3NlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29udHJpYi9kb2N1bWVudFN5bWJvbHMvYnJvd3Nlci9kb2N1bWVudFN5bWJvbHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IENhbmNlbGxhdGlvblRva2VuIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vY2FuY2VsbGF0aW9uLmpzJztcbmltcG9ydCB7IGFzc2VydFR5cGUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi90eXBlcy5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSVRleHRNb2RlbFNlcnZpY2UgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vc2VydmljZXMvcmVzb2x2ZXJTZXJ2aWNlLmpzJztcbmltcG9ydCB7IElPdXRsaW5lTW9kZWxTZXJ2aWNlIH0gZnJvbSAnLi9vdXRsaW5lTW9kZWwuanMnO1xuaW1wb3J0IHsgQ29tbWFuZHNSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbW1hbmRzL2NvbW1vbi9jb21tYW5kcy5qcyc7XG5cbkNvbW1hbmRzUmVnaXN0cnkucmVnaXN0ZXJDb21tYW5kKCdfZXhlY3V0ZURvY3VtZW50U3ltYm9sUHJvdmlkZXInLCBhc3luYyBmdW5jdGlvbiAoYWNjZXNzb3IsIC4uLmFyZ3MpIHtcblx0Y29uc3QgW3Jlc291cmNlXSA9IGFyZ3M7XG5cdGFzc2VydFR5cGUoVVJJLmlzVXJpKHJlc291cmNlKSk7XG5cblx0Y29uc3Qgb3V0bGluZVNlcnZpY2UgPSBhY2Nlc3Nvci5nZXQoSU91dGxpbmVNb2RlbFNlcnZpY2UpO1xuXHRjb25zdCBtb2RlbFNlcnZpY2UgPSBhY2Nlc3Nvci5nZXQoSVRleHRNb2RlbFNlcnZpY2UpO1xuXG5cdGNvbnN0IHJlZmVyZW5jZSA9IGF3YWl0IG1vZGVsU2VydmljZS5jcmVhdGVNb2RlbFJlZmVyZW5jZShyZXNvdXJjZSk7XG5cdHRyeSB7XG5cdFx0cmV0dXJuIChhd2FpdCBvdXRsaW5lU2VydmljZS5nZXRPckNyZWF0ZShyZWZlcmVuY2Uub2JqZWN0LnRleHRFZGl0b3JNb2RlbCwgQ2FuY2VsbGF0aW9uVG9rZW4uTm9uZSkpLmdldFRvcExldmVsU3ltYm9scygpO1xuXHR9IGZpbmFsbHkge1xuXHRcdHJlZmVyZW5jZS5kaXNwb3NlKCk7XG5cdH1cbn0pO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFtQk87SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQW5CUDs7OztBQUtBLFNBQVNFLGlCQUFpQixRQUFRLHlDQUF5QztBQUMzRSxTQUFTQyxVQUFVLFFBQVEsa0NBQWtDO0FBQzdELFNBQVNDLEdBQUcsUUFBUSxnQ0FBZ0M7QUFDcEQsU0FBU0MsaUJBQWlCLFFBQVEsNkNBQTZDO0FBQy9FLFNBQVNDLG9CQUFvQixRQUFRLG1CQUFtQjtBQUN4RCxTQUFTQyxnQkFBZ0IsUUFBUSxrREFBa0Q7QUFBQztBQUFBUCxhQUFBLEdBQUFRLENBQUE7QUFFcEZELGdCQUFnQixDQUFDRSxlQUFlLENBQUMsZ0NBQWdDLEVBQUUsZ0JBQWdCQyxRQUFRLEVBQUUsR0FBR0MsSUFBSTtFQUFBO0VBQUFYLGFBQUEsR0FBQVksQ0FBQTtFQUNuRyxNQUFNLENBQUNDLFFBQVEsQ0FBQztFQUFBO0VBQUEsQ0FBQWIsYUFBQSxHQUFBUSxDQUFBLE9BQUdHLElBQUk7RUFBQztFQUFBWCxhQUFBLEdBQUFRLENBQUE7RUFDeEJMLFVBQVUsQ0FBQ0MsR0FBRyxDQUFDVSxLQUFLLENBQUNELFFBQVEsQ0FBQyxDQUFDO0VBRS9CLE1BQU1FLGNBQWM7RUFBQTtFQUFBLENBQUFmLGFBQUEsR0FBQVEsQ0FBQSxPQUFHRSxRQUFRLENBQUNNLEdBQUcsQ0FBQ1Ysb0JBQW9CLENBQUM7RUFDekQsTUFBTVcsWUFBWTtFQUFBO0VBQUEsQ0FBQWpCLGFBQUEsR0FBQVEsQ0FBQSxPQUFHRSxRQUFRLENBQUNNLEdBQUcsQ0FBQ1gsaUJBQWlCLENBQUM7RUFFcEQsTUFBTWEsU0FBUztFQUFBO0VBQUEsQ0FBQWxCLGFBQUEsR0FBQVEsQ0FBQSxPQUFHLE1BQU1TLFlBQVksQ0FBQ0Usb0JBQW9CLENBQUNOLFFBQVEsQ0FBQztFQUFDO0VBQUFiLGFBQUEsR0FBQVEsQ0FBQTtFQUNwRSxJQUFJO0lBQUE7SUFBQVIsYUFBQSxHQUFBUSxDQUFBO0lBQ0gsT0FBTyxDQUFDLE1BQU1PLGNBQWMsQ0FBQ0ssV0FBVyxDQUFDRixTQUFTLENBQUNHLE1BQU0sQ0FBQ0MsZUFBZSxFQUFFcEIsaUJBQWlCLENBQUNxQixJQUFJLENBQUMsRUFBRUMsa0JBQWtCLEVBQUU7RUFDekgsQ0FBQyxTQUFTO0lBQUE7SUFBQXhCLGFBQUEsR0FBQVEsQ0FBQTtJQUNUVSxTQUFTLENBQUNPLE9BQU8sRUFBRTtFQUNwQjtBQUNELENBQUMsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

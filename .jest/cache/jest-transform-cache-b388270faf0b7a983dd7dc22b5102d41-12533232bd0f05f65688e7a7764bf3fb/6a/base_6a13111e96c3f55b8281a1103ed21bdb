@@ -1,0 +1,124 @@
+eb1dc7b299882ffdb37d07a1cfec0891
+/* istanbul ignore next */
+function cov_2mm2hwfokx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/base.ts";
+  var hash = "045c9da9d82914e3f3a5c4f9d840170e2ad4a3bc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/base.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 16
+        },
+        end: {
+          line: 10,
+          column: 67
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 27
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 71
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "handleBugIndicatingErrorRecovery",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 48
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 58
+          },
+          end: {
+            line: 13,
+            column: 1
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/base.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAmB,iBAAiB,EAAE,MAAM,wBAAwB,CAAC;AA2K5E;;EAEE;AACF,MAAM,UAAU,gCAAgC,CAAC,OAAe;IAC/D,MAAM,GAAG,GAAG,IAAI,KAAK,CAAC,8BAA8B,GAAG,OAAO,CAAC,CAAC;IAChE,iBAAiB,CAAC,GAAG,CAAC,CAAC;IACvB,OAAO,CAAC,KAAK,CAAC,8CAA8C,EAAE,GAAG,CAAC,CAAC;AACpE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/base.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { DisposableStore, onUnexpectedError } from './commonFacade/deps.js';\n\n/**\n * Represents an observable value.\n *\n * @template T The type of the values the observable can hold.\n */\n// This interface exists so that, for example for string observables,\n// typescript renders the type as `IObservable<string>` instead of `IObservable<string, unknown>`.\nexport interface IObservable<T> extends IObservableWithChange<T, unknown> { }\n\n/**\n * Represents an observable value.\n *\n * @template T The type of the values the observable can hold.\n * @template TChange The type used to describe value changes\n * (usually `void` and only used in advanced scenarios).\n * While observers can miss temporary values of an observable,\n * they will receive all change values (as long as they are subscribed)!\n */\nexport interface IObservableWithChange<T, TChange = unknown> {\n\t/**\n\t * Returns the current value.\n\t *\n\t * Calls {@link IObserver.handleChange} if the observable notices that the value changed.\n\t * Must not be called from {@link IObserver.handleChange}!\n\t */\n\tget(): T;\n\n\t/**\n\t * Forces the observable to check for changes and report them.\n\t *\n\t * Has the same effect as calling {@link IObservable.get}, but does not force the observable\n\t * to actually construct the value, e.g. if change deltas are used.\n\t * Calls {@link IObserver.handleChange} if the observable notices that the value changed.\n\t * Must not be called from {@link IObserver.handleChange}!\n\t */\n\treportChanges(): void;\n\n\t/**\n\t * Adds the observer to the set of subscribed observers.\n\t * This method is idempotent.\n\t */\n\taddObserver(observer: IObserver): void;\n\n\t/**\n\t * Removes the observer from the set of subscribed observers.\n\t * This method is idempotent.\n\t */\n\tremoveObserver(observer: IObserver): void;\n\n\t// #region These members have a standard implementation and are only part of the interface for convenience.\n\n\t/**\n\t * Reads the current value and subscribes the reader to this observable.\n\t *\n\t * Calls {@link IReader.readObservable} if a reader is given, otherwise {@link IObservable.get}\n\t * (see {@link ConvenientObservable.read} for the implementation).\n\t */\n\tread(reader: IReader | undefined): T;\n\n\t/**\n\t * Makes sure this value is computed eagerly.\n\t */\n\trecomputeInitiallyAndOnChange(store: DisposableStore, handleValue?: (value: T) => void): IObservable<T>;\n\n\t/**\n\t * Makes sure this value is cached.\n\t */\n\tkeepObserved(store: DisposableStore): IObservable<T>;\n\n\t/**\n\t * Creates a derived observable that depends on this observable.\n\t * Use the reader to read other observables\n\t * (see {@link ConvenientObservable.map} for the implementation).\n\t */\n\tmap<TNew>(fn: (value: T, reader: IReader) => TNew): IObservable<TNew>;\n\tmap<TNew>(owner: object, fn: (value: T, reader: IReader) => TNew): IObservable<TNew>;\n\n\tflatten<TNew>(this: IObservable<IObservable<TNew>>): IObservable<TNew>;\n\n\t/**\n\t * ONLY FOR DEBUGGING!\n\t * Logs computations of this derived.\n\t*/\n\tlog(): IObservableWithChange<T, TChange>;\n\n\t/**\n\t * A human-readable name for debugging purposes.\n\t */\n\treadonly debugName: string;\n\n\t/**\n\t * This property captures the type of the change object. Do not use it at runtime!\n\t */\n\treadonly TChange: TChange;\n\n\t// #endregion\n}\n\n/**\n * Represents an observer that can be subscribed to an observable.\n *\n * If an observer is subscribed to an observable and that observable didn't signal\n * a change through one of the observer methods, the observer can assume that the\n * observable didn't change.\n * If an observable reported a possible change, {@link IObservable.reportChanges} forces\n * the observable to report an actual change if there was one.\n */\nexport interface IObserver {\n\t/**\n\t * Signals that the given observable might have changed and a transaction potentially modifying that observable started.\n\t * Before the given observable can call this method again, is must call {@link IObserver.endUpdate}.\n\t *\n\t * Implementations must not get/read the value of other observables, as they might not have received this event yet!\n\t * The method {@link IObservable.reportChanges} can be used to force the observable to report the changes.\n\t */\n\tbeginUpdate<T>(observable: IObservable<T>): void;\n\n\t/**\n\t * Signals that the transaction that potentially modified the given observable ended.\n\t * This is a good place to react to (potential) changes.\n\t */\n\tendUpdate<T>(observable: IObservable<T>): void;\n\n\t/**\n\t * Signals that the given observable might have changed.\n\t * The method {@link IObservable.reportChanges} can be used to force the observable to report the changes.\n\t *\n\t * Implementations must not get/read the value of other observables, as they might not have received this event yet!\n\t * The change should be processed lazily or in {@link IObserver.endUpdate}.\n\t */\n\thandlePossibleChange<T>(observable: IObservable<T>): void;\n\n\t/**\n\t * Signals that the given {@link observable} changed.\n\t *\n\t * Implementations must not get/read the value of other observables, as they might not have received this event yet!\n\t * The change should be processed lazily or in {@link IObserver.endUpdate}.\n\t *\n\t * @param change Indicates how or why the value changed.\n\t */\n\thandleChange<T, TChange>(observable: IObservableWithChange<T, TChange>, change: TChange): void;\n}\n\nexport interface IReader {\n\t/**\n\t * Reads the value of an observable and subscribes to it.\n\t */\n\treadObservable<T>(observable: IObservableWithChange<T, any>): T;\n}\n\nexport interface ISettable<T, TChange = void> {\n\t/**\n\t * Sets the value of the observable.\n\t * Use a transaction to batch multiple changes (with a transaction, observers only react at the end of the transaction).\n\t *\n\t * @param transaction When given, value changes are handled on demand or when the transaction ends.\n\t * @param change Describes how or why the value changed.\n\t */\n\tset(value: T, transaction: ITransaction | undefined, change: TChange): void;\n}\n\nexport interface ITransaction {\n\t/**\n\t * Calls {@link Observer.beginUpdate} immediately\n\t * and {@link Observer.endUpdate} when the transaction ends.\n\t */\n\tupdateObserver(observer: IObserver, observable: IObservableWithChange<any, any>): void;\n}\n\n/**\n * This function is used to indicate that the caller recovered from an error that indicates a bug.\n*/\nexport function handleBugIndicatingErrorRecovery(message: string) {\n\tconst err = new Error('BugIndicatingErrorRecovery: ' + message);\n\tonUnexpectedError(err);\n\tconsole.error('recovered from an error that indicates a bug', err);\n}\n\n/**\n * A settable observable.\n */\nexport interface ISettableObservable<T, TChange = void> extends IObservableWithChange<T, TChange>, ISettable<T, TChange> {\n}\n\nexport interface IReaderWithStore extends IReader {\n\t/**\n\t * Items in this store get disposed just before the observable recomputes/reruns or when it becomes unobserved.\n\t*/\n\tget store(): DisposableStore;\n\n\t/**\n\t * Items in this store get disposed just after the observable recomputes/reruns or when it becomes unobserved.\n\t * This is important if the current run needs the undisposed result from the last run.\n\t *\n\t * Warning: Items in this store might still get disposed before dependents (that read the now disposed value in the past) are recomputed with the new (undisposed) value!\n\t * A clean solution for this is ref counting.\n\t*/\n\tget delayedStore(): DisposableStore;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "045c9da9d82914e3f3a5c4f9d840170e2ad4a3bc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2mm2hwfokx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2mm2hwfokx();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { onUnexpectedError } from './commonFacade/deps.js';
+/**
+ * This function is used to indicate that the caller recovered from an error that indicates a bug.
+*/
+export function handleBugIndicatingErrorRecovery(message) {
+  /* istanbul ignore next */
+  cov_2mm2hwfokx().f[0]++;
+  const err =
+  /* istanbul ignore next */
+  (cov_2mm2hwfokx().s[0]++, new Error('BugIndicatingErrorRecovery: ' + message));
+  /* istanbul ignore next */
+  cov_2mm2hwfokx().s[1]++;
+  onUnexpectedError(err);
+  /* istanbul ignore next */
+  cov_2mm2hwfokx().s[2]++;
+  console.error('recovered from an error that indicates a bug', err);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJvblVuZXhwZWN0ZWRFcnJvciIsImhhbmRsZUJ1Z0luZGljYXRpbmdFcnJvclJlY292ZXJ5IiwibWVzc2FnZSIsImNvdl8ybW0yaHdmb2t4IiwiZiIsImVyciIsInMiLCJFcnJvciIsImNvbnNvbGUiLCJlcnJvciJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvYmFzZS9jb21tb24vb2JzZXJ2YWJsZUludGVybmFsL2Jhc2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IERpc3Bvc2FibGVTdG9yZSwgb25VbmV4cGVjdGVkRXJyb3IgfSBmcm9tICcuL2NvbW1vbkZhY2FkZS9kZXBzLmpzJztcblxuLyoqXG4gKiBSZXByZXNlbnRzIGFuIG9ic2VydmFibGUgdmFsdWUuXG4gKlxuICogQHRlbXBsYXRlIFQgVGhlIHR5cGUgb2YgdGhlIHZhbHVlcyB0aGUgb2JzZXJ2YWJsZSBjYW4gaG9sZC5cbiAqL1xuLy8gVGhpcyBpbnRlcmZhY2UgZXhpc3RzIHNvIHRoYXQsIGZvciBleGFtcGxlIGZvciBzdHJpbmcgb2JzZXJ2YWJsZXMsXG4vLyB0eXBlc2NyaXB0IHJlbmRlcnMgdGhlIHR5cGUgYXMgYElPYnNlcnZhYmxlPHN0cmluZz5gIGluc3RlYWQgb2YgYElPYnNlcnZhYmxlPHN0cmluZywgdW5rbm93bj5gLlxuZXhwb3J0IGludGVyZmFjZSBJT2JzZXJ2YWJsZTxUPiBleHRlbmRzIElPYnNlcnZhYmxlV2l0aENoYW5nZTxULCB1bmtub3duPiB7IH1cblxuLyoqXG4gKiBSZXByZXNlbnRzIGFuIG9ic2VydmFibGUgdmFsdWUuXG4gKlxuICogQHRlbXBsYXRlIFQgVGhlIHR5cGUgb2YgdGhlIHZhbHVlcyB0aGUgb2JzZXJ2YWJsZSBjYW4gaG9sZC5cbiAqIEB0ZW1wbGF0ZSBUQ2hhbmdlIFRoZSB0eXBlIHVzZWQgdG8gZGVzY3JpYmUgdmFsdWUgY2hhbmdlc1xuICogKHVzdWFsbHkgYHZvaWRgIGFuZCBvbmx5IHVzZWQgaW4gYWR2YW5jZWQgc2NlbmFyaW9zKS5cbiAqIFdoaWxlIG9ic2VydmVycyBjYW4gbWlzcyB0ZW1wb3JhcnkgdmFsdWVzIG9mIGFuIG9ic2VydmFibGUsXG4gKiB0aGV5IHdpbGwgcmVjZWl2ZSBhbGwgY2hhbmdlIHZhbHVlcyAoYXMgbG9uZyBhcyB0aGV5IGFyZSBzdWJzY3JpYmVkKSFcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJT2JzZXJ2YWJsZVdpdGhDaGFuZ2U8VCwgVENoYW5nZSA9IHVua25vd24+IHtcblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIGN1cnJlbnQgdmFsdWUuXG5cdCAqXG5cdCAqIENhbGxzIHtAbGluayBJT2JzZXJ2ZXIuaGFuZGxlQ2hhbmdlfSBpZiB0aGUgb2JzZXJ2YWJsZSBub3RpY2VzIHRoYXQgdGhlIHZhbHVlIGNoYW5nZWQuXG5cdCAqIE11c3Qgbm90IGJlIGNhbGxlZCBmcm9tIHtAbGluayBJT2JzZXJ2ZXIuaGFuZGxlQ2hhbmdlfSFcblx0ICovXG5cdGdldCgpOiBUO1xuXG5cdC8qKlxuXHQgKiBGb3JjZXMgdGhlIG9ic2VydmFibGUgdG8gY2hlY2sgZm9yIGNoYW5nZXMgYW5kIHJlcG9ydCB0aGVtLlxuXHQgKlxuXHQgKiBIYXMgdGhlIHNhbWUgZWZmZWN0IGFzIGNhbGxpbmcge0BsaW5rIElPYnNlcnZhYmxlLmdldH0sIGJ1dCBkb2VzIG5vdCBmb3JjZSB0aGUgb2JzZXJ2YWJsZVxuXHQgKiB0byBhY3R1YWxseSBjb25zdHJ1Y3QgdGhlIHZhbHVlLCBlLmcuIGlmIGNoYW5nZSBkZWx0YXMgYXJlIHVzZWQuXG5cdCAqIENhbGxzIHtAbGluayBJT2JzZXJ2ZXIuaGFuZGxlQ2hhbmdlfSBpZiB0aGUgb2JzZXJ2YWJsZSBub3RpY2VzIHRoYXQgdGhlIHZhbHVlIGNoYW5nZWQuXG5cdCAqIE11c3Qgbm90IGJlIGNhbGxlZCBmcm9tIHtAbGluayBJT2JzZXJ2ZXIuaGFuZGxlQ2hhbmdlfSFcblx0ICovXG5cdHJlcG9ydENoYW5nZXMoKTogdm9pZDtcblxuXHQvKipcblx0ICogQWRkcyB0aGUgb2JzZXJ2ZXIgdG8gdGhlIHNldCBvZiBzdWJzY3JpYmVkIG9ic2VydmVycy5cblx0ICogVGhpcyBtZXRob2QgaXMgaWRlbXBvdGVudC5cblx0ICovXG5cdGFkZE9ic2VydmVyKG9ic2VydmVyOiBJT2JzZXJ2ZXIpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBSZW1vdmVzIHRoZSBvYnNlcnZlciBmcm9tIHRoZSBzZXQgb2Ygc3Vic2NyaWJlZCBvYnNlcnZlcnMuXG5cdCAqIFRoaXMgbWV0aG9kIGlzIGlkZW1wb3RlbnQuXG5cdCAqL1xuXHRyZW1vdmVPYnNlcnZlcihvYnNlcnZlcjogSU9ic2VydmVyKTogdm9pZDtcblxuXHQvLyAjcmVnaW9uIFRoZXNlIG1lbWJlcnMgaGF2ZSBhIHN0YW5kYXJkIGltcGxlbWVudGF0aW9uIGFuZCBhcmUgb25seSBwYXJ0IG9mIHRoZSBpbnRlcmZhY2UgZm9yIGNvbnZlbmllbmNlLlxuXG5cdC8qKlxuXHQgKiBSZWFkcyB0aGUgY3VycmVudCB2YWx1ZSBhbmQgc3Vic2NyaWJlcyB0aGUgcmVhZGVyIHRvIHRoaXMgb2JzZXJ2YWJsZS5cblx0ICpcblx0ICogQ2FsbHMge0BsaW5rIElSZWFkZXIucmVhZE9ic2VydmFibGV9IGlmIGEgcmVhZGVyIGlzIGdpdmVuLCBvdGhlcndpc2Uge0BsaW5rIElPYnNlcnZhYmxlLmdldH1cblx0ICogKHNlZSB7QGxpbmsgQ29udmVuaWVudE9ic2VydmFibGUucmVhZH0gZm9yIHRoZSBpbXBsZW1lbnRhdGlvbikuXG5cdCAqL1xuXHRyZWFkKHJlYWRlcjogSVJlYWRlciB8IHVuZGVmaW5lZCk6IFQ7XG5cblx0LyoqXG5cdCAqIE1ha2VzIHN1cmUgdGhpcyB2YWx1ZSBpcyBjb21wdXRlZCBlYWdlcmx5LlxuXHQgKi9cblx0cmVjb21wdXRlSW5pdGlhbGx5QW5kT25DaGFuZ2Uoc3RvcmU6IERpc3Bvc2FibGVTdG9yZSwgaGFuZGxlVmFsdWU/OiAodmFsdWU6IFQpID0+IHZvaWQpOiBJT2JzZXJ2YWJsZTxUPjtcblxuXHQvKipcblx0ICogTWFrZXMgc3VyZSB0aGlzIHZhbHVlIGlzIGNhY2hlZC5cblx0ICovXG5cdGtlZXBPYnNlcnZlZChzdG9yZTogRGlzcG9zYWJsZVN0b3JlKTogSU9ic2VydmFibGU8VD47XG5cblx0LyoqXG5cdCAqIENyZWF0ZXMgYSBkZXJpdmVkIG9ic2VydmFibGUgdGhhdCBkZXBlbmRzIG9uIHRoaXMgb2JzZXJ2YWJsZS5cblx0ICogVXNlIHRoZSByZWFkZXIgdG8gcmVhZCBvdGhlciBvYnNlcnZhYmxlc1xuXHQgKiAoc2VlIHtAbGluayBDb252ZW5pZW50T2JzZXJ2YWJsZS5tYXB9IGZvciB0aGUgaW1wbGVtZW50YXRpb24pLlxuXHQgKi9cblx0bWFwPFROZXc+KGZuOiAodmFsdWU6IFQsIHJlYWRlcjogSVJlYWRlcikgPT4gVE5ldyk6IElPYnNlcnZhYmxlPFROZXc+O1xuXHRtYXA8VE5ldz4ob3duZXI6IG9iamVjdCwgZm46ICh2YWx1ZTogVCwgcmVhZGVyOiBJUmVhZGVyKSA9PiBUTmV3KTogSU9ic2VydmFibGU8VE5ldz47XG5cblx0ZmxhdHRlbjxUTmV3Pih0aGlzOiBJT2JzZXJ2YWJsZTxJT2JzZXJ2YWJsZTxUTmV3Pj4pOiBJT2JzZXJ2YWJsZTxUTmV3PjtcblxuXHQvKipcblx0ICogT05MWSBGT1IgREVCVUdHSU5HIVxuXHQgKiBMb2dzIGNvbXB1dGF0aW9ucyBvZiB0aGlzIGRlcml2ZWQuXG5cdCovXG5cdGxvZygpOiBJT2JzZXJ2YWJsZVdpdGhDaGFuZ2U8VCwgVENoYW5nZT47XG5cblx0LyoqXG5cdCAqIEEgaHVtYW4tcmVhZGFibGUgbmFtZSBmb3IgZGVidWdnaW5nIHB1cnBvc2VzLlxuXHQgKi9cblx0cmVhZG9ubHkgZGVidWdOYW1lOiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIFRoaXMgcHJvcGVydHkgY2FwdHVyZXMgdGhlIHR5cGUgb2YgdGhlIGNoYW5nZSBvYmplY3QuIERvIG5vdCB1c2UgaXQgYXQgcnVudGltZSFcblx0ICovXG5cdHJlYWRvbmx5IFRDaGFuZ2U6IFRDaGFuZ2U7XG5cblx0Ly8gI2VuZHJlZ2lvblxufVxuXG4vKipcbiAqIFJlcHJlc2VudHMgYW4gb2JzZXJ2ZXIgdGhhdCBjYW4gYmUgc3Vic2NyaWJlZCB0byBhbiBvYnNlcnZhYmxlLlxuICpcbiAqIElmIGFuIG9ic2VydmVyIGlzIHN1YnNjcmliZWQgdG8gYW4gb2JzZXJ2YWJsZSBhbmQgdGhhdCBvYnNlcnZhYmxlIGRpZG4ndCBzaWduYWxcbiAqIGEgY2hhbmdlIHRocm91Z2ggb25lIG9mIHRoZSBvYnNlcnZlciBtZXRob2RzLCB0aGUgb2JzZXJ2ZXIgY2FuIGFzc3VtZSB0aGF0IHRoZVxuICogb2JzZXJ2YWJsZSBkaWRuJ3QgY2hhbmdlLlxuICogSWYgYW4gb2JzZXJ2YWJsZSByZXBvcnRlZCBhIHBvc3NpYmxlIGNoYW5nZSwge0BsaW5rIElPYnNlcnZhYmxlLnJlcG9ydENoYW5nZXN9IGZvcmNlc1xuICogdGhlIG9ic2VydmFibGUgdG8gcmVwb3J0IGFuIGFjdHVhbCBjaGFuZ2UgaWYgdGhlcmUgd2FzIG9uZS5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJT2JzZXJ2ZXIge1xuXHQvKipcblx0ICogU2lnbmFscyB0aGF0IHRoZSBnaXZlbiBvYnNlcnZhYmxlIG1pZ2h0IGhhdmUgY2hhbmdlZCBhbmQgYSB0cmFuc2FjdGlvbiBwb3RlbnRpYWxseSBtb2RpZnlpbmcgdGhhdCBvYnNlcnZhYmxlIHN0YXJ0ZWQuXG5cdCAqIEJlZm9yZSB0aGUgZ2l2ZW4gb2JzZXJ2YWJsZSBjYW4gY2FsbCB0aGlzIG1ldGhvZCBhZ2FpbiwgaXMgbXVzdCBjYWxsIHtAbGluayBJT2JzZXJ2ZXIuZW5kVXBkYXRlfS5cblx0ICpcblx0ICogSW1wbGVtZW50YXRpb25zIG11c3Qgbm90IGdldC9yZWFkIHRoZSB2YWx1ZSBvZiBvdGhlciBvYnNlcnZhYmxlcywgYXMgdGhleSBtaWdodCBub3QgaGF2ZSByZWNlaXZlZCB0aGlzIGV2ZW50IHlldCFcblx0ICogVGhlIG1ldGhvZCB7QGxpbmsgSU9ic2VydmFibGUucmVwb3J0Q2hhbmdlc30gY2FuIGJlIHVzZWQgdG8gZm9yY2UgdGhlIG9ic2VydmFibGUgdG8gcmVwb3J0IHRoZSBjaGFuZ2VzLlxuXHQgKi9cblx0YmVnaW5VcGRhdGU8VD4ob2JzZXJ2YWJsZTogSU9ic2VydmFibGU8VD4pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBTaWduYWxzIHRoYXQgdGhlIHRyYW5zYWN0aW9uIHRoYXQgcG90ZW50aWFsbHkgbW9kaWZpZWQgdGhlIGdpdmVuIG9ic2VydmFibGUgZW5kZWQuXG5cdCAqIFRoaXMgaXMgYSBnb29kIHBsYWNlIHRvIHJlYWN0IHRvIChwb3RlbnRpYWwpIGNoYW5nZXMuXG5cdCAqL1xuXHRlbmRVcGRhdGU8VD4ob2JzZXJ2YWJsZTogSU9ic2VydmFibGU8VD4pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBTaWduYWxzIHRoYXQgdGhlIGdpdmVuIG9ic2VydmFibGUgbWlnaHQgaGF2ZSBjaGFuZ2VkLlxuXHQgKiBUaGUgbWV0aG9kIHtAbGluayBJT2JzZXJ2YWJsZS5yZXBvcnRDaGFuZ2VzfSBjYW4gYmUgdXNlZCB0byBmb3JjZSB0aGUgb2JzZXJ2YWJsZSB0byByZXBvcnQgdGhlIGNoYW5nZXMuXG5cdCAqXG5cdCAqIEltcGxlbWVudGF0aW9ucyBtdXN0IG5vdCBnZXQvcmVhZCB0aGUgdmFsdWUgb2Ygb3RoZXIgb2JzZXJ2YWJsZXMsIGFzIHRoZXkgbWlnaHQgbm90IGhhdmUgcmVjZWl2ZWQgdGhpcyBldmVudCB5ZXQhXG5cdCAqIFRoZSBjaGFuZ2Ugc2hvdWxkIGJlIHByb2Nlc3NlZCBsYXppbHkgb3IgaW4ge0BsaW5rIElPYnNlcnZlci5lbmRVcGRhdGV9LlxuXHQgKi9cblx0aGFuZGxlUG9zc2libGVDaGFuZ2U8VD4ob2JzZXJ2YWJsZTogSU9ic2VydmFibGU8VD4pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBTaWduYWxzIHRoYXQgdGhlIGdpdmVuIHtAbGluayBvYnNlcnZhYmxlfSBjaGFuZ2VkLlxuXHQgKlxuXHQgKiBJbXBsZW1lbnRhdGlvbnMgbXVzdCBub3QgZ2V0L3JlYWQgdGhlIHZhbHVlIG9mIG90aGVyIG9ic2VydmFibGVzLCBhcyB0aGV5IG1pZ2h0IG5vdCBoYXZlIHJlY2VpdmVkIHRoaXMgZXZlbnQgeWV0IVxuXHQgKiBUaGUgY2hhbmdlIHNob3VsZCBiZSBwcm9jZXNzZWQgbGF6aWx5IG9yIGluIHtAbGluayBJT2JzZXJ2ZXIuZW5kVXBkYXRlfS5cblx0ICpcblx0ICogQHBhcmFtIGNoYW5nZSBJbmRpY2F0ZXMgaG93IG9yIHdoeSB0aGUgdmFsdWUgY2hhbmdlZC5cblx0ICovXG5cdGhhbmRsZUNoYW5nZTxULCBUQ2hhbmdlPihvYnNlcnZhYmxlOiBJT2JzZXJ2YWJsZVdpdGhDaGFuZ2U8VCwgVENoYW5nZT4sIGNoYW5nZTogVENoYW5nZSk6IHZvaWQ7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlYWRlciB7XG5cdC8qKlxuXHQgKiBSZWFkcyB0aGUgdmFsdWUgb2YgYW4gb2JzZXJ2YWJsZSBhbmQgc3Vic2NyaWJlcyB0byBpdC5cblx0ICovXG5cdHJlYWRPYnNlcnZhYmxlPFQ+KG9ic2VydmFibGU6IElPYnNlcnZhYmxlV2l0aENoYW5nZTxULCBhbnk+KTogVDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJU2V0dGFibGU8VCwgVENoYW5nZSA9IHZvaWQ+IHtcblx0LyoqXG5cdCAqIFNldHMgdGhlIHZhbHVlIG9mIHRoZSBvYnNlcnZhYmxlLlxuXHQgKiBVc2UgYSB0cmFuc2FjdGlvbiB0byBiYXRjaCBtdWx0aXBsZSBjaGFuZ2VzICh3aXRoIGEgdHJhbnNhY3Rpb24sIG9ic2VydmVycyBvbmx5IHJlYWN0IGF0IHRoZSBlbmQgb2YgdGhlIHRyYW5zYWN0aW9uKS5cblx0ICpcblx0ICogQHBhcmFtIHRyYW5zYWN0aW9uIFdoZW4gZ2l2ZW4sIHZhbHVlIGNoYW5nZXMgYXJlIGhhbmRsZWQgb24gZGVtYW5kIG9yIHdoZW4gdGhlIHRyYW5zYWN0aW9uIGVuZHMuXG5cdCAqIEBwYXJhbSBjaGFuZ2UgRGVzY3JpYmVzIGhvdyBvciB3aHkgdGhlIHZhbHVlIGNoYW5nZWQuXG5cdCAqL1xuXHRzZXQodmFsdWU6IFQsIHRyYW5zYWN0aW9uOiBJVHJhbnNhY3Rpb24gfCB1bmRlZmluZWQsIGNoYW5nZTogVENoYW5nZSk6IHZvaWQ7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVRyYW5zYWN0aW9uIHtcblx0LyoqXG5cdCAqIENhbGxzIHtAbGluayBPYnNlcnZlci5iZWdpblVwZGF0ZX0gaW1tZWRpYXRlbHlcblx0ICogYW5kIHtAbGluayBPYnNlcnZlci5lbmRVcGRhdGV9IHdoZW4gdGhlIHRyYW5zYWN0aW9uIGVuZHMuXG5cdCAqL1xuXHR1cGRhdGVPYnNlcnZlcihvYnNlcnZlcjogSU9ic2VydmVyLCBvYnNlcnZhYmxlOiBJT2JzZXJ2YWJsZVdpdGhDaGFuZ2U8YW55LCBhbnk+KTogdm9pZDtcbn1cblxuLyoqXG4gKiBUaGlzIGZ1bmN0aW9uIGlzIHVzZWQgdG8gaW5kaWNhdGUgdGhhdCB0aGUgY2FsbGVyIHJlY292ZXJlZCBmcm9tIGFuIGVycm9yIHRoYXQgaW5kaWNhdGVzIGEgYnVnLlxuKi9cbmV4cG9ydCBmdW5jdGlvbiBoYW5kbGVCdWdJbmRpY2F0aW5nRXJyb3JSZWNvdmVyeShtZXNzYWdlOiBzdHJpbmcpIHtcblx0Y29uc3QgZXJyID0gbmV3IEVycm9yKCdCdWdJbmRpY2F0aW5nRXJyb3JSZWNvdmVyeTogJyArIG1lc3NhZ2UpO1xuXHRvblVuZXhwZWN0ZWRFcnJvcihlcnIpO1xuXHRjb25zb2xlLmVycm9yKCdyZWNvdmVyZWQgZnJvbSBhbiBlcnJvciB0aGF0IGluZGljYXRlcyBhIGJ1ZycsIGVycik7XG59XG5cbi8qKlxuICogQSBzZXR0YWJsZSBvYnNlcnZhYmxlLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElTZXR0YWJsZU9ic2VydmFibGU8VCwgVENoYW5nZSA9IHZvaWQ+IGV4dGVuZHMgSU9ic2VydmFibGVXaXRoQ2hhbmdlPFQsIFRDaGFuZ2U+LCBJU2V0dGFibGU8VCwgVENoYW5nZT4ge1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElSZWFkZXJXaXRoU3RvcmUgZXh0ZW5kcyBJUmVhZGVyIHtcblx0LyoqXG5cdCAqIEl0ZW1zIGluIHRoaXMgc3RvcmUgZ2V0IGRpc3Bvc2VkIGp1c3QgYmVmb3JlIHRoZSBvYnNlcnZhYmxlIHJlY29tcHV0ZXMvcmVydW5zIG9yIHdoZW4gaXQgYmVjb21lcyB1bm9ic2VydmVkLlxuXHQqL1xuXHRnZXQgc3RvcmUoKTogRGlzcG9zYWJsZVN0b3JlO1xuXG5cdC8qKlxuXHQgKiBJdGVtcyBpbiB0aGlzIHN0b3JlIGdldCBkaXNwb3NlZCBqdXN0IGFmdGVyIHRoZSBvYnNlcnZhYmxlIHJlY29tcHV0ZXMvcmVydW5zIG9yIHdoZW4gaXQgYmVjb21lcyB1bm9ic2VydmVkLlxuXHQgKiBUaGlzIGlzIGltcG9ydGFudCBpZiB0aGUgY3VycmVudCBydW4gbmVlZHMgdGhlIHVuZGlzcG9zZWQgcmVzdWx0IGZyb20gdGhlIGxhc3QgcnVuLlxuXHQgKlxuXHQgKiBXYXJuaW5nOiBJdGVtcyBpbiB0aGlzIHN0b3JlIG1pZ2h0IHN0aWxsIGdldCBkaXNwb3NlZCBiZWZvcmUgZGVwZW5kZW50cyAodGhhdCByZWFkIHRoZSBub3cgZGlzcG9zZWQgdmFsdWUgaW4gdGhlIHBhc3QpIGFyZSByZWNvbXB1dGVkIHdpdGggdGhlIG5ldyAodW5kaXNwb3NlZCkgdmFsdWUhXG5cdCAqIEEgY2xlYW4gc29sdXRpb24gZm9yIHRoaXMgaXMgcmVmIGNvdW50aW5nLlxuXHQqL1xuXHRnZXQgZGVsYXllZFN0b3JlKCk6IERpc3Bvc2FibGVTdG9yZTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQTBCQSxpQkFBaUIsUUFBUSx3QkFBd0I7QUEySzNFOzs7QUFHQSxPQUFNLFNBQVVDLGdDQUFnQ0EsQ0FBQ0MsT0FBZTtFQUFBO0VBQUFDLGNBQUEsR0FBQUMsQ0FBQTtFQUMvRCxNQUFNQyxHQUFHO0VBQUE7RUFBQSxDQUFBRixjQUFBLEdBQUFHLENBQUEsT0FBRyxJQUFJQyxLQUFLLENBQUMsOEJBQThCLEdBQUdMLE9BQU8sQ0FBQztFQUFDO0VBQUFDLGNBQUEsR0FBQUcsQ0FBQTtFQUNoRU4saUJBQWlCLENBQUNLLEdBQUcsQ0FBQztFQUFDO0VBQUFGLGNBQUEsR0FBQUcsQ0FBQTtFQUN2QkUsT0FBTyxDQUFDQyxLQUFLLENBQUMsOENBQThDLEVBQUVKLEdBQUcsQ0FBQztBQUNuRSIsImlnbm9yZUxpc3QiOltdfQ==

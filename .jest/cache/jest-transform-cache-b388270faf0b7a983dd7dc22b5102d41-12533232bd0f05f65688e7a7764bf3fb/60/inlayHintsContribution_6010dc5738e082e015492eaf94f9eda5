@@ -1,0 +1,79 @@
+b95dcab1361e4666b773afd37e08da30
+/* istanbul ignore next */
+function cov_ngfvsh105() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/inlayHints/browser/inlayHintsContribution.ts";
+  var hash = "2d91f2f05013157829a89b73d01425deb559b6ec";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/inlayHints/browser/inlayHintsContribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 132
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 51
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/inlayHints/browser/inlayHintsContribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAmC,0BAA0B,EAAE,MAAM,sCAAsC,CAAC;AACnH,OAAO,EAAE,wBAAwB,EAAE,MAAM,mCAAmC,CAAC;AAC7E,OAAO,EAAE,oBAAoB,EAAE,MAAM,2BAA2B,CAAC;AACjE,OAAO,EAAE,eAAe,EAAE,MAAM,sBAAsB,CAAC;AAEvD,0BAA0B,CAAC,oBAAoB,CAAC,EAAE,EAAE,oBAAoB,2DAAmD,CAAC;AAC5H,wBAAwB,CAAC,QAAQ,CAAC,eAAe,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/inlayHints/browser/inlayHintsContribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { EditorContributionInstantiation, registerEditorContribution } from '../../../browser/editorExtensions.js';\nimport { HoverParticipantRegistry } from '../../hover/browser/hoverTypes.js';\nimport { InlayHintsController } from './inlayHintsController.js';\nimport { InlayHintsHover } from './inlayHintsHover.js';\n\nregisterEditorContribution(InlayHintsController.ID, InlayHintsController, EditorContributionInstantiation.AfterFirstRender);\nHoverParticipantRegistry.register(InlayHintsHover);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2d91f2f05013157829a89b73d01425deb559b6ec"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ngfvsh105 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ngfvsh105();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+import { HoverParticipantRegistry } from '../../hover/browser/hoverTypes.js';
+import { InlayHintsController } from './inlayHintsController.js';
+import { InlayHintsHover } from './inlayHintsHover.js';
+/* istanbul ignore next */
+cov_ngfvsh105().s[0]++;
+registerEditorContribution(InlayHintsController.ID, InlayHintsController, 1 /* EditorContributionInstantiation.AfterFirstRender */);
+/* istanbul ignore next */
+cov_ngfvsh105().s[1]++;
+HoverParticipantRegistry.register(InlayHintsHover);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlckVkaXRvckNvbnRyaWJ1dGlvbiIsIkhvdmVyUGFydGljaXBhbnRSZWdpc3RyeSIsIklubGF5SGludHNDb250cm9sbGVyIiwiSW5sYXlIaW50c0hvdmVyIiwiY292X25nZnZzaDEwNSIsInMiLCJJRCIsInJlZ2lzdGVyIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29udHJpYi9pbmxheUhpbnRzL2Jyb3dzZXIvaW5sYXlIaW50c0NvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRWRpdG9yQ29udHJpYnV0aW9uSW5zdGFudGlhdGlvbiwgcmVnaXN0ZXJFZGl0b3JDb250cmlidXRpb24gfSBmcm9tICcuLi8uLi8uLi9icm93c2VyL2VkaXRvckV4dGVuc2lvbnMuanMnO1xuaW1wb3J0IHsgSG92ZXJQYXJ0aWNpcGFudFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vaG92ZXIvYnJvd3Nlci9ob3ZlclR5cGVzLmpzJztcbmltcG9ydCB7IElubGF5SGludHNDb250cm9sbGVyIH0gZnJvbSAnLi9pbmxheUhpbnRzQ29udHJvbGxlci5qcyc7XG5pbXBvcnQgeyBJbmxheUhpbnRzSG92ZXIgfSBmcm9tICcuL2lubGF5SGludHNIb3Zlci5qcyc7XG5cbnJlZ2lzdGVyRWRpdG9yQ29udHJpYnV0aW9uKElubGF5SGludHNDb250cm9sbGVyLklELCBJbmxheUhpbnRzQ29udHJvbGxlciwgRWRpdG9yQ29udHJpYnV0aW9uSW5zdGFudGlhdGlvbi5BZnRlckZpcnN0UmVuZGVyKTtcbkhvdmVyUGFydGljaXBhbnRSZWdpc3RyeS5yZWdpc3RlcihJbmxheUhpbnRzSG92ZXIpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQTBDQSwwQkFBMEIsUUFBUSxzQ0FBc0M7QUFDbEgsU0FBU0Msd0JBQXdCLFFBQVEsbUNBQW1DO0FBQzVFLFNBQVNDLG9CQUFvQixRQUFRLDJCQUEyQjtBQUNoRSxTQUFTQyxlQUFlLFFBQVEsc0JBQXNCO0FBQUM7QUFBQUMsYUFBQSxHQUFBQyxDQUFBO0FBRXZETCwwQkFBMEIsQ0FBQ0Usb0JBQW9CLENBQUNJLEVBQUUsRUFBRUosb0JBQW9CLDJEQUFtRDtBQUFDO0FBQUFFLGFBQUEsR0FBQUMsQ0FBQTtBQUM1SEosd0JBQXdCLENBQUNNLFFBQVEsQ0FBQ0osZUFBZSxDQUFDIiwiaWdub3JlTGlzdCI6W119

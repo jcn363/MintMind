@@ -1,0 +1,64 @@
+37d3356bc6711620fd6d40becef6cc1f
+/* istanbul ignore next */
+function cov_1klcr7a0o3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/userDataProfile/browser/userDataProfile.contribution.ts";
+  var hash = "af8a9625d48b829de49a445f97e97ba02f8e12ea";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/userDataProfile/browser/userDataProfile.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 8,
+          column: 149
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/userDataProfile/browser/userDataProfile.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAkB,8BAA8B,EAAE,MAAM,kCAAkC,CAAC;AAClG,OAAO,EAAE,qCAAqC,EAAE,MAAM,sBAAsB,CAAC;AAC7E,OAAO,6BAA6B,CAAC;AAErC,8BAA8B,CAAC,qCAAqC,CAAC,EAAE,EAAE,qCAAqC,sCAA8B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/userDataProfile/browser/userDataProfile.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';\nimport { UserDataProfilesWorkbenchContribution } from './userDataProfile.js';\nimport './userDataProfileActions.js';\n\nregisterWorkbenchContribution2(UserDataProfilesWorkbenchContribution.ID, UserDataProfilesWorkbenchContribution, WorkbenchPhase.BlockRestore);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "af8a9625d48b829de49a445f97e97ba02f8e12ea"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1klcr7a0o3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1klcr7a0o3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerWorkbenchContribution2 } from '../../../common/contributions.js';
+import { UserDataProfilesWorkbenchContribution } from './userDataProfile.js';
+import './userDataProfileActions.js';
+/* istanbul ignore next */
+cov_1klcr7a0o3().s[0]++;
+registerWorkbenchContribution2(UserDataProfilesWorkbenchContribution.ID, UserDataProfilesWorkbenchContribution, 2 /* WorkbenchPhase.BlockRestore */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIiLCJVc2VyRGF0YVByb2ZpbGVzV29ya2JlbmNoQ29udHJpYnV0aW9uIiwiY292XzFrbGNyN2EwbzMiLCJzIiwiSUQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3VzZXJEYXRhUHJvZmlsZS9icm93c2VyL3VzZXJEYXRhUHJvZmlsZS5jb250cmlidXRpb24udHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFdvcmtiZW5jaFBoYXNlLCByZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vY29udHJpYnV0aW9ucy5qcyc7XG5pbXBvcnQgeyBVc2VyRGF0YVByb2ZpbGVzV29ya2JlbmNoQ29udHJpYnV0aW9uIH0gZnJvbSAnLi91c2VyRGF0YVByb2ZpbGUuanMnO1xuaW1wb3J0ICcuL3VzZXJEYXRhUHJvZmlsZUFjdGlvbnMuanMnO1xuXG5yZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIoVXNlckRhdGFQcm9maWxlc1dvcmtiZW5jaENvbnRyaWJ1dGlvbi5JRCwgVXNlckRhdGFQcm9maWxlc1dvcmtiZW5jaENvbnRyaWJ1dGlvbiwgV29ya2JlbmNoUGhhc2UuQmxvY2tSZXN0b3JlKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBeUJBLDhCQUE4QixRQUFRLGtDQUFrQztBQUNqRyxTQUFTQyxxQ0FBcUMsUUFBUSxzQkFBc0I7QUFDNUUsT0FBTyw2QkFBNkI7QUFBQztBQUFBQyxjQUFBLEdBQUFDLENBQUE7QUFFckNILDhCQUE4QixDQUFDQyxxQ0FBcUMsQ0FBQ0csRUFBRSxFQUFFSCxxQ0FBcUMsc0NBQThCIiwiaWdub3JlTGlzdCI6W119

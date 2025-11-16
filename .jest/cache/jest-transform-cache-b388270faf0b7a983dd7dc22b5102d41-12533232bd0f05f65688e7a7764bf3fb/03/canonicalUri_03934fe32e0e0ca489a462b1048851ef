@@ -1,0 +1,62 @@
+ee0abd19a41140b33f983915917302d5
+/* istanbul ignore next */
+function cov_20pjca58lm() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/workspace/common/canonicalUri.ts";
+  var hash = "f98a7f0ac07a287472cc82b72b69c28586d6503c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/workspace/common/canonicalUri.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 36
+        },
+        end: {
+          line: 6,
+          column: 82
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/workspace/common/canonicalUri.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAO9E,MAAM,CAAC,MAAM,oBAAoB,GAAG,eAAe,CAAuB,6BAA6B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/workspace/common/canonicalUri.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../base/common/cancellation.js';\nimport { IDisposable } from '../../../base/common/lifecycle.js';\nimport { URI, UriComponents } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport interface ICanonicalUriProvider {\n\treadonly scheme: string;\n\tprovideCanonicalUri(uri: UriComponents, targetScheme: string, token: CancellationToken): Promise<URI | undefined>;\n}\n\nexport const ICanonicalUriService = createDecorator<ICanonicalUriService>('canonicalUriIdentityService');\n\nexport interface ICanonicalUriService {\n\treadonly _serviceBrand: undefined;\n\tregisterCanonicalUriProvider(provider: ICanonicalUriProvider): IDisposable;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f98a7f0ac07a287472cc82b72b69c28586d6503c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_20pjca58lm = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_20pjca58lm();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const ICanonicalUriService =
+/* istanbul ignore next */
+(cov_20pjca58lm().s[0]++, createDecorator('canonicalUriIdentityService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQ2Fub25pY2FsVXJpU2VydmljZSIsImNvdl8yMHBqY2E1OGxtIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vd29ya3NwYWNlL2NvbW1vbi9jYW5vbmljYWxVcmkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IENhbmNlbGxhdGlvblRva2VuIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vY2FuY2VsbGF0aW9uLmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IFVSSSwgVXJpQ29tcG9uZW50cyB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJQ2Fub25pY2FsVXJpUHJvdmlkZXIge1xuXHRyZWFkb25seSBzY2hlbWU6IHN0cmluZztcblx0cHJvdmlkZUNhbm9uaWNhbFVyaSh1cmk6IFVyaUNvbXBvbmVudHMsIHRhcmdldFNjaGVtZTogc3RyaW5nLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPFVSSSB8IHVuZGVmaW5lZD47XG59XG5cbmV4cG9ydCBjb25zdCBJQ2Fub25pY2FsVXJpU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJQ2Fub25pY2FsVXJpU2VydmljZT4oJ2Nhbm9uaWNhbFVyaUlkZW50aXR5U2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElDYW5vbmljYWxVcmlTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXHRyZWdpc3RlckNhbm9uaWNhbFVyaVByb3ZpZGVyKHByb3ZpZGVyOiBJQ2Fub25pY2FsVXJpUHJvdmlkZXIpOiBJRGlzcG9zYWJsZTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBUUEsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQU83RSxPQUFPLE1BQU1DLG9CQUFvQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBdUIsNkJBQTZCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

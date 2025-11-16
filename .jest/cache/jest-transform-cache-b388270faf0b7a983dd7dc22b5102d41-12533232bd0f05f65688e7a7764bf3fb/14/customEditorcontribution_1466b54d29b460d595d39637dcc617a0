@@ -1,0 +1,114 @@
+c16c241e962b164be4eeb537a57c2e65
+/* istanbul ignore next */
+function cov_wj3fqot18() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/customEditor/browser/customEditor.contribution.ts";
+  var hash = "0adf1b17cc5d850c4349e982636a07e46815b8c2";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/customEditor/browser/customEditor.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 16,
+          column: 0
+        },
+        end: {
+          line: 16,
+          column: 96
+        }
+      },
+      "1": {
+        start: {
+          line: 17,
+          column: 0
+        },
+        end: {
+          line: 20,
+          column: 3
+        }
+      },
+      "2": {
+        start: {
+          line: 21,
+          column: 0
+        },
+        end: {
+          line: 22,
+          column: 91
+        }
+      },
+      "3": {
+        start: {
+          line: 23,
+          column: 0
+        },
+        end: {
+          line: 23,
+          column: 149
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/customEditor/browser/customEditor.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,cAAc,EAAE,MAAM,0DAA0D,CAAC;AAC1F,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,oBAAoB,EAAuB,MAAM,4BAA4B,CAAC;AACvF,OAAO,EAAkB,8BAA8B,EAAE,MAAM,kCAAkC,CAAC;AAClG,OAAO,EAAE,gBAAgB,EAA0B,MAAM,2BAA2B,CAAC;AACrF,OAAO,EAAE,qCAAqC,IAAI,qCAAqC,EAAE,2BAA2B,EAAE,MAAM,+BAA+B,CAAC;AAC5J,OAAO,EAAE,oBAAoB,EAAE,MAAM,2BAA2B,CAAC;AACjE,OAAO,EAAE,aAAa,EAAE,MAAM,6CAA6C,CAAC;AAC5E,OAAO,EAAE,iBAAiB,EAAE,MAAM,wBAAwB,CAAC;AAC3D,OAAO,EAAE,mBAAmB,EAAE,MAAM,oBAAoB,CAAC;AAEzD,iBAAiB,CAAC,oBAAoB,EAAE,mBAAmB,oCAA4B,CAAC;AAExF,QAAQ,CAAC,EAAE,CAAsB,gBAAgB,CAAC,UAAU,CAAC;KAC3D,kBAAkB,CAClB,oBAAoB,CAAC,MAAM,CAC1B,aAAa,EACb,aAAa,CAAC,EAAE,EAChB,gBAAgB,CAChB,EAAE;IACH,IAAI,cAAc,CAAC,iBAAiB,CAAC;CACrC,CAAC,CAAC;AAEJ,QAAQ,CAAC,EAAE,CAAyB,gBAAgB,CAAC,aAAa,CAAC;KACjE,wBAAwB,CAAC,2BAA2B,CAAC,EAAE,EAAE,2BAA2B,CAAC,CAAC;AAExF,8BAA8B,CAAC,qCAAqC,CAAC,EAAE,EAAE,qCAAqC,sCAA8B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/customEditor/browser/customEditor.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { EditorPaneDescriptor, IEditorPaneRegistry } from '../../../browser/editor.js';\nimport { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';\nimport { EditorExtensions, IEditorFactoryRegistry } from '../../../common/editor.js';\nimport { ComplexCustomWorkingCopyEditorHandler as ComplexCustomWorkingCopyEditorHandler, CustomEditorInputSerializer } from './customEditorInputFactory.js';\nimport { ICustomEditorService } from '../common/customEditor.js';\nimport { WebviewEditor } from '../../webviewPanel/browser/webviewEditor.js';\nimport { CustomEditorInput } from './customEditorInput.js';\nimport { CustomEditorService } from './customEditors.js';\n\nregisterSingleton(ICustomEditorService, CustomEditorService, InstantiationType.Delayed);\n\nRegistry.as<IEditorPaneRegistry>(EditorExtensions.EditorPane)\n\t.registerEditorPane(\n\t\tEditorPaneDescriptor.create(\n\t\t\tWebviewEditor,\n\t\t\tWebviewEditor.ID,\n\t\t\t'Webview Editor',\n\t\t), [\n\t\tnew SyncDescriptor(CustomEditorInput)\n\t]);\n\nRegistry.as<IEditorFactoryRegistry>(EditorExtensions.EditorFactory)\n\t.registerEditorSerializer(CustomEditorInputSerializer.ID, CustomEditorInputSerializer);\n\nregisterWorkbenchContribution2(ComplexCustomWorkingCopyEditorHandler.ID, ComplexCustomWorkingCopyEditorHandler, WorkbenchPhase.BlockStartup);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0adf1b17cc5d850c4349e982636a07e46815b8c2"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_wj3fqot18 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_wj3fqot18();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { EditorPaneDescriptor } from '../../../browser/editor.js';
+import { registerWorkbenchContribution2 } from '../../../common/contributions.js';
+import { EditorExtensions } from '../../../common/editor.js';
+import { ComplexCustomWorkingCopyEditorHandler, CustomEditorInputSerializer } from './customEditorInputFactory.js';
+import { ICustomEditorService } from '../common/customEditor.js';
+import { WebviewEditor } from '../../webviewPanel/browser/webviewEditor.js';
+import { CustomEditorInput } from './customEditorInput.js';
+import { CustomEditorService } from './customEditors.js';
+/* istanbul ignore next */
+cov_wj3fqot18().s[0]++;
+registerSingleton(ICustomEditorService, CustomEditorService, 1 /* InstantiationType.Delayed */);
+/* istanbul ignore next */
+cov_wj3fqot18().s[1]++;
+Registry.as(EditorExtensions.EditorPane).registerEditorPane(EditorPaneDescriptor.create(WebviewEditor, WebviewEditor.ID, 'Webview Editor'), [new SyncDescriptor(CustomEditorInput)]);
+/* istanbul ignore next */
+cov_wj3fqot18().s[2]++;
+Registry.as(EditorExtensions.EditorFactory).registerEditorSerializer(CustomEditorInputSerializer.ID, CustomEditorInputSerializer);
+/* istanbul ignore next */
+cov_wj3fqot18().s[3]++;
+registerWorkbenchContribution2(ComplexCustomWorkingCopyEditorHandler.ID, ComplexCustomWorkingCopyEditorHandler, 1 /* WorkbenchPhase.BlockStartup */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3Zfd2ozZnFvdDE4IiwiYWN0dWFsQ292ZXJhZ2UiLCJTeW5jRGVzY3JpcHRvciIsInJlZ2lzdGVyU2luZ2xldG9uIiwiUmVnaXN0cnkiLCJFZGl0b3JQYW5lRGVzY3JpcHRvciIsInJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uMiIsIkVkaXRvckV4dGVuc2lvbnMiLCJDb21wbGV4Q3VzdG9tV29ya2luZ0NvcHlFZGl0b3JIYW5kbGVyIiwiQ3VzdG9tRWRpdG9ySW5wdXRTZXJpYWxpemVyIiwiSUN1c3RvbUVkaXRvclNlcnZpY2UiLCJXZWJ2aWV3RWRpdG9yIiwiQ3VzdG9tRWRpdG9ySW5wdXQiLCJDdXN0b21FZGl0b3JTZXJ2aWNlIiwicyIsImFzIiwiRWRpdG9yUGFuZSIsInJlZ2lzdGVyRWRpdG9yUGFuZSIsImNyZWF0ZSIsIklEIiwiRWRpdG9yRmFjdG9yeSIsInJlZ2lzdGVyRWRpdG9yU2VyaWFsaXplciJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvY3VzdG9tRWRpdG9yL2Jyb3dzZXIvY3VzdG9tRWRpdG9yLmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgU3luY0Rlc2NyaXB0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9kZXNjcmlwdG9ycy5qcyc7XG5pbXBvcnQgeyBJbnN0YW50aWF0aW9uVHlwZSwgcmVnaXN0ZXJTaW5nbGV0b24gfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9leHRlbnNpb25zLmpzJztcbmltcG9ydCB7IFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcmVnaXN0cnkvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB7IEVkaXRvclBhbmVEZXNjcmlwdG9yLCBJRWRpdG9yUGFuZVJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vYnJvd3Nlci9lZGl0b3IuanMnO1xuaW1wb3J0IHsgV29ya2JlbmNoUGhhc2UsIHJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uMiB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9jb250cmlidXRpb25zLmpzJztcbmltcG9ydCB7IEVkaXRvckV4dGVuc2lvbnMsIElFZGl0b3JGYWN0b3J5UmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vZWRpdG9yLmpzJztcbmltcG9ydCB7IENvbXBsZXhDdXN0b21Xb3JraW5nQ29weUVkaXRvckhhbmRsZXIgYXMgQ29tcGxleEN1c3RvbVdvcmtpbmdDb3B5RWRpdG9ySGFuZGxlciwgQ3VzdG9tRWRpdG9ySW5wdXRTZXJpYWxpemVyIH0gZnJvbSAnLi9jdXN0b21FZGl0b3JJbnB1dEZhY3RvcnkuanMnO1xuaW1wb3J0IHsgSUN1c3RvbUVkaXRvclNlcnZpY2UgfSBmcm9tICcuLi9jb21tb24vY3VzdG9tRWRpdG9yLmpzJztcbmltcG9ydCB7IFdlYnZpZXdFZGl0b3IgfSBmcm9tICcuLi8uLi93ZWJ2aWV3UGFuZWwvYnJvd3Nlci93ZWJ2aWV3RWRpdG9yLmpzJztcbmltcG9ydCB7IEN1c3RvbUVkaXRvcklucHV0IH0gZnJvbSAnLi9jdXN0b21FZGl0b3JJbnB1dC5qcyc7XG5pbXBvcnQgeyBDdXN0b21FZGl0b3JTZXJ2aWNlIH0gZnJvbSAnLi9jdXN0b21FZGl0b3JzLmpzJztcblxucmVnaXN0ZXJTaW5nbGV0b24oSUN1c3RvbUVkaXRvclNlcnZpY2UsIEN1c3RvbUVkaXRvclNlcnZpY2UsIEluc3RhbnRpYXRpb25UeXBlLkRlbGF5ZWQpO1xuXG5SZWdpc3RyeS5hczxJRWRpdG9yUGFuZVJlZ2lzdHJ5PihFZGl0b3JFeHRlbnNpb25zLkVkaXRvclBhbmUpXG5cdC5yZWdpc3RlckVkaXRvclBhbmUoXG5cdFx0RWRpdG9yUGFuZURlc2NyaXB0b3IuY3JlYXRlKFxuXHRcdFx0V2Vidmlld0VkaXRvcixcblx0XHRcdFdlYnZpZXdFZGl0b3IuSUQsXG5cdFx0XHQnV2VidmlldyBFZGl0b3InLFxuXHRcdCksIFtcblx0XHRuZXcgU3luY0Rlc2NyaXB0b3IoQ3VzdG9tRWRpdG9ySW5wdXQpXG5cdF0pO1xuXG5SZWdpc3RyeS5hczxJRWRpdG9yRmFjdG9yeVJlZ2lzdHJ5PihFZGl0b3JFeHRlbnNpb25zLkVkaXRvckZhY3RvcnkpXG5cdC5yZWdpc3RlckVkaXRvclNlcmlhbGl6ZXIoQ3VzdG9tRWRpdG9ySW5wdXRTZXJpYWxpemVyLklELCBDdXN0b21FZGl0b3JJbnB1dFNlcmlhbGl6ZXIpO1xuXG5yZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIoQ29tcGxleEN1c3RvbVdvcmtpbmdDb3B5RWRpdG9ySGFuZGxlci5JRCwgQ29tcGxleEN1c3RvbVdvcmtpbmdDb3B5RWRpdG9ySGFuZGxlciwgV29ya2JlbmNoUGhhc2UuQmxvY2tTdGFydHVwKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFpQkE7SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQWpCQTs7OztBQUtBLFNBQVNFLGNBQWMsUUFBUSwwREFBMEQ7QUFDekYsU0FBNEJDLGlCQUFpQixRQUFRLHlEQUF5RDtBQUM5RyxTQUFTQyxRQUFRLFFBQVEsa0RBQWtEO0FBQzNFLFNBQVNDLG9CQUFvQixRQUE2Qiw0QkFBNEI7QUFDdEYsU0FBeUJDLDhCQUE4QixRQUFRLGtDQUFrQztBQUNqRyxTQUFTQyxnQkFBZ0IsUUFBZ0MsMkJBQTJCO0FBQ3BGLFNBQVNDLHFDQUE4RSxFQUFFQywyQkFBMkIsUUFBUSwrQkFBK0I7QUFDM0osU0FBU0Msb0JBQW9CLFFBQVEsMkJBQTJCO0FBQ2hFLFNBQVNDLGFBQWEsUUFBUSw2Q0FBNkM7QUFDM0UsU0FBU0MsaUJBQWlCLFFBQVEsd0JBQXdCO0FBQzFELFNBQVNDLG1CQUFtQixRQUFRLG9CQUFvQjtBQUFDO0FBQUFiLGFBQUEsR0FBQWMsQ0FBQTtBQUV6RFgsaUJBQWlCLENBQUNPLG9CQUFvQixFQUFFRyxtQkFBbUIsb0NBQTRCO0FBQUM7QUFBQWIsYUFBQSxHQUFBYyxDQUFBO0FBRXhGVixRQUFRLENBQUNXLEVBQUUsQ0FBc0JSLGdCQUFnQixDQUFDUyxVQUFVLENBQUMsQ0FDM0RDLGtCQUFrQixDQUNsQlosb0JBQW9CLENBQUNhLE1BQU0sQ0FDMUJQLGFBQWEsRUFDYkEsYUFBYSxDQUFDUSxFQUFFLEVBQ2hCLGdCQUFnQixDQUNoQixFQUFFLENBQ0gsSUFBSWpCLGNBQWMsQ0FBQ1UsaUJBQWlCLENBQUMsQ0FDckMsQ0FBQztBQUFDO0FBQUFaLGFBQUEsR0FBQWMsQ0FBQTtBQUVKVixRQUFRLENBQUNXLEVBQUUsQ0FBeUJSLGdCQUFnQixDQUFDYSxhQUFhLENBQUMsQ0FDakVDLHdCQUF3QixDQUFDWiwyQkFBMkIsQ0FBQ1UsRUFBRSxFQUFFViwyQkFBMkIsQ0FBQztBQUFDO0FBQUFULGFBQUEsR0FBQWMsQ0FBQTtBQUV4RlIsOEJBQThCLENBQUNFLHFDQUFxQyxDQUFDVyxFQUFFLEVBQUVYLHFDQUFxQyxzQ0FBOEIiLCJpZ25vcmVMaXN0IjpbXX0=

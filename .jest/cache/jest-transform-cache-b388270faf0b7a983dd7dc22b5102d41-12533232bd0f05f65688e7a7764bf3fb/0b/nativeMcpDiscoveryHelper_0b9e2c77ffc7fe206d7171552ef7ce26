@@ -1,0 +1,76 @@
+ae6690bee65f69da5f84d764de67127a
+/* istanbul ignore next */
+function cov_2g2tkmn33l() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/mcp/common/nativeMcpDiscoveryHelper.ts";
+  var hash = "14f00dcd206792bffdd72cd2a65d0f37bc00b1ad";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/mcp/common/nativeMcpDiscoveryHelper.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 48
+        },
+        end: {
+          line: 6,
+          column: 99
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 51
+        },
+        end: {
+          line: 7,
+          column: 77
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/mcp/common/nativeMcpDiscoveryHelper.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,gCAAgC,GAAG,eAAe,CAAmC,kCAAkC,CAAC,CAAC;AAEtI,MAAM,CAAC,MAAM,mCAAmC,GAAG,0BAA0B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/mcp/common/nativeMcpDiscoveryHelper.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Platform } from '../../../base/common/platform.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const INativeMcpDiscoveryHelperService = createDecorator<INativeMcpDiscoveryHelperService>('INativeMcpDiscoveryHelperService');\n\nexport const NativeMcpDiscoveryHelperChannelName = 'NativeMcpDiscoveryHelper';\n\nexport interface INativeMcpDiscoveryData {\n\t// platform and homedir are duplicated by the remote/native environment, but here for convenience\n\tplatform: Platform;\n\thomedir: URI;\n\twinAppData?: URI;\n\txdgHome?: URI;\n}\n\nexport interface INativeMcpDiscoveryHelperService {\n\treadonly _serviceBrand: undefined;\n\n\tload(): Promise<INativeMcpDiscoveryData>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "14f00dcd206792bffdd72cd2a65d0f37bc00b1ad"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2g2tkmn33l = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2g2tkmn33l();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const INativeMcpDiscoveryHelperService =
+/* istanbul ignore next */
+(cov_2g2tkmn33l().s[0]++, createDecorator('INativeMcpDiscoveryHelperService'));
+export const NativeMcpDiscoveryHelperChannelName =
+/* istanbul ignore next */
+(cov_2g2tkmn33l().s[1]++, 'NativeMcpDiscoveryHelper');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJTmF0aXZlTWNwRGlzY292ZXJ5SGVscGVyU2VydmljZSIsImNvdl8yZzJ0a21uMzNsIiwicyIsIk5hdGl2ZU1jcERpc2NvdmVyeUhlbHBlckNoYW5uZWxOYW1lIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9tY3AvY29tbW9uL25hdGl2ZU1jcERpc2NvdmVyeUhlbHBlci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgUGxhdGZvcm0gfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9wbGF0Zm9ybS5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5cbmV4cG9ydCBjb25zdCBJTmF0aXZlTWNwRGlzY292ZXJ5SGVscGVyU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJTmF0aXZlTWNwRGlzY292ZXJ5SGVscGVyU2VydmljZT4oJ0lOYXRpdmVNY3BEaXNjb3ZlcnlIZWxwZXJTZXJ2aWNlJyk7XG5cbmV4cG9ydCBjb25zdCBOYXRpdmVNY3BEaXNjb3ZlcnlIZWxwZXJDaGFubmVsTmFtZSA9ICdOYXRpdmVNY3BEaXNjb3ZlcnlIZWxwZXInO1xuXG5leHBvcnQgaW50ZXJmYWNlIElOYXRpdmVNY3BEaXNjb3ZlcnlEYXRhIHtcblx0Ly8gcGxhdGZvcm0gYW5kIGhvbWVkaXIgYXJlIGR1cGxpY2F0ZWQgYnkgdGhlIHJlbW90ZS9uYXRpdmUgZW52aXJvbm1lbnQsIGJ1dCBoZXJlIGZvciBjb252ZW5pZW5jZVxuXHRwbGF0Zm9ybTogUGxhdGZvcm07XG5cdGhvbWVkaXI6IFVSSTtcblx0d2luQXBwRGF0YT86IFVSSTtcblx0eGRnSG9tZT86IFVSSTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJTmF0aXZlTWNwRGlzY292ZXJ5SGVscGVyU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRsb2FkKCk6IFByb21pc2U8SU5hdGl2ZU1jcERpc2NvdmVyeURhdGE+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLFNBQVNBLGVBQWUsUUFBUSw2Q0FBNkM7QUFFN0UsT0FBTyxNQUFNQyxnQ0FBZ0M7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQW1DLGtDQUFrQyxDQUFDO0FBRXJJLE9BQU8sTUFBTUksbUNBQW1DO0FBQUE7QUFBQSxDQUFBRixjQUFBLEdBQUFDLENBQUEsT0FBRywwQkFBMEIiLCJpZ25vcmVMaXN0IjpbXX0=

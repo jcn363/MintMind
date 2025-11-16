@@ -1,0 +1,253 @@
+e7dceae5249a42b17b1bda01cda2bf25
+/* istanbul ignore next */
+function cov_1vg36erbjl() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/diff/diffChange.ts";
+  var hash = "06ce79aaa079fabf44f1e3df4e968f78a66ef94d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/diff/diffChange.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 35,
+          column: 8
+        },
+        end: {
+          line: 35,
+          column: 43
+        }
+      },
+      "1": {
+        start: {
+          line: 36,
+          column: 8
+        },
+        end: {
+          line: 36,
+          column: 45
+        }
+      },
+      "2": {
+        start: {
+          line: 37,
+          column: 8
+        },
+        end: {
+          line: 37,
+          column: 43
+        }
+      },
+      "3": {
+        start: {
+          line: 38,
+          column: 8
+        },
+        end: {
+          line: 38,
+          column: 45
+        }
+      },
+      "4": {
+        start: {
+          line: 44,
+          column: 8
+        },
+        end: {
+          line: 44,
+          column: 56
+        }
+      },
+      "5": {
+        start: {
+          line: 50,
+          column: 8
+        },
+        end: {
+          line: 50,
+          column: 56
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 33,
+            column: 4
+          },
+          end: {
+            line: 33,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 33,
+            column: 78
+          },
+          end: {
+            line: 39,
+            column: 5
+          }
+        },
+        line: 33
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 43,
+            column: 4
+          },
+          end: {
+            line: 43,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 43,
+            column: 21
+          },
+          end: {
+            line: 45,
+            column: 5
+          }
+        },
+        line: 43
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 49,
+            column: 4
+          },
+          end: {
+            line: 49,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 49,
+            column: 21
+          },
+          end: {
+            line: 51,
+            column: 5
+          }
+        },
+        line: 49
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/diff/diffChange.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG;;GAEG;AACH,MAAM,OAAO,UAAU;IAEtB;;;OAGG;IACI,aAAa,CAAS;IAE7B;;;OAGG;IACI,cAAc,CAAS;IAE9B;;;OAGG;IACI,aAAa,CAAS;IAE7B;;;OAGG;IACI,cAAc,CAAS;IAE9B;;;OAGG;IACH,YAAY,aAAqB,EAAE,cAAsB,EAAE,aAAqB,EAAE,cAAsB;QACvG,kHAAkH;QAClH,IAAI,CAAC,aAAa,GAAG,aAAa,CAAC;QACnC,IAAI,CAAC,cAAc,GAAG,cAAc,CAAC;QACrC,IAAI,CAAC,aAAa,GAAG,aAAa,CAAC;QACnC,IAAI,CAAC,cAAc,GAAG,cAAc,CAAC;IACtC,CAAC;IAED;;OAEG;IACI,cAAc;QACpB,OAAO,IAAI,CAAC,aAAa,GAAG,IAAI,CAAC,cAAc,CAAC;IACjD,CAAC;IAED;;OAEG;IACI,cAAc;QACpB,OAAO,IAAI,CAAC,aAAa,GAAG,IAAI,CAAC,cAAc,CAAC;IACjD,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/diff/diffChange.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n/**\n * Represents information about a specific difference between two sequences.\n */\nexport class DiffChange {\n\n\t/**\n\t * The position of the first element in the original sequence which\n\t * this change affects.\n\t */\n\tpublic originalStart: number;\n\n\t/**\n\t * The number of elements from the original sequence which were\n\t * affected.\n\t */\n\tpublic originalLength: number;\n\n\t/**\n\t * The position of the first element in the modified sequence which\n\t * this change affects.\n\t */\n\tpublic modifiedStart: number;\n\n\t/**\n\t * The number of elements from the modified sequence which were\n\t * affected (added).\n\t */\n\tpublic modifiedLength: number;\n\n\t/**\n\t * Constructs a new DiffChange with the given sequence information\n\t * and content.\n\t */\n\tconstructor(originalStart: number, originalLength: number, modifiedStart: number, modifiedLength: number) {\n\t\t//Debug.Assert(originalLength > 0 || modifiedLength > 0, \"originalLength and modifiedLength cannot both be <= 0\");\n\t\tthis.originalStart = originalStart;\n\t\tthis.originalLength = originalLength;\n\t\tthis.modifiedStart = modifiedStart;\n\t\tthis.modifiedLength = modifiedLength;\n\t}\n\n\t/**\n\t * The end point (exclusive) of the change in the original sequence.\n\t */\n\tpublic getOriginalEnd() {\n\t\treturn this.originalStart + this.originalLength;\n\t}\n\n\t/**\n\t * The end point (exclusive) of the change in the modified sequence.\n\t */\n\tpublic getModifiedEnd() {\n\t\treturn this.modifiedStart + this.modifiedLength;\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "06ce79aaa079fabf44f1e3df4e968f78a66ef94d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1vg36erbjl = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1vg36erbjl();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/**
+ * Represents information about a specific difference between two sequences.
+ */
+export class DiffChange {
+  /**
+   * The position of the first element in the original sequence which
+   * this change affects.
+   */
+  originalStart;
+  /**
+   * The number of elements from the original sequence which were
+   * affected.
+   */
+  originalLength;
+  /**
+   * The position of the first element in the modified sequence which
+   * this change affects.
+   */
+  modifiedStart;
+  /**
+   * The number of elements from the modified sequence which were
+   * affected (added).
+   */
+  modifiedLength;
+  /**
+   * Constructs a new DiffChange with the given sequence information
+   * and content.
+   */
+  constructor(originalStart, originalLength, modifiedStart, modifiedLength) {
+    /* istanbul ignore next */
+    cov_1vg36erbjl().f[0]++;
+    cov_1vg36erbjl().s[0]++;
+    //Debug.Assert(originalLength > 0 || modifiedLength > 0, "originalLength and modifiedLength cannot both be <= 0");
+    this.originalStart = originalStart;
+    /* istanbul ignore next */
+    cov_1vg36erbjl().s[1]++;
+    this.originalLength = originalLength;
+    /* istanbul ignore next */
+    cov_1vg36erbjl().s[2]++;
+    this.modifiedStart = modifiedStart;
+    /* istanbul ignore next */
+    cov_1vg36erbjl().s[3]++;
+    this.modifiedLength = modifiedLength;
+  }
+  /**
+   * The end point (exclusive) of the change in the original sequence.
+   */
+  getOriginalEnd() {
+    /* istanbul ignore next */
+    cov_1vg36erbjl().f[1]++;
+    cov_1vg36erbjl().s[4]++;
+    return this.originalStart + this.originalLength;
+  }
+  /**
+   * The end point (exclusive) of the change in the modified sequence.
+   */
+  getModifiedEnd() {
+    /* istanbul ignore next */
+    cov_1vg36erbjl().f[2]++;
+    cov_1vg36erbjl().s[5]++;
+    return this.modifiedStart + this.modifiedLength;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJEaWZmQ2hhbmdlIiwib3JpZ2luYWxTdGFydCIsIm9yaWdpbmFsTGVuZ3RoIiwibW9kaWZpZWRTdGFydCIsIm1vZGlmaWVkTGVuZ3RoIiwiY29uc3RydWN0b3IiLCJjb3ZfMXZnMzZlcmJqbCIsImYiLCJzIiwiZ2V0T3JpZ2luYWxFbmQiLCJnZXRNb2RpZmllZEVuZCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvYmFzZS9jb21tb24vZGlmZi9kaWZmQ2hhbmdlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG4vKipcbiAqIFJlcHJlc2VudHMgaW5mb3JtYXRpb24gYWJvdXQgYSBzcGVjaWZpYyBkaWZmZXJlbmNlIGJldHdlZW4gdHdvIHNlcXVlbmNlcy5cbiAqL1xuZXhwb3J0IGNsYXNzIERpZmZDaGFuZ2Uge1xuXG5cdC8qKlxuXHQgKiBUaGUgcG9zaXRpb24gb2YgdGhlIGZpcnN0IGVsZW1lbnQgaW4gdGhlIG9yaWdpbmFsIHNlcXVlbmNlIHdoaWNoXG5cdCAqIHRoaXMgY2hhbmdlIGFmZmVjdHMuXG5cdCAqL1xuXHRwdWJsaWMgb3JpZ2luYWxTdGFydDogbnVtYmVyO1xuXG5cdC8qKlxuXHQgKiBUaGUgbnVtYmVyIG9mIGVsZW1lbnRzIGZyb20gdGhlIG9yaWdpbmFsIHNlcXVlbmNlIHdoaWNoIHdlcmVcblx0ICogYWZmZWN0ZWQuXG5cdCAqL1xuXHRwdWJsaWMgb3JpZ2luYWxMZW5ndGg6IG51bWJlcjtcblxuXHQvKipcblx0ICogVGhlIHBvc2l0aW9uIG9mIHRoZSBmaXJzdCBlbGVtZW50IGluIHRoZSBtb2RpZmllZCBzZXF1ZW5jZSB3aGljaFxuXHQgKiB0aGlzIGNoYW5nZSBhZmZlY3RzLlxuXHQgKi9cblx0cHVibGljIG1vZGlmaWVkU3RhcnQ6IG51bWJlcjtcblxuXHQvKipcblx0ICogVGhlIG51bWJlciBvZiBlbGVtZW50cyBmcm9tIHRoZSBtb2RpZmllZCBzZXF1ZW5jZSB3aGljaCB3ZXJlXG5cdCAqIGFmZmVjdGVkIChhZGRlZCkuXG5cdCAqL1xuXHRwdWJsaWMgbW9kaWZpZWRMZW5ndGg6IG51bWJlcjtcblxuXHQvKipcblx0ICogQ29uc3RydWN0cyBhIG5ldyBEaWZmQ2hhbmdlIHdpdGggdGhlIGdpdmVuIHNlcXVlbmNlIGluZm9ybWF0aW9uXG5cdCAqIGFuZCBjb250ZW50LlxuXHQgKi9cblx0Y29uc3RydWN0b3Iob3JpZ2luYWxTdGFydDogbnVtYmVyLCBvcmlnaW5hbExlbmd0aDogbnVtYmVyLCBtb2RpZmllZFN0YXJ0OiBudW1iZXIsIG1vZGlmaWVkTGVuZ3RoOiBudW1iZXIpIHtcblx0XHQvL0RlYnVnLkFzc2VydChvcmlnaW5hbExlbmd0aCA+IDAgfHwgbW9kaWZpZWRMZW5ndGggPiAwLCBcIm9yaWdpbmFsTGVuZ3RoIGFuZCBtb2RpZmllZExlbmd0aCBjYW5ub3QgYm90aCBiZSA8PSAwXCIpO1xuXHRcdHRoaXMub3JpZ2luYWxTdGFydCA9IG9yaWdpbmFsU3RhcnQ7XG5cdFx0dGhpcy5vcmlnaW5hbExlbmd0aCA9IG9yaWdpbmFsTGVuZ3RoO1xuXHRcdHRoaXMubW9kaWZpZWRTdGFydCA9IG1vZGlmaWVkU3RhcnQ7XG5cdFx0dGhpcy5tb2RpZmllZExlbmd0aCA9IG1vZGlmaWVkTGVuZ3RoO1xuXHR9XG5cblx0LyoqXG5cdCAqIFRoZSBlbmQgcG9pbnQgKGV4Y2x1c2l2ZSkgb2YgdGhlIGNoYW5nZSBpbiB0aGUgb3JpZ2luYWwgc2VxdWVuY2UuXG5cdCAqL1xuXHRwdWJsaWMgZ2V0T3JpZ2luYWxFbmQoKSB7XG5cdFx0cmV0dXJuIHRoaXMub3JpZ2luYWxTdGFydCArIHRoaXMub3JpZ2luYWxMZW5ndGg7XG5cdH1cblxuXHQvKipcblx0ICogVGhlIGVuZCBwb2ludCAoZXhjbHVzaXZlKSBvZiB0aGUgY2hhbmdlIGluIHRoZSBtb2RpZmllZCBzZXF1ZW5jZS5cblx0ICovXG5cdHB1YmxpYyBnZXRNb2RpZmllZEVuZCgpIHtcblx0XHRyZXR1cm4gdGhpcy5tb2RpZmllZFN0YXJ0ICsgdGhpcy5tb2RpZmllZExlbmd0aDtcblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQTs7O0FBR0EsT0FBTSxNQUFPQSxVQUFVO0VBRXRCOzs7O0VBSU9DLGFBQWE7RUFFcEI7Ozs7RUFJT0MsY0FBYztFQUVyQjs7OztFQUlPQyxhQUFhO0VBRXBCOzs7O0VBSU9DLGNBQWM7RUFFckI7Ozs7RUFJQUMsWUFBWUosYUFBcUIsRUFBRUMsY0FBc0IsRUFBRUMsYUFBcUIsRUFBRUMsY0FBc0I7SUFBQTtJQUFBRSxjQUFBLEdBQUFDLENBQUE7SUFBQUQsY0FBQSxHQUFBRSxDQUFBO0lBQ3ZHO0lBQ0EsSUFBSSxDQUFDUCxhQUFhLEdBQUdBLGFBQWE7SUFBQztJQUFBSyxjQUFBLEdBQUFFLENBQUE7SUFDbkMsSUFBSSxDQUFDTixjQUFjLEdBQUdBLGNBQWM7SUFBQztJQUFBSSxjQUFBLEdBQUFFLENBQUE7SUFDckMsSUFBSSxDQUFDTCxhQUFhLEdBQUdBLGFBQWE7SUFBQztJQUFBRyxjQUFBLEdBQUFFLENBQUE7SUFDbkMsSUFBSSxDQUFDSixjQUFjLEdBQUdBLGNBQWM7RUFDckM7RUFFQTs7O0VBR09LLGNBQWNBLENBQUE7SUFBQTtJQUFBSCxjQUFBLEdBQUFDLENBQUE7SUFBQUQsY0FBQSxHQUFBRSxDQUFBO0lBQ3BCLE9BQU8sSUFBSSxDQUFDUCxhQUFhLEdBQUcsSUFBSSxDQUFDQyxjQUFjO0VBQ2hEO0VBRUE7OztFQUdPUSxjQUFjQSxDQUFBO0lBQUE7SUFBQUosY0FBQSxHQUFBQyxDQUFBO0lBQUFELGNBQUEsR0FBQUUsQ0FBQTtJQUNwQixPQUFPLElBQUksQ0FBQ0wsYUFBYSxHQUFHLElBQUksQ0FBQ0MsY0FBYztFQUNoRCIsImlnbm9yZUxpc3QiOltdfQ==

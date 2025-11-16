@@ -1,0 +1,137 @@
+713ada17e1160e2289e9b063ffcd91f2
+/* istanbul ignore next */
+function cov_aed0brily() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/textMate/common/TMGrammars.ts";
+  var hash = "ff9417dc8a3b3a602d13eff7e47229d8aac2da40";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/textMate/common/TMGrammars.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 32
+        },
+        end: {
+          line: 69,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/textMate/common/TMGrammars.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,KAAK,GAAG,MAAM,oBAAoB,CAAC;AAC1C,OAAO,EAAE,kBAAkB,EAAmB,MAAM,+CAA+C,CAAC;AACpG,OAAO,EAAE,iBAAiB,EAAE,MAAM,0CAA0C,CAAC;AAqB7E,MAAM,CAAC,MAAM,gBAAgB,GAA+C,kBAAkB,CAAC,sBAAsB,CAA4B;IAChJ,cAAc,EAAE,UAAU;IAC1B,IAAI,EAAE,CAAC,iBAAiB,CAAC;IACzB,UAAU,EAAE;QACX,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,uCAAuC,EAAE,kCAAkC,CAAC;QACtG,IAAI,EAAE,OAAO;QACb,eAAe,EAAE,CAAC,EAAE,IAAI,EAAE,CAAC,EAAE,QAAQ,EAAE,SAAS,EAAE,SAAS,EAAE,gBAAgB,EAAE,IAAI,EAAE,gCAAgC,EAAE,CAAC,EAAE,CAAC;QAC3H,KAAK,EAAE;YACN,IAAI,EAAE,QAAQ;YACd,eAAe,EAAE,CAAC,EAAE,IAAI,EAAE,EAAE,QAAQ,EAAE,SAAS,EAAE,SAAS,EAAE,gBAAgB,EAAE,IAAI,EAAE,gCAAgC,EAAE,EAAE,CAAC;YACzH,UAAU,EAAE;gBACX,QAAQ,EAAE;oBACT,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,gDAAgD,EAAE,8DAA8D,CAAC;oBAC3I,IAAI,EAAE,QAAQ;iBACd;gBACD,SAAS,EAAE;oBACV,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,iDAAiD,EAAE,kDAAkD,CAAC;oBAChI,IAAI,EAAE,QAAQ;iBACd;gBACD,IAAI,EAAE;oBACL,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,4CAA4C,EAAE,sHAAsH,CAAC;oBAC/L,IAAI,EAAE,QAAQ;iBACd;gBACD,iBAAiB,EAAE;oBAClB,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,yDAAyD,EAAE,iFAAiF,CAAC;oBACvK,IAAI,EAAE,QAAQ;iBACd;gBACD,UAAU,EAAE;oBACX,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,kDAAkD,EAAE,qCAAqC,CAAC;oBACpH,IAAI,EAAE,QAAQ;oBACd,oBAAoB,EAAE;wBACrB,IAAI,EAAE,CAAC,QAAQ,EAAE,SAAS,EAAE,OAAO,CAAC;qBACpC;iBACD;gBACD,QAAQ,EAAE;oBACT,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,gDAAgD,EAAE,oEAAoE,CAAC;oBACjJ,IAAI,EAAE,OAAO;oBACb,KAAK,EAAE;wBACN,IAAI,EAAE,QAAQ;qBACd;iBACD;gBACD,qBAAqB,EAAE;oBACtB,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,6DAA6D,EAAE,sDAAsD,CAAC;oBAChJ,IAAI,EAAE,OAAO;oBACb,KAAK,EAAE;wBACN,IAAI,EAAE,QAAQ;qBACd;oBACD,OAAO,EAAE,CAAC,GAAG,CAAC;iBACd;gBACD,uBAAuB,EAAE;oBACxB,WAAW,EAAE,GAAG,CAAC,QAAQ,CAAC,+DAA+D,EAAE,6DAA6D,CAAC;oBACzJ,IAAI,EAAE,OAAO;oBACb,KAAK,EAAE;wBACN,IAAI,EAAE,QAAQ;qBACd;oBACD,OAAO,EAAE,EAAE;iBACX;aACD;YACD,QAAQ,EAAE,CAAC,WAAW,EAAE,MAAM,CAAC;SAC/B;KACD;CACD,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/textMate/common/TMGrammars.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport * as nls from '../../../../nls.js';\nimport { ExtensionsRegistry, IExtensionPoint } from '../../extensions/common/extensionsRegistry.js';\nimport { languagesExtPoint } from '../../language/common/languageService.js';\n\nexport interface IEmbeddedLanguagesMap {\n\t[scopeName: string]: string;\n}\n\nexport interface TokenTypesContribution {\n\t[scopeName: string]: string;\n}\n\nexport interface ITMSyntaxExtensionPoint {\n\tlanguage?: string; // undefined if the grammar is only included by other grammars\n\tscopeName: string;\n\tpath: string;\n\tembeddedLanguages: IEmbeddedLanguagesMap;\n\ttokenTypes: TokenTypesContribution;\n\tinjectTo: string[];\n\tbalancedBracketScopes: string[];\n\tunbalancedBracketScopes: string[];\n}\n\nexport const grammarsExtPoint: IExtensionPoint<ITMSyntaxExtensionPoint[]> = ExtensionsRegistry.registerExtensionPoint<ITMSyntaxExtensionPoint[]>({\n\textensionPoint: 'grammars',\n\tdeps: [languagesExtPoint],\n\tjsonSchema: {\n\t\tdescription: nls.localize('vscode.extension.contributes.grammars', 'Contributes textmate tokenizers.'),\n\t\ttype: 'array',\n\t\tdefaultSnippets: [{ body: [{ language: '${1:id}', scopeName: 'source.${2:id}', path: './syntaxes/${3:id}.tmLanguage.' }] }],\n\t\titems: {\n\t\t\ttype: 'object',\n\t\t\tdefaultSnippets: [{ body: { language: '${1:id}', scopeName: 'source.${2:id}', path: './syntaxes/${3:id}.tmLanguage.' } }],\n\t\t\tproperties: {\n\t\t\t\tlanguage: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.language', 'Language identifier for which this syntax is contributed to.'),\n\t\t\t\t\ttype: 'string'\n\t\t\t\t},\n\t\t\t\tscopeName: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.scopeName', 'Textmate scope name used by the tmLanguage file.'),\n\t\t\t\t\ttype: 'string'\n\t\t\t\t},\n\t\t\t\tpath: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.path', 'Path of the tmLanguage file. The path is relative to the extension folder and typically starts with \\'./syntaxes/\\'.'),\n\t\t\t\t\ttype: 'string'\n\t\t\t\t},\n\t\t\t\tembeddedLanguages: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.embeddedLanguages', 'A map of scope name to language id if this grammar contains embedded languages.'),\n\t\t\t\t\ttype: 'object'\n\t\t\t\t},\n\t\t\t\ttokenTypes: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.tokenTypes', 'A map of scope name to token types.'),\n\t\t\t\t\ttype: 'object',\n\t\t\t\t\tadditionalProperties: {\n\t\t\t\t\t\tenum: ['string', 'comment', 'other']\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\tinjectTo: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.injectTo', 'List of language scope names to which this grammar is injected to.'),\n\t\t\t\t\ttype: 'array',\n\t\t\t\t\titems: {\n\t\t\t\t\t\ttype: 'string'\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\tbalancedBracketScopes: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.balancedBracketScopes', 'Defines which scope names contain balanced brackets.'),\n\t\t\t\t\ttype: 'array',\n\t\t\t\t\titems: {\n\t\t\t\t\t\ttype: 'string'\n\t\t\t\t\t},\n\t\t\t\t\tdefault: ['*'],\n\t\t\t\t},\n\t\t\t\tunbalancedBracketScopes: {\n\t\t\t\t\tdescription: nls.localize('vscode.extension.contributes.grammars.unbalancedBracketScopes', 'Defines which scope names do not contain balanced brackets.'),\n\t\t\t\t\ttype: 'array',\n\t\t\t\t\titems: {\n\t\t\t\t\t\ttype: 'string'\n\t\t\t\t\t},\n\t\t\t\t\tdefault: [],\n\t\t\t\t},\n\t\t\t},\n\t\t\trequired: ['scopeName', 'path']\n\t\t}\n\t}\n});\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ff9417dc8a3b3a602d13eff7e47229d8aac2da40"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_aed0brily = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_aed0brily();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as nls from '../../../../nls.js';
+import { ExtensionsRegistry } from '../../extensions/common/extensionsRegistry.js';
+import { languagesExtPoint } from '../../language/common/languageService.js';
+export const grammarsExtPoint =
+/* istanbul ignore next */
+(cov_aed0brily().s[0]++, ExtensionsRegistry.registerExtensionPoint({
+  extensionPoint: 'grammars',
+  deps: [languagesExtPoint],
+  jsonSchema: {
+    description: nls.localize('vscode.extension.contributes.grammars', 'Contributes textmate tokenizers.'),
+    type: 'array',
+    defaultSnippets: [{
+      body: [{
+        language: '${1:id}',
+        scopeName: 'source.${2:id}',
+        path: './syntaxes/${3:id}.tmLanguage.'
+      }]
+    }],
+    items: {
+      type: 'object',
+      defaultSnippets: [{
+        body: {
+          language: '${1:id}',
+          scopeName: 'source.${2:id}',
+          path: './syntaxes/${3:id}.tmLanguage.'
+        }
+      }],
+      properties: {
+        language: {
+          description: nls.localize('vscode.extension.contributes.grammars.language', 'Language identifier for which this syntax is contributed to.'),
+          type: 'string'
+        },
+        scopeName: {
+          description: nls.localize('vscode.extension.contributes.grammars.scopeName', 'Textmate scope name used by the tmLanguage file.'),
+          type: 'string'
+        },
+        path: {
+          description: nls.localize('vscode.extension.contributes.grammars.path', 'Path of the tmLanguage file. The path is relative to the extension folder and typically starts with \'./syntaxes/\'.'),
+          type: 'string'
+        },
+        embeddedLanguages: {
+          description: nls.localize('vscode.extension.contributes.grammars.embeddedLanguages', 'A map of scope name to language id if this grammar contains embedded languages.'),
+          type: 'object'
+        },
+        tokenTypes: {
+          description: nls.localize('vscode.extension.contributes.grammars.tokenTypes', 'A map of scope name to token types.'),
+          type: 'object',
+          additionalProperties: {
+            enum: ['string', 'comment', 'other']
+          }
+        },
+        injectTo: {
+          description: nls.localize('vscode.extension.contributes.grammars.injectTo', 'List of language scope names to which this grammar is injected to.'),
+          type: 'array',
+          items: {
+            type: 'string'
+          }
+        },
+        balancedBracketScopes: {
+          description: nls.localize('vscode.extension.contributes.grammars.balancedBracketScopes', 'Defines which scope names contain balanced brackets.'),
+          type: 'array',
+          items: {
+            type: 'string'
+          },
+          default: ['*']
+        },
+        unbalancedBracketScopes: {
+          description: nls.localize('vscode.extension.contributes.grammars.unbalancedBracketScopes', 'Defines which scope names do not contain balanced brackets.'),
+          type: 'array',
+          items: {
+            type: 'string'
+          },
+          default: []
+        }
+      },
+      required: ['scopeName', 'path']
+    }
+  }
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfYWVkMGJyaWx5IiwiYWN0dWFsQ292ZXJhZ2UiLCJubHMiLCJFeHRlbnNpb25zUmVnaXN0cnkiLCJsYW5ndWFnZXNFeHRQb2ludCIsImdyYW1tYXJzRXh0UG9pbnQiLCJzIiwicmVnaXN0ZXJFeHRlbnNpb25Qb2ludCIsImV4dGVuc2lvblBvaW50IiwiZGVwcyIsImpzb25TY2hlbWEiLCJkZXNjcmlwdGlvbiIsImxvY2FsaXplIiwidHlwZSIsImRlZmF1bHRTbmlwcGV0cyIsImJvZHkiLCJsYW5ndWFnZSIsInNjb3BlTmFtZSIsInBhdGgiLCJpdGVtcyIsInByb3BlcnRpZXMiLCJlbWJlZGRlZExhbmd1YWdlcyIsInRva2VuVHlwZXMiLCJhZGRpdGlvbmFsUHJvcGVydGllcyIsImVudW0iLCJpbmplY3RUbyIsImJhbGFuY2VkQnJhY2tldFNjb3BlcyIsImRlZmF1bHQiLCJ1bmJhbGFuY2VkQnJhY2tldFNjb3BlcyIsInJlcXVpcmVkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvdGV4dE1hdGUvY29tbW9uL1RNR3JhbW1hcnMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCAqIGFzIG5scyBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgRXh0ZW5zaW9uc1JlZ2lzdHJ5LCBJRXh0ZW5zaW9uUG9pbnQgfSBmcm9tICcuLi8uLi9leHRlbnNpb25zL2NvbW1vbi9leHRlbnNpb25zUmVnaXN0cnkuanMnO1xuaW1wb3J0IHsgbGFuZ3VhZ2VzRXh0UG9pbnQgfSBmcm9tICcuLi8uLi9sYW5ndWFnZS9jb21tb24vbGFuZ3VhZ2VTZXJ2aWNlLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJRW1iZWRkZWRMYW5ndWFnZXNNYXAge1xuXHRbc2NvcGVOYW1lOiBzdHJpbmddOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgVG9rZW5UeXBlc0NvbnRyaWJ1dGlvbiB7XG5cdFtzY29wZU5hbWU6IHN0cmluZ106IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVE1TeW50YXhFeHRlbnNpb25Qb2ludCB7XG5cdGxhbmd1YWdlPzogc3RyaW5nOyAvLyB1bmRlZmluZWQgaWYgdGhlIGdyYW1tYXIgaXMgb25seSBpbmNsdWRlZCBieSBvdGhlciBncmFtbWFyc1xuXHRzY29wZU5hbWU6IHN0cmluZztcblx0cGF0aDogc3RyaW5nO1xuXHRlbWJlZGRlZExhbmd1YWdlczogSUVtYmVkZGVkTGFuZ3VhZ2VzTWFwO1xuXHR0b2tlblR5cGVzOiBUb2tlblR5cGVzQ29udHJpYnV0aW9uO1xuXHRpbmplY3RUbzogc3RyaW5nW107XG5cdGJhbGFuY2VkQnJhY2tldFNjb3Blczogc3RyaW5nW107XG5cdHVuYmFsYW5jZWRCcmFja2V0U2NvcGVzOiBzdHJpbmdbXTtcbn1cblxuZXhwb3J0IGNvbnN0IGdyYW1tYXJzRXh0UG9pbnQ6IElFeHRlbnNpb25Qb2ludDxJVE1TeW50YXhFeHRlbnNpb25Qb2ludFtdPiA9IEV4dGVuc2lvbnNSZWdpc3RyeS5yZWdpc3RlckV4dGVuc2lvblBvaW50PElUTVN5bnRheEV4dGVuc2lvblBvaW50W10+KHtcblx0ZXh0ZW5zaW9uUG9pbnQ6ICdncmFtbWFycycsXG5cdGRlcHM6IFtsYW5ndWFnZXNFeHRQb2ludF0sXG5cdGpzb25TY2hlbWE6IHtcblx0XHRkZXNjcmlwdGlvbjogbmxzLmxvY2FsaXplKCd2c2NvZGUuZXh0ZW5zaW9uLmNvbnRyaWJ1dGVzLmdyYW1tYXJzJywgJ0NvbnRyaWJ1dGVzIHRleHRtYXRlIHRva2VuaXplcnMuJyksXG5cdFx0dHlwZTogJ2FycmF5Jyxcblx0XHRkZWZhdWx0U25pcHBldHM6IFt7IGJvZHk6IFt7IGxhbmd1YWdlOiAnJHsxOmlkfScsIHNjb3BlTmFtZTogJ3NvdXJjZS4kezI6aWR9JywgcGF0aDogJy4vc3ludGF4ZXMvJHszOmlkfS50bUxhbmd1YWdlLicgfV0gfV0sXG5cdFx0aXRlbXM6IHtcblx0XHRcdHR5cGU6ICdvYmplY3QnLFxuXHRcdFx0ZGVmYXVsdFNuaXBwZXRzOiBbeyBib2R5OiB7IGxhbmd1YWdlOiAnJHsxOmlkfScsIHNjb3BlTmFtZTogJ3NvdXJjZS4kezI6aWR9JywgcGF0aDogJy4vc3ludGF4ZXMvJHszOmlkfS50bUxhbmd1YWdlLicgfSB9XSxcblx0XHRcdHByb3BlcnRpZXM6IHtcblx0XHRcdFx0bGFuZ3VhZ2U6IHtcblx0XHRcdFx0XHRkZXNjcmlwdGlvbjogbmxzLmxvY2FsaXplKCd2c2NvZGUuZXh0ZW5zaW9uLmNvbnRyaWJ1dGVzLmdyYW1tYXJzLmxhbmd1YWdlJywgJ0xhbmd1YWdlIGlkZW50aWZpZXIgZm9yIHdoaWNoIHRoaXMgc3ludGF4IGlzIGNvbnRyaWJ1dGVkIHRvLicpLFxuXHRcdFx0XHRcdHR5cGU6ICdzdHJpbmcnXG5cdFx0XHRcdH0sXG5cdFx0XHRcdHNjb3BlTmFtZToge1xuXHRcdFx0XHRcdGRlc2NyaXB0aW9uOiBubHMubG9jYWxpemUoJ3ZzY29kZS5leHRlbnNpb24uY29udHJpYnV0ZXMuZ3JhbW1hcnMuc2NvcGVOYW1lJywgJ1RleHRtYXRlIHNjb3BlIG5hbWUgdXNlZCBieSB0aGUgdG1MYW5ndWFnZSBmaWxlLicpLFxuXHRcdFx0XHRcdHR5cGU6ICdzdHJpbmcnXG5cdFx0XHRcdH0sXG5cdFx0XHRcdHBhdGg6IHtcblx0XHRcdFx0XHRkZXNjcmlwdGlvbjogbmxzLmxvY2FsaXplKCd2c2NvZGUuZXh0ZW5zaW9uLmNvbnRyaWJ1dGVzLmdyYW1tYXJzLnBhdGgnLCAnUGF0aCBvZiB0aGUgdG1MYW5ndWFnZSBmaWxlLiBUaGUgcGF0aCBpcyByZWxhdGl2ZSB0byB0aGUgZXh0ZW5zaW9uIGZvbGRlciBhbmQgdHlwaWNhbGx5IHN0YXJ0cyB3aXRoIFxcJy4vc3ludGF4ZXMvXFwnLicpLFxuXHRcdFx0XHRcdHR5cGU6ICdzdHJpbmcnXG5cdFx0XHRcdH0sXG5cdFx0XHRcdGVtYmVkZGVkTGFuZ3VhZ2VzOiB7XG5cdFx0XHRcdFx0ZGVzY3JpcHRpb246IG5scy5sb2NhbGl6ZSgndnNjb2RlLmV4dGVuc2lvbi5jb250cmlidXRlcy5ncmFtbWFycy5lbWJlZGRlZExhbmd1YWdlcycsICdBIG1hcCBvZiBzY29wZSBuYW1lIHRvIGxhbmd1YWdlIGlkIGlmIHRoaXMgZ3JhbW1hciBjb250YWlucyBlbWJlZGRlZCBsYW5ndWFnZXMuJyksXG5cdFx0XHRcdFx0dHlwZTogJ29iamVjdCdcblx0XHRcdFx0fSxcblx0XHRcdFx0dG9rZW5UeXBlczoge1xuXHRcdFx0XHRcdGRlc2NyaXB0aW9uOiBubHMubG9jYWxpemUoJ3ZzY29kZS5leHRlbnNpb24uY29udHJpYnV0ZXMuZ3JhbW1hcnMudG9rZW5UeXBlcycsICdBIG1hcCBvZiBzY29wZSBuYW1lIHRvIHRva2VuIHR5cGVzLicpLFxuXHRcdFx0XHRcdHR5cGU6ICdvYmplY3QnLFxuXHRcdFx0XHRcdGFkZGl0aW9uYWxQcm9wZXJ0aWVzOiB7XG5cdFx0XHRcdFx0XHRlbnVtOiBbJ3N0cmluZycsICdjb21tZW50JywgJ290aGVyJ11cblx0XHRcdFx0XHR9XG5cdFx0XHRcdH0sXG5cdFx0XHRcdGluamVjdFRvOiB7XG5cdFx0XHRcdFx0ZGVzY3JpcHRpb246IG5scy5sb2NhbGl6ZSgndnNjb2RlLmV4dGVuc2lvbi5jb250cmlidXRlcy5ncmFtbWFycy5pbmplY3RUbycsICdMaXN0IG9mIGxhbmd1YWdlIHNjb3BlIG5hbWVzIHRvIHdoaWNoIHRoaXMgZ3JhbW1hciBpcyBpbmplY3RlZCB0by4nKSxcblx0XHRcdFx0XHR0eXBlOiAnYXJyYXknLFxuXHRcdFx0XHRcdGl0ZW1zOiB7XG5cdFx0XHRcdFx0XHR0eXBlOiAnc3RyaW5nJ1xuXHRcdFx0XHRcdH1cblx0XHRcdFx0fSxcblx0XHRcdFx0YmFsYW5jZWRCcmFja2V0U2NvcGVzOiB7XG5cdFx0XHRcdFx0ZGVzY3JpcHRpb246IG5scy5sb2NhbGl6ZSgndnNjb2RlLmV4dGVuc2lvbi5jb250cmlidXRlcy5ncmFtbWFycy5iYWxhbmNlZEJyYWNrZXRTY29wZXMnLCAnRGVmaW5lcyB3aGljaCBzY29wZSBuYW1lcyBjb250YWluIGJhbGFuY2VkIGJyYWNrZXRzLicpLFxuXHRcdFx0XHRcdHR5cGU6ICdhcnJheScsXG5cdFx0XHRcdFx0aXRlbXM6IHtcblx0XHRcdFx0XHRcdHR5cGU6ICdzdHJpbmcnXG5cdFx0XHRcdFx0fSxcblx0XHRcdFx0XHRkZWZhdWx0OiBbJyonXSxcblx0XHRcdFx0fSxcblx0XHRcdFx0dW5iYWxhbmNlZEJyYWNrZXRTY29wZXM6IHtcblx0XHRcdFx0XHRkZXNjcmlwdGlvbjogbmxzLmxvY2FsaXplKCd2c2NvZGUuZXh0ZW5zaW9uLmNvbnRyaWJ1dGVzLmdyYW1tYXJzLnVuYmFsYW5jZWRCcmFja2V0U2NvcGVzJywgJ0RlZmluZXMgd2hpY2ggc2NvcGUgbmFtZXMgZG8gbm90IGNvbnRhaW4gYmFsYW5jZWQgYnJhY2tldHMuJyksXG5cdFx0XHRcdFx0dHlwZTogJ2FycmF5Jyxcblx0XHRcdFx0XHRpdGVtczoge1xuXHRcdFx0XHRcdFx0dHlwZTogJ3N0cmluZydcblx0XHRcdFx0XHR9LFxuXHRcdFx0XHRcdGRlZmF1bHQ6IFtdLFxuXHRcdFx0XHR9LFxuXHRcdFx0fSxcblx0XHRcdHJlcXVpcmVkOiBbJ3Njb3BlTmFtZScs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

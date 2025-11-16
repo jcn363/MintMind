@@ -1,0 +1,46 @@
+712e67bab8a0e72cbaaabce71c0254ca
+/* istanbul ignore next */
+function cov_1lt54wk4sa() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/terminal/node/ptyHost.ts";
+  var hash = "9f1e943a19288e05fe139c249d0179b69a48c36f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/terminal/node/ptyHost.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/terminal/node/ptyHost.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/terminal/node/ptyHost.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { DisposableStore, IDisposable } from '../../../base/common/lifecycle.js';\nimport { IChannelClient } from '../../../base/parts/ipc/common/ipc.js';\n\nexport interface IPtyHostConnection {\n\treadonly client: IChannelClient;\n\treadonly store: DisposableStore;\n\treadonly onDidProcessExit: Event<{ code: number; signal: string }>;\n}\n\nexport interface IPtyHostStarter extends IDisposable {\n\treadonly onRequestConnection?: Event<void>;\n\treadonly onWillShutdown?: Event<void>;\n\n\t/**\n\t * Creates a pty host and connects to it.\n\t */\n\tstart(): IPtyHostConnection;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "9f1e943a19288e05fe139c249d0179b69a48c36f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1lt54wk4sa = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1lt54wk4sa();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS90ZXJtaW5hbC9ub2RlL3B0eUhvc3QudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgRGlzcG9zYWJsZVN0b3JlLCBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBJQ2hhbm5lbENsaWVudCB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvcGFydHMvaXBjL2NvbW1vbi9pcGMuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElQdHlIb3N0Q29ubmVjdGlvbiB7XG5cdHJlYWRvbmx5IGNsaWVudDogSUNoYW5uZWxDbGllbnQ7XG5cdHJlYWRvbmx5IHN0b3JlOiBEaXNwb3NhYmxlU3RvcmU7XG5cdHJlYWRvbmx5IG9uRGlkUHJvY2Vzc0V4aXQ6IEV2ZW50PHsgY29kZTogbnVtYmVyOyBzaWduYWw6IHN0cmluZyB9Pjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJUHR5SG9zdFN0YXJ0ZXIgZXh0ZW5kcyBJRGlzcG9zYWJsZSB7XG5cdHJlYWRvbmx5IG9uUmVxdWVzdENvbm5lY3Rpb24/OiBFdmVudDx2b2lkPjtcblx0cmVhZG9ubHkgb25XaWxsU2h1dGRvd24/OiBFdmVudDx2b2lkPjtcblxuXHQvKipcblx0ICogQ3JlYXRlcyBhIHB0eSBob3N0IGFuZCBjb25uZWN0cyB0byBpdC5cblx0ICovXG5cdHN0YXJ0KCk6IElQdHlIb3N0Q29ubmVjdGlvbjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

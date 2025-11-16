@@ -1,0 +1,222 @@
+82e7c6a37b0807df394b620bcd4399f0
+/* istanbul ignore next */
+function cov_ij8n5i811() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewsWelcome.ts";
+  var hash = "48608c9e4ad8cbe502289d640bf1506dc08d7c55";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewsWelcome.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 18
+        },
+        end: {
+          line: 9,
+          column: 20
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 19
+        },
+        end: {
+          line: 10,
+          column: 48
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 18
+        },
+        end: {
+          line: 11,
+          column: 41
+        }
+      },
+      "3": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 42
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 33
+        }
+      },
+      "5": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 32
+        }
+      },
+      "6": {
+        start: {
+          line: 20,
+          column: 40
+        },
+        end: {
+          line: 20,
+          column: 82
+        }
+      },
+      "7": {
+        start: {
+          line: 21,
+          column: 0
+        },
+        end: {
+          line: 21,
+          column: 137
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 12,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 25
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 12
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 10
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        line: 16
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewsWelcome.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAS,MAAM,qCAAqC,CAAC;AAErE,OAAO,EAAE,UAAU,EAAE,MAAM,yCAAyC,CAAC;AAGrE,OAAO,EAAE,QAAQ,EAAE,MAAM,qDAAqD,CAAC;AAmB/E,MAAM,oCAAqC,SAAQ,UAAU;IAC3C,WAAW,GAAkC,EAAE,CAAC;IAChD,YAAY,GAAG,IAAI,CAAC,SAAS,CAAC,IAAI,OAAO,EAAQ,CAAC,CAAC;IACpD,WAAW,GAAgB,IAAI,CAAC,YAAY,CAAC,KAAK,CAAC;IAE5D,QAAQ,CAAC,UAAuC;QACtD,IAAI,CAAC,WAAW,CAAC,IAAI,CAAC,UAAU,CAAC,CAAC;QAClC,IAAI,CAAC,YAAY,CAAC,IAAI,EAAE,CAAC;IAC1B,CAAC;IAEM,GAAG;QACT,OAAO,IAAI,CAAC,WAAW,CAAC;IACzB,CAAC;CACD;AAED,MAAM,CAAC,MAAM,wBAAwB,GAAG,IAAI,oCAAoC,EAAE,CAAC;AACnF,QAAQ,CAAC,GAAG,mGAAsD,wBAAwB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/viewsWelcome/chatViewsWelcome.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Emitter, Event } from '../../../../../base/common/event.js';\nimport { IMarkdownString } from '../../../../../base/common/htmlContent.js';\nimport { Disposable } from '../../../../../base/common/lifecycle.js';\nimport { ThemeIcon } from '../../../../../base/common/themables.js';\nimport { ContextKeyExpression } from '../../../../../platform/contextkey/common/contextkey.js';\nimport { Registry } from '../../../../../platform/registry/common/platform.js';\n\nexport const enum ChatViewsWelcomeExtensions {\n\tChatViewsWelcomeRegistry = 'workbench.registry.chat.viewsWelcome',\n}\n\nexport interface IChatViewsWelcomeDescriptor {\n\treadonly icon?: ThemeIcon;\n\treadonly title: string;\n\treadonly content: IMarkdownString;\n\treadonly when: ContextKeyExpression;\n}\n\nexport interface IChatViewsWelcomeContributionRegistry {\n\treadonly onDidChange: Event<void>;\n\tget(): ReadonlyArray<IChatViewsWelcomeDescriptor>;\n\tregister(descriptor: IChatViewsWelcomeDescriptor): void;\n}\n\nclass ChatViewsWelcomeContributionRegistry extends Disposable implements IChatViewsWelcomeContributionRegistry {\n\tprivate readonly descriptors: IChatViewsWelcomeDescriptor[] = [];\n\tprivate readonly _onDidChange = this._register(new Emitter<void>());\n\tpublic readonly onDidChange: Event<void> = this._onDidChange.event;\n\n\tpublic register(descriptor: IChatViewsWelcomeDescriptor): void {\n\t\tthis.descriptors.push(descriptor);\n\t\tthis._onDidChange.fire();\n\t}\n\n\tpublic get(): ReadonlyArray<IChatViewsWelcomeDescriptor> {\n\t\treturn this.descriptors;\n\t}\n}\n\nexport const chatViewsWelcomeRegistry = new ChatViewsWelcomeContributionRegistry();\nRegistry.add(ChatViewsWelcomeExtensions.ChatViewsWelcomeRegistry, chatViewsWelcomeRegistry);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "48608c9e4ad8cbe502289d640bf1506dc08d7c55"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ij8n5i811 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ij8n5i811();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Emitter } from '../../../../../base/common/event.js';
+import { Disposable } from '../../../../../base/common/lifecycle.js';
+import { Registry } from '../../../../../platform/registry/common/platform.js';
+class ChatViewsWelcomeContributionRegistry extends Disposable {
+  descriptors =
+  /* istanbul ignore next */
+  (cov_ij8n5i811().s[0]++, []);
+  _onDidChange =
+  /* istanbul ignore next */
+  (cov_ij8n5i811().s[1]++, this._register(new Emitter()));
+  onDidChange =
+  /* istanbul ignore next */
+  (cov_ij8n5i811().s[2]++, this._onDidChange.event);
+  register(descriptor) {
+    /* istanbul ignore next */
+    cov_ij8n5i811().f[0]++;
+    cov_ij8n5i811().s[3]++;
+    this.descriptors.push(descriptor);
+    /* istanbul ignore next */
+    cov_ij8n5i811().s[4]++;
+    this._onDidChange.fire();
+  }
+  get() {
+    /* istanbul ignore next */
+    cov_ij8n5i811().f[1]++;
+    cov_ij8n5i811().s[5]++;
+    return this.descriptors;
+  }
+}
+export const chatViewsWelcomeRegistry =
+/* istanbul ignore next */
+(cov_ij8n5i811().s[6]++, new ChatViewsWelcomeContributionRegistry());
+/* istanbul ignore next */
+cov_ij8n5i811().s[7]++;
+Registry.add("workbench.registry.chat.viewsWelcome" /* ChatViewsWelcomeExtensions.ChatViewsWelcomeRegistry */, chatViewsWelcomeRegistry);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfaWo4bjVpODExIiwiYWN0dWFsQ292ZXJhZ2UiLCJFbWl0dGVyIiwiRGlzcG9zYWJsZSIsIlJlZ2lzdHJ5IiwiQ2hhdFZpZXdzV2VsY29tZUNvbnRyaWJ1dGlvblJlZ2lzdHJ5IiwiZGVzY3JpcHRvcnMiLCJzIiwiX29uRGlkQ2hhbmdlIiwiX3JlZ2lzdGVyIiwib25EaWRDaGFuZ2UiLCJldmVudCIsInJlZ2lzdGVyIiwiZGVzY3JpcHRvciIsImYiLCJwdXNoIiwiZmlyZSIsImdldCIsImNoYXRWaWV3c1dlbGNvbWVSZWdpc3RyeSIsImFkZCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvY2hhdC9icm93c2VyL3ZpZXdzV2VsY29tZS9jaGF0Vmlld3NXZWxjb21lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFbWl0dGVyLCBFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IElNYXJrZG93blN0cmluZyB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2h0bWxDb250ZW50LmpzJztcbmltcG9ydCB7IERpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgVGhlbWVJY29uIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdGhlbWFibGVzLmpzJztcbmltcG9ydCB7IENvbnRleHRLZXlFeHByZXNzaW9uIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29udGV4dGtleS9jb21tb24vY29udGV4dGtleS5qcyc7XG5pbXBvcnQgeyBSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL3JlZ2lzdHJ5L2NvbW1vbi9wbGF0Zm9ybS5qcyc7XG5cbmV4cG9ydCBjb25zdCBlbnVtIENoYXRWaWV3c1dlbGNvbWVFeHRlbnNpb25zIHtcblx0Q2hhdFZpZXdzV2VsY29tZVJlZ2lzdHJ5ID0gJ3dvcmtiZW5jaC5yZWdpc3RyeS5jaGF0LnZpZXdzV2VsY29tZScsXG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNoYXRWaWV3c1dlbGNvbWVEZXNjcmlwdG9yIHtcblx0cmVhZG9ubHkgaWNvbj86IFRoZW1lSWNvbjtcblx0cmVhZG9ubHkgdGl0bGU6IHN0cmluZztcblx0cmVhZG9ubHkgY29udGVudDogSU1hcmtkb3duU3RyaW5nO1xuXHRyZWFkb25seSB3aGVuOiBDb250ZXh0S2V5RXhwcmVzc2lvbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQ2hhdFZpZXdzV2VsY29tZUNvbnRyaWJ1dGlvblJlZ2lzdHJ5IHtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2U6IEV2ZW50PHZvaWQ+O1xuXHRnZXQoKTogUmVhZG9ubHlBcnJheTxJQ2hhdFZpZXdzV2VsY29tZURlc2NyaXB0b3I+O1xuXHRyZWdpc3RlcihkZXNjcmlwdG9yOiBJQ2hhdFZpZXdzV2VsY29tZURlc2NyaXB0b3IpOiB2b2lkO1xufVxuXG5jbGFzcyBDaGF0Vmlld3NXZWxjb21lQ29udHJpYnV0aW9uUmVnaXN0cnkgZXh0ZW5kcyBEaXNwb3NhYmxlIGltcGxlbWVudHMgSUNoYXRWaWV3c1dlbGNvbWVDb250cmlidXRpb25SZWdpc3RyeSB7XG5cdHByaXZhdGUgcmVhZG9ubHkgZGVzY3JpcHRvcnM6IElDaGF0Vmlld3NXZWxjb21lRGVzY3JpcHRvcltdID0gW107XG5cdHByaXZhdGUgcmVhZG9ubHkgX29uRGlkQ2hhbmdlID0gdGhpcy5fcmVnaXN0ZXIobmV3IEVtaXR0ZXI8dm9pZD4oKSk7XG5cdHB1YmxpYyByZWFkb25seSBvbkRpZENoYW5nZTogRXZlbnQ8dm9pZD4gPSB0aGlzLl9vbkRpZENoYW5nZS5ldmVudDtcblxuXHRwdWJsaWMgcmVnaXN0ZXIoZGVzY3JpcHRvcjogSUNoYXRWaWV3c1dlbGNvbWVEZXNjcmlwdG9yKTogdm9pZCB7XG5cdFx0dGhpcy5kZXNjcmlwdG9ycy5wdXNoKGRlc2NyaXB0b3IpO1xuXHRcdHRoaXMuX29uRGlkQ2hhbmdlLmZpcmUoKTtcblx0fVxuXG5cdHB1YmxpYyBnZXQoKTogUmVhZG9ubHlBcnJheTxJQ2hhdFZpZXdzV2VsY29tZURlc2NyaXB0b3I+IHtcblx0XHRyZXR1cm4gdGhpcy5kZXNjcmlwdG9ycztcblx0fVxufVxuXG5leHBvcnQgY29uc3QgY2hhdFZpZXdzV2VsY29tZVJlZ2lzdHJ5ID0gbmV3IENoYXRWaWV3c1dlbGNvbWVDb250cmlidXRpb25SZWdpc3RyeSgpO1xuUmVnaXN0cnkuYWRkKENoYXRWaWV3c1dlbGNvbWVFeHRlbnNpb25zLkNoYXRWaWV3c1dlbGNvbWVSZWdpc3RyeSwgY2hhdFZpZXdzV2VsY29tZVJlZ2lzdHJ5KTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUF1Q1c7SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQXZDWDs7OztBQUtBLFNBQVNFLE9BQU8sUUFBZSxxQ0FBcUM7QUFFcEUsU0FBU0MsVUFBVSxRQUFRLHlDQUF5QztBQUdwRSxTQUFTQyxRQUFRLFFBQVEscURBQXFEO0FBbUI5RSxNQUFNQyxvQ0FBcUMsU0FBUUYsVUFBVTtFQUMzQ0csV0FBVztFQUFBO0VBQUEsQ0FBQU4sYUFBQSxHQUFBTyxDQUFBLE9BQWtDLEVBQUU7RUFDL0NDLFlBQVk7RUFBQTtFQUFBLENBQUFSLGFBQUEsR0FBQU8sQ0FBQSxPQUFHLElBQUksQ0FBQ0UsU0FBUyxDQUFDLElBQUlQLE9BQU8sRUFBUSxDQUFDO0VBQ25EUSxXQUFXO0VBQUE7RUFBQSxDQUFBVixhQUFBLEdBQUFPLENBQUEsT0FBZ0IsSUFBSSxDQUFDQyxZQUFZLENBQUNHLEtBQUs7RUFFM0RDLFFBQVFBLENBQUNDLFVBQXVDO0lBQUE7SUFBQWIsYUFBQSxHQUFBYyxDQUFBO0lBQUFkLGFBQUEsR0FBQU8sQ0FBQTtJQUN0RCxJQUFJLENBQUNELFdBQVcsQ0FBQ1MsSUFBSSxDQUFDRixVQUFVLENBQUM7SUFBQztJQUFBYixhQUFBLEdBQUFPLENBQUE7SUFDbEMsSUFBSSxDQUFDQyxZQUFZLENBQUNRLElBQUksRUFBRTtFQUN6QjtFQUVPQyxHQUFHQSxDQUFBO0lBQUE7SUFBQWpCLGFBQUEsR0FBQWMsQ0FBQTtJQUFBZCxhQUFBLEdBQUFPLENBQUE7SUFDVCxPQUFPLElBQUksQ0FBQ0QsV0FBVztFQUN4Qjs7QUFHRCxPQUFPLE1BQU1ZLHdCQUF3QjtBQUFBO0FBQUEsQ0FBQWxCLGFBQUEsR0FBQU8sQ0FBQSxPQUFHLElBQUlGLG9DQUFvQyxFQUFFO0FBQUM7QUFBQUwsYUFBQSxHQUFBTyxDQUFBO0FBQ25GSCxRQUFRLENBQUNlLEdBQUcsbUdBQXNERCx3QkFBd0IsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

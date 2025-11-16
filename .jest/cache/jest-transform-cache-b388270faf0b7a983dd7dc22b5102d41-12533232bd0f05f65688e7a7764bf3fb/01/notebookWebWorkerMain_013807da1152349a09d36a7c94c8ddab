@@ -1,0 +1,63 @@
+9b633ed68f41acab29ae778b989491fd
+/* istanbul ignore next */
+function cov_d3rcsy5oa() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWebWorkerMain.ts";
+  var hash = "3a31c18ed0247793a5f144d9f9bbdb9071c88043";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWebWorkerMain.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 7,
+          column: 27
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWebWorkerMain.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,kBAAkB,EAAE,MAAM,yDAAyD,CAAC;AAC7F,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAEhD,kBAAkB,CAAC,MAAM,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWebWorkerMain.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { bootstrapWebWorker } from '../../../../../base/common/worker/webWorkerBootstrap.js';\nimport { create } from './notebookWebWorker.js';\n\nbootstrapWebWorker(create);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3a31c18ed0247793a5f144d9f9bbdb9071c88043"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_d3rcsy5oa = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_d3rcsy5oa();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { bootstrapWebWorker } from '../../../../../base/common/worker/webWorkerBootstrap.js';
+import { create } from './notebookWebWorker.js';
+/* istanbul ignore next */
+cov_d3rcsy5oa().s[0]++;
+bootstrapWebWorker(create);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJib290c3RyYXBXZWJXb3JrZXIiLCJjcmVhdGUiLCJjb3ZfZDNyY3N5NW9hIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvbm90ZWJvb2svY29tbW9uL3NlcnZpY2VzL25vdGVib29rV2ViV29ya2VyTWFpbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgYm9vdHN0cmFwV2ViV29ya2VyIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vd29ya2VyL3dlYldvcmtlckJvb3RzdHJhcC5qcyc7XG5pbXBvcnQgeyBjcmVhdGUgfSBmcm9tICcuL25vdGVib29rV2ViV29ya2VyLmpzJztcblxuYm9vdHN0cmFwV2ViV29ya2VyKGNyZWF0ZSk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLGtCQUFrQixRQUFRLHlEQUF5RDtBQUM1RixTQUFTQyxNQUFNLFFBQVEsd0JBQXdCO0FBQUM7QUFBQUMsYUFBQSxHQUFBQyxDQUFBO0FBRWhESCxrQkFBa0IsQ0FBQ0MsTUFBTSxDQUFDIiwiaWdub3JlTGlzdCI6W119

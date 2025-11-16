@@ -1,0 +1,192 @@
+dea669062887284313a518af67dc3f7b
+/* istanbul ignore next */
+function cov_27tmtwmfj2() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/semanticTokens/common/semanticTokensConfig.ts";
+  var hash = "e575b1c8beabdde269ee5a001fa339f2cc7db23b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/semanticTokens/common/semanticTokensConfig.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 48
+        },
+        end: {
+          line: 5,
+          column: 77
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 20
+        },
+        end: {
+          line: 7,
+          column: 160
+        }
+      },
+      "2": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 5
+        }
+      },
+      "3": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 23
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 61
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isSemanticColoringEnabled",
+        decl: {
+          start: {
+            line: 6,
+            column: 16
+          },
+          end: {
+            line: 6,
+            column: 41
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 85
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 8
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/semanticTokens/common/semanticTokensConfig.ts",
+      mappings: "AAAA;;;gGAGgG;AAMhG,MAAM,CAAC,MAAM,gCAAgC,GAAG,6BAA6B,CAAC;AAM9E,MAAM,UAAU,yBAAyB,CAAC,KAAiB,EAAE,YAA2B,EAAE,oBAA2C;IACpI,MAAM,OAAO,GAAG,oBAAoB,CAAC,QAAQ,CAAqC,gCAAgC,EAAE,EAAE,kBAAkB,EAAE,KAAK,CAAC,aAAa,EAAE,EAAE,QAAQ,EAAE,KAAK,CAAC,GAAG,EAAE,CAAC,EAAE,OAAO,CAAC;IACjM,IAAI,OAAO,OAAO,KAAK,SAAS,EAAE,CAAC;QAClC,OAAO,OAAO,CAAC;IAChB,CAAC;IACD,OAAO,YAAY,CAAC,aAAa,EAAE,CAAC,oBAAoB,CAAC;AAC1D,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/semanticTokens/common/semanticTokensConfig.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ITextModel } from '../../../common/model.js';\nimport { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';\nimport { IThemeService } from '../../../../platform/theme/common/themeService.js';\n\nexport const SEMANTIC_HIGHLIGHTING_SETTING_ID = 'editor.semanticHighlighting';\n\nexport interface IEditorSemanticHighlightingOptions {\n\tenabled: true | false | 'configuredByTheme';\n}\n\nexport function isSemanticColoringEnabled(model: ITextModel, themeService: IThemeService, configurationService: IConfigurationService): boolean {\n\tconst setting = configurationService.getValue<IEditorSemanticHighlightingOptions>(SEMANTIC_HIGHLIGHTING_SETTING_ID, { overrideIdentifier: model.getLanguageId(), resource: model.uri })?.enabled;\n\tif (typeof setting === 'boolean') {\n\t\treturn setting;\n\t}\n\treturn themeService.getColorTheme().semanticHighlighting;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e575b1c8beabdde269ee5a001fa339f2cc7db23b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_27tmtwmfj2 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_27tmtwmfj2();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const SEMANTIC_HIGHLIGHTING_SETTING_ID =
+/* istanbul ignore next */
+(cov_27tmtwmfj2().s[0]++, 'editor.semanticHighlighting');
+export function isSemanticColoringEnabled(model, themeService, configurationService) {
+  /* istanbul ignore next */
+  cov_27tmtwmfj2().f[0]++;
+  const setting =
+  /* istanbul ignore next */
+  (cov_27tmtwmfj2().s[1]++, configurationService.getValue(SEMANTIC_HIGHLIGHTING_SETTING_ID, {
+    overrideIdentifier: model.getLanguageId(),
+    resource: model.uri
+  })?.enabled);
+  /* istanbul ignore next */
+  cov_27tmtwmfj2().s[2]++;
+  if (typeof setting === 'boolean') {
+    /* istanbul ignore next */
+    cov_27tmtwmfj2().b[0][0]++;
+    cov_27tmtwmfj2().s[3]++;
+    return setting;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_27tmtwmfj2().b[0][1]++;
+  }
+  cov_27tmtwmfj2().s[4]++;
+  return themeService.getColorTheme().semanticHighlighting;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTRU1BTlRJQ19ISUdITElHSFRJTkdfU0VUVElOR19JRCIsImNvdl8yN3RtdHdtZmoyIiwicyIsImlzU2VtYW50aWNDb2xvcmluZ0VuYWJsZWQiLCJtb2RlbCIsInRoZW1lU2VydmljZSIsImNvbmZpZ3VyYXRpb25TZXJ2aWNlIiwiZiIsInNldHRpbmciLCJnZXRWYWx1ZSIsIm92ZXJyaWRlSWRlbnRpZmllciIsImdldExhbmd1YWdlSWQiLCJyZXNvdXJjZSIsInVyaSIsImVuYWJsZWQiLCJiIiwiZ2V0Q29sb3JUaGVtZSIsInNlbWFudGljSGlnaGxpZ2h0aW5nIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29udHJpYi9zZW1hbnRpY1Rva2Vucy9jb21tb24vc2VtYW50aWNUb2tlbnNDb25maWcudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElUZXh0TW9kZWwgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vbW9kZWwuanMnO1xuaW1wb3J0IHsgSUNvbmZpZ3VyYXRpb25TZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29uZmlndXJhdGlvbi9jb21tb24vY29uZmlndXJhdGlvbi5qcyc7XG5pbXBvcnQgeyBJVGhlbWVTZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vdGhlbWUvY29tbW9uL3RoZW1lU2VydmljZS5qcyc7XG5cbmV4cG9ydCBjb25zdCBTRU1BTlRJQ19ISUdITElHSFRJTkdfU0VUVElOR19JRCA9ICdlZGl0b3Iuc2VtYW50aWNIaWdobGlnaHRpbmcnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElFZGl0b3JTZW1hbnRpY0hpZ2hsaWdodGluZ09wdGlvbnMge1xuXHRlbmFibGVkOiB0cnVlIHwgZmFsc2UgfCAnY29uZmlndXJlZEJ5VGhlbWUnO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gaXNTZW1hbnRpY0NvbG9yaW5nRW5hYmxlZChtb2RlbDogSVRleHRNb2RlbCwgdGhlbWVTZXJ2aWNlOiBJVGhlbWVTZXJ2aWNlLCBjb25maWd1cmF0aW9uU2VydmljZTogSUNvbmZpZ3VyYXRpb25TZXJ2aWNlKTogYm9vbGVhbiB7XG5cdGNvbnN0IHNldHRpbmcgPSBjb25maWd1cmF0aW9uU2VydmljZS5nZXRWYWx1ZTxJRWRpdG9yU2VtYW50aWNIaWdobGlnaHRpbmdPcHRpb25zPihTRU1BTlRJQ19ISUdITElHSFRJTkdfU0VUVElOR19JRCwgeyBvdmVycmlkZUlkZW50aWZpZXI6IG1vZGVsLmdldExhbmd1YWdlSWQoKSwgcmVzb3VyY2U6IG1vZGVsLnVyaSB9KT8uZW5hYmxlZDtcblx0aWYgKHR5cGVvZiBzZXR0aW5nID09PSAnYm9vbGVhbicpIHtcblx0XHRyZXR1cm4gc2V0dGluZztcblx0fVxuXHRyZXR1cm4gdGhlbWVTZXJ2aWNlLmdldENvbG9yVGhlbWUoKS5zZW1hbnRpY0hpZ2hsaWdodGluZztcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFTQSxPQUFPLE1BQU1BLGdDQUFnQztBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUcsNkJBQTZCO0FBTTdFLE9BQU0sU0FBVUMseUJBQXlCQSxDQUFDQyxLQUFpQixFQUFFQyxZQUEyQixFQUFFQyxvQkFBMkM7RUFBQTtFQUFBTCxjQUFBLEdBQUFNLENBQUE7RUFDcEksTUFBTUMsT0FBTztFQUFBO0VBQUEsQ0FBQVAsY0FBQSxHQUFBQyxDQUFBLE9BQUdJLG9CQUFvQixDQUFDRyxRQUFRLENBQXFDVCxnQ0FBZ0MsRUFBRTtJQUFFVSxrQkFBa0IsRUFBRU4sS0FBSyxDQUFDTyxhQUFhLEVBQUU7SUFBRUMsUUFBUSxFQUFFUixLQUFLLENBQUNTO0VBQUcsQ0FBRSxDQUFDLEVBQUVDLE9BQU87RUFBQztFQUFBYixjQUFBLEdBQUFDLENBQUE7RUFDak0sSUFBSSxPQUFPTSxPQUFPLEtBQUssU0FBUyxFQUFFO0lBQUE7SUFBQVAsY0FBQSxHQUFBYyxDQUFBO0lBQUFkLGNBQUEsR0FBQUMsQ0FBQTtJQUNqQyxPQUFPTSxPQUFPO0VBQ2YsQ0FBQztFQUFBO0VBQUE7SUFBQVAsY0FBQSxHQUFBYyxDQUFBO0VBQUE7RUFBQWQsY0FBQSxHQUFBQyxDQUFBO0VBQ0QsT0FBT0csWUFBWSxDQUFDVyxhQUFhLEVBQUUsQ0FBQ0Msb0JBQW9CO0FBQ3pEIiwiaWdub3JlTGlzdCI6W119

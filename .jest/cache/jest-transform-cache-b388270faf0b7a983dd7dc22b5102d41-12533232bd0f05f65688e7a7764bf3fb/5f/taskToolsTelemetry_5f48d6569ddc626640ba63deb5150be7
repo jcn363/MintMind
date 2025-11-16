@@ -1,0 +1,46 @@
+b7f00d8bb38ffbc0c2a2416021284b08
+/* istanbul ignore next */
+function cov_ub2hqfoiw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/taskToolsTelemetry.ts";
+  var hash = "9bd7d36884b0c6bd47fc2fda07a0e605eaa42d5a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/taskToolsTelemetry.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/taskToolsTelemetry.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/task/taskToolsTelemetry.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n\nexport type TaskToolClassification = {\n\ttaskId: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The ID of the task.' };\n\tbufferLength: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The length of the terminal buffer as a string.' };\n\tpollDurationMs: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'How long polling for output took (ms).' };\n\tinputToolManualAcceptCount: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'The number of times the user manually accepted a detected suggestion' };\n\tinputToolManualRejectCount: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'The number of times the user manually rejected a detected suggestion' };\n\tinputToolManualChars: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'The number of characters input by manual acceptance of suggestions' };\n\tinputToolManualShownCount: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'The number of times the user was prompted to manually accept an input suggestion' };\n\tinputToolFreeFormInputShownCount: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'The number of times the user was prompted to provide free form input' };\n\tinputToolFreeFormInputCount: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; isMeasurement: true; comment: 'The number of times the user provided free form input after prompting' };\n\towner: 'meganrogge';\n\tcomment: 'Understanding the usage of the task tools';\n};\nexport type TaskToolEvent = {\n\ttaskId: string;\n\tbufferLength: number;\n\tpollDurationMs: number | undefined;\n\tinputToolManualAcceptCount: number;\n\tinputToolManualRejectCount: number;\n\tinputToolManualChars: number;\n\tinputToolManualShownCount: number;\n\tinputToolFreeFormInputShownCount: number;\n\tinputToolFreeFormInputCount: number;\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "9bd7d36884b0c6bd47fc2fda07a0e605eaa42d5a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ub2hqfoiw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ub2hqfoiw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvY2hhdEFnZW50VG9vbHMvYnJvd3Nlci90b29scy90YXNrL3Rhc2tUb29sc1RlbGVtZXRyeS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuXG5leHBvcnQgdHlwZSBUYXNrVG9vbENsYXNzaWZpY2F0aW9uID0ge1xuXHR0YXNrSWQ6IHsgY2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YSc7IHB1cnBvc2U6ICdGZWF0dXJlSW5zaWdodCc7IGNvbW1lbnQ6ICdUaGUgSUQgb2YgdGhlIHRhc2suJyB9O1xuXHRidWZmZXJMZW5ndGg6IHsgY2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YSc7IHB1cnBvc2U6ICdGZWF0dXJlSW5zaWdodCc7IGNvbW1lbnQ6ICdUaGUgbGVuZ3RoIG9mIHRoZSB0ZXJtaW5hbCBidWZmZXIgYXMgYSBzdHJpbmcuJyB9O1xuXHRwb2xsRHVyYXRpb25NczogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgaXNNZWFzdXJlbWVudDogdHJ1ZTsgY29tbWVudDogJ0hvdyBsb25nIHBvbGxpbmcgZm9yIG91dHB1dCB0b29rIChtcykuJyB9O1xuXHRpbnB1dFRvb2xNYW51YWxBY2NlcHRDb3VudDogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgaXNNZWFzdXJlbWVudDogdHJ1ZTsgY29tbWVudDogJ1RoZSBudW1iZXIgb2YgdGltZXMgdGhlIHVzZXIgbWFudWFsbHkgYWNjZXB0ZWQgYSBkZXRlY3RlZCBzdWdnZXN0aW9uJyB9O1xuXHRpbnB1dFRvb2xNYW51YWxSZWplY3RDb3VudDogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgaXNNZWFzdXJlbWVudDogdHJ1ZTsgY29tbWVudDogJ1RoZSBudW1iZXIgb2YgdGltZXMgdGhlIHVzZXIgbWFudWFsbHkgcmVqZWN0ZWQgYSBkZXRlY3RlZCBzdWdnZXN0aW9uJyB9O1xuXHRpbnB1dFRvb2xNYW51YWxDaGFyczogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgaXNNZWFzdXJlbWVudDogdHJ1ZTsgY29tbWVudDogJ1RoZSBudW1iZXIgb2YgY2hhcmFjdGVycyBpbnB1dCBieSBtYW51YWwgYWNjZXB0YW5jZSBvZiBzdWdnZXN0aW9ucycgfTtcblx0aW5wdXRUb29sTWFudWFsU2hvd25Db3VudDogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgaXNNZWFzdXJlbWVudDogdHJ1ZTsgY29tbWVudDogJ1RoZSBudW1iZXIgb2YgdGltZXMgdGhlIHVzZXIgd2FzIHByb21wdGVkIHRvIG1hbnVhbGx5IGFjY2VwdCBhbiBpbnB1dCBzdWdnZXN0aW9uJyB9O1xuXHRpbnB1dFRvb2xGcmVlRm9ybUlucHV0U2hvd25Db3VudDogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgaXNNZWFzdXJlbWVudDogdHJ1ZTsgY29tbWVudDogJ1RoZSBudW1iZXIgb2YgdGltZXMgdGhlIHVzZXIgd2FzIHByb21wdGVkIHRvIHByb3ZpZGUgZnJlZSBmb3JtIGlucHV0JyB9O1xuXHRpbnB1dFRvb2xGcmVlRm9ybUlucHV0Q291bnQ6IHsgY2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YSc7IHB1cnBvc2U6ICdGZWF0dXJlSW5zaWdodCc7IGlzTWVhc3VyZW1lbnQ6IHRydWU7IGNvbW1lbnQ6ICdUaGUgbnVtYmVyIG9mIHRpbWVzIHRoZSB1c2VyIHByb3ZpZGVkIGZyZWUgZm9ybSBpbnB1dCBhZnRlciBwcm9tcHRpbmcnIH07XG5cdG93bmVyOiAnbWVnYW5yb2dnZSc7XG5cdGNvbW1lbnQ6ICdVbmRlcnN0YW5kaW5nIHRoZSB1c2FnZSBvZiB0aGUgdGFzayB0b29scyc7XG59O1xuZXhwb3J0IHR5cGUgVGFza1Rvb2xFdmVudCA9IHtcblx0dGFza0lkOiBzdHJpbmc7XG5cdGJ1ZmZlckxlbmd0aDogbnVtYmVyO1xuXHRwb2xsRHVyYXRpb25NczogbnVtYmVyIHwgdW5kZWZpbmVkO1xuXHRpbnB1dFRvb2xNYW51YWxBY2NlcHRDb3VudDogbnVtYmVyO1xuXHRpbnB1dFRvb2xNYW51YWxSZWplY3RDb3VudDogbnVtYmVyO1xuXHRpbnB1dFRvb2xNYW51YWxDaGFyczogbnVtYmVyO1xuXHRpbnB1dFRvb2xNYW51YWxTaG93bkNvdW50OiBudW1iZXI7XG5cdGlucHV0VG9vbEZyZWVGb3JtSW5wdXRTaG93bkNvdW50OiBudW1iZXI7XG5cdGlucHV0VG9vbEZyZWVGb3JtSW5wdXRDb3VudDogbnVtYmVyO1xufTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

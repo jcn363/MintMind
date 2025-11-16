@@ -1,0 +1,49 @@
+4a3e69b743f7ad6e29b5c3a4fa4884f7
+/* istanbul ignore next */
+function cov_2mbt7780fk() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editSessions/common/editSessionsStorageClient.ts";
+  var hash = "c5acb8a739586396e9ab17575be650c06d8b5522";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editSessions/common/editSessionsStorageClient.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editSessions/common/editSessionsStorageClient.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,uBAAuB,EAAE,MAAM,sEAAsE,CAAC;AAE/G,MAAM,OAAO,uBAAwB,SAAQ,uBAAuB;IACnE,aAAa,CAAY;CACzB",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/editSessions/common/editSessionsStorageClient.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { UserDataSyncStoreClient } from '../../../../platform/userDataSync/common/userDataSyncStoreService.js';\n\nexport class EditSessionsStoreClient extends UserDataSyncStoreClient {\n\t_serviceBrand: undefined;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c5acb8a739586396e9ab17575be650c06d8b5522"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2mbt7780fk = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2mbt7780fk();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { UserDataSyncStoreClient } from '../../../../platform/userDataSync/common/userDataSyncStoreService.js';
+export class EditSessionsStoreClient extends UserDataSyncStoreClient {
+  _serviceBrand;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJVc2VyRGF0YVN5bmNTdG9yZUNsaWVudCIsIkVkaXRTZXNzaW9uc1N0b3JlQ2xpZW50IiwiX3NlcnZpY2VCcmFuZCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvZWRpdFNlc3Npb25zL2NvbW1vbi9lZGl0U2Vzc2lvbnNTdG9yYWdlQ2xpZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVc2VyRGF0YVN5bmNTdG9yZUNsaWVudCB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3VzZXJEYXRhU3luYy9jb21tb24vdXNlckRhdGFTeW5jU3RvcmVTZXJ2aWNlLmpzJztcblxuZXhwb3J0IGNsYXNzIEVkaXRTZXNzaW9uc1N0b3JlQ2xpZW50IGV4dGVuZHMgVXNlckRhdGFTeW5jU3RvcmVDbGllbnQge1xuXHRfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsdUJBQXVCLFFBQVEsc0VBQXNFO0FBRTlHLE9BQU0sTUFBT0MsdUJBQXdCLFNBQVFELHVCQUF1QjtFQUNuRUUsYUFBYSIsImlnbm9yZUxpc3QiOltdfQ==

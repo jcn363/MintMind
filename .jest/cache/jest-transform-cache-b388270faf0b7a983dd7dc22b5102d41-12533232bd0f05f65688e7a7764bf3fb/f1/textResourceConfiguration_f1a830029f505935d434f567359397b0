@@ -1,0 +1,76 @@
+50fecf6bad8fe566a21946b7f877ef92
+/* istanbul ignore next */
+function cov_132yninok6() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/textResourceConfiguration.ts";
+  var hash = "fd7281e69cc9486769515752e9ab75d124814566";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/textResourceConfiguration.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 49
+        },
+        end: {
+          line: 6,
+          column: 100
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 46
+        },
+        end: {
+          line: 7,
+          column: 94
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/textResourceConfiguration.ts",
+      mappings: "AAAA;;;gGAGgG;AAMhG,OAAO,EAAE,eAAe,EAAE,MAAM,yDAAyD,CAAC;AAE1F,MAAM,CAAC,MAAM,iCAAiC,GAAG,eAAe,CAAoC,kCAAkC,CAAC,CAAC;AAmExI,MAAM,CAAC,MAAM,8BAA8B,GAAG,eAAe,CAAiC,+BAA+B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/textResourceConfiguration.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { IPosition } from '../core/position.js';\nimport { ConfigurationTarget, IConfigurationValue } from '../../../platform/configuration/common/configuration.js';\nimport { createDecorator } from '../../../platform/instantiation/common/instantiation.js';\n\nexport const ITextResourceConfigurationService = createDecorator<ITextResourceConfigurationService>('textResourceConfigurationService');\n\nexport interface ITextResourceConfigurationChangeEvent {\n\n\t/**\n\t * All affected keys. Also includes language overrides and keys changed under language overrides.\n\t */\n\treadonly affectedKeys: ReadonlySet<string>;\n\n\t/**\n\t * Returns `true` if the given section has changed for the given resource.\n\t *\n\t * Example: To check if the configuration section has changed for a given resource use `e.affectsConfiguration(resource, section)`.\n\t *\n\t * @param resource Resource for which the configuration has to be checked.\n\t * @param section Section of the configuration\n\t */\n\taffectsConfiguration(resource: URI | undefined, section: string): boolean;\n}\n\nexport interface ITextResourceConfigurationService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Event that fires when the configuration changes.\n\t */\n\treadonly onDidChangeConfiguration: Event<ITextResourceConfigurationChangeEvent>;\n\n\t/**\n\t * Fetches the value of the section for the given resource by applying language overrides.\n\t * Value can be of native type or an object keyed off the section name.\n\t *\n\t * @param resource - Resource for which the configuration has to be fetched.\n\t * @param position - Position in the resource for which configuration has to be fetched.\n\t * @param section - Section of the configuration.\n\t *\n\t */\n\tgetValue<T>(resource: URI | undefined, section?: string): T;\n\tgetValue<T>(resource: URI | undefined, position?: IPosition, section?: string): T;\n\n\t/**\n\t * Inspects the values of the section for the given resource by applying language overrides.\n\t *\n\t * @param resource - Resource for which the configuration has to be fetched.\n\t * @param position - Position in the resource for which configuration has to be fetched.\n\t * @param section - Section of the configuration.\n\t *\n\t */\n\tinspect<T>(resource: URI | undefined, position: IPosition | null, section: string): IConfigurationValue<Readonly<T>>;\n\n\t/**\n\t * Update the configuration value for the given resource at the effective location.\n\t *\n\t * - If configurationTarget is not specified, target will be derived by checking where the configuration is defined.\n\t * - If the language overrides for the give resource contains the configuration, then it is updated.\n\t *\n\t * @param resource Resource for which the configuration has to be updated\n\t * @param key Configuration key\n\t * @param value Configuration value\n\t * @param configurationTarget Optional target into which the configuration has to be updated.\n\t * If not specified, target will be derived by checking where the configuration is defined.\n\t */\n\tupdateValue(resource: URI | undefined, key: string, value: unknown, configurationTarget?: ConfigurationTarget): Promise<void>;\n\n}\n\nexport const ITextResourcePropertiesService = createDecorator<ITextResourcePropertiesService>('textResourcePropertiesService');\n\nexport interface ITextResourcePropertiesService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Returns the End of Line characters for the given resource\n\t */\n\tgetEOL(resource: URI, language?: string): string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "fd7281e69cc9486769515752e9ab75d124814566"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_132yninok6 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_132yninok6();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+export const ITextResourceConfigurationService =
+/* istanbul ignore next */
+(cov_132yninok6().s[0]++, createDecorator('textResourceConfigurationService'));
+export const ITextResourcePropertiesService =
+/* istanbul ignore next */
+(cov_132yninok6().s[1]++, createDecorator('textResourcePropertiesService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJVGV4dFJlc291cmNlQ29uZmlndXJhdGlvblNlcnZpY2UiLCJjb3ZfMTMyeW5pbm9rNiIsInMiLCJJVGV4dFJlc291cmNlUHJvcGVydGllc1NlcnZpY2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9jb21tb24vc2VydmljZXMvdGV4dFJlc291cmNlQ29uZmlndXJhdGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSVBvc2l0aW9uIH0gZnJvbSAnLi4vY29yZS9wb3NpdGlvbi5qcyc7XG5pbXBvcnQgeyBDb25maWd1cmF0aW9uVGFyZ2V0LCBJQ29uZmlndXJhdGlvblZhbHVlIH0gZnJvbSAnLi4vLi4vLi4vcGxhdGZvcm0vY29uZmlndXJhdGlvbi9jb21tb24vY29uZmlndXJhdGlvbi5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElUZXh0UmVzb3VyY2VDb25maWd1cmF0aW9uU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJVGV4dFJlc291cmNlQ29uZmlndXJhdGlvblNlcnZpY2U+KCd0ZXh0UmVzb3VyY2VDb25maWd1cmF0aW9uU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElUZXh0UmVzb3VyY2VDb25maWd1cmF0aW9uQ2hhbmdlRXZlbnQge1xuXG5cdC8qKlxuXHQgKiBBbGwgYWZmZWN0ZWQga2V5cy4gQWxzbyBpbmNsdWRlcyBsYW5ndWFnZSBvdmVycmlkZXMgYW5kIGtleXMgY2hhbmdlZCB1bmRlciBsYW5ndWFnZSBvdmVycmlkZXMuXG5cdCAqL1xuXHRyZWFkb25seSBhZmZlY3RlZEtleXM6IFJlYWRvbmx5U2V0PHN0cmluZz47XG5cblx0LyoqXG5cdCAqIFJldHVybnMgYHRydWVgIGlmIHRoZSBnaXZlbiBzZWN0aW9uIGhhcyBjaGFuZ2VkIGZvciB0aGUgZ2l2ZW4gcmVzb3VyY2UuXG5cdCAqXG5cdCAqIEV4YW1wbGU6IFRvIGNoZWNrIGlmIHRoZSBjb25maWd1cmF0aW9uIHNlY3Rpb24gaGFzIGNoYW5nZWQgZm9yIGEgZ2l2ZW4gcmVzb3VyY2UgdXNlIGBlLmFmZmVjdHNDb25maWd1cmF0aW9uKHJlc291cmNlLCBzZWN0aW9uKWAuXG5cdCAqXG5cdCAqIEBwYXJhbSByZXNvdXJjZSBSZXNvdXJjZSBmb3Igd2hpY2ggdGhlIGNvbmZpZ3VyYXRpb24gaGFzIHRvIGJlIGNoZWNrZWQuXG5cdCAqIEBwYXJhbSBzZWN0aW9uIFNlY3Rpb24gb2YgdGhlIGNvbmZpZ3VyYXRpb25cblx0ICovXG5cdGFmZmVjdHNDb25maWd1cmF0aW9uKHJlc291cmNlOiBVUkkgfCB1bmRlZmluZWQsIHNlY3Rpb246IHN0cmluZyk6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVRleHRSZXNvdXJjZUNvbmZpZ3VyYXRpb25TZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEV2ZW50IHRoYXQgZmlyZXMgd2hlbiB0aGUgY29uZmlndXJhdGlvbiBjaGFuZ2VzLlxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VDb25maWd1cmF0aW9uOiBFdmVudDxJVGV4dFJlc291cmNlQ29uZmlndXJhdGlvbkNoYW5nZUV2ZW50PjtcblxuXHQvKipcblx0ICogRmV0Y2hlcyB0aGUgdmFsdWUgb2YgdGhlIHNlY3Rpb24gZm9yIHRoZSBnaXZlbiByZXNvdXJjZSBieSBhcHBseWluZyBsYW5ndWFnZSBvdmVycmlkZXMuXG5cdCAqIFZhbHVlIGNhbiBiZSBvZiBuYXRpdmUgdHlwZSBvciBhbiBvYmplY3Qga2V5ZWQgb2ZmIHRoZSBzZWN0aW9uIG5hbWUuXG5cdCAqXG5cdCAqIEBwYXJhbSByZXNvdXJjZSAtIFJlc291cmNlIGZvciB3aGljaCB0aGUgY29uZmlndXJhdGlvbiBoYXMgdG8gYmUgZmV0Y2hlZC5cblx0ICogQHBhcmFtIHBvc2l0aW9uIC0gUG9zaXRpb24gaW4gdGhlIHJlc291cmNlIGZvciB3aGljaCBjb25maWd1cmF0aW9uIGhhcyB0byBiZSBmZXRjaGVkLlxuXHQgKiBAcGFyYW0gc2VjdGlvbiAtIFNlY3Rpb24gb2YgdGhlIGNvbmZpZ3VyYXRpb24uXG5cdCAqXG5cdCAqL1xuXHRnZXRWYWx1ZTxUPihyZXNvdXJjZTogVVJJIHwgdW5kZWZpbmVkLCBzZWN0aW9uPzogc3RyaW5nKTogVDtcblx0Z2V0VmFsdWU8VD4ocmVzb3VyY2U6IFVSSSB8IHVuZGVmaW5lZCwgcG9zaXRpb24/OiBJUG9zaXRpb24sIHNlY3Rpb24/OiBzdHJpbmcpOiBUO1xuXG5cdC8qKlxuXHQgKiBJbnNwZWN0cyB0aGUgdmFsdWVzIG9mIHRoZSBzZWN0aW9uIGZvciB0aGUgZ2l2ZW4gcmVzb3VyY2UgYnkgYXBwbHlpbmcgbGFuZ3VhZ2Ugb3ZlcnJpZGVzLlxuXHQgKlxuXHQgKiBAcGFyYW0gcmVzb3VyY2UgLSBSZXNvdXJjZSBmb3Igd2hpY2ggdGhlIGNvbmZpZ3VyYXRpb24gaGFzIHRvIGJlIGZldGNoZWQuXG5cdCAqIEBwYXJhbSBwb3NpdGlvbiAtIFBvc2l0aW9uIGluIHRoZSByZXNvdXJjZSBmb3Igd2hpY2ggY29uZmlndXJhdGlvbiBoYXMgdG8gYmUgZmV0Y2hlZC5cblx0ICogQHBhcmFtIHNlY3Rpb24gLSBTZWN0aW9uIG9mIHRoZSBjb25maWd1cmF0aW9uLlxuXHQgKlxuXHQgKi9cblx0aW5zcGVjdDxUPihyZXNvdXJjZTogVVJJIHwgdW5kZWZpbmVkLCBwb3NpdGlvbjogSVBvc2l0aW9uIHwgbnVsbCwgc2VjdGlvbjogc3RyaW5nKTogSUNvbmZpZ3VyYXRpb25WYWx1ZTxSZWFkb25seTxUPj47XG5cblx0LyoqXG5cdCAqIFVwZGF0ZSB0aGUgY29uZmlndXJhdGlvbiB2YWx1ZSBmb3IgdGhlIGdpdmVuIHJlc291cmNlIGF0IHRoZSBlZmZlY3RpdmUgbG9jYXRpb24uXG5cdCAqXG5cdCAqIC0gSWYgY29uZmlndXJhdGlvblRhcmdldCBpcyBub3Qgc3BlY2lmaWVkLCB0YXJnZXQgd2lsbCBiZSBkZXJpdmVkIGJ5IGNoZWNraW5nIHdoZXJlIHRoZSBjb25maWd1cmF0aW9uIGlzIGRlZmluZWQuXG5cdCAqIC0gSWYgdGhlIGxhbmd1YWdlIG92ZXJyaWRlcyBmb3IgdGhlIGdpdmUgcmVzb3VyY2UgY29udGFpbnMgdGhlIGNvbmZpZ3VyYXRpb24sIHRoZW4gaXQgaXMgdXBkYXRlZC5cblx0ICpcblx0ICogQHBhcmFtIHJlc291cmNlIFJlc291cmNlIGZvciB3aGljaCB0aGUgY29uZmlndXJhdGlvbiBoYXMgdG8gYmUgdXBkYXRlZFxuXHQgKiBAcGFyYW0ga2V5IENvbmZpZ3VyYXRpb24ga2V5XG5cdCAqIEBwYXJhbSB2YWx1ZSBDb25maWd1cmF0aW9uIHZhbHVlXG5cdCAqIEBwYXJhbSBjb25maWd1cmF0aW9uVGFyZ2V0IE9wdGlvbmFsIHRhcmdldCBpbnRvIHdoaWNoIHRoZSBjb25maWd1cmF0aW9uIGhhcyB0byBiZSB1cGRhdGVkLlxuXHQgKiBJZiBub3Qgc3BlY2lmaWVkLCB0YXJnZXQgd2lsbCBiZSBkZXJpdmVkIGJ5IGNoZWNraW5nIHdoZXJlIHRoZSBjb25maWd1cmF0aW9uIGlzIGRlZmluZWQuXG5cdCAqL1xuXHR1cGRhdGVWYWx1ZShyZXNvdXJjZTogVVJJIHwgdW5kZWZpbmVkLCBrZXk6IHN0cmluZywgdmFsdWU6IHVua25vd24sIGNvbmZpZ3VyYXRpb25UYXJnZXQ/OiBDb25maWd1cmF0aW9uVGFyZ2V0KTogUHJvbWlzZTx2b2lkPjtcblxufVxuXG5leHBvcnQgY29uc3QgSVRleHRSZXNvdXJjZVByb3BlcnRpZXNTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElUZXh0UmVzb3VyY2VQcm9wZXJ0aWVzU2VydmljZT4oJ3RleHRSZXNvdXJjZVByb3BlcnRpZXNTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVRleHRSZXNvdXJjZVByb3BlcnRpZXNTZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIEVuZCBvZiBMaW5lIGNoYXJhY3RlcnMgZm9yIHRoZSBnaXZlbiByZXNvdXJjZVxuXHQgKi9cblx0Z2V0RU9MKHJlc291cmNlOiBVUkksIGxhbmd1YWdlPzogc3RyaW5nKTogc3RyaW5nO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQVNBLFNBQVNBLGVBQWUsUUFBUSx5REFBeUQ7QUFFekYsT0FBTyxNQUFNQyxpQ0FBaUM7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQW9DLGtDQUFrQyxDQUFDO0FBbUV2SSxPQUFPLE1BQU1JLDhCQUE4QjtBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBaUMsK0JBQStCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

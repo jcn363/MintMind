@@ -1,0 +1,188 @@
+ed472ed131b0461f8ade2b57f389fd22
+/* istanbul ignore next */
+function cov_1rp3953nvv() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/process/common/process.ts";
+  var hash = "ae3f4a4eead7ca0aca5a515ba74c8acb45156e91";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/process/common/process.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 38
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 37
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 47
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 31
+        },
+        end: {
+          line: 12,
+          column: 64
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 1
+          },
+          end: {
+            line: 7,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 24
+          },
+          end: {
+            line: 11,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 11,
+            column: 3
+          },
+          end: {
+            line: 11,
+            column: 36
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 11,
+            column: 3
+          },
+          end: {
+            line: 11,
+            column: 14
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 19
+          },
+          end: {
+            line: 11,
+            column: 35
+          }
+        }],
+        line: 11
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/process/common/process.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAa9E,MAAM,CAAN,IAAY,WAIX;AAJD,WAAY,WAAW;IACtB,gCAAiB,CAAA;IACjB,sCAAuB,CAAA;IACvB,0CAA2B,CAAA;AAC5B,CAAC,EAJW,WAAW,KAAX,WAAW,QAItB;AAOD,MAAM,CAAC,MAAM,eAAe,GAAG,eAAe,CAAkB,gBAAgB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/process/common/process.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ProcessItem } from '../../../base/common/processes.js';\nimport { IRemoteDiagnosticError, PerformanceInfo, SystemInfo } from '../../diagnostics/common/diagnostics.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\n// Since data sent through the service is serialized to JSON, functions will be lost, so Color objects\n// should not be sent as their 'toString' method will be stripped. Instead convert to strings before sending.\nexport interface WindowStyles {\n\tbackgroundColor?: string;\n\tcolor?: string;\n}\nexport interface WindowData {\n\tstyles: WindowStyles;\n\tzoomLevel: number;\n}\n\nexport enum IssueSource {\n\tVSCode = 'vscode',\n\tExtension = 'extension',\n\tMarketplace = 'marketplace'\n}\nexport interface ISettingSearchResult {\n\textensionId: string;\n\tkey: string;\n\tscore: number;\n}\n\nexport const IProcessService = createDecorator<IProcessService>('processService');\n\nexport interface IResolvedProcessInformation {\n\treadonly pidToNames: [number, string][];\n\treadonly processes: {\n\t\treadonly name: string;\n\t\treadonly rootProcess: ProcessItem | IRemoteDiagnosticError;\n\t}[];\n}\n\nexport interface IProcessService {\n\n\treadonly _serviceBrand: undefined;\n\n\tresolveProcesses(): Promise<IResolvedProcessInformation>;\n\n\tgetSystemStatus(): Promise<string>;\n\tgetSystemInfo(): Promise<SystemInfo>;\n\tgetPerformanceInfo(): Promise<PerformanceInfo>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ae3f4a4eead7ca0aca5a515ba74c8acb45156e91"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1rp3953nvv = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1rp3953nvv();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export var IssueSource;
+/* istanbul ignore next */
+cov_1rp3953nvv().s[0]++;
+(function (IssueSource) {
+  /* istanbul ignore next */
+  cov_1rp3953nvv().f[0]++;
+  cov_1rp3953nvv().s[1]++;
+  IssueSource["VSCode"] = "vscode";
+  /* istanbul ignore next */
+  cov_1rp3953nvv().s[2]++;
+  IssueSource["Extension"] = "extension";
+  /* istanbul ignore next */
+  cov_1rp3953nvv().s[3]++;
+  IssueSource["Marketplace"] = "marketplace";
+})(
+/* istanbul ignore next */
+(cov_1rp3953nvv().b[0][0]++, IssueSource) ||
+/* istanbul ignore next */
+(cov_1rp3953nvv().b[0][1]++, IssueSource = {}));
+export const IProcessService =
+/* istanbul ignore next */
+(cov_1rp3953nvv().s[4]++, createDecorator('processService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJc3N1ZVNvdXJjZSIsImNvdl8xcnAzOTUzbnZ2IiwicyIsImYiLCJiIiwiSVByb2Nlc3NTZXJ2aWNlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9wcm9jZXNzL2NvbW1vbi9wcm9jZXNzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBQcm9jZXNzSXRlbSB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL3Byb2Nlc3Nlcy5qcyc7XG5pbXBvcnQgeyBJUmVtb3RlRGlhZ25vc3RpY0Vycm9yLCBQZXJmb3JtYW5jZUluZm8sIFN5c3RlbUluZm8gfSBmcm9tICcuLi8uLi9kaWFnbm9zdGljcy9jb21tb24vZGlhZ25vc3RpY3MuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5cbi8vIFNpbmNlIGRhdGEgc2VudCB0aHJvdWdoIHRoZSBzZXJ2aWNlIGlzIHNlcmlhbGl6ZWQgdG8gSlNPTiwgZnVuY3Rpb25zIHdpbGwgYmUgbG9zdCwgc28gQ29sb3Igb2JqZWN0c1xuLy8gc2hvdWxkIG5vdCBiZSBzZW50IGFzIHRoZWlyICd0b1N0cmluZycgbWV0aG9kIHdpbGwgYmUgc3RyaXBwZWQuIEluc3RlYWQgY29udmVydCB0byBzdHJpbmdzIGJlZm9yZSBzZW5kaW5nLlxuZXhwb3J0IGludGVyZmFjZSBXaW5kb3dTdHlsZXMge1xuXHRiYWNrZ3JvdW5kQ29sb3I/OiBzdHJpbmc7XG5cdGNvbG9yPzogc3RyaW5nO1xufVxuZXhwb3J0IGludGVyZmFjZSBXaW5kb3dEYXRhIHtcblx0c3R5bGVzOiBXaW5kb3dTdHlsZXM7XG5cdHpvb21MZXZlbDogbnVtYmVyO1xufVxuXG5leHBvcnQgZW51bSBJc3N1ZVNvdXJjZSB7XG5cdFZTQ29kZSA9ICd2c2NvZGUnLFxuXHRFeHRlbnNpb24gPSAnZXh0ZW5zaW9uJyxcblx0TWFya2V0cGxhY2UgPSAnbWFya2V0cGxhY2UnXG59XG5leHBvcnQgaW50ZXJmYWNlIElTZXR0aW5nU2VhcmNoUmVzdWx0IHtcblx0ZXh0ZW5zaW9uSWQ6IHN0cmluZztcblx0a2V5OiBzdHJpbmc7XG5cdHNjb3JlOiBudW1iZXI7XG59XG5cbmV4cG9ydCBjb25zdCBJUHJvY2Vzc1NlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVByb2Nlc3NTZXJ2aWNlPigncHJvY2Vzc1NlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJUmVzb2x2ZWRQcm9jZXNzSW5mb3JtYXRpb24ge1xuXHRyZWFkb25seSBwaWRUb05hbWVzOiBbbnVtYmVyLCBzdHJpbmddW107XG5cdHJlYWRvbmx5IHByb2Nlc3Nlczoge1xuXHRcdHJlYWRvbmx5IG5hbWU6IHN0cmluZztcblx0XHRyZWFkb25seSByb290UHJvY2VzczogUHJvY2Vzc0l0ZW0gfCBJUmVtb3RlRGlhZ25vc3RpY0Vycm9yO1xuXHR9W107XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVByb2Nlc3NTZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVzb2x2ZVByb2Nlc3NlcygpOiBQcm9taXNlPElSZXNvbHZlZFByb2Nlc3NJbmZvcm1hdGlvbj47XG5cblx0Z2V0U3lzdGVtU3RhdHVzKCk6IFByb21pc2U8c3RyaW5nPjtcblx0Z2V0U3lzdGVtSW5mbygpOiBQcm9taXNlPFN5c3RlbUluZm8+O1xuXHRnZXRQZXJmb3JtYW5jZUluZm8oKTogUHJvbWlzZTxQZXJmb3JtYW5jZUluZm8+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLFNBQVNBLGVBQWUsUUFBUSw2Q0FBNkM7QUFhN0UsV0FBWUMsV0FJWDtBQUFBO0FBQUFDLGNBQUEsR0FBQUMsQ0FBQTtBQUpELFdBQVlGLFdBQVc7RUFBQTtFQUFBQyxjQUFBLEdBQUFFLENBQUE7RUFBQUYsY0FBQSxHQUFBQyxDQUFBO0VBQ3RCRixXQUFBLHFCQUFpQjtFQUFBO0VBQUFDLGNBQUEsR0FBQUMsQ0FBQTtFQUNqQkYsV0FBQSwyQkFBdUI7RUFBQTtFQUFBQyxjQUFBLEdBQUFDLENBQUE7RUFDdkJGLFdBQUEsK0JBQTJCO0FBQzVCLENBQUM7QUFKVztBQUFBLENBQUFDLGNBQUEsR0FBQUcsQ0FBQSxVQUFBSixXQUFXO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFHLENBQUEsVUFBWEosV0FBVztBQVd2QixPQUFPLE1BQU1LLGVBQWU7QUFBQTtBQUFBLENBQUFKLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQWtCLGdCQUFnQixDQUFDIiwiaWdub3JlTGlzdCI6W119

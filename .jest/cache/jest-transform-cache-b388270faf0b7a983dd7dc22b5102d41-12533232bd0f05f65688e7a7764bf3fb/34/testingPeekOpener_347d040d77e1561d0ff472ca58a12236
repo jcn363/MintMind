@@ -1,0 +1,62 @@
+a255feed277797503db0aec247971be8
+/* istanbul ignore next */
+function cov_2jj5qe2wwc() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/common/testingPeekOpener.ts";
+  var hash = "a4eca8ba014cb162ba582e30acf0c275afe35274";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/common/testingPeekOpener.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 34
+        },
+        end: {
+          line: 6,
+          column: 70
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/common/testingPeekOpener.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AA+C7F,MAAM,CAAC,MAAM,kBAAkB,GAAG,eAAe,CAAqB,mBAAmB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/common/testingPeekOpener.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../base/common/uri.js';\nimport { ITextEditorOptions } from '../../../../platform/editor/common/editor.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { TestResultItem } from './testTypes.js';\nimport { ITestResult } from './testResult.js';\nimport { IEditor } from '../../../../editor/common/editorCommon.js';\nimport { MutableObservableValue } from './observableValue.js';\n\nexport interface IShowResultOptions {\n\t/** Reveal the peek, if configured, in the given editor */\n\tinEditor?: IEditor;\n\t/** Editor options, if a new editor is opened */\n\toptions?: Partial<ITextEditorOptions>;\n}\n\nexport interface ITestingPeekOpener {\n\t_serviceBrand: undefined;\n\n\t/** Whether test history should be shown in the results output. */\n\thistoryVisible: MutableObservableValue<boolean>;\n\n\t/**\n\t * Tries to peek the first test error, if the item is in a failed state.\n\t * @returns a boolean indicating whether a peek was opened\n\t */\n\ttryPeekFirstError(result: ITestResult, test: TestResultItem, options?: Partial<ITextEditorOptions>): boolean;\n\n\t/**\n\t * Peeks at the given test message uri.\n\t * @returns a boolean indicating whether a peek was opened\n\t */\n\tpeekUri(uri: URI, options?: IShowResultOptions): boolean;\n\n\t/**\n\t * Opens the currently selected message in an editor.\n\t */\n\topenCurrentInEditor(): void;\n\n\t/**\n\t * Opens the peek. Shows any available message.\n\t */\n\topen(): void;\n\n\t/**\n\t * Closes peeks for all visible editors.\n\t */\n\tcloseAllPeeks(): void;\n}\n\nexport const ITestingPeekOpener = createDecorator<ITestingPeekOpener>('testingPeekOpener');\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a4eca8ba014cb162ba582e30acf0c275afe35274"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2jj5qe2wwc = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2jj5qe2wwc();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const ITestingPeekOpener =
+/* istanbul ignore next */
+(cov_2jj5qe2wwc().s[0]++, createDecorator('testingPeekOpener'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJVGVzdGluZ1BlZWtPcGVuZXIiLCJjb3ZfMmpqNXFlMnd3YyIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3Rlc3RpbmcvY29tbW9uL3Rlc3RpbmdQZWVrT3BlbmVyLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSVRleHRFZGl0b3JPcHRpb25zIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vZWRpdG9yL2NvbW1vbi9lZGl0b3IuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBUZXN0UmVzdWx0SXRlbSB9IGZyb20gJy4vdGVzdFR5cGVzLmpzJztcbmltcG9ydCB7IElUZXN0UmVzdWx0IH0gZnJvbSAnLi90ZXN0UmVzdWx0LmpzJztcbmltcG9ydCB7IElFZGl0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9lZGl0b3IvY29tbW9uL2VkaXRvckNvbW1vbi5qcyc7XG5pbXBvcnQgeyBNdXRhYmxlT2JzZXJ2YWJsZVZhbHVlIH0gZnJvbSAnLi9vYnNlcnZhYmxlVmFsdWUuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElTaG93UmVzdWx0T3B0aW9ucyB7XG5cdC8qKiBSZXZlYWwgdGhlIHBlZWssIGlmIGNvbmZpZ3VyZWQsIGluIHRoZSBnaXZlbiBlZGl0b3IgKi9cblx0aW5FZGl0b3I/OiBJRWRpdG9yO1xuXHQvKiogRWRpdG9yIG9wdGlvbnMsIGlmIGEgbmV3IGVkaXRvciBpcyBvcGVuZWQgKi9cblx0b3B0aW9ucz86IFBhcnRpYWw8SVRleHRFZGl0b3JPcHRpb25zPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVGVzdGluZ1BlZWtPcGVuZXIge1xuXHRfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqIFdoZXRoZXIgdGVzdCBoaXN0b3J5IHNob3VsZCBiZSBzaG93biBpbiB0aGUgcmVzdWx0cyBvdXRwdXQuICovXG5cdGhpc3RvcnlWaXNpYmxlOiBNdXRhYmxlT2JzZXJ2YWJsZVZhbHVlPGJvb2xlYW4+O1xuXG5cdC8qKlxuXHQgKiBUcmllcyB0byBwZWVrIHRoZSBmaXJzdCB0ZXN0IGVycm9yLCBpZiB0aGUgaXRlbSBpcyBpbiBhIGZhaWxlZCBzdGF0ZS5cblx0ICogQHJldHVybnMgYSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciBhIHBlZWsgd2FzIG9wZW5lZFxuXHQgKi9cblx0dHJ5UGVla0ZpcnN0RXJyb3IocmVzdWx0OiBJVGVzdFJlc3VsdCwgdGVzdDogVGVzdFJlc3VsdEl0ZW0sIG9wdGlvbnM/OiBQYXJ0aWFsPElUZXh0RWRpdG9yT3B0aW9ucz4pOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBQZWVrcyBhdCB0aGUgZ2l2ZW4gdGVzdCBtZXNzYWdlIHVyaS5cblx0ICogQHJldHVybnMgYSBib29sZWFuIGluZGljYXRpbmcgd2hldGhlciBhIHBlZWsgd2FzIG9wZW5lZFxuXHQgKi9cblx0cGVla1VyaSh1cmk6IFVSSSwgb3B0aW9ucz86IElTaG93UmVzdWx0T3B0aW9ucyk6IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIE9wZW5zIHRoZSBjdXJyZW50bHkgc2VsZWN0ZWQgbWVzc2FnZSBpbiBhbiBlZGl0b3IuXG5cdCAqL1xuXHRvcGVuQ3VycmVudEluRWRpdG9yKCk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIE9wZW5zIHRoZSBwZWVrLiBTaG93cyBhbnkgYXZhaWxhYmxlIG1lc3NhZ2UuXG5cdCAqL1xuXHRvcGVuKCk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIENsb3NlcyBwZWVrcyBmb3IgYWxsIHZpc2libGUgZWRpdG9ycy5cblx0ICovXG5cdGNsb3NlQWxsUGVla3MoKTogdm9pZDtcbn1cblxuZXhwb3J0IGNvbnN0IElUZXN0aW5nUGVla09wZW5lciA9IGNyZWF0ZURlY29yYXRvcjxJVGVzdGluZ1BlZWtPcGVuZXI+KCd0ZXN0aW5nUGVla09wZW5lcicpO1xuXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUErQzVGLE9BQU8sTUFBTUMsa0JBQWtCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFxQixtQkFBbUIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

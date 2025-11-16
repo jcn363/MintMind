@@ -1,0 +1,182 @@
+c8cf8fea663ab5c1afb4c69db5abf526
+/* istanbul ignore next */
+function cov_260u9enocr() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/dataChannel/common/dataChannel.ts";
+  var hash = "d8bbb50ea8693866a3afb741f8cb7de144a4b362";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/dataChannel/common/dataChannel.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 35
+        },
+        end: {
+          line: 7,
+          column: 72
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 26
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 10
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 24
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 31
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 15,
+            column: 22
+          },
+          end: {
+            line: 15,
+            column: 23
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 28
+          },
+          end: {
+            line: 15,
+            column: 31
+          }
+        },
+        line: 15
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/dataChannel/common/dataChannel.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,KAAK,EAAE,MAAM,+BAA+B,CAAC;AACtD,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,mBAAmB,GAAG,eAAe,CAAsB,oBAAoB,CAAC,CAAC;AAmB9F,MAAM,OAAO,sBAAsB;IAClC,aAAa,CAAY;IACzB,IAAI,aAAa;QAChB,OAAO,KAAK,CAAC,IAAI,CAAC;IACnB,CAAC;IACD,cAAc,CAAI,UAAkB;QACnC,OAAO;YACN,QAAQ,EAAE,GAAG,EAAE,GAAG,CAAC;SACnB,CAAC;IACH,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/dataChannel/common/dataChannel.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IDataChannelService = createDecorator<IDataChannelService>('dataChannelService');\n\nexport interface IDataChannelService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidSendData: Event<IDataChannelEvent>;\n\n\tgetDataChannel<T>(channelId: string): CoreDataChannel<T>;\n}\n\nexport interface CoreDataChannel<T = unknown> {\n\tsendData(data: T): void;\n}\n\nexport interface IDataChannelEvent<T = unknown> {\n\tchannelId: string;\n\tdata: T;\n}\n\nexport class NullDataChannelService implements IDataChannelService {\n\t_serviceBrand: undefined;\n\tget onDidSendData(): Event<IDataChannelEvent<unknown>> {\n\t\treturn Event.None;\n\t}\n\tgetDataChannel<T>(_channelId: string): CoreDataChannel<T> {\n\t\treturn {\n\t\t\tsendData: () => { },\n\t\t};\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d8bbb50ea8693866a3afb741f8cb7de144a4b362"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_260u9enocr = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_260u9enocr();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Event } from '../../../base/common/event.js';
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IDataChannelService =
+/* istanbul ignore next */
+(cov_260u9enocr().s[0]++, createDecorator('dataChannelService'));
+export class NullDataChannelService {
+  _serviceBrand;
+  get onDidSendData() {
+    /* istanbul ignore next */
+    cov_260u9enocr().f[0]++;
+    cov_260u9enocr().s[1]++;
+    return Event.None;
+  }
+  getDataChannel(_channelId) {
+    /* istanbul ignore next */
+    cov_260u9enocr().f[1]++;
+    cov_260u9enocr().s[2]++;
+    return {
+      sendData: () => {
+        /* istanbul ignore next */
+        cov_260u9enocr().f[2]++;
+      }
+    };
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjYwdTllbm9jciIsImFjdHVhbENvdmVyYWdlIiwiRXZlbnQiLCJjcmVhdGVEZWNvcmF0b3IiLCJJRGF0YUNoYW5uZWxTZXJ2aWNlIiwicyIsIk51bGxEYXRhQ2hhbm5lbFNlcnZpY2UiLCJfc2VydmljZUJyYW5kIiwib25EaWRTZW5kRGF0YSIsImYiLCJOb25lIiwiZ2V0RGF0YUNoYW5uZWwiLCJfY2hhbm5lbElkIiwic2VuZERhdGEiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL2RhdGFDaGFubmVsL2NvbW1vbi9kYXRhQ2hhbm5lbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElEYXRhQ2hhbm5lbFNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SURhdGFDaGFubmVsU2VydmljZT4oJ2RhdGFDaGFubmVsU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElEYXRhQ2hhbm5lbFNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVhZG9ubHkgb25EaWRTZW5kRGF0YTogRXZlbnQ8SURhdGFDaGFubmVsRXZlbnQ+O1xuXG5cdGdldERhdGFDaGFubmVsPFQ+KGNoYW5uZWxJZDogc3RyaW5nKTogQ29yZURhdGFDaGFubmVsPFQ+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIENvcmVEYXRhQ2hhbm5lbDxUID0gdW5rbm93bj4ge1xuXHRzZW5kRGF0YShkYXRhOiBUKTogdm9pZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRGF0YUNoYW5uZWxFdmVudDxUID0gdW5rbm93bj4ge1xuXHRjaGFubmVsSWQ6IHN0cmluZztcblx0ZGF0YTogVDtcbn1cblxuZXhwb3J0IGNsYXNzIE51bGxEYXRhQ2hhbm5lbFNlcnZpY2UgaW1wbGVtZW50cyBJRGF0YUNoYW5uZWxTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXHRnZXQgb25EaWRTZW5kRGF0YSgpOiBFdmVudDxJRGF0YUNoYW5uZWxFdmVudDx1bmtub3duPj4ge1xuXHRcdHJldHVybiBFdmVudC5Ob25lO1xuXHR9XG5cdGdldERhdGFDaGFubmVsPFQ+KF9jaGFubmVsSWQ6IHN0cmluZyk6IENvcmVEYXRhQ2hhbm5lbDxUPiB7XG5cdFx0cmV0dXJuIHtcblx0XHRcdHNlbmREYXRhOiAoKSA9PiB7IH0sXG5cdFx0fTtcblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1DSTtJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbkNKOzs7O0FBS0EsU0FBU0UsS0FBSyxRQUFRLCtCQUErQjtBQUNyRCxTQUFTQyxlQUFlLFFBQVEsNkNBQTZDO0FBRTdFLE9BQU8sTUFBTUMsbUJBQW1CO0FBQUE7QUFBQSxDQUFBSixjQUFBLEdBQUFLLENBQUEsT0FBR0YsZUFBZSxDQUFzQixvQkFBb0IsQ0FBQztBQW1CN0YsT0FBTSxNQUFPRyxzQkFBc0I7RUFDbENDLGFBQWE7RUFDYixJQUFJQyxhQUFhQSxDQUFBO0lBQUE7SUFBQVIsY0FBQSxHQUFBUyxDQUFBO0lBQUFULGNBQUEsR0FBQUssQ0FBQTtJQUNoQixPQUFPSCxLQUFLLENBQUNRLElBQUk7RUFDbEI7RUFDQUMsY0FBY0EsQ0FBSUMsVUFBa0I7SUFBQTtJQUFBWixjQUFBLEdBQUFTLENBQUE7SUFBQVQsY0FBQSxHQUFBSyxDQUFBO0lBQ25DLE9BQU87TUFDTlEsUUFBUSxFQUFFQSxDQUFBLEtBQUs7UUFBQTtRQUFBYixjQUFBLEdBQUFTLENBQUE7TUFBRztLQUNsQjtFQUNGIiwiaWdub3JlTGlzdCI6W119

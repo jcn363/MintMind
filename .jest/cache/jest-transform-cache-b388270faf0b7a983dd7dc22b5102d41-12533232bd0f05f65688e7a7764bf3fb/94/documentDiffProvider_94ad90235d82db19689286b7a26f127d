@@ -1,0 +1,66 @@
+863d9b3769ea084c4a6f694605919995
+/* istanbul ignore next */
+function cov_2epud0fvyp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/diff/documentDiffProvider.ts";
+  var hash = "a6ed9684fc28ce8ab897c6bd0e342d3771a637b6";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/diff/documentDiffProvider.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 32
+        },
+        end: {
+          line: 10,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/diff/documentDiffProvider.ts",
+      mappings: "AAAA;;;gGAGgG;AA4EhG,MAAM,CAAC,MAAM,gBAAgB,GAAkB,MAAM,CAAC,MAAM,CAAC;IAC5D,SAAS,EAAE,IAAI;IACf,SAAS,EAAE,KAAK;IAChB,OAAO,EAAE,MAAM,CAAC,MAAM,CAAC,EAAE,CAAC;IAC1B,KAAK,EAAE,MAAM,CAAC,MAAM,CAAC,EAAE,CAAC;CACxB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/diff/documentDiffProvider.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../base/common/cancellation.js';\nimport { Event } from '../../../base/common/event.js';\nimport { MovedText } from './linesDiffComputer.js';\nimport { DetailedLineRangeMapping } from './rangeMapping.js';\nimport { ITextModel } from '../model.js';\n\n/**\n * A document diff provider computes the diff between two text models.\n * @internal\n */\nexport interface IDocumentDiffProvider {\n\t/**\n\t * Computes the diff between the text models `original` and `modified`.\n\t */\n\tcomputeDiff(original: ITextModel, modified: ITextModel, options: IDocumentDiffProviderOptions, cancellationToken: CancellationToken): Promise<IDocumentDiff>;\n\n\t/**\n\t * Is fired when settings of the diff algorithm change that could alter the result of the diffing computation.\n\t * Any user of this provider should recompute the diff when this event is fired.\n\t */\n\treadonly onDidChange: Event<void>;\n}\n\n/**\n * Options for the diff computation.\n * @internal\n */\nexport interface IDocumentDiffProviderOptions {\n\t/**\n\t * When set to true, the diff should ignore whitespace changes.\n\t */\n\tignoreTrimWhitespace: boolean;\n\n\t/**\n\t * A diff computation should throw if it takes longer than this value.\n\t */\n\tmaxComputationTimeMs: number;\n\n\t/**\n\t * If set, the diff computation should compute moves in addition to insertions and deletions.\n\t */\n\tcomputeMoves: boolean;\n\n\textendToSubwords?: boolean;\n}\n\n/**\n * Represents a diff between two text models.\n * @internal\n */\nexport interface IDocumentDiff {\n\t/**\n\t * If true, both text models are identical (byte-wise).\n\t */\n\treadonly identical: boolean;\n\n\t/**\n\t * If true, the diff computation timed out and the diff might not be accurate.\n\t */\n\treadonly quitEarly: boolean;\n\n\t/**\n\t * Maps all modified line ranges in the original to the corresponding line ranges in the modified text model.\n\t */\n\treadonly changes: readonly DetailedLineRangeMapping[];\n\n\t/**\n\t * Sorted by original line ranges.\n\t * The original line ranges and the modified line ranges must be disjoint (but can be touching).\n\t */\n\treadonly moves: readonly MovedText[];\n}\n\n\nexport const nullDocumentDiff: IDocumentDiff = Object.freeze({\n\tidentical: true,\n\tquitEarly: false,\n\tchanges: Object.freeze([]),\n\tmoves: Object.freeze([])\n});\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a6ed9684fc28ce8ab897c6bd0e342d3771a637b6"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2epud0fvyp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2epud0fvyp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const nullDocumentDiff =
+/* istanbul ignore next */
+(cov_2epud0fvyp().s[0]++, Object.freeze({
+  identical: true,
+  quitEarly: false,
+  changes: Object.freeze([]),
+  moves: Object.freeze([])
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJudWxsRG9jdW1lbnREaWZmIiwiY292XzJlcHVkMGZ2eXAiLCJzIiwiT2JqZWN0IiwiZnJlZXplIiwiaWRlbnRpY2FsIiwicXVpdEVhcmx5IiwiY2hhbmdlcyIsIm1vdmVzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2RpZmYvZG9jdW1lbnREaWZmUHJvdmlkZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IENhbmNlbGxhdGlvblRva2VuIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vY2FuY2VsbGF0aW9uLmpzJztcbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgTW92ZWRUZXh0IH0gZnJvbSAnLi9saW5lc0RpZmZDb21wdXRlci5qcyc7XG5pbXBvcnQgeyBEZXRhaWxlZExpbmVSYW5nZU1hcHBpbmcgfSBmcm9tICcuL3JhbmdlTWFwcGluZy5qcyc7XG5pbXBvcnQgeyBJVGV4dE1vZGVsIH0gZnJvbSAnLi4vbW9kZWwuanMnO1xuXG4vKipcbiAqIEEgZG9jdW1lbnQgZGlmZiBwcm92aWRlciBjb21wdXRlcyB0aGUgZGlmZiBiZXR3ZWVuIHR3byB0ZXh0IG1vZGVscy5cbiAqIEBpbnRlcm5hbFxuICovXG5leHBvcnQgaW50ZXJmYWNlIElEb2N1bWVudERpZmZQcm92aWRlciB7XG5cdC8qKlxuXHQgKiBDb21wdXRlcyB0aGUgZGlmZiBiZXR3ZWVuIHRoZSB0ZXh0IG1vZGVscyBgb3JpZ2luYWxgIGFuZCBgbW9kaWZpZWRgLlxuXHQgKi9cblx0Y29tcHV0ZURpZmYob3JpZ2luYWw6IElUZXh0TW9kZWwsIG1vZGlmaWVkOiBJVGV4dE1vZGVsLCBvcHRpb25zOiBJRG9jdW1lbnREaWZmUHJvdmlkZXJPcHRpb25zLCBjYW5jZWxsYXRpb25Ub2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPElEb2N1bWVudERpZmY+O1xuXG5cdC8qKlxuXHQgKiBJcyBmaXJlZCB3aGVuIHNldHRpbmdzIG9mIHRoZSBkaWZmIGFsZ29yaXRobSBjaGFuZ2UgdGhhdCBjb3VsZCBhbHRlciB0aGUgcmVzdWx0IG9mIHRoZSBkaWZmaW5nIGNvbXB1dGF0aW9uLlxuXHQgKiBBbnkgdXNlciBvZiB0aGlzIHByb3ZpZGVyIHNob3VsZCByZWNvbXB1dGUgdGhlIGRpZmYgd2hlbiB0aGlzIGV2ZW50IGlzIGZpcmVkLlxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2U6IEV2ZW50PHZvaWQ+O1xufVxuXG4vKipcbiAqIE9wdGlvbnMgZm9yIHRoZSBkaWZmIGNvbXB1dGF0aW9uLlxuICogQGludGVybmFsXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSURvY3VtZW50RGlmZlByb3ZpZGVyT3B0aW9ucyB7XG5cdC8qKlxuXHQgKiBXaGVuIHNldCB0byB0cnVlLCB0aGUgZGlmZiBzaG91bGQgaWdub3JlIHdoaXRlc3BhY2UgY2hhbmdlcy5cblx0ICovXG5cdGlnbm9yZVRyaW1XaGl0ZXNwYWNlOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBBIGRpZmYgY29tcHV0YXRpb24gc2hvdWxkIHRocm93IGlmIGl0IHRha2VzIGxvbmdlciB0aGFuIHRoaXMgdmFsdWUuXG5cdCAqL1xuXHRtYXhDb21wdXRhdGlvblRpbWVNczogbnVtYmVyO1xuXG5cdC8qKlxuXHQgKiBJZiBzZXQsIHRoZSBkaWZmIGNvbXB1dGF0aW9uIHNob3VsZCBjb21wdXRlIG1vdmVzIGluIGFkZGl0aW9uIHRvIGluc2VydGlvbnMgYW5kIGRlbGV0aW9ucy5cblx0ICovXG5cdGNvbXB1dGVNb3ZlczogYm9vbGVhbjtcblxuXHRleHRlbmRUb1N1YndvcmRzPzogYm9vbGVhbjtcbn1cblxuLyoqXG4gKiBSZXByZXNlbnRzIGEgZGlmZiBiZXR3ZWVuIHR3byB0ZXh0IG1vZGVscy5cbiAqIEBpbnRlcm5hbFxuICovXG5leHBvcnQgaW50ZXJmYWNlIElEb2N1bWVudERpZmYge1xuXHQvKipcblx0ICogSWYgdHJ1ZSwgYm90aCB0ZXh0IG1vZGVscyBhcmUgaWRlbnRpY2FsIChieXRlLXdpc2UpLlxuXHQgKi9cblx0cmVhZG9ubHkgaWRlbnRpY2FsOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBJZiB0cnVlLCB0aGUgZGlmZiBjb21wdXRhdGlvbiB0aW1lZCBvdXQgYW5kIHRoZSBkaWZmIG1pZ2h0IG5vdCBiZSBhY2N1cmF0ZS5cblx0ICovXG5cdHJlYWRvbmx5IHF1aXRFYXJseTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogTWFwcyBhbGwgbW9kaWZpZWQgbGluZSByYW5nZXMgaW4gdGhlIG9yaWdpbmFsIHRvIHRoZSBjb3JyZXNwb25kaW5nIGxpbmUgcmFuZ2VzIGluIHRoZSBtb2RpZmllZCB0ZXh0IG1vZGVsLlxuXHQgKi9cblx0cmVhZG9ubHkgY2hhbmdlczogcmVhZG9ubHkgRGV0YWlsZWRMaW5lUmFuZ2VNYXBwaW5nW107XG5cblx0LyoqXG5cdCAqIFNvcnRlZCBieSBvcmlnaW5hbCBsaW5lIHJhbmdlcy5cblx0ICogVGhlIG9yaWdpbmFsIGxpbmUgcmFuZ2VzIGFuZCB0aGUgbW9kaWZpZWQgbGluZSByYW5nZXMgbXVzdCBiZSBkaXNqb2ludCAoYnV0IGNhbiBiZSB0b3VjaGluZykuXG5cdCAqL1xuXHRyZWFkb25seSBtb3ZlczogcmVhZG9ubHkgTW92ZWRUZXh0W107XG59XG5cblxuZXhwb3J0IGNvbnN0IG51bGxEb2N1bWVudERpZmY6IElEb2N1bWVudERpZmYgPSBPYmplY3QuZnJlZXplKHtcblx0aWRlbnRpY2FsOiB0cnVlLFxuXHRxdWl0RWFybHk6IGZhbHNlLFxuXHRjaGFuZ2VzOiBPYmplY3QuZnJlZXplKFtdKSxcblx0bW92ZXM6IE9iamVjdC5mcmVlemUoW10pXG59KTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBK0VBLE9BQU8sTUFBTUEsZ0JBQWdCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBa0JDLE1BQU0sQ0FBQ0MsTUFBTSxDQUFDO0VBQzVEQyxTQUFTLEVBQUUsSUFBSTtFQUNmQyxTQUFTLEVBQUUsS0FBSztFQUNoQkMsT0FBTyxFQUFFSixNQUFNLENBQUNDLE1BQU0sQ0FBQyxFQUFFLENBQUM7RUFDMUJJLEtBQUssRUFBRUwsTUFBTSxDQUFDQyxNQUFNLENBQUMsRUFBRTtDQUN2QixDQUFDIiwiaWdub3JlTGlzdCI6W119

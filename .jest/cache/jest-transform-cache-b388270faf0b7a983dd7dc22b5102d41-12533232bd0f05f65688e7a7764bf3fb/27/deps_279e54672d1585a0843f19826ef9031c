@@ -1,0 +1,50 @@
+5fd259fddc1987107c13c79df7d36bee
+/* istanbul ignore next */
+function cov_1c480h4bl6() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/commonFacade/deps.ts";
+  var hash = "574b0d7c37cb3360f762741fe0b6772d6d598cde";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/commonFacade/deps.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/commonFacade/deps.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,iBAAiB,CAAC;AAC3C,OAAO,EAAyB,YAAY,EAAE,MAAM,iBAAiB,CAAC;AACtE,OAAO,EAAE,kBAAkB,EAAE,oBAAoB,EAAE,iBAAiB,EAAE,MAAM,iBAAiB,CAAC;AAC9F,OAAO,EAAE,KAAK,EAA8B,MAAM,gBAAgB,CAAC;AACnE,OAAO,EAAE,eAAe,EAAoB,cAAc,EAAE,YAAY,EAAE,eAAe,EAAE,MAAM,oBAAoB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/observableInternal/commonFacade/deps.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport { assertFn } from '../../assert.js';\nexport { type EqualityComparer, strictEquals } from '../../equals.js';\nexport { BugIndicatingError, onBugIndicatingError, onUnexpectedError } from '../../errors.js';\nexport { Event, type IValueWithChangeEvent } from '../../event.js';\nexport { DisposableStore, type IDisposable, markAsDisposed, toDisposable, trackDisposable } from '../../lifecycle.js';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "574b0d7c37cb3360f762741fe0b6772d6d598cde"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1c480h4bl6 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1c480h4bl6();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export { assertFn } from '../../assert.js';
+export { strictEquals } from '../../equals.js';
+export { BugIndicatingError, onBugIndicatingError, onUnexpectedError } from '../../errors.js';
+export { Event } from '../../event.js';
+export { DisposableStore, markAsDisposed, toDisposable, trackDisposable } from '../../lifecycle.js';
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJhc3NlcnRGbiIsInN0cmljdEVxdWFscyIsIkJ1Z0luZGljYXRpbmdFcnJvciIsIm9uQnVnSW5kaWNhdGluZ0Vycm9yIiwib25VbmV4cGVjdGVkRXJyb3IiLCJFdmVudCIsIkRpc3Bvc2FibGVTdG9yZSIsIm1hcmtBc0Rpc3Bvc2VkIiwidG9EaXNwb3NhYmxlIiwidHJhY2tEaXNwb3NhYmxlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2NvbW1vbi9vYnNlcnZhYmxlSW50ZXJuYWwvY29tbW9uRmFjYWRlL2RlcHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCB7IGFzc2VydEZuIH0gZnJvbSAnLi4vLi4vYXNzZXJ0LmpzJztcbmV4cG9ydCB7IHR5cGUgRXF1YWxpdHlDb21wYXJlciwgc3RyaWN0RXF1YWxzIH0gZnJvbSAnLi4vLi4vZXF1YWxzLmpzJztcbmV4cG9ydCB7IEJ1Z0luZGljYXRpbmdFcnJvciwgb25CdWdJbmRpY2F0aW5nRXJyb3IsIG9uVW5leHBlY3RlZEVycm9yIH0gZnJvbSAnLi4vLi4vZXJyb3JzLmpzJztcbmV4cG9ydCB7IEV2ZW50LCB0eXBlIElWYWx1ZVdpdGhDaGFuZ2VFdmVudCB9IGZyb20gJy4uLy4uL2V2ZW50LmpzJztcbmV4cG9ydCB7IERpc3Bvc2FibGVTdG9yZSwgdHlwZSBJRGlzcG9zYWJsZSwgbWFya0FzRGlzcG9zZWQsIHRvRGlzcG9zYWJsZSwgdHJhY2tEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vbGlmZWN5Y2xlLmpzJztcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxRQUFRLFFBQVEsaUJBQWlCO0FBQzFDLFNBQWdDQyxZQUFZLFFBQVEsaUJBQWlCO0FBQ3JFLFNBQVNDLGtCQUFrQixFQUFFQyxvQkFBb0IsRUFBRUMsaUJBQWlCLFFBQVEsaUJBQWlCO0FBQzdGLFNBQVNDLEtBQUssUUFBb0MsZ0JBQWdCO0FBQ2xFLFNBQVNDLGVBQWUsRUFBb0JDLGNBQWMsRUFBRUMsWUFBWSxFQUFFQyxlQUFlLFFBQVEsb0JBQW9CIiwiaWdub3JlTGlzdCI6W119

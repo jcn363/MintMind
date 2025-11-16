@@ -1,0 +1,202 @@
+221677cdb1159ac7aef654392911b29a
+/* istanbul ignore next */
+function cov_23wfq0o0tl() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/aiRelatedInformation/common/aiRelatedInformation.ts";
+  var hash = "3f5ed9d881688089878f1360dfd33f7194d40205";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/aiRelatedInformation/common/aiRelatedInformation.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 44
+        },
+        end: {
+          line: 6,
+          column: 91
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 60
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 98
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 100
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 98
+        }
+      },
+      "5": {
+        start: {
+          line: 12,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 100
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 1
+          },
+          end: {
+            line: 8,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 35
+          },
+          end: {
+            line: 13,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 13,
+            column: 3
+          },
+          end: {
+            line: 13,
+            column: 58
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 13,
+            column: 3
+          },
+          end: {
+            line: 13,
+            column: 25
+          }
+        }, {
+          start: {
+            line: 13,
+            column: 30
+          },
+          end: {
+            line: 13,
+            column: 57
+          }
+        }],
+        line: 13
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/aiRelatedInformation/common/aiRelatedInformation.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAE7F,MAAM,CAAC,MAAM,4BAA4B,GAAG,eAAe,CAA+B,8BAA8B,CAAC,CAAC;AAE1H,MAAM,CAAN,IAAY,sBAKX;AALD,WAAY,sBAAsB;IACjC,6FAAqB,CAAA;IACrB,+FAAsB,CAAA;IACtB,6FAAqB,CAAA;IACrB,+FAAsB,CAAA;AACvB,CAAC,EALW,sBAAsB,KAAtB,sBAAsB,QAKjC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/aiRelatedInformation/common/aiRelatedInformation.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\n\nexport const IAiRelatedInformationService = createDecorator<IAiRelatedInformationService>('IAiRelatedInformationService');\n\nexport enum RelatedInformationType {\n\tSymbolInformation = 1,\n\tCommandInformation = 2,\n\tSearchInformation = 3,\n\tSettingInformation = 4\n}\n\ninterface RelatedInformationBaseResult {\n\ttype: RelatedInformationType;\n\tweight: number;\n}\n\nexport interface CommandInformationResult extends RelatedInformationBaseResult {\n\ttype: RelatedInformationType.CommandInformation;\n\tcommand: string;\n}\n\nexport interface SettingInformationResult extends RelatedInformationBaseResult {\n\ttype: RelatedInformationType.SettingInformation;\n\tsetting: string;\n}\n\nexport type RelatedInformationResult = CommandInformationResult | SettingInformationResult;\n\nexport interface IAiRelatedInformationService {\n\treadonly _serviceBrand: undefined;\n\n\tisEnabled(): boolean;\n\tgetRelatedInformation(query: string, types: RelatedInformationType[], token: CancellationToken): Promise<RelatedInformationResult[]>;\n\tregisterAiRelatedInformationProvider(type: RelatedInformationType, provider: IAiRelatedInformationProvider): IDisposable;\n}\n\nexport interface IAiRelatedInformationProvider {\n\tprovideAiRelatedInformation(query: string, token: CancellationToken): Promise<RelatedInformationResult[]>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3f5ed9d881688089878f1360dfd33f7194d40205"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_23wfq0o0tl = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_23wfq0o0tl();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IAiRelatedInformationService =
+/* istanbul ignore next */
+(cov_23wfq0o0tl().s[0]++, createDecorator('IAiRelatedInformationService'));
+export var RelatedInformationType;
+/* istanbul ignore next */
+cov_23wfq0o0tl().s[1]++;
+(function (RelatedInformationType) {
+  /* istanbul ignore next */
+  cov_23wfq0o0tl().f[0]++;
+  cov_23wfq0o0tl().s[2]++;
+  RelatedInformationType[RelatedInformationType["SymbolInformation"] = 1] = "SymbolInformation";
+  /* istanbul ignore next */
+  cov_23wfq0o0tl().s[3]++;
+  RelatedInformationType[RelatedInformationType["CommandInformation"] = 2] = "CommandInformation";
+  /* istanbul ignore next */
+  cov_23wfq0o0tl().s[4]++;
+  RelatedInformationType[RelatedInformationType["SearchInformation"] = 3] = "SearchInformation";
+  /* istanbul ignore next */
+  cov_23wfq0o0tl().s[5]++;
+  RelatedInformationType[RelatedInformationType["SettingInformation"] = 4] = "SettingInformation";
+})(
+/* istanbul ignore next */
+(cov_23wfq0o0tl().b[0][0]++, RelatedInformationType) ||
+/* istanbul ignore next */
+(cov_23wfq0o0tl().b[0][1]++, RelatedInformationType = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQWlSZWxhdGVkSW5mb3JtYXRpb25TZXJ2aWNlIiwiY292XzIzd2ZxMG8wdGwiLCJzIiwiUmVsYXRlZEluZm9ybWF0aW9uVHlwZSIsImYiLCJiIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvYWlSZWxhdGVkSW5mb3JtYXRpb24vY29tbW9uL2FpUmVsYXRlZEluZm9ybWF0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElBaVJlbGF0ZWRJbmZvcm1hdGlvblNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUFpUmVsYXRlZEluZm9ybWF0aW9uU2VydmljZT4oJ0lBaVJlbGF0ZWRJbmZvcm1hdGlvblNlcnZpY2UnKTtcblxuZXhwb3J0IGVudW0gUmVsYXRlZEluZm9ybWF0aW9uVHlwZSB7XG5cdFN5bWJvbEluZm9ybWF0aW9uID0gMSxcblx0Q29tbWFuZEluZm9ybWF0aW9uID0gMixcblx0U2VhcmNoSW5mb3JtYXRpb24gPSAzLFxuXHRTZXR0aW5nSW5mb3JtYXRpb24gPSA0XG59XG5cbmludGVyZmFjZSBSZWxhdGVkSW5mb3JtYXRpb25CYXNlUmVzdWx0IHtcblx0dHlwZTogUmVsYXRlZEluZm9ybWF0aW9uVHlwZTtcblx0d2VpZ2h0OiBudW1iZXI7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgQ29tbWFuZEluZm9ybWF0aW9uUmVzdWx0IGV4dGVuZHMgUmVsYXRlZEluZm9ybWF0aW9uQmFzZVJlc3VsdCB7XG5cdHR5cGU6IFJlbGF0ZWRJbmZvcm1hdGlvblR5cGUuQ29tbWFuZEluZm9ybWF0aW9uO1xuXHRjb21tYW5kOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgU2V0dGluZ0luZm9ybWF0aW9uUmVzdWx0IGV4dGVuZHMgUmVsYXRlZEluZm9ybWF0aW9uQmFzZVJlc3VsdCB7XG5cdHR5cGU6IFJlbGF0ZWRJbmZvcm1hdGlvblR5cGUuU2V0dGluZ0luZm9ybWF0aW9uO1xuXHRzZXR0aW5nOiBzdHJpbmc7XG59XG5cbmV4cG9ydCB0eXBlIFJlbGF0ZWRJbmZvcm1hdGlvblJlc3VsdCA9IENvbW1hbmRJbmZvcm1hdGlvblJlc3VsdCB8IFNldHRpbmdJbmZvcm1hdGlvblJlc3VsdDtcblxuZXhwb3J0IGludGVyZmFjZSBJQWlSZWxhdGVkSW5mb3JtYXRpb25TZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdGlzRW5hYmxlZCgpOiBib29sZWFuO1xuXHRnZXRSZWxhdGVkSW5mb3JtYXRpb24ocXVlcnk6IHN0cmluZywgdHlwZXM6IFJlbGF0ZWRJbmZvcm1hdGlvblR5cGVbXSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxSZWxhdGVkSW5mb3JtYXRpb25SZXN1bHRbXT47XG5cdHJlZ2lzdGVyQWlSZWxhdGVkSW5mb3JtYXRpb25Qcm92aWRlcih0eXBlOiBSZWxhdGVkSW5mb3JtYXRpb25UeXBlLCBwcm92aWRlcjogSUFpUmVsYXRlZEluZm9ybWF0aW9uUHJvdmlkZXIpOiBJRGlzcG9zYWJsZTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQWlSZWxhdGVkSW5mb3JtYXRpb25Qcm92aWRlciB7XG5cdHByb3ZpZGVBaVJlbGF0ZWRJbmZvcm1hdGlvbihxdWVyeTogc3RyaW5nLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPFJlbGF0ZWRJbmZvcm1hdGlvblJlc3VsdFtdPjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFFNUYsT0FBTyxNQUFNQyw0QkFBNEI7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQStCLDhCQUE4QixDQUFDO0FBRXpILFdBQVlJLHNCQUtYO0FBQUE7QUFBQUYsY0FBQSxHQUFBQyxDQUFBO0FBTEQsV0FBWUMsc0JBQXNCO0VBQUE7RUFBQUYsY0FBQSxHQUFBRyxDQUFBO0VBQUFILGNBQUEsR0FBQUMsQ0FBQTtFQUNqQ0Msc0JBQUEsQ0FBQUEsc0JBQUEsZ0RBQXFCO0VBQUE7RUFBQUYsY0FBQSxHQUFBQyxDQUFBO0VBQ3JCQyxzQkFBQSxDQUFBQSxzQkFBQSxrREFBc0I7RUFBQTtFQUFBRixjQUFBLEdBQUFDLENBQUE7RUFDdEJDLHNCQUFBLENBQUFBLHNCQUFBLGdEQUFxQjtFQUFBO0VBQUFGLGNBQUEsR0FBQUMsQ0FBQTtFQUNyQkMsc0JBQUEsQ0FBQUEsc0JBQUEsa0RBQXNCO0FBQ3ZCLENBQUM7QUFMVztBQUFBLENBQUFGLGNBQUEsR0FBQUksQ0FBQSxVQUFBRixzQkFBc0I7QUFBQTtBQUFBLENBQUFGLGNBQUEsR0FBQUksQ0FBQSxVQUF0QkYsc0JBQXNCIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,94 @@
+ed0eff76becb22b7c55be83a160dca92
+/* istanbul ignore next */
+function cov_5ypy9nev3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/dropOrPasteInto/browser/dropOrPasteInto.contribution.ts";
+  var hash = "520fcca67a473e4115ae670b58220c651c05f1da";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/dropOrPasteInto/browser/dropOrPasteInto.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 119
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 131
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 48
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/dropOrPasteInto/browser/dropOrPasteInto.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAChG,OAAO,EAAE,UAAU,EAA0B,MAAM,oEAAoE,CAAC;AACxH,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,8BAA8B,EAAkB,MAAM,kCAAkC,CAAC;AAClG,OAAO,EAAE,uBAAuB,EAAE,MAAM,eAAe,CAAC;AACxD,OAAO,EAAE,6BAA6B,EAAE,mBAAmB,EAAE,MAAM,0BAA0B,CAAC;AAE9F,8BAA8B,CAAC,uBAAuB,CAAC,EAAE,EAAE,uBAAuB,oCAA4B,CAAC;AAC/G,8BAA8B,CAAC,6BAA6B,CAAC,EAAE,EAAE,6BAA6B,oCAA4B,CAAC;AAE3H,QAAQ,CAAC,EAAE,CAAyB,UAAU,CAAC,aAAa,CAAC;KAC3D,qBAAqB,CAAC,mBAAmB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/dropOrPasteInto/browser/dropOrPasteInto.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\nimport { Extensions, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';\nimport { DropOrPasteIntoCommands } from './commands.js';\nimport { DropOrPasteSchemaContribution, editorConfiguration } from './configurationSchema.js';\n\nregisterWorkbenchContribution2(DropOrPasteIntoCommands.ID, DropOrPasteIntoCommands, WorkbenchPhase.Eventually);\nregisterWorkbenchContribution2(DropOrPasteSchemaContribution.ID, DropOrPasteSchemaContribution, WorkbenchPhase.Eventually);\n\nRegistry.as<IConfigurationRegistry>(Extensions.Configuration)\n\t.registerConfiguration(editorConfiguration);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "520fcca67a473e4115ae670b58220c651c05f1da"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_5ypy9nev3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_5ypy9nev3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Extensions } from '../../../../platform/configuration/common/configurationRegistry.js';
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { registerWorkbenchContribution2 } from '../../../common/contributions.js';
+import { DropOrPasteIntoCommands } from './commands.js';
+import { DropOrPasteSchemaContribution, editorConfiguration } from './configurationSchema.js';
+/* istanbul ignore next */
+cov_5ypy9nev3().s[0]++;
+registerWorkbenchContribution2(DropOrPasteIntoCommands.ID, DropOrPasteIntoCommands, 4 /* WorkbenchPhase.Eventually */);
+/* istanbul ignore next */
+cov_5ypy9nev3().s[1]++;
+registerWorkbenchContribution2(DropOrPasteSchemaContribution.ID, DropOrPasteSchemaContribution, 4 /* WorkbenchPhase.Eventually */);
+/* istanbul ignore next */
+cov_5ypy9nev3().s[2]++;
+Registry.as(Extensions.Configuration).registerConfiguration(editorConfiguration);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFeHRlbnNpb25zIiwiUmVnaXN0cnkiLCJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIiLCJEcm9wT3JQYXN0ZUludG9Db21tYW5kcyIsIkRyb3BPclBhc3RlU2NoZW1hQ29udHJpYnV0aW9uIiwiZWRpdG9yQ29uZmlndXJhdGlvbiIsImNvdl81eXB5OW5ldjMiLCJzIiwiSUQiLCJhcyIsIkNvbmZpZ3VyYXRpb24iLCJyZWdpc3RlckNvbmZpZ3VyYXRpb24iXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL2Ryb3BPclBhc3RlSW50by9icm93c2VyL2Ryb3BPclBhc3RlSW50by5jb250cmlidXRpb24udHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5pbXBvcnQgeyBFeHRlbnNpb25zLCBJQ29uZmlndXJhdGlvblJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29uZmlndXJhdGlvbi9jb21tb24vY29uZmlndXJhdGlvblJlZ2lzdHJ5LmpzJztcbmltcG9ydCB7IFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcmVnaXN0cnkvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB7IHJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uMiwgV29ya2JlbmNoUGhhc2UgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vY29udHJpYnV0aW9ucy5qcyc7XG5pbXBvcnQgeyBEcm9wT3JQYXN0ZUludG9Db21tYW5kcyB9IGZyb20gJy4vY29tbWFuZHMuanMnO1xuaW1wb3J0IHsgRHJvcE9yUGFzdGVTY2hlbWFDb250cmlidXRpb24sIGVkaXRvckNvbmZpZ3VyYXRpb24gfSBmcm9tICcuL2NvbmZpZ3VyYXRpb25TY2hlbWEuanMnO1xuXG5yZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIoRHJvcE9yUGFzdGVJbnRvQ29tbWFuZHMuSUQsIERyb3BPclBhc3RlSW50b0NvbW1hbmRzLCBXb3JrYmVuY2hQaGFzZS5FdmVudHVhbGx5KTtcbnJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uMihEcm9wT3JQYXN0ZVNjaGVtYUNvbnRyaWJ1dGlvbi5JRCwgRHJvcE9yUGFzdGVTY2hlbWFDb250cmlidXRpb24sIFdvcmtiZW5jaFBoYXNlLkV2ZW50dWFsbHkpO1xuXG5SZWdpc3RyeS5hczxJQ29uZmlndXJhdGlvblJlZ2lzdHJ5PihFeHRlbnNpb25zLkNvbmZpZ3VyYXRpb24pXG5cdC5yZWdpc3RlckNvbmZpZ3VyYXRpb24oZWRpdG9yQ29uZmlndXJhdGlvbik7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFJQSxTQUFTQSxVQUFVLFFBQWdDLG9FQUFvRTtBQUN2SCxTQUFTQyxRQUFRLFFBQVEsa0RBQWtEO0FBQzNFLFNBQVNDLDhCQUE4QixRQUF3QixrQ0FBa0M7QUFDakcsU0FBU0MsdUJBQXVCLFFBQVEsZUFBZTtBQUN2RCxTQUFTQyw2QkFBNkIsRUFBRUMsbUJBQW1CLFFBQVEsMEJBQTBCO0FBQUM7QUFBQUMsYUFBQSxHQUFBQyxDQUFBO0FBRTlGTCw4QkFBOEIsQ0FBQ0MsdUJBQXVCLENBQUNLLEVBQUUsRUFBRUwsdUJBQXVCLG9DQUE0QjtBQUFDO0FBQUFHLGFBQUEsR0FBQUMsQ0FBQTtBQUMvR0wsOEJBQThCLENBQUNFLDZCQUE2QixDQUFDSSxFQUFFLEVBQUVKLDZCQUE2QixvQ0FBNEI7QUFBQztBQUFBRSxhQUFBLEdBQUFDLENBQUE7QUFFM0hOLFFBQVEsQ0FBQ1EsRUFBRSxDQUF5QlQsVUFBVSxDQUFDVSxhQUFhLENBQUMsQ0FDM0RDLHFCQUFxQixDQUFDTixtQkFBbUIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

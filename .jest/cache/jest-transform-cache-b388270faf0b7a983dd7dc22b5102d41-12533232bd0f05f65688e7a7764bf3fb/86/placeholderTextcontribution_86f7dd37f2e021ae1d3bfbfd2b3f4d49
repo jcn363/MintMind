@@ -1,0 +1,125 @@
+b0e16494f8b4fcfc4a4ed2179066492a
+/* istanbul ignore next */
+function cov_wkjft2qcm() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.ts";
+  var hash = "ea24d5dc9764b38cadd56abaf79f1a02b97ce850";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 165
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 88
+        },
+        end: {
+          line: 12,
+          column: 115
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 162
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 12,
+            column: 82
+          },
+          end: {
+            line: 12,
+            column: 83
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 88
+          },
+          end: {
+            line: 12,
+            column: 115
+          }
+        },
+        line: 12
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,uBAAuB,CAAC;AAC/B,OAAO,EAAmC,0BAA0B,EAAE,MAAM,sCAAsC,CAAC;AACnH,OAAO,EAAE,mBAAmB,EAAE,MAAM,6CAA6C,CAAC;AAClF,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,aAAa,EAAE,MAAM,iDAAiD,CAAC;AAChF,OAAO,EAAE,2BAA2B,EAAE,MAAM,kCAAkC,CAAC;AAC/E,OAAO,EAAE,sBAAsB,EAAE,MAAM,iEAAiE,CAAC;AAEzG,0BAA0B,CAAC,2BAA2B,CAAC,EAAE,EAAE,sBAAsB,CAAC,GAAG,EAAE,CAAC,2BAA2B,CAAC,gDAAwC,CAAC;AAE7J,aAAa,CAAC,+BAA+B,EAAE,mBAAmB,EAAE,QAAQ,CAAC,uBAAuB,EAAE,yDAAyD,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/placeholderText/browser/placeholderText.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport './placeholderText.css';\nimport { EditorContributionInstantiation, registerEditorContribution } from '../../../browser/editorExtensions.js';\nimport { ghostTextForeground } from '../../../common/core/editorColorRegistry.js';\nimport { localize } from '../../../../nls.js';\nimport { registerColor } from '../../../../platform/theme/common/colorUtils.js';\nimport { PlaceholderTextContribution } from './placeholderTextContribution.js';\nimport { wrapInReloadableClass1 } from '../../../../platform/observable/common/wrapInReloadableClass.js';\n\nregisterEditorContribution(PlaceholderTextContribution.ID, wrapInReloadableClass1(() => PlaceholderTextContribution), EditorContributionInstantiation.Eager);\n\nregisterColor('editor.placeholder.foreground', ghostTextForeground, localize('placeholderForeground', 'Foreground color of the placeholder text in the editor.'));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ea24d5dc9764b38cadd56abaf79f1a02b97ce850"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_wkjft2qcm = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_wkjft2qcm();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import './placeholderText.css';
+import { registerEditorContribution } from '../../../browser/editorExtensions.js';
+import { ghostTextForeground } from '../../../common/core/editorColorRegistry.js';
+import { localize } from '../../../../nls.js';
+import { registerColor } from '../../../../platform/theme/common/colorUtils.js';
+import { PlaceholderTextContribution } from './placeholderTextContribution.js';
+import { wrapInReloadableClass1 } from '../../../../platform/observable/common/wrapInReloadableClass.js';
+/* istanbul ignore next */
+cov_wkjft2qcm().s[0]++;
+registerEditorContribution(PlaceholderTextContribution.ID, wrapInReloadableClass1(() => {
+  /* istanbul ignore next */
+  cov_wkjft2qcm().f[0]++;
+  cov_wkjft2qcm().s[1]++;
+  return PlaceholderTextContribution;
+}), 0 /* EditorContributionInstantiation.Eager */);
+/* istanbul ignore next */
+cov_wkjft2qcm().s[2]++;
+registerColor('editor.placeholder.foreground', ghostTextForeground, localize('placeholderForeground', 'Foreground color of the placeholder text in the editor.'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlckVkaXRvckNvbnRyaWJ1dGlvbiIsImdob3N0VGV4dEZvcmVncm91bmQiLCJsb2NhbGl6ZSIsInJlZ2lzdGVyQ29sb3IiLCJQbGFjZWhvbGRlclRleHRDb250cmlidXRpb24iLCJ3cmFwSW5SZWxvYWRhYmxlQ2xhc3MxIiwiY292X3dramZ0MnFjbSIsInMiLCJJRCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbnRyaWIvcGxhY2Vob2xkZXJUZXh0L2Jyb3dzZXIvcGxhY2Vob2xkZXJUZXh0LmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0ICcuL3BsYWNlaG9sZGVyVGV4dC5jc3MnO1xuaW1wb3J0IHsgRWRpdG9yQ29udHJpYnV0aW9uSW5zdGFudGlhdGlvbiwgcmVnaXN0ZXJFZGl0b3JDb250cmlidXRpb24gfSBmcm9tICcuLi8uLi8uLi9icm93c2VyL2VkaXRvckV4dGVuc2lvbnMuanMnO1xuaW1wb3J0IHsgZ2hvc3RUZXh0Rm9yZWdyb3VuZCB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9jb3JlL2VkaXRvckNvbG9yUmVnaXN0cnkuanMnO1xuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJDb2xvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3RoZW1lL2NvbW1vbi9jb2xvclV0aWxzLmpzJztcbmltcG9ydCB7IFBsYWNlaG9sZGVyVGV4dENvbnRyaWJ1dGlvbiB9IGZyb20gJy4vcGxhY2Vob2xkZXJUZXh0Q29udHJpYnV0aW9uLmpzJztcbmltcG9ydCB7IHdyYXBJblJlbG9hZGFibGVDbGFzczEgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9vYnNlcnZhYmxlL2NvbW1vbi93cmFwSW5SZWxvYWRhYmxlQ2xhc3MuanMnO1xuXG5yZWdpc3RlckVkaXRvckNvbnRyaWJ1dGlvbihQbGFjZWhvbGRlclRleHRDb250cmlidXRpb24uSUQsIHdyYXBJblJlbG9hZGFibGVDbGFzczEoKCkgPT4gUGxhY2Vob2xkZXJUZXh0Q29udHJpYnV0aW9uKSwgRWRpdG9yQ29udHJpYnV0aW9uSW5zdGFudGlhdGlvbi5FYWdlcik7XG5cbnJlZ2lzdGVyQ29sb3IoJ2VkaXRvci5wbGFjZWhvbGRlci5mb3JlZ3JvdW5kJywgZ2hvc3RUZXh0Rm9yZWdyb3VuZCwgbG9jYWxpemUoJ3BsYWNlaG9sZGVyRm9yZWdyb3VuZCcsICdGb3JlZ3JvdW5kIGNvbG9yIG9mIHRoZSBwbGFjZWhvbGRlciB0ZXh0IGluIHRoZSBlZGl0b3IuJykpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsT0FBTyx1QkFBdUI7QUFDOUIsU0FBMENBLDBCQUEwQixRQUFRLHNDQUFzQztBQUNsSCxTQUFTQyxtQkFBbUIsUUFBUSw2Q0FBNkM7QUFDakYsU0FBU0MsUUFBUSxRQUFRLG9CQUFvQjtBQUM3QyxTQUFTQyxhQUFhLFFBQVEsaURBQWlEO0FBQy9FLFNBQVNDLDJCQUEyQixRQUFRLGtDQUFrQztBQUM5RSxTQUFTQyxzQkFBc0IsUUFBUSxpRUFBaUU7QUFBQztBQUFBQyxhQUFBLEdBQUFDLENBQUE7QUFFekdQLDBCQUEwQixDQUFDSSwyQkFBMkIsQ0FBQ0ksRUFBRSxFQUFFSCxzQkFBc0IsQ0FBQyxNQUFNRDtFQUFBQTtFQUFBQSxzQkFBQTtFQUFBQSxzQkFBQTtFQUFBQSxNQUFBLENBQUFBLDJCQUEyQjtBQUEzQixDQUEyQixDQUFDLGdEQUF3QztBQUFDO0FBQUFFLGFBQUEsR0FBQUMsQ0FBQTtBQUU3SkosYUFBYSxDQUFDLCtCQUErQixFQUFFRixtQkFBbUIsRUFBRUMsUUFBUSxDQUFDLHVCQUF1QixFQUFFLHlEQUF5RCxDQUFDLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

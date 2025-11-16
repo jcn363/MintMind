@@ -1,0 +1,214 @@
+9122a2c713062753f3c4cce0d4e49f3a
+/* istanbul ignore next */
+function cov_10n3es6i6s() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchActionsSymbol.ts";
+  var hash = "9d7a89be11b9409daff6530c7af5315c8277de54";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchActionsSymbol.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 35,
+          column: 3
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 16
+        },
+        end: {
+          line: 10,
+          column: 49
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 19
+        },
+        end: {
+          line: 11,
+          column: 85
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 32
+        },
+        end: {
+          line: 12,
+          column: 35
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 30,
+          column: 11
+        }
+      },
+      "5": {
+        start: {
+          line: 33,
+          column: 8
+        },
+        end: {
+          line: 33,
+          column: 99
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 18
+          },
+          end: {
+            line: 31,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 32,
+            column: 4
+          },
+          end: {
+            line: 32,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 32,
+            column: 24
+          },
+          end: {
+            line: 34,
+            column: 5
+          }
+        },
+        line: 32
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchActionsSymbol.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,KAAK,GAAG,MAAM,oBAAoB,CAAC;AAG1C,OAAO,EAAE,OAAO,EAAE,MAAM,EAAE,eAAe,EAAE,MAAM,gDAAgD,CAAC;AAGlG,OAAO,EAAE,kBAAkB,EAAE,MAAM,sDAAsD,CAAC;AAE1F,iBAAiB;AACjB,eAAe,CAAC,MAAM,oBAAqB,SAAQ,OAAO;IAEzD,MAAM,CAAU,EAAE,GAAG,iCAAiC,CAAC;IACvD,MAAM,CAAU,KAAK,GAAG,GAAG,CAAC,QAAQ,CAAC,oBAAoB,EAAE,8BAA8B,CAAC,CAAC;IAC3F,MAAM,CAAU,kBAAkB,GAAG,GAAG,CAAC;IAEzC;QAEC,KAAK,CAAC;YACL,EAAE,2FAAmD;YACrD,KAAK,EAAE;gBACN,GAAG,GAAG,CAAC,SAAS,CAAC,oBAAoB,EAAE,8BAA8B,CAAC;gBACtE,aAAa,EAAE,GAAG,CAAC,QAAQ,CAAC,EAAE,GAAG,EAAE,yBAAyB,EAAE,OAAO,EAAE,CAAC,uBAAuB,CAAC,EAAE,EAAE,gCAAgC,CAAC;aACrI;YACD,EAAE,EAAE,IAAI;YACR,UAAU,EAAE;gBACX,MAAM,6CAAmC;gBACzC,OAAO,EAAE,iDAA6B;aACtC;YACD,IAAI,EAAE;gBACL,EAAE,EAAE,MAAM,CAAC,aAAa;gBACxB,KAAK,EAAE,cAAc;gBACrB,KAAK,EAAE,CAAC;aACR;SACD,CAAC,CAAC;IACJ,CAAC;IAEQ,KAAK,CAAC,GAAG,CAAC,QAA0B;QAC5C,QAAQ,CAAC,GAAG,CAAC,kBAAkB,CAAC,CAAC,WAAW,CAAC,IAAI,CAAC,oBAAoB,CAAC,kBAAkB,CAAC,CAAC;IAC5F,CAAC;CACD,CAAC,CAAC;AAEH,YAAY",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/search/browser/searchActionsSymbol.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport * as nls from '../../../../nls.js';\nimport { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';\nimport * as Constants from '../common/constants.js';\nimport { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';\nimport { KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';\nimport { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';\nimport { IQuickInputService } from '../../../../platform/quickinput/common/quickInput.js';\n\n//#region Actions\nregisterAction2(class ShowAllSymbolsAction extends Action2 {\n\n\tstatic readonly ID = 'workbench.action.showAllSymbols';\n\tstatic readonly LABEL = nls.localize('showTriggerActions', \"Go to Symbol in Workspace...\");\n\tstatic readonly ALL_SYMBOLS_PREFIX = '#';\n\n\tconstructor(\n\t) {\n\t\tsuper({\n\t\t\tid: Constants.SearchCommandIds.ShowAllSymbolsActionId,\n\t\t\ttitle: {\n\t\t\t\t...nls.localize2('showTriggerActions', \"Go to Symbol in Workspace...\"),\n\t\t\t\tmnemonicTitle: nls.localize({ key: 'miGotoSymbolInWorkspace', comment: ['&& denotes a mnemonic'] }, \"Go to Symbol in &&Workspace...\"),\n\t\t\t},\n\t\t\tf1: true,\n\t\t\tkeybinding: {\n\t\t\t\tweight: KeybindingWeight.WorkbenchContrib,\n\t\t\t\tprimary: KeyMod.CtrlCmd | KeyCode.KeyT\n\t\t\t},\n\t\t\tmenu: {\n\t\t\t\tid: MenuId.MenubarGoMenu,\n\t\t\t\tgroup: '3_global_nav',\n\t\t\t\torder: 2\n\t\t\t}\n\t\t});\n\t}\n\n\toverride async run(accessor: ServicesAccessor): Promise<void> {\n\t\taccessor.get(IQuickInputService).quickAccess.show(ShowAllSymbolsAction.ALL_SYMBOLS_PREFIX);\n\t}\n});\n\n//#endregion\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "9d7a89be11b9409daff6530c7af5315c8277de54"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_10n3es6i6s = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_10n3es6i6s();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as nls from '../../../../nls.js';
+import { Action2, MenuId, registerAction2 } from '../../../../platform/actions/common/actions.js';
+import { IQuickInputService } from '../../../../platform/quickinput/common/quickInput.js';
+//#region Actions
+/* istanbul ignore next */
+cov_10n3es6i6s().s[0]++;
+registerAction2(class ShowAllSymbolsAction extends Action2 {
+  static ID =
+  /* istanbul ignore next */
+  (cov_10n3es6i6s().s[1]++, 'workbench.action.showAllSymbols');
+  static LABEL =
+  /* istanbul ignore next */
+  (cov_10n3es6i6s().s[2]++, nls.localize('showTriggerActions', "Go to Symbol in Workspace..."));
+  static ALL_SYMBOLS_PREFIX =
+  /* istanbul ignore next */
+  (cov_10n3es6i6s().s[3]++, '#');
+  constructor() {
+    /* istanbul ignore next */
+    cov_10n3es6i6s().f[0]++;
+    cov_10n3es6i6s().s[4]++;
+    super({
+      id: "workbench.action.showAllSymbols" /* Constants.SearchCommandIds.ShowAllSymbolsActionId */,
+      title: {
+        ...nls.localize2('showTriggerActions', "Go to Symbol in Workspace..."),
+        mnemonicTitle: nls.localize({
+          key: 'miGotoSymbolInWorkspace',
+          comment: ['&& denotes a mnemonic']
+        }, "Go to Symbol in &&Workspace...")
+      },
+      f1: true,
+      keybinding: {
+        weight: 200 /* KeybindingWeight.WorkbenchContrib */,
+        primary: 2048 /* KeyMod.CtrlCmd */ | 50 /* KeyCode.KeyT */
+      },
+      menu: {
+        id: MenuId.MenubarGoMenu,
+        group: '3_global_nav',
+        order: 2
+      }
+    });
+  }
+  async run(accessor) {
+    /* istanbul ignore next */
+    cov_10n3es6i6s().f[1]++;
+    cov_10n3es6i6s().s[5]++;
+    accessor.get(IQuickInputService).quickAccess.show(ShowAllSymbolsAction.ALL_SYMBOLS_PREFIX);
+  }
+});
+//#endregion
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTBuM2VzNmk2cyIsImFjdHVhbENvdmVyYWdlIiwibmxzIiwiQWN0aW9uMiIsIk1lbnVJZCIsInJlZ2lzdGVyQWN0aW9uMiIsIklRdWlja0lucHV0U2VydmljZSIsInMiLCJTaG93QWxsU3ltYm9sc0FjdGlvbiIsIklEIiwiTEFCRUwiLCJsb2NhbGl6ZSIsIkFMTF9TWU1CT0xTX1BSRUZJWCIsImNvbnN0cnVjdG9yIiwiZiIsImlkIiwidGl0bGUiLCJsb2NhbGl6ZTIiLCJtbmVtb25pY1RpdGxlIiwia2V5IiwiY29tbWVudCIsImYxIiwia2V5YmluZGluZyIsIndlaWdodCIsInByaW1hcnkiLCJtZW51IiwiTWVudWJhckdvTWVudSIsImdyb3VwIiwib3JkZXIiLCJydW4iLCJhY2Nlc3NvciIsImdldCIsInF1aWNrQWNjZXNzIiwic2hvdyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvc2VhcmNoL2Jyb3dzZXIvc2VhcmNoQWN0aW9uc1N5bWJvbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0ICogYXMgbmxzIGZyb20gJy4uLy4uLy4uLy4uL25scy5qcyc7XG5pbXBvcnQgeyBTZXJ2aWNlc0FjY2Vzc29yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgKiBhcyBDb25zdGFudHMgZnJvbSAnLi4vY29tbW9uL2NvbnN0YW50cy5qcyc7XG5pbXBvcnQgeyBBY3Rpb24yLCBNZW51SWQsIHJlZ2lzdGVyQWN0aW9uMiB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2FjdGlvbnMvY29tbW9uL2FjdGlvbnMuanMnO1xuaW1wb3J0IHsgS2V5YmluZGluZ1dlaWdodCB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2tleWJpbmRpbmcvY29tbW9uL2tleWJpbmRpbmdzUmVnaXN0cnkuanMnO1xuaW1wb3J0IHsgS2V5Q29kZSwgS2V5TW9kIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24va2V5Q29kZXMuanMnO1xuaW1wb3J0IHsgSVF1aWNrSW5wdXRTZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcXVpY2tpbnB1dC9jb21tb24vcXVpY2tJbnB1dC5qcyc7XG5cbi8vI3JlZ2lvbiBBY3Rpb25zXG5yZWdpc3RlckFjdGlvbjIoY2xhc3MgU2hvd0FsbFN5bWJvbHNBY3Rpb24gZXh0ZW5kcyBBY3Rpb24yIHtcblxuXHRzdGF0aWMgcmVhZG9ubHkgSUQgPSAnd29ya2JlbmNoLmFjdGlvbi5zaG93QWxsU3ltYm9scyc7XG5cdHN0YXRpYyByZWFkb25seSBMQUJFTCA9IG5scy5sb2NhbGl6ZSgnc2hvd1RyaWdnZXJBY3Rpb25zJywgXCJHbyB0byBTeW1ib2wgaW4gV29ya3NwYWNlLi4uXCIpO1xuXHRzdGF0aWMgcmVhZG9ubHkgQUxMX1NZTUJPTFNfUFJFRklYID0gJyMnO1xuXG5cdGNvbnN0cnVjdG9yKFxuXHQpIHtcblx0XHRzdXBlcih7XG5cdFx0XHRpZDogQ29uc3RhbnRzLlNlYXJjaENvbW1hbmRJZHMuU2hvd0FsbFN5bWJvbHNBY3Rpb25JZCxcblx0XHRcdHRpdGxlOiB7XG5cdFx0XHRcdC4uLm5scy5sb2NhbGl6ZTIoJ3Nob3dUcmlnZ2VyQWN0aW9ucycsIFwiR28gdG8gU3ltYm9sIGluIFdvcmtzcGFjZS4uLlwiKSxcblx0XHRcdFx0bW5lbW9uaWNUaXRsZTogbmxzLmxvY2FsaXplKHsga2V5OiAnbWlHb3RvU3ltYm9sSW5Xb3Jrc3BhY2UnLCBjb21tZW50OiBbJyYmIGRlbm90ZXMgYSBtbmVtb25pYyddIH0sIFwiR28gdG8gU3ltYm9sIGluICYmV29ya3NwYWNlLi4uXCIpLFxuXHRcdFx0fSxcblx0XHRcdGYxOiB0cnVlLFxuXHRcdFx0a2V5YmluZGluZzoge1xuXHRcdFx0XHR3ZWlnaHQ6IEtleWJpbmRpbmdXZWlnaHQuV29ya2JlbmNoQ29udHJpYixcblx0XHRcdFx0cHJpbWFyeTogS2V5TW9kLkN0cmxDbWQgfCBLZXlDb2RlLktleVRcblx0XHRcdH0sXG5cdFx0XHRtZW51OiB7XG5cdFx0XHRcdGlkOiBNZW51SWQuTWVudWJhckdvTWVudSxcblx0XHRcdFx0Z3JvdXA6ICczX2dsb2JhbF9uYXYnLFxuXHRcdFx0XHRvcmRlcjogMlxuXHRcdFx0fVxuXHRcdH0pO1xuXHR9XG5cblx0b3ZlcnJpZGUgYXN5bmMgcnVuKGFjY2Vzc29yOiBTZXJ2aWNlc0FjY2Vzc29yKTogUHJvbWlzZTx2b2lkPiB7XG5cdFx0YWNjZXNzb3IuZ2V0KElRdWlja0lucHV0U2VydmljZSkucXVpY2tBY2Nlc3Muc2hvdyhTaG93QWxsU3ltYm9sc0FjdGlvbi5BTExfU1lNQk9MU19QUkVGSVgpO1xuXHR9XG59KTtcblxuLy8jZW5kcmVnaW9uXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUF3Qkc7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXhCSDs7OztBQUtBLE9BQU8sS0FBS0UsR0FBRyxNQUFNLG9CQUFvQjtBQUd6QyxTQUFTQyxPQUFPLEVBQUVDLE1BQU0sRUFBRUMsZUFBZSxRQUFRLGdEQUFnRDtBQUdqRyxTQUFTQyxrQkFBa0IsUUFBUSxzREFBc0Q7QUFFekY7QUFBQTtBQUFBTixjQUFBLEdBQUFPLENBQUE7QUFDQUYsZUFBZSxDQUFDLE1BQU1HLG9CQUFxQixTQUFRTCxPQUFPO0VBRXpELE9BQWdCTSxFQUFFO0VBQUE7RUFBQSxDQUFBVCxjQUFBLEdBQUFPLENBQUEsT0FBRyxpQ0FBaUM7RUFDdEQsT0FBZ0JHLEtBQUs7RUFBQTtFQUFBLENBQUFWLGNBQUEsR0FBQU8sQ0FBQSxPQUFHTCxHQUFHLENBQUNTLFFBQVEsQ0FBQyxvQkFBb0IsRUFBRSw4QkFBOEIsQ0FBQztFQUMxRixPQUFnQkMsa0JBQWtCO0VBQUE7RUFBQSxDQUFBWixjQUFBLEdBQUFPLENBQUEsT0FBRyxHQUFHO0VBRXhDTSxZQUFBO0lBQUE7SUFBQWIsY0FBQSxHQUFBYyxDQUFBO0lBQUFkLGNBQUEsR0FBQU8sQ0FBQTtJQUVDLEtBQUssQ0FBQztNQUNMUSxFQUFFO01BQ0ZDLEtBQUssRUFBRTtRQUNOLEdBQUdkLEdBQUcsQ0FBQ2UsU0FBUyxDQUFDLG9CQUFvQixFQUFFLDhCQUE4QixDQUFDO1FBQ3RFQyxhQUFhLEVBQUVoQixHQUFHLENBQUNTLFFBQVEsQ0FBQztVQUFFUSxHQUFHLEVBQUUseUJBQXlCO1VBQUVDLE9BQU8sRUFBRSxDQUFDLHVCQUF1QjtRQUFDLENBQUUsRUFBRSxnQ0FBZ0M7T0FDcEk7TUFDREMsRUFBRSxFQUFFLElBQUk7TUFDUkMsVUFBVSxFQUFFO1FBQ1hDLE1BQU07UUFDTkMsT0FBTyxFQUFFO09BQ1Q7TUFDREMsSUFBSSxFQUFFO1FBQ0xWLEVBQUUsRUFBRVgsTUFBTSxDQUFDc0IsYUFBYTtRQUN4QkMsS0FBSyxFQUFFLGNBQWM7UUFDckJDLEtBQUssRUFBRTs7S0FFUixDQUFDO0VBQ0g7RUFFUyxNQUFNQyxHQUFHQSxDQUFDQyxRQUEwQjtJQUFBO0lBQUE5QixjQUFBLEdBQUFjLENBQUE7SUFBQWQsY0FBQSxHQUFBTyxDQUFBO0lBQzVDdUIsUUFBUSxDQUFDQyxHQUFHLENBQUN6QixrQkFBa0IsQ0FBQyxDQUFDMEIsV0FBVyxDQUFDQyxJQUFJLENBQUN6QixvQkFBb0IsQ0FBQ0ksa0JBQWtCLENBQUM7RUFDM0Y7Q0FDQSxDQUFDO0FBRUYiLCJpZ25vcmVMaXN0IjpbXX0=

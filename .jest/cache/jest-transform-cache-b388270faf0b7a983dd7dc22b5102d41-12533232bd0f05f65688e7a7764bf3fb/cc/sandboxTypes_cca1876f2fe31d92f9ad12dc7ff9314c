@@ -1,0 +1,46 @@
+a978661daed4844d32eb03fc3b8613b7
+/* istanbul ignore next */
+function cov_m2jm4up2w() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/common/sandboxTypes.ts";
+  var hash = "a6078edcb72395ad74ab8aad8c02e18378637260";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/common/sandboxTypes.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/common/sandboxTypes.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/common/sandboxTypes.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IProcessEnvironment } from '../../../common/platform.js';\nimport { IProductConfiguration } from '../../../common/product.js';\n\n\n// #######################################################################\n// ###                                                                 ###\n// ###             Types we need in a common layer for reuse    \t   ###\n// ###                                                                 ###\n// #######################################################################\n\n\n/**\n * The common properties required for any sandboxed\n * renderer to function.\n */\nexport interface ISandboxConfiguration {\n\n\t/**\n\t * Identifier of the sandboxed renderer.\n\t */\n\twindowId: number;\n\n\t/**\n\t * Root path of the JavaScript sources.\n\t *\n\t * Note: This is NOT the installation root\n\t * directory itself but contained in it at\n\t * a level that is platform dependent.\n\t */\n\tappRoot: string;\n\n\t/**\n\t * Per window process environment.\n\t */\n\tuserEnv: IProcessEnvironment;\n\n\t/**\n\t * Product configuration.\n\t */\n\tproduct: IProductConfiguration;\n\n\t/**\n\t * Configured zoom level.\n\t */\n\tzoomLevel?: number;\n\n\t/**\n\t * Location of V8 code cache.\n\t */\n\tcodeCachePath?: string;\n\n\t/**\n\t * NLS support\n\t */\n\tnls: {\n\n\t\t/**\n\t\t * All NLS messages produced by `localize` and `localize2` calls\n\t\t * under `src/vs`.\n\t\t */\n\t\tmessages: string[];\n\n\t\t/**\n\t\t * The actual language of the NLS messages (e.g. 'en', de' or 'pt-br').\n\t\t */\n\t\tlanguage: string | undefined;\n\t};\n\n\t/**\n\t * DEV time only: All CSS-modules that we have.\n\t */\n\tcssModules?: string[];\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a6078edcb72395ad74ab8aad8c02e18378637260"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_m2jm4up2w = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_m2jm4up2w();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL3BhcnRzL3NhbmRib3gvY29tbW9uL3NhbmRib3hUeXBlcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSVByb2Nlc3NFbnZpcm9ubWVudCB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9wbGF0Zm9ybS5qcyc7XG5pbXBvcnQgeyBJUHJvZHVjdENvbmZpZ3VyYXRpb24gfSBmcm9tICcuLi8uLi8uLi9jb21tb24vcHJvZHVjdC5qcyc7XG5cblxuLy8gIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyNcbi8vICMjIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyMjXG4vLyAjIyMgICAgICAgICAgICAgVHlwZXMgd2UgbmVlZCBpbiBhIGNvbW1vbiBsYXllciBmb3IgcmV1c2UgICAgXHQgICAjIyNcbi8vICMjIyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIyMjXG4vLyAjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjI1xuXG5cbi8qKlxuICogVGhlIGNvbW1vbiBwcm9wZXJ0aWVzIHJlcXVpcmVkIGZvciBhbnkgc2FuZGJveGVkXG4gKiByZW5kZXJlciB0byBmdW5jdGlvbi5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJU2FuZGJveENvbmZpZ3VyYXRpb24ge1xuXG5cdC8qKlxuXHQgKiBJZGVudGlmaWVyIG9mIHRoZSBzYW5kYm94ZWQgcmVuZGVyZXIuXG5cdCAqL1xuXHR3aW5kb3dJZDogbnVtYmVyO1xuXG5cdC8qKlxuXHQgKiBSb290IHBhdGggb2YgdGhlIEphdmFTY3JpcHQgc291cmNlcy5cblx0ICpcblx0ICogTm90ZTogVGhpcyBpcyBOT1QgdGhlIGluc3RhbGxhdGlvbiByb290XG5cdCAqIGRpcmVjdG9yeSBpdHNlbGYgYnV0IGNvbnRhaW5lZCBpbiBpdCBhdFxuXHQgKiBhIGxldmVsIHRoYXQgaXMgcGxhdGZvcm0gZGVwZW5kZW50LlxuXHQgKi9cblx0YXBwUm9vdDogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBQZXIgd2luZG93IHByb2Nlc3MgZW52aXJvbm1lbnQuXG5cdCAqL1xuXHR1c2VyRW52OiBJUHJvY2Vzc0Vudmlyb25tZW50O1xuXG5cdC8qKlxuXHQgKiBQcm9kdWN0IGNvbmZpZ3VyYXRpb24uXG5cdCAqL1xuXHRwcm9kdWN0OiBJUHJvZHVjdENvbmZpZ3VyYXRpb247XG5cblx0LyoqXG5cdCAqIENvbmZpZ3VyZWQgem9vbSBsZXZlbC5cblx0ICovXG5cdHpvb21MZXZlbD86IG51bWJlcjtcblxuXHQvKipcblx0ICogTG9jYXRpb24gb2YgVjggY29kZSBjYWNoZS5cblx0ICovXG5cdGNvZGVDYWNoZVBhdGg/OiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIE5MUyBzdXBwb3J0XG5cdCAqL1xuXHRubHM6IHtcblxuXHRcdC8qKlxuXHRcdCAqIEFsbCBOTFMgbWVzc2FnZXMgcHJvZHVjZWQgYnkgYGxvY2FsaXplYCBhbmQgYGxvY2FsaXplMmAgY2FsbHNcblx0XHQgKiB1bmRlciBgc3JjL3ZzYC5cblx0XHQgKi9cblx0XHRtZXNzYWdlczogc3RyaW5nW107XG5cblx0XHQvKipcblx0XHQgKiBUaGUgYWN0dWFsIGxhbmd1YWdlIG9mIHRoZSBOTFMgbWVzc2FnZXMgKGUuZy4gJ2VuJywgZGUnIG9yICdwdC1icicpLlxuXHRcdCAqL1xuXHRcdGxhbmd1YWdlOiBzdHJpbmcgfCB1bmRlZmluZWQ7XG5cdH07XG5cblx0LyoqXG5cdCAqIERFViB0aW1lIG9ubHk6IEFsbCBDU1MtbW9kdWxlcyB0aGF0IHdlIGhhdmUuXG5cdCAqL1xuXHRjc3NNb2R1bGVzPzogc3RyaW5nW107XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

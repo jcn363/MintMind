@@ -1,0 +1,162 @@
+811b4a6dd948ff4a5e3d0f6a31150946
+/* istanbul ignore next */
+function cov_24q9m4sd50() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/snippets/browser/commands/abstractSnippetsActions.ts";
+  var hash = "e6c4b1f283ee816dd24c6ff047e34e377e1ed418";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/snippets/browser/commands/abstractSnippetsActions.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 23
+        },
+        end: {
+          line: 10,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 46
+        }
+      },
+      "2": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 46
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 12,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 22
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 12
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 17,
+            column: 4
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 17,
+            column: 22
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        line: 17
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/snippets/browser/commands/abstractSnippetsActions.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,aAAa,EAAE,MAAM,mDAAmD,CAAC;AAClF,OAAO,EAAE,SAAS,EAAE,MAAM,uBAAuB,CAAC;AAClD,OAAO,EAAE,OAAO,EAAmB,MAAM,mDAAmD,CAAC;AAE7F,MAAM,cAAc,GAAG;IACtB,QAAQ,EAAE,SAAS,CAAC,UAAU,EAAE,UAAU,CAAC;CAClC,CAAC;AAEX,MAAM,OAAgB,cAAe,SAAQ,OAAO;IAEnD,YAAY,IAA+B;QAC1C,KAAK,CAAC,EAAE,GAAG,cAAc,EAAE,GAAG,IAAI,EAAE,CAAC,CAAC;IACvC,CAAC;CACD;AAED,MAAM,OAAgB,mBAAoB,SAAQ,aAAa;IAE9D,YAAY,IAA+B;QAC1C,KAAK,CAAC,EAAE,GAAG,cAAc,EAAE,GAAG,IAAI,EAAE,CAAC,CAAC;IACvC,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/snippets/browser/commands/abstractSnippetsActions.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { EditorAction2 } from '../../../../../editor/browser/editorExtensions.js';\nimport { localize2 } from '../../../../../nls.js';\nimport { Action2, IAction2Options } from '../../../../../platform/actions/common/actions.js';\n\nconst defaultOptions = {\n\tcategory: localize2('snippets', \"Snippets\"),\n} as const;\n\nexport abstract class SnippetsAction extends Action2 {\n\n\tconstructor(desc: Readonly<IAction2Options>) {\n\t\tsuper({ ...defaultOptions, ...desc });\n\t}\n}\n\nexport abstract class SnippetEditorAction extends EditorAction2 {\n\n\tconstructor(desc: Readonly<IAction2Options>) {\n\t\tsuper({ ...defaultOptions, ...desc });\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e6c4b1f283ee816dd24c6ff047e34e377e1ed418"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_24q9m4sd50 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_24q9m4sd50();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { EditorAction2 } from '../../../../../editor/browser/editorExtensions.js';
+import { localize2 } from '../../../../../nls.js';
+import { Action2 } from '../../../../../platform/actions/common/actions.js';
+const defaultOptions =
+/* istanbul ignore next */
+(cov_24q9m4sd50().s[0]++, {
+  category: localize2('snippets', "Snippets")
+});
+export class SnippetsAction extends Action2 {
+  constructor(desc) {
+    /* istanbul ignore next */
+    cov_24q9m4sd50().f[0]++;
+    cov_24q9m4sd50().s[1]++;
+    super({
+      ...defaultOptions,
+      ...desc
+    });
+  }
+}
+export class SnippetEditorAction extends EditorAction2 {
+  constructor(desc) {
+    /* istanbul ignore next */
+    cov_24q9m4sd50().f[1]++;
+    cov_24q9m4sd50().s[2]++;
+    super({
+      ...defaultOptions,
+      ...desc
+    });
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjRxOW00c2Q1MCIsImFjdHVhbENvdmVyYWdlIiwiRWRpdG9yQWN0aW9uMiIsImxvY2FsaXplMiIsIkFjdGlvbjIiLCJkZWZhdWx0T3B0aW9ucyIsInMiLCJjYXRlZ29yeSIsIlNuaXBwZXRzQWN0aW9uIiwiY29uc3RydWN0b3IiLCJkZXNjIiwiZiIsIlNuaXBwZXRFZGl0b3JBY3Rpb24iXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3NuaXBwZXRzL2Jyb3dzZXIvY29tbWFuZHMvYWJzdHJhY3RTbmlwcGV0c0FjdGlvbnMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEVkaXRvckFjdGlvbjIgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9lZGl0b3IvYnJvd3Nlci9lZGl0b3JFeHRlbnNpb25zLmpzJztcbmltcG9ydCB7IGxvY2FsaXplMiB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL25scy5qcyc7XG5pbXBvcnQgeyBBY3Rpb24yLCBJQWN0aW9uMk9wdGlvbnMgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9hY3Rpb25zL2NvbW1vbi9hY3Rpb25zLmpzJztcblxuY29uc3QgZGVmYXVsdE9wdGlvbnMgPSB7XG5cdGNhdGVnb3J5OiBsb2NhbGl6ZTIoJ3NuaXBwZXRzJywgXCJTbmlwcGV0c1wiKSxcbn0gYXMgY29uc3Q7XG5cbmV4cG9ydCBhYnN0cmFjdCBjbGFzcyBTbmlwcGV0c0FjdGlvbiBleHRlbmRzIEFjdGlvbjIge1xuXG5cdGNvbnN0cnVjdG9yKGRlc2M6IFJlYWRvbmx5PElBY3Rpb24yT3B0aW9ucz4pIHtcblx0XHRzdXBlcih7IC4uLmRlZmF1bHRPcHRpb25zLCAuLi5kZXNjIH0pO1xuXHR9XG59XG5cbmV4cG9ydCBhYnN0cmFjdCBjbGFzcyBTbmlwcGV0RWRpdG9yQWN0aW9uIGV4dGVuZHMgRWRpdG9yQWN0aW9uMiB7XG5cblx0Y29uc3RydWN0b3IoZGVzYzogUmVhZG9ubHk8SUFjdGlvbjJPcHRpb25zPikge1xuXHRcdHN1cGVyKHsgLi4uZGVmYXVsdE9wdGlvbnMsIC4uLmRlc2MgfSk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW9CTTtJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBcEJOOzs7O0FBS0EsU0FBU0UsYUFBYSxRQUFRLG1EQUFtRDtBQUNqRixTQUFTQyxTQUFTLFFBQVEsdUJBQXVCO0FBQ2pELFNBQVNDLE9BQU8sUUFBeUIsbURBQW1EO0FBRTVGLE1BQU1DLGNBQWM7QUFBQTtBQUFBLENBQUFMLGNBQUEsR0FBQU0sQ0FBQSxPQUFHO0VBQ3RCQyxRQUFRLEVBQUVKLFNBQVMsQ0FBQyxVQUFVLEVBQUUsVUFBVTtDQUNqQztBQUVWLE9BQU0sTUFBZ0JLLGNBQWUsU0FBUUosT0FBTztFQUVuREssWUFBWUMsSUFBK0I7SUFBQTtJQUFBVixjQUFBLEdBQUFXLENBQUE7SUFBQVgsY0FBQSxHQUFBTSxDQUFBO0lBQzFDLEtBQUssQ0FBQztNQUFFLEdBQUdELGNBQWM7TUFBRSxHQUFHSztJQUFJLENBQUUsQ0FBQztFQUN0Qzs7QUFHRCxPQUFNLE1BQWdCRSxtQkFBb0IsU0FBUVYsYUFBYTtFQUU5RE8sWUFBWUMsSUFBK0I7SUFBQTtJQUFBVixjQUFBLEdBQUFXLENBQUE7SUFBQVgsY0FBQSxHQUFBTSxDQUFBO0lBQzFDLEtBQUssQ0FBQztNQUFFLEdBQUdELGNBQWM7TUFBRSxHQUFHSztJQUFJLENBQUUsQ0FBQztFQUN0QyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,150 @@
+ab83798bde7a4a6f4b1e949f980acfad
+/* istanbul ignore next */
+function cov_1mr4d2t61i() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputers.ts";
+  var hash = "6993bd53193cffeec9659dee6c2d225a4d7e2825";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputers.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 34
+        },
+        end: {
+          line: 10,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 21
+        },
+        end: {
+          line: 8,
+          column: 50
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 22
+        },
+        end: {
+          line: 9,
+          column: 52
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 15
+          },
+          end: {
+            line: 8,
+            column: 16
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 21
+          },
+          end: {
+            line: 8,
+            column: 50
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 17
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 22
+          },
+          end: {
+            line: 9,
+            column: 52
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputers.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,uBAAuB,EAAE,MAAM,8BAA8B,CAAC;AACvE,OAAO,EAAE,wBAAwB,EAAE,MAAM,wDAAwD,CAAC;AAGlG,MAAM,CAAC,MAAM,kBAAkB,GAAG;IACjC,SAAS,EAAE,GAAG,EAAE,CAAC,IAAI,uBAAuB,EAAE;IAC9C,UAAU,EAAE,GAAG,EAAE,CAAC,IAAI,wBAAwB,EAAE;CACG,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputers.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { LegacyLinesDiffComputer } from './legacyLinesDiffComputer.js';\nimport { DefaultLinesDiffComputer } from './defaultLinesDiffComputer/defaultLinesDiffComputer.js';\nimport { ILinesDiffComputer } from './linesDiffComputer.js';\n\nexport const linesDiffComputers = {\n\tgetLegacy: () => new LegacyLinesDiffComputer(),\n\tgetDefault: () => new DefaultLinesDiffComputer(),\n} satisfies Record<string, () => ILinesDiffComputer>;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6993bd53193cffeec9659dee6c2d225a4d7e2825"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1mr4d2t61i = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1mr4d2t61i();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { LegacyLinesDiffComputer } from './legacyLinesDiffComputer.js';
+import { DefaultLinesDiffComputer } from './defaultLinesDiffComputer/defaultLinesDiffComputer.js';
+export const linesDiffComputers =
+/* istanbul ignore next */
+(cov_1mr4d2t61i().s[0]++, {
+  getLegacy: () => {
+    /* istanbul ignore next */
+    cov_1mr4d2t61i().f[0]++;
+    cov_1mr4d2t61i().s[1]++;
+    return new LegacyLinesDiffComputer();
+  },
+  getDefault: () => {
+    /* istanbul ignore next */
+    cov_1mr4d2t61i().f[1]++;
+    cov_1mr4d2t61i().s[2]++;
+    return new DefaultLinesDiffComputer();
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJMZWdhY3lMaW5lc0RpZmZDb21wdXRlciIsIkRlZmF1bHRMaW5lc0RpZmZDb21wdXRlciIsImxpbmVzRGlmZkNvbXB1dGVycyIsImNvdl8xbXI0ZDJ0NjFpIiwicyIsImdldExlZ2FjeSIsImYiLCJnZXREZWZhdWx0Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2RpZmYvbGluZXNEaWZmQ29tcHV0ZXJzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBMZWdhY3lMaW5lc0RpZmZDb21wdXRlciB9IGZyb20gJy4vbGVnYWN5TGluZXNEaWZmQ29tcHV0ZXIuanMnO1xuaW1wb3J0IHsgRGVmYXVsdExpbmVzRGlmZkNvbXB1dGVyIH0gZnJvbSAnLi9kZWZhdWx0TGluZXNEaWZmQ29tcHV0ZXIvZGVmYXVsdExpbmVzRGlmZkNvbXB1dGVyLmpzJztcbmltcG9ydCB7IElMaW5lc0RpZmZDb21wdXRlciB9IGZyb20gJy4vbGluZXNEaWZmQ29tcHV0ZXIuanMnO1xuXG5leHBvcnQgY29uc3QgbGluZXNEaWZmQ29tcHV0ZXJzID0ge1xuXHRnZXRMZWdhY3k6ICgpID0+IG5ldyBMZWdhY3lMaW5lc0RpZmZDb21wdXRlcigpLFxuXHRnZXREZWZhdWx0OiAoKSA9PiBuZXcgRGVmYXVsdExpbmVzRGlmZkNvbXB1dGVyKCksXG59IHNhdGlzZmllcyBSZWNvcmQ8c3RyaW5nLCAoKSA9PiBJTGluZXNEaWZmQ29tcHV0ZXI+O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLHVCQUF1QixRQUFRLDhCQUE4QjtBQUN0RSxTQUFTQyx3QkFBd0IsUUFBUSx3REFBd0Q7QUFHakcsT0FBTyxNQUFNQyxrQkFBa0I7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHO0VBQ2pDQyxTQUFTLEVBQUVBLENBQUEsS0FBTTtJQUFBO0lBQUFGLGNBQUEsR0FBQUcsQ0FBQTtJQUFBSCxjQUFBLEdBQUFDLENBQUE7SUFBQSxXQUFJSix1QkFBdUIsRUFBRTtFQUFGLENBQUU7RUFDOUNPLFVBQVUsRUFBRUEsQ0FBQSxLQUFNO0lBQUE7SUFBQUosY0FBQSxHQUFBRyxDQUFBO0lBQUFILGNBQUEsR0FBQUMsQ0FBQTtJQUFBLFdBQUlILHdCQUF3QixFQUFFO0VBQUY7Q0FDSyIsImlnbm9yZUxpc3QiOltdfQ==

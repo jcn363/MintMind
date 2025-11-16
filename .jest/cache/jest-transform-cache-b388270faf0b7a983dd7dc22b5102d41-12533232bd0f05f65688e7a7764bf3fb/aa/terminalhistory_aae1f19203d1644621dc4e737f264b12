@@ -1,0 +1,83 @@
+13cdb61dadcd554d8c1b6fbb2662571e
+/* istanbul ignore next */
+function cov_1e95152h6q() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/history/common/terminal.history.ts";
+  var hash = "cbc0e94184fe61d11623771dc055bd4bf1033c52";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/history/common/terminal.history.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 57
+        },
+        end: {
+          line: 9,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 44
+        },
+        end: {
+          line: 17,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/history/common/terminal.history.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AASjD,MAAM,CAAC,MAAM,yCAAyC,GAAG;;;CAGxD,CAAC;AAMF,MAAM,CAAC,MAAM,4BAA4B,GAAoD;IAC5F,8GAAyD,EAAE;QAC1D,UAAU,EAAE,IAAI;QAChB,mBAAmB,EAAE,QAAQ,CAAC,8CAA8C,EAAE,sIAAsI,CAAC;QACrN,IAAI,EAAE,QAAQ;QACd,OAAO,EAAE,GAAG;KACZ;CACD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/history/common/terminal.history.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IStringDictionary } from '../../../../../base/common/collections.js';\nimport { localize } from '../../../../../nls.js';\nimport type { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.js';\n\nexport const enum TerminalHistoryCommandId {\n\tClearPreviousSessionHistory = 'workbench.action.terminal.clearPreviousSessionHistory',\n\tGoToRecentDirectory = 'workbench.action.terminal.goToRecentDirectory',\n\tRunRecentCommand = 'workbench.action.terminal.runRecentCommand',\n}\n\nexport const defaultTerminalHistoryCommandsToSkipShell = [\n\tTerminalHistoryCommandId.GoToRecentDirectory,\n\tTerminalHistoryCommandId.RunRecentCommand\n];\n\nexport const enum TerminalHistorySettingId {\n\tShellIntegrationCommandHistory = 'terminal.integrated.shellIntegration.history',\n}\n\nexport const terminalHistoryConfiguration: IStringDictionary<IConfigurationPropertySchema> = {\n\t[TerminalHistorySettingId.ShellIntegrationCommandHistory]: {\n\t\trestricted: true,\n\t\tmarkdownDescription: localize('terminal.integrated.shellIntegration.history', \"Controls the number of recently used commands to keep in the terminal command history. Set to 0 to disable terminal command history.\"),\n\t\ttype: 'number',\n\t\tdefault: 100\n\t},\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "cbc0e94184fe61d11623771dc055bd4bf1033c52"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1e95152h6q = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1e95152h6q();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../../nls.js';
+export const defaultTerminalHistoryCommandsToSkipShell =
+/* istanbul ignore next */
+(cov_1e95152h6q().s[0]++, ["workbench.action.terminal.goToRecentDirectory" /* TerminalHistoryCommandId.GoToRecentDirectory */, "workbench.action.terminal.runRecentCommand" /* TerminalHistoryCommandId.RunRecentCommand */]);
+export const terminalHistoryConfiguration =
+/* istanbul ignore next */
+(cov_1e95152h6q().s[1]++, {
+  ["terminal.integrated.shellIntegration.history" /* TerminalHistorySettingId.ShellIntegrationCommandHistory */]: {
+    restricted: true,
+    markdownDescription: localize('terminal.integrated.shellIntegration.history', "Controls the number of recently used commands to keep in the terminal command history. Set to 0 to disable terminal command history."),
+    type: 'number',
+    default: 100
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMWU5NTE1Mmg2cSIsImFjdHVhbENvdmVyYWdlIiwibG9jYWxpemUiLCJkZWZhdWx0VGVybWluYWxIaXN0b3J5Q29tbWFuZHNUb1NraXBTaGVsbCIsInMiLCJ0ZXJtaW5hbEhpc3RvcnlDb25maWd1cmF0aW9uIiwicmVzdHJpY3RlZCIsIm1hcmtkb3duRGVzY3JpcHRpb24iLCJ0eXBlIiwiZGVmYXVsdCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWxDb250cmliL2hpc3RvcnkvY29tbW9uL3Rlcm1pbmFsLmhpc3RvcnkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB0eXBlIHsgSVN0cmluZ0RpY3Rpb25hcnkgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9jb2xsZWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBsb2NhbGl6ZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL25scy5qcyc7XG5pbXBvcnQgdHlwZSB7IElDb25maWd1cmF0aW9uUHJvcGVydHlTY2hlbWEgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9jb25maWd1cmF0aW9uL2NvbW1vbi9jb25maWd1cmF0aW9uUmVnaXN0cnkuanMnO1xuXG5leHBvcnQgY29uc3QgZW51bSBUZXJtaW5hbEhpc3RvcnlDb21tYW5kSWQge1xuXHRDbGVhclByZXZpb3VzU2Vzc2lvbkhpc3RvcnkgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5jbGVhclByZXZpb3VzU2Vzc2lvbkhpc3RvcnknLFxuXHRHb1RvUmVjZW50RGlyZWN0b3J5ID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuZ29Ub1JlY2VudERpcmVjdG9yeScsXG5cdFJ1blJlY2VudENvbW1hbmQgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5ydW5SZWNlbnRDb21tYW5kJyxcbn1cblxuZXhwb3J0IGNvbnN0IGRlZmF1bHRUZXJtaW5hbEhpc3RvcnlDb21tYW5kc1RvU2tpcFNoZWxsID0gW1xuXHRUZXJtaW5hbEhpc3RvcnlDb21tYW5kSWQuR29Ub1JlY2VudERpcmVjdG9yeSxcblx0VGVybWluYWxIaXN0b3J5Q29tbWFuZElkLlJ1blJlY2VudENvbW1hbmRcbl07XG5cbmV4cG9ydCBjb25zdCBlbnVtIFRlcm1pbmFsSGlzdG9yeVNldHRpbmdJZCB7XG5cdFNoZWxsSW50ZWdyYXRpb25Db21tYW5kSGlzdG9yeSA9ICd0ZXJtaW5hbC5pbnRlZ3JhdGVkLnNoZWxsSW50ZWdyYXRpb24uaGlzdG9yeScsXG59XG5cbmV4cG9ydCBjb25zdCB0ZXJtaW5hbEhpc3RvcnlDb25maWd1cmF0aW9uOiBJU3RyaW5nRGljdGlvbmFyeTxJQ29uZmlndXJhdGlvblByb3BlcnR5U2NoZW1hPiA9IHtcblx0W1Rlcm1pbmFsSGlzdG9yeVNldHRpbmdJZC5TaGVsbEludGVncmF0aW9uQ29tbWFuZEhpc3RvcnldOiB7XG5cdFx0cmVzdHJpY3RlZDogdHJ1ZSxcblx0XHRtYXJrZG93bkRlc2NyaXB0aW9uOiBsb2NhbGl6ZSgndGVybWluYWwuaW50ZWdyYXRlZC5zaGVsbEludGVncmF0aW9uLmhpc3RvcnknLCBcIkNvbnRyb2xzIHRoZSBudW1iZXIgb2YgcmVjZW50bHkgdXNlZCBjb21tYW5kcyB0byBrZWVwIGluIHRoZSB0ZXJtaW5hbCBjb21tYW5kIGhpc3RvcnkuIFNldCB0byAwIHRvIGRpc2FibGUgdGVybWluYWwgY29tbWFuZCBoaXN0b3J5LlwiKSxcblx0XHR0eXBlOiAnbnVtYmVyJyxcblx0XHRkZWZhdWx0OiAxMDBcblx0fSxcbn07XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUE4QkU7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQTlCRjs7OztBQU1BLFNBQVNFLFFBQVEsUUFBUSx1QkFBdUI7QUFTaEQsT0FBTyxNQUFNQyx5Q0FBeUM7QUFBQTtBQUFBLENBQUFILGNBQUEsR0FBQUksQ0FBQSxPQUFHLEMsaU1BR3hEO0FBTUQsT0FBTyxNQUFNQyw0QkFBNEI7QUFBQTtBQUFBLENBQUFMLGNBQUEsR0FBQUksQ0FBQSxPQUFvRDtFQUM1RixnSEFBMkQ7SUFDMURFLFVBQVUsRUFBRSxJQUFJO0lBQ2hCQyxtQkFBbUIsRUFBRUwsUUFBUSxDQUFDLDhDQUE4QyxFQUFFLHNJQUFzSSxDQUFDO0lBQ3JOTSxJQUFJLEVBQUUsUUFBUTtJQUNkQyxPQUFPLEVBQUU7O0NBRVYiLCJpZ25vcmVMaXN0IjpbXX0=

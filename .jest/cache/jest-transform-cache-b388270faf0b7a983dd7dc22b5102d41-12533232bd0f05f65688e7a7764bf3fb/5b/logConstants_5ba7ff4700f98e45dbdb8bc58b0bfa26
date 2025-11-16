@@ -1,0 +1,93 @@
+4accd7c8a522cb5ad1c2b94ad6b8396e
+/* istanbul ignore next */
+function cov_2fxklnucio() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/log/common/logConstants.ts";
+  var hash = "b82ff21b3f0ccd0d03ee2f9af5bc1dd0e49a2c8c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/log/common/logConstants.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 27
+        },
+        end: {
+          line: 6,
+          column: 40
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 30
+        },
+        end: {
+          line: 7,
+          column: 85
+        }
+      },
+      "2": {
+        start: {
+          line: 8,
+          column: 37
+        },
+        end: {
+          line: 8,
+          column: 69
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/log/common/logConstants.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAG9C,MAAM,CAAC,MAAM,WAAW,GAAG,aAAa,CAAC;AACzC,MAAM,CAAC,MAAM,cAAc,GAAgB,EAAE,EAAE,EAAE,WAAW,EAAE,IAAI,EAAE,QAAQ,CAAC,QAAQ,EAAE,QAAQ,CAAC,EAAE,CAAC;AACnG,MAAM,CAAC,MAAM,qBAAqB,GAAG,gCAAgC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/log/common/logConstants.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize } from '../../../../nls.js';\nimport { LoggerGroup } from '../../../../platform/log/common/log.js';\n\nexport const windowLogId = 'rendererLog';\nexport const windowLogGroup: LoggerGroup = { id: windowLogId, name: localize('window', \"Window\") };\nexport const showWindowLogActionId = 'workbench.action.showWindowLog';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b82ff21b3f0ccd0d03ee2f9af5bc1dd0e49a2c8c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2fxklnucio = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2fxklnucio();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../nls.js';
+export const windowLogId =
+/* istanbul ignore next */
+(cov_2fxklnucio().s[0]++, 'rendererLog');
+export const windowLogGroup =
+/* istanbul ignore next */
+(cov_2fxklnucio().s[1]++, {
+  id: windowLogId,
+  name: localize('window', "Window")
+});
+export const showWindowLogActionId =
+/* istanbul ignore next */
+(cov_2fxklnucio().s[2]++, 'workbench.action.showWindowLog');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZSIsIndpbmRvd0xvZ0lkIiwiY292XzJmeGtsbnVjaW8iLCJzIiwid2luZG93TG9nR3JvdXAiLCJpZCIsIm5hbWUiLCJzaG93V2luZG93TG9nQWN0aW9uSWQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9sb2cvY29tbW9uL2xvZ0NvbnN0YW50cy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgTG9nZ2VyR3JvdXAgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9sb2cvY29tbW9uL2xvZy5qcyc7XG5cbmV4cG9ydCBjb25zdCB3aW5kb3dMb2dJZCA9ICdyZW5kZXJlckxvZyc7XG5leHBvcnQgY29uc3Qgd2luZG93TG9nR3JvdXA6IExvZ2dlckdyb3VwID0geyBpZDogd2luZG93TG9nSWQsIG5hbWU6IGxvY2FsaXplKCd3aW5kb3cnLCBcIldpbmRvd1wiKSB9O1xuZXhwb3J0IGNvbnN0IHNob3dXaW5kb3dMb2dBY3Rpb25JZCA9ICd3b3JrYmVuY2guYWN0aW9uLnNob3dXaW5kb3dMb2cnO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsUUFBUSxRQUFRLG9CQUFvQjtBQUc3QyxPQUFPLE1BQU1DLFdBQVc7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHLGFBQWE7QUFDeEMsT0FBTyxNQUFNQyxjQUFjO0FBQUE7QUFBQSxDQUFBRixjQUFBLEdBQUFDLENBQUEsT0FBZ0I7RUFBRUUsRUFBRSxFQUFFSixXQUFXO0VBQUVLLElBQUksRUFBRU4sUUFBUSxDQUFDLFFBQVEsRUFBRSxRQUFRO0FBQUMsQ0FBRTtBQUNsRyxPQUFPLE1BQU1PLHFCQUFxQjtBQUFBO0FBQUEsQ0FBQUwsY0FBQSxHQUFBQyxDQUFBLE9BQUcsZ0NBQWdDIiwiaWdub3JlTGlzdCI6W119

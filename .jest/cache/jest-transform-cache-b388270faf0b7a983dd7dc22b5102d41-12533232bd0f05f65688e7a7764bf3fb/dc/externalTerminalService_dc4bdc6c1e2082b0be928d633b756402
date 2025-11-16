@@ -1,0 +1,77 @@
+dc4a18692323c7b1bd7fbd1701b2231d
+/* istanbul ignore next */
+function cov_1veu2v66p1() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-browser/externalTerminalService.ts";
+  var hash = "0afbd8a7949127a157b90727031e00d0192e763b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-browser/externalTerminalService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 40
+        },
+        end: {
+          line: 7,
+          column: 75
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 8,
+          column: 79
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-browser/externalTerminalService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAC9E,OAAO,EAAE,gCAAgC,EAAE,MAAM,wCAAwC,CAAC;AAE1F,MAAM,CAAC,MAAM,wBAAwB,GAAG,eAAe,CAA2B,kBAAkB,CAAC,CAAC;AAMtG,gCAAgC,CAAC,wBAAwB,EAAE,kBAAkB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-browser/externalTerminalService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IExternalTerminalService as ICommonExternalTerminalService } from '../common/externalTerminal.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\nimport { registerMainProcessRemoteService } from '../../ipc/electron-browser/services.js';\n\nexport const IExternalTerminalService = createDecorator<IExternalTerminalService>('externalTerminal');\n\nexport interface IExternalTerminalService extends ICommonExternalTerminalService {\n\treadonly _serviceBrand: undefined;\n}\n\nregisterMainProcessRemoteService(IExternalTerminalService, 'externalTerminal');\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0afbd8a7949127a157b90727031e00d0192e763b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1veu2v66p1 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1veu2v66p1();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+import { registerMainProcessRemoteService } from '../../ipc/electron-browser/services.js';
+export const IExternalTerminalService =
+/* istanbul ignore next */
+(cov_1veu2v66p1().s[0]++, createDecorator('externalTerminal'));
+/* istanbul ignore next */
+cov_1veu2v66p1().s[1]++;
+registerMainProcessRemoteService(IExternalTerminalService, 'externalTerminal');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJyZWdpc3Rlck1haW5Qcm9jZXNzUmVtb3RlU2VydmljZSIsIklFeHRlcm5hbFRlcm1pbmFsU2VydmljZSIsImNvdl8xdmV1MnY2NnAxIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vZXh0ZXJuYWxUZXJtaW5hbC9lbGVjdHJvbi1icm93c2VyL2V4dGVybmFsVGVybWluYWxTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJRXh0ZXJuYWxUZXJtaW5hbFNlcnZpY2UgYXMgSUNvbW1vbkV4dGVybmFsVGVybWluYWxTZXJ2aWNlIH0gZnJvbSAnLi4vY29tbW9uL2V4dGVybmFsVGVybWluYWwuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyByZWdpc3Rlck1haW5Qcm9jZXNzUmVtb3RlU2VydmljZSB9IGZyb20gJy4uLy4uL2lwYy9lbGVjdHJvbi1icm93c2VyL3NlcnZpY2VzLmpzJztcblxuZXhwb3J0IGNvbnN0IElFeHRlcm5hbFRlcm1pbmFsU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJRXh0ZXJuYWxUZXJtaW5hbFNlcnZpY2U+KCdleHRlcm5hbFRlcm1pbmFsJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUV4dGVybmFsVGVybWluYWxTZXJ2aWNlIGV4dGVuZHMgSUNvbW1vbkV4dGVybmFsVGVybWluYWxTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xufVxuXG5yZWdpc3Rlck1haW5Qcm9jZXNzUmVtb3RlU2VydmljZShJRXh0ZXJuYWxUZXJtaW5hbFNlcnZpY2UsICdleHRlcm5hbFRlcm1pbmFsJyk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQUM3RSxTQUFTQyxnQ0FBZ0MsUUFBUSx3Q0FBd0M7QUFFekYsT0FBTyxNQUFNQyx3QkFBd0I7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSixlQUFlLENBQTJCLGtCQUFrQixDQUFDO0FBQUM7QUFBQUcsY0FBQSxHQUFBQyxDQUFBO0FBTXRHSCxnQ0FBZ0MsQ0FBQ0Msd0JBQXdCLEVBQUUsa0JBQWtCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

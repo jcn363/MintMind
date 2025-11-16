@@ -1,0 +1,111 @@
+138d70b0e5d4b4e41563ef0cd37fd50f
+/* istanbul ignore next */
+function cov_2go7w71sct() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/contrib/screenshot.ts";
+  var hash = "4ab600439ed561588d9f5f1f47c1862f8016112c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/contrib/screenshot.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 36
+        },
+        end: {
+          line: 6,
+          column: 63
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 13,
+          column: 6
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "convertBufferToScreenshotVariable",
+        decl: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 49
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 58
+          },
+          end: {
+            line: 14,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/contrib/screenshot.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AAGjD,MAAM,CAAC,MAAM,oBAAoB,GAAG,2BAA2B,CAAC;AAEhE,MAAM,UAAU,iCAAiC,CAAC,MAAgB;IACjE,OAAO;QACN,EAAE,EAAE,oBAAoB;QACxB,IAAI,EAAE,QAAQ,CAAC,YAAY,EAAE,YAAY,CAAC;QAC1C,KAAK,EAAE,MAAM,CAAC,MAAM;QACpB,IAAI,EAAE,OAAO;KACb,CAAC;AACH,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/contrib/screenshot.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { VSBuffer } from '../../../../../base/common/buffer.js';\nimport { localize } from '../../../../../nls.js';\nimport { IChatRequestVariableEntry } from '../../common/chatVariableEntries.js';\n\nexport const ScreenshotVariableId = 'screenshot-focused-window';\n\nexport function convertBufferToScreenshotVariable(buffer: VSBuffer): IChatRequestVariableEntry {\n\treturn {\n\t\tid: ScreenshotVariableId,\n\t\tname: localize('screenshot', 'Screenshot'),\n\t\tvalue: buffer.buffer,\n\t\tkind: 'image'\n\t};\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4ab600439ed561588d9f5f1f47c1862f8016112c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2go7w71sct = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2go7w71sct();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../../nls.js';
+export const ScreenshotVariableId =
+/* istanbul ignore next */
+(cov_2go7w71sct().s[0]++, 'screenshot-focused-window');
+export function convertBufferToScreenshotVariable(buffer) {
+  /* istanbul ignore next */
+  cov_2go7w71sct().f[0]++;
+  cov_2go7w71sct().s[1]++;
+  return {
+    id: ScreenshotVariableId,
+    name: localize('screenshot', 'Screenshot'),
+    value: buffer.buffer,
+    kind: 'image'
+  };
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZSIsIlNjcmVlbnNob3RWYXJpYWJsZUlkIiwiY292XzJnbzd3NzFzY3QiLCJzIiwiY29udmVydEJ1ZmZlclRvU2NyZWVuc2hvdFZhcmlhYmxlIiwiYnVmZmVyIiwiZiIsImlkIiwibmFtZSIsInZhbHVlIiwia2luZCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvY2hhdC9icm93c2VyL2NvbnRyaWIvc2NyZWVuc2hvdC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVlNCdWZmZXIgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9idWZmZXIuanMnO1xuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgSUNoYXRSZXF1ZXN0VmFyaWFibGVFbnRyeSB9IGZyb20gJy4uLy4uL2NvbW1vbi9jaGF0VmFyaWFibGVFbnRyaWVzLmpzJztcblxuZXhwb3J0IGNvbnN0IFNjcmVlbnNob3RWYXJpYWJsZUlkID0gJ3NjcmVlbnNob3QtZm9jdXNlZC13aW5kb3cnO1xuXG5leHBvcnQgZnVuY3Rpb24gY29udmVydEJ1ZmZlclRvU2NyZWVuc2hvdFZhcmlhYmxlKGJ1ZmZlcjogVlNCdWZmZXIpOiBJQ2hhdFJlcXVlc3RWYXJpYWJsZUVudHJ5IHtcblx0cmV0dXJuIHtcblx0XHRpZDogU2NyZWVuc2hvdFZhcmlhYmxlSWQsXG5cdFx0bmFtZTogbG9jYWxpemUoJ3NjcmVlbnNob3QnLCAnU2NyZWVuc2hvdCcpLFxuXHRcdHZhbHVlOiBidWZmZXIuYnVmZmVyLFxuXHRcdGtpbmQ6ICdpbWFnZSdcblx0fTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxRQUFRLFFBQVEsdUJBQXVCO0FBR2hELE9BQU8sTUFBTUMsb0JBQW9CO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBRywyQkFBMkI7QUFFL0QsT0FBTSxTQUFVQyxpQ0FBaUNBLENBQUNDLE1BQWdCO0VBQUE7RUFBQUgsY0FBQSxHQUFBSSxDQUFBO0VBQUFKLGNBQUEsR0FBQUMsQ0FBQTtFQUNqRSxPQUFPO0lBQ05JLEVBQUUsRUFBRU4sb0JBQW9CO0lBQ3hCTyxJQUFJLEVBQUVSLFFBQVEsQ0FBQyxZQUFZLEVBQUUsWUFBWSxDQUFDO0lBQzFDUyxLQUFLLEVBQUVKLE1BQU0sQ0FBQ0EsTUFBTTtJQUNwQkssSUFBSSxFQUFFO0dBQ047QUFDRiIsImlnbm9yZUxpc3QiOltdfQ==

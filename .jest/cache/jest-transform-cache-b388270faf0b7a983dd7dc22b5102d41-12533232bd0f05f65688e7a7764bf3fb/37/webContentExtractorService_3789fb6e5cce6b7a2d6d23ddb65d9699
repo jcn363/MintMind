@@ -1,0 +1,77 @@
+e50e3c9f0a8641bf4b522199af6d7e99
+/* istanbul ignore next */
+function cov_21qp82zj1b() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/electron-browser/webContentExtractorService.ts";
+  var hash = "d95ca6bfc70fb0aa748a2771de0cd36eb59d209d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/electron-browser/webContentExtractorService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 7,
+          column: 85
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 8,
+          column: 99
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/electron-browser/webContentExtractorService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,gCAAgC,EAAE,kCAAkC,EAAE,MAAM,wCAAwC,CAAC;AAC9H,OAAO,EAAE,iCAAiC,EAAE,2BAA2B,EAAE,MAAM,kCAAkC,CAAC;AAElH,gCAAgC,CAAC,2BAA2B,EAAE,qBAAqB,CAAC,CAAC;AACrF,kCAAkC,CAAC,iCAAiC,EAAE,2BAA2B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/webContentExtractor/electron-browser/webContentExtractorService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { registerMainProcessRemoteService, registerSharedProcessRemoteService } from '../../ipc/electron-browser/services.js';\nimport { ISharedWebContentExtractorService, IWebContentExtractorService } from '../common/webContentExtractor.js';\n\nregisterMainProcessRemoteService(IWebContentExtractorService, 'webContentExtractor');\nregisterSharedProcessRemoteService(ISharedWebContentExtractorService, 'sharedWebContentExtractor');\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d95ca6bfc70fb0aa748a2771de0cd36eb59d209d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_21qp82zj1b = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_21qp82zj1b();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerMainProcessRemoteService, registerSharedProcessRemoteService } from '../../ipc/electron-browser/services.js';
+import { ISharedWebContentExtractorService, IWebContentExtractorService } from '../common/webContentExtractor.js';
+/* istanbul ignore next */
+cov_21qp82zj1b().s[0]++;
+registerMainProcessRemoteService(IWebContentExtractorService, 'webContentExtractor');
+/* istanbul ignore next */
+cov_21qp82zj1b().s[1]++;
+registerSharedProcessRemoteService(ISharedWebContentExtractorService, 'sharedWebContentExtractor');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3Rlck1haW5Qcm9jZXNzUmVtb3RlU2VydmljZSIsInJlZ2lzdGVyU2hhcmVkUHJvY2Vzc1JlbW90ZVNlcnZpY2UiLCJJU2hhcmVkV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2UiLCJJV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2UiLCJjb3ZfMjFxcDgyemoxYiIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL3dlYkNvbnRlbnRFeHRyYWN0b3IvZWxlY3Ryb24tYnJvd3Nlci93ZWJDb250ZW50RXh0cmFjdG9yU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgcmVnaXN0ZXJNYWluUHJvY2Vzc1JlbW90ZVNlcnZpY2UsIHJlZ2lzdGVyU2hhcmVkUHJvY2Vzc1JlbW90ZVNlcnZpY2UgfSBmcm9tICcuLi8uLi9pcGMvZWxlY3Ryb24tYnJvd3Nlci9zZXJ2aWNlcy5qcyc7XG5pbXBvcnQgeyBJU2hhcmVkV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2UsIElXZWJDb250ZW50RXh0cmFjdG9yU2VydmljZSB9IGZyb20gJy4uL2NvbW1vbi93ZWJDb250ZW50RXh0cmFjdG9yLmpzJztcblxucmVnaXN0ZXJNYWluUHJvY2Vzc1JlbW90ZVNlcnZpY2UoSVdlYkNvbnRlbnRFeHRyYWN0b3JTZXJ2aWNlLCAnd2ViQ29udGVudEV4dHJhY3RvcicpO1xucmVnaXN0ZXJTaGFyZWRQcm9jZXNzUmVtb3RlU2VydmljZShJU2hhcmVkV2ViQ29udGVudEV4dHJhY3RvclNlcnZpY2UsICdzaGFyZWRXZWJDb250ZW50RXh0cmFjdG9yJyk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsZ0NBQWdDLEVBQUVDLGtDQUFrQyxRQUFRLHdDQUF3QztBQUM3SCxTQUFTQyxpQ0FBaUMsRUFBRUMsMkJBQTJCLFFBQVEsa0NBQWtDO0FBQUM7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBRWxITCxnQ0FBZ0MsQ0FBQ0csMkJBQTJCLEVBQUUscUJBQXFCLENBQUM7QUFBQztBQUFBQyxjQUFBLEdBQUFDLENBQUE7QUFDckZKLGtDQUFrQyxDQUFDQyxpQ0FBaUMsRUFBRSwyQkFBMkIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,46 @@
+f7aff80cb915e80271bb50ff0079e09c
+/* istanbul ignore next */
+function cov_2lui2od82y() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/common/panecomposite.ts";
+  var hash = "5f5ebf4ba21def278f99fbbc61754903f3e35823";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/common/panecomposite.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/common/panecomposite.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/common/panecomposite.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IView, IViewPaneContainer } from './views.js';\nimport { IComposite } from './composite.js';\n\nexport interface IPaneComposite extends IComposite {\n\n\t/**\n\t * Returns the minimal width needed to avoid any content horizontal truncation\n\t */\n\tgetOptimalWidth(): number | undefined;\n\n\topenView<T extends IView>(id: string, focus?: boolean): T | undefined;\n\tgetViewPaneContainer(): IViewPaneContainer | undefined;\n}\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5f5ebf4ba21def278f99fbbc61754903f3e35823"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2lui2od82y = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2lui2od82y();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29tbW9uL3BhbmVjb21wb3NpdGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElWaWV3LCBJVmlld1BhbmVDb250YWluZXIgfSBmcm9tICcuL3ZpZXdzLmpzJztcbmltcG9ydCB7IElDb21wb3NpdGUgfSBmcm9tICcuL2NvbXBvc2l0ZS5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVBhbmVDb21wb3NpdGUgZXh0ZW5kcyBJQ29tcG9zaXRlIHtcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgbWluaW1hbCB3aWR0aCBuZWVkZWQgdG8gYXZvaWQgYW55IGNvbnRlbnQgaG9yaXpvbnRhbCB0cnVuY2F0aW9uXG5cdCAqL1xuXHRnZXRPcHRpbWFsV2lkdGgoKTogbnVtYmVyIHwgdW5kZWZpbmVkO1xuXG5cdG9wZW5WaWV3PFQgZXh0ZW5kcyBJVmlldz4oaWQ6IHN0cmluZywgZm9jdXM/OiBib29sZWFuKTogVCB8IHVuZGVmaW5lZDtcblx0Z2V0Vmlld1BhbmVDb250YWluZXIoKTogSVZpZXdQYW5lQ29udGFpbmVyIHwgdW5kZWZpbmVkO1xufVxuXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

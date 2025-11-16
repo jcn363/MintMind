@@ -1,0 +1,249 @@
+40d9b7bdc1bac36ffe058f25ec3a175e
+/* istanbul ignore next */
+function cov_15gi7hiagr() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hover.ts";
+  var hash = "cca635321d5f943710c8e3efa207b4ec48f41395";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hover.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 22
+        },
+        end: {
+          line: 6,
+          column: 25
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 4
+        },
+        end: {
+          line: 7,
+          column: 115
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 22
+        },
+        end: {
+          line: 10,
+          column: 25
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 67
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isManagedHoverTooltipMarkdownString",
+        decl: {
+          start: {
+            line: 5,
+            column: 16
+          },
+          end: {
+            line: 5,
+            column: 51
+          }
+        },
+        loc: {
+          start: {
+            line: 5,
+            column: 57
+          },
+          end: {
+            line: 8,
+            column: 1
+          }
+        },
+        line: 5
+      },
+      "1": {
+        name: "isManagedHoverTooltipHTMLElement",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 48
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 54
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 7,
+            column: 11
+          },
+          end: {
+            line: 7,
+            column: 114
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 7,
+            column: 11
+          },
+          end: {
+            line: 7,
+            column: 40
+          }
+        }, {
+          start: {
+            line: 7,
+            column: 44
+          },
+          end: {
+            line: 7,
+            column: 67
+          }
+        }, {
+          start: {
+            line: 7,
+            column: 71
+          },
+          end: {
+            line: 7,
+            column: 114
+          }
+        }],
+        line: 7
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 11,
+            column: 11
+          },
+          end: {
+            line: 11,
+            column: 66
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 11,
+            column: 11
+          },
+          end: {
+            line: 11,
+            column: 40
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 44
+          },
+          end: {
+            line: 11,
+            column: 66
+          }
+        }],
+        line: 11
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hover.ts",
+      mappings: "AAAA;;;gGAGgG;AAoZhG,MAAM,UAAU,mCAAmC,CAAC,GAAY;IAC/D,MAAM,SAAS,GAAG,GAAyC,CAAC;IAC5D,OAAO,OAAO,SAAS,KAAK,QAAQ,IAAI,UAAU,IAAI,SAAS,IAAI,8BAA8B,IAAI,SAAS,CAAC;AAChH,CAAC;AAMD,MAAM,UAAU,gCAAgC,CAAC,GAAY;IAC5D,MAAM,SAAS,GAAG,GAAsC,CAAC;IACzD,OAAO,OAAO,SAAS,KAAK,QAAQ,IAAI,SAAS,IAAI,SAAS,CAAC;AAChE,CAAC;AA0BD,2BAA2B",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hover.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IHoverDelegate } from './hoverDelegate.js';\nimport type { HoverPosition } from './hoverWidget.js';\nimport type { CancellationToken } from '../../../common/cancellation.js';\nimport type { IMarkdownString } from '../../../common/htmlContent.js';\nimport type { IDisposable } from '../../../common/lifecycle.js';\n\n/**\n * Enables the convenient display of rich markdown-based hovers in the workbench.\n */\nexport interface IHoverDelegate2 {\n\t/**\n\t * Shows a hover after a delay, or immediately if the {@link groupId} matches the currently\n\t * shown hover.\n\t *\n\t * Use this method when you want to:\n\t *\n\t * - Control showing the hover yourself.\n\t * - Show the hover after the standard delay.\n\t *\n\t * @param options The options of the hover.\n\t * @param groupId The group ID of the hover. If the group ID is the same as the currently shown\n\t * hover, the hover will be shown immediately, skipping the delay.\n\t */\n\tshowDelayedHover(\n\t\toptions: IHoverOptions,\n\t\tlifecycleOptions: Pick<IHoverLifecycleOptions, 'groupId'>,\n\t): IHoverWidget | undefined;\n\n\t/**\n\t * A simple wrapper around showDelayedHover that includes listening to events on the\n\t * {@link target} element that shows the hover.\n\t *\n\t * Use this method when you want to:\n\t *\n\t * - Let the hover service handle showing the hover.\n\t * - Show the hover after the standard delay.\n\t * - Want the hover positioned beside the {@link target} element.\n\t *\n\t * @param target The target element to listener for mouseover events on.\n\t * @param hoverOptions The options of the hover.\n\t * @param lifecycleOptions The options of the hover's lifecycle.\n\t */\n\tsetupDelayedHover(\n\t\ttarget: HTMLElement,\n\t\thoverOptions: (() => IDelayedHoverOptions) | IDelayedHoverOptions,\n\t\tlifecycleOptions?: IHoverLifecycleOptions,\n\t): IDisposable;\n\n\t/**\n\t * A simple wrapper around showDelayedHover that includes listening to events on the\n\t * {@link target} element that shows the hover. This differs from {@link setupDelayedHover} in\n\t * that the hover will be shown at the mouse position instead of the\n\t * {@link target target} element's position, ignoring any\n\t * {@link IHoverOptions.position position options} that are passed in.\n\t *\n\t * Use this method when you want to:\n\t *\n\t * - Let the hover service handle showing the hover.\n\t * - Show the hover after the standard delay.\n\t * - Want the hover positioned beside the mouse.\n\t *\n\t * @param target The target element to listener for mouseover events on.\n\t * @param hoverOptions The options of the hover.\n\t * @param lifecycleOptions The options of the hover's lifecycle.\n\t */\n\tsetupDelayedHoverAtMouse(\n\t\ttarget: HTMLElement,\n\t\thoverOptions: (() => IDelayedHoverAtMouseOptions) | IDelayedHoverAtMouseOptions,\n\t\tlifecycleOptions?: IHoverLifecycleOptions,\n\t): IDisposable;\n\n\t/**\n\t * Shows a hover immediately, provided a hover with the same {@link options} object is not\n\t * already visible.\n\t *\n\t * Use this method when you want to:\n\t *\n\t * - Control showing the hover yourself.\n\t * - Show the hover immediately.\n\t *\n\t * @param options A set of options defining the characteristics of the hover.\n\t * @param focus Whether to focus the hover (useful for keyboard accessibility).\n\t *\n\t * @example A simple usage with a single element target.\n\t *\n\t * ```typescript\n\t * showInstantHover({\n\t *   text: new MarkdownString('Hello world'),\n\t *   target: someElement\n\t * });\n\t * ```\n\t */\n\tshowInstantHover(\n\t\toptions: IHoverOptions,\n\t\tfocus?: boolean\n\t): IHoverWidget | undefined;\n\n\t/**\n\t * Hides the hover if it was visible. This call will be ignored if the hover is currently\n\t * \"locked\" via the alt/option key unless `force` is set.\n\t */\n\thideHover(force?: boolean): void;\n\n\t/**\n\t * This should only be used until we have the ability to show multiple context views\n\t * simultaneously. #188822\n\t */\n\tshowAndFocusLastHover(): void;\n\n\t/**\n\t * Sets up a managed hover for the given element. A managed hover will set up listeners for\n\t * mouse events, show the hover after a delay and provide hooks to easily update the content.\n\t *\n\t * This should be used over {@link showInstantHover} when fine-grained control is not needed. The\n\t * managed hover also does not scale well, consider using {@link showInstantHover} when showing hovers\n\t * for many elements.\n\t *\n\t * @param hoverDelegate The hover delegate containing hooks and configuration for the hover.\n\t * @param targetElement The target element to show the hover for.\n\t * @param content The content of the hover or a factory that creates it at the time it's shown.\n\t * @param options Additional options for the managed hover.\n\t *\n\t * @deprecated Use {@link setupDelayedHover} or {@link setupDelayedHoverAtMouse} instead where\n\t * possible.\n\t */\n\tsetupManagedHover(hoverDelegate: IHoverDelegate, targetElement: HTMLElement, content: IManagedHoverContentOrFactory, options?: IManagedHoverOptions): IManagedHover;\n\n\t/**\n\t * Shows the hover for the given element if one has been setup.\n\t *\n\t * @param targetElement The target element of the hover, as set up in {@link setupManagedHover}.\n\t *\n\t * @deprecated Use {@link setupDelayedHover} or {@link setupDelayedHoverAtMouse} instead where\n\t * possible.\n\t */\n\tshowManagedHover(targetElement: HTMLElement): void;\n}\n\nexport interface IHoverWidget extends IDisposable {\n\t/**\n\t * Whether the hover widget has been disposed.\n\t */\n\treadonly isDisposed: boolean;\n}\n\nexport const enum HoverStyle {\n\t/**\n\t * The hover is anchored below the element with a pointer above it pointing at the target.\n\t */\n\tPointer = 1,\n\t/**\n\t * The hover is anchored to the bottom right of the cursor's location.\n\t */\n\tMouse = 2,\n}\n\nexport interface IHoverOptions {\n\t/**\n\t * The content to display in the primary section of the hover. The type of text determines the\n\t * default `hideOnHover` behavior.\n\t */\n\tcontent: IMarkdownString | string | HTMLElement;\n\n\t/**\n\t * The target for the hover. This determines the position of the hover and it will only be\n\t * hidden when the mouse leaves both the hover and the target. A HTMLElement can be used for\n\t * simple cases and a IHoverTarget for more complex cases where multiple elements and/or a\n\t * dispose method is required.\n\t */\n\ttarget: IHoverTarget | HTMLElement;\n\n\t/*\n\t * The container to pass to {@link IContextViewProvider.showContextView} which renders the hover\n\t * in. This is particularly useful for more natural tab focusing behavior, where the hover is\n\t * created as the next tab index after the element being hovered and/or to workaround the\n\t * element's container hiding on `focusout`.\n\t */\n\tcontainer?: HTMLElement;\n\n\t/**\n\t * An ID to associate with the hover to be used as an equality check. Normally when calling\n\t * {@link IHoverService.showHover} the options object itself is used to determine if the hover\n\t * is the same one that is already showing, when this is set, the ID will be used instead.\n\t *\n\t * When `undefined`, this will default to a serialized version of {@link content}. In this case\n\t * it will remain `undefined` if {@link content} is a `HTMLElement`.\n\t */\n\tid?: string;\n\n\t/**\n\t * A set of actions for the hover's \"status bar\".\n\t */\n\tactions?: IHoverAction[];\n\n\t/**\n\t * An optional array of classes to add to the hover element.\n\t */\n\tadditionalClasses?: string[];\n\n\t/**\n\t * An optional link handler for markdown links, if this is not provided the IOpenerService will\n\t * be used to open the links using its default options.\n\t */\n\tlinkHandler?(url: string): void;\n\n\t/**\n\t * Whether to trap focus in the following ways:\n\t * - When the hover closes, focus goes to the element that had focus before the hover opened\n\t * - If there are elements in the hover to focus, focus stays inside of the hover when tabbing\n\t * Note that this is overridden to true when in screen reader optimized mode.\n\t */\n\ttrapFocus?: boolean;\n\n\t/**\n\t * The style of the hover, this sets default values of {@link position} and {@link appearance}:\n\t */\n\tstyle?: HoverStyle;\n\n\t/**\n\t * Options that defines where the hover is positioned.\n\t */\n\tposition?: IHoverPositionOptions;\n\n\t/**\n\t * Options that defines how long the hover is shown and when it hides.\n\t */\n\tpersistence?: IHoverPersistenceOptions;\n\n\t/**\n\t * Options that define how the hover looks.\n\t */\n\tappearance?: IHoverAppearanceOptions;\n}\n\n// `target` is ignored for delayed hover methods as it's included in the method and added\n// automatically when the hover options get resolved.\nexport type IDelayedHoverOptions = Omit<IHoverOptions, 'target'>;\n\n// `position` is ignored for delayed at mouse hover methods as it's overwritten by the mouse event.\n// `showPointer` is always false when using mouse positioning\nexport type IDelayedHoverAtMouseOptions = Omit<IDelayedHoverOptions, 'position' | 'appearance'> & { appearance?: Omit<IHoverAppearanceOptions, 'showPointer'> };\n\nexport interface IHoverLifecycleOptions {\n\t/**\n\t * The group ID of the hover. If the group ID is the same as the currently shown hover, the\n\t * hover will be shown immediately, skipping the delay.\n\t *\n\t * @example Use a UUID to set a unique `groupId` for related hovers\n\t *\n\t * ```typescript\n\t * const groupId = generateUuid();\n\t * showDelayedHover({ content: 'Button 1', target: someElement1 }, { groupId });\n\t * showDelayedHover({ content: 'Button 2', target: someElement2 }, { groupId });\n\t * ```\n\t *\n\t * @example Use a feature-specific string to set a unqiue `groupId` for related hovers\n\t *\n\t * ```typescript\n\t * showDelayedHover({ content: 'Button 1', target: someElement1 }, { groupId: 'my-feature-items' });\n\t * showDelayedHover({ content: 'Button 2', target: someElement2 }, { groupId: 'my-feature-items' });\n\t * ```\n\t */\n\tgroupId?: string;\n\n\t/**\n\t * Whether to set up space and enter keyboard events for the hover, when these are pressed when\n\t * the hover's target is focused it will show and focus the hover.\n\t *\n\t * Typically this should _not_ be used when the space or enter events are already handled by\n\t * something else.\n\t */\n\tsetupKeyboardEvents?: boolean;\n}\n\nexport interface IHoverPositionOptions {\n\t/**\n\t * Position of the hover. The default is to show above the target. This option will be ignored\n\t * if there is not enough room to layout the hover in the specified position, unless the\n\t * forcePosition option is set.\n\t */\n\thoverPosition?: HoverPosition | MouseEvent;\n\n\t/**\n\t * Force the hover position, reducing the size of the hover instead of adjusting the hover\n\t * position.\n\t */\n\tforcePosition?: boolean;\n}\n\nexport interface IHoverPersistenceOptions {\n\t/**\n\t * Whether to hide the hover when the mouse leaves the `target` and enters the actual hover.\n\t * This is false by default when text is an `IMarkdownString` and true when `text` is a\n\t * `string`. Note that this will be ignored if any `actions` are provided as hovering is\n\t * required to make them accessible.\n\t *\n\t * In general hiding on hover is desired for:\n\t * - Regular text where selection is not important\n\t * - Markdown that contains no links where selection is not important\n\t */\n\thideOnHover?: boolean;\n\n\t/**\n\t * Whether to hide the hover when a key is pressed.\n\t */\n\thideOnKeyDown?: boolean;\n\n\t/**\n\t * Whether to make the hover sticky, this means it will not be hidden when the mouse leaves the\n\t * hover.\n\t */\n\tsticky?: boolean;\n}\n\nexport interface IHoverAppearanceOptions {\n\t/**\n\t * Whether to show the hover pointer, a little arrow that connects the target and the hover.\n\t */\n\tshowPointer?: boolean;\n\n\t/**\n\t * Whether to show a compact hover, reducing the font size and padding of the hover.\n\t */\n\tcompact?: boolean;\n\n\t/**\n\t * When {@link hideOnHover} is explicitly true or undefined and its auto value is detected to\n\t * hide, show a hint at the bottom of the hover explaining how to mouse over the widget. This\n\t * should be used in the cases where despite the hover having no interactive content, it's\n\t * likely the user may want to interact with it somehow.\n\t */\n\tshowHoverHint?: boolean;\n\n\t/**\n\t * Whether to skip the fade in animation, this should be used when hovering from one hover to\n\t * another in the same group so it looks like the hover is moving from one element to the other.\n\t */\n\tskipFadeInAnimation?: boolean;\n\n\t/**\n\t * The max height of the hover relative to the window height.\n\t * Accepted values: (0,1]\n\t * Default: 0.5\n\t */\n\tmaxHeightRatio?: number;\n}\n\nexport interface IHoverAction {\n\t/**\n\t * The label to use in the hover's status bar.\n\t */\n\tlabel: string;\n\n\t/**\n\t * The command ID of the action, this is used to resolve the keybinding to display after the\n\t * action label.\n\t */\n\tcommandId: string;\n\n\t/**\n\t * An optional class of an icon that will be displayed before the label.\n\t */\n\ticonClass?: string;\n\n\t/**\n\t * The callback to run the action.\n\t * @param target The action element that was activated.\n\t */\n\trun(target: HTMLElement): void;\n}\n\n/**\n * A target for a hover.\n */\nexport interface IHoverTarget extends Partial<IDisposable> {\n\t/**\n\t * A set of target elements used to position the hover. If multiple elements are used the hover\n\t * will try to not overlap any target element. An example use case for this is show a hover for\n\t * wrapped text.\n\t */\n\treadonly targetElements: readonly HTMLElement[];\n\n\t/**\n\t * An optional absolute x coordinate to position the hover with, for example to position the\n\t * hover using `MouseEvent.pageX`.\n\t */\n\treadonly x?: number;\n\n\t/**\n\t * An optional absolute y coordinate to position the hover with, for example to position the\n\t * hover using `MouseEvent.pageY`.\n\t */\n\treadonly y?: number;\n}\n\n// #region Managed hover\n\nexport interface IManagedHoverTooltipMarkdownString {\n\tmarkdown: IMarkdownString | string | undefined | ((token: CancellationToken) => Promise<IMarkdownString | string | undefined>);\n\tmarkdownNotSupportedFallback: string | undefined;\n}\n\nexport function isManagedHoverTooltipMarkdownString(obj: unknown): obj is IManagedHoverTooltipMarkdownString {\n\tconst candidate = obj as IManagedHoverTooltipMarkdownString;\n\treturn typeof candidate === 'object' && 'markdown' in candidate && 'markdownNotSupportedFallback' in candidate;\n}\n\nexport interface IManagedHoverTooltipHTMLElement {\n\telement: (token: CancellationToken) => HTMLElement | Promise<HTMLElement>;\n}\n\nexport function isManagedHoverTooltipHTMLElement(obj: unknown): obj is IManagedHoverTooltipHTMLElement {\n\tconst candidate = obj as IManagedHoverTooltipHTMLElement;\n\treturn typeof candidate === 'object' && 'element' in candidate;\n}\n\nexport type IManagedHoverContent = string | IManagedHoverTooltipMarkdownString | IManagedHoverTooltipHTMLElement | HTMLElement | undefined;\nexport type IManagedHoverContentOrFactory = IManagedHoverContent | (() => IManagedHoverContent);\n\nexport interface IManagedHoverOptions extends Pick<IHoverOptions, 'actions' | 'linkHandler' | 'trapFocus'> {\n\tappearance?: Pick<IHoverAppearanceOptions, 'showHoverHint'>;\n}\n\nexport interface IManagedHover extends IDisposable {\n\t/**\n\t * Allows to programmatically open the hover.\n\t */\n\tshow(focus?: boolean): void;\n\n\t/**\n\t * Allows to programmatically hide the hover.\n\t */\n\thide(): void;\n\n\t/**\n\t * Updates the contents of the hover.\n\t */\n\tupdate(tooltip: IManagedHoverContent, options?: IManagedHoverOptions): void;\n}\n\n// #endregion Managed hover\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "cca635321d5f943710c8e3efa207b4ec48f41395"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_15gi7hiagr = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_15gi7hiagr();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export function isManagedHoverTooltipMarkdownString(obj) {
+  /* istanbul ignore next */
+  cov_15gi7hiagr().f[0]++;
+  const candidate =
+  /* istanbul ignore next */
+  (cov_15gi7hiagr().s[0]++, obj);
+  /* istanbul ignore next */
+  cov_15gi7hiagr().s[1]++;
+  return /* istanbul ignore next */(cov_15gi7hiagr().b[0][0]++, typeof candidate === 'object') &&
+  /* istanbul ignore next */
+  (cov_15gi7hiagr().b[0][1]++, 'markdown' in candidate) &&
+  /* istanbul ignore next */
+  (cov_15gi7hiagr().b[0][2]++, 'markdownNotSupportedFallback' in candidate);
+}
+export function isManagedHoverTooltipHTMLElement(obj) {
+  /* istanbul ignore next */
+  cov_15gi7hiagr().f[1]++;
+  const candidate =
+  /* istanbul ignore next */
+  (cov_15gi7hiagr().s[2]++, obj);
+  /* istanbul ignore next */
+  cov_15gi7hiagr().s[3]++;
+  return /* istanbul ignore next */(cov_15gi7hiagr().b[1][0]++, typeof candidate === 'object') &&
+  /* istanbul ignore next */
+  (cov_15gi7hiagr().b[1][1]++, 'element' in candidate);
+}
+// #endregion Managed hover
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJpc01hbmFnZWRIb3ZlclRvb2x0aXBNYXJrZG93blN0cmluZyIsIm9iaiIsImNvdl8xNWdpN2hpYWdyIiwiZiIsImNhbmRpZGF0ZSIsInMiLCJiIiwiaXNNYW5hZ2VkSG92ZXJUb29sdGlwSFRNTEVsZW1lbnQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2Jhc2UvYnJvd3Nlci91aS9ob3Zlci9ob3Zlci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHR5cGUgeyBJSG92ZXJEZWxlZ2F0ZSB9IGZyb20gJy4vaG92ZXJEZWxlZ2F0ZS5qcyc7XG5pbXBvcnQgdHlwZSB7IEhvdmVyUG9zaXRpb24gfSBmcm9tICcuL2hvdmVyV2lkZ2V0LmpzJztcbmltcG9ydCB0eXBlIHsgQ2FuY2VsbGF0aW9uVG9rZW4gfSBmcm9tICcuLi8uLi8uLi9jb21tb24vY2FuY2VsbGF0aW9uLmpzJztcbmltcG9ydCB0eXBlIHsgSU1hcmtkb3duU3RyaW5nIH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2h0bWxDb250ZW50LmpzJztcbmltcG9ydCB0eXBlIHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vbGlmZWN5Y2xlLmpzJztcblxuLyoqXG4gKiBFbmFibGVzIHRoZSBjb252ZW5pZW50IGRpc3BsYXkgb2YgcmljaCBtYXJrZG93bi1iYXNlZCBob3ZlcnMgaW4gdGhlIHdvcmtiZW5jaC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJSG92ZXJEZWxlZ2F0ZTIge1xuXHQvKipcblx0ICogU2hvd3MgYSBob3ZlciBhZnRlciBhIGRlbGF5LCBvciBpbW1lZGlhdGVseSBpZiB0aGUge0BsaW5rIGdyb3VwSWR9IG1hdGNoZXMgdGhlIGN1cnJlbnRseVxuXHQgKiBzaG93biBob3Zlci5cblx0ICpcblx0ICogVXNlIHRoaXMgbWV0aG9kIHdoZW4geW91IHdhbnQgdG86XG5cdCAqXG5cdCAqIC0gQ29udHJvbCBzaG93aW5nIHRoZSBob3ZlciB5b3Vyc2VsZi5cblx0ICogLSBTaG93IHRoZSBob3ZlciBhZnRlciB0aGUgc3RhbmRhcmQgZGVsYXkuXG5cdCAqXG5cdCAqIEBwYXJhbSBvcHRpb25zIFRoZSBvcHRpb25zIG9mIHRoZSBob3Zlci5cblx0ICogQHBhcmFtIGdyb3VwSWQgVGhlIGdyb3VwIElEIG9mIHRoZSBob3Zlci4gSWYgdGhlIGdyb3VwIElEIGlzIHRoZSBzYW1lIGFzIHRoZSBjdXJyZW50bHkgc2hvd25cblx0ICogaG92ZXIsIHRoZSBob3ZlciB3aWxsIGJlIHNob3duIGltbWVkaWF0ZWx5LCBza2lwcGluZyB0aGUgZGVsYXkuXG5cdCAqL1xuXHRzaG93RGVsYXllZEhvdmVyKFxuXHRcdG9wdGlvbnM6IElIb3Zlck9wdGlvbnMsXG5cdFx0bGlmZWN5Y2xlT3B0aW9uczogUGljazxJSG92ZXJMaWZlY3ljbGVPcHRpb25zLCAnZ3JvdXBJZCc+LFxuXHQpOiBJSG92ZXJXaWRnZXQgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEEgc2ltcGxlIHdyYXBwZXIgYXJvdW5kIHNob3dEZWxheWVkSG92ZXIgdGhhdCBpbmNsdWRlcyBsaXN0ZW5pbmcgdG8gZXZlbnRzIG9uIHRoZVxuXHQgKiB7QGxpbmsgdGFyZ2V0fSBlbGVtZW50IHRoYXQgc2hvd3MgdGhlIGhvdmVyLlxuXHQgKlxuXHQgKiBVc2UgdGhpcyBtZXRob2Qgd2hlbiB5b3Ugd2FudCB0bzpcblx0ICpcblx0ICogLSBMZXQgdGhlIGhvdmVyIHNlcnZpY2UgaGFuZGxlIHNob3dpbmcgdGhlIGhvdmVyLlxuXHQgKiAtIFNob3cgdGhlIGhvdmVyIGFmdGVyIHRoZSBzdGFuZGFyZCBkZWxheS5cblx0ICogLSBXYW50IHRoZSBob3ZlciBwb3NpdGlvbmVkIGJlc2lkZSB0aGUge0BsaW5rIHRhcmdldH0gZWxlbWVudC5cblx0ICpcblx0ICogQHBhcmFtIHRhcmdldCBUaGUgdGFyZ2V0IGVsZW1lbnQgdG8gbGlzdGVuZXIgZm9yIG1vdXNlb3ZlciBldmVudHMgb24uXG5cdCAqIEBwYXJhbSBob3Zlck9wdGlvbnMgVGhlIG9wdGlvbnMgb2YgdGhlIGhvdmVyLlxuXHQgKiBAcGFyYW0gbGlmZWN5Y2xlT3B0aW9ucyBUaGUgb3B0aW9ucyBvZiB0aGUgaG92ZXIncyBsaWZlY3ljbGUuXG5cdCAqL1xuXHRzZXR1cERlbGF5ZWRIb3Zlcihcblx0XHR0YXJnZXQ6IEhUTUxFbGVtZW50LFxuXHRcdGhvdmVyT3B0aW9uczogKCgpID0+IElEZWxheWVkSG92ZXJPcHRpb25zKSB8IElEZWxheWVkSG92ZXJPcHRpb25zLFxuXHRcdGxpZmVjeWNsZU9wdGlvbnM/OiBJSG92ZXJMaWZlY3ljbGVPcHRpb25zLFxuXHQpOiBJRGlzcG9zYWJsZTtcblxuXHQvKipcblx0ICogQSBzaW1wbGUgd3JhcHBlciBhcm91bmQgc2hvd0RlbGF5ZWRIb3ZlciB0aGF0IGluY2x1ZGVzIGxpc3RlbmluZyB0byBldmVudHMgb24gdGhlXG5cdCAqIHtAbGluayB0YXJnZXR9IGVsZW1lbnQgdGhhdCBzaG93cyB0aGUgaG92ZXIuIFRoaXMgZGlmZmVycyBmcm9tIHtAbGluayBzZXR1cERlbGF5ZWRIb3Zlcn0gaW5cblx0ICogdGhhdCB0aGUgaG92ZXIgd2lsbCBiZSBzaG93biBhdCB0aGUgbW91c2UgcG9zaXRpb24gaW5zdGVhZCBvZiB0aGVcblx0ICoge0BsaW5rIHRhcmdldCB0YXJnZXR9IGVsZW1lbnQncyBwb3NpdGlvbiwgaWdub3JpbmcgYW55XG5cdCAqIHtAbGluayBJSG92ZXJPcHRpb25zLnBvc2l0aW9uIHBvc2l0aW9uIG9wdGlvbnN9IHRoYXQgYXJlIHBhc3NlZCBpbi5cblx0ICpcblx0ICogVXNlIHRoaXMgbWV0aG9kIHdoZW4geW91IHdhbnQgdG86XG5cdCAqXG5cdCAqIC0gTGV0IHRoZSBob3ZlciBzZXJ2aWNlIGhhbmRsZSBzaG93aW5nIHRoZSBob3Zlci5cblx0ICogLSBTaG93IHRoZSBob3ZlciBhZnRlciB0aGUgc3RhbmRhcmQgZGVsYXkuXG5cdCAqIC0gV2FudCB0aGUgaG92ZXIgcG9zaXRpb25lZCBiZXNpZGUgdGhlIG1vdXNlLlxuXHQgKlxuXHQgKiBAcGFyYW0gdGFyZ2V0IFRoZSB0YXJnZXQgZWxlbWVudCB0byBsaXN0ZW5lciBmb3IgbW91c2VvdmVyIGV2ZW50cyBvbi5cblx0ICogQHBhcmFtIGhvdmVyT3B0aW9ucyBUaGUgb3B0aW9ucyBvZiB0aGUgaG92ZXIuXG5cdCAqIEBwYXJhbSBsaWZlY3ljbGVPcHRpb25zIFRoZSBvcHRpb25zIG9mIHRoZSBob3ZlcidzIGxpZmVjeWNsZS5cblx0ICovXG5cdHNldHVwRGVsYXllZEhvdmVyQXRNb3VzZShcblx0XHR0YXJnZXQ6IEhUTUxFbGVtZW50LFxuXHRcdGhvdmVyT3B0aW9uczogKCgpID0+IElEZWxheWVkSG92ZXJBdE1vdXNlT3B0aW9ucykgfCBJRGVsYXllZEhvdmVyQXRNb3VzZU9wdGlvbnMsXG5cdFx0bGlmZWN5Y2xlT3B0aW9ucz86IElIb3ZlckxpZmVjeWNsZU9wdGlvbnMsXG5cdCk6IElEaXNwb3NhYmxlO1xuXG5cdC8qKlxuXHQgKiBTaG93cyBhIGhvdmVyIGltbWVkaWF0ZWx5LCBwcm92aWRlZCBhIGhvdmVyIHdpdGggdGhlIHNhbWUge0BsaW5rIG9wdGlvbnN9IG9iamVjdCBpcyBub3Rcblx0ICogYWxyZWFkeSB2aXNpYmxlLlxuXHQgKlxuXHQgKiBVc2UgdGhpcyBtZXRob2Qgd2hlbiB5b3Ugd2FudCB0bzpcblx0ICpcblx0ICogLSBDb250cm9sIHNob3dpbmcgdGhlIGhvdmVyIHlvdXJzZWxmLlxuXHQgKiAtIFNob3cgdGhlIGhvdmVyIGltbWVkaWF0ZWx5LlxuXHQgKlxuXHQgKiBAcGFyYW0gb3B0aW9ucyBBIHNldCBvZiBvcHRpb25zIGRlZmluaW5nIHRoZSBjaGFyYWN0ZXJpc3RpY3Mgb2YgdGhlIGhvdmVyLlxuXHQgKiBAcGFyYW0gZm9jdXMgV2hldGhlciB0byBmb2N1cyB0aGUgaG92ZXIgKHVzZWZ1bCBmb3Iga2V5Ym9hcmQgYWNjZXNzaWJpbGl0eSkuXG5cdCAqXG5cdCAqIEBleGFtcGxlIEEgc2ltcGxlIHVzYWdlIHdpdGggYSBzaW5nbGUgZWxlbWVudCB0YXJnZXQuXG5cdCAqXG5cdCAqIGBgYHR5cGVzY3JpcHRcblx0ICogc2hvd0luc3RhbnRIb3Zlcih7XG5cdCAqICAgdGV4dDogbmV3IE1hcmtkb3duU3RyaW5nKCdIZWxsbyB3b3JsZCcpLFxuXHQgKiAgIHRhcmdldDogc29tZUVsZW1lbnRcblx0ICogfSk7XG5cdCAqIGBgYFxuXHQgKi9cblx0c2hvd0luc3RhbnRIb3Zlcihcblx0XHRvcHRpb25zOiBJSG92ZXJPcHRpb25zLFxuXHRcdGZvY3VzPzogYm9vbGVhblxuXHQpOiBJSG92ZXJXaWRnZXQgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEhpZGVzIHRoZSBob3ZlciBpZiBpdCB3YXMgdmlzaWJsZS4gVGhpcyBjYWxsIHdpbGwgYmUgaWdub3JlZCBpZiB0aGUgaG92ZXIgaXMgY3VycmVudGx5XG5cdCAqIFwibG9ja2VkXCIgdmlhIHRoZSBhbHQvb3B0aW9uIGtleSB1bmxlc3MgYGZvcmNlYCBpcyBzZXQuXG5cdCAqL1xuXHRoaWRlSG92ZXIoZm9yY2U/OiBib29sZWFuKTogdm9pZDtcblxuXHQvKipcblx0ICogVGhpcyBzaG91bGQgb25seSBiZSB1c2VkIHVudGlsIHdlIGhhdmUgdGhlIGFiaWxpdHkgdG8gc2hvdyBtdWx0aXBsZSBjb250ZXh0IHZpZXdzXG5cdCAqIHNpbXVsdGFuZW91c2x5LiAjMTg4ODIyXG5cdCAqL1xuXHRzaG93QW5kRm9jdXNMYXN0SG92ZXIoKTogdm9pZDtcblxuXHQvKipcblx0ICogU2V0cyB1cCBhIG1hbmFnZWQgaG92ZXIgZm9yIHRoZSBnaXZlbiBlbGVtZW50LiBBIG1hbmFnZWQgaG92ZXIgd2lsbCBzZXQgdXAgbGlzdGVuZXJzIGZvclxuXHQgKiBtb3VzZSBldmVudHMsIHNob3cgdGhlIGhvdmVyIGFmdGVyIGEgZGVsYXkgYW5kIHByb3ZpZGUgaG9va3MgdG8gZWFzaWx5IHVwZGF0ZSB0aGUgY29udGVudC5cblx0ICpcblx0ICogVGhpcyBzaG91bGQgYmUgdXNlZCBvdmVyIHtAbGluayBzaG93SW5zdGFudEhvdmVyfSB3aGVuIGZpbmUtZ3JhaW5lZCBjb250cm9sIGlzIG5vdCBuZWVkZWQuIFRoZVxuXHQgKiBtYW5hZ2VkIGhvdmVyIGFsc28gZG9lcyBub3Qgc2NhbGUgd2VsbCwgY29uc2lkZXIgdXNpbmcge0BsaW5rIHNob3dJbnN0YW50SG92ZXJ9IHdoZW4gc2hvd2luZyBob3ZlcnNcblx0ICogZm9yIG1hbnkgZWxlbWVudHMuXG5cdCAqXG5cdCAqIEBwYXJhbSBob3ZlckRlbGVnYXRlIFRoZSBob3ZlciBkZWxlZ2F0ZSBjb250YWluaW5nIGhvb2tzIGFuZCBjb25maWd1cmF0aW9uIGZvciB0aGUgaG92ZXIuXG5cdCAqIEBwYXJhbSB0YXJnZXRFbGVtZW50IFRoZSB0YXJnZXQgZWxlbWVudCB0byBzaG93IHRoZSBob3ZlciBmb3IuXG5cdCAqIEBwYXJhbSBjb250ZW50IFRoZSBjb250ZW50IG9mIHRoZSBob3ZlciBvciBhIGZhY3RvcnkgdGhhdCBjcmVhdGVzIGl0IGF0IHRoZSB0aW1lIGl0J3Mgc2hvd24uXG5cdCAqIEBwYXJhbSBvcHRpb25zIEFkZGl0aW9uYWwgb3B0aW9ucyBmb3IgdGhlIG1hbmFnZWQgaG92ZXIuXG5cdCAqXG5cdCAqIEBkZXByZWNhdGVkIFVzZSB7QGxpbmsgc2V0dXBEZWxheWVkSG92ZXJ9IG9yIHtAbGluayBzZXR1cERlbGF5ZWRIb3ZlckF0TW91c2V9IGluc3RlYWQgd2hlcmVcblx0ICogcG9zc2libGUuXG5cdCAqL1xuXHRzZXR1cE1hbmFnZWRIb3Zlcihob3ZlckRlbGVnYXRlOiBJSG92ZXJEZWxlZ2F0ZSwgdGFyZ2V0RWxlbWVudDogSFRNTEVsZW1lbnQsIGNvbnRlbnQ6IElNYW5hZ2VkSG92ZXJDb250ZW50T3JGYWN0b3J5LCBvcHRpb25zPzogSU1hbmFnZWRIb3Zlck9wdGlvbnMpOiBJTWFuYWdlZEhvdmVyO1xuXG5cdC8qKlxuXHQgKiBTaG93cyB0aGUgaG92ZXIgZm9yIHRoZSBnaXZlbiBlbGVtZW50IGlmIG9uZSBoYXMgYmVlbiBzZXR1cC5cblx0ICpcblx0ICogQHBhcmFtIHRhcmdldEVsZW1lbnQgVGhlIHRhcmdldCBlbGVtZW50IG9mIHRoZSBob3ZlciwgYXMgc2V0IHVwIGluIHtAbGluayBzZXR1cE1hbmFnZWRIb3Zlcn0uXG5cdCAqXG5cdCAqIEBkZXByZWNhdGVkIFVzZSB7QGxpbmsgc2V0dXBEZWxheWVkSG92ZXJ9IG9yIHtAbGluayBzZXR1cERlbGF5ZWRIb3ZlckF0TW91c2V9IGluc3RlYWQgd2hlcmVcblx0ICogcG9zc2libGUuXG5cdCAqL1xuXHRzaG93TWFuYWdlZEhvdmVyKHRhcmdldEVsZW1lbnQ6IEhUTUxFbGVtZW50KTogdm9pZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJSG92ZXJXaWRnZXQgZXh0ZW5kcyBJRGlzcG9zYWJsZSB7XG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRoZSBob3ZlciB3aWRnZXQgaGFzIGJlZW4gZGlzcG9zZWQuXG5cdCAqL1xuXHRyZWFkb25seSBpc0Rpc3Bvc2VkOiBib29sZWFuO1xufVxuXG5leHBvcnQgY29uc3QgZW51bSBIb3ZlclN0eWxlIHtcblx0LyoqXG5cdCAqIFRoZSBob3ZlciBpcyBhbmNob3JlZCBiZWxvdyB0aGUgZWxlbWVudCB3aXRoIGEgcG9pbnRlciBhYm92ZSBpdCBwb2ludGluZyBhdCB0aGUgdGFyZ2V0LlxuXHQgKi9cblx0UG9pbnRlciA9IDEsXG5cdC8qKlxuXHQgKiBUaGUgaG92ZXIgaXMgYW5jaG9yZWQgdG8gdGhlIGJvdHRvbSByaWdodCBvZiB0aGUgY3Vyc29yJ3MgbG9jYXRpb24uXG5cdCAqL1xuXHRNb3VzZSA9IDIsXG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUhvdmVyT3B0aW9ucyB7XG5cdC8qKlxuXHQgKiBUaGUgY29udGVudCB0byBkaXNwbGF5IGluIHRoZSBwcmltYXJ5IHNlY3Rpb24gb2YgdGhlIGhvdmVyLiBUaGUgdHlwZSBvZiB0ZXh0IGRldGVybWluZXMgdGhlXG5cdCAqIGRlZmF1bHQgYGhpZGVPbkhvdmVyYCBiZWhhdmlvci5cblx0ICovXG5cdGNvbnRlbnQ6IElNYXJrZG93blN0cmluZyB8IHN0cmluZyB8IEhUTUxFbGVtZW50O1xuXG5cdC8qKlxuXHQgKiBUaGUgdGFyZ2V0IGZvciB0aGUgaG92ZXIuIFRoaXMgZGV0ZXJtaW5lcyB0aGUgcG9zaXRpb24gb2YgdGhlIGhvdmVyIGFuZCBpdCB3aWxsIG9ubHkgYmVcblx0ICogaGlkZGVuIHdoZW4gdGhlIG1vdXNlIGxlYXZlcyBib3RoIHRoZSBob3ZlciBhbmQgdGhlIHRhcmdldC4gQSBIVE1MRWxlbWVudCBjYW4gYmUgdXNlZCBmb3Jcblx0ICogc2ltcGxlIGNhc2VzIGFuZCBhIElIb3ZlclRhcmdldCBmb3IgbW9yZSBjb21wbGV4IGNhc2VzIHdoZXJlIG11bHRpcGxlIGVsZW1lbnRzIGFuZC9vciBhXG5cdCAqIGRpc3Bvc2UgbWV0aG9kIGlzIHJlcXVpcmVkLlxuXHQgKi9cblx0dGFyZ2V0OiBJSG92ZXJUYXJnZXQgfCBIVE1MRWxlbWVudDtcblxuXHQvKlxuXHQgKiBUaGUgY29udGFpbmVyIHRvIHBhc3MgdG8ge0BsaW5rIElDb250ZXh0Vmlld1Byb3ZpZGVyLnNob3dDb250ZXh0Vmlld30gd2hpY2ggcmVuZGVycyB0aGUgaG92ZXJcblx0ICogaW4uIFRoaXMgaXMgcGFydGljdWxhcmx5IHVzZWZ1bCBmb3IgbW9yZSBuYXR1cmFsIHRhYiBmb2N1c2luZyBiZWhhdmlvciwgd2hlcmUgdGhlIGhvdmVyIGlzXG5cdCAqIGNyZWF0ZWQgYXMgdGhlIG5leHQgdGFiIGluZGV4IGFmdGVyIHRoZSBlbGVtZW50IGJlaW5nIGhvdmVyZWQgYW5kL29yIHRvIHdvcmthcm91bmQgdGhlXG5cdCAqIGVsZW1lbnQncyBjb250YWluZXIgaGlkaW5nIG9uIGBmb2N1c291dGAuXG5cdCAqL1xuXHRjb250YWluZXI/OiBIVE1MRWxlbWVudDtcblxuXHQvKipcblx0ICogQW4gSUQgdG8gYXNzb2NpYXRlIHdpdGggdGhlIGhvdmVyIHRvIGJlIHVzZWQgYXMgYW4gZXF1YWxpdHkgY2hlY2suIE5vcm1hbGx5IHdoZW4gY2FsbGluZ1xuXHQgKiB7QGxpbmsgSUhvdmVyU2VydmljZS5zaG93SG92ZXJ9IHRoZSBvcHRpb25zIG9iamVjdCBpdHNlbGYgaXMgdXNlZCB0byBkZXRlcm1pbmUgaWYgdGhlIGhvdmVyXG5cdCAqIGlzIHRoZSBzYW1lIG9uZSB0aGF0IGlzIGFscmVhZHkgc2hvd2luZywgd2hlbiB0aGlzIGlzIHNldCwgdGhlIElEIHdpbGwgYmUgdXNlZCBpbnN0ZWFkLlxuXHQgKlxuXHQgKiBXaGVuIGB1bmRlZmluZWRgLCB0aGlzIHdpbGwgZGVmYXVsdCB0byBhIHNlcmlhbGl6ZWQgdmVyc2lvbiBvZiB7QGxpbmsgY29udGVudH0uIEluIHRoaXMgY2FzZVxuXHQgKiBpdCB3aWxsIHJlbWFpbiBgdW5kZWZpbmVkYCBpZiB7QGxpbmsgY29udGVudH0gaXMgYSBgSFRNTEVsZW1lbnRgLlxuXHQgKi9cblx0aWQ/OiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIEEgc2V0IG9mIGFjdGlvbnMgZm9yIHRoZSBob3ZlcidzIFwic3RhdHVzIGJhclwiLlxuXHQgKi9cblx0YWN0aW9ucz86IElIb3ZlckFjdGlvbltdO1xuXG5cdC8qKlxuXHQgKiBBbiBvcHRpb25hbCBhcnJheSBvZiBjbGFzc2VzIHRvIGFkZCB0byB0aGUgaG92ZXIgZWxlbWVudC5cblx0ICovXG5cdGFkZGl0aW9uYWxDbGFzc2VzPzogc3RyaW5nW107XG5cblx0LyoqXG5cdCAqIEFuIG9wdGlvbmFsIGxpbmsgaGFuZGxlciBmb3IgbWFya2Rvd24gbGlua3MsIGlmIHRoaXMgaXMgbm90IHByb3ZpZGVkIHRoZSBJT3BlbmVyU2VydmljZSB3aWxsXG5cdCAqIGJlIHVzZWQgdG8gb3BlbiB0aGUgbGlua3MgdXNpbmcgaXRzIGRlZmF1bHQgb3B0aW9ucy5cblx0ICovXG5cdGxpbmtIYW5kbGVyPyh1cmw6IHN0cmluZyk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIFdoZXRoZXIgdG8gdHJhcCBmb2N1cyBpbiB0aGUgZm9sbG93aW5nIHdheXM6XG5cdCAqIC0gV2hlbiB0aGUgaG92ZXIgY2xvc2VzLCBmb2N1cyBnb2VzIHRvIHRoZSBlbGVtZW50IHRoYXQgaGFkIGZvY3VzIGJlZm9yZSB0aGUgaG92ZXIgb3BlbmVkXG5cdCAqIC0gSWYgdGhlcmUgYXJlIGVsZW1lbnRzIGluIHRoZSBob3ZlciB0byBmb2N1cywgZm9jdXMgc3RheXMgaW5zaWRlIG9mIHRoZSBob3ZlciB3aGVuIHRhYmJpbmdcblx0ICogTm90ZSB0aGF0IHRoaXMgaXMgb3ZlcnJpZGRlbiB0byB0cnVlIHdoZW4gaW4gc2NyZWVuIHJlYWRlciBvcHRpbWl6ZWQgbW9kZS5cblx0ICovXG5cdHRyYXBGb2N1cz86IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIFRoZSBzdHlsZSBvZiB0aGUgaG92ZXIsIHRoaXMgc2V0cyBkZWZhdWx0IHZhbHVlcyBvZiB7QGxpbmsgcG9zaXRpb259IGFuZCB7QGxpbmsgYXBwZWFyYW5jZX06XG5cdCAqL1xuXHRzdHlsZT86IEhvdmVyU3R5bGU7XG5cblx0LyoqXG5cdCAqIE9wdGlvbnMgdGhhdCBkZWZpbmVzIHdoZXJlIHRoZSBob3ZlciBpcyBwb3NpdGlvbmVkLlxuXHQgKi9cblx0cG9zaXRpb24/OiBJSG92ZXJQb3NpdGlvbk9wdGlvbnM7XG5cblx0LyoqXG5cdCAqIE9wdGlvbnMgdGhhdCBkZWZpbmVzIGhvdyBsb25nIHRoZSBob3ZlciBpcyBzaG93biBhbmQgd2hlbiBpdCBoaWRlcy5cblx0ICovXG5cdHBlcnNpc3RlbmNlPzogSUhvdmVyUGVyc2lzdGVuY2VPcHRpb25zO1xuXG5cdC8qKlxuXHQgKiBPcHRpb25zIHRoYXQgZGVmaW5lIGhvdyB0aGUgaG92ZXIgbG9va3MuXG5cdCAqL1xuXHRhcHBlYXJhbmNlPzogSUhvdmVyQXBwZWFyYW5jZU9wdGlvbnM7XG59XG5cbi8vIGB0YXJnZXRgIGlzIGlnbm9yZWQgZm9yIGRlbGF5ZWQgaG92ZXIgbWV0aG9kcyBhcyBpdCdzIGluY2x1ZGVkIGluIHRoZSBtZXRob2QgYW5kIGFkZGVkXG4vLyBhdXRvbWF0aWNhbGx5IHdoZW4gdGhlIGhvdmVyIG9wdGlvbnMgZ2V0IHJlc29sdmVkLlxuZXhwb3J0IHR5cGUgSURlbGF5ZWRIb3Zlck9wdGlvbnMgPSBPbWl0PElIb3Zlck9wdGlvbnMsICd0YXJnZXQnPjtcblxuLy8gYHBvc2l0aW9uYCBpcyBpZ25vcmVkIGZvciBkZWxheWVkIGF0IG1vdXNlIGhvdmVyIG1ldGhvZHMgYXMgaXQncyBvdmVyd3JpdHRlbiBieSB0aGUgbW91c2UgZXZlbnQuXG4vLyBgc2hvd1BvaW50ZXJgIGlzIGFsd2F5cyBmYWxzZSB3aGVuIHVzaW5nIG1vdXNlIHBvc2l0aW9uaW5nXG5leHBvcnQgdHlwZSBJRGVsYXllZEhvdmVyQXRNb3VzZU9wdGlvbnMgPSBPbWl0PElEZWxheWVkSG92ZXJPcHRpb25zLCAncG9zaXRpb24nIHwgJ2FwcGVhcmFuY2UnPiAmIHsgYXBwZWFyYW5jZT86IE9taXQ8SUhvdmVyQXBwZWFyYW5jZU9wdGlvbnMsICdzaG93UG9pbnRlcic+IH07XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUhvdmVyTGlmZWN5Y2xlT3B0aW9ucyB7XG5cdC8qKlxuXHQgKiBUaGUgZ3JvdXAgSUQgb2YgdGhlIGhvdmVyLiBJZiB0aGUgZ3JvdXAgSUQgaXMgdGhlIHNhbWUgYXMgdGhlIGN1cnJlbnRseSBzaG93biBob3ZlciwgdGhlXG5cdCAqIGhvdmVyIHdpbGwgYmUgc2hvd24gaW1tZWRpYXRlbHksIHNraXBwaW5nIHRoZSBkZWxheS5cblx0ICpcblx0ICogQGV4YW1wbGUgVXNlIGEgVVVJRCB0byBzZXQgYSB1bmlxdWUgYGdyb3VwSWRgIGZvciByZWxhdGVkIGhvdmVyc1xuXHQgKlxuXHQgKiBgYGB0eXBlc2NyaXB0XG5cdCAqIGNvbnN0IGdyb3VwSWQgPSBnZW5lcmF0ZVV1aWQoKTtcblx0ICogc2hvd0RlbGF5ZWRIb3Zlcih7IGNvbnRlbnQ6ICdCdXR0b24gMScsIHRhcmdldDogc29tZUVsZW1lbnQxIH0sIHsgZ3JvdXBJZCB9KTtcblx0ICogc2hvd0RlbGF5ZWRIb3Zlcih7IGNvbnRlbnQ6ICdCdXR0b24gMicsIHRhcmdldDogc29tZUVsZW1lbnQyIH0sIHsgZ3JvdXBJZCB9KTtcblx0ICogYGBgXG5cdCAqXG5cdCAqIEBleGFtcGxlIFVzZSBhIGZlYXR1cmUtc3BlY2lmaWMgc3RyaW5nIHRvIHNldCBhIHVucWl1ZSBgZ3JvdXBJZGAgZm9yIHJlbGF0ZWQgaG92ZXJzXG5cdCAqXG5cdCAqIGBgYHR5cGVzY3JpcHRcblx0ICogc2hvd0RlbGF5ZWRIb3Zlcih7IGNvbnRlbnQ6ICdCdXR0b24gMScsIHRhcmdldDogc29tZUVsZW1lbnQxIH0sIHsgZ3JvdXBJZDogJ215LWZlYXR1cmUtaXRlbXMnIH0pO1xuXHQgKiBzaG93RGVsYXllZEhvdmVyKHsgY29udGVudDogJ0J1dHRvbiAyJywgdGFyZ2V0OiBzb21lRWxlbWVudDIgfSwgeyBncm91cElkOiAnbXktZmVhdHVyZS1pdGVtcycgfSk7XG5cdCAqIGBgYFxuXHQgKi9cblx0Z3JvdXBJZD86IHN0cmluZztcblxuXHQvKipcblx0ICogV2hldGhlciB0byBzZXQgdXAgc3BhY2UgYW5kIGVudGVyIGtleWJvYXJkIGV2ZW50cyBmb3IgdGhlIGhvdmVyLCB3aGVuIHRoZXNlIGFyZSBwcmVzc2VkIHdoZW5cblx0ICogdGhlIGhvdmVyJ3MgdGFyZ2V0IGlzIGZvY3VzZWQgaXQgd2lsbCBzaG93IGFuZCBmb2N1cyB0aGUgaG92ZXIuXG5cdCAqXG5cdCAqIFR5cGljYWxseSB0aGlzIHNob3VsZCBfbm90XyBiZSB1c2VkIHdoZW4gdGhlIHNwYWNlIG9yIGVudGVyIGV2ZW50cyBhcmUgYWxyZWFkeSBoYW5kbGVkIGJ5XG5cdCAqIHNvbWV0aGluZyBlbHNlLlxuXHQgKi9cblx0c2V0dXBLZXlib2FyZEV2ZW50cz86IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUhvdmVyUG9zaXRpb25PcHRpb25zIHtcblx0LyoqXG5cdCAqIFBvc2l0aW9uIG9mIHRoZSBob3Zlci4gVGhlIGRlZmF1bHQgaXMgdG8gc2hvdyBhYm92ZSB0aGUgdGFyZ2V0LiBUaGlzIG9wdGlvbiB3aWxsIGJlIGlnbm9yZWRcblx0ICogaWYgdGhlcmUgaXMgbm90IGVub3VnaCByb29tIHRvIGxheW91dCB0aGUgaG92ZXIgaW4gdGhlIHNwZWNpZmllZCBwb3NpdGlvbiwgdW5sZXNzIHRoZVxuXHQgKiBmb3JjZVBvc2l0aW9uIG9wdGlvbiBpcyBzZXQuXG5cdCAqL1xuXHRob3ZlclBvc2l0aW9uPzogSG92ZXJQb3NpdGlvbiB8IE1vdXNlRXZlbnQ7XG5cblx0LyoqXG5cdCAqIEZvcmNlIHRoZSBob3ZlciBwb3NpdGlvbiwgcmVkdWNpbmcgdGhlIHNpemUgb2YgdGhlIGhvdmVyIGluc3RlYWQgb2YgYWRqdXN0aW5nIHRoZSBob3ZlclxuXHQgKiBwb3NpdGlvbi5cblx0ICovXG5cdGZvcmNlUG9zaXRpb24/OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElIb3ZlclBlcnNpc3RlbmNlT3B0aW9ucyB7XG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRvIGhpZGUgdGhlIGhvdmVyIHdoZW4gdGhlIG1vdXNlIGxlYXZlcyB0aGUgYHRhcmdldGAgYW5kIGVudGVycyB0aGUgYWN0dWFsIGhvdmVyLlxuXHQgKiBUaGlzIGlzIGZhbHNlIGJ5IGRlZmF1bHQgd2hlbiB0ZXh0IGlzIGFuIGBJTWFya2Rvd25TdHJpbmdgIGFuZCB0cnVlIHdoZW4gYHRleHRgIGlzIGFcblx0ICogYHN0cmluZ2AuIE5vdGUgdGhhdCB0aGlzIHdpbGwgYmUgaWdub3JlZCBpZiBhbnkgYGFjdGlvbnNgIGFyZSBwcm92aWRlZCBhcyBob3ZlcmluZyBpc1xuXHQgKiByZXF1aXJlZCB0byBtYWtlIHRoZW0gYWNjZXNzaWJsZS5cblx0ICpcblx0ICogSW4gZ2VuZXJhbCBoaWRpbmcgb24gaG92ZXIgaXMgZGVzaXJlZCBmb3I6XG5cdCAqIC0gUmVndWxhciB0ZXh0IHdoZXJlIHNlbGVjdGlvbiBpcyBub3QgaW1wb3J0YW50XG5cdCAqIC0gTWFya2Rvd24gdGhhdCBjb250YWlucyBubyBsaW5rcyB3aGVyZSBzZWxlY3Rpb24gaXMgbm90IGltcG9ydGFudFxuXHQgKi9cblx0aGlkZU9uSG92ZXI/OiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRvIGhpZGUgdGhlIGhvdmVyIHdoZW4gYSBrZXkgaXMgcHJlc3NlZC5cblx0ICovXG5cdGhpZGVPbktleURvd24/OiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRvIG1ha2UgdGhlIGhvdmVyIHN0aWNreSwgdGhpcyBtZWFucyBpdCB3aWxsIG5vdCBiZSBoaWRkZW4gd2hlbiB0aGUgbW91c2UgbGVhdmVzIHRoZVxuXHQgKiBob3Zlci5cblx0ICovXG5cdHN0aWNreT86IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUhvdmVyQXBwZWFyYW5jZU9wdGlvbnMge1xuXHQvKipcblx0ICogV2hldGhlciB0byBzaG93IHRoZSBob3ZlciBwb2ludGVyLCBhIGxpdHRsZSBhcnJvdyB0aGF0IGNvbm5lY3RzIHRoZSB0YXJnZXQgYW5kIHRoZSBob3Zlci5cblx0ICovXG5cdHNob3dQb2ludGVyPzogYm9vbGVhbjtcblxuXHQvKipcblx0ICogV2hldGhlciB0byBzaG93IGEgY29tcGFjdCBob3ZlciwgcmVkdWNpbmcgdGhlIGZvbnQgc2l6ZSBhbmQgcGFkZGluZyBvZiB0aGUgaG92ZXIuXG5cdCAqL1xuXHRjb21wYWN0PzogYm9vbGVhbjtcblxuXHQvKipcblx0ICogV2hlbiB7QGxpbmsgaGlkZU9uSG92ZXJ9IGlzIGV4cGxpY2l0bHkgdHJ1ZSBvciB1bmRlZmluZWQgYW5kIGl0cyBhdXRvIHZhbHVlIGlzIGRldGVjdGVkIHRvXG5cdCAqIGhpZGUsIHNob3cgYSBoaW50IGF0IHRoZSBib3R0b20gb2YgdGhlIGhvdmVyIGV4cGxhaW5pbmcgaG93IHRvIG1vdXNlIG92ZXIgdGhlIHdpZGdldC4gVGhpc1xuXHQgKiBzaG91bGQgYmUgdXNlZCBpbiB0aGUgY2FzZXMgd2hlcmUgZGVzcGl0ZSB0aGUgaG92ZXIgaGF2aW5nIG5vIGludGVyYWN0aXZlIGNvbnRlbnQsIGl0J3Ncblx0ICogbGlrZWx5IHRoZSB1c2VyIG1heSB3YW50IHRvIGludGVyYWN0IHdpdGggaXQgc29tZWhvdy5cblx0ICovXG5cdHNob3dIb3ZlckhpbnQ/OiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRvIHNraXAgdGhlIGZhZGUgaW4gYW5pbWF0aW9uLCB0aGlzIHNob3VsZCBiZSB1c2VkIHdoZW4gaG92ZXJpbmcgZnJvbSBvbmUgaG92ZXIgdG9cblx0ICogYW5vdGhlciBpbiB0aGUgc2FtZSBncm91cCBzbyBpdCBsb29rcyBsaWtlIHRoZSBob3ZlciBpcyBtb3ZpbmcgZnJvbSBvbmUgZWxlbWVudCB0byB0aGUgb3RoZXIuXG5cdCAqL1xuXHRza2lwRmFkZUluQW5pbWF0aW9uPzogYm9vbGVhbjtcblxuXHQvKipcblx0ICogVGhlIG1heCBoZWlnaHQgb2YgdGhlIGhvdmVyIHJlbGF0aXZlIHRvIHRoZSB3aW5kb3cgaGVpZ2h0LlxuXHQgKiBBY2NlcHRlZCB2YWx1ZXM6ICgwLDFdXG5cdCAqIERlZmF1bHQ6IDAuNVxuXHQgKi9cblx0bWF4SGVpZ2h0UmF0aW8/OiBudW1iZXI7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUhvdmVyQWN0aW9uIHtcblx0LyoqXG5cdCAqIFRoZSBsYWJlbCB0byB1c2UgaW4gdGhlIGhvdmVyJ3Mgc3RhdHVzIGJhci5cblx0ICovXG5cdGxhYmVsOiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIFRoZSBjb21tYW5kIElEIG9mIHRoZSBhY3Rpb24sIHRoaXMgaXMgdXNlZCB0byByZXNvbHZlIHRoZSBrZXliaW5kaW5nIHRvIGRpc3BsYXkgYWZ0ZXIgdGhlXG5cdCAqIGFjdGlvbiBsYWJlbC5cblx0ICovXG5cdGNvbW1hbmRJZDogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBBbiBvcHRpb25hbCBjbGFzcyBvZiBhbiBpY29uIHRoYXQgd2lsbCBiZSBkaXNwbGF5ZWQgYmVmb3JlIHRoZSBsYWJlbC5cblx0ICovXG5cdGljb25DbGFzcz86IHN0cmluZztcblxuXHQvKipcblx0ICogVGhlIGNhbGxiYWNrIHRvIHJ1biB0aGUgYWN0aW9uLlxuXHQgKiBAcGFyYW0gdGFyZ2V0IFRoZSBhY3Rpb24gZWxlbWVudCB0aGF0IHdhcyBhY3RpdmF0ZWQuXG5cdCAqL1xuXHRydW4odGFyZ2V0OiBIVE1MRWxlbWVudCk6IHZvaWQ7XG59XG5cbi8qKlxuICogQSB0YXJnZXQgZm9yIGEgaG92ZXIuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUhvdmVyVGFyZ2V0IGV4dGVuZHMgUGFydGlhbDxJRGlzcG9zYWJsZT4ge1xuXHQvKipcblx0ICogQSBzZXQgb2YgdGFyZ2V0IGVsZW1lbnRzIHVzZWQgdG8gcG9zaXRpb24gdGhlIGhvdmVyLiBJZiBtdWx0aXBsZSBlbGVtZW50cyBhcmUgdXNlZCB0aGUgaG92ZXJcblx0ICogd2lsbCB0cnkgdG8gbm90IG92ZXJsYXAgYW55IHRhcmdldCBlbGVtZW50LiBBbiBleGFtcGxlIHVzZSBjYXNlIGZvciB0aGlzIGlzIHNob3cgYSBob3ZlciBmb3Jcblx0ICogd3JhcHBlZCB0ZXh0LlxuXHQgKi9cblx0cmVhZG9ubHkgdGFyZ2V0RWxlbWVudHM6IHJlYWRvbmx5IEhUTUxFbGVtZW50W107XG5cblx0LyoqXG5cdCAqIEFuIG9wdGlvbmFsIGFic29sdXRlIHggY29vcmRpbmF0ZSB0byBwb3NpdGlvbiB0aGUgaG92ZXIgd2l0aCwgZm9yIGV4YW1wbGUgdG8gcG9zaXRpb24gdGhlXG5cdCAqIGhvdmVyIHVzaW5nIGBNb3VzZUV2ZW50LnBhZ2VYYC5cblx0ICovXG5cdHJlYWRvbmx5IHg/OiBudW1iZXI7XG5cblx0LyoqXG5cdCAqIEFuIG9wdGlvbmFsIGFic29sdXRlIHkgY29vcmRpbmF0ZSB0byBwb3NpdGlvbiB0aGUgaG92ZXIgd2l0aCwgZm9yIGV4YW1wbGUgdG8gcG9zaXRpb24gdGhlXG5cdCAqIGhvdmVyIHVzaW5nIGBNb3VzZUV2ZW50LnBhZ2VZYC5cblx0ICovXG5cdHJlYWRvbmx5IHk/OiBudW1iZXI7XG59XG5cbi8vICNyZWdpb24gTWFuYWdlZCBob3ZlclxuXG5leHBvcnQgaW50ZXJmYWNlIElNYW5hZ2VkSG92ZXJUb29sdGlwTWFya2Rvd25TdHJpbmcge1xuXHRtYXJrZG93bjogSU1hcmtkb3duU3RyaW5nIHwgc3RyaW5nIHwgdW5kZWZpbmVkIHwgKCh0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pID0+IFByb21pc2U8SU1hcmtkb3duU3RyaW5nIHwgc3RyaW5nIHwgdW5kZWZpbmVkPik7XG5cdG1hcmtkb3duTm90U3VwcG9ydGVkRmFsbGJhY2s6IHN0cmluZyB8IHVuZGVmaW5lZDtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGlzTWFuYWdlZEhvdmVyVG9vbHRpcE1hcmtkb3duU3RyaW5nKG9iajogdW5rbm93bik6IG9iaiBpcyBJTWFuYWdlZEhvdmVyVG9vbHRpcE1hcmtkb3duU3RyaW5nIHtcblx0Y29uc3QgY2FuZGlkYXRlID0gb2JqIGFzIElNYW5hZ2VkSG92ZXJUb29sdGlwTWFya2Rvd25TdHJpbmc7XG5cdHJldHVybiB0eXBlb2YgY2FuZGlkYXRlID09PSAnb2JqZWN0JyAmJiAnbWFya2Rvd24nIGluIGNhbmRpZGF0ZSAmJiAnbWFya2Rvd25Ob3RTdXBwb3J0ZWRGYWxsYmFjaycgaW4gY2FuZGlkYXRlO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElNYW5hZ2VkSG92ZXJUb29sdGlwSFRNTEVsZW1lbnQge1xuXHRlbGVtZW50OiAodG9rZW46IENhbmNlbGxhdGlvblRva2VuKSA9PiBIVE1MRWxlbWVudCB8IFByb21pc2U8SFRNTEVsZW1lbnQ+O1xufVxuXG5leHBvcnQgZnVuY3Rpb24gaXNNYW5hZ2VkSG92ZXJUb29sdGlwSFRNTEVsZW1lbnQob2JqOiB1bmtub3duKTogb2JqIGlzIElNYW5hZ2VkSG92ZXJUb29sdGlwSFRNTEVsZW1lbnQge1xuXHRjb25zdCBjYW5kaWRhdGUgPSBvYmogYXMgSU1hbmFnZWRIb3ZlclRvb2x0aXBIVE1MRWxlbWVudDtcblx0cmV0dXJuIHR5cGVvZiBjYW5kaWRhdGUgPT09ICdvYmplY3QnICYmICdlbGVtZW50JyBpbiBjYW5kaWRhdGU7XG59XG5cbmV4cG9ydCB0eXBlIElNYW5hZ2VkSG92ZXJDb250ZW50ID0gc3RyaW5nIHwgSU1hbmFnZWRIb3ZlclRvb2x0aXBNYXJrZG93blN0cmluZyB8IElNYW5hZ2VkSG92ZXJUb29sdGlwSFRNTEVsZW1lbnQgfCBIVE1MRWxlbWVudCB8IHVuZGVmaW5lZDtcbmV4cG9ydCB0eXBlIElNYW5hZ2VkSG92ZXJDb250ZW50T3JGYWN0b3J5ID0gSU1hbmFnZWRIb3ZlckNvbnRlbnQgfCAoKCkgPT4gSU1hbmFnZWRIb3ZlckNvbnRlbnQpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElNYW5hZ2VkSG92ZXJPcHRpb25zIGV4dGVuZHMgUGljazxJSG92ZXJPcHRpb25zLCAnYWN0aW9ucycgfCAnbGlua0hhbmRsZXInIHwgJ3RyYXBGb2N1cyc+IHtcblx0YXBwZWFyYW5jZT86IFBpY2s8SUhvdmVyQXBwZWFyYW5jZU9wdGlvbnMsICdzaG93SG92ZXJIaW50Jz47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU1hbmFnZWRIb3ZlciBleHRlbmRzIElEaXNwb3NhYmxlIHtcblx0LyoqXG5cdCAqIEFsbG93cyB0byBwcm9ncmFtbWF0aWNhbGx5IG9wZW4gdGhlIGhvdmVyLlxuXHQgKi9cblx0c2hvdyhmb2N1cz86IGJvb2xlYW4pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBBbGxvd3MgdG8gcHJvZ3JhbW1hdGljYWxseSBoaWRlIHRoZSBob3Zlci5cblx0ICovXG5cdGhpZGUoKTogdm9pZDtcblxuXHQvKipcblx0ICogVXBkYXRlcyB0aGUgY29udGVudHMgb2YgdGhlIGhvdmVyLlxuXHQgKi9cblx0dXBkYXRlKHRvb2x0aXA6IElNYW5hZ2VkSG92ZXJDb250ZW50LCBvcHRpb25zPzogSU1hbmFnZWRIb3Zlck9wdGlvbnMpOiB2b2lkO1xufVxuXG4vLyAjZW5kcmVnaW9uIE1hbmFnZWQgaG92ZXJcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUF1WkEsT0FBTSxTQUFVQSxtQ0FBbUNBLENBQUNDLEdBQVk7RUFBQTtFQUFBQyxjQUFBLEdBQUFDLENBQUE7RUFDL0QsTUFBTUMsU0FBUztFQUFBO0VBQUEsQ0FBQUYsY0FBQSxHQUFBRyxDQUFBLE9BQUdKLEdBQXlDO0VBQUM7RUFBQUMsY0FBQSxHQUFBRyxDQUFBO0VBQzVELE9BQU8sMkJBQUFILGNBQUEsR0FBQUksQ0FBQSxpQkFBT0YsU0FBUyxLQUFLLFFBQVE7RUFBQTtFQUFBLENBQUFGLGNBQUEsR0FBQUksQ0FBQSxVQUFJLFVBQVUsSUFBSUYsU0FBUztFQUFBO0VBQUEsQ0FBQUYsY0FBQSxHQUFBSSxDQUFBLFVBQUksOEJBQThCLElBQUlGLFNBQVM7QUFDL0c7QUFNQSxPQUFNLFNBQVVHLGdDQUFnQ0EsQ0FBQ04sR0FBWTtFQUFBO0VBQUFDLGNBQUEsR0FBQUMsQ0FBQTtFQUM1RCxNQUFNQyxTQUFTO0VBQUE7RUFBQSxDQUFBRixjQUFBLEdBQUFHLENBQUEsT0FBR0osR0FBc0M7RUFBQztFQUFBQyxjQUFBLEdBQUFHLENBQUE7RUFDekQsT0FBTywyQkFBQUgsY0FBQSxHQUFBSSxDQUFBLGlCQUFPRixTQUFTLEtBQUssUUFBUTtFQUFBO0VBQUEsQ0FBQUYsY0FBQSxHQUFBSSxDQUFBLFVBQUksU0FBUyxJQUFJRixTQUFTO0FBQy9EO0FBMEJBIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,235 @@
+889377a20bdefc99c7a22142cb43e84e
+/* istanbul ignore next */
+function cov_2i6tcviemm() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/core/text/getPositionOffsetTransformerFromTextModel.ts";
+  var hash = "84ea5e40b5078e11771f734dc499c691e4c10a18";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/core/text/getPositionOffsetTransformerFromTextModel.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 4
+        },
+        end: {
+          line: 7,
+          column: 65
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 16
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 37
+        }
+      },
+      "3": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 53
+        }
+      },
+      "4": {
+        start: {
+          line: 19,
+          column: 8
+        },
+        end: {
+          line: 19,
+          column: 53
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "getPositionOffsetTransformerFromTextModel",
+        decl: {
+          start: {
+            line: 6,
+            column: 16
+          },
+          end: {
+            line: 6,
+            column: 57
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 69
+          },
+          end: {
+            line: 8,
+            column: 1
+          }
+        },
+        line: 6
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 28
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 15,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 24
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 15
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 18,
+            column: 4
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 18,
+            column: 24
+          },
+          end: {
+            line: 20,
+            column: 5
+          }
+        },
+        line: 18
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/core/text/getPositionOffsetTransformerFromTextModel.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,6BAA6B,EAAE,MAAM,uBAAuB,CAAC;AAEtE,MAAM,UAAU,yCAAyC,CAAC,SAAqB;IAC9E,OAAO,IAAI,sCAAsC,CAAC,SAAS,CAAC,CAAC;AAC9D,CAAC;AAED,MAAM,sCAAuC,SAAQ,6BAA6B;IACpD;IAA7B,YAA6B,UAAsB;QAClD,KAAK,EAAE,CAAC;QADoB,eAAU,GAAV,UAAU,CAAY;IAEnD,CAAC;IAEQ,SAAS,CAAC,QAAkB;QACpC,OAAO,IAAI,CAAC,UAAU,CAAC,WAAW,CAAC,QAAQ,CAAC,CAAC;IAC9C,CAAC;IAEQ,WAAW,CAAC,MAAc;QAClC,OAAO,IAAI,CAAC,UAAU,CAAC,aAAa,CAAC,MAAM,CAAC,CAAC;IAC9C,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/core/text/getPositionOffsetTransformerFromTextModel.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ITextModel } from '../../model.js';\nimport { Position } from '../position.js';\nimport { PositionOffsetTransformerBase } from './positionToOffset.js';\n\nexport function getPositionOffsetTransformerFromTextModel(textModel: ITextModel): PositionOffsetTransformerBase {\n\treturn new PositionOffsetTransformerWithTextModel(textModel);\n}\n\nclass PositionOffsetTransformerWithTextModel extends PositionOffsetTransformerBase {\n\tconstructor(private readonly _textModel: ITextModel) {\n\t\tsuper();\n\t}\n\n\toverride getOffset(position: Position): number {\n\t\treturn this._textModel.getOffsetAt(position);\n\t}\n\n\toverride getPosition(offset: number): Position {\n\t\treturn this._textModel.getPositionAt(offset);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "84ea5e40b5078e11771f734dc499c691e4c10a18"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2i6tcviemm = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2i6tcviemm();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { PositionOffsetTransformerBase } from './positionToOffset.js';
+export function getPositionOffsetTransformerFromTextModel(textModel) {
+  /* istanbul ignore next */
+  cov_2i6tcviemm().f[0]++;
+  cov_2i6tcviemm().s[0]++;
+  return new PositionOffsetTransformerWithTextModel(textModel);
+}
+class PositionOffsetTransformerWithTextModel extends PositionOffsetTransformerBase {
+  _textModel;
+  constructor(_textModel) {
+    /* istanbul ignore next */
+    cov_2i6tcviemm().f[1]++;
+    cov_2i6tcviemm().s[1]++;
+    super();
+    /* istanbul ignore next */
+    cov_2i6tcviemm().s[2]++;
+    this._textModel = _textModel;
+  }
+  getOffset(position) {
+    /* istanbul ignore next */
+    cov_2i6tcviemm().f[2]++;
+    cov_2i6tcviemm().s[3]++;
+    return this._textModel.getOffsetAt(position);
+  }
+  getPosition(offset) {
+    /* istanbul ignore next */
+    cov_2i6tcviemm().f[3]++;
+    cov_2i6tcviemm().s[4]++;
+    return this._textModel.getPositionAt(offset);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMmk2dGN2aWVtbSIsImFjdHVhbENvdmVyYWdlIiwiUG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckJhc2UiLCJnZXRQb3NpdGlvbk9mZnNldFRyYW5zZm9ybWVyRnJvbVRleHRNb2RlbCIsInRleHRNb2RlbCIsImYiLCJzIiwiUG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lcldpdGhUZXh0TW9kZWwiLCJfdGV4dE1vZGVsIiwiY29uc3RydWN0b3IiLCJnZXRPZmZzZXQiLCJwb3NpdGlvbiIsImdldE9mZnNldEF0IiwiZ2V0UG9zaXRpb24iLCJvZmZzZXQiLCJnZXRQb3NpdGlvbkF0Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2NvcmUvdGV4dC9nZXRQb3NpdGlvbk9mZnNldFRyYW5zZm9ybWVyRnJvbVRleHRNb2RlbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSVRleHRNb2RlbCB9IGZyb20gJy4uLy4uL21vZGVsLmpzJztcbmltcG9ydCB7IFBvc2l0aW9uIH0gZnJvbSAnLi4vcG9zaXRpb24uanMnO1xuaW1wb3J0IHsgUG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckJhc2UgfSBmcm9tICcuL3Bvc2l0aW9uVG9PZmZzZXQuanMnO1xuXG5leHBvcnQgZnVuY3Rpb24gZ2V0UG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckZyb21UZXh0TW9kZWwodGV4dE1vZGVsOiBJVGV4dE1vZGVsKTogUG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckJhc2Uge1xuXHRyZXR1cm4gbmV3IFBvc2l0aW9uT2Zmc2V0VHJhbnNmb3JtZXJXaXRoVGV4dE1vZGVsKHRleHRNb2RlbCk7XG59XG5cbmNsYXNzIFBvc2l0aW9uT2Zmc2V0VHJhbnNmb3JtZXJXaXRoVGV4dE1vZGVsIGV4dGVuZHMgUG9zaXRpb25PZmZzZXRUcmFuc2Zvcm1lckJhc2Uge1xuXHRjb25zdHJ1Y3Rvcihwcml2YXRlIHJlYWRvbmx5IF90ZXh0TW9kZWw6IElUZXh0TW9kZWwpIHtcblx0XHRzdXBlcigpO1xuXHR9XG5cblx0b3ZlcnJpZGUgZ2V0T2Zmc2V0KHBvc2l0aW9uOiBQb3NpdGlvbik6IG51bWJlciB7XG5cdFx0cmV0dXJuIHRoaXMuX3RleHRNb2RlbC5nZXRPZmZzZXRBdChwb3NpdGlvbik7XG5cdH1cblxuXHRvdmVycmlkZSBnZXRQb3NpdGlvbihvZmZzZXQ6IG51bWJlcik6IFBvc2l0aW9uIHtcblx0XHRyZXR1cm4gdGhpcy5fdGV4dE1vZGVsLmdldFBvc2l0aW9uQXQob2Zmc2V0KTtcblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBbUJFO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFuQkY7Ozs7QUFPQSxTQUFTRSw2QkFBNkIsUUFBUSx1QkFBdUI7QUFFckUsT0FBTSxTQUFVQyx5Q0FBeUNBLENBQUNDLFNBQXFCO0VBQUE7RUFBQUosY0FBQSxHQUFBSyxDQUFBO0VBQUFMLGNBQUEsR0FBQU0sQ0FBQTtFQUM5RSxPQUFPLElBQUlDLHNDQUFzQyxDQUFDSCxTQUFTLENBQUM7QUFDN0Q7QUFFQSxNQUFNRyxzQ0FBdUMsU0FBUUwsNkJBQTZCO0VBQ3BETSxVQUFBO0VBQTdCQyxZQUE2QkQsVUFBc0I7SUFBQTtJQUFBUixjQUFBLEdBQUFLLENBQUE7SUFBQUwsY0FBQSxHQUFBTSxDQUFBO0lBQ2xELEtBQUssRUFBRTtJQUFDO0lBQUFOLGNBQUEsR0FBQU0sQ0FBQTtJQURvQixLQUFBRSxVQUFVLEdBQVZBLFVBQVU7RUFFdkM7RUFFU0UsU0FBU0EsQ0FBQ0MsUUFBa0I7SUFBQTtJQUFBWCxjQUFBLEdBQUFLLENBQUE7SUFBQUwsY0FBQSxHQUFBTSxDQUFBO0lBQ3BDLE9BQU8sSUFBSSxDQUFDRSxVQUFVLENBQUNJLFdBQVcsQ0FBQ0QsUUFBUSxDQUFDO0VBQzdDO0VBRVNFLFdBQVdBLENBQUNDLE1BQWM7SUFBQTtJQUFBZCxjQUFBLEdBQUFLLENBQUE7SUFBQUwsY0FBQSxHQUFBTSxDQUFBO0lBQ2xDLE9BQU8sSUFBSSxDQUFDRSxVQUFVLENBQUNPLGFBQWEsQ0FBQ0QsTUFBTSxDQUFDO0VBQzdDIiwiaWdub3JlTGlzdCI6W119

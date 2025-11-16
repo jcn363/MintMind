@@ -1,0 +1,46 @@
+2827129aaede1225605d8dc9f8b70240
+/* istanbul ignore next */
+function cov_2f79s76yzu() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/policyExport/common/policyDto.ts";
+  var hash = "caf243f1a75499794cac78ad6eaac64917fdf666";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/policyExport/common/policyDto.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/policyExport/common/policyDto.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/policyExport/common/policyDto.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport type LocalizedValueDto = {\n\tkey: string;\n\tvalue: string;\n};\n\nexport interface CategoryDto {\n\tkey: string;\n\tname: LocalizedValueDto;\n}\n\nexport interface PolicyDto {\n\tkey: string;\n\tname: string;\n\tcategory: string;\n\tminimumVersion: `${number}.${number}`;\n\tlocalization: {\n\t\tdescription: LocalizedValueDto;\n\t\tenumDescriptions?: LocalizedValueDto[];\n\t};\n\ttype?: string | string[];\n\tdefault?: unknown;\n\tenum?: string[];\n}\n\nexport interface ExportedPolicyDataDto {\n\tcategories: CategoryDto[];\n\tpolicies: PolicyDto[];\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "caf243f1a75499794cac78ad6eaac64917fdf666"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2f79s76yzu = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2f79s76yzu();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9wb2xpY3lFeHBvcnQvY29tbW9uL3BvbGljeUR0by50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IHR5cGUgTG9jYWxpemVkVmFsdWVEdG8gPSB7XG5cdGtleTogc3RyaW5nO1xuXHR2YWx1ZTogc3RyaW5nO1xufTtcblxuZXhwb3J0IGludGVyZmFjZSBDYXRlZ29yeUR0byB7XG5cdGtleTogc3RyaW5nO1xuXHRuYW1lOiBMb2NhbGl6ZWRWYWx1ZUR0bztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBQb2xpY3lEdG8ge1xuXHRrZXk6IHN0cmluZztcblx0bmFtZTogc3RyaW5nO1xuXHRjYXRlZ29yeTogc3RyaW5nO1xuXHRtaW5pbXVtVmVyc2lvbjogYCR7bnVtYmVyfS4ke251bWJlcn1gO1xuXHRsb2NhbGl6YXRpb246IHtcblx0XHRkZXNjcmlwdGlvbjogTG9jYWxpemVkVmFsdWVEdG87XG5cdFx0ZW51bURlc2NyaXB0aW9ucz86IExvY2FsaXplZFZhbHVlRHRvW107XG5cdH07XG5cdHR5cGU/OiBzdHJpbmcgfCBzdHJpbmdbXTtcblx0ZGVmYXVsdD86IHVua25vd247XG5cdGVudW0/OiBzdHJpbmdbXTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBFeHBvcnRlZFBvbGljeURhdGFEdG8ge1xuXHRjYXRlZ29yaWVzOiBDYXRlZ29yeUR0b1tdO1xuXHRwb2xpY2llczogUG9saWN5RHRvW107XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,29 @@
+{
+  "bundle": {
+    "targets": ["app", "dmg"],
+    "macOS": {
+      "minimumSystemVersion": "12.0",
+      "frameworks": [],
+      "exceptionDomain": null,
+      "signingIdentity": null,
+      "providerShortName": null,
+      "entitlements": null
+    },
+    "dmg": {
+      "background": null,
+      "windowSize": {
+        "width": 660,
+        "height": 400
+      },
+      "appPosition": {
+        "x": 180,
+        "y": 170
+      },
+      "applicationFolderPosition": {
+        "x": 480,
+        "y": 170
+      }
+    },
+    "icon": ["../resources/darwin/code.icns"]
+  }
+}

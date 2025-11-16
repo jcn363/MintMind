@@ -1,0 +1,147 @@
+8ed15c008f47317351485522e518b300
+/* istanbul ignore next */
+function cov_grmqo48oj() {
+  var path = "/home/user/Desktop/MintMind/src/cli.ts";
+  var hash = "88a7651777335bf50faa914e1b8b5bdc949fbf98";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/cli.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 25
+        },
+        end: {
+          line: 11,
+          column: 172
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 68
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 27
+        }
+      },
+      "3": {
+        start: {
+          line: 16,
+          column: 0
+        },
+        end: {
+          line: 16,
+          column: 32
+        }
+      },
+      "4": {
+        start: {
+          line: 18,
+          column: 0
+        },
+        end: {
+          line: 18,
+          column: 21
+        }
+      },
+      "5": {
+        start: {
+          line: 20,
+          column: 0
+        },
+        end: {
+          line: 20,
+          column: 38
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/cli.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,oBAAoB,CAAC,CAAC,iEAAiE;AAC9F,OAAO,EAAE,iBAAiB,EAAE,MAAM,qBAAqB,CAAC;AACxD,OAAO,EAAE,YAAY,EAAE,MAAM,oBAAoB,CAAC;AAClD,OAAO,EAAE,uBAAuB,EAAE,MAAM,uBAAuB,CAAC;AAChE,OAAO,EAAE,OAAO,EAAE,MAAM,qBAAqB,CAAC;AAE9C,MAAM;AACN,MAAM,gBAAgB,GAAG,MAAM,uBAAuB,CAAC,EAAE,UAAU,EAAE,IAAI,EAAE,QAAQ,EAAE,IAAI,EAAE,MAAM,EAAE,OAAO,CAAC,MAAM,EAAE,YAAY,EAAE,EAAE,EAAE,eAAe,EAAE,MAAM,CAAC,IAAI,CAAC,OAAO,EAAE,CAAC,CAAC;AAC7K,OAAO,CAAC,GAAG,CAAC,mBAAmB,CAAC,GAAG,IAAI,CAAC,SAAS,CAAC,gBAAgB,CAAC,CAAC,CAAC,uDAAuD;AAE5H,0BAA0B;AAC1B,iBAAiB,CAAC,OAAO,CAAC,CAAC;AAE3B,+CAA+C;AAC/C,OAAO,CAAC,GAAG,CAAC,YAAY,CAAC,GAAG,GAAG,CAAC;AAEhC,gBAAgB;AAChB,MAAM,YAAY,EAAE,CAAC;AAErB,cAAc;AACd,MAAM,MAAM,CAAC,uBAAuB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/cli.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport './bootstrap-cli.js'; // this MUST come before other imports as it changes global state\nimport { configurePortable } from './bootstrap-node.js';\nimport { bootstrapESM } from './bootstrap-esm.js';\nimport { resolveNLSConfiguration } from './vs/base/node/nls.js';\nimport { product } from './bootstrap-meta.js';\n\n// NLS\nconst nlsConfiguration = await resolveNLSConfiguration({ userLocale: 'en', osLocale: 'en', commit: product.commit, userDataPath: '', nlsMetadataPath: import.meta.dirname });\nprocess.env['VSCODE_NLS_CONFIG'] = JSON.stringify(nlsConfiguration); // required for `bootstrap-esm` to pick up NLS messages\n\n// Enable portable support\nconfigurePortable(product);\n\n// Signal processes that we got launched as CLI\nprocess.env['VSCODE_CLI'] = '1';\n\n// Bootstrap ESM\nawait bootstrapESM();\n\n// Load Server\nawait import('./vs/code/node/cli.js');\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "88a7651777335bf50faa914e1b8b5bdc949fbf98"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_grmqo48oj = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_grmqo48oj();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import './bootstrap-cli.js'; // this MUST come before other imports as it changes global state
+import { configurePortable } from './bootstrap-node.js';
+import { bootstrapESM } from './bootstrap-esm.js';
+import { resolveNLSConfiguration } from './vs/base/node/nls.js';
+import { product } from './bootstrap-meta.js';
+// NLS
+const nlsConfiguration =
+/* istanbul ignore next */
+(cov_grmqo48oj().s[0]++, await resolveNLSConfiguration({
+  userLocale: 'en',
+  osLocale: 'en',
+  commit: product.commit,
+  userDataPath: '',
+  nlsMetadataPath: import.meta.dirname
+}));
+/* istanbul ignore next */
+cov_grmqo48oj().s[1]++;
+process.env['VSCODE_NLS_CONFIG'] = JSON.stringify(nlsConfiguration); // required for `bootstrap-esm` to pick up NLS messages
+// Enable portable support
+/* istanbul ignore next */
+cov_grmqo48oj().s[2]++;
+configurePortable(product);
+// Signal processes that we got launched as CLI
+/* istanbul ignore next */
+cov_grmqo48oj().s[3]++;
+process.env['VSCODE_CLI'] = '1';
+// Bootstrap ESM
+/* istanbul ignore next */
+cov_grmqo48oj().s[4]++;
+await bootstrapESM();
+// Load Server
+/* istanbul ignore next */
+cov_grmqo48oj().s[5]++;
+await import('./vs/code/node/cli.js');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfZ3JtcW80OG9qIiwiYWN0dWFsQ292ZXJhZ2UiLCJjb25maWd1cmVQb3J0YWJsZSIsImJvb3RzdHJhcEVTTSIsInJlc29sdmVOTFNDb25maWd1cmF0aW9uIiwicHJvZHVjdCIsIm5sc0NvbmZpZ3VyYXRpb24iLCJzIiwidXNlckxvY2FsZSIsIm9zTG9jYWxlIiwiY29tbWl0IiwidXNlckRhdGFQYXRoIiwibmxzTWV0YWRhdGFQYXRoIiwiaW1wb3J0IiwibWV0YSIsImRpcm5hbWUiLCJwcm9jZXNzIiwiZW52IiwiSlNPTiIsInN0cmluZ2lmeSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvY2xpLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgJy4vYm9vdHN0cmFwLWNsaS5qcyc7IC8vIHRoaXMgTVVTVCBjb21lIGJlZm9yZSBvdGhlciBpbXBvcnRzIGFzIGl0IGNoYW5nZXMgZ2xvYmFsIHN0YXRlXG5pbXBvcnQgeyBjb25maWd1cmVQb3J0YWJsZSB9IGZyb20gJy4vYm9vdHN0cmFwLW5vZGUuanMnO1xuaW1wb3J0IHsgYm9vdHN0cmFwRVNNIH0gZnJvbSAnLi9ib290c3RyYXAtZXNtLmpzJztcbmltcG9ydCB7IHJlc29sdmVOTFNDb25maWd1cmF0aW9uIH0gZnJvbSAnLi92cy9iYXNlL25vZGUvbmxzLmpzJztcbmltcG9ydCB7IHByb2R1Y3QgfSBmcm9tICcuL2Jvb3RzdHJhcC1tZXRhLmpzJztcblxuLy8gTkxTXG5jb25zdCBubHNDb25maWd1cmF0aW9uID0gYXdhaXQgcmVzb2x2ZU5MU0NvbmZpZ3VyYXRpb24oeyB1c2VyTG9jYWxlOiAnZW4nLCBvc0xvY2FsZTogJ2VuJywgY29tbWl0OiBwcm9kdWN0LmNvbW1pdCwgdXNlckRhdGFQYXRoOiAnJywgbmxzTWV0YWRhdGFQYXRoOiBpbXBvcnQubWV0YS5kaXJuYW1lIH0pO1xucHJvY2Vzcy5lbnZbJ1ZTQ09ERV9OTFNfQ09ORklHJ10gPSBKU09OLnN0cmluZ2lmeShubHNDb25maWd1cmF0aW9uKTsgLy8gcmVxdWlyZWQgZm9yIGBib290c3RyYXAtZXNtYCB0byBwaWNrIHVwIE5MUyBtZXNzYWdlc1xuXG4vLyBFbmFibGUgcG9ydGFibGUgc3VwcG9ydFxuY29uZmlndXJlUG9ydGFibGUocHJvZHVjdCk7XG5cbi8vIFNpZ25hbCBwcm9jZXNzZXMgdGhhdCB3ZSBnb3QgbGF1bmNoZWQgYXMgQ0xJXG5wcm9jZXNzLmVudlsnVlNDT0RFX0NMSSddID0gJzEnO1xuXG4vLyBCb290c3RyYXAgRVNNXG5hd2FpdCBib290c3RyYXBFU00oKTtcblxuLy8gTG9hZCBTZXJ2ZXJcbmF3YWl0IGltcG9ydCgnLi92cy9jb2RlL25vZGUvY2xpLmpzJyk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CWTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBbkJaOzs7O0FBS0EsT0FBTyxvQkFBb0IsQ0FBQyxDQUFDO0FBQzdCLFNBQVNFLGlCQUFpQixRQUFRLHFCQUFxQjtBQUN2RCxTQUFTQyxZQUFZLFFBQVEsb0JBQW9CO0FBQ2pELFNBQVNDLHVCQUF1QixRQUFRLHVCQUF1QjtBQUMvRCxTQUFTQyxPQUFPLFFBQVEscUJBQXFCO0FBRTdDO0FBQ0EsTUFBTUMsZ0JBQWdCO0FBQUE7QUFBQSxDQUFBTixhQUFBLEdBQUFPLENBQUEsT0FBRyxNQUFNSCx1QkFBdUIsQ0FBQztFQUFFSSxVQUFVLEVBQUUsSUFBSTtFQUFFQyxRQUFRLEVBQUUsSUFBSTtFQUFFQyxNQUFNLEVBQUVMLE9BQU8sQ0FBQ0ssTUFBTTtFQUFFQyxZQUFZLEVBQUUsRUFBRTtFQUFFQyxlQUFlLEVBQUVDLE1BQU0sQ0FBQ0MsSUFBSSxDQUFDQztBQUFPLENBQUUsQ0FBQztBQUFDO0FBQUFmLGFBQUEsR0FBQU8sQ0FBQTtBQUM3S1MsT0FBTyxDQUFDQyxHQUFHLENBQUMsbUJBQW1CLENBQUMsR0FBR0MsSUFBSSxDQUFDQyxTQUFTLENBQUNiLGdCQUFnQixDQUFDLENBQUMsQ0FBQztBQUVyRTtBQUFBO0FBQUFOLGFBQUEsR0FBQU8sQ0FBQTtBQUNBTCxpQkFBaUIsQ0FBQ0csT0FBTyxDQUFDO0FBRTFCO0FBQUE7QUFBQUwsYUFBQSxHQUFBTyxDQUFBO0FBQ0FTLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDLFlBQVksQ0FBQyxHQUFHLEdBQUc7QUFFL0I7QUFBQTtBQUFBakIsYUFBQSxHQUFBTyxDQUFBO0FBQ0EsTUFBTUosWUFBWSxFQUFFO0FBRXBCO0FBQUE7QUFBQUgsYUFBQSxHQUFBTyxDQUFBO0FBQ0EsTUFBTSxNQUFNLENBQUMsdUJBQXVCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

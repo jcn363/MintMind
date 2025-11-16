@@ -1,0 +1,124 @@
+9fefdaca91373eb079f434c6de94766a
+/* istanbul ignore next */
+function cov_1gy93aiydh() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/browser/editorPaneService.ts";
+  var hash = "252d101f25e73ce2fb66e684b5c4f0708273c563";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/browser/editorPaneService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 34
+        },
+        end: {
+          line: 9,
+          column: 82
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 69
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 92
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 37
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/browser/editorPaneService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,kBAAkB,EAAE,MAAM,gCAAgC,CAAC;AACpE,OAAO,EAAE,oBAAoB,EAAE,MAAM,4BAA4B,CAAC;AAClE,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAE/G,MAAM,OAAO,iBAAiB;IAIpB,2BAA2B,GAAG,oBAAoB,CAAC,2BAA2B,CAAC;IAExF,wBAAwB,CAAC,MAAc;QACtC,OAAO,oBAAoB,CAAC,wBAAwB,CAAC,MAAM,CAAC,CAAC;IAC9D,CAAC;CACD;AAED,iBAAiB,CAAC,kBAAkB,EAAE,iBAAiB,oCAA4B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/editor/browser/editorPaneService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IEditorPaneService } from '../common/editorPaneService.js';\nimport { EditorPaneDescriptor } from '../../../browser/editor.js';\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\n\nexport class EditorPaneService implements IEditorPaneService {\n\n\tdeclare readonly _serviceBrand: undefined;\n\n\treadonly onWillInstantiateEditorPane = EditorPaneDescriptor.onWillInstantiateEditorPane;\n\n\tdidInstantiateEditorPane(typeId: string): boolean {\n\t\treturn EditorPaneDescriptor.didInstantiateEditorPane(typeId);\n\t}\n}\n\nregisterSingleton(IEditorPaneService, EditorPaneService, InstantiationType.Delayed);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "252d101f25e73ce2fb66e684b5c4f0708273c563"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1gy93aiydh = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1gy93aiydh();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { IEditorPaneService } from '../common/editorPaneService.js';
+import { EditorPaneDescriptor } from '../../../browser/editor.js';
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+export class EditorPaneService {
+  onWillInstantiateEditorPane =
+  /* istanbul ignore next */
+  (cov_1gy93aiydh().s[0]++, EditorPaneDescriptor.onWillInstantiateEditorPane);
+  didInstantiateEditorPane(typeId) {
+    /* istanbul ignore next */
+    cov_1gy93aiydh().f[0]++;
+    cov_1gy93aiydh().s[1]++;
+    return EditorPaneDescriptor.didInstantiateEditorPane(typeId);
+  }
+}
+/* istanbul ignore next */
+cov_1gy93aiydh().s[2]++;
+registerSingleton(IEditorPaneService, EditorPaneService, 1 /* InstantiationType.Delayed */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJJRWRpdG9yUGFuZVNlcnZpY2UiLCJFZGl0b3JQYW5lRGVzY3JpcHRvciIsInJlZ2lzdGVyU2luZ2xldG9uIiwiRWRpdG9yUGFuZVNlcnZpY2UiLCJvbldpbGxJbnN0YW50aWF0ZUVkaXRvclBhbmUiLCJjb3ZfMWd5OTNhaXlkaCIsInMiLCJkaWRJbnN0YW50aWF0ZUVkaXRvclBhbmUiLCJ0eXBlSWQiLCJmIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvZWRpdG9yL2Jyb3dzZXIvZWRpdG9yUGFuZVNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElFZGl0b3JQYW5lU2VydmljZSB9IGZyb20gJy4uL2NvbW1vbi9lZGl0b3JQYW5lU2VydmljZS5qcyc7XG5pbXBvcnQgeyBFZGl0b3JQYW5lRGVzY3JpcHRvciB9IGZyb20gJy4uLy4uLy4uL2Jyb3dzZXIvZWRpdG9yLmpzJztcbmltcG9ydCB7IEluc3RhbnRpYXRpb25UeXBlLCByZWdpc3RlclNpbmdsZXRvbiB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2V4dGVuc2lvbnMuanMnO1xuXG5leHBvcnQgY2xhc3MgRWRpdG9yUGFuZVNlcnZpY2UgaW1wbGVtZW50cyBJRWRpdG9yUGFuZVNlcnZpY2Uge1xuXG5cdGRlY2xhcmUgcmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdHJlYWRvbmx5IG9uV2lsbEluc3RhbnRpYXRlRWRpdG9yUGFuZSA9IEVkaXRvclBhbmVEZXNjcmlwdG9yLm9uV2lsbEluc3RhbnRpYXRlRWRpdG9yUGFuZTtcblxuXHRkaWRJbnN0YW50aWF0ZUVkaXRvclBhbmUodHlwZUlkOiBzdHJpbmcpOiBib29sZWFuIHtcblx0XHRyZXR1cm4gRWRpdG9yUGFuZURlc2NyaXB0b3IuZGlkSW5zdGFudGlhdGVFZGl0b3JQYW5lKHR5cGVJZCk7XG5cdH1cbn1cblxucmVnaXN0ZXJTaW5nbGV0b24oSUVkaXRvclBhbmVTZXJ2aWNlLCBFZGl0b3JQYW5lU2VydmljZSwgSW5zdGFudGlhdGlvblR5cGUuRGVsYXllZCk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxrQkFBa0IsUUFBUSxnQ0FBZ0M7QUFDbkUsU0FBU0Msb0JBQW9CLFFBQVEsNEJBQTRCO0FBQ2pFLFNBQTRCQyxpQkFBaUIsUUFBUSx5REFBeUQ7QUFFOUcsT0FBTSxNQUFPQyxpQkFBaUI7RUFJcEJDLDJCQUEyQjtFQUFBO0VBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdMLG9CQUFvQixDQUFDRywyQkFBMkI7RUFFdkZHLHdCQUF3QkEsQ0FBQ0MsTUFBYztJQUFBO0lBQUFILGNBQUEsR0FBQUksQ0FBQTtJQUFBSixjQUFBLEdBQUFDLENBQUE7SUFDdEMsT0FBT0wsb0JBQW9CLENBQUNNLHdCQUF3QixDQUFDQyxNQUFNLENBQUM7RUFDN0Q7O0FBQ0E7QUFBQUgsY0FBQSxHQUFBQyxDQUFBO0FBRURKLGlCQUFpQixDQUFDRixrQkFBa0IsRUFBRUcsaUJBQWlCLG9DQUE0QiIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,95 @@
+c2d817b33517443c35c88138954bc0b4
+/* istanbul ignore next */
+function cov_1bkn7litu9() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/api/node/extHostVariableResolverService.ts";
+  var hash = "50cf6cc08c46b1aac119a4417819357898e869bc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/api/node/extHostVariableResolverService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 25
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 14
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/api/node/extHostVariableResolverService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAE,MAAM,IAAI,CAAC;AAC7B,OAAO,EAAE,sCAAsC,EAAE,MAAM,6CAA6C,CAAC;AAErG,MAAM,OAAO,0CAA2C,SAAQ,sCAAsC;IAClF,OAAO;QACzB,OAAO,OAAO,EAAE,CAAC;IAClB,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/api/node/extHostVariableResolverService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { homedir } from 'os';\nimport { ExtHostVariableResolverProviderService } from '../common/extHostVariableResolverService.js';\n\nexport class NodeExtHostVariableResolverProviderService extends ExtHostVariableResolverProviderService {\n\tprotected override homeDir(): string | undefined {\n\t\treturn homedir();\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "50cf6cc08c46b1aac119a4417819357898e869bc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1bkn7litu9 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1bkn7litu9();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { homedir } from 'os';
+import { ExtHostVariableResolverProviderService } from '../common/extHostVariableResolverService.js';
+export class NodeExtHostVariableResolverProviderService extends ExtHostVariableResolverProviderService {
+  homeDir() {
+    /* istanbul ignore next */
+    cov_1bkn7litu9().f[0]++;
+    cov_1bkn7litu9().s[0]++;
+    return homedir();
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJob21lZGlyIiwiRXh0SG9zdFZhcmlhYmxlUmVzb2x2ZXJQcm92aWRlclNlcnZpY2UiLCJOb2RlRXh0SG9zdFZhcmlhYmxlUmVzb2x2ZXJQcm92aWRlclNlcnZpY2UiLCJob21lRGlyIiwiY292XzFia243bGl0dTkiLCJmIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2FwaS9ub2RlL2V4dEhvc3RWYXJpYWJsZVJlc29sdmVyU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgaG9tZWRpciB9IGZyb20gJ29zJztcbmltcG9ydCB7IEV4dEhvc3RWYXJpYWJsZVJlc29sdmVyUHJvdmlkZXJTZXJ2aWNlIH0gZnJvbSAnLi4vY29tbW9uL2V4dEhvc3RWYXJpYWJsZVJlc29sdmVyU2VydmljZS5qcyc7XG5cbmV4cG9ydCBjbGFzcyBOb2RlRXh0SG9zdFZhcmlhYmxlUmVzb2x2ZXJQcm92aWRlclNlcnZpY2UgZXh0ZW5kcyBFeHRIb3N0VmFyaWFibGVSZXNvbHZlclByb3ZpZGVyU2VydmljZSB7XG5cdHByb3RlY3RlZCBvdmVycmlkZSBob21lRGlyKCk6IHN0cmluZyB8IHVuZGVmaW5lZCB7XG5cdFx0cmV0dXJuIGhvbWVkaXIoKTtcblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxPQUFPLFFBQVEsSUFBSTtBQUM1QixTQUFTQyxzQ0FBc0MsUUFBUSw2Q0FBNkM7QUFFcEcsT0FBTSxNQUFPQywwQ0FBMkMsU0FBUUQsc0NBQXNDO0VBQ2xGRSxPQUFPQSxDQUFBO0lBQUE7SUFBQUMsY0FBQSxHQUFBQyxDQUFBO0lBQUFELGNBQUEsR0FBQUUsQ0FBQTtJQUN6QixPQUFPTixPQUFPLEVBQUU7RUFDakIiLCJpZ25vcmVMaXN0IjpbXX0=

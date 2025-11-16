@@ -1,0 +1,200 @@
+4ffbe870cad61c0b3cbedaa70810fd19
+/* istanbul ignore next */
+function cov_10id41i8rw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/extensionRecommendations/common/extensionRecommendations.ts";
+  var hash = "ec0bddeab0a1793430215492e694be221de5a8e6";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/extensionRecommendations/common/extensionRecommendations.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 5
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 48
+        },
+        end: {
+          line: 8,
+          column: 62
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 53
+        },
+        end: {
+          line: 9,
+          column: 72
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 47
+        },
+        end: {
+          line: 10,
+          column: 60
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 59
+        },
+        end: {
+          line: 13,
+          column: 121
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "RecommendationSourceToString",
+        decl: {
+          start: {
+            line: 6,
+            column: 16
+          },
+          end: {
+            line: 6,
+            column: 44
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 53
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        type: "switch",
+        locations: [{
+          start: {
+            line: 8,
+            column: 8
+          },
+          end: {
+            line: 8,
+            column: 62
+          }
+        }, {
+          start: {
+            line: 9,
+            column: 8
+          },
+          end: {
+            line: 9,
+            column: 72
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 10,
+            column: 60
+          }
+        }],
+        line: 7
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/extensionRecommendations/common/extensionRecommendations.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAe9E,MAAM,UAAU,4BAA4B,CAAC,MAA4B;IACxE,QAAQ,MAAM,EAAE,CAAC;QAChB,sCAA8B,CAAC,CAAC,OAAO,MAAM,CAAC;QAC9C,2CAAmC,CAAC,CAAC,OAAO,WAAW,CAAC;QACxD,qCAA6B,CAAC,CAAC,OAAO,KAAK,CAAC;IAC7C,CAAC;AACF,CAAC;AAUD,MAAM,CAAC,MAAM,2CAA2C,GAAG,eAAe,CAA8C,6CAA6C,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/extensionRecommendations/common/extensionRecommendations.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const enum RecommendationSource {\n\tFILE = 1,\n\tWORKSPACE = 2,\n\tEXE = 3\n}\n\nexport interface IExtensionRecommendations {\n\tsource: RecommendationSource;\n\textensions: string[];\n\tname: string;\n\tsearchValue?: string;\n}\n\nexport function RecommendationSourceToString(source: RecommendationSource) {\n\tswitch (source) {\n\t\tcase RecommendationSource.FILE: return 'file';\n\t\tcase RecommendationSource.WORKSPACE: return 'workspace';\n\t\tcase RecommendationSource.EXE: return 'exe';\n\t}\n}\n\nexport const enum RecommendationsNotificationResult {\n\tIgnored = 'ignored',\n\tCancelled = 'cancelled',\n\tTooMany = 'toomany',\n\tIncompatibleWindow = 'incompatibleWindow',\n\tAccepted = 'reacted',\n}\n\nexport const IExtensionRecommendationNotificationService = createDecorator<IExtensionRecommendationNotificationService>('IExtensionRecommendationNotificationService');\n\nexport interface IExtensionRecommendationNotificationService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly ignoredRecommendations: string[];\n\thasToIgnoreRecommendationNotifications(): boolean;\n\n\tpromptImportantExtensionsInstallNotification(recommendations: IExtensionRecommendations): Promise<RecommendationsNotificationResult>;\n\tpromptWorkspaceRecommendations(recommendations: Array<string | URI>): Promise<void>;\n}\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ec0bddeab0a1793430215492e694be221de5a8e6"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_10id41i8rw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_10id41i8rw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export function RecommendationSourceToString(source) {
+  /* istanbul ignore next */
+  cov_10id41i8rw().f[0]++;
+  cov_10id41i8rw().s[0]++;
+  switch (source) {
+    case 1 /* RecommendationSource.FILE */:
+      /* istanbul ignore next */
+      cov_10id41i8rw().b[0][0]++;
+      cov_10id41i8rw().s[1]++;
+      return 'file';
+    case 2 /* RecommendationSource.WORKSPACE */:
+      /* istanbul ignore next */
+      cov_10id41i8rw().b[0][1]++;
+      cov_10id41i8rw().s[2]++;
+      return 'workspace';
+    case 3 /* RecommendationSource.EXE */:
+      /* istanbul ignore next */
+      cov_10id41i8rw().b[0][2]++;
+      cov_10id41i8rw().s[3]++;
+      return 'exe';
+  }
+}
+export const IExtensionRecommendationNotificationService =
+/* istanbul ignore next */
+(cov_10id41i8rw().s[4]++, createDecorator('IExtensionRecommendationNotificationService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJSZWNvbW1lbmRhdGlvblNvdXJjZVRvU3RyaW5nIiwic291cmNlIiwiY292XzEwaWQ0MWk4cnciLCJmIiwicyIsImIiLCJJRXh0ZW5zaW9uUmVjb21tZW5kYXRpb25Ob3RpZmljYXRpb25TZXJ2aWNlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9leHRlbnNpb25SZWNvbW1lbmRhdGlvbnMvY29tbW9uL2V4dGVuc2lvblJlY29tbWVuZGF0aW9ucy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgY29uc3QgZW51bSBSZWNvbW1lbmRhdGlvblNvdXJjZSB7XG5cdEZJTEUgPSAxLFxuXHRXT1JLU1BBQ0UgPSAyLFxuXHRFWEUgPSAzXG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUV4dGVuc2lvblJlY29tbWVuZGF0aW9ucyB7XG5cdHNvdXJjZTogUmVjb21tZW5kYXRpb25Tb3VyY2U7XG5cdGV4dGVuc2lvbnM6IHN0cmluZ1tdO1xuXHRuYW1lOiBzdHJpbmc7XG5cdHNlYXJjaFZhbHVlPzogc3RyaW5nO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gUmVjb21tZW5kYXRpb25Tb3VyY2VUb1N0cmluZyhzb3VyY2U6IFJlY29tbWVuZGF0aW9uU291cmNlKSB7XG5cdHN3aXRjaCAoc291cmNlKSB7XG5cdFx0Y2FzZSBSZWNvbW1lbmRhdGlvblNvdXJjZS5GSUxFOiByZXR1cm4gJ2ZpbGUnO1xuXHRcdGNhc2UgUmVjb21tZW5kYXRpb25Tb3VyY2UuV09SS1NQQUNFOiByZXR1cm4gJ3dvcmtzcGFjZSc7XG5cdFx0Y2FzZSBSZWNvbW1lbmRhdGlvblNvdXJjZS5FWEU6IHJldHVybiAnZXhlJztcblx0fVxufVxuXG5leHBvcnQgY29uc3QgZW51bSBSZWNvbW1lbmRhdGlvbnNOb3RpZmljYXRpb25SZXN1bHQge1xuXHRJZ25vcmVkID0gJ2lnbm9yZWQnLFxuXHRDYW5jZWxsZWQgPSAnY2FuY2VsbGVkJyxcblx0VG9vTWFueSA9ICd0b29tYW55Jyxcblx0SW5jb21wYXRpYmxlV2luZG93ID0gJ2luY29tcGF0aWJsZVdpbmRvdycsXG5cdEFjY2VwdGVkID0gJ3JlYWN0ZWQnLFxufVxuXG5leHBvcnQgY29uc3QgSUV4dGVuc2lvblJlY29tbWVuZGF0aW9uTm90aWZpY2F0aW9uU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJRXh0ZW5zaW9uUmVjb21tZW5kYXRpb25Ob3RpZmljYXRpb25TZXJ2aWNlPignSUV4dGVuc2lvblJlY29tbWVuZGF0aW9uTm90aWZpY2F0aW9uU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElFeHRlbnNpb25SZWNvbW1lbmRhdGlvbk5vdGlmaWNhdGlvblNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVhZG9ubHkgaWdub3JlZFJlY29tbWVuZGF0aW9uczogc3RyaW5nW107XG5cdGhhc1RvSWdub3JlUmVjb21tZW5kYXRpb25Ob3RpZmljYXRpb25zKCk6IGJvb2xlYW47XG5cblx0cHJvbXB0SW1wb3J0YW50RXh0ZW5zaW9uc0luc3RhbGxOb3RpZmljYXRpb24ocmVjb21tZW5kYXRpb25zOiBJRXh0ZW5zaW9uUmVjb21tZW5kYXRpb25zKTogUHJvbWlzZTxSZWNvbW1lbmRhdGlvbnNOb3RpZmljYXRpb25SZXN1bHQ+O1xuXHRwcm9tcHRXb3Jrc3BhY2VSZWNvbW1lbmRhdGlvbnMocmVjb21tZW5kYXRpb25zOiBBcnJheTxzdHJpbmcgfCBVUkk+KTogUHJvbWlzZTx2b2lkPjtcbn1cblxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLGVBQWUsUUFBUSw2Q0FBNkM7QUFlN0UsT0FBTSxTQUFVQyw0QkFBNEJBLENBQUNDLE1BQTRCO0VBQUE7RUFBQUMsY0FBQSxHQUFBQyxDQUFBO0VBQUFELGNBQUEsR0FBQUUsQ0FBQTtFQUN4RSxRQUFRSCxNQUFNO0lBQ2I7TUFBQTtNQUFBQyxjQUFBLEdBQUFHLENBQUE7TUFBQUgsY0FBQSxHQUFBRSxDQUFBO01BQWdDLE9BQU8sTUFBTTtJQUM3QztNQUFBO01BQUFGLGNBQUEsR0FBQUcsQ0FBQTtNQUFBSCxjQUFBLEdBQUFFLENBQUE7TUFBcUMsT0FBTyxXQUFXO0lBQ3ZEO01BQUE7TUFBQUYsY0FBQSxHQUFBRyxDQUFBO01BQUFILGNBQUEsR0FBQUUsQ0FBQTtNQUErQixPQUFPLEtBQUs7RUFDNUM7QUFDRDtBQVVBLE9BQU8sTUFBTUUsMkNBQTJDO0FBQUE7QUFBQSxDQUFBSixjQUFBLEdBQUFFLENBQUEsT0FBR0wsZUFBZSxDQUE4Qyw2Q0FBNkMsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

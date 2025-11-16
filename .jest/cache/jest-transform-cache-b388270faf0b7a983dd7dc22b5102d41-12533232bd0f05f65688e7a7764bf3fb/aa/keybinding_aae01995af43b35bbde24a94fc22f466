@@ -1,0 +1,62 @@
+ffc573926fdd1e89fefe0c0db7d1fb8b
+/* istanbul ignore next */
+function cov_2rbolf02t6() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/keybinding/common/keybinding.ts";
+  var hash = "0f58417a332389b8f9a0f46527f02f08dfd91251";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/keybinding/common/keybinding.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 34
+        },
+        end: {
+          line: 6,
+          column: 70
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/keybinding/common/keybinding.ts",
+      mappings: "AAAA;;;gGAGgG;AAQhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AA6B9E,MAAM,CAAC,MAAM,kBAAkB,GAAG,eAAe,CAAqB,mBAAmB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/keybinding/common/keybinding.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { IJSONSchema } from '../../../base/common/jsonSchema.js';\nimport { KeyCode } from '../../../base/common/keyCodes.js';\nimport { ResolvedKeybinding, Keybinding } from '../../../base/common/keybindings.js';\nimport { IDisposable } from '../../../base/common/lifecycle.js';\nimport { IContextKeyService, IContextKeyServiceTarget } from '../../contextkey/common/contextkey.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\nimport { ResolutionResult } from './keybindingResolver.js';\nimport { ResolvedKeybindingItem } from './resolvedKeybindingItem.js';\n\nexport interface IUserFriendlyKeybinding {\n\tkey: string;\n\tcommand: string;\n\targs?: any;\n\twhen?: string;\n}\n\nexport interface IKeyboardEvent {\n\treadonly _standardKeyboardEventBrand: true;\n\n\treadonly ctrlKey: boolean;\n\treadonly shiftKey: boolean;\n\treadonly altKey: boolean;\n\treadonly metaKey: boolean;\n\treadonly altGraphKey: boolean;\n\treadonly keyCode: KeyCode;\n\treadonly code: string;\n}\n\nexport interface KeybindingsSchemaContribution {\n\treadonly onDidChange?: Event<void>;\n\n\tgetSchemaAdditions(): IJSONSchema[];\n}\n\nexport const IKeybindingService = createDecorator<IKeybindingService>('keybindingService');\n\nexport interface IKeybindingService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly inChordMode: boolean;\n\n\treadonly onDidUpdateKeybindings: Event<void>;\n\n\t/**\n\t * Returns none, one or many (depending on keyboard layout)!\n\t */\n\tresolveKeybinding(keybinding: Keybinding): ResolvedKeybinding[];\n\n\tresolveKeyboardEvent(keyboardEvent: IKeyboardEvent): ResolvedKeybinding;\n\n\tresolveUserBinding(userBinding: string): ResolvedKeybinding[];\n\n\t/**\n\t * Resolve and dispatch `keyboardEvent` and invoke the command.\n\t */\n\tdispatchEvent(e: IKeyboardEvent, target: IContextKeyServiceTarget): boolean;\n\n\t/**\n\t * Resolve and dispatch `keyboardEvent`, but do not invoke the command or change inner state.\n\t */\n\tsoftDispatch(keyboardEvent: IKeyboardEvent, target: IContextKeyServiceTarget): ResolutionResult;\n\n\t/**\n\t * Enable hold mode for this command. This is only possible if the command is current being dispatched, meaning\n\t * we are after its keydown and before is keyup event.\n\t *\n\t * @returns A promise that resolves when hold stops, returns undefined if hold mode could not be enabled.\n\t */\n\tenableKeybindingHoldMode(commandId: string): Promise<void> | undefined;\n\n\tdispatchByUserSettingsLabel(userSettingsLabel: string, target: IContextKeyServiceTarget): void;\n\n\t/**\n\t * Look up keybindings for a command.\n\t * Use `lookupKeybinding` if you are interested in the preferred keybinding.\n\t */\n\tlookupKeybindings(commandId: string): ResolvedKeybinding[];\n\n\t/**\n\t * Look up the preferred (last defined) keybinding for a command.\n\t * @returns The preferred keybinding or null if the command is not bound.\n\t */\n\tlookupKeybinding(commandId: string, context?: IContextKeyService, enforceContextCheck?: boolean): ResolvedKeybinding | undefined;\n\n\tgetDefaultKeybindingsContent(): string;\n\n\tgetDefaultKeybindings(): readonly ResolvedKeybindingItem[];\n\n\tgetKeybindings(): readonly ResolvedKeybindingItem[];\n\n\tcustomKeybindingsCount(): number;\n\n\t/**\n\t * Will the given key event produce a character that's rendered on screen, e.g. in a\n\t * text box. *Note* that the results of this function can be incorrect.\n\t */\n\tmightProducePrintableCharacter(event: IKeyboardEvent): boolean;\n\n\tregisterSchemaContribution(contribution: KeybindingsSchemaContribution): IDisposable;\n\n\ttoggleLogging(): boolean;\n\n\t_dumpDebugInfo(): string;\n\t_dumpDebugInfoJSON(): string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0f58417a332389b8f9a0f46527f02f08dfd91251"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2rbolf02t6 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2rbolf02t6();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IKeybindingService =
+/* istanbul ignore next */
+(cov_2rbolf02t6().s[0]++, createDecorator('keybindingService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJS2V5YmluZGluZ1NlcnZpY2UiLCJjb3ZfMnJib2xmMDJ0NiIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL2tleWJpbmRpbmcvY29tbW9uL2tleWJpbmRpbmcudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgSUpTT05TY2hlbWEgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9qc29uU2NoZW1hLmpzJztcbmltcG9ydCB7IEtleUNvZGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9rZXlDb2Rlcy5qcyc7XG5pbXBvcnQgeyBSZXNvbHZlZEtleWJpbmRpbmcsIEtleWJpbmRpbmcgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9rZXliaW5kaW5ncy5qcyc7XG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBJQ29udGV4dEtleVNlcnZpY2UsIElDb250ZXh0S2V5U2VydmljZVRhcmdldCB9IGZyb20gJy4uLy4uL2NvbnRleHRrZXkvY29tbW9uL2NvbnRleHRrZXkuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBSZXNvbHV0aW9uUmVzdWx0IH0gZnJvbSAnLi9rZXliaW5kaW5nUmVzb2x2ZXIuanMnO1xuaW1wb3J0IHsgUmVzb2x2ZWRLZXliaW5kaW5nSXRlbSB9IGZyb20gJy4vcmVzb2x2ZWRLZXliaW5kaW5nSXRlbS5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVVzZXJGcmllbmRseUtleWJpbmRpbmcge1xuXHRrZXk6IHN0cmluZztcblx0Y29tbWFuZDogc3RyaW5nO1xuXHRhcmdzPzogYW55O1xuXHR3aGVuPzogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElLZXlib2FyZEV2ZW50IHtcblx0cmVhZG9ubHkgX3N0YW5kYXJkS2V5Ym9hcmRFdmVudEJyYW5kOiB0cnVlO1xuXG5cdHJlYWRvbmx5IGN0cmxLZXk6IGJvb2xlYW47XG5cdHJlYWRvbmx5IHNoaWZ0S2V5OiBib29sZWFuO1xuXHRyZWFkb25seSBhbHRLZXk6IGJvb2xlYW47XG5cdHJlYWRvbmx5IG1ldGFLZXk6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGFsdEdyYXBoS2V5OiBib29sZWFuO1xuXHRyZWFkb25seSBrZXlDb2RlOiBLZXlDb2RlO1xuXHRyZWFkb25seSBjb2RlOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgS2V5YmluZGluZ3NTY2hlbWFDb250cmlidXRpb24ge1xuXHRyZWFkb25seSBvbkRpZENoYW5nZT86IEV2ZW50PHZvaWQ+O1xuXG5cdGdldFNjaGVtYUFkZGl0aW9ucygpOiBJSlNPTlNjaGVtYVtdO1xufVxuXG5leHBvcnQgY29uc3QgSUtleWJpbmRpbmdTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElLZXliaW5kaW5nU2VydmljZT4oJ2tleWJpbmRpbmdTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUtleWJpbmRpbmdTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdHJlYWRvbmx5IGluQ2hvcmRNb2RlOiBib29sZWFuO1xuXG5cdHJlYWRvbmx5IG9uRGlkVXBkYXRlS2V5YmluZGluZ3M6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIG5vbmUsIG9uZSBvciBtYW55IChkZXBlbmRpbmcgb24ga2V5Ym9hcmQgbGF5b3V0KSFcblx0ICovXG5cdHJlc29sdmVLZXliaW5kaW5nKGtleWJpbmRpbmc6IEtleWJpbmRpbmcpOiBSZXNvbHZlZEtleWJpbmRpbmdbXTtcblxuXHRyZXNvbHZlS2V5Ym9hcmRFdmVudChrZXlib2FyZEV2ZW50OiBJS2V5Ym9hcmRFdmVudCk6IFJlc29sdmVkS2V5YmluZGluZztcblxuXHRyZXNvbHZlVXNlckJpbmRpbmcodXNlckJpbmRpbmc6IHN0cmluZyk6IFJlc29sdmVkS2V5YmluZGluZ1tdO1xuXG5cdC8qKlxuXHQgKiBSZXNvbHZlIGFuZCBkaXNwYXRjaCBga2V5Ym9hcmRFdmVudGAgYW5kIGludm9rZSB0aGUgY29tbWFuZC5cblx0ICovXG5cdGRpc3BhdGNoRXZlbnQoZTogSUtleWJvYXJkRXZlbnQsIHRhcmdldDogSUNvbnRleHRLZXlTZXJ2aWNlVGFyZ2V0KTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogUmVzb2x2ZSBhbmQgZGlzcGF0Y2ggYGtleWJvYXJkRXZlbnRgLCBidXQgZG8gbm90IGludm9rZSB0aGUgY29tbWFuZCBvciBjaGFuZ2UgaW5uZXIgc3RhdGUuXG5cdCAqL1xuXHRzb2Z0RGlzcGF0Y2goa2V5Ym9hcmRFdmVudDogSUtleWJvYXJkRXZlbnQsIHRhcmdldDogSUNvbnRleHRLZXlTZXJ2aWNlVGFyZ2V0KTogUmVzb2x1dGlvblJlc3VsdDtcblxuXHQvKipcblx0ICogRW5hYmxlIGhvbGQgbW9kZSBmb3IgdGhpcyBjb21tYW5kLiBUaGlzIGlzIG9ubHkgcG9zc2libGUgaWYgdGhlIGNvbW1hbmQgaXMgY3VycmVudCBiZWluZyBkaXNwYXRjaGVkLCBtZWFuaW5nXG5cdCAqIHdlIGFyZSBhZnRlciBpdHMga2V5ZG93biBhbmQgYmVmb3JlIGlzIGtleXVwIGV2ZW50LlxuXHQgKlxuXHQgKiBAcmV0dXJucyBBIHByb21pc2UgdGhhdCByZXNvbHZlcyB3aGVuIGhvbGQgc3RvcHMsIHJldHVybnMgdW5kZWZpbmVkIGlmIGhvbGQgbW9kZSBjb3VsZCBub3QgYmUgZW5hYmxlZC5cblx0ICovXG5cdGVuYWJsZUtleWJpbmRpbmdIb2xkTW9kZShjb21tYW5kSWQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD4gfCB1bmRlZmluZWQ7XG5cblx0ZGlzcGF0Y2hCeVVzZXJTZXR0aW5nc0xhYmVsKHVzZXJTZXR0aW5nc0xhYmVsOiBzdHJpbmcsIHRhcmdldDogSUNvbnRleHRLZXlTZXJ2aWNlVGFyZ2V0KTogdm9pZDtcblxuXHQvKipcblx0ICogTG9vayB1cCBrZXliaW5kaW5ncyBmb3IgYSBjb21tYW5kLlxuXHQgKiBVc2UgYGxvb2t1cEtleWJpbmRpbmdgIGlmIHlvdSBhcmUgaW50ZXJlc3RlZCBpbiB0aGUgcHJlZmVycmVkIGtleWJpbmRpbmcuXG5cdCAqL1xuXHRsb29rdXBLZXliaW5kaW5ncyhjb21tYW5kSWQ6IHN0cmluZyk6IFJlc29sdmVkS2V5YmluZGluZ1tdO1xuXG5cdC8qKlxuXHQgKiBMb29rIHVwIHRoZSBwcmVmZXJyZWQgKGxhc3QgZGVmaW5lZCkga2V5YmluZGluZyBmb3IgYSBjb21tYW5kLlxuXHQgKiBAcmV0dXJucyBUaGUgcHJlZmVycmVkIGtleWJpbmRpbmcgb3IgbnVsbCBpZiB0aGUgY29tbWFuZCBpcyBub3QgYm91bmQuXG5cdCAqL1xuXHRsb29rdXBLZXliaW5kaW5nKGNvbW1hbmRJZDogc3RyaW5nLCBjb250ZXh0PzogSUNvbnRleHRLZXlTZXJ2aWNlLCBlbmZvcmNlQ29udGV4dENoZWNrPzogYm9vbGVhbik6IFJlc29sdmVkS2V5YmluZGluZyB8IHVuZGVmaW5lZDtcblxuXHRnZXREZWZhdWx0S2V5YmluZGluZ3NDb250ZW50KCk6IHN0cmluZztcblxuXHRnZXREZWZhdWx0S2V5YmluZGluZ3MoKTogcmVhZG9ubHkgUmVzb2x2ZWRLZXliaW5kaW5nSXRlbVtdO1xuXG5cdGdldEtleWJpbmRpbmdzKCk6IHJlYWRvbmx5IFJlc29sdmVkS2V5YmluZGluZ0l0ZW1bXTtcblxuXHRjdXN0b21LZXliaW5kaW5nc0NvdW50KCk6IG51bWJlcjtcblxuXHQvKipcblx0ICogV2lsbCB0aGUgZ2l2ZW4ga2V5IGV2ZW50IHByb2R1Y2UgYSBjaGFyYWN0ZXIgdGhhdCdzIHJlbmRlcmVkIG9uIHNjcmVlbiwgZS5nLiBpbiBhXG5cdCAqIHRleHQgYm94LiAqTm90ZSogdGhhdCB0aGUgcmVzdWx0cyBvZiB0aGlzIGZ1bmN0aW9uIGNhbiBiZSBpbmNvcnJlY3QuXG5cdCAqL1xuXHRtaWdodFByb2R1Y2VQcmludGFibGVDaGFyYWN0ZXIoZXZlbnQ6IElLZXlib2FyZEV2ZW50KTogYm9vbGVhbjtcblxuXHRyZWdpc3RlclNjaGVtYUNvbnRyaWJ1dGlvbihjb250cmlidXRpb246IEtleWJpbmRpbmdzU2NoZW1hQ29udHJpYnV0aW9uKTogSURpc3Bvc2FibGU7XG5cblx0dG9nZ2xlTG9nZ2luZygpOiBib29sZWFuO1xuXG5cdF9kdW1wRGVidWdJbmZvKCk6IHN0cmluZztcblx0X2R1bXBEZWJ1Z0luZm9KU09OKCk6IHN0cmluZztcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBV0EsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQTZCN0UsT0FBTyxNQUFNQyxrQkFBa0I7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQXFCLG1CQUFtQixDQUFDIiwiaWdub3JlTGlzdCI6W119

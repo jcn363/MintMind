@@ -1,0 +1,74 @@
+bf77998d531678ab543b39bd5eaa932c
+/* istanbul ignore next */
+function cov_2456a9g6bp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/terminal.all.ts";
+  var hash = "b93fb0363064251dd71399fcd409fb76fc00ab63";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/terminal.all.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/terminal.all.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,iCAAiC;AACjC,OAAO,oCAAoC,CAAC;AAE5C,gDAAgD;AAChD,OAAO,8CAA8C,CAAC;AACtD,OAAO,kDAAkD,CAAC;AAC1D,OAAO,2BAA2B,CAAC;AAEnC,oGAAoG;AACpG,kCAAkC;AAClC,OAAO,iFAAiF,CAAC;AACzF,OAAO,6EAA6E,CAAC;AACrF,OAAO,mFAAmF,CAAC;AAC3F,OAAO,yEAAyE,CAAC;AACjF,OAAO,2FAA2F,CAAC;AACnG,OAAO,+DAA+D,CAAC;AACvE,OAAO,+DAA+D,CAAC;AACvE,OAAO,+EAA+E,CAAC;AACvF,OAAO,qEAAqE,CAAC;AAC7E,OAAO,iEAAiE,CAAC;AACzE,OAAO,+DAA+D,CAAC;AACvE,OAAO,+EAA+E,CAAC;AACvF,OAAO,6EAA6E,CAAC;AACrF,OAAO,uEAAuE,CAAC;AAC/E,OAAO,yEAAyE,CAAC;AACjF,OAAO,+EAA+E,CAAC;AACvF,OAAO,2EAA2E,CAAC;AACnF,OAAO,qEAAqE,CAAC;AAC7E,OAAO,sEAAsE,CAAC;AAC9E,OAAO,yFAAyF,CAAC;AACjG,OAAO,iEAAiE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/terminal.all.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n// Primary workbench contribution\nimport './browser/terminal.contribution.js';\n\n// Misc extensions to the workbench contribution\nimport './common/environmentVariable.contribution.js';\nimport './common/terminalExtensionPoints.contribution.js';\nimport './browser/terminalView.js';\n\n// Terminal contributions - Standalone extensions to the terminal, these cannot be imported from the\n// primary workbench contribution)\nimport '../terminalContrib/accessibility/browser/terminal.accessibility.contribution.js';\nimport '../terminalContrib/autoReplies/browser/terminal.autoReplies.contribution.js';\nimport '../terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution.js';\nimport '../terminalContrib/developer/browser/terminal.developer.contribution.js';\nimport '../terminalContrib/environmentChanges/browser/terminal.environmentChanges.contribution.js';\nimport '../terminalContrib/find/browser/terminal.find.contribution.js';\nimport '../terminalContrib/chat/browser/terminal.chat.contribution.js';\nimport '../terminalContrib/commandGuide/browser/terminal.commandGuide.contribution.js';\nimport '../terminalContrib/history/browser/terminal.history.contribution.js';\nimport '../terminalContrib/links/browser/terminal.links.contribution.js';\nimport '../terminalContrib/zoom/browser/terminal.zoom.contribution.js';\nimport '../terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution.js';\nimport '../terminalContrib/quickAccess/browser/terminal.quickAccess.contribution.js';\nimport '../terminalContrib/quickFix/browser/terminal.quickFix.contribution.js';\nimport '../terminalContrib/typeAhead/browser/terminal.typeAhead.contribution.js';\nimport '../terminalContrib/sendSequence/browser/terminal.sendSequence.contribution.js';\nimport '../terminalContrib/sendSignal/browser/terminal.sendSignal.contribution.js';\nimport '../terminalContrib/suggest/browser/terminal.suggest.contribution.js';\nimport '../terminalContrib/chat/browser/terminal.initialHint.contribution.js';\nimport '../terminalContrib/wslRecommendation/browser/terminal.wslRecommendation.contribution.js';\nimport '../terminalContrib/voice/browser/terminal.voice.contribution.js';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b93fb0363064251dd71399fcd409fb76fc00ab63"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2456a9g6bp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2456a9g6bp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+// Primary workbench contribution
+import './browser/terminal.contribution.js';
+// Misc extensions to the workbench contribution
+import './common/environmentVariable.contribution.js';
+import './common/terminalExtensionPoints.contribution.js';
+import './browser/terminalView.js';
+// Terminal contributions - Standalone extensions to the terminal, these cannot be imported from the
+// primary workbench contribution)
+import '../terminalContrib/accessibility/browser/terminal.accessibility.contribution.js';
+import '../terminalContrib/autoReplies/browser/terminal.autoReplies.contribution.js';
+import '../terminalContrib/chatAgentTools/browser/terminal.chatAgentTools.contribution.js';
+import '../terminalContrib/developer/browser/terminal.developer.contribution.js';
+import '../terminalContrib/environmentChanges/browser/terminal.environmentChanges.contribution.js';
+import '../terminalContrib/find/browser/terminal.find.contribution.js';
+import '../terminalContrib/chat/browser/terminal.chat.contribution.js';
+import '../terminalContrib/commandGuide/browser/terminal.commandGuide.contribution.js';
+import '../terminalContrib/history/browser/terminal.history.contribution.js';
+import '../terminalContrib/links/browser/terminal.links.contribution.js';
+import '../terminalContrib/zoom/browser/terminal.zoom.contribution.js';
+import '../terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution.js';
+import '../terminalContrib/quickAccess/browser/terminal.quickAccess.contribution.js';
+import '../terminalContrib/quickFix/browser/terminal.quickFix.contribution.js';
+import '../terminalContrib/typeAhead/browser/terminal.typeAhead.contribution.js';
+import '../terminalContrib/sendSequence/browser/terminal.sendSequence.contribution.js';
+import '../terminalContrib/sendSignal/browser/terminal.sendSignal.contribution.js';
+import '../terminalContrib/suggest/browser/terminal.suggest.contribution.js';
+import '../terminalContrib/chat/browser/terminal.initialHint.contribution.js';
+import '../terminalContrib/wslRecommendation/browser/terminal.wslRecommendation.contribution.js';
+import '../terminalContrib/voice/browser/terminal.voice.contribution.js';
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjQ1NmE5ZzZicCIsImFjdHVhbENvdmVyYWdlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbC90ZXJtaW5hbC5hbGwudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbi8vIFByaW1hcnkgd29ya2JlbmNoIGNvbnRyaWJ1dGlvblxuaW1wb3J0ICcuL2Jyb3dzZXIvdGVybWluYWwuY29udHJpYnV0aW9uLmpzJztcblxuLy8gTWlzYyBleHRlbnNpb25zIHRvIHRoZSB3b3JrYmVuY2ggY29udHJpYnV0aW9uXG5pbXBvcnQgJy4vY29tbW9uL2Vudmlyb25tZW50VmFyaWFibGUuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi9jb21tb24vdGVybWluYWxFeHRlbnNpb25Qb2ludHMuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi9icm93c2VyL3Rlcm1pbmFsVmlldy5qcyc7XG5cbi8vIFRlcm1pbmFsIGNvbnRyaWJ1dGlvbnMgLSBTdGFuZGFsb25lIGV4dGVuc2lvbnMgdG8gdGhlIHRlcm1pbmFsLCB0aGVzZSBjYW5ub3QgYmUgaW1wb3J0ZWQgZnJvbSB0aGVcbi8vIHByaW1hcnkgd29ya2JlbmNoIGNvbnRyaWJ1dGlvbilcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL2FjY2Vzc2liaWxpdHkvYnJvd3Nlci90ZXJtaW5hbC5hY2Nlc3NpYmlsaXR5LmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9hdXRvUmVwbGllcy9icm93c2VyL3Rlcm1pbmFsLmF1dG9SZXBsaWVzLmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9jaGF0QWdlbnRUb29scy9icm93c2VyL3Rlcm1pbmFsLmNoYXRBZ2VudFRvb2xzLmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9kZXZlbG9wZXIvYnJvd3Nlci90ZXJtaW5hbC5kZXZlbG9wZXIuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL2Vudmlyb25tZW50Q2hhbmdlcy9icm93c2VyL3Rlcm1pbmFsLmVudmlyb25tZW50Q2hhbmdlcy5jb250cmlidXRpb24uanMnO1xuaW1wb3J0ICcuLi90ZXJtaW5hbENvbnRyaWIvZmluZC9icm93c2VyL3Rlcm1pbmFsLmZpbmQuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL2NoYXQvYnJvd3Nlci90ZXJtaW5hbC5jaGF0LmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9jb21tYW5kR3VpZGUvYnJvd3Nlci90ZXJtaW5hbC5jb21tYW5kR3VpZGUuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL2hpc3RvcnkvYnJvd3Nlci90ZXJtaW5hbC5oaXN0b3J5LmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9saW5rcy9icm93c2VyL3Rlcm1pbmFsLmxpbmtzLmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi96b29tL2Jyb3dzZXIvdGVybWluYWwuem9vbS5jb250cmlidXRpb24uanMnO1xuaW1wb3J0ICcuLi90ZXJtaW5hbENvbnRyaWIvc3RpY2t5U2Nyb2xsL2Jyb3dzZXIvdGVybWluYWwuc3RpY2t5U2Nyb2xsLmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9xdWlja0FjY2Vzcy9icm93c2VyL3Rlcm1pbmFsLnF1aWNrQWNjZXNzLmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9xdWlja0ZpeC9icm93c2VyL3Rlcm1pbmFsLnF1aWNrRml4LmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi90eXBlQWhlYWQvYnJvd3Nlci90ZXJtaW5hbC50eXBlQWhlYWQuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL3NlbmRTZXF1ZW5jZS9icm93c2VyL3Rlcm1pbmFsLnNlbmRTZXF1ZW5jZS5jb250cmlidXRpb24uanMnO1xuaW1wb3J0ICcuLi90ZXJtaW5hbENvbnRyaWIvc2VuZFNpZ25hbC9icm93c2VyL3Rlcm1pbmFsLnNlbmRTaWduYWwuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL3N1Z2dlc3QvYnJvd3Nlci90ZXJtaW5hbC5zdWdnZXN0LmNvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgJy4uL3Rlcm1pbmFsQ29udHJpYi9jaGF0L2Jyb3dzZXIvdGVybWluYWwuaW5pdGlhbEhpbnQuY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL3dzbFJlY29tbWVuZGF0aW9uL2Jyb3dzZXIvdGVybWluYWwud3NsUmVjb21tZW5kYXRpb24uY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCAnLi4vdGVybWluYWxDb250cmliL3ZvaWNlL2Jyb3dzZXIvdGVybWluYWwudm9pY2UuY29udHJpYnV0aW9uLmpzJztcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCTztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbEJQOzs7O0FBS0E7QUFDQSxPQUFPLG9DQUFvQztBQUUzQztBQUNBLE9BQU8sOENBQThDO0FBQ3JELE9BQU8sa0RBQWtEO0FBQ3pELE9BQU8sMkJBQTJCO0FBRWxDO0FBQ0E7QUFDQSxPQUFPLGlGQUFpRjtBQUN4RixPQUFPLDZFQUE2RTtBQUNwRixPQUFPLG1GQUFtRjtBQUMxRixPQUFPLHlFQUF5RTtBQUNoRixPQUFPLDJGQUEyRjtBQUNsRyxPQUFPLCtEQUErRDtBQUN0RSxPQUFPLCtEQUErRDtBQUN0RSxPQUFPLCtFQUErRTtBQUN0RixPQUFPLHFFQUFxRTtBQUM1RSxPQUFPLGlFQUFpRTtBQUN4RSxPQUFPLCtEQUErRDtBQUN0RSxPQUFPLCtFQUErRTtBQUN0RixPQUFPLDZFQUE2RTtBQUNwRixPQUFPLHVFQUF1RTtBQUM5RSxPQUFPLHlFQUF5RTtBQUNoRixPQUFPLCtFQUErRTtBQUN0RixPQUFPLDJFQUEyRTtBQUNsRixPQUFPLHFFQUFxRTtBQUM1RSxPQUFPLHNFQUFzRTtBQUM3RSxPQUFPLHlGQUF5RjtBQUNoRyxPQUFPLGlFQUFpRSIsImlnbm9yZUxpc3QiOltdfQ==

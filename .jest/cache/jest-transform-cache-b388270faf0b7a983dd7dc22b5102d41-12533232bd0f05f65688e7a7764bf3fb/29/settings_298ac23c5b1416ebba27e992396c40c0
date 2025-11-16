@@ -1,0 +1,89 @@
+46396464c05cb86d313317f84b6214ee
+/* istanbul ignore next */
+function cov_2j5gytudhw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/settings.ts";
+  var hash = "3a7de985c62123734565634ea5407d461b2747dd";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/settings.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 49
+        },
+        end: {
+          line: 5,
+          column: 86
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 47
+        },
+        end: {
+          line: 6,
+          column: 84
+        }
+      },
+      "2": {
+        start: {
+          line: 7,
+          column: 46
+        },
+        end: {
+          line: 7,
+          column: 81
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/settings.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,CAAC,MAAM,iCAAiC,GAAG,qCAAqC,CAAC;AACvF,MAAM,CAAC,MAAM,+BAA+B,GAAG,qCAAqC,CAAC;AACrF,MAAM,CAAC,MAAM,8BAA8B,GAAG,mCAAmC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/settings.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const EDIT_TELEMETRY_DETAILS_SETTING_ID = 'telemetry.editStats.details.enabled';\nexport const EDIT_TELEMETRY_SHOW_DECORATIONS = 'telemetry.editStats.showDecorations';\nexport const EDIT_TELEMETRY_SHOW_STATUS_BAR = 'telemetry.editStats.showStatusBar';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3a7de985c62123734565634ea5407d461b2747dd"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2j5gytudhw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2j5gytudhw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const EDIT_TELEMETRY_DETAILS_SETTING_ID =
+/* istanbul ignore next */
+(cov_2j5gytudhw().s[0]++, 'telemetry.editStats.details.enabled');
+export const EDIT_TELEMETRY_SHOW_DECORATIONS =
+/* istanbul ignore next */
+(cov_2j5gytudhw().s[1]++, 'telemetry.editStats.showDecorations');
+export const EDIT_TELEMETRY_SHOW_STATUS_BAR =
+/* istanbul ignore next */
+(cov_2j5gytudhw().s[2]++, 'telemetry.editStats.showStatusBar');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFRElUX1RFTEVNRVRSWV9ERVRBSUxTX1NFVFRJTkdfSUQiLCJjb3ZfMmo1Z3l0dWRodyIsInMiLCJFRElUX1RFTEVNRVRSWV9TSE9XX0RFQ09SQVRJT05TIiwiRURJVF9URUxFTUVUUllfU0hPV19TVEFUVVNfQkFSIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9lZGl0VGVsZW1ldHJ5L2Jyb3dzZXIvc2V0dGluZ3MudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCBjb25zdCBFRElUX1RFTEVNRVRSWV9ERVRBSUxTX1NFVFRJTkdfSUQgPSAndGVsZW1ldHJ5LmVkaXRTdGF0cy5kZXRhaWxzLmVuYWJsZWQnO1xuZXhwb3J0IGNvbnN0IEVESVRfVEVMRU1FVFJZX1NIT1dfREVDT1JBVElPTlMgPSAndGVsZW1ldHJ5LmVkaXRTdGF0cy5zaG93RGVjb3JhdGlvbnMnO1xuZXhwb3J0IGNvbnN0IEVESVRfVEVMRU1FVFJZX1NIT1dfU1RBVFVTX0JBUiA9ICd0ZWxlbWV0cnkuZWRpdFN0YXRzLnNob3dTdGF0dXNCYXInO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsT0FBTyxNQUFNQSxpQ0FBaUM7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHLHFDQUFxQztBQUN0RixPQUFPLE1BQU1DLCtCQUErQjtBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBQyxDQUFBLE9BQUcscUNBQXFDO0FBQ3BGLE9BQU8sTUFBTUUsOEJBQThCO0FBQUE7QUFBQSxDQUFBSCxjQUFBLEdBQUFDLENBQUEsT0FBRyxtQ0FBbUMiLCJpZ25vcmVMaXN0IjpbXX0=

@@ -1,0 +1,179 @@
+9f96b54cc3a9353029f8e6e7fe956063
+/* istanbul ignore next */
+function cov_1wvndslced() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatVariables.ts";
+  var hash = "617d4f42afee14d62fba6e3b2c758a98ef664d89";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatVariables.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 46
+        },
+        end: {
+          line: 6,
+          column: 141
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 55
+        },
+        end: {
+          line: 6,
+          column: 141
+        }
+      },
+      "2": {
+        start: {
+          line: 7,
+          column: 37
+        },
+        end: {
+          line: 7,
+          column: 77
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 6,
+            column: 46
+          },
+          end: {
+            line: 6,
+            column: 47
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 55
+          },
+          end: {
+            line: 6,
+            column: 141
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 6,
+            column: 55
+          },
+          end: {
+            line: 6,
+            column: 141
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 6,
+            column: 55
+          },
+          end: {
+            line: 6,
+            column: 78
+          }
+        }, {
+          start: {
+            line: 6,
+            column: 82
+          },
+          end: {
+            line: 6,
+            column: 94
+          }
+        }, {
+          start: {
+            line: 6,
+            column: 98
+          },
+          end: {
+            line: 6,
+            column: 109
+          }
+        }, {
+          start: {
+            line: 6,
+            column: 113
+          },
+          end: {
+            line: 6,
+            column: 141
+          }
+        }],
+        line: 6
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatVariables.ts",
+      mappings: "AAAA;;;gGAGgG;AAOhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAqB7F,MAAM,CAAC,MAAM,8BAA8B,GAAG,CAAC,GAAY,EAAuC,EAAE,CACnG,OAAO,GAAG,KAAK,QAAQ,IAAI,GAAG,KAAK,IAAI,IAAI,IAAI,IAAI,GAAG,IAAK,GAAoC,CAAC,EAAE,KAAK,iBAAiB,CAAC;AAY1H,MAAM,CAAC,MAAM,qBAAqB,GAAG,eAAe,CAAwB,uBAAuB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatVariables.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { ThemeIcon } from '../../../../base/common/themables.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { IRange } from '../../../../editor/common/core/range.js';\nimport { Location } from '../../../../editor/common/languages.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IChatModel } from './chatModel.js';\nimport { IChatContentReference, IChatProgressMessage } from './chatService.js';\nimport { IDiagnosticVariableEntryFilterData, StringChatContextValue } from './chatVariableEntries.js';\nimport { IToolAndToolSetEnablementMap } from './languageModelToolsService.js';\n\nexport interface IChatVariableData {\n\tid: string;\n\tname: string;\n\ticon?: ThemeIcon;\n\tfullName?: string;\n\tdescription: string;\n\tmodelDescription?: string;\n\tcanTakeArgument?: boolean;\n}\n\nexport interface IChatRequestProblemsVariable {\n\tid: 'vscode.problems';\n\tfilter: IDiagnosticVariableEntryFilterData;\n}\n\nexport const isIChatRequestProblemsVariable = (obj: unknown): obj is IChatRequestProblemsVariable =>\n\ttypeof obj === 'object' && obj !== null && 'id' in obj && (obj as IChatRequestProblemsVariable).id === 'vscode.problems';\n\nexport type IChatRequestVariableValue = string | URI | Location | Uint8Array | IChatRequestProblemsVariable | StringChatContextValue | unknown;\n\nexport type IChatVariableResolverProgress =\n\t| IChatContentReference\n\t| IChatProgressMessage;\n\nexport interface IChatVariableResolver {\n\t(messageText: string, arg: string | undefined, model: IChatModel, progress: (part: IChatVariableResolverProgress) => void, token: CancellationToken): Promise<IChatRequestVariableValue | undefined>;\n}\n\nexport const IChatVariablesService = createDecorator<IChatVariablesService>('IChatVariablesService');\n\nexport interface IChatVariablesService {\n\t_serviceBrand: undefined;\n\tgetDynamicVariables(sessionResource: URI): ReadonlyArray<IDynamicVariable>;\n\tgetSelectedToolAndToolSets(sessionResource: URI): IToolAndToolSetEnablementMap;\n}\n\nexport interface IDynamicVariable {\n\trange: IRange;\n\tid: string;\n\tfullName?: string;\n\ticon?: ThemeIcon;\n\tmodelDescription?: string;\n\tisFile?: boolean;\n\tisDirectory?: boolean;\n\tdata: IChatRequestVariableValue;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "617d4f42afee14d62fba6e3b2c758a98ef664d89"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1wvndslced = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1wvndslced();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+/* istanbul ignore next */
+cov_1wvndslced().s[0]++;
+export const isIChatRequestProblemsVariable = obj => {
+  /* istanbul ignore next */
+  cov_1wvndslced().f[0]++;
+  cov_1wvndslced().s[1]++;
+  return /* istanbul ignore next */(cov_1wvndslced().b[0][0]++, typeof obj === 'object') &&
+  /* istanbul ignore next */
+  (cov_1wvndslced().b[0][1]++, obj !== null) &&
+  /* istanbul ignore next */
+  (cov_1wvndslced().b[0][2]++, 'id' in obj) &&
+  /* istanbul ignore next */
+  (cov_1wvndslced().b[0][3]++, obj.id === 'vscode.problems');
+};
+export const IChatVariablesService =
+/* istanbul ignore next */
+(cov_1wvndslced().s[2]++, createDecorator('IChatVariablesService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJjb3ZfMXd2bmRzbGNlZCIsInMiLCJpc0lDaGF0UmVxdWVzdFByb2JsZW1zVmFyaWFibGUiLCJvYmoiLCJmIiwiYiIsImlkIiwiSUNoYXRWYXJpYWJsZXNTZXJ2aWNlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jaGF0L2NvbW1vbi9jaGF0VmFyaWFibGVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyBUaGVtZUljb24gfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi90aGVtYWJsZXMuanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IElSYW5nZSB9IGZyb20gJy4uLy4uLy4uLy4uL2VkaXRvci9jb21tb24vY29yZS9yYW5nZS5qcyc7XG5pbXBvcnQgeyBMb2NhdGlvbiB9IGZyb20gJy4uLy4uLy4uLy4uL2VkaXRvci9jb21tb24vbGFuZ3VhZ2VzLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUNoYXRNb2RlbCB9IGZyb20gJy4vY2hhdE1vZGVsLmpzJztcbmltcG9ydCB7IElDaGF0Q29udGVudFJlZmVyZW5jZSwgSUNoYXRQcm9ncmVzc01lc3NhZ2UgfSBmcm9tICcuL2NoYXRTZXJ2aWNlLmpzJztcbmltcG9ydCB7IElEaWFnbm9zdGljVmFyaWFibGVFbnRyeUZpbHRlckRhdGEsIFN0cmluZ0NoYXRDb250ZXh0VmFsdWUgfSBmcm9tICcuL2NoYXRWYXJpYWJsZUVudHJpZXMuanMnO1xuaW1wb3J0IHsgSVRvb2xBbmRUb29sU2V0RW5hYmxlbWVudE1hcCB9IGZyb20gJy4vbGFuZ3VhZ2VNb2RlbFRvb2xzU2VydmljZS5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNoYXRWYXJpYWJsZURhdGEge1xuXHRpZDogc3RyaW5nO1xuXHRuYW1lOiBzdHJpbmc7XG5cdGljb24/OiBUaGVtZUljb247XG5cdGZ1bGxOYW1lPzogc3RyaW5nO1xuXHRkZXNjcmlwdGlvbjogc3RyaW5nO1xuXHRtb2RlbERlc2NyaXB0aW9uPzogc3RyaW5nO1xuXHRjYW5UYWtlQXJndW1lbnQ/OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDaGF0UmVxdWVzdFByb2JsZW1zVmFyaWFibGUge1xuXHRpZDogJ3ZzY29kZS5wcm9ibGVtcyc7XG5cdGZpbHRlcjogSURpYWdub3N0aWNWYXJpYWJsZUVudHJ5RmlsdGVyRGF0YTtcbn1cblxuZXhwb3J0IGNvbnN0IGlzSUNoYXRSZXF1ZXN0UHJvYmxlbXNWYXJpYWJsZSA9IChvYmo6IHVua25vd24pOiBvYmogaXMgSUNoYXRSZXF1ZXN0UHJvYmxlbXNWYXJpYWJsZSA9PlxuXHR0eXBlb2Ygb2JqID09PSAnb2JqZWN0JyAmJiBvYmogIT09IG51bGwgJiYgJ2lkJyBpbiBvYmogJiYgKG9iaiBhcyBJQ2hhdFJlcXVlc3RQcm9ibGVtc1ZhcmlhYmxlKS5pZCA9PT0gJ3ZzY29kZS5wcm9ibGVtcyc7XG5cbmV4cG9ydCB0eXBlIElDaGF0UmVxdWVzdFZhcmlhYmxlVmFsdWUgPSBzdHJpbmcgfCBVUkkgfCBMb2NhdGlvbiB8IFVpbnQ4QXJyYXkgfCBJQ2hhdFJlcXVlc3RQcm9ibGVtc1ZhcmlhYmxlIHwgU3RyaW5nQ2hhdENvbnRleHRWYWx1ZSB8IHVua25vd247XG5cbmV4cG9ydCB0eXBlIElDaGF0VmFyaWFibGVSZXNvbHZlclByb2dyZXNzID1cblx0fCBJQ2hhdENvbnRlbnRSZWZlcmVuY2Vcblx0fCBJQ2hhdFByb2dyZXNzTWVzc2FnZTtcblxuZXhwb3J0IGludGVyZmFjZSBJQ2hhdFZhcmlhYmxlUmVzb2x2ZXIge1xuXHQobWVzc2FnZVRleHQ6IHN0cmluZywgYXJnOiBzdHJpbmcgfCB1bmRlZmluZWQsIG1vZGVsOiBJQ2hhdE1vZGVsLCBwcm9ncmVzczogKHBhcnQ6IElDaGF0VmFyaWFibGVSZXNvbHZlclByb2dyZXNzKSA9PiB2b2lkLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPElDaGF0UmVxdWVzdFZhcmlhYmxlVmFsdWUgfCB1bmRlZmluZWQ+O1xufVxuXG5leHBvcnQgY29uc3QgSUNoYXRWYXJpYWJsZXNTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElDaGF0VmFyaWFibGVzU2VydmljZT4oJ0lDaGF0VmFyaWFibGVzU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElDaGF0VmFyaWFibGVzU2VydmljZSB7XG5cdF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0Z2V0RHluYW1pY1ZhcmlhYmxlcyhzZXNzaW9uUmVzb3VyY2U6IFVSSSk6IFJlYWRvbmx5QXJyYXk8SUR5bmFtaWNWYXJpYWJsZT47XG5cdGdldFNlbGVjdGVkVG9vbEFuZFRvb2xTZXRzKHNlc3Npb25SZXNvdXJjZTogVVJJKTogSVRvb2xBbmRUb29sU2V0RW5hYmxlbWVudE1hcDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRHluYW1pY1ZhcmlhYmxlIHtcblx0cmFuZ2U6IElSYW5nZTtcblx0aWQ6IHN0cmluZztcblx0ZnVsbE5hbWU/OiBzdHJpbmc7XG5cdGljb24/OiBUaGVtZUljb247XG5cdG1vZGVsRGVzY3JpcHRpb24/OiBzdHJpbmc7XG5cdGlzRmlsZT86IGJvb2xlYW47XG5cdGlzRGlyZWN0b3J5PzogYm9vbGVhbjtcblx0ZGF0YTogSUNoYXRSZXF1ZXN0VmFyaWFibGVWYWx1ZTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQVVBLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFBQztBQUFBQyxjQUFBLEdBQUFDLENBQUE7QUFxQjdGLE9BQU8sTUFBTUMsOEJBQThCLEdBQUlDLEdBQVksSUFDMUQ7RUFBQTtFQUFBSCxjQUFBLEdBQUFJLENBQUE7RUFBQUosY0FBQSxHQUFBQyxDQUFBO0VBQUEsa0NBQUFELGNBQUEsR0FBQUssQ0FBQSxpQkFBT0YsR0FBRyxLQUFLLFFBQVE7RUFBQTtFQUFBLENBQUFILGNBQUEsR0FBQUssQ0FBQSxVQUFJRixHQUFHLEtBQUssSUFBSTtFQUFBO0VBQUEsQ0FBQUgsY0FBQSxHQUFBSyxDQUFBLFVBQUksSUFBSSxJQUFJRixHQUFHO0VBQUE7RUFBQSxDQUFBSCxjQUFBLEdBQUFLLENBQUEsVUFBS0YsR0FBb0MsQ0FBQ0csRUFBRSxLQUFLLGlCQUFpQjtBQUFqQixDQUFpQjtBQVl6SCxPQUFPLE1BQU1DLHFCQUFxQjtBQUFBO0FBQUEsQ0FBQVAsY0FBQSxHQUFBQyxDQUFBLE9BQUdGLGVBQWUsQ0FBd0IsdUJBQXVCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

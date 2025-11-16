@@ -1,0 +1,220 @@
+c838a3d9f59c548273eaf8579e5ad974
+/* istanbul ignore next */
+function cov_2akm0b1flp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/nativeEditContextRegistry.ts";
+  var hash = "6847a41116ebcdf7446c709bdbc47a3b0a80a66d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/nativeEditContextRegistry.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 32
+        },
+        end: {
+          line: 6,
+          column: 41
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 71
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 10
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 16
+        },
+        end: {
+          line: 11,
+          column: 63
+        }
+      },
+      "4": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 59
+        }
+      },
+      "5": {
+        start: {
+          line: 19,
+          column: 41
+        },
+        end: {
+          line: 19,
+          column: 76
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 41
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 21
+          },
+          end: {
+            line: 10,
+            column: 22
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 27
+          },
+          end: {
+            line: 12,
+            column: 13
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 15,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 17
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 15
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/nativeEditContextRegistry.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,MAAM,6BAA6B;IAE1B,yBAAyB,GAAmC,IAAI,GAAG,EAAE,CAAC;IAE9E,QAAQ,CAAC,OAAe,EAAE,iBAAoC;QAC7D,IAAI,CAAC,yBAAyB,CAAC,GAAG,CAAC,OAAO,EAAE,iBAAiB,CAAC,CAAC;QAC/D,OAAO;YACN,OAAO,EAAE,GAAG,EAAE;gBACb,IAAI,CAAC,yBAAyB,CAAC,MAAM,CAAC,OAAO,CAAC,CAAC;YAChD,CAAC;SACD,CAAC;IACH,CAAC;IAED,GAAG,CAAC,OAAe;QAClB,OAAO,IAAI,CAAC,yBAAyB,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC;IACpD,CAAC;CACD;AAED,MAAM,CAAC,MAAM,yBAAyB,GAAG,IAAI,6BAA6B,EAAE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/nativeEditContextRegistry.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../../../base/common/lifecycle.js';\nimport { NativeEditContext } from './nativeEditContext.js';\n\nclass NativeEditContextRegistryImpl {\n\n\tprivate _nativeEditContextMapping: Map<string, NativeEditContext> = new Map();\n\n\tregister(ownerID: string, nativeEditContext: NativeEditContext): IDisposable {\n\t\tthis._nativeEditContextMapping.set(ownerID, nativeEditContext);\n\t\treturn {\n\t\t\tdispose: () => {\n\t\t\t\tthis._nativeEditContextMapping.delete(ownerID);\n\t\t\t}\n\t\t};\n\t}\n\n\tget(ownerID: string): NativeEditContext | undefined {\n\t\treturn this._nativeEditContextMapping.get(ownerID);\n\t}\n}\n\nexport const NativeEditContextRegistry = new NativeEditContextRegistryImpl();\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6847a41116ebcdf7446c709bdbc47a3b0a80a66d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2akm0b1flp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2akm0b1flp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+class NativeEditContextRegistryImpl {
+  _nativeEditContextMapping =
+  /* istanbul ignore next */
+  (cov_2akm0b1flp().s[0]++, new Map());
+  register(ownerID, nativeEditContext) {
+    /* istanbul ignore next */
+    cov_2akm0b1flp().f[0]++;
+    cov_2akm0b1flp().s[1]++;
+    this._nativeEditContextMapping.set(ownerID, nativeEditContext);
+    /* istanbul ignore next */
+    cov_2akm0b1flp().s[2]++;
+    return {
+      dispose: () => {
+        /* istanbul ignore next */
+        cov_2akm0b1flp().f[1]++;
+        cov_2akm0b1flp().s[3]++;
+        this._nativeEditContextMapping.delete(ownerID);
+      }
+    };
+  }
+  get(ownerID) {
+    /* istanbul ignore next */
+    cov_2akm0b1flp().f[2]++;
+    cov_2akm0b1flp().s[4]++;
+    return this._nativeEditContextMapping.get(ownerID);
+  }
+}
+export const NativeEditContextRegistry =
+/* istanbul ignore next */
+(cov_2akm0b1flp().s[5]++, new NativeEditContextRegistryImpl());
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMmFrbTBiMWZscCIsImFjdHVhbENvdmVyYWdlIiwiTmF0aXZlRWRpdENvbnRleHRSZWdpc3RyeUltcGwiLCJfbmF0aXZlRWRpdENvbnRleHRNYXBwaW5nIiwicyIsIk1hcCIsInJlZ2lzdGVyIiwib3duZXJJRCIsIm5hdGl2ZUVkaXRDb250ZXh0IiwiZiIsInNldCIsImRpc3Bvc2UiLCJkZWxldGUiLCJnZXQiLCJOYXRpdmVFZGl0Q29udGV4dFJlZ2lzdHJ5Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci9jb250cm9sbGVyL2VkaXRDb250ZXh0L25hdGl2ZS9uYXRpdmVFZGl0Q29udGV4dFJlZ2lzdHJ5LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBOYXRpdmVFZGl0Q29udGV4dCB9IGZyb20gJy4vbmF0aXZlRWRpdENvbnRleHQuanMnO1xuXG5jbGFzcyBOYXRpdmVFZGl0Q29udGV4dFJlZ2lzdHJ5SW1wbCB7XG5cblx0cHJpdmF0ZSBfbmF0aXZlRWRpdENvbnRleHRNYXBwaW5nOiBNYXA8c3RyaW5nLCBOYXRpdmVFZGl0Q29udGV4dD4gPSBuZXcgTWFwKCk7XG5cblx0cmVnaXN0ZXIob3duZXJJRDogc3RyaW5nLCBuYXRpdmVFZGl0Q29udGV4dDogTmF0aXZlRWRpdENvbnRleHQpOiBJRGlzcG9zYWJsZSB7XG5cdFx0dGhpcy5fbmF0aXZlRWRpdENvbnRleHRNYXBwaW5nLnNldChvd25lcklELCBuYXRpdmVFZGl0Q29udGV4dCk7XG5cdFx0cmV0dXJuIHtcblx0XHRcdGRpc3Bvc2U6ICgpID0+IHtcblx0XHRcdFx0dGhpcy5fbmF0aXZlRWRpdENvbnRleHRNYXBwaW5nLmRlbGV0ZShvd25lcklEKTtcblx0XHRcdH1cblx0XHR9O1xuXHR9XG5cblx0Z2V0KG93bmVySUQ6IHN0cmluZyk6IE5hdGl2ZUVkaXRDb250ZXh0IHwgdW5kZWZpbmVkIHtcblx0XHRyZXR1cm4gdGhpcy5fbmF0aXZlRWRpdENvbnRleHRNYXBwaW5nLmdldChvd25lcklEKTtcblx0fVxufVxuXG5leHBvcnQgY29uc3QgTmF0aXZlRWRpdENvbnRleHRSZWdpc3RyeSA9IG5ldyBOYXRpdmVFZGl0Q29udGV4dFJlZ2lzdHJ5SW1wbCgpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQXNCRTtJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBdEJGOzs7O0FBUUEsTUFBTUUsNkJBQTZCO0VBRTFCQyx5QkFBeUI7RUFBQTtFQUFBLENBQUFILGNBQUEsR0FBQUksQ0FBQSxPQUFtQyxJQUFJQyxHQUFHLEVBQUU7RUFFN0VDLFFBQVFBLENBQUNDLE9BQWUsRUFBRUMsaUJBQW9DO0lBQUE7SUFBQVIsY0FBQSxHQUFBUyxDQUFBO0lBQUFULGNBQUEsR0FBQUksQ0FBQTtJQUM3RCxJQUFJLENBQUNELHlCQUF5QixDQUFDTyxHQUFHLENBQUNILE9BQU8sRUFBRUMsaUJBQWlCLENBQUM7SUFBQztJQUFBUixjQUFBLEdBQUFJLENBQUE7SUFDL0QsT0FBTztNQUNOTyxPQUFPLEVBQUVBLENBQUEsS0FBSztRQUFBO1FBQUFYLGNBQUEsR0FBQVMsQ0FBQTtRQUFBVCxjQUFBLEdBQUFJLENBQUE7UUFDYixJQUFJLENBQUNELHlCQUF5QixDQUFDUyxNQUFNLENBQUNMLE9BQU8sQ0FBQztNQUMvQztLQUNBO0VBQ0Y7RUFFQU0sR0FBR0EsQ0FBQ04sT0FBZTtJQUFBO0lBQUFQLGNBQUEsR0FBQVMsQ0FBQTtJQUFBVCxjQUFBLEdBQUFJLENBQUE7SUFDbEIsT0FBTyxJQUFJLENBQUNELHlCQUF5QixDQUFDVSxHQUFHLENBQUNOLE9BQU8sQ0FBQztFQUNuRDs7QUFHRCxPQUFPLE1BQU1PLHlCQUF5QjtBQUFBO0FBQUEsQ0FBQWQsY0FBQSxHQUFBSSxDQUFBLE9BQUcsSUFBSUYsNkJBQTZCLEVBQUUiLCJpZ25vcmVMaXN0IjpbXX0=

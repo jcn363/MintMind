@@ -1,0 +1,46 @@
+31f432e5ce5c8636258cf6b50b87b180
+/* istanbul ignore next */
+function cov_sla9dcdj8() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineRewriter/commandLineRewriter.ts";
+  var hash = "db523f0eb9e93c68a17e0e3b3a653f851dcd7bbe";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineRewriter/commandLineRewriter.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineRewriter/commandLineRewriter.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/commandLineRewriter/commandLineRewriter.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { MaybePromise } from '../../../../../../../base/common/async.js';\nimport type { IDisposable } from '../../../../../../../base/common/lifecycle.js';\nimport type { OperatingSystem } from '../../../../../../../base/common/platform.js';\nimport type { URI } from '../../../../../../../base/common/uri.js';\n\nexport interface ICommandLineRewriter extends IDisposable {\n\trewrite(options: ICommandLineRewriterOptions): MaybePromise<ICommandLineRewriterResult | undefined>;\n}\n\nexport interface ICommandLineRewriterOptions {\n\tcommandLine: string;\n\tcwd: URI | undefined;\n\tshell: string;\n\tos: OperatingSystem;\n}\n\nexport interface ICommandLineRewriterResult {\n\trewritten: string;\n\treasoning: string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "db523f0eb9e93c68a17e0e3b3a653f851dcd7bbe"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_sla9dcdj8 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_sla9dcdj8();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvY2hhdEFnZW50VG9vbHMvYnJvd3Nlci90b29scy9jb21tYW5kTGluZVJld3JpdGVyL2NvbW1hbmRMaW5lUmV3cml0ZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB0eXBlIHsgTWF5YmVQcm9taXNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vYXN5bmMuanMnO1xuaW1wb3J0IHR5cGUgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgdHlwZSB7IE9wZXJhdGluZ1N5c3RlbSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB0eXBlIHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJQ29tbWFuZExpbmVSZXdyaXRlciBleHRlbmRzIElEaXNwb3NhYmxlIHtcblx0cmV3cml0ZShvcHRpb25zOiBJQ29tbWFuZExpbmVSZXdyaXRlck9wdGlvbnMpOiBNYXliZVByb21pc2U8SUNvbW1hbmRMaW5lUmV3cml0ZXJSZXN1bHQgfCB1bmRlZmluZWQ+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tYW5kTGluZVJld3JpdGVyT3B0aW9ucyB7XG5cdGNvbW1hbmRMaW5lOiBzdHJpbmc7XG5cdGN3ZDogVVJJIHwgdW5kZWZpbmVkO1xuXHRzaGVsbDogc3RyaW5nO1xuXHRvczogT3BlcmF0aW5nU3lzdGVtO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tYW5kTGluZVJld3JpdGVyUmVzdWx0IHtcblx0cmV3cml0dGVuOiBzdHJpbmc7XG5cdHJlYXNvbmluZzogc3RyaW5nO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

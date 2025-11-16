@@ -1,0 +1,209 @@
+269987c0a87a8b46b26263211047b2c6
+/* istanbul ignore next */
+function cov_lhvvhmv2c() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/inputMode.ts";
+  var hash = "07df9728b26d3c80bbdf88ceefe705a81d9e92de";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/inputMode.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 17
+        },
+        end: {
+          line: 7,
+          column: 25
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 28
+        },
+        end: {
+          line: 8,
+          column: 41
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 27
+        },
+        end: {
+          line: 9,
+          column: 59
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 31
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 36
+        }
+      },
+      "5": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 57
+        }
+      },
+      "6": {
+        start: {
+          line: 21,
+          column: 25
+        },
+        end: {
+          line: 21,
+          column: 44
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 19
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 28
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/inputMode.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAS,MAAM,4BAA4B,CAAC;AAE5D,MAAM,aAAa;IAEV,UAAU,GAA0B,QAAQ,CAAC;IACpC,qBAAqB,GAAG,IAAI,OAAO,EAAyB,CAAC;IAC9D,oBAAoB,GAAiC,IAAI,CAAC,qBAAqB,CAAC,KAAK,CAAC;IAE/F,YAAY;QAClB,OAAO,IAAI,CAAC,UAAU,CAAC;IACxB,CAAC;IAEM,YAAY,CAAC,SAAgC;QACnD,IAAI,CAAC,UAAU,GAAG,SAAS,CAAC;QAC5B,IAAI,CAAC,qBAAqB,CAAC,IAAI,CAAC,IAAI,CAAC,UAAU,CAAC,CAAC;IAClD,CAAC;CACD;AAED;;GAEG;AACH,MAAM,CAAC,MAAM,SAAS,GAAG,IAAI,aAAa,EAAE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/inputMode.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Emitter, Event } from '../../base/common/event.js';\n\nclass InputModeImpl {\n\n\tprivate _inputMode: 'overtype' | 'insert' = 'insert';\n\tprivate readonly _onDidChangeInputMode = new Emitter<'overtype' | 'insert'>();\n\tpublic readonly onDidChangeInputMode: Event<'overtype' | 'insert'> = this._onDidChangeInputMode.event;\n\n\tpublic getInputMode(): 'overtype' | 'insert' {\n\t\treturn this._inputMode;\n\t}\n\n\tpublic setInputMode(inputMode: 'overtype' | 'insert'): void {\n\t\tthis._inputMode = inputMode;\n\t\tthis._onDidChangeInputMode.fire(this._inputMode);\n\t}\n}\n\n/**\n * Controls the type mode, whether insert or overtype\n */\nexport const InputMode = new InputModeImpl();\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "07df9728b26d3c80bbdf88ceefe705a81d9e92de"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_lhvvhmv2c = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_lhvvhmv2c();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Emitter } from '../../base/common/event.js';
+class InputModeImpl {
+  _inputMode =
+  /* istanbul ignore next */
+  (cov_lhvvhmv2c().s[0]++, 'insert');
+  _onDidChangeInputMode =
+  /* istanbul ignore next */
+  (cov_lhvvhmv2c().s[1]++, new Emitter());
+  onDidChangeInputMode =
+  /* istanbul ignore next */
+  (cov_lhvvhmv2c().s[2]++, this._onDidChangeInputMode.event);
+  getInputMode() {
+    /* istanbul ignore next */
+    cov_lhvvhmv2c().f[0]++;
+    cov_lhvvhmv2c().s[3]++;
+    return this._inputMode;
+  }
+  setInputMode(inputMode) {
+    /* istanbul ignore next */
+    cov_lhvvhmv2c().f[1]++;
+    cov_lhvvhmv2c().s[4]++;
+    this._inputMode = inputMode;
+    /* istanbul ignore next */
+    cov_lhvvhmv2c().s[5]++;
+    this._onDidChangeInputMode.fire(this._inputMode);
+  }
+}
+/**
+ * Controls the type mode, whether insert or overtype
+ */
+export const InputMode =
+/* istanbul ignore next */
+(cov_lhvvhmv2c().s[6]++, new InputModeImpl());
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfbGh2dmhtdjJjIiwiYWN0dWFsQ292ZXJhZ2UiLCJFbWl0dGVyIiwiSW5wdXRNb2RlSW1wbCIsIl9pbnB1dE1vZGUiLCJzIiwiX29uRGlkQ2hhbmdlSW5wdXRNb2RlIiwib25EaWRDaGFuZ2VJbnB1dE1vZGUiLCJldmVudCIsImdldElucHV0TW9kZSIsImYiLCJzZXRJbnB1dE1vZGUiLCJpbnB1dE1vZGUiLCJmaXJlIiwiSW5wdXRNb2RlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2lucHV0TW9kZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRW1pdHRlciwgRXZlbnQgfSBmcm9tICcuLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5cbmNsYXNzIElucHV0TW9kZUltcGwge1xuXG5cdHByaXZhdGUgX2lucHV0TW9kZTogJ292ZXJ0eXBlJyB8ICdpbnNlcnQnID0gJ2luc2VydCc7XG5cdHByaXZhdGUgcmVhZG9ubHkgX29uRGlkQ2hhbmdlSW5wdXRNb2RlID0gbmV3IEVtaXR0ZXI8J292ZXJ0eXBlJyB8ICdpbnNlcnQnPigpO1xuXHRwdWJsaWMgcmVhZG9ubHkgb25EaWRDaGFuZ2VJbnB1dE1vZGU6IEV2ZW50PCdvdmVydHlwZScgfCAnaW5zZXJ0Jz4gPSB0aGlzLl9vbkRpZENoYW5nZUlucHV0TW9kZS5ldmVudDtcblxuXHRwdWJsaWMgZ2V0SW5wdXRNb2RlKCk6ICdvdmVydHlwZScgfCAnaW5zZXJ0JyB7XG5cdFx0cmV0dXJuIHRoaXMuX2lucHV0TW9kZTtcblx0fVxuXG5cdHB1YmxpYyBzZXRJbnB1dE1vZGUoaW5wdXRNb2RlOiAnb3ZlcnR5cGUnIHwgJ2luc2VydCcpOiB2b2lkIHtcblx0XHR0aGlzLl9pbnB1dE1vZGUgPSBpbnB1dE1vZGU7XG5cdFx0dGhpcy5fb25EaWRDaGFuZ2VJbnB1dE1vZGUuZmlyZSh0aGlzLl9pbnB1dE1vZGUpO1xuXHR9XG59XG5cbi8qKlxuICogQ29udHJvbHMgdGhlIHR5cGUgbW9kZSwgd2hldGhlciBpbnNlcnQgb3Igb3ZlcnR5cGVcbiAqL1xuZXhwb3J0IGNvbnN0IElucHV0TW9kZSA9IG5ldyBJbnB1dE1vZGVJbXBsKCk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW9CRTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBcEJGOzs7O0FBS0EsU0FBU0UsT0FBTyxRQUFlLDRCQUE0QjtBQUUzRCxNQUFNQyxhQUFhO0VBRVZDLFVBQVU7RUFBQTtFQUFBLENBQUFKLGFBQUEsR0FBQUssQ0FBQSxPQUEwQixRQUFRO0VBQ25DQyxxQkFBcUI7RUFBQTtFQUFBLENBQUFOLGFBQUEsR0FBQUssQ0FBQSxPQUFHLElBQUlILE9BQU8sRUFBeUI7RUFDN0RLLG9CQUFvQjtFQUFBO0VBQUEsQ0FBQVAsYUFBQSxHQUFBSyxDQUFBLE9BQWlDLElBQUksQ0FBQ0MscUJBQXFCLENBQUNFLEtBQUs7RUFFOUZDLFlBQVlBLENBQUE7SUFBQTtJQUFBVCxhQUFBLEdBQUFVLENBQUE7SUFBQVYsYUFBQSxHQUFBSyxDQUFBO0lBQ2xCLE9BQU8sSUFBSSxDQUFDRCxVQUFVO0VBQ3ZCO0VBRU9PLFlBQVlBLENBQUNDLFNBQWdDO0lBQUE7SUFBQVosYUFBQSxHQUFBVSxDQUFBO0lBQUFWLGFBQUEsR0FBQUssQ0FBQTtJQUNuRCxJQUFJLENBQUNELFVBQVUsR0FBR1EsU0FBUztJQUFDO0lBQUFaLGFBQUEsR0FBQUssQ0FBQTtJQUM1QixJQUFJLENBQUNDLHFCQUFxQixDQUFDTyxJQUFJLENBQUMsSUFBSSxDQUFDVCxVQUFVLENBQUM7RUFDakQ7O0FBR0Q7OztBQUdBLE9BQU8sTUFBTVUsU0FBUztBQUFBO0FBQUEsQ0FBQWQsYUFBQSxHQUFBSyxDQUFBLE9BQUcsSUFBSUYsYUFBYSxFQUFFIiwiaWdub3JlTGlzdCI6W119

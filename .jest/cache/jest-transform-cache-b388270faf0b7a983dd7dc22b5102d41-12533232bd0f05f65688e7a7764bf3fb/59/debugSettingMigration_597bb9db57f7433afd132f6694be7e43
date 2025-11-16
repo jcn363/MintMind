@@ -1,0 +1,249 @@
+2a1b9f500baa4cd8f6ca2f124fae439b
+/* istanbul ignore next */
+function cov_1zmj8z8zw0() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/browser/debugSettingMigration.ts";
+  var hash = "03a6f500c260926be7d8efc200c10ca2abcf01f1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/browser/debugSettingMigration.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 19,
+          column: 8
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 12
+        },
+        end: {
+          line: 16,
+          column: 13
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 16
+        },
+        end: {
+          line: 12,
+          column: 39
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 17
+        },
+        end: {
+          line: 16,
+          column: 13
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 16
+        },
+        end: {
+          line: 15,
+          column: 40
+        }
+      },
+      "5": {
+        start: {
+          line: 17,
+          column: 12
+        },
+        end: {
+          line: 17,
+          column: 22
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 19
+          },
+          end: {
+            line: 10,
+            column: 20
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 30
+          },
+          end: {
+            line: 18,
+            column: 9
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 11,
+            column: 12
+          },
+          end: {
+            line: 16,
+            column: 13
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 11,
+            column: 12
+          },
+          end: {
+            line: 16,
+            column: 13
+          }
+        }, {
+          start: {
+            line: 14,
+            column: 17
+          },
+          end: {
+            line: 16,
+            column: 13
+          }
+        }],
+        line: 11
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 14,
+            column: 17
+          },
+          end: {
+            line: 16,
+            column: 13
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 14,
+            column: 17
+          },
+          end: {
+            line: 16,
+            column: 13
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 14
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/browser/debugSettingMigration.ts",
+      mappings: "AAAA;;;gGAGgG;AAChG,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,UAAU,EAAmC,MAAM,kCAAkC,CAAC;AAE/F,QAAQ,CAAC,EAAE,CAAkC,UAAU,CAAC,sBAAsB,CAAC;KAC7E,+BAA+B,CAAC,CAAC;QACjC,GAAG,EAAE,+BAA+B;QACpC,SAAS,EAAE,CAAC,KAAc,EAAE,EAAE;YAC7B,IAAI,KAAK,KAAK,IAAI,EAAE,CAAC;gBACpB,OAAO,EAAE,KAAK,EAAE,IAAI,EAAE,CAAC;YACxB,CAAC;iBAAM,IAAI,KAAK,KAAK,KAAK,EAAE,CAAC;gBAC5B,OAAO,EAAE,KAAK,EAAE,KAAK,EAAE,CAAC;YACzB,CAAC;YAED,OAAO,EAAE,CAAC;QACX,CAAC;KACD,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/browser/debugSettingMigration.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { Extensions, IConfigurationMigrationRegistry } from '../../../common/configuration.js';\n\nRegistry.as<IConfigurationMigrationRegistry>(Extensions.ConfigurationMigration)\n\t.registerConfigurationMigrations([{\n\t\tkey: 'debug.autoExpandLazyVariables',\n\t\tmigrateFn: (value: boolean) => {\n\t\t\tif (value === true) {\n\t\t\t\treturn { value: 'on' };\n\t\t\t} else if (value === false) {\n\t\t\t\treturn { value: 'off' };\n\t\t\t}\n\n\t\t\treturn [];\n\t\t}\n\t}]);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "03a6f500c260926be7d8efc200c10ca2abcf01f1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1zmj8z8zw0 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1zmj8z8zw0();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { Extensions } from '../../../common/configuration.js';
+/* istanbul ignore next */
+cov_1zmj8z8zw0().s[0]++;
+Registry.as(Extensions.ConfigurationMigration).registerConfigurationMigrations([{
+  key: 'debug.autoExpandLazyVariables',
+  migrateFn: value => {
+    /* istanbul ignore next */
+    cov_1zmj8z8zw0().f[0]++;
+    cov_1zmj8z8zw0().s[1]++;
+    if (value === true) {
+      /* istanbul ignore next */
+      cov_1zmj8z8zw0().b[0][0]++;
+      cov_1zmj8z8zw0().s[2]++;
+      return {
+        value: 'on'
+      };
+    } else {
+      /* istanbul ignore next */
+      cov_1zmj8z8zw0().b[0][1]++;
+      cov_1zmj8z8zw0().s[3]++;
+      if (value === false) {
+        /* istanbul ignore next */
+        cov_1zmj8z8zw0().b[1][0]++;
+        cov_1zmj8z8zw0().s[4]++;
+        return {
+          value: 'off'
+        };
+      } else
+      /* istanbul ignore next */
+      {
+        cov_1zmj8z8zw0().b[1][1]++;
+      }
+    }
+    /* istanbul ignore next */
+    cov_1zmj8z8zw0().s[5]++;
+    return [];
+  }
+}]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXptajh6OHp3MCIsImFjdHVhbENvdmVyYWdlIiwiUmVnaXN0cnkiLCJFeHRlbnNpb25zIiwicyIsImFzIiwiQ29uZmlndXJhdGlvbk1pZ3JhdGlvbiIsInJlZ2lzdGVyQ29uZmlndXJhdGlvbk1pZ3JhdGlvbnMiLCJrZXkiLCJtaWdyYXRlRm4iLCJ2YWx1ZSIsImYiLCJiIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9kZWJ1Zy9icm93c2VyL2RlYnVnU2V0dGluZ01pZ3JhdGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cbmltcG9ydCB7IFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcmVnaXN0cnkvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB7IEV4dGVuc2lvbnMsIElDb25maWd1cmF0aW9uTWlncmF0aW9uUmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vY29uZmlndXJhdGlvbi5qcyc7XG5cblJlZ2lzdHJ5LmFzPElDb25maWd1cmF0aW9uTWlncmF0aW9uUmVnaXN0cnk+KEV4dGVuc2lvbnMuQ29uZmlndXJhdGlvbk1pZ3JhdGlvbilcblx0LnJlZ2lzdGVyQ29uZmlndXJhdGlvbk1pZ3JhdGlvbnMoW3tcblx0XHRrZXk6ICdkZWJ1Zy5hdXRvRXhwYW5kTGF6eVZhcmlhYmxlcycsXG5cdFx0bWlncmF0ZUZuOiAodmFsdWU6IGJvb2xlYW4pID0+IHtcblx0XHRcdGlmICh2YWx1ZSA9PT0gdHJ1ZSkge1xuXHRcdFx0XHRyZXR1cm4geyB2YWx1ZTogJ29uJyB9O1xuXHRcdFx0fSBlbHNlIGlmICh2YWx1ZSA9PT0gZmFsc2UpIHtcblx0XHRcdFx0cmV0dXJuIHsgdmFsdWU6ICdvZmYnIH07XG5cdFx0XHR9XG5cblx0XHRcdHJldHVybiBbXTtcblx0XHR9XG5cdH1dKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWVHO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFmSDs7OztBQUlBLFNBQVNFLFFBQVEsUUFBUSxrREFBa0Q7QUFDM0UsU0FBU0MsVUFBVSxRQUF5QyxrQ0FBa0M7QUFBQztBQUFBSCxjQUFBLEdBQUFJLENBQUE7QUFFL0ZGLFFBQVEsQ0FBQ0csRUFBRSxDQUFrQ0YsVUFBVSxDQUFDRyxzQkFBc0IsQ0FBQyxDQUM3RUMsK0JBQStCLENBQUMsQ0FBQztFQUNqQ0MsR0FBRyxFQUFFLCtCQUErQjtFQUNwQ0MsU0FBUyxFQUFHQyxLQUFjLElBQUk7SUFBQTtJQUFBVixjQUFBLEdBQUFXLENBQUE7SUFBQVgsY0FBQSxHQUFBSSxDQUFBO0lBQzdCLElBQUlNLEtBQUssS0FBSyxJQUFJLEVBQUU7TUFBQTtNQUFBVixjQUFBLEdBQUFZLENBQUE7TUFBQVosY0FBQSxHQUFBSSxDQUFBO01BQ25CLE9BQU87UUFBRU0sS0FBSyxFQUFFO01BQUksQ0FBRTtJQUN2QixDQUFDLE1BQU07TUFBQTtNQUFBVixjQUFBLEdBQUFZLENBQUE7TUFBQVosY0FBQSxHQUFBSSxDQUFBO01BQUEsSUFBSU0sS0FBSyxLQUFLLEtBQUssRUFBRTtRQUFBO1FBQUFWLGNBQUEsR0FBQVksQ0FBQTtRQUFBWixjQUFBLEdBQUFJLENBQUE7UUFDM0IsT0FBTztVQUFFTSxLQUFLLEVBQUU7UUFBSyxDQUFFO01BQ3hCLENBQUM7TUFBQTtNQUFBO1FBQUFWLGNBQUEsR0FBQVksQ0FBQTtNQUFBO0lBQUQ7SUFBQztJQUFBWixjQUFBLEdBQUFJLENBQUE7SUFFRCxPQUFPLEVBQUU7RUFDVjtDQUNBLENBQUMsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

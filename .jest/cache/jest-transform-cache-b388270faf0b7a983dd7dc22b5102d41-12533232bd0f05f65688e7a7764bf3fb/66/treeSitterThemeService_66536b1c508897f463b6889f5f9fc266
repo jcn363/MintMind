@@ -1,0 +1,62 @@
+b92286d11dd8ec872f412756eea7b674
+/* istanbul ignore next */
+function cov_1t0agrvgaf() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterThemeService.ts";
+  var hash = "9391043a7693b3a3c28c0a5c1f7d7b56d4875d4d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterThemeService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 39
+        },
+        end: {
+          line: 6,
+          column: 80
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterThemeService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAG7F,MAAM,CAAC,MAAM,uBAAuB,GAAG,eAAe,CAA0B,wBAAwB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterThemeService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IObservable, IReader } from '../../../../base/common/observable.js';\n\nexport const ITreeSitterThemeService = createDecorator<ITreeSitterThemeService>('treeSitterThemeService');\n\nexport interface ITreeSitterThemeService {\n\treadonly _serviceBrand: undefined;\n\treadonly onChange: IObservable<void>;\n\n\tfindMetadata(captureNames: string[], languageId: number, bracket: boolean, reader: IReader | undefined): number;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "9391043a7693b3a3c28c0a5c1f7d7b56d4875d4d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1t0agrvgaf = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1t0agrvgaf();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const ITreeSitterThemeService =
+/* istanbul ignore next */
+(cov_1t0agrvgaf().s[0]++, createDecorator('treeSitterThemeService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJVHJlZVNpdHRlclRoZW1lU2VydmljZSIsImNvdl8xdDBhZ3J2Z2FmIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbW1vbi9zZXJ2aWNlcy90cmVlU2l0dGVyL3RyZWVTaXR0ZXJUaGVtZVNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSU9ic2VydmFibGUsIElSZWFkZXIgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9vYnNlcnZhYmxlLmpzJztcblxuZXhwb3J0IGNvbnN0IElUcmVlU2l0dGVyVGhlbWVTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElUcmVlU2l0dGVyVGhlbWVTZXJ2aWNlPigndHJlZVNpdHRlclRoZW1lU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElUcmVlU2l0dGVyVGhlbWVTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXHRyZWFkb25seSBvbkNoYW5nZTogSU9ic2VydmFibGU8dm9pZD47XG5cblx0ZmluZE1ldGFkYXRhKGNhcHR1cmVOYW1lczogc3RyaW5nW10sIGxhbmd1YWdlSWQ6IG51bWJlciwgYnJhY2tldDogYm9vbGVhbiwgcmVhZGVyOiBJUmVhZGVyIHwgdW5kZWZpbmVkKTogbnVtYmVyO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxlQUFlLFFBQVEsNERBQTREO0FBRzVGLE9BQU8sTUFBTUMsdUJBQXVCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUEwQix3QkFBd0IsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

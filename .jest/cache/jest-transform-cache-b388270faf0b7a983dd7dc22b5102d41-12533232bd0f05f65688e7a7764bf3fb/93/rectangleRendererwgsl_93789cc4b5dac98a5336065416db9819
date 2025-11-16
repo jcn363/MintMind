@@ -1,0 +1,122 @@
+0e670d7fe52c6f13ece76480927ed366
+/* istanbul ignore next */
+function cov_jfm8pppm0() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/gpu/rectangleRenderer.wgsl.ts";
+  var hash = "7ea04c5b3bc34b633e7580368a619711950661d8";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/gpu/rectangleRenderer.wgsl.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 46
+        },
+        end: {
+          line: 66,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/gpu/rectangleRenderer.wgsl.ts",
+      mappings: "AAAA;;;gGAGgG;AAQhG,MAAM,CAAC,MAAM,qBAAqB,GAAG,QAAQ,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;qBA4BzB,oDAA4C;;;qBAG5C,yCAAiC;qBACjC,+CAAuC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;CA6B3D,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/gpu/rectangleRenderer.wgsl.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum RectangleRendererBindingId {\n\tShapes,\n\tLayoutInfoUniform,\n\tScrollOffset,\n}\n\nexport const rectangleRendererWgsl = /*wgsl*/ `\n\nstruct Vertex {\n\t@location(0) position: vec2f,\n};\n\nstruct LayoutInfo {\n\tcanvasDims: vec2f,\n\tviewportOffset: vec2f,\n\tviewportDims: vec2f,\n}\n\nstruct ScrollOffset {\n\toffset: vec2f,\n}\n\nstruct Shape {\n\tposition: vec2f,\n\tsize: vec2f,\n\tcolor: vec4f,\n};\n\nstruct VSOutput {\n\t@builtin(position) position: vec4f,\n\t@location(1)       color:    vec4f,\n};\n\n// Uniforms\n@group(0) @binding(${RectangleRendererBindingId.LayoutInfoUniform}) var<uniform>       layoutInfo:      LayoutInfo;\n\n// Storage buffers\n@group(0) @binding(${RectangleRendererBindingId.Shapes})            var<storage, read> shapes:          array<Shape>;\n@group(0) @binding(${RectangleRendererBindingId.ScrollOffset})      var<uniform>       scrollOffset:    ScrollOffset;\n\n@vertex fn vs(\n\tvert: Vertex,\n\t@builtin(instance_index) instanceIndex: u32,\n\t@builtin(vertex_index) vertexIndex : u32\n) -> VSOutput {\n\tlet shape = shapes[instanceIndex];\n\n\tvar vsOut: VSOutput;\n\tvsOut.position = vec4f(\n\t\t(\n\t\t\t// Top left corner\n\t\t\tvec2f(-1,  1) +\n\t\t\t// Convert pixel position to clipspace\n\t\t\tvec2f( 2, -2) / layoutInfo.canvasDims *\n\t\t\t// Shape position and size\n\t\t\t(layoutInfo.viewportOffset - scrollOffset.offset + shape.position + vert.position * shape.size)\n\t\t),\n\t\t0.0,\n\t\t1.0\n\t);\n\tvsOut.color = shape.color;\n\treturn vsOut;\n}\n\n@fragment fn fs(vsOut: VSOutput) -> @location(0) vec4f {\n\treturn vsOut.color;\n}\n`;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7ea04c5b3bc34b633e7580368a619711950661d8"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_jfm8pppm0 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_jfm8pppm0();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const rectangleRendererWgsl =
+/* istanbul ignore next */
+(/*wgsl*/cov_jfm8pppm0().s[0]++, `
+
+struct Vertex {
+	@location(0) position: vec2f,
+};
+
+struct LayoutInfo {
+	canvasDims: vec2f,
+	viewportOffset: vec2f,
+	viewportDims: vec2f,
+}
+
+struct ScrollOffset {
+	offset: vec2f,
+}
+
+struct Shape {
+	position: vec2f,
+	size: vec2f,
+	color: vec4f,
+};
+
+struct VSOutput {
+	@builtin(position) position: vec4f,
+	@location(1)       color:    vec4f,
+};
+
+// Uniforms
+@group(0) @binding(${1 /* RectangleRendererBindingId.LayoutInfoUniform */}) var<uniform>       layoutInfo:      LayoutInfo;
+
+// Storage buffers
+@group(0) @binding(${0 /* RectangleRendererBindingId.Shapes */})            var<storage, read> shapes:          array<Shape>;
+@group(0) @binding(${2 /* RectangleRendererBindingId.ScrollOffset */})      var<uniform>       scrollOffset:    ScrollOffset;
+
+@vertex fn vs(
+	vert: Vertex,
+	@builtin(instance_index) instanceIndex: u32,
+	@builtin(vertex_index) vertexIndex : u32
+) -> VSOutput {
+	let shape = shapes[instanceIndex];
+
+	var vsOut: VSOutput;
+	vsOut.position = vec4f(
+		(
+			// Top left corner
+			vec2f(-1,  1) +
+			// Convert pixel position to clipspace
+			vec2f( 2, -2) / layoutInfo.canvasDims *
+			// Shape position and size
+			(layoutInfo.viewportOffset - scrollOffset.offset + shape.position + vert.position * shape.size)
+		),
+		0.0,
+		1.0
+	);
+	vsOut.color = shape.color;
+	return vsOut;
+}
+
+@fragment fn fs(vsOut: VSOutput) -> @location(0) vec4f {
+	return vsOut.color;
+}
+`);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWN0YW5nbGVSZW5kZXJlcldnc2wiLCJjb3ZfamZtOHBwcG0wIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2Jyb3dzZXIvZ3B1L3JlY3RhbmdsZVJlbmRlcmVyLndnc2wudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCBjb25zdCBlbnVtIFJlY3RhbmdsZVJlbmRlcmVyQmluZGluZ0lkIHtcblx0U2hhcGVzLFxuXHRMYXlvdXRJbmZvVW5pZm9ybSxcblx0U2Nyb2xsT2Zmc2V0LFxufVxuXG5leHBvcnQgY29uc3QgcmVjdGFuZ2xlUmVuZGVyZXJXZ3NsID0gLyp3Z3NsKi8gYFxuXG5zdHJ1Y3QgVmVydGV4IHtcblx0QGxvY2F0aW9uKDApIHBvc2l0aW9uOiB2ZWMyZixcbn07XG5cbnN0cnVjdCBMYXlvdXRJbmZvIHtcblx0Y2FudmFzRGltczogdmVjMmYsXG5cdHZpZXdwb3J0T2Zmc2V0OiB2ZWMyZixcblx0dmlld3BvcnREaW1zOiB2ZWMyZixcbn1cblxuc3RydWN0IFNjcm9sbE9mZnNldCB7XG5cdG9mZnNldDogdmVjMmYsXG59XG5cbnN0cnVjdCBTaGFwZSB7XG5cdHBvc2l0aW9uOiB2ZWMyZixcblx0c2l6ZTogdmVjMmYsXG5cdGNvbG9yOiB2ZWM0Zixcbn07XG5cbnN0cnVjdCBWU091dHB1dCB7XG5cdEBidWlsdGluKHBvc2l0aW9uKSBwb3NpdGlvbjogdmVjNGYsXG5cdEBsb2NhdGlvbigxKSAgICAgICBjb2xvcjogICAgdmVjNGYsXG59O1xuXG4vLyBVbmlmb3Jtc1xuQGdyb3VwKDApIEBiaW5kaW5nKCR7UmVjdGFuZ2xlUmVuZGVyZXJCaW5kaW5nSWQuTGF5b3V0SW5mb1VuaWZvcm19KSB2YXI8dW5pZm9ybT4gICAgICAgbGF5b3V0SW5mbzogICAgICBMYXlvdXRJbmZvO1xuXG4vLyBTdG9yYWdlIGJ1ZmZlcnNcbkBncm91cCgwKSBAYmluZGluZygke1JlY3RhbmdsZVJlbmRlcmVyQmluZGluZ0lkLlNoYXBlc30pICAgICAgICAgICAgdmFyPHN0b3JhZ2UsIHJlYWQ+IHNoYXBlczogICAgICAgICAgYXJyYXk8U2hhcGU+O1xuQGdyb3VwKDApIEBiaW5kaW5nKCR7UmVjdGFuZ2xlUmVuZGVyZXJCaW5kaW5nSWQuU2Nyb2xsT2Zmc2V0fSkgICAgICB2YXI8dW5pZm9ybT4gICAgICAgc2Nyb2xsT2Zmc2V0OiAgICBTY3JvbGxPZmZzZXQ7XG5cbkB2ZXJ0ZXggZm4gdnMoXG5cdHZlcnQ6IFZlcnRleCxcblx0QGJ1aWx0aW4oaW5zdGFuY2VfaW5kZXgpIGluc3RhbmNlSW5kZXg6IHUzMixcblx0QGJ1aWx0aW4odmVydGV4X2luZGV4KSB2ZXJ0ZXhJbmRleCA6IHUzMlxuKSAtPiBWU091dHB1dCB7XG5cdGxldCBzaGFwZSA9IHNoYXBlc1tpbnN0YW5jZUluZGV4XTtcblxuXHR2YXIgdnNPdXQ6IFZTT3V0cHV0O1xuXHR2c091dC5wb3NpdGlvbiA9IHZlYzRmKFxuXHRcdChcblx0XHRcdC8vIFRvcCBsZWZ0IGNvcm5lclxuXHRcdFx0dmVjMmYoLTEsICAxKSArXG5cdFx0XHQvLyBDb252ZXJ0IHBpeGVsIHBvc2l0aW9uIHRvIGNsaXBzcGFjZVxuXHRcdFx0dmVjMmYoIDIsIC0yKSAvIGxheW91dEluZm8uY2FudmFzRGltcyAqXG5cdFx0XHQvLyBTaGFwZSBwb3NpdGlvbiBhbmQgc2l6ZVxuXHRcdFx0KGxheW91dEluZm8udmlld3BvcnRPZmZzZXQgLSBzY3JvbGxPZmZzZXQub2Zmc2V0ICsgc2hhcGUucG9zaXRpb24gKyB2ZXJ0LnBvc2l0aW9uICogc2hhcGUuc2l6ZSlcblx0XHQpLFxuXHRcdDAuMCxcblx0XHQxLjBcblx0KTtcblx0dnNPdXQuY29sb3IgPSBzaGFwZS5jb2xvcjtcblx0cmV0dXJuIHZzT3V0O1xufVxuXG5AZnJhZ21lbnQgZm4gZnModnNPdXQ6IFZTT3V0cHV0KSAtPiBAbG9jYXRpb24oMCkgdmVjNGYge1xuXHRyZXR1cm4gdnNPdXQuY29sb3I7XG59XG5gO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFXQSxPQUFPLE1BQU1BLHFCQUFxQjtBQUFBO0FBQUEsQ0FBRyxRQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBUzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztxQkE0QnpCOzs7cUJBR0E7cUJBQ0E7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0NBNkJwQiIsImlnbm9yZUxpc3QiOltdfQ==

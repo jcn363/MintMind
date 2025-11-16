@@ -1,0 +1,83 @@
+1dfedc7e83831a164da26b3b107455ea
+/* istanbul ignore next */
+function cov_1nn7f1mu3p() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/workspace/common/workspace.ts";
+  var hash = "fcc9f38a02bb6d51ade42c3c1be5d0428f9e18ce";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/workspace/common/workspace.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 37
+        },
+        end: {
+          line: 13,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 14,
+          column: 39
+        },
+        end: {
+          line: 14,
+          column: 63
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/workspace/common/workspace.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,aAAa,EAAE,MAAM,sDAAsD,CAAC;AAErF;;GAEG;AAEH,MAAM,CAAC,MAAM,qBAAqB,GAAG;IACpC,SAAS,EAAE,IAAI,aAAa,CAAU,yBAAyB,EAAE,KAAK,EAAE,QAAQ,CAAC,0BAA0B,EAAE,iDAAiD,CAAC,CAAC;IAChK,SAAS,EAAE,IAAI,aAAa,CAAU,oBAAoB,EAAE,KAAK,EAAE,QAAQ,CAAC,qBAAqB,EAAE,6DAA6D,CAAC,CAAC;CAClK,CAAC;AAEF,MAAM,CAAC,MAAM,uBAAuB,GAAG,wBAAwB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/workspace/common/workspace.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize } from '../../../../nls.js';\nimport { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';\n\n/**\n * Trust Context Keys\n */\n\nexport const WorkspaceTrustContext = {\n\tIsEnabled: new RawContextKey<boolean>('isWorkspaceTrustEnabled', false, localize('workspaceTrustEnabledCtx', \"Whether the workspace trust feature is enabled.\")),\n\tIsTrusted: new RawContextKey<boolean>('isWorkspaceTrusted', false, localize('workspaceTrustedCtx', \"Whether the current workspace has been trusted by the user.\"))\n};\n\nexport const MANAGE_TRUST_COMMAND_ID = 'workbench.trust.manage';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "fcc9f38a02bb6d51ade42c3c1be5d0428f9e18ce"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1nn7f1mu3p = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1nn7f1mu3p();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../nls.js';
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
+/**
+ * Trust Context Keys
+ */
+export const WorkspaceTrustContext =
+/* istanbul ignore next */
+(cov_1nn7f1mu3p().s[0]++, {
+  IsEnabled: new RawContextKey('isWorkspaceTrustEnabled', false, localize('workspaceTrustEnabledCtx', "Whether the workspace trust feature is enabled.")),
+  IsTrusted: new RawContextKey('isWorkspaceTrusted', false, localize('workspaceTrustedCtx', "Whether the current workspace has been trusted by the user."))
+});
+export const MANAGE_TRUST_COMMAND_ID =
+/* istanbul ignore next */
+(cov_1nn7f1mu3p().s[1]++, 'workbench.trust.manage');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZSIsIlJhd0NvbnRleHRLZXkiLCJXb3Jrc3BhY2VUcnVzdENvbnRleHQiLCJjb3ZfMW5uN2YxbXUzcCIsInMiLCJJc0VuYWJsZWQiLCJJc1RydXN0ZWQiLCJNQU5BR0VfVFJVU1RfQ09NTUFORF9JRCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvd29ya3NwYWNlL2NvbW1vbi93b3Jrc3BhY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGxvY2FsaXplIH0gZnJvbSAnLi4vLi4vLi4vLi4vbmxzLmpzJztcbmltcG9ydCB7IFJhd0NvbnRleHRLZXkgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9jb250ZXh0a2V5L2NvbW1vbi9jb250ZXh0a2V5LmpzJztcblxuLyoqXG4gKiBUcnVzdCBDb250ZXh0IEtleXNcbiAqL1xuXG5leHBvcnQgY29uc3QgV29ya3NwYWNlVHJ1c3RDb250ZXh0ID0ge1xuXHRJc0VuYWJsZWQ6IG5ldyBSYXdDb250ZXh0S2V5PGJvb2xlYW4+KCdpc1dvcmtzcGFjZVRydXN0RW5hYmxlZCcsIGZhbHNlLCBsb2NhbGl6ZSgnd29ya3NwYWNlVHJ1c3RFbmFibGVkQ3R4JywgXCJXaGV0aGVyIHRoZSB3b3Jrc3BhY2UgdHJ1c3QgZmVhdHVyZSBpcyBlbmFibGVkLlwiKSksXG5cdElzVHJ1c3RlZDogbmV3IFJhd0NvbnRleHRLZXk8Ym9vbGVhbj4oJ2lzV29ya3NwYWNlVHJ1c3RlZCcsIGZhbHNlLCBsb2NhbGl6ZSgnd29ya3NwYWNlVHJ1c3RlZEN0eCcsIFwiV2hldGhlciB0aGUgY3VycmVudCB3b3Jrc3BhY2UgaGFzIGJlZW4gdHJ1c3RlZCBieSB0aGUgdXNlci5cIikpXG59O1xuXG5leHBvcnQgY29uc3QgTUFOQUdFX1RSVVNUX0NPTU1BTkRfSUQgPSAnd29ya2JlbmNoLnRydXN0Lm1hbmFnZSc7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsUUFBUSxRQUFRLG9CQUFvQjtBQUM3QyxTQUFTQyxhQUFhLFFBQVEsc0RBQXNEO0FBRXBGOzs7QUFJQSxPQUFPLE1BQU1DLHFCQUFxQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUc7RUFDcENDLFNBQVMsRUFBRSxJQUFJSixhQUFhLENBQVUseUJBQXlCLEVBQUUsS0FBSyxFQUFFRCxRQUFRLENBQUMsMEJBQTBCLEVBQUUsaURBQWlELENBQUMsQ0FBQztFQUNoS00sU0FBUyxFQUFFLElBQUlMLGFBQWEsQ0FBVSxvQkFBb0IsRUFBRSxLQUFLLEVBQUVELFFBQVEsQ0FBQyxxQkFBcUIsRUFBRSw2REFBNkQsQ0FBQztDQUNqSztBQUVELE9BQU8sTUFBTU8sdUJBQXVCO0FBQUE7QUFBQSxDQUFBSixjQUFBLEdBQUFDLENBQUEsT0FBRyx3QkFBd0IiLCJpZ25vcmVMaXN0IjpbXX0=

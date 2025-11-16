@@ -1,0 +1,165 @@
+c80c7705ec5028dcd29a80ea3d7c8b96
+/* istanbul ignore next */
+function cov_11dadfi6ob() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/idGenerator.ts";
+  var hash = "f954d6cfd468a28ad3eccd91201cc01e8b7ec349";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/idGenerator.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 30
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 25
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 47
+        }
+      },
+      "3": {
+        start: {
+          line: 16,
+          column: 32
+        },
+        end: {
+          line: 16,
+          column: 54
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 24
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 12,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 13
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 12
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/idGenerator.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,OAAO,WAAW;IAEf,OAAO,CAAS;IAChB,OAAO,CAAS;IAExB,YAAY,MAAc;QACzB,IAAI,CAAC,OAAO,GAAG,MAAM,CAAC;QACtB,IAAI,CAAC,OAAO,GAAG,CAAC,CAAC;IAClB,CAAC;IAEM,MAAM;QACZ,OAAO,IAAI,CAAC,OAAO,GAAG,CAAC,EAAE,IAAI,CAAC,OAAO,CAAC,CAAC;IACxC,CAAC;CACD;AAED,MAAM,CAAC,MAAM,gBAAgB,GAAG,IAAI,WAAW,CAAC,KAAK,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/idGenerator.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport class IdGenerator {\n\n\tprivate _prefix: string;\n\tprivate _lastId: number;\n\n\tconstructor(prefix: string) {\n\t\tthis._prefix = prefix;\n\t\tthis._lastId = 0;\n\t}\n\n\tpublic nextId(): string {\n\t\treturn this._prefix + (++this._lastId);\n\t}\n}\n\nexport const defaultGenerator = new IdGenerator('id#');"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f954d6cfd468a28ad3eccd91201cc01e8b7ec349"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_11dadfi6ob = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_11dadfi6ob();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class IdGenerator {
+  _prefix;
+  _lastId;
+  constructor(prefix) {
+    /* istanbul ignore next */
+    cov_11dadfi6ob().f[0]++;
+    cov_11dadfi6ob().s[0]++;
+    this._prefix = prefix;
+    /* istanbul ignore next */
+    cov_11dadfi6ob().s[1]++;
+    this._lastId = 0;
+  }
+  nextId() {
+    /* istanbul ignore next */
+    cov_11dadfi6ob().f[1]++;
+    cov_11dadfi6ob().s[2]++;
+    return this._prefix + ++this._lastId;
+  }
+}
+export const defaultGenerator =
+/* istanbul ignore next */
+(cov_11dadfi6ob().s[3]++, new IdGenerator('id#'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTFkYWRmaTZvYiIsImFjdHVhbENvdmVyYWdlIiwiSWRHZW5lcmF0b3IiLCJfcHJlZml4IiwiX2xhc3RJZCIsImNvbnN0cnVjdG9yIiwicHJlZml4IiwiZiIsInMiLCJuZXh0SWQiLCJkZWZhdWx0R2VuZXJhdG9yIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2NvbW1vbi9pZEdlbmVyYXRvci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGNsYXNzIElkR2VuZXJhdG9yIHtcblxuXHRwcml2YXRlIF9wcmVmaXg6IHN0cmluZztcblx0cHJpdmF0ZSBfbGFzdElkOiBudW1iZXI7XG5cblx0Y29uc3RydWN0b3IocHJlZml4OiBzdHJpbmcpIHtcblx0XHR0aGlzLl9wcmVmaXggPSBwcmVmaXg7XG5cdFx0dGhpcy5fbGFzdElkID0gMDtcblx0fVxuXG5cdHB1YmxpYyBuZXh0SWQoKTogc3RyaW5nIHtcblx0XHRyZXR1cm4gdGhpcy5fcHJlZml4ICsgKCsrdGhpcy5fbGFzdElkKTtcblx0fVxufVxuXG5leHBvcnQgY29uc3QgZGVmYXVsdEdlbmVyYXRvciA9IG5ldyBJZEdlbmVyYXRvcignaWQjJyk7Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFvQk87SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXBCUDs7OztBQUtBLE9BQU0sTUFBT0UsV0FBVztFQUVmQyxPQUFPO0VBQ1BDLE9BQU87RUFFZkMsWUFBWUMsTUFBYztJQUFBO0lBQUFOLGNBQUEsR0FBQU8sQ0FBQTtJQUFBUCxjQUFBLEdBQUFRLENBQUE7SUFDekIsSUFBSSxDQUFDTCxPQUFPLEdBQUdHLE1BQU07SUFBQztJQUFBTixjQUFBLEdBQUFRLENBQUE7SUFDdEIsSUFBSSxDQUFDSixPQUFPLEdBQUcsQ0FBQztFQUNqQjtFQUVPSyxNQUFNQSxDQUFBO0lBQUE7SUFBQVQsY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQVEsQ0FBQTtJQUNaLE9BQU8sSUFBSSxDQUFDTCxPQUFPLEdBQUksRUFBRSxJQUFJLENBQUNDLE9BQVE7RUFDdkM7O0FBR0QsT0FBTyxNQUFNTSxnQkFBZ0I7QUFBQTtBQUFBLENBQUFWLGNBQUEsR0FBQVEsQ0FBQSxPQUFHLElBQUlOLFdBQVcsQ0FBQyxLQUFLLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

@@ -1,0 +1,46 @@
+67da03daf639871137860d0da518f8fc
+/* istanbul ignore next */
+function cov_2kfn8wnta7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/comments/common/commentCommandIds.ts";
+  var hash = "f06c3c598b19592b9375c3fa167d0b7a799486b2";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/comments/common/commentCommandIds.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/comments/common/commentCommandIds.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/comments/common/commentCommandIds.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum CommentCommandId {\n\tAdd = 'workbench.action.addComment',\n\tFocusCommentOnCurrentLine = 'workbench.action.focusCommentOnCurrentLine',\n\tNextThread = 'editor.action.nextCommentThreadAction',\n\tPreviousThread = 'editor.action.previousCommentThreadAction',\n\tNextCommentedRange = 'editor.action.nextCommentedRangeAction',\n\tPreviousCommentedRange = 'editor.action.previousCommentedRangeAction',\n\tNextRange = 'editor.action.nextCommentingRange',\n\tPreviousRange = 'editor.action.previousCommentingRange',\n\tToggleCommenting = 'workbench.action.toggleCommenting',\n\tSubmit = 'editor.action.submitComment',\n\tHide = 'workbench.action.hideComment',\n\tCollapseAll = 'workbench.action.collapseAllComments',\n\tExpandAll = 'workbench.action.expandAllComments',\n\tExpandUnresolved = 'workbench.action.expandUnresolvedComments'\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f06c3c598b19592b9375c3fa167d0b7a799486b2"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2kfn8wnta7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2kfn8wnta7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jb21tZW50cy9jb21tb24vY29tbWVudENvbW1hbmRJZHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCBjb25zdCBlbnVtIENvbW1lbnRDb21tYW5kSWQge1xuXHRBZGQgPSAnd29ya2JlbmNoLmFjdGlvbi5hZGRDb21tZW50Jyxcblx0Rm9jdXNDb21tZW50T25DdXJyZW50TGluZSA9ICd3b3JrYmVuY2guYWN0aW9uLmZvY3VzQ29tbWVudE9uQ3VycmVudExpbmUnLFxuXHROZXh0VGhyZWFkID0gJ2VkaXRvci5hY3Rpb24ubmV4dENvbW1lbnRUaHJlYWRBY3Rpb24nLFxuXHRQcmV2aW91c1RocmVhZCA9ICdlZGl0b3IuYWN0aW9uLnByZXZpb3VzQ29tbWVudFRocmVhZEFjdGlvbicsXG5cdE5leHRDb21tZW50ZWRSYW5nZSA9ICdlZGl0b3IuYWN0aW9uLm5leHRDb21tZW50ZWRSYW5nZUFjdGlvbicsXG5cdFByZXZpb3VzQ29tbWVudGVkUmFuZ2UgPSAnZWRpdG9yLmFjdGlvbi5wcmV2aW91c0NvbW1lbnRlZFJhbmdlQWN0aW9uJyxcblx0TmV4dFJhbmdlID0gJ2VkaXRvci5hY3Rpb24ubmV4dENvbW1lbnRpbmdSYW5nZScsXG5cdFByZXZpb3VzUmFuZ2UgPSAnZWRpdG9yLmFjdGlvbi5wcmV2aW91c0NvbW1lbnRpbmdSYW5nZScsXG5cdFRvZ2dsZUNvbW1lbnRpbmcgPSAnd29ya2JlbmNoLmFjdGlvbi50b2dnbGVDb21tZW50aW5nJyxcblx0U3VibWl0ID0gJ2VkaXRvci5hY3Rpb24uc3VibWl0Q29tbWVudCcsXG5cdEhpZGUgPSAnd29ya2JlbmNoLmFjdGlvbi5oaWRlQ29tbWVudCcsXG5cdENvbGxhcHNlQWxsID0gJ3dvcmtiZW5jaC5hY3Rpb24uY29sbGFwc2VBbGxDb21tZW50cycsXG5cdEV4cGFuZEFsbCA9ICd3b3JrYmVuY2guYWN0aW9uLmV4cGFuZEFsbENvbW1lbnRzJyxcblx0RXhwYW5kVW5yZXNvbHZlZCA9ICd3b3JrYmVuY2guYWN0aW9uLmV4cGFuZFVucmVzb2x2ZWRDb21tZW50cydcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

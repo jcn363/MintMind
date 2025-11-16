@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import electron from 'electron';
+import { invoke } from '@tauri-apps/api/core';
 import { Queue } from '../../../base/common/async.js';
 import { hash } from '../../../base/common/hash.js';
 import { mnemonicButtonLabel } from '../../../base/common/labels.js';
@@ -150,12 +150,8 @@ export class DialogMainService implements IDialogMainService {
 		return this.getWindowDialogQueue<electron.MessageBoxReturnValue>(window).queue(async () => {
 			const { options, buttonIndeces } = massageMessageBoxOptions(rawOptions, this.productService);
 
-			let result: electron.MessageBoxReturnValue | undefined = undefined;
-			if (window) {
-				result = await electron.dialog.showMessageBox(window, options);
-			} else {
-				result = await electron.dialog.showMessageBox(options);
-			}
+			options.window = window?.id;
+			const result = await invoke('show_message_box', options);
 
 			return {
 				response: buttonIndeces[result.response],
@@ -176,12 +172,8 @@ export class DialogMainService implements IDialogMainService {
 
 		try {
 			return await this.getWindowDialogQueue<electron.SaveDialogReturnValue>(window).queue(async () => {
-				let result: electron.SaveDialogReturnValue;
-				if (window) {
-					result = await electron.dialog.showSaveDialog(window, options);
-				} else {
-					result = await electron.dialog.showSaveDialog(options);
-				}
+				options.window = window?.id;
+				const result = await invoke('show_save_dialog', options);
 
 				result.filePath = this.normalizePath(result.filePath);
 
@@ -226,12 +218,8 @@ export class DialogMainService implements IDialogMainService {
 
 		try {
 			return await this.getWindowDialogQueue<electron.OpenDialogReturnValue>(window).queue(async () => {
-				let result: electron.OpenDialogReturnValue;
-				if (window) {
-					result = await electron.dialog.showOpenDialog(window, options);
-				} else {
-					result = await electron.dialog.showOpenDialog(options);
-				}
+				options.window = window?.id;
+				const result = await invoke('show_open_dialog', options);
 
 				result.filePaths = this.normalizePaths(result.filePaths);
 

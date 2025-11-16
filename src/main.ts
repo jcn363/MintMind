@@ -5,11 +5,11 @@
 
 import { invoke } from '@tauri-apps/api/tauri';
 import { appConfigDir } from '@tauri-apps/api/path';
+import { readTextFile } from '@tauri-apps/api/fs';
 import { product } from './bootstrap-meta.js';
 import { bootstrapESM } from './bootstrap-esm.js';
 import { parse } from './vs/base/common/jsonc.js';
 import { performance } from 'node:perf_hooks';
-import * as fs from 'original-fs';
 import * as os from 'node:os';
 import * as path from 'node:path';
 

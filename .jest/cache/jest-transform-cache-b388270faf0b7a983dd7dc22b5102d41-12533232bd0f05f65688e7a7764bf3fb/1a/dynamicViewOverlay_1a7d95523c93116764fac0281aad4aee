@@ -1,0 +1,47 @@
+79cc96ff959a2398d7b5280d35cade51
+/* istanbul ignore next */
+function cov_1h24xbv4uu() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/view/dynamicViewOverlay.ts";
+  var hash = "cae6c19bc93271a5b10c2d8e1b359d28b89bc870";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/view/dynamicViewOverlay.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/view/dynamicViewOverlay.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,gBAAgB,EAAE,MAAM,kCAAkC,CAAC;AAEpE,MAAM,OAAgB,kBAAmB,SAAQ,gBAAgB;CAMhE",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/view/dynamicViewOverlay.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { RenderingContext } from './renderingContext.js';\nimport { ViewEventHandler } from '../../common/viewEventHandler.js';\n\nexport abstract class DynamicViewOverlay extends ViewEventHandler {\n\n\tpublic abstract prepareRender(ctx: RenderingContext): void;\n\n\tpublic abstract render(startLineNumber: number, lineNumber: number): string;\n\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "cae6c19bc93271a5b10c2d8e1b359d28b89bc870"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1h24xbv4uu = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1h24xbv4uu();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { ViewEventHandler } from '../../common/viewEventHandler.js';
+export class DynamicViewOverlay extends ViewEventHandler {}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJWaWV3RXZlbnRIYW5kbGVyIiwiRHluYW1pY1ZpZXdPdmVybGF5Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci92aWV3L2R5bmFtaWNWaWV3T3ZlcmxheS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgUmVuZGVyaW5nQ29udGV4dCB9IGZyb20gJy4vcmVuZGVyaW5nQ29udGV4dC5qcyc7XG5pbXBvcnQgeyBWaWV3RXZlbnRIYW5kbGVyIH0gZnJvbSAnLi4vLi4vY29tbW9uL3ZpZXdFdmVudEhhbmRsZXIuanMnO1xuXG5leHBvcnQgYWJzdHJhY3QgY2xhc3MgRHluYW1pY1ZpZXdPdmVybGF5IGV4dGVuZHMgVmlld0V2ZW50SGFuZGxlciB7XG5cblx0cHVibGljIGFic3RyYWN0IHByZXBhcmVSZW5kZXIoY3R4OiBSZW5kZXJpbmdDb250ZXh0KTogdm9pZDtcblxuXHRwdWJsaWMgYWJzdHJhY3QgcmVuZGVyKHN0YXJ0TGluZU51bWJlcjogbnVtYmVyLCBsaW5lTnVtYmVyOiBudW1iZXIpOiBzdHJpbmc7XG5cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxnQkFBZ0IsUUFBUSxrQ0FBa0M7QUFFbkUsT0FBTSxNQUFnQkMsa0JBQW1CLFNBQVFELGdCQUFnQiIsImlnbm9yZUxpc3QiOltdfQ==

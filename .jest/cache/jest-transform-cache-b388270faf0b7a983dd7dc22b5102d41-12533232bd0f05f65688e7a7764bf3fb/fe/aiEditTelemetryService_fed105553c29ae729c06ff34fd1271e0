@@ -1,0 +1,62 @@
+2fa546a5b8538ce866868000cbf02163
+/* istanbul ignore next */
+function cov_ccbrdd9tl() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts";
+  var hash = "697fc33c1193a8414fe84e12af6ae7164cef0c64";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 39
+        },
+        end: {
+          line: 6,
+          column: 80
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,kEAAkE,CAAC;AAEnG,MAAM,CAAC,MAAM,uBAAuB,GAAG,eAAe,CAA0B,wBAAwB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ProviderId } from '../../../../../../editor/common/languages.js';\nimport { EditDeltaInfo, EditSuggestionId } from '../../../../../../editor/common/textModelEditSource.js';\nimport { createDecorator } from '../../../../../../platform/instantiation/common/instantiation.js';\n\nexport const IAiEditTelemetryService = createDecorator<IAiEditTelemetryService>('aiEditTelemetryService');\n\nexport interface IAiEditTelemetryService {\n\treadonly _serviceBrand: undefined;\n\n\tcreateSuggestionId(data: Omit<IEditTelemetryCodeSuggestedData, 'suggestionId'>): EditSuggestionId;\n\n\thandleCodeAccepted(data: IEditTelemetryCodeAcceptedData): void;\n}\n\nexport interface IEditTelemetryBaseData {\n\tsuggestionId: EditSuggestionId | undefined;\n\n\tfeature:\n\t/** Code suggestions generated in the sidebar chat panel */\n\t| 'sideBarChat'\n\t/** Code suggestions generated through inline chat within the editor */\n\t| 'inlineChat'\n\t/** Inline code completion suggestions */\n\t| 'inlineSuggestion'\n\t| undefined;\n\n\tpresentation:\n\t/** Code displayed in a code block within chat responses. Only possible when feature is `sideBarChat` or `inlineChat`. */\n\t| 'codeBlock'\n\t/** Code already applied to the editor and highlighted with diff-style formatting. Only possible when feature is `sideBarChat` or `inlineChat`. */\n\t| 'highlightedEdit'\n\t/** Code suggested inline as completion text. Only possible when feature is `inlineSuggestion`. */\n\t| 'inlineCompletion'\n\t/** Code shown as next edit suggestion. Only possible when feature is `nextEditSuggestion`. */\n\t| 'nextEditSuggestion';\n\n\tsource: ProviderId | undefined;\n\n\tlanguageId: string | undefined;\n\n\teditDeltaInfo: EditDeltaInfo | undefined;\n\n\tmodeId:\n\t/** User asking questions without requesting code changes */\n\t| 'ask'\n\t/** User requesting direct code edits or modifications */\n\t| 'edit'\n\t/** AI agent mode for autonomous task completion and multi-file edits */\n\t| 'agent'\n\t/** Custom mode defined by extensions or user settings */\n\t| 'custom'\n\t/** Applying a previously suggested code block */\n\t| 'applyCodeBlock'\n\t| undefined;\n\tapplyCodeBlockSuggestionId: EditSuggestionId | undefined; // Is set if modeId is applyCodeBlock\n\n\tmodelId: string | undefined; // e.g. 'gpt-4o', 'gpt-4o-mini', 'gpt-3.5-turbo'\n}\n\nexport interface IEditTelemetryCodeSuggestedData extends IEditTelemetryBaseData {\n}\n\nexport interface IEditTelemetryCodeAcceptedData extends IEditTelemetryBaseData {\n\tacceptanceMethod:\n\t/** Insert code at the current cursor position in the active editor. Only possible when presentation is `codeBlock`. */\n\t| 'insertAtCursor'\n\t/** Create a new file and insert the code there. Only possible when presentation is `codeBlock`. */\n\t| 'insertInNewFile'\n\t/** User manually copied the code. Only possible when presentation is `codeBlock`. */\n\t| 'copyManual'\n\t/** User clicked a copy button to copy the code. Only possible when presentation is `codeBlock`. */\n\t| 'copyButton'\n\t/** User accepted the suggestion by clicking 'keep' (when presentation is `highlightedEdit`) or pressing Tab (when feature is `inlineSuggestion`) */\n\t| 'accept';\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "697fc33c1193a8414fe84e12af6ae7164cef0c64"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ccbrdd9tl = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ccbrdd9tl();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../../../platform/instantiation/common/instantiation.js';
+export const IAiEditTelemetryService =
+/* istanbul ignore next */
+(cov_ccbrdd9tl().s[0]++, createDecorator('aiEditTelemetryService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQWlFZGl0VGVsZW1ldHJ5U2VydmljZSIsImNvdl9jY2JyZGQ5dGwiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9lZGl0VGVsZW1ldHJ5L2Jyb3dzZXIvdGVsZW1ldHJ5L2FpRWRpdFRlbGVtZXRyeS9haUVkaXRUZWxlbWV0cnlTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBQcm92aWRlcklkIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vZWRpdG9yL2NvbW1vbi9sYW5ndWFnZXMuanMnO1xuaW1wb3J0IHsgRWRpdERlbHRhSW5mbywgRWRpdFN1Z2dlc3Rpb25JZCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uL2VkaXRvci9jb21tb24vdGV4dE1vZGVsRWRpdFNvdXJjZS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElBaUVkaXRUZWxlbWV0cnlTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElBaUVkaXRUZWxlbWV0cnlTZXJ2aWNlPignYWlFZGl0VGVsZW1ldHJ5U2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElBaUVkaXRUZWxlbWV0cnlTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdGNyZWF0ZVN1Z2dlc3Rpb25JZChkYXRhOiBPbWl0PElFZGl0VGVsZW1ldHJ5Q29kZVN1Z2dlc3RlZERhdGEsICdzdWdnZXN0aW9uSWQnPik6IEVkaXRTdWdnZXN0aW9uSWQ7XG5cblx0aGFuZGxlQ29kZUFjY2VwdGVkKGRhdGE6IElFZGl0VGVsZW1ldHJ5Q29kZUFjY2VwdGVkRGF0YSk6IHZvaWQ7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUVkaXRUZWxlbWV0cnlCYXNlRGF0YSB7XG5cdHN1Z2dlc3Rpb25JZDogRWRpdFN1Z2dlc3Rpb25JZCB8IHVuZGVmaW5lZDtcblxuXHRmZWF0dXJlOlxuXHQvKiogQ29kZSBzdWdnZXN0aW9ucyBnZW5lcmF0ZWQgaW4gdGhlIHNpZGViYXIgY2hhdCBwYW5lbCAqL1xuXHR8ICdzaWRlQmFyQ2hhdCdcblx0LyoqIENvZGUgc3VnZ2VzdGlvbnMgZ2VuZXJhdGVkIHRocm91Z2ggaW5saW5lIGNoYXQgd2l0aGluIHRoZSBlZGl0b3IgKi9cblx0fCAnaW5saW5lQ2hhdCdcblx0LyoqIElubGluZSBjb2RlIGNvbXBsZXRpb24gc3VnZ2VzdGlvbnMgKi9cblx0fCAnaW5saW5lU3VnZ2VzdGlvbidcblx0fCB1bmRlZmluZWQ7XG5cblx0cHJlc2VudGF0aW9uOlxuXHQvKiogQ29kZSBkaXNwbGF5ZWQgaW4gYSBjb2RlIGJsb2NrIHdpdGhpbiBjaGF0IHJlc3BvbnNlcy4gT25seSBwb3NzaWJsZSB3aGVuIGZlYXR1cmUgaXMgYHNpZGVCYXJDaGF0YCBvciBgaW5saW5lQ2hhdGAuICovXG5cdHwgJ2NvZGVCbG9jaydcblx0LyoqIENvZGUgYWxyZWFkeSBhcHBsaWVkIHRvIHRoZSBlZGl0b3IgYW5kIGhpZ2hsaWdodGVkIHdpdGggZGlmZi1zdHlsZSBmb3JtYXR0aW5nLiBPbmx5IHBvc3NpYmxlIHdoZW4gZmVhdHVyZSBpcyBgc2lkZUJhckNoYXRgIG9yIGBpbmxpbmVDaGF0YC4gKi9cblx0fCAnaGlnaGxpZ2h0ZWRFZGl0J1xuXHQvKiogQ29kZSBzdWdnZXN0ZWQgaW5saW5lIGFzIGNvbXBsZXRpb24gdGV4dC4gT25seSBwb3NzaWJsZSB3aGVuIGZlYXR1cmUgaXMgYGlubGluZVN1Z2dlc3Rpb25gLiAqL1xuXHR8ICdpbmxpbmVDb21wbGV0aW9uJ1xuXHQvKiogQ29kZSBzaG93biBhcyBuZXh0IGVkaXQgc3VnZ2VzdGlvbi4gT25seSBwb3NzaWJsZSB3aGVuIGZlYXR1cmUgaXMgYG5leHRFZGl0U3VnZ2VzdGlvbmAuICovXG5cdHwgJ25leHRFZGl0U3VnZ2VzdGlvbic7XG5cblx0c291cmNlOiBQcm92aWRlcklkIHwgdW5kZWZpbmVkO1xuXG5cdGxhbmd1YWdlSWQ6IHN0cmluZyB8IHVuZGVmaW5lZDtcblxuXHRlZGl0RGVsdGFJbmZvOiBFZGl0RGVsdGFJbmZvIHwgdW5kZWZpbmVkO1xuXG5cdG1vZGVJZDpcblx0LyoqIFVzZXIgYXNraW5nIHF1ZXN0aW9ucyB3aXRob3V0IHJlcXVlc3RpbmcgY29kZSBjaGFuZ2VzICovXG5cdHwgJ2Fzaydcblx0LyoqIFVzZXIgcmVxdWVzdGluZyBkaXJlY3QgY29kZSBlZGl0cyBvciBtb2RpZmljYXRpb25zICovXG5cdHwgJ2VkaXQnXG5cdC8qKiBBSSBhZ2VudCBtb2RlIGZvciBhdXRvbm9tb3VzIHRhc2sgY29tcGxldGlvbiBhbmQgbXVsdGktZmlsZSBlZGl0cyAqL1xuXHR8ICdhZ2VudCdcblx0LyoqIEN1c3RvbSBtb2RlIGRlZmluZWQgYnkgZXh0ZW5zaW9ucyBvciB1c2VyIHNldHRpbmdzICovXG5cdHwgJ2N1c3RvbSdcblx0LyoqIEFwcGx5aW5nIGEgcHJldmlvdXNseSBzdWdnZXN0ZWQgY29kZSBibG9jayAqL1xuXHR8ICdhcHBseUNvZGVCbG9jaydcblx0fCB1bmRlZmluZWQ7XG5cdGFwcGx5Q29kZUJsb2NrU3VnZ2VzdGlvbklkOiBFZGl0U3VnZ2VzdGlvbklkIHwgdW5kZWZpbmVkOyAvLyBJcyBzZXQgaWYgbW9kZUlkIGlzIGFwcGx5Q29kZUJsb2NrXG5cblx0bW9kZWxJZDogc3RyaW5nIHwgdW5kZWZpbmVkOyAvLyBlLmcuICdncHQtNG8nLCAnZ3B0LTRvLW1pbmknLCAnZ3B0LTMuNS10dXJibydcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRWRpdFRlbGVtZXRyeUNvZGVTdWdnZXN0ZWREYXRhIGV4dGVuZHMgSUVkaXRUZWxlbWV0cnlCYXNlRGF0YSB7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUVkaXRUZWxlbWV0cnlDb2RlQWNjZXB0ZWREYXRhIGV4dGVuZHMgSUVkaXRUZWxlbWV0cnlCYXNlRGF0YSB7XG5cdGFjY2VwdGFuY2VNZXRob2Q6XG5cdC8qKiBJbnNlcnQgY29kZSBhdCB0aGUgY3VycmVudCBjdXJzb3IgcG9zaXRpb24gaW4gdGhlIGFjdGl2ZSBlZGl0b3IuIE9ubHkgcG9zc2libGUgd2hlbiBwcmVzZW50YXRpb24gaXMgYGNvZGVCbG9ja2AuICovXG5cdHwgJ2luc2VydEF0Q3Vyc29yJ1xuXHQvKiogQ3JlYXRlIGEgbmV3IGZpbGUgYW5kIGluc2VydCB0aGUgY29kZSB0aGVyZS4gT25seSBwb3NzaWJsZSB3aGVuIHByZXNlbnRhdGlvbiBpcyBgY29kZUJsb2NrYC4gKi9cblx0fCAnaW5zZXJ0SW5OZXdGaWxlJ1xuXHQvKiogVXNlciBtYW51YWxseSBjb3BpZWQgdGhlIGNvZGUuIE9ubHkgcG9zc2libGUgd2hlbiBwcmVzZW50YXRpb24gaXMgYGNvZGVCbG9ja2AuICovXG5cdHwgJ2NvcHlNYW51YWwnXG5cdC8qKiBVc2VyIGNsaWNrZWQgYSBjb3B5IGJ1dHRvbiB0byBjb3B5IHRoZSBjb2RlLiBPbmx5IHBvc3NpYmxlIHdoZW4gcHJlc2VudGF0aW9uIGlzIGBjb2RlQmxvY2tgLiAqL1xuXHR8ICdjb3B5QnV0dG9uJ1xuXHQvKiogVXNlciBhY2NlcHRlZCB0aGUgc3VnZ2VzdGlvbiBieSBjbGlja2luZyAna2VlcCcgKHdoZW4gcHJlc2VudGF0aW9uIGlzIGBoaWdobGlnaHRlZEVkaXRgKSBvciBwcmVzc2luZyBUYWIgKHdoZW4gZmVhdHVyZSBpcyBgaW5saW5lU3VnZ2VzdGlvbmApICovXG5cdHwgJ2FjY2VwdCc7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLFNBQVNBLGVBQWUsUUFBUSxrRUFBa0U7QUFFbEcsT0FBTyxNQUFNQyx1QkFBdUI7QUFBQTtBQUFBLENBQUFDLGFBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQTBCLHdCQUF3QixDQUFDIiwiaWdub3JlTGlzdCI6W119

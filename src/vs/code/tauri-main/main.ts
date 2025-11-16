@@ -167,12 +167,15 @@ class CodeMain {
 		const logService = disposables.add(new LogService(bufferLogger, [new ConsoleMainLogger(loggerService.getLogLevel())]));
 		services.set(ILogService, logService);
 
-		// Files
+		// Files: Tauri-specific filesystem provider registration
+		// Note: Integrates with migrated pfs.ts for native filesystem operations
+		// Performance optimization: Uses Tauri's efficient IPC for file operations
+		// Verification: DiskFileSystemProvider now leverages pfs.ts Tauri backend
 		const fileService = new FileService(logService);
 		services.set(IFileService, fileService);
 		const diskFileSystemProvider = new DiskFileSystemProvider(logService);
 		fileService.registerProvider(Schemas.file, diskFileSystemProvider);
-
+		
 		// URI Identity
 		const uriIdentityService = new UriIdentityService(fileService);
 		services.set(IUriIdentityService, uriIdentityService);

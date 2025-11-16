@@ -1,0 +1,101 @@
+8ea3480bdab464211def95029364f086
+/* istanbul ignore next */
+function cov_1pq0razu0a() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/colors.ts";
+  var hash = "1292fe154a563c169644086ff983e8e73c06aa2d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/colors.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 47
+        },
+        end: {
+          line: 7,
+          column: 319
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 41
+        },
+        end: {
+          line: 8,
+          column: 196
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 37
+        },
+        end: {
+          line: 9,
+          column: 281
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/colors.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,aAAa,EAAE,gBAAgB,EAAE,MAAM,oDAAoD,CAAC;AAErG,MAAM,CAAC,MAAM,+BAA+B,GAAG,aAAa,CAC3D,kCAAkC,EAClC,EAAE,IAAI,EAAE,SAAS,EAAE,KAAK,EAAE,wBAAwB,EAAE,MAAM,EAAE,wBAAwB,EAAE,OAAO,EAAE,wBAAwB,GAAG,EAC1H,QAAQ,CAAC,kCAAkC,EAAE,mDAAmD,CAAC,CACjG,CAAC;AAEF,MAAM,CAAC,MAAM,yBAAyB,GAAG,aAAa,CACrD,4BAA4B,EAC5B,gBAAgB,EAChB,QAAQ,CAAC,4BAA4B,EAAE,oDAAoD,CAAC,CAC5F,CAAC;AAEF,MAAM,CAAC,MAAM,qBAAqB,GAAG,aAAa,CACjD,wBAAwB,EACxB,EAAE,IAAI,EAAE,6BAA6B,EAAE,KAAK,EAAE,SAAS,EAAE,MAAM,EAAE,6BAA6B,EAAE,OAAO,EAAE,SAAS,GAAG,EACrH,QAAQ,CAAC,wBAAwB,EAAE,gDAAgD,CAAC,CACpF,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/colors.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize } from '../../../../nls.js';\nimport { registerColor, editorBackground } from '../../../../platform/theme/common/colorRegistry.js';\n\nexport const multiDiffEditorHeaderBackground = registerColor(\n\t'multiDiffEditor.headerBackground',\n\t{ dark: '#262626', light: 'tab.inactiveBackground', hcDark: 'tab.inactiveBackground', hcLight: 'tab.inactiveBackground', },\n\tlocalize('multiDiffEditor.headerBackground', 'The background color of the diff editor\\'s header')\n);\n\nexport const multiDiffEditorBackground = registerColor(\n\t'multiDiffEditor.background',\n\teditorBackground,\n\tlocalize('multiDiffEditor.background', 'The background color of the multi file diff editor')\n);\n\nexport const multiDiffEditorBorder = registerColor(\n\t'multiDiffEditor.border',\n\t{ dark: 'sideBarSectionHeader.border', light: '#cccccc', hcDark: 'sideBarSectionHeader.border', hcLight: '#cccccc', },\n\tlocalize('multiDiffEditor.border', 'The border color of the multi file diff editor')\n);\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "1292fe154a563c169644086ff983e8e73c06aa2d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1pq0razu0a = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1pq0razu0a();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../nls.js';
+import { registerColor, editorBackground } from '../../../../platform/theme/common/colorRegistry.js';
+export const multiDiffEditorHeaderBackground =
+/* istanbul ignore next */
+(cov_1pq0razu0a().s[0]++, registerColor('multiDiffEditor.headerBackground', {
+  dark: '#262626',
+  light: 'tab.inactiveBackground',
+  hcDark: 'tab.inactiveBackground',
+  hcLight: 'tab.inactiveBackground'
+}, localize('multiDiffEditor.headerBackground', 'The background color of the diff editor\'s header')));
+export const multiDiffEditorBackground =
+/* istanbul ignore next */
+(cov_1pq0razu0a().s[1]++, registerColor('multiDiffEditor.background', editorBackground, localize('multiDiffEditor.background', 'The background color of the multi file diff editor')));
+export const multiDiffEditorBorder =
+/* istanbul ignore next */
+(cov_1pq0razu0a().s[2]++, registerColor('multiDiffEditor.border', {
+  dark: 'sideBarSectionHeader.border',
+  light: '#cccccc',
+  hcDark: 'sideBarSectionHeader.border',
+  hcLight: '#cccccc'
+}, localize('multiDiffEditor.border', 'The border color of the multi file diff editor')));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZSIsInJlZ2lzdGVyQ29sb3IiLCJlZGl0b3JCYWNrZ3JvdW5kIiwibXVsdGlEaWZmRWRpdG9ySGVhZGVyQmFja2dyb3VuZCIsImNvdl8xcHEwcmF6dTBhIiwicyIsImRhcmsiLCJsaWdodCIsImhjRGFyayIsImhjTGlnaHQiLCJtdWx0aURpZmZFZGl0b3JCYWNrZ3JvdW5kIiwibXVsdGlEaWZmRWRpdG9yQm9yZGVyIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci93aWRnZXQvbXVsdGlEaWZmRWRpdG9yL2NvbG9ycy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJDb2xvciwgZWRpdG9yQmFja2dyb3VuZCB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3RoZW1lL2NvbW1vbi9jb2xvclJlZ2lzdHJ5LmpzJztcblxuZXhwb3J0IGNvbnN0IG11bHRpRGlmZkVkaXRvckhlYWRlckJhY2tncm91bmQgPSByZWdpc3RlckNvbG9yKFxuXHQnbXVsdGlEaWZmRWRpdG9yLmhlYWRlckJhY2tncm91bmQnLFxuXHR7IGRhcms6ICcjMjYyNjI2JywgbGlnaHQ6ICd0YWIuaW5hY3RpdmVCYWNrZ3JvdW5kJywgaGNEYXJrOiAndGFiLmluYWN0aXZlQmFja2dyb3VuZCcsIGhjTGlnaHQ6ICd0YWIuaW5hY3RpdmVCYWNrZ3JvdW5kJywgfSxcblx0bG9jYWxpemUoJ211bHRpRGlmZkVkaXRvci5oZWFkZXJCYWNrZ3JvdW5kJywgJ1RoZSBiYWNrZ3JvdW5kIGNvbG9yIG9mIHRoZSBkaWZmIGVkaXRvclxcJ3MgaGVhZGVyJylcbik7XG5cbmV4cG9ydCBjb25zdCBtdWx0aURpZmZFZGl0b3JCYWNrZ3JvdW5kID0gcmVnaXN0ZXJDb2xvcihcblx0J211bHRpRGlmZkVkaXRvci5iYWNrZ3JvdW5kJyxcblx0ZWRpdG9yQmFja2dyb3VuZCxcblx0bG9jYWxpemUoJ211bHRpRGlmZkVkaXRvci5iYWNrZ3JvdW5kJywgJ1RoZSBiYWNrZ3JvdW5kIGNvbG9yIG9mIHRoZSBtdWx0aSBmaWxlIGRpZmYgZWRpdG9yJylcbik7XG5cbmV4cG9ydCBjb25zdCBtdWx0aURpZmZFZGl0b3JCb3JkZXIgPSByZWdpc3RlckNvbG9yKFxuXHQnbXVsdGlEaWZmRWRpdG9yLmJvcmRlcicsXG5cdHsgZGFyazogJ3NpZGVCYXJTZWN0aW9uSGVhZGVyLmJvcmRlcicsIGxpZ2h0OiAnI2NjY2NjYycsIGhjRGFyazogJ3NpZGVCYXJTZWN0aW9uSGVhZGVyLmJvcmRlcicsIGhjTGlnaHQ6ICcjY2NjY2NjJywgfSxcblx0bG9jYWxpemUoJ211bHRpRGlmZkVkaXRvci5ib3JkZXInLCAnVGhlIGJvcmRlciBjb2xvciBvZiB0aGUgbXVsdGkgZmlsZSBkaWZmIGVkaXRvcicpXG4pO1xuXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxRQUFRLFFBQVEsb0JBQW9CO0FBQzdDLFNBQVNDLGFBQWEsRUFBRUMsZ0JBQWdCLFFBQVEsb0RBQW9EO0FBRXBHLE9BQU8sTUFBTUMsK0JBQStCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR0osYUFBYSxDQUMzRCxrQ0FBa0MsRUFDbEM7RUFBRUssSUFBSSxFQUFFLFNBQVM7RUFBRUMsS0FBSyxFQUFFLHdCQUF3QjtFQUFFQyxNQUFNLEVBQUUsd0JBQXdCO0VBQUVDLE9BQU8sRUFBRTtBQUF3QixDQUFHLEVBQzFIVCxRQUFRLENBQUMsa0NBQWtDLEVBQUUsbURBQW1ELENBQUMsQ0FDakc7QUFFRCxPQUFPLE1BQU1VLHlCQUF5QjtBQUFBO0FBQUEsQ0FBQU4sY0FBQSxHQUFBQyxDQUFBLE9BQUdKLGFBQWEsQ0FDckQsNEJBQTRCLEVBQzVCQyxnQkFBZ0IsRUFDaEJGLFFBQVEsQ0FBQyw0QkFBNEIsRUFBRSxvREFBb0QsQ0FBQyxDQUM1RjtBQUVELE9BQU8sTUFBTVcscUJBQXFCO0FBQUE7QUFBQSxDQUFBUCxjQUFBLEdBQUFDLENBQUEsT0FBR0osYUFBYSxDQUNqRCx3QkFBd0IsRUFDeEI7RUFBRUssSUFBSSxFQUFFLDZCQUE2QjtFQUFFQyxLQUFLLEVBQUUsU0FBUztFQUFFQyxNQUFNLEVBQUUsNkJBQTZCO0VBQUVDLE9BQU8sRUFBRTtBQUFTLENBQUcsRUFDckhULFFBQVEsQ0FBQyx3QkFBd0IsRUFBRSxnREFBZ0QsQ0FBQyxDQUNwRiIsImlnbm9yZUxpc3QiOltdfQ==

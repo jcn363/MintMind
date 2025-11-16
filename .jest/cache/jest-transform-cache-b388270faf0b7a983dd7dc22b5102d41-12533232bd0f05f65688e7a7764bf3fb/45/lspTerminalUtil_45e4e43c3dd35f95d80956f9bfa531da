@@ -1,0 +1,208 @@
+340b1c24ee57bd278f1f7c82bafe698b
+/* istanbul ignore next */
+function cov_624hn3su7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/browser/lspTerminalUtil.ts";
+  var hash = "0489611a5bb1d3cc87fa0885e164462cc3b0cb13";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/browser/lspTerminalUtil.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 50
+        },
+        end: {
+          line: 5,
+          column: 92
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 45
+        },
+        end: {
+          line: 12,
+          column: 2
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 18,
+          column: 5
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 9
+        }
+      },
+      "4": {
+        start: {
+          line: 16,
+          column: 12
+        },
+        end: {
+          line: 16,
+          column: 37
+        }
+      },
+      "5": {
+        start: {
+          line: 19,
+          column: 4
+        },
+        end: {
+          line: 19,
+          column: 21
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "getTerminalLspSupportedLanguageObj",
+        decl: {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 13,
+            column: 50
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 62
+          },
+          end: {
+            line: 20,
+            column: 1
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 15,
+            column: 8
+          },
+          end: {
+            line: 17,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 15,
+            column: 8
+          },
+          end: {
+            line: 17,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 15
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/browser/lspTerminalUtil.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,CAAC,MAAM,kCAAkC,GAAG,0CAA0C,CAAC;AAE7F,MAAM,CAAC,MAAM,6BAA6B,GAAG,IAAI,GAAG,CAA+D;IAClH;QACC,SAAS,EAAE,QAAQ;QACnB,UAAU,EAAE,QAAQ;QACpB,SAAS,EAAE,IAAI;KACf;CACD,CAAC,CAAC;AAEH,MAAM,UAAU,kCAAkC,CAAC,SAAiB;IACnE,KAAK,MAAM,iBAAiB,IAAI,6BAA6B,EAAE,CAAC;QAC/D,IAAI,iBAAiB,CAAC,SAAS,KAAK,SAAS,EAAE,CAAC;YAC/C,OAAO,iBAAiB,CAAC;QAC1B,CAAC;IACF,CAAC;IACD,OAAO,SAAS,CAAC;AAClB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/browser/lspTerminalUtil.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const VSCODE_LSP_TERMINAL_PROMPT_TRACKER = 'vscode_lsp_terminal_prompt_tracker= {}\\n';\n\nexport const terminalLspSupportedLanguages = new Set<{ shellType: string; languageId: string; extension: string }>([\n\t{\n\t\tshellType: 'python',\n\t\tlanguageId: 'python',\n\t\textension: 'py'\n\t}\n]);\n\nexport function getTerminalLspSupportedLanguageObj(shellType: string): { shellType: string; languageId: string; extension: string } | undefined {\n\tfor (const supportedLanguage of terminalLspSupportedLanguages) {\n\t\tif (supportedLanguage.shellType === shellType) {\n\t\t\treturn supportedLanguage;\n\t\t}\n\t}\n\treturn undefined;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0489611a5bb1d3cc87fa0885e164462cc3b0cb13"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_624hn3su7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_624hn3su7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const VSCODE_LSP_TERMINAL_PROMPT_TRACKER =
+/* istanbul ignore next */
+(cov_624hn3su7().s[0]++, 'vscode_lsp_terminal_prompt_tracker= {}\n');
+export const terminalLspSupportedLanguages =
+/* istanbul ignore next */
+(cov_624hn3su7().s[1]++, new Set([{
+  shellType: 'python',
+  languageId: 'python',
+  extension: 'py'
+}]));
+export function getTerminalLspSupportedLanguageObj(shellType) {
+  /* istanbul ignore next */
+  cov_624hn3su7().f[0]++;
+  cov_624hn3su7().s[2]++;
+  for (const supportedLanguage of terminalLspSupportedLanguages) {
+    /* istanbul ignore next */
+    cov_624hn3su7().s[3]++;
+    if (supportedLanguage.shellType === shellType) {
+      /* istanbul ignore next */
+      cov_624hn3su7().b[0][0]++;
+      cov_624hn3su7().s[4]++;
+      return supportedLanguage;
+    } else
+    /* istanbul ignore next */
+    {
+      cov_624hn3su7().b[0][1]++;
+    }
+  }
+  /* istanbul ignore next */
+  cov_624hn3su7().s[5]++;
+  return undefined;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfNjI0aG4zc3U3IiwiYWN0dWFsQ292ZXJhZ2UiLCJWU0NPREVfTFNQX1RFUk1JTkFMX1BST01QVF9UUkFDS0VSIiwicyIsInRlcm1pbmFsTHNwU3VwcG9ydGVkTGFuZ3VhZ2VzIiwiU2V0Iiwic2hlbGxUeXBlIiwibGFuZ3VhZ2VJZCIsImV4dGVuc2lvbiIsImdldFRlcm1pbmFsTHNwU3VwcG9ydGVkTGFuZ3VhZ2VPYmoiLCJmIiwic3VwcG9ydGVkTGFuZ3VhZ2UiLCJiIiwidW5kZWZpbmVkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvc3VnZ2VzdC9icm93c2VyL2xzcFRlcm1pbmFsVXRpbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGNvbnN0IFZTQ09ERV9MU1BfVEVSTUlOQUxfUFJPTVBUX1RSQUNLRVIgPSAndnNjb2RlX2xzcF90ZXJtaW5hbF9wcm9tcHRfdHJhY2tlcj0ge31cXG4nO1xuXG5leHBvcnQgY29uc3QgdGVybWluYWxMc3BTdXBwb3J0ZWRMYW5ndWFnZXMgPSBuZXcgU2V0PHsgc2hlbGxUeXBlOiBzdHJpbmc7IGxhbmd1YWdlSWQ6IHN0cmluZzsgZXh0ZW5zaW9uOiBzdHJpbmcgfT4oW1xuXHR7XG5cdFx0c2hlbGxUeXBlOiAncHl0aG9uJyxcblx0XHRsYW5ndWFnZUlkOiAncHl0aG9uJyxcblx0XHRleHRlbnNpb246ICdweSdcblx0fVxuXSk7XG5cbmV4cG9ydCBmdW5jdGlvbiBnZXRUZXJtaW5hbExzcFN1cHBvcnRlZExhbmd1YWdlT2JqKHNoZWxsVHlwZTogc3RyaW5nKTogeyBzaGVsbFR5cGU6IHN0cmluZzsgbGFuZ3VhZ2VJZDogc3RyaW5nOyBleHRlbnNpb246IHN0cmluZyB9IHwgdW5kZWZpbmVkIHtcblx0Zm9yIChjb25zdCBzdXBwb3J0ZWRMYW5ndWFnZSBvZiB0ZXJtaW5hbExzcFN1cHBvcnRlZExhbmd1YWdlcykge1xuXHRcdGlmIChzdXBwb3J0ZWRMYW5ndWFnZS5zaGVsbFR5cGUgPT09IHNoZWxsVHlwZSkge1xuXHRcdFx0cmV0dXJuIHN1cHBvcnRlZExhbmd1YWdlO1xuXHRcdH1cblx0fVxuXHRyZXR1cm4gdW5kZWZpbmVkO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFrQkc7SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQWxCSDs7OztBQUtBLE9BQU8sTUFBTUUsa0NBQWtDO0FBQUE7QUFBQSxDQUFBRixhQUFBLEdBQUFHLENBQUEsT0FBRywwQ0FBMEM7QUFFNUYsT0FBTyxNQUFNQyw2QkFBNkI7QUFBQTtBQUFBLENBQUFKLGFBQUEsR0FBQUcsQ0FBQSxPQUFHLElBQUlFLEdBQUcsQ0FBK0QsQ0FDbEg7RUFDQ0MsU0FBUyxFQUFFLFFBQVE7RUFDbkJDLFVBQVUsRUFBRSxRQUFRO0VBQ3BCQyxTQUFTLEVBQUU7Q0FDWCxDQUNELENBQUM7QUFFRixPQUFNLFNBQVVDLGtDQUFrQ0EsQ0FBQ0gsU0FBaUI7RUFBQTtFQUFBTixhQUFBLEdBQUFVLENBQUE7RUFBQVYsYUFBQSxHQUFBRyxDQUFBO0VBQ25FLEtBQUssTUFBTVEsaUJBQWlCLElBQUlQLDZCQUE2QixFQUFFO0lBQUE7SUFBQUosYUFBQSxHQUFBRyxDQUFBO0lBQzlELElBQUlRLGlCQUFpQixDQUFDTCxTQUFTLEtBQUtBLFNBQVMsRUFBRTtNQUFBO01BQUFOLGFBQUEsR0FBQVksQ0FBQTtNQUFBWixhQUFBLEdBQUFHLENBQUE7TUFDOUMsT0FBT1EsaUJBQWlCO0lBQ3pCLENBQUM7SUFBQTtJQUFBO01BQUFYLGFBQUEsR0FBQVksQ0FBQTtJQUFBO0VBQ0Y7RUFBQztFQUFBWixhQUFBLEdBQUFHLENBQUE7RUFDRCxPQUFPVSxTQUFTO0FBQ2pCIiwiaWdub3JlTGlzdCI6W119

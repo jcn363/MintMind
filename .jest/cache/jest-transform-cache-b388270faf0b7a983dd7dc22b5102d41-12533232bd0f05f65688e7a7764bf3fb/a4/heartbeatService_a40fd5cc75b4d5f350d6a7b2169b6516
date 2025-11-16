@@ -1,0 +1,234 @@
+1ec6a9895c16734ccd3f4d7d8e4f6654
+/* istanbul ignore next */
+function cov_dyz4wn0z1() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/terminal/node/heartbeatService.ts";
+  var hash = "4d42521a9f9a3d3e905e3b6f853998844741393b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/terminal/node/heartbeatService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 14
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 13
+        },
+        end: {
+          line: 10,
+          column: 31
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 16
+        }
+      },
+      "3": {
+        start: {
+          line: 13,
+          column: 25
+        },
+        end: {
+          line: 15,
+          column: 43
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 12
+        },
+        end: {
+          line: 14,
+          column: 32
+        }
+      },
+      "5": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 68
+        }
+      },
+      "6": {
+        start: {
+          line: 16,
+          column: 42
+        },
+        end: {
+          line: 16,
+          column: 65
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 18
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 37
+          },
+          end: {
+            line: 13,
+            column: 38
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 43
+          },
+          end: {
+            line: 15,
+            column: 9
+          }
+        },
+        line: 13
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 16,
+            column: 36
+          },
+          end: {
+            line: 16,
+            column: 37
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 42
+          },
+          end: {
+            line: 16,
+            column: 65
+          }
+        },
+        line: 16
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/terminal/node/heartbeatService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAE,MAAM,+BAA+B,CAAC;AACxD,OAAO,EAAE,UAAU,EAAE,YAAY,EAAE,MAAM,mCAAmC,CAAC;AAC7E,OAAO,EAAE,kBAAkB,EAAqB,MAAM,uBAAuB,CAAC;AAE9E,MAAM,OAAO,gBAAiB,SAAQ,UAAU;IAC9B,OAAO,GAAG,IAAI,CAAC,SAAS,CAAC,IAAI,OAAO,EAAQ,CAAC,CAAC;IACtD,MAAM,GAAG,IAAI,CAAC,OAAO,CAAC,KAAK,CAAC;IAErC;QACC,KAAK,EAAE,CAAC;QAER,MAAM,QAAQ,GAAG,WAAW,CAAC,GAAG,EAAE;YACjC,IAAI,CAAC,OAAO,CAAC,IAAI,EAAE,CAAC;QACrB,CAAC,EAAE,kBAAkB,CAAC,YAAY,CAAC,CAAC;QACpC,IAAI,CAAC,SAAS,CAAC,YAAY,CAAC,GAAG,EAAE,CAAC,aAAa,CAAC,QAAQ,CAAC,CAAC,CAAC,CAAC;IAC7D,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/terminal/node/heartbeatService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Emitter } from '../../../base/common/event.js';\nimport { Disposable, toDisposable } from '../../../base/common/lifecycle.js';\nimport { HeartbeatConstants, IHeartbeatService } from '../common/terminal.js';\n\nexport class HeartbeatService extends Disposable implements IHeartbeatService {\n\tprivate readonly _onBeat = this._register(new Emitter<void>());\n\treadonly onBeat = this._onBeat.event;\n\n\tconstructor() {\n\t\tsuper();\n\n\t\tconst interval = setInterval(() => {\n\t\t\tthis._onBeat.fire();\n\t\t}, HeartbeatConstants.BeatInterval);\n\t\tthis._register(toDisposable(() => clearInterval(interval)));\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4d42521a9f9a3d3e905e3b6f853998844741393b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_dyz4wn0z1 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_dyz4wn0z1();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Emitter } from '../../../base/common/event.js';
+import { Disposable, toDisposable } from '../../../base/common/lifecycle.js';
+import { HeartbeatConstants } from '../common/terminal.js';
+export class HeartbeatService extends Disposable {
+  _onBeat =
+  /* istanbul ignore next */
+  (cov_dyz4wn0z1().s[0]++, this._register(new Emitter()));
+  onBeat =
+  /* istanbul ignore next */
+  (cov_dyz4wn0z1().s[1]++, this._onBeat.event);
+  constructor() {
+    /* istanbul ignore next */
+    cov_dyz4wn0z1().f[0]++;
+    cov_dyz4wn0z1().s[2]++;
+    super();
+    const interval =
+    /* istanbul ignore next */
+    (cov_dyz4wn0z1().s[3]++, setInterval(() => {
+      /* istanbul ignore next */
+      cov_dyz4wn0z1().f[1]++;
+      cov_dyz4wn0z1().s[4]++;
+      this._onBeat.fire();
+    }, HeartbeatConstants.BeatInterval));
+    /* istanbul ignore next */
+    cov_dyz4wn0z1().s[5]++;
+    this._register(toDisposable(() => {
+      /* istanbul ignore next */
+      cov_dyz4wn0z1().f[2]++;
+      cov_dyz4wn0z1().s[6]++;
+      return clearInterval(interval);
+    }));
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfZHl6NHduMHoxIiwiYWN0dWFsQ292ZXJhZ2UiLCJFbWl0dGVyIiwiRGlzcG9zYWJsZSIsInRvRGlzcG9zYWJsZSIsIkhlYXJ0YmVhdENvbnN0YW50cyIsIkhlYXJ0YmVhdFNlcnZpY2UiLCJfb25CZWF0IiwicyIsIl9yZWdpc3RlciIsIm9uQmVhdCIsImV2ZW50IiwiY29uc3RydWN0b3IiLCJmIiwiaW50ZXJ2YWwiLCJzZXRJbnRlcnZhbCIsImZpcmUiLCJCZWF0SW50ZXJ2YWwiLCJjbGVhckludGVydmFsIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS90ZXJtaW5hbC9ub2RlL2hlYXJ0YmVhdFNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEVtaXR0ZXIgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBEaXNwb3NhYmxlLCB0b0Rpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgSGVhcnRiZWF0Q29uc3RhbnRzLCBJSGVhcnRiZWF0U2VydmljZSB9IGZyb20gJy4uL2NvbW1vbi90ZXJtaW5hbC5qcyc7XG5cbmV4cG9ydCBjbGFzcyBIZWFydGJlYXRTZXJ2aWNlIGV4dGVuZHMgRGlzcG9zYWJsZSBpbXBsZW1lbnRzIElIZWFydGJlYXRTZXJ2aWNlIHtcblx0cHJpdmF0ZSByZWFkb25seSBfb25CZWF0ID0gdGhpcy5fcmVnaXN0ZXIobmV3IEVtaXR0ZXI8dm9pZD4oKSk7XG5cdHJlYWRvbmx5IG9uQmVhdCA9IHRoaXMuX29uQmVhdC5ldmVudDtcblxuXHRjb25zdHJ1Y3RvcigpIHtcblx0XHRzdXBlcigpO1xuXG5cdFx0Y29uc3QgaW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCgoKSA9PiB7XG5cdFx0XHR0aGlzLl9vbkJlYXQuZmlyZSgpO1xuXHRcdH0sIEhlYXJ0YmVhdENvbnN0YW50cy5CZWF0SW50ZXJ2YWwpO1xuXHRcdHRoaXMuX3JlZ2lzdGVyKHRvRGlzcG9zYWJsZSgoKSA9PiBjbGVhckludGVydmFsKGludGVydmFsKSkpO1xuXHR9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFtQk07SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQW5CTjs7OztBQUtBLFNBQVNFLE9BQU8sUUFBUSwrQkFBK0I7QUFDdkQsU0FBU0MsVUFBVSxFQUFFQyxZQUFZLFFBQVEsbUNBQW1DO0FBQzVFLFNBQVNDLGtCQUFrQixRQUEyQix1QkFBdUI7QUFFN0UsT0FBTSxNQUFPQyxnQkFBaUIsU0FBUUgsVUFBVTtFQUM5QkksT0FBTztFQUFBO0VBQUEsQ0FBQVAsYUFBQSxHQUFBUSxDQUFBLE9BQUcsSUFBSSxDQUFDQyxTQUFTLENBQUMsSUFBSVAsT0FBTyxFQUFRLENBQUM7RUFDckRRLE1BQU07RUFBQTtFQUFBLENBQUFWLGFBQUEsR0FBQVEsQ0FBQSxPQUFHLElBQUksQ0FBQ0QsT0FBTyxDQUFDSSxLQUFLO0VBRXBDQyxZQUFBO0lBQUE7SUFBQVosYUFBQSxHQUFBYSxDQUFBO0lBQUFiLGFBQUEsR0FBQVEsQ0FBQTtJQUNDLEtBQUssRUFBRTtJQUVQLE1BQU1NLFFBQVE7SUFBQTtJQUFBLENBQUFkLGFBQUEsR0FBQVEsQ0FBQSxPQUFHTyxXQUFXLENBQUMsTUFBSztNQUFBO01BQUFmLGFBQUEsR0FBQWEsQ0FBQTtNQUFBYixhQUFBLEdBQUFRLENBQUE7TUFDakMsSUFBSSxDQUFDRCxPQUFPLENBQUNTLElBQUksRUFBRTtJQUNwQixDQUFDLEVBQUVYLGtCQUFrQixDQUFDWSxZQUFZLENBQUM7SUFBQztJQUFBakIsYUFBQSxHQUFBUSxDQUFBO0lBQ3BDLElBQUksQ0FBQ0MsU0FBUyxDQUFDTCxZQUFZLENBQUMsTUFBTTtNQUFBO01BQUFKLGFBQUEsR0FBQWEsQ0FBQTtNQUFBYixhQUFBLEdBQUFRLENBQUE7TUFBQSxPQUFBVSxhQUFhLENBQUNKLFFBQVEsQ0FBQztJQUFELENBQUMsQ0FBQyxDQUFDO0VBQzVEIiwiaWdub3JlTGlzdCI6W119

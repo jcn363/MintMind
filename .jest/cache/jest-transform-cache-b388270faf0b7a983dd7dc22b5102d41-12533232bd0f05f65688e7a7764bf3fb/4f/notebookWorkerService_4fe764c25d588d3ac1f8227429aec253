@@ -1,0 +1,76 @@
+b1af16e7e72e0add15aa074bc6e8c5ea
+/* istanbul ignore next */
+function cov_zboju1esp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWorkerService.ts";
+  var hash = "6a83a56626deb4098170f8fd90013a5bd936ab05";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWorkerService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 49
+        },
+        end: {
+          line: 6,
+          column: 78
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 44
+        },
+        end: {
+          line: 7,
+          column: 94
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWorkerService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,+DAA+D,CAAC;AAGhG,MAAM,CAAC,MAAM,iCAAiC,GAAG,6BAA6B,CAAC;AAC/E,MAAM,CAAC,MAAM,4BAA4B,GAAG,eAAe,CAA+B,iCAAiC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/services/notebookWorkerService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';\nimport { INotebookDiffResult } from '../notebookCommon.js';\n\nexport const ID_NOTEBOOK_EDITOR_WORKER_SERVICE = 'notebookEditorWorkerService';\nexport const INotebookEditorWorkerService = createDecorator<INotebookEditorWorkerService>(ID_NOTEBOOK_EDITOR_WORKER_SERVICE);\n\nexport interface INotebookEditorWorkerService {\n\treadonly _serviceBrand: undefined;\n\n\tcanComputeDiff(original: URI, modified: URI): boolean;\n\tcomputeDiff(original: URI, modified: URI): Promise<INotebookDiffResult>;\n\tcanPromptRecommendation(model: URI): Promise<boolean>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6a83a56626deb4098170f8fd90013a5bd936ab05"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_zboju1esp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_zboju1esp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';
+export const ID_NOTEBOOK_EDITOR_WORKER_SERVICE =
+/* istanbul ignore next */
+(cov_zboju1esp().s[0]++, 'notebookEditorWorkerService');
+export const INotebookEditorWorkerService =
+/* istanbul ignore next */
+(cov_zboju1esp().s[1]++, createDecorator(ID_NOTEBOOK_EDITOR_WORKER_SERVICE));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJRF9OT1RFQk9PS19FRElUT1JfV09SS0VSX1NFUlZJQ0UiLCJjb3ZfemJvanUxZXNwIiwicyIsIklOb3RlYm9va0VkaXRvcldvcmtlclNlcnZpY2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL25vdGVib29rL2NvbW1vbi9zZXJ2aWNlcy9ub3RlYm9va1dvcmtlclNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IElOb3RlYm9va0RpZmZSZXN1bHQgfSBmcm9tICcuLi9ub3RlYm9va0NvbW1vbi5qcyc7XG5cbmV4cG9ydCBjb25zdCBJRF9OT1RFQk9PS19FRElUT1JfV09SS0VSX1NFUlZJQ0UgPSAnbm90ZWJvb2tFZGl0b3JXb3JrZXJTZXJ2aWNlJztcbmV4cG9ydCBjb25zdCBJTm90ZWJvb2tFZGl0b3JXb3JrZXJTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElOb3RlYm9va0VkaXRvcldvcmtlclNlcnZpY2U+KElEX05PVEVCT09LX0VESVRPUl9XT1JLRVJfU0VSVklDRSk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU5vdGVib29rRWRpdG9yV29ya2VyU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRjYW5Db21wdXRlRGlmZihvcmlnaW5hbDogVVJJLCBtb2RpZmllZDogVVJJKTogYm9vbGVhbjtcblx0Y29tcHV0ZURpZmYob3JpZ2luYWw6IFVSSSwgbW9kaWZpZWQ6IFVSSSk6IFByb21pc2U8SU5vdGVib29rRGlmZlJlc3VsdD47XG5cdGNhblByb21wdFJlY29tbWVuZGF0aW9uKG1vZGVsOiBVUkkpOiBQcm9taXNlPGJvb2xlYW4+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLGVBQWUsUUFBUSwrREFBK0Q7QUFHL0YsT0FBTyxNQUFNQyxpQ0FBaUM7QUFBQTtBQUFBLENBQUFDLGFBQUEsR0FBQUMsQ0FBQSxPQUFHLDZCQUE2QjtBQUM5RSxPQUFPLE1BQU1DLDRCQUE0QjtBQUFBO0FBQUEsQ0FBQUYsYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBK0JDLGlDQUFpQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

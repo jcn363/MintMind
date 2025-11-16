@@ -1,0 +1,194 @@
+4fa84cb45b8b1f190fe417460ff1fd14
+/* istanbul ignore next */
+function cov_2nkkgkoxy7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService.ts";
+  var hash = "33807b415f060dee5d0baf117835d496fc9f7112";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 31
+        },
+        end: {
+          line: 9,
+          column: 65
+        }
+      },
+      "1": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 18,
+          column: 44
+        }
+      },
+      "2": {
+        start: {
+          line: 15,
+          column: 4
+        },
+        end: {
+          line: 15,
+          column: 38
+        }
+      },
+      "3": {
+        start: {
+          line: 16,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 36
+        }
+      },
+      "4": {
+        start: {
+          line: 17,
+          column: 4
+        },
+        end: {
+          line: 17,
+          column: 46
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 14,
+            column: 1
+          },
+          end: {
+            line: 14,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 27
+          },
+          end: {
+            line: 18,
+            column: 1
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 18,
+            column: 3
+          },
+          end: {
+            line: 18,
+            column: 42
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 18,
+            column: 3
+          },
+          end: {
+            line: 18,
+            column: 17
+          }
+        }, {
+          start: {
+            line: 18,
+            column: 22
+          },
+          end: {
+            line: 18,
+            column: 41
+          }
+        }],
+        line: 18
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService.ts",
+      mappings: "AAAA;;;gGAGgG;AAQhG,OAAO,EAAE,eAAe,EAAE,MAAM,kEAAkE,CAAC;AAMnG;;GAEG;AACH,MAAM,CAAC,MAAM,eAAe,GAAG,eAAe,CAAkB,iBAAiB,CAAC,CAAC;AAEnF;;GAEG;AACH,MAAM,CAAN,IAAY,cAIX;AAJD,WAAY,cAAc;IACzB,iCAAe,CAAA;IACf,+BAAa,CAAA;IACb,yCAAuB,CAAA;AACxB,CAAC,EAJW,cAAc,KAAd,cAAc,QAIzB",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/promptSyntax/service/promptsService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../../../../base/common/cancellation.js';\nimport { Event } from '../../../../../../base/common/event.js';\nimport { IDisposable } from '../../../../../../base/common/lifecycle.js';\nimport { URI } from '../../../../../../base/common/uri.js';\nimport { ITextModel } from '../../../../../../editor/common/model.js';\nimport { ExtensionIdentifier, IExtensionDescription } from '../../../../../../platform/extensions/common/extensions.js';\nimport { createDecorator } from '../../../../../../platform/instantiation/common/instantiation.js';\nimport { IChatModeInstructions, IVariableReference } from '../../chatModes.js';\nimport { PromptsType } from '../promptTypes.js';\nimport { IHandOff, ParsedPromptFile } from '../promptFileParser.js';\nimport { ResourceSet } from '../../../../../../base/common/map.js';\n\n/**\n * Provides prompt services.\n */\nexport const IPromptsService = createDecorator<IPromptsService>('IPromptsService');\n\n/**\n * Where the prompt is stored.\n */\nexport enum PromptsStorage {\n\tlocal = 'local',\n\tuser = 'user',\n\textension = 'extension'\n}\n\n/**\n * Represents a prompt path with its type.\n * This is used for both prompt files and prompt source folders.\n */\nexport type IPromptPath = IExtensionPromptPath | ILocalPromptPath | IUserPromptPath;\n\n\nexport interface IPromptPathBase {\n\t/**\n\t * URI of the prompt.\n\t */\n\treadonly uri: URI;\n\n\t/**\n\t * Storage of the prompt.\n\t */\n\treadonly storage: PromptsStorage;\n\n\t/**\n\t * Type of the prompt (e.g. 'prompt' or 'instructions').\n\t */\n\treadonly type: PromptsType;\n\n\t/**\n\t * Identifier of the contributing extension (only when storage === PromptsStorage.extension).\n\t */\n\treadonly extension?: IExtensionDescription;\n\n\treadonly name?: string;\n\n\treadonly description?: string;\n}\n\nexport interface IExtensionPromptPath extends IPromptPathBase {\n\treadonly storage: PromptsStorage.extension;\n\treadonly extension: IExtensionDescription;\n\treadonly name: string;\n\treadonly description: string;\n}\nexport interface ILocalPromptPath extends IPromptPathBase {\n\treadonly storage: PromptsStorage.local;\n}\nexport interface IUserPromptPath extends IPromptPathBase {\n\treadonly storage: PromptsStorage.user;\n}\n\nexport type IAgentSource = {\n\treadonly storage: PromptsStorage.extension;\n\treadonly extensionId: ExtensionIdentifier;\n} | {\n\treadonly storage: PromptsStorage.local | PromptsStorage.user;\n};\n\nexport interface ICustomAgent {\n\t/**\n\t * URI of a custom agent file.\n\t */\n\treadonly uri: URI;\n\n\t/**\n\t * Name of the custom agent as used in prompt files or contexts\n\t */\n\treadonly name: string;\n\n\t/**\n\t * Description of the agent\n\t */\n\treadonly description?: string;\n\n\t/**\n\t * Tools metadata in the prompt header.\n\t */\n\treadonly tools?: readonly string[];\n\n\t/**\n\t * Model metadata in the prompt header.\n\t */\n\treadonly model?: string;\n\n\t/**\n\t * Argument hint metadata in the prompt header that describes what inputs the agent expects or supports.\n\t */\n\treadonly argumentHint?: string;\n\n\t/**\n\t * Target metadata in the prompt header.\n\t */\n\treadonly target?: string;\n\n\t/**\n\t * Contents of the custom agent file body and other agent instructions.\n\t */\n\treadonly agentInstructions: IChatModeInstructions;\n\n\t/**\n\t * Hand-offs defined in the custom agent file.\n\t */\n\treadonly handOffs?: readonly IHandOff[];\n\n\t/**\n\t * Where the agent was loaded from.\n\t */\n\treadonly source: IAgentSource;\n}\n\nexport interface IAgentInstructions {\n\treadonly content: string;\n\treadonly toolReferences: readonly IVariableReference[];\n\treadonly metadata?: Record<string, boolean | string | number>;\n}\n\n/**\n * Provides prompt services.\n */\nexport interface IPromptsService extends IDisposable {\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * The parsed prompt file for the provided text model.\n\t * @param textModel Returns the parsed prompt file.\n\t */\n\tgetParsedPromptFile(textModel: ITextModel): ParsedPromptFile;\n\n\t/**\n\t * List all available prompt files.\n\t */\n\tlistPromptFiles(type: PromptsType, token: CancellationToken): Promise<readonly IPromptPath[]>;\n\n\t/**\n\t * List all available prompt files.\n\t */\n\tlistPromptFilesForStorage(type: PromptsType, storage: PromptsStorage, token: CancellationToken): Promise<readonly IPromptPath[]>;\n\n\t/**\n\t * Get a list of prompt source folders based on the provided prompt type.\n\t */\n\tgetSourceFolders(type: PromptsType): readonly IPromptPath[];\n\n\t/**\n\t * Returns a prompt command if the command name.\n\t * Undefined is returned if the name does not look like a file name of a prompt file.\n\t */\n\tasPromptSlashCommand(name: string): IChatPromptSlashCommand | undefined;\n\n\t/**\n\t * Gets the prompt file for a slash command.\n\t */\n\tresolvePromptSlashCommand(data: IChatPromptSlashCommand, _token: CancellationToken): Promise<ParsedPromptFile | undefined>;\n\n\t/**\n\t * Gets the prompt file for a slash command from cache if available.\n\t * @param command - name of the prompt command without slash\n\t */\n\tresolvePromptSlashCommandFromCache(command: string): ParsedPromptFile | undefined;\n\n\t/**\n\t * Event that is triggered when slash command -> ParsedPromptFile cache is updated.\n\t * Event handler can call resolvePromptSlashCommandFromCache in case there is new value populated.\n\t */\n\treadonly onDidChangeParsedPromptFilesCache: Event<void>;\n\n\t/**\n\t * Returns a prompt command if the command name is valid.\n\t */\n\tfindPromptSlashCommands(): Promise<IChatPromptSlashCommand[]>;\n\n\t/**\n\t * Returns the prompt command name for the given URI.\n\t */\n\tgetPromptCommandName(uri: URI): Promise<string>;\n\n\t/**\n\t * Event that is triggered when the list of custom agents changes.\n\t */\n\treadonly onDidChangeCustomAgents: Event<void>;\n\n\t/**\n\t * Finds all available custom agents\n\t */\n\tgetCustomAgents(token: CancellationToken): Promise<readonly ICustomAgent[]>;\n\n\t/**\n\t * Parses the provided URI\n\t * @param uris\n\t */\n\tparseNew(uri: URI, token: CancellationToken): Promise<ParsedPromptFile>;\n\n\t/**\n\t * Returns the prompt file type for the given URI.\n\t * @param resource the URI of the resource\n\t */\n\tgetPromptFileType(resource: URI): PromptsType | undefined;\n\n\t/**\n\t * Internal: register a contributed file. Returns a disposable that removes the contribution.\n\t * Not intended for extension authors; used by contribution point handler.\n\t */\n\tregisterContributedFile(type: PromptsType, name: string, description: string, uri: URI, extension: IExtensionDescription): IDisposable;\n\n\n\tgetPromptLocationLabel(promptPath: IPromptPath): string;\n\n\t/**\n\t * Gets list of all AGENTS.md files in the workspace.\n\t */\n\tfindAgentMDsInWorkspace(token: CancellationToken): Promise<URI[]>;\n\n\t/**\n\t * Gets list of AGENTS.md files.\n\t * @param includeNested Whether to include AGENTS.md files from subfolders, or only from the root.\n\t */\n\tlistAgentMDs(token: CancellationToken, includeNested: boolean): Promise<URI[]>;\n\n\t/**\n\t * Gets list of .github/copilot-instructions.md files.\n\t */\n\tlistCopilotInstructionsMDs(token: CancellationToken): Promise<URI[]>;\n\n\t/**\n\t * For a chat mode file URI, return the name of the agent file that it should use.\n\t * @param oldURI\n\t */\n\tgetAgentFileURIFromModeFile(oldURI: URI): URI | undefined;\n\n\t/**\n\t * Returns the list of disabled prompt file URIs for a given type. By default no prompt files are disabled.\n\t */\n\tgetDisabledPromptFiles(type: PromptsType): ResourceSet;\n\n\t/**\n\t * Persists the set of disabled prompt file URIs for the given type.\n\t */\n\tsetDisabledPromptFiles(type: PromptsType, uris: ResourceSet): void;\n}\n\nexport interface IChatPromptSlashCommand {\n\treadonly command: string;\n\treadonly detail: string;\n\treadonly promptPath?: IPromptPath;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "33807b415f060dee5d0baf117835d496fc9f7112"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2nkkgkoxy7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2nkkgkoxy7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../../../platform/instantiation/common/instantiation.js';
+/**
+ * Provides prompt services.
+ */
+export const IPromptsService =
+/* istanbul ignore next */
+(cov_2nkkgkoxy7().s[0]++, createDecorator('IPromptsService'));
+/**
+ * Where the prompt is stored.
+ */
+export var PromptsStorage;
+/* istanbul ignore next */
+cov_2nkkgkoxy7().s[1]++;
+(function (PromptsStorage) {
+  /* istanbul ignore next */
+  cov_2nkkgkoxy7().f[0]++;
+  cov_2nkkgkoxy7().s[2]++;
+  PromptsStorage["local"] = "local";
+  /* istanbul ignore next */
+  cov_2nkkgkoxy7().s[3]++;
+  PromptsStorage["user"] = "user";
+  /* istanbul ignore next */
+  cov_2nkkgkoxy7().s[4]++;
+  PromptsStorage["extension"] = "extension";
+})(
+/* istanbul ignore next */
+(cov_2nkkgkoxy7().b[0][0]++, PromptsStorage) ||
+/* istanbul ignore next */
+(cov_2nkkgkoxy7().b[0][1]++, PromptsStorage = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMm5ra2drb3h5NyIsImFjdHVhbENvdmVyYWdlIiwiY3JlYXRlRGVjb3JhdG9yIiwiSVByb21wdHNTZXJ2aWNlIiwicyIsIlByb21wdHNTdG9yYWdlIiwiZiIsImIiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL2NoYXQvY29tbW9uL3Byb21wdFN5bnRheC9zZXJ2aWNlL3Byb21wdHNTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBJVGV4dE1vZGVsIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vZWRpdG9yL2NvbW1vbi9tb2RlbC5qcyc7XG5pbXBvcnQgeyBFeHRlbnNpb25JZGVudGlmaWVyLCBJRXh0ZW5zaW9uRGVzY3JpcHRpb24gfSBmcm9tICcuLi8uLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9leHRlbnNpb25zL2NvbW1vbi9leHRlbnNpb25zLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUNoYXRNb2RlSW5zdHJ1Y3Rpb25zLCBJVmFyaWFibGVSZWZlcmVuY2UgfSBmcm9tICcuLi8uLi9jaGF0TW9kZXMuanMnO1xuaW1wb3J0IHsgUHJvbXB0c1R5cGUgfSBmcm9tICcuLi9wcm9tcHRUeXBlcy5qcyc7XG5pbXBvcnQgeyBJSGFuZE9mZiwgUGFyc2VkUHJvbXB0RmlsZSB9IGZyb20gJy4uL3Byb21wdEZpbGVQYXJzZXIuanMnO1xuaW1wb3J0IHsgUmVzb3VyY2VTZXQgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9tYXAuanMnO1xuXG4vKipcbiAqIFByb3ZpZGVzIHByb21wdCBzZXJ2aWNlcy5cbiAqL1xuZXhwb3J0IGNvbnN0IElQcm9tcHRzU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJUHJvbXB0c1NlcnZpY2U+KCdJUHJvbXB0c1NlcnZpY2UnKTtcblxuLyoqXG4gKiBXaGVyZSB0aGUgcHJvbXB0IGlzIHN0b3JlZC5cbiAqL1xuZXhwb3J0IGVudW0gUHJvbXB0c1N0b3JhZ2Uge1xuXHRsb2NhbCA9ICdsb2NhbCcsXG5cdHVzZXIgPSAndXNlcicsXG5cdGV4dGVuc2lvbiA9ICdleHRlbnNpb24nXG59XG5cbi8qKlxuICogUmVwcmVzZW50cyBhIHByb21wdCBwYXRoIHdpdGggaXRzIHR5cGUuXG4gKiBUaGlzIGlzIHVzZWQgZm9yIGJvdGggcHJvbXB0IGZpbGVzIGFuZCBwcm9tcHQgc291cmNlIGZvbGRlcnMuXG4gKi9cbmV4cG9ydCB0eXBlIElQcm9tcHRQYXRoID0gSUV4dGVuc2lvblByb21wdFBhdGggfCBJTG9jYWxQcm9tcHRQYXRoIHwgSVVzZXJQcm9tcHRQYXRoO1xuXG5cbmV4cG9ydCBpbnRlcmZhY2UgSVByb21wdFBhdGhCYXNlIHtcblx0LyoqXG5cdCAqIFVSSSBvZiB0aGUgcHJvbXB0LlxuXHQgKi9cblx0cmVhZG9ubHkgdXJpOiBVUkk7XG5cblx0LyoqXG5cdCAqIFN0b3JhZ2Ugb2YgdGhlIHByb21wdC5cblx0ICovXG5cdHJlYWRvbmx5IHN0b3JhZ2U6IFByb21wdHNTdG9yYWdlO1xuXG5cdC8qKlxuXHQgKiBUeXBlIG9mIHRoZSBwcm9tcHQgKGUuZy4gJ3Byb21wdCcgb3IgJ2luc3RydWN0aW9ucycpLlxuXHQgKi9cblx0cmVhZG9ubHkgdHlwZTogUHJvbXB0c1R5cGU7XG5cblx0LyoqXG5cdCAqIElkZW50aWZpZXIgb2YgdGhlIGNvbnRyaWJ1dGluZyBleHRlbnNpb24gKG9ubHkgd2hlbiBzdG9yYWdlID09PSBQcm9tcHRzU3RvcmFnZS5leHRlbnNpb24pLlxuXHQgKi9cblx0cmVhZG9ubHkgZXh0ZW5zaW9uPzogSUV4dGVuc2lvbkRlc2NyaXB0aW9uO1xuXG5cdHJlYWRvbmx5IG5hbWU/OiBzdHJpbmc7XG5cblx0cmVhZG9ubHkgZGVzY3JpcHRpb24/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUV4dGVuc2lvblByb21wdFBhdGggZXh0ZW5kcyBJUHJvbXB0UGF0aEJhc2Uge1xuXHRyZWFkb25seSBzdG9yYWdlOiBQcm9tcHRzU3RvcmFnZS5leHRlbnNpb247XG5cdHJlYWRvbmx5IGV4dGVuc2lvbjogSUV4dGVuc2lvbkRlc2NyaXB0aW9uO1xuXHRyZWFkb25seSBuYW1lOiBzdHJpbmc7XG5cdHJlYWRvbmx5IGRlc2NyaXB0aW9uOiBzdHJpbmc7XG59XG5leHBvcnQgaW50ZXJmYWNlIElMb2NhbFByb21wdFBhdGggZXh0ZW5kcyBJUHJvbXB0UGF0aEJhc2Uge1xuXHRyZWFkb25seSBzdG9yYWdlOiBQcm9tcHRzU3RvcmFnZS5sb2NhbDtcbn1cbmV4cG9ydCBpbnRlcmZhY2UgSVVzZXJQcm9tcHRQYXRoIGV4dGVuZHMgSVByb21wdFBhdGhCYXNlIHtcblx0cmVhZG9ubHkgc3RvcmFnZTogUHJvbXB0c1N0b3JhZ2UudXNlcjtcbn1cblxuZXhwb3J0IHR5cGUgSUFnZW50U291cmNlID0ge1xuXHRyZWFkb25seSBzdG9yYWdlOiBQcm9tcHRzU3RvcmFnZS5leHRlbnNpb247XG5cdHJlYWRvbmx5IGV4dGVuc2lvbklkOiBFeHRlbnNpb25JZGVudGlmaWVyO1xufSB8IHtcblx0cmVhZG9ubHkgc3RvcmFnZTogUHJvbXB0c1N0b3JhZ2UubG9jYWwgfCBQcm9tcHRzU3RvcmFnZS51c2VyO1xufTtcblxuZXhwb3J0IGludGVyZmFjZSBJQ3VzdG9tQWdlbnQge1xuXHQvKipcblx0ICogVVJJIG9mIGEgY3VzdG9tIGFnZW50IGZpbGUuXG5cdCAqL1xuXHRyZWFkb25seSB1cmk6IFVSSTtcblxuXHQvKipcblx0ICogTmFtZSBvZiB0aGUgY3VzdG9tIGFnZW50IGFzIHVzZWQgaW4gcHJvbXB0IGZpbGVzIG9yIGNvbnRleHRzXG5cdCAqL1xuXHRyZWFkb25seSBuYW1lOiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIERlc2NyaXB0aW9uIG9mIHRoZSBhZ2VudFxuXHQgKi9cblx0cmVhZG9ubHkgZGVzY3JpcHRpb24/OiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIFRvb2xzIG1ldGFkYXRhIGluIHRoZSBwcm9tcHQgaGVhZGVyLlxuXHQgKi9cblx0cmVhZG9ubHkgdG9vbHM/OiByZWFkb25seSBzdHJpbmdbXTtcblxuXHQvKipcblx0ICogTW9kZWwgbWV0YWRhdGEgaW4gdGhlIHByb21wdCBoZWFkZXIuXG5cdCAqL1xuXHRyZWFkb25seSBtb2RlbD86IHN0cmluZztcblxuXHQvKipcblx0ICogQXJndW1lbnQgaGludCBtZXRhZGF0YSBpbiB0aGUgcHJvbXB0IGhlYWRlciB0aGF0IGRlc2NyaWJlcyB3aGF0IGlucHV0cyB0aGUgYWdlbnQgZXhwZWN0cyBvciBzdXBwb3J0cy5cblx0ICovXG5cdHJlYWRvbmx5IGFyZ3VtZW50SGludD86IHN0cmluZztcblxuXHQvKipcblx0ICogVGFyZ2V0IG1ldGFkYXRhIGluIHRoZSBwcm9tcHQgaGVhZGVyLlxuXHQgKi9cblx0cmVhZG9ubHkgdGFyZ2V0Pzogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBDb250ZW50cyBvZiB0aGUgY3VzdG9tIGFnZW50IGZpbGUgYm9keSBhbmQgb3RoZXIgYWdlbnQgaW5zdHJ1Y3Rpb25zLlxuXHQgKi9cblx0cmVhZG9ubHkgYWdlbnRJbnN0cnVjdGlvbnM6IElDaGF0TW9kZUluc3RydWN0aW9ucztcblxuXHQvKipcblx0ICogSGFuZC1vZmZzIGRlZmluZWQgaW4gdGhlIGN1c3RvbSBhZ2VudCBmaWxlLlxuXHQgKi9cblx0cmVhZG9ubHkgaGFuZE9mZnM/OiByZWFkb25seSBJSGFuZE9mZltdO1xuXG5cdC8qKlxuXHQgKiBXaGVyZSB0aGUgYWdlbnQgd2FzIGxvYWRlZCBmcm9tLlxuXHQgKi9cblx0cmVhZG9ubHkgc291cmNlOiBJQWdlbnRTb3VyY2U7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUFnZW50SW5zdHJ1Y3Rpb25zIHtcblx0cmVhZG9ubHkgY29udGVudDogc3RyaW5nO1xuXHRyZWFkb25seSB0b29sUmVmZXJlbmNlczogcmVhZG9ubHkgSVZhcmlhYmxlUmVmZXJlbmNlW107XG5cdHJlYWRvbmx5IG1ldGFkYXRhPzogUmVjb3JkPHN0cmluZywgYm9vbGVhbiB8IHN0cmluZyB8IG51bWJlcj47XG59XG5cbi8qKlxuICogUHJvdmlkZXMgcHJvbXB0IHNlcnZpY2VzLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElQcm9tcHRzU2VydmljZSBleHRlbmRzIElEaXNwb3NhYmxlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBUaGUgcGFyc2VkIHByb21wdCBmaWxlIGZvciB0aGUgcHJvdmlkZWQgdGV4dCBtb2RlbC5cblx0ICogQHBhcmFtIHRleHRNb2RlbCBSZXR1cm5zIHRoZSBwYXJzZWQgcHJvbXB0IGZpbGUuXG5cdCAqL1xuXHRnZXRQYXJzZWRQcm9tcHRGaWxlKHRleHRNb2RlbDogSVRleHRNb2RlbCk6IFBhcnNlZFByb21wdEZpbGU7XG5cblx0LyoqXG5cdCAqIExpc3QgYWxsIGF2YWlsYWJsZSBwcm9tcHQgZmlsZXMuXG5cdCAqL1xuXHRsaXN0UHJvbXB0RmlsZXModHlwZTogUHJvbXB0c1R5cGUsIHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbik6IFByb21pc2U8cmVhZG9ubHkgSVByb21wdFBhdGhbXT47XG5cblx0LyoqXG5cdCAqIExpc3QgYWxsIGF2YWlsYWJsZSBwcm9tcHQgZmlsZXMuXG5cdCAqL1xuXHRsaXN0UHJvbXB0RmlsZXNGb3JTdG9yYWdlKHR5cGU6IFByb21wdHNUeXBlLCBzdG9yYWdlOiBQcm9tcHRzU3RvcmFnZSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxyZWFkb25seSBJUHJvbXB0UGF0aFtdPjtcblxuXHQvKipcblx0ICogR2V0IGEgbGlzdCBvZiBwcm9tcHQgc291cmNlIGZvbGRlcnMgYmFzZWQgb24gdGhlIHByb3ZpZGVkIHByb21wdCB0eXBlLlxuXHQgKi9cblx0Z2V0U291cmNlRm9sZGVycyh0eXBlOiBQcm9tcHRzVHlwZSk6IHJlYWRvbmx5IElQcm9tcHRQYXRoW107XG5cblx0LyoqXG5cdCAqIFJldHVybnMgYSBwcm9tcHQgY29tbWFuZCBpZiB0aGUgY29tbWFuZCBuYW1lLlxuXHQgKiBVbmRlZmluZWQgaXMgcmV0dXJuZWQgaWYgdGhlIG5hbWUgZG9lcyBub3QgbG9vayBsaWtlIGEgZmlsZSBuYW1lIG9mIGEgcHJvbXB0IGZpbGUuXG5cdCAqL1xuXHRhc1Byb21wdFNsYXNoQ29tbWFuZChuYW1lOiBzdHJpbmcpOiBJQ2hhdFByb21wdFNsYXNoQ29tbWFuZCB8IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogR2V0cyB0aGUgcHJvbXB0IGZpbGUgZm9yIGEgc2xhc2ggY29tbWFuZC5cblx0ICovXG5cdHJlc29sdmVQcm9tcHRTbGFzaENvbW1hbmQoZGF0YTogSUNoYXRQcm9tcHRTbGFzaENvbW1hbmQsIF90b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPFBhcnNlZFByb21wdEZpbGUgfCB1bmRlZmluZWQ+O1xuXG5cdC8qKlxuXHQgKiBHZXRzIHRoZSBwcm9tcHQgZmlsZSBmb3IgYSBzbGFzaCBjb21tYW5kIGZyb20gY2FjaGUgaWYgYXZhaWxhYmxlLlxuXHQgKiBAcGFyYW0gY29tbWFuZCAtIG5hbWUgb2YgdGhlIHByb21wdCBjb21tYW5kIHdpdGhvdXQgc2xhc2hcblx0ICovXG5cdHJlc29sdmVQcm9tcHRTbGFzaENvbW1hbmRGcm9tQ2FjaGUoY29tbWFuZDogc3RyaW5nKTogUGFyc2VkUHJvbXB0RmlsZSB8IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogRXZlbnQgdGhhdCBpcyB0cmlnZ2VyZWQgd2hlbiBzbGFzaCBjb21tYW5kIC0+IFBhcnNlZFByb21wdEZpbGUgY2FjaGUgaXMgdXBkYXRlZC5cblx0ICogRXZlbnQgaGFuZGxlciBjYW4gY2FsbCByZXNvbHZlUHJvbXB0U2xhc2hDb21tYW5kRnJvbUNhY2hlIGluIGNhc2UgdGhlcmUgaXMgbmV3IHZhbHVlIHBvcHVsYXRlZC5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlUGFyc2VkUHJvbXB0RmlsZXNDYWNoZTogRXZlbnQ8dm9pZD47XG5cblx0LyoqXG5cdCAqIFJldHVybnMgYSBwcm9tcHQgY29tbWFuZCBpZiB0aGUgY29tbWFuZCBuYW1lIGlzIHZhbGlkLlxuXHQgKi9cblx0ZmluZFByb21wdFNsYXNoQ29tbWFuZHMoKTogUHJvbWlzZTxJQ2hhdFByb21wdFNsYXNoQ29tbWFuZFtdPjtcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgcHJvbXB0IGNvbW1hbmQgbmFtZSBmb3IgdGhlIGdpdmVuIFVSSS5cblx0ICovXG5cdGdldFByb21wdENvbW1hbmROYW1lKHVyaTogVVJJKTogUHJvbWlzZTxzdHJpbmc+O1xuXG5cdC8qKlxuXHQgKiBFdmVudCB0aGF0IGlzIHRyaWdnZXJlZCB3aGVuIHRoZSBsaXN0IG9mIGN1c3RvbSBhZ2VudHMgY2hhbmdlcy5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlQ3VzdG9tQWdlbnRzOiBFdmVudDx2b2lkPjtcblxuXHQvKipcblx0ICogRmluZHMgYWxsIGF2YWlsYWJsZSBjdXN0b20gYWdlbnRzXG5cdCAqL1xuXHRnZXRDdXN0b21BZ2VudHModG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxyZWFkb25seSBJQ3VzdG9tQWdlbnRbXT47XG5cblx0LyoqXG5cdCAqIFBhcnNlcyB0aGUgcHJvdmlkZWQgVVJJXG5cdCAqIEBwYXJhbSB1cmlzXG5cdCAqL1xuXHRwYXJzZU5ldyh1cmk6IFVSSSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxQYXJzZWRQcm9tcHRGaWxlPjtcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgcHJvbXB0IGZpbGUgdHlwZSBmb3IgdGhlIGdpdmVuIFVSSS5cblx0ICogQHBhcmFtIHJlc291cmNlIHRoZSBVUkkgb2YgdGhlIHJlc291cmNlXG5cdCAqL1xuXHRnZXRQcm9tcHRGaWxlVHlwZShyZXNvdXJjZTogVVJJKTogUHJvbXB0c1R5cGUgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEludGVybmFsOiByZWdpc3RlciBhIGNvbnRyaWJ1dGVkIGZpbGUuIFJldHVybnMgYSBkaXNwb3NhYmxlIHRoYXQgcmVtb3ZlcyB0aGUgY29udHJpYnV0aW9uLlxuXHQgKiBOb3QgaW50ZW5kZWQgZm9yIGV4dGVuc2lvbiBhdXRob3JzOyB1c2VkIGJ5IGNvbnRyaWJ1dGlvbiBwb2ludCBoYW5kbGVyLlxuXHQgKi9cblx0cmVnaXN0ZXJDb250cmlidXRlZEZpbGUodHlwZTogUHJvbXB0c1R5cGUsIG5hbWU6IHN0cmluZywgZGVzY3JpcHRpb246IHN0cmluZywgdXJpOiBVUkksIGV4dGVuc2lvbjogSUV4dGVuc2lvbkRlc2NyaXB0aW9uKTogSURpc3Bvc2FibGU7XG5cblxuXHRnZXRQcm9tcHRMb2NhdGlvbkxhYmVsKHByb21wdFBhdGg6IElQcm9tcHRQYXRoKTogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBHZXRzIGxpc3Qgb2YgYWxsIEFHRU5UUy5tZCBmaWxlcyBpbiB0aGUgd29ya3NwYWNlLlxuXHQgKi9cblx0ZmluZEFnZW50TURzSW5Xb3Jrc3BhY2UodG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxVUklbXT47XG5cblx0LyoqXG5cdCAqIEdldHMgbGlzdCBvZiBBR0VOVFMubWQgZmlsZXMuXG5cdCAqIEBwYXJhbSBpbmNsdWRlTmVzdGVkIFdoZXRoZXIgdG8gaW5jbHVkZSBBR0VOVFMubWQgZmlsZXMgZnJvbSBzdWJmb2xkZXJzLCBvciBvbmx5IGZyb20gdGhlIHJvb3QuXG5cdCAqL1xuXHRsaXN0QWdlbnRNRHModG9rZW46IENhbmNlbGxhdGlvblRva2VuLCBpbmNsdWRlTmVzdGVkOiBib29sZWFuKTogUHJvbWlzZTxVUklbXT47XG5cblx0LyoqXG5cdCAqIEdldHMgbGlzdCBvZiAuZ2l0aHViL2NvcGlsb3QtaW5zdHJ1Y3Rpb25zLm1kIGZpbGVzLlxuXHQgKi9cblx0bGlzdENvcGlsb3RJbnN0cnVjdGlvbnNNRHModG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxVUklbXT47XG5cblx0LyoqXG5cdCAqIEZvciBhIGNoYXQgbW9kZSBmaWxlIFVSSSwgcmV0dXJuIHRoZSBuYW1lIG9mIHRoZSBhZ2VudCBmaWxlIHRoYXQgaXQgc2hvdWxkIHVzZS5cblx0ICogQHBhcmFtIG9sZFVSSVxuXHQgKi9cblx0Z2V0QWdlbnRGaWxlVVJJRnJvbU1vZGVGaWxlKG9sZFVSSTogVVJJKTogVVJJIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRoZSBsaXN0IG9mIGRpc2FibGVkIHByb21wdCBmaWxlIFVSSXMgZm9yIGEgZ2l2ZW4gdHlwZS4gQnkgZGVmYXVsdCBubyBwcm9tcHQgZmlsZXMgYXJlIGRpc2FibGVkLlxuXHQgKi9cblx0Z2V0RGlzYWJsZWRQcm9tcHRGaWxlcyh0eXBlOiBQcm9tcHRzVHlwZSk6IFJlc291cmNlU2V0O1xuXG5cdC8qKlxuXHQgKiBQZXJzaXN0cyB0aGUgc2V0IG9mIGRpc2FibGVkIHByb21wdCBmaWxlIFVSSXMgZm9yIHRoZSBnaXZlbiB0eXBlLlxuXHQgKi9cblx0c2V0RGlzYWJsZWRQcm9tcHRGaWxlcyh0eXBlOiBQcm9tcHRzVHlwZSwgdXJpczogUmVzb3VyY2VTZXQpOiB2b2lkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDaGF0UHJvbXB0U2xhc2hDb21tYW5kIHtcblx0cmVhZG9ubHkgY29tbWFuZDogc3RyaW5nO1xuXHRyZWFkb25seSBkZXRhaWw6IHN0cmluZztcblx0cmVhZG9ubHkgcHJvbXB0UGF0aD86IElQcm9tcHRQYXRoO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBMkJDO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUEzQkQ7Ozs7QUFXQSxTQUFTRSxlQUFlLFFBQVEsa0VBQWtFO0FBTWxHOzs7QUFHQSxPQUFPLE1BQU1DLGVBQWU7QUFBQTtBQUFBLENBQUFILGNBQUEsR0FBQUksQ0FBQSxPQUFHRixlQUFlLENBQWtCLGlCQUFpQixDQUFDO0FBRWxGOzs7QUFHQSxXQUFZRyxjQUlYO0FBQUE7QUFBQUwsY0FBQSxHQUFBSSxDQUFBO0FBSkQsV0FBWUMsY0FBYztFQUFBO0VBQUFMLGNBQUEsR0FBQU0sQ0FBQTtFQUFBTixjQUFBLEdBQUFJLENBQUE7RUFDekJDLGNBQUEsbUJBQWU7RUFBQTtFQUFBTCxjQUFBLEdBQUFJLENBQUE7RUFDZkMsY0FBQSxpQkFBYTtFQUFBO0VBQUFMLGNBQUEsR0FBQUksQ0FBQTtFQUNiQyxjQUFBLDJCQUF1QjtBQUN4QixDQUFDO0FBSlc7QUFBQSxDQUFBTCxjQUFBLEdBQUFPLENBQUEsVUFBQUYsY0FBYztBQUFBO0FBQUEsQ0FBQUwsY0FBQSxHQUFBTyxDQUFBLFVBQWRGLGNBQWMiLCJpZ25vcmVMaXN0IjpbXX0=

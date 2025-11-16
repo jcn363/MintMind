@@ -1,0 +1,275 @@
+c9d662637e17de91ce3912f4350b9f3b
+/* istanbul ignore next */
+function cov_21lgridpdl() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testingViewState.ts";
+  var hash = "ec610508a8af134e3bd04efa6ca11ae6b915385e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testingViewState.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 5
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 35
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 15
+        },
+        end: {
+          line: 13,
+          column: 25
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 19,
+          column: 5
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 9
+        }
+      },
+      "5": {
+        start: {
+          line: 16,
+          column: 12
+        },
+        end: {
+          line: 16,
+          column: 29
+        }
+      },
+      "6": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 35
+        }
+      },
+      "7": {
+        start: {
+          line: 20,
+          column: 4
+        },
+        end: {
+          line: 20,
+          column: 26
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isCollapsedInSerializedTestTree",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 47
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 64
+          },
+          end: {
+            line: 21,
+            column: 1
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 10
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 15,
+            column: 8
+          },
+          end: {
+            line: 17,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 15,
+            column: 8
+          },
+          end: {
+            line: 17,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 15
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testingViewState.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAOhD;;GAEG;AACH,MAAM,UAAU,+BAA+B,CAAC,UAA4C,EAAE,EAAmB;IAChH,IAAI,CAAC,CAAC,EAAE,YAAY,MAAM,CAAC,EAAE,CAAC;QAC7B,EAAE,GAAG,MAAM,CAAC,UAAU,CAAC,EAAE,CAAC,CAAC;IAC5B,CAAC;IAED,IAAI,IAAI,GAAG,UAAU,CAAC;IACtB,KAAK,MAAM,IAAI,IAAI,EAAE,CAAC,IAAI,EAAE,CAAC;QAC5B,IAAI,CAAC,IAAI,CAAC,QAAQ,EAAE,cAAc,CAAC,IAAI,CAAC,EAAE,CAAC;YAC1C,OAAO,SAAS,CAAC;QAClB,CAAC;QAED,IAAI,GAAG,IAAI,CAAC,QAAQ,CAAC,IAAI,CAAC,CAAC;IAC5B,CAAC;IAED,OAAO,IAAI,CAAC,SAAS,CAAC;AACvB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testingViewState.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { TestId } from '../../common/testId.js';\n\nexport interface ISerializedTestTreeCollapseState {\n\tcollapsed?: boolean;\n\tchildren?: { [localId: string]: ISerializedTestTreeCollapseState };\n}\n\n/**\n * Gets whether the given test ID is collapsed.\n */\nexport function isCollapsedInSerializedTestTree(serialized: ISerializedTestTreeCollapseState, id: TestId | string): boolean | undefined {\n\tif (!(id instanceof TestId)) {\n\t\tid = TestId.fromString(id);\n\t}\n\n\tlet node = serialized;\n\tfor (const part of id.path) {\n\t\tif (!node.children?.hasOwnProperty(part)) {\n\t\t\treturn undefined;\n\t\t}\n\n\t\tnode = node.children[part];\n\t}\n\n\treturn node.collapsed;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ec610508a8af134e3bd04efa6ca11ae6b915385e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_21lgridpdl = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_21lgridpdl();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { TestId } from '../../common/testId.js';
+/**
+ * Gets whether the given test ID is collapsed.
+ */
+export function isCollapsedInSerializedTestTree(serialized, id) {
+  /* istanbul ignore next */
+  cov_21lgridpdl().f[0]++;
+  cov_21lgridpdl().s[0]++;
+  if (!(id instanceof TestId)) {
+    /* istanbul ignore next */
+    cov_21lgridpdl().b[0][0]++;
+    cov_21lgridpdl().s[1]++;
+    id = TestId.fromString(id);
+  } else
+  /* istanbul ignore next */
+  {
+    cov_21lgridpdl().b[0][1]++;
+  }
+  let node =
+  /* istanbul ignore next */
+  (cov_21lgridpdl().s[2]++, serialized);
+  /* istanbul ignore next */
+  cov_21lgridpdl().s[3]++;
+  for (const part of id.path) {
+    /* istanbul ignore next */
+    cov_21lgridpdl().s[4]++;
+    if (!node.children?.hasOwnProperty(part)) {
+      /* istanbul ignore next */
+      cov_21lgridpdl().b[1][0]++;
+      cov_21lgridpdl().s[5]++;
+      return undefined;
+    } else
+    /* istanbul ignore next */
+    {
+      cov_21lgridpdl().b[1][1]++;
+    }
+    cov_21lgridpdl().s[6]++;
+    node = node.children[part];
+  }
+  /* istanbul ignore next */
+  cov_21lgridpdl().s[7]++;
+  return node.collapsed;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjFsZ3JpZHBkbCIsImFjdHVhbENvdmVyYWdlIiwiVGVzdElkIiwiaXNDb2xsYXBzZWRJblNlcmlhbGl6ZWRUZXN0VHJlZSIsInNlcmlhbGl6ZWQiLCJpZCIsImYiLCJzIiwiYiIsImZyb21TdHJpbmciLCJub2RlIiwicGFydCIsInBhdGgiLCJjaGlsZHJlbiIsImhhc093blByb3BlcnR5IiwidW5kZWZpbmVkIiwiY29sbGFwc2VkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXN0aW5nL2Jyb3dzZXIvZXhwbG9yZXJQcm9qZWN0aW9ucy90ZXN0aW5nVmlld1N0YXRlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBUZXN0SWQgfSBmcm9tICcuLi8uLi9jb21tb24vdGVzdElkLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJU2VyaWFsaXplZFRlc3RUcmVlQ29sbGFwc2VTdGF0ZSB7XG5cdGNvbGxhcHNlZD86IGJvb2xlYW47XG5cdGNoaWxkcmVuPzogeyBbbG9jYWxJZDogc3RyaW5nXTogSVNlcmlhbGl6ZWRUZXN0VHJlZUNvbGxhcHNlU3RhdGUgfTtcbn1cblxuLyoqXG4gKiBHZXRzIHdoZXRoZXIgdGhlIGdpdmVuIHRlc3QgSUQgaXMgY29sbGFwc2VkLlxuICovXG5leHBvcnQgZnVuY3Rpb24gaXNDb2xsYXBzZWRJblNlcmlhbGl6ZWRUZXN0VHJlZShzZXJpYWxpemVkOiBJU2VyaWFsaXplZFRlc3RUcmVlQ29sbGFwc2VTdGF0ZSwgaWQ6IFRlc3RJZCB8IHN0cmluZyk6IGJvb2xlYW4gfCB1bmRlZmluZWQge1xuXHRpZiAoIShpZCBpbnN0YW5jZW9mIFRlc3RJZCkpIHtcblx0XHRpZCA9IFRlc3RJZC5mcm9tU3RyaW5nKGlkKTtcblx0fVxuXG5cdGxldCBub2RlID0gc2VyaWFsaXplZDtcblx0Zm9yIChjb25zdCBwYXJ0IG9mIGlkLnBhdGgpIHtcblx0XHRpZiAoIW5vZGUuY2hpbGRyZW4/Lmhhc093blByb3BlcnR5KHBhcnQpKSB7XG5cdFx0XHRyZXR1cm4gdW5kZWZpbmVkO1xuXHRcdH1cblxuXHRcdG5vZGUgPSBub2RlLmNoaWxkcmVuW3BhcnRdO1xuXHR9XG5cblx0cmV0dXJuIG5vZGUuY29sbGFwc2VkO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQXVCRztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBdkJIOzs7O0FBS0EsU0FBU0UsTUFBTSxRQUFRLHdCQUF3QjtBQU8vQzs7O0FBR0EsT0FBTSxTQUFVQywrQkFBK0JBLENBQUNDLFVBQTRDLEVBQUVDLEVBQW1CO0VBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQUFOLGNBQUEsR0FBQU8sQ0FBQTtFQUNoSCxJQUFJLEVBQUVGLEVBQUUsWUFBWUgsTUFBTSxDQUFDLEVBQUU7SUFBQTtJQUFBRixjQUFBLEdBQUFRLENBQUE7SUFBQVIsY0FBQSxHQUFBTyxDQUFBO0lBQzVCRixFQUFFLEdBQUdILE1BQU0sQ0FBQ08sVUFBVSxDQUFDSixFQUFFLENBQUM7RUFDM0IsQ0FBQztFQUFBO0VBQUE7SUFBQUwsY0FBQSxHQUFBUSxDQUFBO0VBQUE7RUFFRCxJQUFJRSxJQUFJO0VBQUE7RUFBQSxDQUFBVixjQUFBLEdBQUFPLENBQUEsT0FBR0gsVUFBVTtFQUFDO0VBQUFKLGNBQUEsR0FBQU8sQ0FBQTtFQUN0QixLQUFLLE1BQU1JLElBQUksSUFBSU4sRUFBRSxDQUFDTyxJQUFJLEVBQUU7SUFBQTtJQUFBWixjQUFBLEdBQUFPLENBQUE7SUFDM0IsSUFBSSxDQUFDRyxJQUFJLENBQUNHLFFBQVEsRUFBRUMsY0FBYyxDQUFDSCxJQUFJLENBQUMsRUFBRTtNQUFBO01BQUFYLGNBQUEsR0FBQVEsQ0FBQTtNQUFBUixjQUFBLEdBQUFPLENBQUE7TUFDekMsT0FBT1EsU0FBUztJQUNqQixDQUFDO0lBQUE7SUFBQTtNQUFBZixjQUFBLEdBQUFRLENBQUE7SUFBQTtJQUFBUixjQUFBLEdBQUFPLENBQUE7SUFFREcsSUFBSSxHQUFHQSxJQUFJLENBQUNHLFFBQVEsQ0FBQ0YsSUFBSSxDQUFDO0VBQzNCO0VBQUM7RUFBQVgsY0FBQSxHQUFBTyxDQUFBO0VBRUQsT0FBT0csSUFBSSxDQUFDTSxTQUFTO0FBQ3RCIiwiaWdub3JlTGlzdCI6W119

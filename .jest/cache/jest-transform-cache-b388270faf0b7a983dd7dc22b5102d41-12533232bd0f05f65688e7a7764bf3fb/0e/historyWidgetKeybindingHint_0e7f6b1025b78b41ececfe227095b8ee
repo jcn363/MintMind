@@ -1,0 +1,129 @@
+0124a1a62c90dac50ad41eaf2b7b9391
+/* istanbul ignore next */
+function cov_1y6m8m36nm() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/history/browser/historyWidgetKeybindingHint.ts";
+  var hash = "b2c89efe3d77fa081044a9df0092bb742f886868";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/history/browser/historyWidgetKeybindingHint.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 4
+        },
+        end: {
+          line: 6,
+          column: 200
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "showHistoryKeybindingHint",
+        decl: {
+          start: {
+            line: 5,
+            column: 16
+          },
+          end: {
+            line: 5,
+            column: 41
+          }
+        },
+        loc: {
+          start: {
+            line: 5,
+            column: 61
+          },
+          end: {
+            line: 7,
+            column: 1
+          }
+        },
+        line: 5
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 6,
+            column: 11
+          },
+          end: {
+            line: 6,
+            column: 199
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 6,
+            column: 11
+          },
+          end: {
+            line: 6,
+            column: 104
+          }
+        }, {
+          start: {
+            line: 6,
+            column: 108
+          },
+          end: {
+            line: 6,
+            column: 199
+          }
+        }],
+        line: 6
+      }
+    },
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/history/browser/historyWidgetKeybindingHint.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,UAAU,yBAAyB,CAAC,iBAAqC;IAC9E,OAAO,iBAAiB,CAAC,gBAAgB,CAAC,sBAAsB,CAAC,EAAE,sBAAsB,EAAE,KAAK,IAAI,IAAI,iBAAiB,CAAC,gBAAgB,CAAC,kBAAkB,CAAC,EAAE,sBAAsB,EAAE,KAAK,MAAM,CAAC;AACrM,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/history/browser/historyWidgetKeybindingHint.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IKeybindingService } from '../../keybinding/common/keybinding.js';\n\nexport function showHistoryKeybindingHint(keybindingService: IKeybindingService): boolean {\n\treturn keybindingService.lookupKeybinding('history.showPrevious')?.getElectronAccelerator() === 'Up' && keybindingService.lookupKeybinding('history.showNext')?.getElectronAccelerator() === 'Down';\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b2c89efe3d77fa081044a9df0092bb742f886868"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1y6m8m36nm = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1y6m8m36nm();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export function showHistoryKeybindingHint(keybindingService) {
+  /* istanbul ignore next */
+  cov_1y6m8m36nm().f[0]++;
+  cov_1y6m8m36nm().s[0]++;
+  return /* istanbul ignore next */(cov_1y6m8m36nm().b[0][0]++, keybindingService.lookupKeybinding('history.showPrevious')?.getElectronAccelerator() === 'Up') &&
+  /* istanbul ignore next */
+  (cov_1y6m8m36nm().b[0][1]++, keybindingService.lookupKeybinding('history.showNext')?.getElectronAccelerator() === 'Down');
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJzaG93SGlzdG9yeUtleWJpbmRpbmdIaW50Iiwia2V5YmluZGluZ1NlcnZpY2UiLCJjb3ZfMXk2bThtMzZubSIsImYiLCJzIiwiYiIsImxvb2t1cEtleWJpbmRpbmciLCJnZXRFbGVjdHJvbkFjY2VsZXJhdG9yIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9oaXN0b3J5L2Jyb3dzZXIvaGlzdG9yeVdpZGdldEtleWJpbmRpbmdIaW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJS2V5YmluZGluZ1NlcnZpY2UgfSBmcm9tICcuLi8uLi9rZXliaW5kaW5nL2NvbW1vbi9rZXliaW5kaW5nLmpzJztcblxuZXhwb3J0IGZ1bmN0aW9uIHNob3dIaXN0b3J5S2V5YmluZGluZ0hpbnQoa2V5YmluZGluZ1NlcnZpY2U6IElLZXliaW5kaW5nU2VydmljZSk6IGJvb2xlYW4ge1xuXHRyZXR1cm4ga2V5YmluZGluZ1NlcnZpY2UubG9va3VwS2V5YmluZGluZygnaGlzdG9yeS5zaG93UHJldmlvdXMnKT8uZ2V0RWxlY3Ryb25BY2NlbGVyYXRvcigpID09PSAnVXAnICYmIGtleWJpbmRpbmdTZXJ2aWNlLmxvb2t1cEtleWJpbmRpbmcoJ2hpc3Rvcnkuc2hvd05leHQnKT8uZ2V0RWxlY3Ryb25BY2NlbGVyYXRvcigpID09PSAnRG93bic7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLE9BQU0sU0FBVUEseUJBQXlCQSxDQUFDQyxpQkFBcUM7RUFBQTtFQUFBQyxjQUFBLEdBQUFDLENBQUE7RUFBQUQsY0FBQSxHQUFBRSxDQUFBO0VBQzlFLE9BQU8sMkJBQUFGLGNBQUEsR0FBQUcsQ0FBQSxVQUFBSixpQkFBaUIsQ0FBQ0ssZ0JBQWdCLENBQUMsc0JBQXNCLENBQUMsRUFBRUMsc0JBQXNCLEVBQUUsS0FBSyxJQUFJO0VBQUE7RUFBQSxDQUFBTCxjQUFBLEdBQUFHLENBQUEsVUFBSUosaUJBQWlCLENBQUNLLGdCQUFnQixDQUFDLGtCQUFrQixDQUFDLEVBQUVDLHNCQUFzQixFQUFFLEtBQUssTUFBTTtBQUNwTSIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,222 @@
+0b8577c3d450f0cd07ed1e165eaffbc6
+/* istanbul ignore next */
+function cov_101mnb0t6f() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/api/common/extHostLabelService.ts";
+  var hash = "1fd0ecba4664429ad3eb074d81798699510f3388";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/api/common/extHostLabelService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 18
+        },
+        end: {
+          line: 9,
+          column: 19
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 79
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 23
+        },
+        end: {
+          line: 14,
+          column: 41
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 71
+        }
+      },
+      "4": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 11
+        }
+      },
+      "5": {
+        start: {
+          line: 17,
+          column: 12
+        },
+        end: {
+          line: 17,
+          column: 66
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 29
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 47
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 16,
+            column: 28
+          },
+          end: {
+            line: 16,
+            column: 29
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 34
+          },
+          end: {
+            line: 18,
+            column: 9
+          }
+        },
+        line: 16
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/api/common/extHostLabelService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAe,YAAY,EAAE,MAAM,mCAAmC,CAAC;AAC9E,OAAO,EAAyD,WAAW,EAAgB,MAAM,uBAAuB,CAAC;AAEzH,MAAM,OAAO,mBAAmB;IAEd,MAAM,CAA8B;IAC7C,WAAW,GAAW,CAAC,CAAC;IAEhC,YAAY,WAAyB;QACpC,IAAI,CAAC,MAAM,GAAG,WAAW,CAAC,QAAQ,CAAC,WAAW,CAAC,sBAAsB,CAAC,CAAC;IACxE,CAAC;IAED,+BAA+B,CAAC,SAAiC;QAChE,MAAM,MAAM,GAAG,IAAI,CAAC,WAAW,EAAE,CAAC;QAClC,IAAI,CAAC,MAAM,CAAC,+BAA+B,CAAC,MAAM,EAAE,SAAS,CAAC,CAAC;QAE/D,OAAO,YAAY,CAAC,GAAG,EAAE;YACxB,IAAI,CAAC,MAAM,CAAC,iCAAiC,CAAC,MAAM,CAAC,CAAC;QACvD,CAAC,CAAC,CAAC;IACJ,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/api/common/extHostLabelService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ResourceLabelFormatter } from '../../../platform/label/common/label.js';\nimport { IDisposable, toDisposable } from '../../../base/common/lifecycle.js';\nimport { MainThreadLabelServiceShape, ExtHostLabelServiceShape, MainContext, IMainContext } from './extHost.protocol.js';\n\nexport class ExtHostLabelService implements ExtHostLabelServiceShape {\n\n\tprivate readonly _proxy: MainThreadLabelServiceShape;\n\tprivate _handlePool: number = 0;\n\n\tconstructor(mainContext: IMainContext) {\n\t\tthis._proxy = mainContext.getProxy(MainContext.MainThreadLabelService);\n\t}\n\n\t$registerResourceLabelFormatter(formatter: ResourceLabelFormatter): IDisposable {\n\t\tconst handle = this._handlePool++;\n\t\tthis._proxy.$registerResourceLabelFormatter(handle, formatter);\n\n\t\treturn toDisposable(() => {\n\t\t\tthis._proxy.$unregisterResourceLabelFormatter(handle);\n\t\t});\n\t}\n}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "1fd0ecba4664429ad3eb074d81798699510f3388"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_101mnb0t6f = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_101mnb0t6f();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { toDisposable } from '../../../base/common/lifecycle.js';
+import { MainContext } from './extHost.protocol.js';
+export class ExtHostLabelService {
+  _proxy;
+  _handlePool =
+  /* istanbul ignore next */
+  (cov_101mnb0t6f().s[0]++, 0);
+  constructor(mainContext) {
+    /* istanbul ignore next */
+    cov_101mnb0t6f().f[0]++;
+    cov_101mnb0t6f().s[1]++;
+    this._proxy = mainContext.getProxy(MainContext.MainThreadLabelService);
+  }
+  $registerResourceLabelFormatter(formatter) {
+    /* istanbul ignore next */
+    cov_101mnb0t6f().f[1]++;
+    const handle =
+    /* istanbul ignore next */
+    (cov_101mnb0t6f().s[2]++, this._handlePool++);
+    /* istanbul ignore next */
+    cov_101mnb0t6f().s[3]++;
+    this._proxy.$registerResourceLabelFormatter(handle, formatter);
+    /* istanbul ignore next */
+    cov_101mnb0t6f().s[4]++;
+    return toDisposable(() => {
+      /* istanbul ignore next */
+      cov_101mnb0t6f().f[2]++;
+      cov_101mnb0t6f().s[5]++;
+      this._proxy.$unregisterResourceLabelFormatter(handle);
+    });
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTAxbW5iMHQ2ZiIsImFjdHVhbENvdmVyYWdlIiwidG9EaXNwb3NhYmxlIiwiTWFpbkNvbnRleHQiLCJFeHRIb3N0TGFiZWxTZXJ2aWNlIiwiX3Byb3h5IiwiX2hhbmRsZVBvb2wiLCJzIiwiY29uc3RydWN0b3IiLCJtYWluQ29udGV4dCIsImYiLCJnZXRQcm94eSIsIk1haW5UaHJlYWRMYWJlbFNlcnZpY2UiLCIkcmVnaXN0ZXJSZXNvdXJjZUxhYmVsRm9ybWF0dGVyIiwiZm9ybWF0dGVyIiwiaGFuZGxlIiwiJHVucmVnaXN0ZXJSZXNvdXJjZUxhYmVsRm9ybWF0dGVyIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvYXBpL2NvbW1vbi9leHRIb3N0TGFiZWxTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBSZXNvdXJjZUxhYmVsRm9ybWF0dGVyIH0gZnJvbSAnLi4vLi4vLi4vcGxhdGZvcm0vbGFiZWwvY29tbW9uL2xhYmVsLmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlLCB0b0Rpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgTWFpblRocmVhZExhYmVsU2VydmljZVNoYXBlLCBFeHRIb3N0TGFiZWxTZXJ2aWNlU2hhcGUsIE1haW5Db250ZXh0LCBJTWFpbkNvbnRleHQgfSBmcm9tICcuL2V4dEhvc3QucHJvdG9jb2wuanMnO1xuXG5leHBvcnQgY2xhc3MgRXh0SG9zdExhYmVsU2VydmljZSBpbXBsZW1lbnRzIEV4dEhvc3RMYWJlbFNlcnZpY2VTaGFwZSB7XG5cblx0cHJpdmF0ZSByZWFkb25seSBfcHJveHk6IE1haW5UaHJlYWRMYWJlbFNlcnZpY2VTaGFwZTtcblx0cHJpdmF0ZSBfaGFuZGxlUG9vbDogbnVtYmVyID0gMDtcblxuXHRjb25zdHJ1Y3RvcihtYWluQ29udGV4dDogSU1haW5Db250ZXh0KSB7XG5cdFx0dGhpcy5fcHJveHkgPSBtYWluQ29udGV4dC5nZXRQcm94eShNYWluQ29udGV4dC5NYWluVGhyZWFkTGFiZWxTZXJ2aWNlKTtcblx0fVxuXG5cdCRyZWdpc3RlclJlc291cmNlTGFiZWxGb3JtYXR0ZXIoZm9ybWF0dGVyOiBSZXNvdXJjZUxhYmVsRm9ybWF0dGVyKTogSURpc3Bvc2FibGUge1xuXHRcdGNvbnN0IGhhbmRsZSA9IHRoaXMuX2hhbmRsZVBvb2wrKztcblx0XHR0aGlzLl9wcm94eS4kcmVnaXN0ZXJSZXNvdXJjZUxhYmVsRm9ybWF0dGVyKGhhbmRsZSwgZm9ybWF0dGVyKTtcblxuXHRcdHJldHVybiB0b0Rpc3Bvc2FibGUoKCkgPT4ge1xuXHRcdFx0dGhpcy5fcHJveHkuJHVucmVnaXN0ZXJSZXNvdXJjZUxhYmVsRm9ybWF0dGVyKGhhbmRsZSk7XG5cdFx0fSk7XG5cdH1cbn0iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBc0JFO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUF0QkY7Ozs7QUFNQSxTQUFzQkUsWUFBWSxRQUFRLG1DQUFtQztBQUM3RSxTQUFnRUMsV0FBVyxRQUFzQix1QkFBdUI7QUFFeEgsT0FBTSxNQUFPQyxtQkFBbUI7RUFFZEMsTUFBTTtFQUNmQyxXQUFXO0VBQUE7RUFBQSxDQUFBTixjQUFBLEdBQUFPLENBQUEsT0FBVyxDQUFDO0VBRS9CQyxZQUFZQyxXQUF5QjtJQUFBO0lBQUFULGNBQUEsR0FBQVUsQ0FBQTtJQUFBVixjQUFBLEdBQUFPLENBQUE7SUFDcEMsSUFBSSxDQUFDRixNQUFNLEdBQUdJLFdBQVcsQ0FBQ0UsUUFBUSxDQUFDUixXQUFXLENBQUNTLHNCQUFzQixDQUFDO0VBQ3ZFO0VBRUFDLCtCQUErQkEsQ0FBQ0MsU0FBaUM7SUFBQTtJQUFBZCxjQUFBLEdBQUFVLENBQUE7SUFDaEUsTUFBTUssTUFBTTtJQUFBO0lBQUEsQ0FBQWYsY0FBQSxHQUFBTyxDQUFBLE9BQUcsSUFBSSxDQUFDRCxXQUFXLEVBQUU7SUFBQztJQUFBTixjQUFBLEdBQUFPLENBQUE7SUFDbEMsSUFBSSxDQUFDRixNQUFNLENBQUNRLCtCQUErQixDQUFDRSxNQUFNLEVBQUVELFNBQVMsQ0FBQztJQUFDO0lBQUFkLGNBQUEsR0FBQU8sQ0FBQTtJQUUvRCxPQUFPTCxZQUFZLENBQUMsTUFBSztNQUFBO01BQUFGLGNBQUEsR0FBQVUsQ0FBQTtNQUFBVixjQUFBLEdBQUFPLENBQUE7TUFDeEIsSUFBSSxDQUFDRixNQUFNLENBQUNXLGlDQUFpQyxDQUFDRCxNQUFNLENBQUM7SUFDdEQsQ0FBQyxDQUFDO0VBQ0giLCJpZ25vcmVMaXN0IjpbXX0=

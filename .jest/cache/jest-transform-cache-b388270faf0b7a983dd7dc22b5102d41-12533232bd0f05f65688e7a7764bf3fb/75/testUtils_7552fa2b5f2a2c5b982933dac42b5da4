@@ -1,0 +1,230 @@
+25b2060ecd77d3b7c4cfc3f9d55906cb
+/* istanbul ignore next */
+function cov_2o2562nvgy() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/test/common/testUtils.ts";
+  var hash = "04b2317c7dd37cb3e3ed3aab371562d1b7684b6d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/test/common/testUtils.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 4
+        },
+        end: {
+          line: 15,
+          column: 7
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 24
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 32
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 22
+        }
+      },
+      "4": {
+        start: {
+          line: 27,
+          column: 29
+        },
+        end: {
+          line: 29,
+          column: 1
+        }
+      },
+      "5": {
+        start: {
+          line: 28,
+          column: 4
+        },
+        end: {
+          line: 28,
+          column: 31
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "flakySuite",
+        decl: {
+          start: {
+            line: 5,
+            column: 16
+          },
+          end: {
+            line: 5,
+            column: 26
+          }
+        },
+        loc: {
+          start: {
+            line: 5,
+            column: 38
+          },
+          end: {
+            line: 16,
+            column: 1
+          }
+        },
+        line: 5
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 6,
+            column: 24
+          },
+          end: {
+            line: 6,
+            column: 25
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 36
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 6
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 27,
+            column: 29
+          },
+          end: {
+            line: 27,
+            column: 30
+          }
+        },
+        loc: {
+          start: {
+            line: 27,
+            column: 35
+          },
+          end: {
+            line: 29,
+            column: 1
+          }
+        },
+        line: 27
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/test/common/testUtils.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,MAAM,UAAU,UAAU,CAAC,KAAa,EAAE,EAAc;IACvD,OAAO,KAAK,CAAC,KAAK,EAAE;QAEnB,oDAAoD;QACpD,sDAAsD;QACtD,8CAA8C;QAC9C,IAAI,CAAC,OAAO,CAAC,CAAC,CAAC,CAAC;QAChB,IAAI,CAAC,OAAO,CAAC,IAAI,GAAG,EAAE,CAAC,CAAC;QAExB,uCAAuC;QACvC,qBAAqB;QACrB,EAAE,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;IACf,CAAC,CAAC,CAAC;AACJ,CAAC;AAED;;;;;;;;;GASG;AACH,MAAM,CAAC,MAAM,aAAa,GAAG,GAAY,EAAE;IAC1C,OAAO,IAAI,CAAC,MAAM,EAAE,GAAG,GAAG,CAAC;AAC5B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/test/common/testUtils.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n\nexport function flakySuite(title: string, fn: () => void) /* Suite */ {\n\treturn suite(title, function () {\n\n\t\t// Flaky suites need retries and timeout to complete\n\t\t// e.g. because they access browser features which can\n\t\t// be unreliable depending on the environment.\n\t\tthis.retries(3);\n\t\tthis.timeout(1000 * 20);\n\n\t\t// Invoke suite ensuring that `this` is\n\t\t// properly wired in.\n\t\tfn.call(this);\n\t});\n}\n\n/**\n * (pseudo)Random boolean generator.\n *\n * ## Examples\n *\n * ```typescript\n * randomBoolean(); // generates either `true` or `false`\n * ```\n *\n */\nexport const randomBoolean = (): boolean => {\n\treturn Math.random() > 0.5;\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "04b2317c7dd37cb3e3ed3aab371562d1b7684b6d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2o2562nvgy = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2o2562nvgy();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export function flakySuite(title, fn) {
+  /* istanbul ignore next */
+  cov_2o2562nvgy().f[0]++;
+  cov_2o2562nvgy().s[0]++;
+  return suite(title, function () {
+    /* istanbul ignore next */
+    cov_2o2562nvgy().f[1]++;
+    cov_2o2562nvgy().s[1]++;
+    // Flaky suites need retries and timeout to complete
+    // e.g. because they access browser features which can
+    // be unreliable depending on the environment.
+    this.retries(3);
+    /* istanbul ignore next */
+    cov_2o2562nvgy().s[2]++;
+    this.timeout(1000 * 20);
+    // Invoke suite ensuring that `this` is
+    // properly wired in.
+    /* istanbul ignore next */
+    cov_2o2562nvgy().s[3]++;
+    fn.call(this);
+  });
+}
+/**
+ * (pseudo)Random boolean generator.
+ *
+ * ## Examples
+ *
+ * ```typescript
+ * randomBoolean(); // generates either `true` or `false`
+ * ```
+ *
+ */
+/* istanbul ignore next */
+cov_2o2562nvgy().s[4]++;
+export const randomBoolean = () => {
+  /* istanbul ignore next */
+  cov_2o2562nvgy().f[2]++;
+  cov_2o2562nvgy().s[5]++;
+  return Math.random() > 0.5;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMm8yNTYybnZneSIsImFjdHVhbENvdmVyYWdlIiwiZmxha3lTdWl0ZSIsInRpdGxlIiwiZm4iLCJmIiwicyIsInN1aXRlIiwicmV0cmllcyIsInRpbWVvdXQiLCJjYWxsIiwicmFuZG9tQm9vbGVhbiIsIk1hdGgiLCJyYW5kb20iXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2Jhc2UvdGVzdC9jb21tb24vdGVzdFV0aWxzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5cbmV4cG9ydCBmdW5jdGlvbiBmbGFreVN1aXRlKHRpdGxlOiBzdHJpbmcsIGZuOiAoKSA9PiB2b2lkKSAvKiBTdWl0ZSAqLyB7XG5cdHJldHVybiBzdWl0ZSh0aXRsZSwgZnVuY3Rpb24gKCkge1xuXG5cdFx0Ly8gRmxha3kgc3VpdGVzIG5lZWQgcmV0cmllcyBhbmQgdGltZW91dCB0byBjb21wbGV0ZVxuXHRcdC8vIGUuZy4gYmVjYXVzZSB0aGV5IGFjY2VzcyBicm93c2VyIGZlYXR1cmVzIHdoaWNoIGNhblxuXHRcdC8vIGJlIHVucmVsaWFibGUgZGVwZW5kaW5nIG9uIHRoZSBlbnZpcm9ubWVudC5cblx0XHR0aGlzLnJldHJpZXMoMyk7XG5cdFx0dGhpcy50aW1lb3V0KDEwMDAgKiAyMCk7XG5cblx0XHQvLyBJbnZva2Ugc3VpdGUgZW5zdXJpbmcgdGhhdCBgdGhpc2AgaXNcblx0XHQvLyBwcm9wZXJseSB3aXJlZCBpbi5cblx0XHRmbi5jYWxsKHRoaXMpO1xuXHR9KTtcbn1cblxuLyoqXG4gKiAocHNldWRvKVJhbmRvbSBib29sZWFuIGdlbmVyYXRvci5cbiAqXG4gKiAjIyBFeGFtcGxlc1xuICpcbiAqIGBgYHR5cGVzY3JpcHRcbiAqIHJhbmRvbUJvb2xlYW4oKTsgLy8gZ2VuZXJhdGVzIGVpdGhlciBgdHJ1ZWAgb3IgYGZhbHNlYFxuICogYGBgXG4gKlxuICovXG5leHBvcnQgY29uc3QgcmFuZG9tQm9vbGVhbiA9ICgpOiBib29sZWFuID0+IHtcblx0cmV0dXJuIE1hdGgucmFuZG9tKCkgPiAwLjU7XG59O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CQztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbkJEOzs7O0FBTUEsT0FBTSxTQUFVRSxVQUFVQSxDQUFDQyxLQUFhLEVBQUVDLEVBQWM7RUFBQTtFQUFBSixjQUFBLEdBQUFLLENBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQ3ZELE9BQU9DLEtBQUssQ0FBQ0osS0FBSyxFQUFFO0lBQUE7SUFBQUgsY0FBQSxHQUFBSyxDQUFBO0lBQUFMLGNBQUEsR0FBQU0sQ0FBQTtJQUVuQjtJQUNBO0lBQ0E7SUFDQSxJQUFJLENBQUNFLE9BQU8sQ0FBQyxDQUFDLENBQUM7SUFBQztJQUFBUixjQUFBLEdBQUFNLENBQUE7SUFDaEIsSUFBSSxDQUFDRyxPQUFPLENBQUMsSUFBSSxHQUFHLEVBQUUsQ0FBQztJQUV2QjtJQUNBO0lBQUE7SUFBQVQsY0FBQSxHQUFBTSxDQUFBO0lBQ0FGLEVBQUUsQ0FBQ00sSUFBSSxDQUFDLElBQUksQ0FBQztFQUNkLENBQUMsQ0FBQztBQUNIO0FBRUE7Ozs7Ozs7Ozs7QUFBQTtBQUFBVixjQUFBLEdBQUFNLENBQUE7QUFVQSxPQUFPLE1BQU1LLGFBQWEsR0FBR0EsQ0FBQSxLQUFjO0VBQUE7RUFBQVgsY0FBQSxHQUFBSyxDQUFBO0VBQUFMLGNBQUEsR0FBQU0sQ0FBQTtFQUMxQyxPQUFPTSxJQUFJLENBQUNDLE1BQU0sRUFBRSxHQUFHLEdBQUc7QUFDM0IsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

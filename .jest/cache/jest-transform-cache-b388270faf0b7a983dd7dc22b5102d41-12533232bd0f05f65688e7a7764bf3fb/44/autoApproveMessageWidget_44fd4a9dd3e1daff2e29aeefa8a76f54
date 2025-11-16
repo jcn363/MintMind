@@ -1,0 +1,94 @@
+abf750685908f610fddc6ab85a7c58c4
+/* istanbul ignore next */
+function cov_1ub2t8l5vp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/autoApproveMessageWidget.ts";
+  var hash = "c449926c8ba0d61ea29195405bedbfef2f5ddb93";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/autoApproveMessageWidget.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 31
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 25
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/autoApproveMessageWidget.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,OAAO,wBAAwB;IACR;IAA5B,YAA4B,OAAwB;QAAxB,YAAO,GAAP,OAAO,CAAiB;IAAI,CAAC;CACzD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatContentParts/toolInvocationParts/autoApproveMessageWidget.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IMarkdownString } from '../../../../../../base/common/htmlContent.js';\n\nexport class AutoApproveMessageWidget {\n\tconstructor(public readonly message: IMarkdownString) { }\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c449926c8ba0d61ea29195405bedbfef2f5ddb93"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ub2t8l5vp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ub2t8l5vp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class AutoApproveMessageWidget {
+  message;
+  constructor(message) {
+    /* istanbul ignore next */
+    cov_1ub2t8l5vp().f[0]++;
+    cov_1ub2t8l5vp().s[0]++;
+    this.message = message;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJBdXRvQXBwcm92ZU1lc3NhZ2VXaWRnZXQiLCJtZXNzYWdlIiwiY29uc3RydWN0b3IiLCJjb3ZfMXViMnQ4bDV2cCIsImYiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jaGF0L2Jyb3dzZXIvY2hhdENvbnRlbnRQYXJ0cy90b29sSW52b2NhdGlvblBhcnRzL2F1dG9BcHByb3ZlTWVzc2FnZVdpZGdldC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSU1hcmtkb3duU3RyaW5nIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vaHRtbENvbnRlbnQuanMnO1xuXG5leHBvcnQgY2xhc3MgQXV0b0FwcHJvdmVNZXNzYWdlV2lkZ2V0IHtcblx0Y29uc3RydWN0b3IocHVibGljIHJlYWRvbmx5IG1lc3NhZ2U6IElNYXJrZG93blN0cmluZykgeyB9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLE9BQU0sTUFBT0Esd0JBQXdCO0VBQ1JDLE9BQUE7RUFBNUJDLFlBQTRCRCxPQUF3QjtJQUFBO0lBQUFFLGNBQUEsR0FBQUMsQ0FBQTtJQUFBRCxjQUFBLEdBQUFFLENBQUE7SUFBeEIsS0FBQUosT0FBTyxHQUFQQSxPQUFPO0VBQXFCIiwiaWdub3JlTGlzdCI6W119

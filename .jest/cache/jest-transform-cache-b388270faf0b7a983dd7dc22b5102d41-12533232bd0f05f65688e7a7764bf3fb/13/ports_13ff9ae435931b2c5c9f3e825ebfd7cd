@@ -1,0 +1,123 @@
+47509180663a50276866d6fdf73b14f5
+/* istanbul ignore next */
+function cov_6vzx40n12() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/ports.ts";
+  var hash = "c687c52290091cf202c0b4263c8f2f5defa78fad";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/ports.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 16
+        },
+        end: {
+          line: 9,
+          column: 20
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 16
+        },
+        end: {
+          line: 10,
+          column: 21
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 57
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "randomPort",
+        decl: {
+          start: {
+            line: 8,
+            column: 16
+          },
+          end: {
+            line: 8,
+            column: 26
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 29
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/ports.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG;;GAEG;AACH,MAAM,UAAU,UAAU;IACzB,MAAM,GAAG,GAAG,IAAI,CAAC;IACjB,MAAM,GAAG,GAAG,KAAK,CAAC;IAClB,OAAO,GAAG,GAAG,IAAI,CAAC,KAAK,CAAC,CAAC,GAAG,GAAG,GAAG,CAAC,GAAG,IAAI,CAAC,MAAM,EAAE,CAAC,CAAC;AACtD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/ports.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n/**\n * @returns Returns a random port between 1025 and 65535.\n */\nexport function randomPort(): number {\n\tconst min = 1025;\n\tconst max = 65535;\n\treturn min + Math.floor((max - min) * Math.random());\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c687c52290091cf202c0b4263c8f2f5defa78fad"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_6vzx40n12 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_6vzx40n12();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/**
+ * @returns Returns a random port between 1025 and 65535.
+ */
+export function randomPort() {
+  /* istanbul ignore next */
+  cov_6vzx40n12().f[0]++;
+  const min =
+  /* istanbul ignore next */
+  (cov_6vzx40n12().s[0]++, 1025);
+  const max =
+  /* istanbul ignore next */
+  (cov_6vzx40n12().s[1]++, 65535);
+  /* istanbul ignore next */
+  cov_6vzx40n12().s[2]++;
+  return min + Math.floor((max - min) * Math.random());
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyYW5kb21Qb3J0IiwiY292XzZ2eng0MG4xMiIsImYiLCJtaW4iLCJzIiwibWF4IiwiTWF0aCIsImZsb29yIiwicmFuZG9tIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2NvbW1vbi9wb3J0cy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuLyoqXG4gKiBAcmV0dXJucyBSZXR1cm5zIGEgcmFuZG9tIHBvcnQgYmV0d2VlbiAxMDI1IGFuZCA2NTUzNS5cbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHJhbmRvbVBvcnQoKTogbnVtYmVyIHtcblx0Y29uc3QgbWluID0gMTAyNTtcblx0Y29uc3QgbWF4ID0gNjU1MzU7XG5cdHJldHVybiBtaW4gKyBNYXRoLmZsb29yKChtYXggLSBtaW4pICogTWF0aC5yYW5kb20oKSk7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQTs7O0FBR0EsT0FBTSxTQUFVQSxVQUFVQSxDQUFBO0VBQUE7RUFBQUMsYUFBQSxHQUFBQyxDQUFBO0VBQ3pCLE1BQU1DLEdBQUc7RUFBQTtFQUFBLENBQUFGLGFBQUEsR0FBQUcsQ0FBQSxPQUFHLElBQUk7RUFDaEIsTUFBTUMsR0FBRztFQUFBO0VBQUEsQ0FBQUosYUFBQSxHQUFBRyxDQUFBLE9BQUcsS0FBSztFQUFDO0VBQUFILGFBQUEsR0FBQUcsQ0FBQTtFQUNsQixPQUFPRCxHQUFHLEdBQUdHLElBQUksQ0FBQ0MsS0FBSyxDQUFDLENBQUNGLEdBQUcsR0FBR0YsR0FBRyxJQUFJRyxJQUFJLENBQUNFLE1BQU0sRUFBRSxDQUFDO0FBQ3JEIiwiaWdub3JlTGlzdCI6W119

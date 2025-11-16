@@ -1,0 +1,108 @@
+8eb7bb49c3cbef425e11d093caffc108
+/* istanbul ignore next */
+function cov_121bscc1g8() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/test/node/testUtils.ts";
+  var hash = "b90c956b0088f35702e52d2b44f85570a4cfdf8d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/test/node/testUtils.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 49
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 24
+        },
+        end: {
+          line: 11,
+          column: 44
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "getRandomTestPath",
+        decl: {
+          start: {
+            line: 8,
+            column: 16
+          },
+          end: {
+            line: 8,
+            column: 33
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 55
+          },
+          end: {
+            line: 10,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/test/node/testUtils.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,UAAU,EAAE,MAAM,yBAAyB,CAAC;AACrD,OAAO,EAAE,IAAI,EAAE,MAAM,sBAAsB,CAAC;AAC5C,OAAO,KAAK,SAAS,MAAM,wBAAwB,CAAC;AAEpD,MAAM,UAAU,iBAAiB,CAAC,MAAc,EAAE,GAAG,QAAkB;IACtE,OAAO,UAAU,CAAC,IAAI,CAAC,MAAM,EAAE,GAAG,QAAQ,CAAC,CAAC,CAAC;AAC9C,CAAC;AAED,MAAM,KAAQ,UAAU,GAAG,SAAS,CAAC,UAAU,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/test/node/testUtils.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { randomPath } from '../../common/extpath.js';\nimport { join } from '../../common/path.js';\nimport * as testUtils from '../common/testUtils.js';\n\nexport function getRandomTestPath(tmpdir: string, ...segments: string[]): string {\n\treturn randomPath(join(tmpdir, ...segments));\n}\n\nexport import flakySuite = testUtils.flakySuite;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b90c956b0088f35702e52d2b44f85570a4cfdf8d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_121bscc1g8 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_121bscc1g8();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { randomPath } from '../../common/extpath.js';
+import { join } from '../../common/path.js';
+import * as testUtils from '../common/testUtils.js';
+export function getRandomTestPath(tmpdir, ...segments) {
+  /* istanbul ignore next */
+  cov_121bscc1g8().f[0]++;
+  cov_121bscc1g8().s[0]++;
+  return randomPath(join(tmpdir, ...segments));
+}
+export var flakySuite =
+/* istanbul ignore next */
+(cov_121bscc1g8().s[1]++, testUtils.flakySuite);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyYW5kb21QYXRoIiwiam9pbiIsInRlc3RVdGlscyIsImdldFJhbmRvbVRlc3RQYXRoIiwidG1wZGlyIiwic2VnbWVudHMiLCJjb3ZfMTIxYnNjYzFnOCIsImYiLCJzIiwiZmxha3lTdWl0ZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvYmFzZS90ZXN0L25vZGUvdGVzdFV0aWxzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyByYW5kb21QYXRoIH0gZnJvbSAnLi4vLi4vY29tbW9uL2V4dHBhdGguanMnO1xuaW1wb3J0IHsgam9pbiB9IGZyb20gJy4uLy4uL2NvbW1vbi9wYXRoLmpzJztcbmltcG9ydCAqIGFzIHRlc3RVdGlscyBmcm9tICcuLi9jb21tb24vdGVzdFV0aWxzLmpzJztcblxuZXhwb3J0IGZ1bmN0aW9uIGdldFJhbmRvbVRlc3RQYXRoKHRtcGRpcjogc3RyaW5nLCAuLi5zZWdtZW50czogc3RyaW5nW10pOiBzdHJpbmcge1xuXHRyZXR1cm4gcmFuZG9tUGF0aChqb2luKHRtcGRpciwgLi4uc2VnbWVudHMpKTtcbn1cblxuZXhwb3J0IGltcG9ydCBmbGFreVN1aXRlID0gdGVzdFV0aWxzLmZsYWt5U3VpdGU7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsVUFBVSxRQUFRLHlCQUF5QjtBQUNwRCxTQUFTQyxJQUFJLFFBQVEsc0JBQXNCO0FBQzNDLE9BQU8sS0FBS0MsU0FBUyxNQUFNLHdCQUF3QjtBQUVuRCxPQUFNLFNBQVVDLGlCQUFpQkEsQ0FBQ0MsTUFBYyxFQUFFLEdBQUdDLFFBQWtCO0VBQUE7RUFBQUMsY0FBQSxHQUFBQyxDQUFBO0VBQUFELGNBQUEsR0FBQUUsQ0FBQTtFQUN0RSxPQUFPUixVQUFVLENBQUNDLElBQUksQ0FBQ0csTUFBTSxFQUFFLEdBQUdDLFFBQVEsQ0FBQyxDQUFDO0FBQzdDO0FBRUEsT0FBTSxJQUFRSSxVQUFVO0FBQUE7QUFBQSxDQUFBSCxjQUFBLEdBQUFFLENBQUEsT0FBR04sU0FBUyxDQUFDTyxVQUFVIiwiaWdub3JlTGlzdCI6W119

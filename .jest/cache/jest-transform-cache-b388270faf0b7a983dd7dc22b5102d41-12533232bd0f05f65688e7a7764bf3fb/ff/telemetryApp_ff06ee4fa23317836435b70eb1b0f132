@@ -1,0 +1,163 @@
+64fe8b6f258edc55be5b17be46d51d6a
+/* istanbul ignore next */
+function cov_1avd5tzovz() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/node/telemetryApp.ts";
+  var hash = "55af4609b8a74151542b570c9f1f3705e7dcea74";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/node/telemetryApp.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 17
+        },
+        end: {
+          line: 8,
+          column: 123
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 45
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 27
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 16
+        },
+        end: {
+          line: 10,
+          column: 56
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 15
+        },
+        end: {
+          line: 11,
+          column: 38
+        }
+      },
+      "5": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 53
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 21
+          },
+          end: {
+            line: 9,
+            column: 22
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 27
+          },
+          end: {
+            line: 9,
+            column: 43
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/node/telemetryApp.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,MAAM,EAAE,MAAM,2CAA2C,CAAC;AACnE,OAAO,EAAE,wBAAwB,EAAE,MAAM,uDAAuD,CAAC;AACjG,OAAO,EAAE,qBAAqB,EAAE,MAAM,oDAAoD,CAAC;AAE3F,MAAM,QAAQ,GAAG,IAAI,qBAAqB,CAAC,SAAS,EAAE,KAAK,EAAE,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,EAAE,IAAI,CAAC,KAAK,CAAC,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,EAAE,OAAO,CAAC,IAAI,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5H,OAAO,CAAC,IAAI,CAAC,MAAM,EAAE,GAAG,EAAE,CAAC,QAAQ,CAAC,KAAK,EAAE,CAAC,CAAC;AAE7C,MAAM,OAAO,GAAG,IAAI,wBAAwB,CAAC,CAAC,QAAQ,CAAC,CAAC,CAAC;AACzD,MAAM,MAAM,GAAG,IAAI,MAAM,CAAC,WAAW,CAAC,CAAC;AACvC,MAAM,CAAC,eAAe,CAAC,mBAAmB,EAAE,OAAO,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/debug/node/telemetryApp.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Server } from '../../../../base/parts/ipc/node/ipc.cp.js';\nimport { TelemetryAppenderChannel } from '../../../../platform/telemetry/common/telemetryIpc.js';\nimport { OneDataSystemAppender } from '../../../../platform/telemetry/node/1dsAppender.js';\n\nconst appender = new OneDataSystemAppender(undefined, false, process.argv[2], JSON.parse(process.argv[3]), process.argv[4]);\nprocess.once('exit', () => appender.flush());\n\nconst channel = new TelemetryAppenderChannel([appender]);\nconst server = new Server('telemetry');\nserver.registerChannel('telemetryAppender', channel);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "55af4609b8a74151542b570c9f1f3705e7dcea74"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1avd5tzovz = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1avd5tzovz();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Server } from '../../../../base/parts/ipc/node/ipc.cp.js';
+import { TelemetryAppenderChannel } from '../../../../platform/telemetry/common/telemetryIpc.js';
+import { OneDataSystemAppender } from '../../../../platform/telemetry/node/1dsAppender.js';
+const appender =
+/* istanbul ignore next */
+(cov_1avd5tzovz().s[0]++, new OneDataSystemAppender(undefined, false, process.argv[2], JSON.parse(process.argv[3]), process.argv[4]));
+/* istanbul ignore next */
+cov_1avd5tzovz().s[1]++;
+process.once('exit', () => {
+  /* istanbul ignore next */
+  cov_1avd5tzovz().f[0]++;
+  cov_1avd5tzovz().s[2]++;
+  return appender.flush();
+});
+const channel =
+/* istanbul ignore next */
+(cov_1avd5tzovz().s[3]++, new TelemetryAppenderChannel([appender]));
+const server =
+/* istanbul ignore next */
+(cov_1avd5tzovz().s[4]++, new Server('telemetry'));
+/* istanbul ignore next */
+cov_1avd5tzovz().s[5]++;
+server.registerChannel('telemetryAppender', channel);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTZXJ2ZXIiLCJUZWxlbWV0cnlBcHBlbmRlckNoYW5uZWwiLCJPbmVEYXRhU3lzdGVtQXBwZW5kZXIiLCJhcHBlbmRlciIsImNvdl8xYXZkNXR6b3Z6IiwicyIsInVuZGVmaW5lZCIsInByb2Nlc3MiLCJhcmd2IiwiSlNPTiIsInBhcnNlIiwib25jZSIsImYiLCJmbHVzaCIsImNoYW5uZWwiLCJzZXJ2ZXIiLCJyZWdpc3RlckNoYW5uZWwiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL2RlYnVnL25vZGUvdGVsZW1ldHJ5QXBwLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBTZXJ2ZXIgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL3BhcnRzL2lwYy9ub2RlL2lwYy5jcC5qcyc7XG5pbXBvcnQgeyBUZWxlbWV0cnlBcHBlbmRlckNoYW5uZWwgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS90ZWxlbWV0cnkvY29tbW9uL3RlbGVtZXRyeUlwYy5qcyc7XG5pbXBvcnQgeyBPbmVEYXRhU3lzdGVtQXBwZW5kZXIgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS90ZWxlbWV0cnkvbm9kZS8xZHNBcHBlbmRlci5qcyc7XG5cbmNvbnN0IGFwcGVuZGVyID0gbmV3IE9uZURhdGFTeXN0ZW1BcHBlbmRlcih1bmRlZmluZWQsIGZhbHNlLCBwcm9jZXNzLmFyZ3ZbMl0sIEpTT04ucGFyc2UocHJvY2Vzcy5hcmd2WzNdKSwgcHJvY2Vzcy5hcmd2WzRdKTtcbnByb2Nlc3Mub25jZSgnZXhpdCcsICgpID0+IGFwcGVuZGVyLmZsdXNoKCkpO1xuXG5jb25zdCBjaGFubmVsID0gbmV3IFRlbGVtZXRyeUFwcGVuZGVyQ2hhbm5lbChbYXBwZW5kZXJdKTtcbmNvbnN0IHNlcnZlciA9IG5ldyBTZXJ2ZXIoJ3RlbGVtZXRyeScpO1xuc2VydmVyLnJlZ2lzdGVyQ2hhbm5lbCgndGVsZW1ldHJ5QXBwZW5kZXInLCBjaGFubmVsKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLE1BQU0sUUFBUSwyQ0FBMkM7QUFDbEUsU0FBU0Msd0JBQXdCLFFBQVEsdURBQXVEO0FBQ2hHLFNBQVNDLHFCQUFxQixRQUFRLG9EQUFvRDtBQUUxRixNQUFNQyxRQUFRO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSCxxQkFBcUIsQ0FBQ0ksU0FBUyxFQUFFLEtBQUssRUFBRUMsT0FBTyxDQUFDQyxJQUFJLENBQUMsQ0FBQyxDQUFDLEVBQUVDLElBQUksQ0FBQ0MsS0FBSyxDQUFDSCxPQUFPLENBQUNDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxFQUFFRCxPQUFPLENBQUNDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQztBQUFDO0FBQUFKLGNBQUEsR0FBQUMsQ0FBQTtBQUM1SEUsT0FBTyxDQUFDSSxJQUFJLENBQUMsTUFBTSxFQUFFLE1BQU07RUFBQTtFQUFBUCxjQUFBLEdBQUFRLENBQUE7RUFBQVIsY0FBQSxHQUFBQyxDQUFBO0VBQUEsT0FBQUYsUUFBUSxDQUFDVSxLQUFLLEVBQUU7QUFBRixDQUFFLENBQUM7QUFFNUMsTUFBTUMsT0FBTztBQUFBO0FBQUEsQ0FBQVYsY0FBQSxHQUFBQyxDQUFBLE9BQUcsSUFBSUosd0JBQXdCLENBQUMsQ0FBQ0UsUUFBUSxDQUFDLENBQUM7QUFDeEQsTUFBTVksTUFBTTtBQUFBO0FBQUEsQ0FBQVgsY0FBQSxHQUFBQyxDQUFBLE9BQUcsSUFBSUwsTUFBTSxDQUFDLFdBQVcsQ0FBQztBQUFDO0FBQUFJLGNBQUEsR0FBQUMsQ0FBQTtBQUN2Q1UsTUFBTSxDQUFDQyxlQUFlLENBQUMsbUJBQW1CLEVBQUVGLE9BQU8sQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

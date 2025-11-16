@@ -1,0 +1,57 @@
+8b7df248f74fe98f257abfc16c77560e
+/* istanbul ignore next */
+function cov_1pyu6dc2bq() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/theme/common/colorRegistry.ts";
+  var hash = "0685f1661940ba8f353b9a051cb804e44d00a983";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/theme/common/colorRegistry.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/theme/common/colorRegistry.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,cAAc,iBAAiB,CAAC;AAEhC,yCAAyC;AACzC,cAAc,wBAAwB,CAAC;AACvC,cAAc,0BAA0B,CAAC;AACzC,cAAc,0BAA0B,CAAC;AACzC,cAAc,yBAAyB,CAAC;AACxC,cAAc,wBAAwB,CAAC;AACvC,cAAc,wBAAwB,CAAC;AACvC,cAAc,2BAA2B,CAAC;AAC1C,cAAc,wBAAwB,CAAC;AACvC,cAAc,6BAA6B,CAAC;AAC5C,cAAc,0BAA0B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/theme/common/colorRegistry.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport * from './colorUtils.js';\n\n// Make sure all color files are exported\nexport * from './colors/baseColors.js';\nexport * from './colors/chartsColors.js';\nexport * from './colors/editorColors.js';\nexport * from './colors/inputColors.js';\nexport * from './colors/listColors.js';\nexport * from './colors/menuColors.js';\nexport * from './colors/minimapColors.js';\nexport * from './colors/miscColors.js';\nexport * from './colors/quickpickColors.js';\nexport * from './colors/searchColors.js';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0685f1661940ba8f353b9a051cb804e44d00a983"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1pyu6dc2bq = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1pyu6dc2bq();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export * from './colorUtils.js';
+// Make sure all color files are exported
+export * from './colors/baseColors.js';
+export * from './colors/chartsColors.js';
+export * from './colors/editorColors.js';
+export * from './colors/inputColors.js';
+export * from './colors/listColors.js';
+export * from './colors/menuColors.js';
+export * from './colors/minimapColors.js';
+export * from './colors/miscColors.js';
+export * from './colors/quickpickColors.js';
+export * from './colors/searchColors.js';
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXB5dTZkYzJicSIsImFjdHVhbENvdmVyYWdlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS90aGVtZS9jb21tb24vY29sb3JSZWdpc3RyeS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0ICogZnJvbSAnLi9jb2xvclV0aWxzLmpzJztcblxuLy8gTWFrZSBzdXJlIGFsbCBjb2xvciBmaWxlcyBhcmUgZXhwb3J0ZWRcbmV4cG9ydCAqIGZyb20gJy4vY29sb3JzL2Jhc2VDb2xvcnMuanMnO1xuZXhwb3J0ICogZnJvbSAnLi9jb2xvcnMvY2hhcnRzQ29sb3JzLmpzJztcbmV4cG9ydCAqIGZyb20gJy4vY29sb3JzL2VkaXRvckNvbG9ycy5qcyc7XG5leHBvcnQgKiBmcm9tICcuL2NvbG9ycy9pbnB1dENvbG9ycy5qcyc7XG5leHBvcnQgKiBmcm9tICcuL2NvbG9ycy9saXN0Q29sb3JzLmpzJztcbmV4cG9ydCAqIGZyb20gJy4vY29sb3JzL21lbnVDb2xvcnMuanMnO1xuZXhwb3J0ICogZnJvbSAnLi9jb2xvcnMvbWluaW1hcENvbG9ycy5qcyc7XG5leHBvcnQgKiBmcm9tICcuL2NvbG9ycy9taXNjQ29sb3JzLmpzJztcbmV4cG9ydCAqIGZyb20gJy4vY29sb3JzL3F1aWNrcGlja0NvbG9ycy5qcyc7XG5leHBvcnQgKiBmcm9tICcuL2NvbG9ycy9zZWFyY2hDb2xvcnMuanMnO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBaUJBO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFqQkE7Ozs7QUFLQSxjQUFjLGlCQUFpQjtBQUUvQjtBQUNBLGNBQWMsd0JBQXdCO0FBQ3RDLGNBQWMsMEJBQTBCO0FBQ3hDLGNBQWMsMEJBQTBCO0FBQ3hDLGNBQWMseUJBQXlCO0FBQ3ZDLGNBQWMsd0JBQXdCO0FBQ3RDLGNBQWMsd0JBQXdCO0FBQ3RDLGNBQWMsMkJBQTJCO0FBQ3pDLGNBQWMsd0JBQXdCO0FBQ3RDLGNBQWMsNkJBQTZCO0FBQzNDLGNBQWMsMEJBQTBCIiwiaWdub3JlTGlzdCI6W119

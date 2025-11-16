@@ -1,0 +1,842 @@
+6f32b6ab6fcb78362c2b068205dfc8b8
+/* istanbul ignore next */
+function cov_1af4oqg677() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalEvents.ts";
+  var hash = "0882b38a2a0400547f118a013d67a0ea819c65bc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalEvents.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 18
+        },
+        end: {
+          line: 8,
+          column: 39
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 24
+        },
+        end: {
+          line: 9,
+          column: 57
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 32
+        },
+        end: {
+          line: 10,
+          column: 62
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 25
+        },
+        end: {
+          line: 12,
+          column: 103
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 82
+        },
+        end: {
+          line: 12,
+          column: 100
+        }
+      },
+      "5": {
+        start: {
+          line: 13,
+          column: 42
+        },
+        end: {
+          line: 13,
+          column: 86
+        }
+      },
+      "6": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 9
+        }
+      },
+      "7": {
+        start: {
+          line: 15,
+          column: 12
+        },
+        end: {
+          line: 15,
+          column: 62
+        }
+      },
+      "8": {
+        start: {
+          line: 16,
+          column: 12
+        },
+        end: {
+          line: 16,
+          column: 86
+        }
+      },
+      "9": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 62
+        }
+      },
+      "10": {
+        start: {
+          line: 21,
+          column: 4
+        },
+        end: {
+          line: 26,
+          column: 5
+        }
+      },
+      "11": {
+        start: {
+          line: 22,
+          column: 27
+        },
+        end: {
+          line: 22,
+          column: 66
+        }
+      },
+      "12": {
+        start: {
+          line: 23,
+          column: 8
+        },
+        end: {
+          line: 25,
+          column: 9
+        }
+      },
+      "13": {
+        start: {
+          line: 24,
+          column: 12
+        },
+        end: {
+          line: 24,
+          column: 48
+        }
+      },
+      "14": {
+        start: {
+          line: 28,
+          column: 4
+        },
+        end: {
+          line: 30,
+          column: 8
+        }
+      },
+      "15": {
+        start: {
+          line: 29,
+          column: 8
+        },
+        end: {
+          line: 29,
+          column: 66
+        }
+      },
+      "16": {
+        start: {
+          line: 32,
+          column: 37
+        },
+        end: {
+          line: 32,
+          column: 270
+        }
+      },
+      "17": {
+        start: {
+          line: 32,
+          column: 142
+        },
+        end: {
+          line: 32,
+          column: 268
+        }
+      },
+      "18": {
+        start: {
+          line: 32,
+          column: 241
+        },
+        end: {
+          line: 32,
+          column: 266
+        }
+      },
+      "19": {
+        start: {
+          line: 33,
+          column: 4
+        },
+        end: {
+          line: 35,
+          column: 8
+        }
+      },
+      "20": {
+        start: {
+          line: 34,
+          column: 8
+        },
+        end: {
+          line: 34,
+          column: 49
+        }
+      },
+      "21": {
+        start: {
+          line: 37,
+          column: 40
+        },
+        end: {
+          line: 37,
+          column: 276
+        }
+      },
+      "22": {
+        start: {
+          line: 37,
+          column: 145
+        },
+        end: {
+          line: 37,
+          column: 274
+        }
+      },
+      "23": {
+        start: {
+          line: 37,
+          column: 247
+        },
+        end: {
+          line: 37,
+          column: 272
+        }
+      },
+      "24": {
+        start: {
+          line: 38,
+          column: 4
+        },
+        end: {
+          line: 40,
+          column: 8
+        }
+      },
+      "25": {
+        start: {
+          line: 39,
+          column: 8
+        },
+        end: {
+          line: 39,
+          column: 88
+        }
+      },
+      "26": {
+        start: {
+          line: 41,
+          column: 4
+        },
+        end: {
+          line: 44,
+          column: 6
+        }
+      },
+      "27": {
+        start: {
+          line: 42,
+          column: 23
+        },
+        end: {
+          line: 42,
+          column: 38
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "createInstanceCapabilityEventMultiplexer",
+        decl: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 56
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 132
+          },
+          end: {
+            line: 45,
+            column: 1
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "addCapability",
+        decl: {
+          start: {
+            line: 11,
+            column: 13
+          },
+          end: {
+            line: 11,
+            column: 26
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 49
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 12,
+            column: 73
+          },
+          end: {
+            line: 12,
+            column: 74
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 82
+          },
+          end: {
+            line: 12,
+            column: 100
+          }
+        },
+        line: 12
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 28,
+            column: 31
+          },
+          end: {
+            line: 28,
+            column: 32
+          }
+        },
+        loc: {
+          start: {
+            line: 28,
+            column: 43
+          },
+          end: {
+            line: 30,
+            column: 5
+          }
+        },
+        line: 28
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 32,
+            column: 130
+          },
+          end: {
+            line: 32,
+            column: 131
+          }
+        },
+        loc: {
+          start: {
+            line: 32,
+            column: 142
+          },
+          end: {
+            line: 32,
+            column: 268
+          }
+        },
+        line: 32
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 32,
+            column: 225
+          },
+          end: {
+            line: 32,
+            column: 226
+          }
+        },
+        loc: {
+          start: {
+            line: 32,
+            column: 241
+          },
+          end: {
+            line: 32,
+            column: 266
+          }
+        },
+        line: 32
+      },
+      "6": {
+        name: "(anonymous_6)",
+        decl: {
+          start: {
+            line: 33,
+            column: 45
+          },
+          end: {
+            line: 33,
+            column: 46
+          }
+        },
+        loc: {
+          start: {
+            line: 33,
+            column: 50
+          },
+          end: {
+            line: 35,
+            column: 5
+          }
+        },
+        line: 33
+      },
+      "7": {
+        name: "(anonymous_7)",
+        decl: {
+          start: {
+            line: 37,
+            column: 133
+          },
+          end: {
+            line: 37,
+            column: 134
+          }
+        },
+        loc: {
+          start: {
+            line: 37,
+            column: 145
+          },
+          end: {
+            line: 37,
+            column: 274
+          }
+        },
+        line: 37
+      },
+      "8": {
+        name: "(anonymous_8)",
+        decl: {
+          start: {
+            line: 37,
+            column: 231
+          },
+          end: {
+            line: 37,
+            column: 232
+          }
+        },
+        loc: {
+          start: {
+            line: 37,
+            column: 247
+          },
+          end: {
+            line: 37,
+            column: 272
+          }
+        },
+        line: 37
+      },
+      "9": {
+        name: "(anonymous_9)",
+        decl: {
+          start: {
+            line: 38,
+            column: 48
+          },
+          end: {
+            line: 38,
+            column: 49
+          }
+        },
+        loc: {
+          start: {
+            line: 38,
+            column: 53
+          },
+          end: {
+            line: 40,
+            column: 5
+          }
+        },
+        line: 38
+      },
+      "10": {
+        name: "(anonymous_10)",
+        decl: {
+          start: {
+            line: 42,
+            column: 17
+          },
+          end: {
+            line: 42,
+            column: 18
+          }
+        },
+        loc: {
+          start: {
+            line: 42,
+            column: 23
+          },
+          end: {
+            line: 42,
+            column: 38
+          }
+        },
+        line: 42
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 14,
+            column: 8
+          },
+          end: {
+            line: 17,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 14,
+            column: 8
+          },
+          end: {
+            line: 17,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 14
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 23,
+            column: 8
+          },
+          end: {
+            line: 25,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 23,
+            column: 8
+          },
+          end: {
+            line: 25,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 23
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalEvents.ts",
+      mappings: "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",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalEvents.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ITerminalInstance } from './terminal.js';\nimport { DynamicListEventMultiplexer, Event, EventMultiplexer, IDynamicListEventMultiplexer } from '../../../../base/common/event.js';\nimport { DisposableMap, DisposableStore, IDisposable } from '../../../../base/common/lifecycle.js';\nimport { ITerminalCapabilityImplMap, TerminalCapability } from '../../../../platform/terminal/common/capabilities/capabilities.js';\n\nexport function createInstanceCapabilityEventMultiplexer<T extends TerminalCapability, K>(\n\tcurrentInstances: ITerminalInstance[],\n\tonAddInstance: Event<ITerminalInstance>,\n\tonRemoveInstance: Event<ITerminalInstance>,\n\tcapabilityId: T,\n\tgetEvent: (capability: ITerminalCapabilityImplMap[T]) => Event<K>\n): IDynamicListEventMultiplexer<{ instance: ITerminalInstance; data: K }> {\n\tconst store = new DisposableStore();\n\tconst multiplexer = store.add(new EventMultiplexer<{ instance: ITerminalInstance; data: K }>());\n\tconst capabilityListeners = store.add(new DisposableMap<number, DisposableMap<ITerminalCapabilityImplMap[T], IDisposable>>());\n\n\tfunction addCapability(instance: ITerminalInstance, capability: ITerminalCapabilityImplMap[T]) {\n\t\tconst listener = multiplexer.add(Event.map(getEvent(capability), data => ({ instance, data })));\n\t\tlet instanceCapabilityListeners = capabilityListeners.get(instance.instanceId);\n\t\tif (!instanceCapabilityListeners) {\n\t\t\tinstanceCapabilityListeners = new DisposableMap<ITerminalCapabilityImplMap[T], IDisposable>();\n\t\t\tcapabilityListeners.set(instance.instanceId, instanceCapabilityListeners);\n\t\t}\n\t\tinstanceCapabilityListeners.set(capability, listener);\n\t}\n\n\t// Existing instances\n\tfor (const instance of currentInstances) {\n\t\tconst capability = instance.capabilities.get(capabilityId);\n\t\tif (capability) {\n\t\t\taddCapability(instance, capability);\n\t\t}\n\t}\n\n\t// Removed instances\n\tstore.add(onRemoveInstance(instance => {\n\t\tcapabilityListeners.deleteAndDispose(instance.instanceId);\n\t}));\n\n\t// Added capabilities\n\tconst addCapabilityMultiplexer = store.add(new DynamicListEventMultiplexer(\n\t\tcurrentInstances,\n\t\tonAddInstance,\n\t\tonRemoveInstance,\n\t\tinstance => Event.map(instance.capabilities.createOnDidAddCapabilityOfTypeEvent(capabilityId), changeEvent => ({ instance, changeEvent }))\n\t));\n\tstore.add(addCapabilityMultiplexer.event(e => {\n\t\taddCapability(e.instance, e.changeEvent);\n\t}));\n\n\t// Removed capabilities\n\tconst removeCapabilityMultiplexer = store.add(new DynamicListEventMultiplexer(\n\t\tcurrentInstances,\n\t\tonAddInstance,\n\t\tonRemoveInstance,\n\t\tinstance => Event.map(instance.capabilities.createOnDidRemoveCapabilityOfTypeEvent(capabilityId), changeEvent => ({ instance, changeEvent }))\n\t));\n\tstore.add(removeCapabilityMultiplexer.event(e => {\n\t\tcapabilityListeners.get(e.instance.instanceId)?.deleteAndDispose(e.changeEvent);\n\t}));\n\n\treturn {\n\t\tdispose: () => store.dispose(),\n\t\tevent: multiplexer.event\n\t};\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0882b38a2a0400547f118a013d67a0ea819c65bc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1af4oqg677 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1af4oqg677();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { DynamicListEventMultiplexer, Event, EventMultiplexer } from '../../../../base/common/event.js';
+import { DisposableMap, DisposableStore } from '../../../../base/common/lifecycle.js';
+export function createInstanceCapabilityEventMultiplexer(currentInstances, onAddInstance, onRemoveInstance, capabilityId, getEvent) {
+  /* istanbul ignore next */
+  cov_1af4oqg677().f[0]++;
+  const store =
+  /* istanbul ignore next */
+  (cov_1af4oqg677().s[0]++, new DisposableStore());
+  const multiplexer =
+  /* istanbul ignore next */
+  (cov_1af4oqg677().s[1]++, store.add(new EventMultiplexer()));
+  const capabilityListeners =
+  /* istanbul ignore next */
+  (cov_1af4oqg677().s[2]++, store.add(new DisposableMap()));
+  function addCapability(instance, capability) {
+    /* istanbul ignore next */
+    cov_1af4oqg677().f[1]++;
+    const listener =
+    /* istanbul ignore next */
+    (cov_1af4oqg677().s[3]++, multiplexer.add(Event.map(getEvent(capability), data => {
+      /* istanbul ignore next */
+      cov_1af4oqg677().f[2]++;
+      cov_1af4oqg677().s[4]++;
+      return {
+        instance,
+        data
+      };
+    })));
+    let instanceCapabilityListeners =
+    /* istanbul ignore next */
+    (cov_1af4oqg677().s[5]++, capabilityListeners.get(instance.instanceId));
+    /* istanbul ignore next */
+    cov_1af4oqg677().s[6]++;
+    if (!instanceCapabilityListeners) {
+      /* istanbul ignore next */
+      cov_1af4oqg677().b[0][0]++;
+      cov_1af4oqg677().s[7]++;
+      instanceCapabilityListeners = new DisposableMap();
+      /* istanbul ignore next */
+      cov_1af4oqg677().s[8]++;
+      capabilityListeners.set(instance.instanceId, instanceCapabilityListeners);
+    } else
+    /* istanbul ignore next */
+    {
+      cov_1af4oqg677().b[0][1]++;
+    }
+    cov_1af4oqg677().s[9]++;
+    instanceCapabilityListeners.set(capability, listener);
+  }
+  // Existing instances
+  /* istanbul ignore next */
+  cov_1af4oqg677().s[10]++;
+  for (const instance of currentInstances) {
+    const capability =
+    /* istanbul ignore next */
+    (cov_1af4oqg677().s[11]++, instance.capabilities.get(capabilityId));
+    /* istanbul ignore next */
+    cov_1af4oqg677().s[12]++;
+    if (capability) {
+      /* istanbul ignore next */
+      cov_1af4oqg677().b[1][0]++;
+      cov_1af4oqg677().s[13]++;
+      addCapability(instance, capability);
+    } else
+    /* istanbul ignore next */
+    {
+      cov_1af4oqg677().b[1][1]++;
+    }
+  }
+  // Removed instances
+  /* istanbul ignore next */
+  cov_1af4oqg677().s[14]++;
+  store.add(onRemoveInstance(instance => {
+    /* istanbul ignore next */
+    cov_1af4oqg677().f[3]++;
+    cov_1af4oqg677().s[15]++;
+    capabilityListeners.deleteAndDispose(instance.instanceId);
+  }));
+  // Added capabilities
+  const addCapabilityMultiplexer =
+  /* istanbul ignore next */
+  (cov_1af4oqg677().s[16]++, store.add(new DynamicListEventMultiplexer(currentInstances, onAddInstance, onRemoveInstance, instance => {
+    /* istanbul ignore next */
+    cov_1af4oqg677().f[4]++;
+    cov_1af4oqg677().s[17]++;
+    return Event.map(instance.capabilities.createOnDidAddCapabilityOfTypeEvent(capabilityId), changeEvent => {
+      /* istanbul ignore next */
+      cov_1af4oqg677().f[5]++;
+      cov_1af4oqg677().s[18]++;
+      return {
+        instance,
+        changeEvent
+      };
+    });
+  })));
+  /* istanbul ignore next */
+  cov_1af4oqg677().s[19]++;
+  store.add(addCapabilityMultiplexer.event(e => {
+    /* istanbul ignore next */
+    cov_1af4oqg677().f[6]++;
+    cov_1af4oqg677().s[20]++;
+    addCapability(e.instance, e.changeEvent);
+  }));
+  // Removed capabilities
+  const removeCapabilityMultiplexer =
+  /* istanbul ignore next */
+  (cov_1af4oqg677().s[21]++, store.add(new DynamicListEventMultiplexer(currentInstances, onAddInstance, onRemoveInstance, instance => {
+    /* istanbul ignore next */
+    cov_1af4oqg677().f[7]++;
+    cov_1af4oqg677().s[22]++;
+    return Event.map(instance.capabilities.createOnDidRemoveCapabilityOfTypeEvent(capabilityId), changeEvent => {
+      /* istanbul ignore next */
+      cov_1af4oqg677().f[8]++;
+      cov_1af4oqg677().s[23]++;
+      return {
+        instance,
+        changeEvent
+      };
+    });
+  })));
+  /* istanbul ignore next */
+  cov_1af4oqg677().s[24]++;
+  store.add(removeCapabilityMultiplexer.event(e => {
+    /* istanbul ignore next */
+    cov_1af4oqg677().f[9]++;
+    cov_1af4oqg677().s[25]++;
+    capabilityListeners.get(e.instance.instanceId)?.deleteAndDispose(e.changeEvent);
+  }));
+  /* istanbul ignore next */
+  cov_1af4oqg677().s[26]++;
+  return {
+    dispose: () => {
+      /* istanbul ignore next */
+      cov_1af4oqg677().f[10]++;
+      cov_1af4oqg677().s[27]++;
+      return store.dispose();
+    },
+    event: multiplexer.event
+  };
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMWFmNG9xZzY3NyIsImFjdHVhbENvdmVyYWdlIiwiRHluYW1pY0xpc3RFdmVudE11bHRpcGxleGVyIiwiRXZlbnQiLCJFdmVudE11bHRpcGxleGVyIiwiRGlzcG9zYWJsZU1hcCIsIkRpc3Bvc2FibGVTdG9yZSIsImNyZWF0ZUluc3RhbmNlQ2FwYWJpbGl0eUV2ZW50TXVsdGlwbGV4ZXIiLCJjdXJyZW50SW5zdGFuY2VzIiwib25BZGRJbnN0YW5jZSIsIm9uUmVtb3ZlSW5zdGFuY2UiLCJjYXBhYmlsaXR5SWQiLCJnZXRFdmVudCIsImYiLCJzdG9yZSIsInMiLCJtdWx0aXBsZXhlciIsImFkZCIsImNhcGFiaWxpdHlMaXN0ZW5lcnMiLCJhZGRDYXBhYmlsaXR5IiwiaW5zdGFuY2UiLCJjYXBhYmlsaXR5IiwibGlzdGVuZXIiLCJtYXAiLCJkYXRhIiwiaW5zdGFuY2VDYXBhYmlsaXR5TGlzdGVuZXJzIiwiZ2V0IiwiaW5zdGFuY2VJZCIsImIiLCJzZXQiLCJjYXBhYmlsaXRpZXMiLCJkZWxldGVBbmREaXNwb3NlIiwiYWRkQ2FwYWJpbGl0eU11bHRpcGxleGVyIiwiY3JlYXRlT25EaWRBZGRDYXBhYmlsaXR5T2ZUeXBlRXZlbnQiLCJjaGFuZ2VFdmVudCIsImV2ZW50IiwiZSIsInJlbW92ZUNhcGFiaWxpdHlNdWx0aXBsZXhlciIsImNyZWF0ZU9uRGlkUmVtb3ZlQ2FwYWJpbGl0eU9mVHlwZUV2ZW50IiwiZGlzcG9zZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWwvYnJvd3Nlci90ZXJtaW5hbEV2ZW50cy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSVRlcm1pbmFsSW5zdGFuY2UgfSBmcm9tICcuL3Rlcm1pbmFsLmpzJztcbmltcG9ydCB7IER5bmFtaWNMaXN0RXZlbnRNdWx0aXBsZXhlciwgRXZlbnQsIEV2ZW50TXVsdGlwbGV4ZXIsIElEeW5hbWljTGlzdEV2ZW50TXVsdGlwbGV4ZXIgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBEaXNwb3NhYmxlTWFwLCBEaXNwb3NhYmxlU3RvcmUsIElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IElUZXJtaW5hbENhcGFiaWxpdHlJbXBsTWFwLCBUZXJtaW5hbENhcGFiaWxpdHkgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS90ZXJtaW5hbC9jb21tb24vY2FwYWJpbGl0aWVzL2NhcGFiaWxpdGllcy5qcyc7XG5cbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVJbnN0YW5jZUNhcGFiaWxpdHlFdmVudE11bHRpcGxleGVyPFQgZXh0ZW5kcyBUZXJtaW5hbENhcGFiaWxpdHksIEs+KFxuXHRjdXJyZW50SW5zdGFuY2VzOiBJVGVybWluYWxJbnN0YW5jZVtdLFxuXHRvbkFkZEluc3RhbmNlOiBFdmVudDxJVGVybWluYWxJbnN0YW5jZT4sXG5cdG9uUmVtb3ZlSW5zdGFuY2U6IEV2ZW50PElUZXJtaW5hbEluc3RhbmNlPixcblx0Y2FwYWJpbGl0eUlkOiBULFxuXHRnZXRFdmVudDogKGNhcGFiaWxpdHk6IElUZXJtaW5hbENhcGFiaWxpdHlJbXBsTWFwW1RdKSA9PiBFdmVudDxLPlxuKTogSUR5bmFtaWNMaXN0RXZlbnRNdWx0aXBsZXhlcjx7IGluc3RhbmNlOiBJVGVybWluYWxJbnN0YW5jZTsgZGF0YTogSyB9PiB7XG5cdGNvbnN0IHN0b3JlID0gbmV3IERpc3Bvc2FibGVTdG9yZSgpO1xuXHRjb25zdCBtdWx0aXBsZXhlciA9IHN0b3JlLmFkZChuZXcgRXZlbnRNdWx0aXBsZXhlcjx7IGluc3RhbmNlOiBJVGVybWluYWxJbnN0YW5jZTsgZGF0YTogSyB9PigpKTtcblx0Y29uc3QgY2FwYWJpbGl0eUxpc3RlbmVycyA9IHN0b3JlLmFkZChuZXcgRGlzcG9zYWJsZU1hcDxudW1iZXIsIERpc3Bvc2FibGVNYXA8SVRlcm1pbmFsQ2FwYWJpbGl0eUltcGxNYXBbVF0sIElEaXNwb3NhYmxlPj4oKSk7XG5cblx0ZnVuY3Rpb24gYWRkQ2FwYWJpbGl0eShpbnN0YW5jZTogSVRlcm1pbmFsSW5zdGFuY2UsIGNhcGFiaWxpdHk6IElUZXJtaW5hbENhcGFiaWxpdHlJbXBsTWFwW1RdKSB7XG5cdFx0Y29uc3QgbGlzdGVuZXIgPSBtdWx0aXBsZXhlci5hZGQoRXZlbnQubWFwKGdldEV2ZW50KGNhcGFiaWxpdHkpLCBkYXRhID0+ICh7IGluc3RhbmNlLCBkYXRhIH0pKSk7XG5cdFx0bGV0IGluc3RhbmNlQ2FwYWJpbGl0eUxpc3RlbmVycyA9IGNhcGFiaWxpdHlMaXN0ZW5lcnMuZ2V0KGluc3RhbmNlLmluc3RhbmNlSWQpO1xuXHRcdGlmICghaW5zdGFuY2VDYXBhYmlsaXR5TGlzdGVuZXJzKSB7XG5cdFx0XHRpbnN0YW5jZUNhcGFiaWxpdHlMaXN0ZW5lcnMgPSBuZXcgRGlzcG9zYWJsZU1hcDxJVGVybWluYWxDYXBhYmlsaXR5SW1wbE1hcFtUXSwgSURpc3Bvc2FibGU+KCk7XG5cdFx0XHRjYXBhYmlsaXR5TGlzdGVuZXJzLnNldChpbnN0YW5jZS5pbnN0YW5jZUlkLCBpbnN0YW5jZUNhcGFiaWxpdHlMaXN0ZW5lcnMpO1xuXHRcdH1cblx0XHRpbnN0YW5jZUNhcGFiaWxpdHlMaXN0ZW5lcnMuc2V0KGNhcGFiaWxpdHksIGxpc3RlbmVyKTtcblx0fVxuXG5cdC8vIEV4aXN0aW5nIGluc3RhbmNlc1xuXHRmb3IgKGNvbnN0IGluc3RhbmNlIG9mIGN1cnJlbnRJbnN0YW5jZXMpIHtcblx0XHRjb25zdCBjYXBhYmlsaXR5ID0gaW5zdGFuY2UuY2FwYWJpbGl0aWVzLmdldChjYXBhYmlsaXR5SWQpO1xuXHRcdGlmIChjYXBhYmlsaXR5KSB7XG5cdFx0XHRhZGRDYXBhYmlsaXR5KGluc3RhbmNlLCBjYXBhYmlsaXR5KTtcblx0XHR9XG5cdH1cblxuXHQvLyBSZW1vdmVkIGluc3RhbmNlc1xuXHRzdG9yZS5hZGQob25SZW1vdmVJbnN0YW5jZShpbnN0YW5jZSA9PiB7XG5cdFx0Y2FwYWJpbGl0eUxpc3RlbmVycy5kZWxldGVBbmREaXNwb3NlKGluc3RhbmNlLmluc3RhbmNlSWQpO1xuXHR9KSk7XG5cblx0Ly8gQWRkZWQgY2FwYWJpbGl0aWVzXG5cdGNvbnN0IGFkZENhcGFiaWxpdHlNdWx0aXBsZXhlciA9IHN0b3JlLmFkZChuZXcgRHluYW1pY0xpc3RFdmVudE11bHRpcGxleGVyKFxuXHRcdGN1cnJlbnRJbnN0YW5jZXMsXG5cdFx0b25BZGRJbnN0YW5jZSxcblx0XHRvblJlbW92ZUluc3RhbmNlLFxuXHRcdGluc3RhbmNlID0+IEV2ZW50Lm1hcChpbnN0YW5jZS5jYXBhYmlsaXRpZXMuY3JlYXRlT25EaWRBZGRDYXBhYmlsaXR5T2ZUeXBlRXZlbnQoY2FwYWJpbGl0eUlkKSwgY2hhbmdlRXZlbnQgPT4gKHsgaW5zdGFuY2UsIGNoYW5nZUV2ZW50IH0pKVxuXHQpKTtcblx0c3RvcmUuYWRkKGFkZENhcGFiaWxpdHlNdWx0aXBsZXhlci5ldmVudChlID0+IHtcblx0XHRhZGRDYXBhYmlsaXR5KGUuaW5zdGFuY2UsIGUuY2hhbmdlRXZlbnQpO1xuXHR9KSk7XG5cblx0Ly8gUmVtb3ZlZCBjYXBhYmlsaXRpZXNcblx0Y29uc3QgcmVtb3ZlQ2FwYWJpbGl0eU11bHRpcGxleGVyID0gc3RvcmUuYWRkKG5ldyBEeW5hbWljTGlzdEV2ZW50TXVsdGlwbGV4ZXIoXG5cdFx0Y3VycmVudEluc3RhbmNlcyxcblx0XHRvbkFkZEluc3RhbmNlLFxuXHRcdG9uUmVtb3ZlSW5zdGFuY2UsXG5cdFx0aW5zdGFuY2UgPT4gRXZlbnQubWFwKGluc3RhbmNlLmNhcGFiaWxpdGllcy5jcmVhdGVPbkRpZFJlbW92ZUNhcGFiaWxpdHlPZlR5cGVFdmVudChjYXBhYmlsaXR5SWQpLCBjaGFuZ2VFdmVudCA9PiAoeyBpbnN0YW5jZSwgY2hhbmdlRXZlbnQgfSkpXG5cdCkpO1xuXHRzdG9yZS5hZGQocmVtb3ZlQ2FwYWJpbGl0eU11bHRpcGxleGVyLmV2ZW50KGUgPT4ge1xuXHRcdGNhcGFiaWxpdHlMaXN0ZW5lcnMuZ2V0KGUuaW5zdGFuY2UuaW5zdGFuY2VJZCk/LmRlbGV0ZUFuZERpc3Bvc2UoZS5jaGFuZ2VFdmVudCk7XG5cdH0pKTtcblxuXHRyZXR1cm4ge1xuXHRcdGRpc3Bvc2U6ICgpID0+IHN0b3JlLmRpc3Bvc2UoKSxcblx0XHRldmVudDogbXVsdGlwbGV4ZXIuZXZlbnRcblx0fTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7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QUFELENBQUMsQ0FDMUksQ0FBQztFQUFDO0VBQUFsQyxjQUFBLEdBQUFlLENBQUE7RUFDSEQsS0FBSyxDQUFDRyxHQUFHLENBQUNlLHdCQUF3QixDQUFDRyxLQUFLLENBQUNDLENBQUMsSUFBRztJQUFBO0lBQUFwQyxjQUFBLEdBQUFhLENBQUE7SUFBQWIsY0FBQSxHQUFBZSxDQUFBO0lBQzVDSSxhQUFhLENBQUNpQixDQUFDLENBQUNoQixRQUFRLEVBQUVnQixDQUFDLENBQUNGLFdBQVcsQ0FBQztFQUN6QyxDQUFDLENBQUMsQ0FBQztFQUVIO0VBQ0EsTUFBTUcsMkJBQTJCO0VBQUE7RUFBQSxDQUFBckMsY0FBQSxHQUFBZSxDQUFBLFFBQUdELEtBQUssQ0FBQ0csR0FBRyxDQUFDLElBQUlmLDJCQUEyQixDQUM1RU0sZ0JBQWdCLEVBQ2hCQyxhQUFhLEVBQ2JDLGdCQUFnQixFQUNoQlUsUUFBUSxJQUFJO0lBQUE7SUFBQXBCLGNBQUEsR0FBQWEsQ0FBQTtJQUFBYixjQUFBLEdBQUFlLENBQUE7SUFBQSxPQUFBWixLQUFLLENBQUNvQixHQUFHLENBQUNILFFBQVEsQ0FBQ1UsWUFBWSxDQUFDUSxzQ0FBc0MsQ0FBQzNCLFlBQVksQ0FBQyxFQUFFdUIsV0FBVyxJQUFLO01BQUE7TUFBQWxDLGNBQUEsR0FBQWEsQ0FBQTtNQUFBYixjQUFBLEdBQUFlLENBQUE7TUFBQTtRQUFFSyxRQUFRO1FBQUVjO01BQVcsQ0FBRTtJQUFGLENBQUcsQ0FBQztFQUFELENBQUMsQ0FDN0ksQ0FBQztFQUFDO0VBQUFsQyxjQUFBLEdBQUFlLENBQUE7RUFDSEQsS0FBSyxDQUFDRyxHQUFHLENBQUNvQiwyQkFBMkIsQ0FBQ0YsS0FBSyxDQUFDQyxDQUFDLElBQUc7SUFBQTtJQUFBcEMsY0FBQSxHQUFBYSxDQUFBO0lBQUFiLGNBQUEsR0FBQWUsQ0FBQTtJQUMvQ0csbUJBQW1CLENBQUNRLEdBQUcsQ0FBQ1UsQ0FBQyxDQUFDaEIsUUFBUSxDQUFDTyxVQUFVLENBQUMsRUFBRUksZ0JBQWdCLENBQUNLLENBQUMsQ0FBQ0YsV0FBVyxDQUFDO0VBQ2hGLENBQUMsQ0FBQyxDQUFDO0VBQUM7RUFBQWxDLGNBQUEsR0FBQWUsQ0FBQTtFQUVKLE9BQU87SUFDTndCLE9BQU8sRUFBRUEsQ0FBQSxLQUFNO01BQUE7TUFBQXZDLGNBQUEsR0FBQWEsQ0FBQTtNQUFBYixjQUFBLEdBQUFlLENBQUE7TUFBQSxPQUFBRCxLQUFLLENBQUN5QixPQUFPLEVBQUU7SUFBRixDQUFFO0lBQzlCSixLQUFLLEVBQUVuQixXQUFXLENBQUNtQjtHQUNuQjtBQUNGIiwiaWdub3JlTGlzdCI6W119

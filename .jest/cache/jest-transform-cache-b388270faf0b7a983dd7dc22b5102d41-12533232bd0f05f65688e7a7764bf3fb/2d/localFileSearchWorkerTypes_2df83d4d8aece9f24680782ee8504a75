@@ -1,0 +1,149 @@
+6fd1a93239f2bf771dfa7f950d9f5f7a
+/* istanbul ignore next */
+function cov_1hdmp0fcm4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/localFileSearchWorkerTypes.ts";
+  var hash = "3c88b32310089a203602723ddaf8c8e9a232ea50";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/localFileSearchWorkerTypes.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 26
+        },
+        end: {
+          line: 6,
+          column: 53
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 79
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 77
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 36
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 41
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/localFileSearchWorkerTypes.ts",
+      mappings: "AAAA;;;gGAGgG;AA+ChG,MAAM,OAAgB,yBAAyB;IACvC,MAAM,CAAC,YAAY,GAAG,2BAA2B,CAAC;IAClD,MAAM,CAAC,UAAU,CAAC,YAA8B;QACtD,OAAO,YAAY,CAAC,UAAU,CAA4B,yBAAyB,CAAC,YAAY,CAAC,CAAC;IACnG,CAAC;IACM,MAAM,CAAC,UAAU,CAAC,YAAuC,EAAE,GAA8B;QAC/F,YAAY,CAAC,UAAU,CAA4B,yBAAyB,CAAC,YAAY,EAAE,GAAG,CAAC,CAAC;IACjG,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/localFileSearchWorkerTypes.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { UriComponents } from '../../../../base/common/uri.js';\nimport { IWebWorkerClient, IWebWorkerServer } from '../../../../base/common/worker/webWorker.js';\nimport { IFileMatch, IFileQueryProps, IFolderQuery, ITextQueryProps } from './search.js';\n\nexport interface IWorkerTextSearchComplete {\n\tresults: IFileMatch<UriComponents>[];\n\tlimitHit?: boolean;\n}\n\nexport interface IWorkerFileSearchComplete {\n\tresults: string[];\n\tlimitHit?: boolean;\n}\n\n// Copied from lib.dom.ts, which is not available in this layer.\ntype IWorkerFileSystemHandleKind = 'directory' | 'file';\n\nexport interface IWorkerFileSystemHandle {\n\treadonly kind: IWorkerFileSystemHandleKind;\n\treadonly name: string;\n\tisSameEntry(other: IWorkerFileSystemHandle): Promise<boolean>;\n}\n\nexport interface IWorkerFileSystemDirectoryHandle extends IWorkerFileSystemHandle {\n\treadonly kind: 'directory';\n\tgetDirectoryHandle(name: string): Promise<IWorkerFileSystemDirectoryHandle>;\n\tgetFileHandle(name: string): Promise<IWorkerFileSystemFileHandle>;\n\tresolve(possibleDescendant: IWorkerFileSystemHandle): Promise<string[] | null>;\n\tentries(): AsyncIterableIterator<[string, IWorkerFileSystemDirectoryHandle | IWorkerFileSystemFileHandle]>;\n}\n\nexport interface IWorkerFileSystemFileHandle extends IWorkerFileSystemHandle {\n\treadonly kind: 'file';\n\tgetFile(): Promise<{ arrayBuffer(): Promise<ArrayBuffer> }>;\n}\n\nexport interface ILocalFileSearchWorker {\n\t_requestHandlerBrand: void;\n\n\t$cancelQuery(queryId: number): void;\n\n\t$listDirectory(handle: IWorkerFileSystemDirectoryHandle, queryProps: IFileQueryProps<UriComponents>, folderQuery: IFolderQuery, ignorePathCasing: boolean, queryId: number): Promise<IWorkerFileSearchComplete>;\n\t$searchDirectory(handle: IWorkerFileSystemDirectoryHandle, queryProps: ITextQueryProps<UriComponents>, folderQuery: IFolderQuery, ignorePathCasing: boolean, queryId: number): Promise<IWorkerTextSearchComplete>;\n}\n\nexport abstract class LocalFileSearchWorkerHost {\n\tpublic static CHANNEL_NAME = 'localFileSearchWorkerHost';\n\tpublic static getChannel(workerServer: IWebWorkerServer): LocalFileSearchWorkerHost {\n\t\treturn workerServer.getChannel<LocalFileSearchWorkerHost>(LocalFileSearchWorkerHost.CHANNEL_NAME);\n\t}\n\tpublic static setChannel(workerClient: IWebWorkerClient<unknown>, obj: LocalFileSearchWorkerHost): void {\n\t\tworkerClient.setChannel<LocalFileSearchWorkerHost>(LocalFileSearchWorkerHost.CHANNEL_NAME, obj);\n\t}\n\n\tabstract $sendTextSearchMatch(match: IFileMatch<UriComponents>, queryId: number): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3c88b32310089a203602723ddaf8c8e9a232ea50"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1hdmp0fcm4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1hdmp0fcm4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class LocalFileSearchWorkerHost {
+  static CHANNEL_NAME =
+  /* istanbul ignore next */
+  (cov_1hdmp0fcm4().s[0]++, 'localFileSearchWorkerHost');
+  static getChannel(workerServer) {
+    /* istanbul ignore next */
+    cov_1hdmp0fcm4().f[0]++;
+    cov_1hdmp0fcm4().s[1]++;
+    return workerServer.getChannel(LocalFileSearchWorkerHost.CHANNEL_NAME);
+  }
+  static setChannel(workerClient, obj) {
+    /* istanbul ignore next */
+    cov_1hdmp0fcm4().f[1]++;
+    cov_1hdmp0fcm4().s[2]++;
+    workerClient.setChannel(LocalFileSearchWorkerHost.CHANNEL_NAME, obj);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJMb2NhbEZpbGVTZWFyY2hXb3JrZXJIb3N0IiwiQ0hBTk5FTF9OQU1FIiwiY292XzFoZG1wMGZjbTQiLCJzIiwiZ2V0Q2hhbm5lbCIsIndvcmtlclNlcnZlciIsImYiLCJzZXRDaGFubmVsIiwid29ya2VyQ2xpZW50Iiwib2JqIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvc2VhcmNoL2NvbW1vbi9sb2NhbEZpbGVTZWFyY2hXb3JrZXJUeXBlcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVXJpQ29tcG9uZW50cyB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBJV2ViV29ya2VyQ2xpZW50LCBJV2ViV29ya2VyU2VydmVyIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vd29ya2VyL3dlYldvcmtlci5qcyc7XG5pbXBvcnQgeyBJRmlsZU1hdGNoLCBJRmlsZVF1ZXJ5UHJvcHMsIElGb2xkZXJRdWVyeSwgSVRleHRRdWVyeVByb3BzIH0gZnJvbSAnLi9zZWFyY2guanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElXb3JrZXJUZXh0U2VhcmNoQ29tcGxldGUge1xuXHRyZXN1bHRzOiBJRmlsZU1hdGNoPFVyaUNvbXBvbmVudHM+W107XG5cdGxpbWl0SGl0PzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJV29ya2VyRmlsZVNlYXJjaENvbXBsZXRlIHtcblx0cmVzdWx0czogc3RyaW5nW107XG5cdGxpbWl0SGl0PzogYm9vbGVhbjtcbn1cblxuLy8gQ29waWVkIGZyb20gbGliLmRvbS50cywgd2hpY2ggaXMgbm90IGF2YWlsYWJsZSBpbiB0aGlzIGxheWVyLlxudHlwZSBJV29ya2VyRmlsZVN5c3RlbUhhbmRsZUtpbmQgPSAnZGlyZWN0b3J5JyB8ICdmaWxlJztcblxuZXhwb3J0IGludGVyZmFjZSBJV29ya2VyRmlsZVN5c3RlbUhhbmRsZSB7XG5cdHJlYWRvbmx5IGtpbmQ6IElXb3JrZXJGaWxlU3lzdGVtSGFuZGxlS2luZDtcblx0cmVhZG9ubHkgbmFtZTogc3RyaW5nO1xuXHRpc1NhbWVFbnRyeShvdGhlcjogSVdvcmtlckZpbGVTeXN0ZW1IYW5kbGUpOiBQcm9taXNlPGJvb2xlYW4+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElXb3JrZXJGaWxlU3lzdGVtRGlyZWN0b3J5SGFuZGxlIGV4dGVuZHMgSVdvcmtlckZpbGVTeXN0ZW1IYW5kbGUge1xuXHRyZWFkb25seSBraW5kOiAnZGlyZWN0b3J5Jztcblx0Z2V0RGlyZWN0b3J5SGFuZGxlKG5hbWU6IHN0cmluZyk6IFByb21pc2U8SVdvcmtlckZpbGVTeXN0ZW1EaXJlY3RvcnlIYW5kbGU+O1xuXHRnZXRGaWxlSGFuZGxlKG5hbWU6IHN0cmluZyk6IFByb21pc2U8SVdvcmtlckZpbGVTeXN0ZW1GaWxlSGFuZGxlPjtcblx0cmVzb2x2ZShwb3NzaWJsZURlc2NlbmRhbnQ6IElXb3JrZXJGaWxlU3lzdGVtSGFuZGxlKTogUHJvbWlzZTxzdHJpbmdbXSB8IG51bGw+O1xuXHRlbnRyaWVzKCk6IEFzeW5jSXRlcmFibGVJdGVyYXRvcjxbc3RyaW5nLCBJV29ya2VyRmlsZVN5c3RlbURpcmVjdG9yeUhhbmRsZSB8IElXb3JrZXJGaWxlU3lzdGVtRmlsZUhhbmRsZV0+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElXb3JrZXJGaWxlU3lzdGVtRmlsZUhhbmRsZSBleHRlbmRzIElXb3JrZXJGaWxlU3lzdGVtSGFuZGxlIHtcblx0cmVhZG9ubHkga2luZDogJ2ZpbGUnO1xuXHRnZXRGaWxlKCk6IFByb21pc2U8eyBhcnJheUJ1ZmZlcigpOiBQcm9taXNlPEFycmF5QnVmZmVyPiB9Pjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJTG9jYWxGaWxlU2VhcmNoV29ya2VyIHtcblx0X3JlcXVlc3RIYW5kbGVyQnJhbmQ6IHZvaWQ7XG5cblx0JGNhbmNlbFF1ZXJ5KHF1ZXJ5SWQ6IG51bWJlcik6IHZvaWQ7XG5cblx0JGxpc3REaXJlY3RvcnkoaGFuZGxlOiBJV29ya2VyRmlsZVN5c3RlbURpcmVjdG9yeUhhbmRsZSwgcXVlcnlQcm9wczogSUZpbGVRdWVyeVByb3BzPFVyaUNvbXBvbmVudHM+LCBmb2xkZXJRdWVyeTogSUZvbGRlclF1ZXJ5LCBpZ25vcmVQYXRoQ2FzaW5nOiBib29sZWFuLCBxdWVyeUlkOiBudW1iZXIpOiBQcm9taXNlPElXb3JrZXJGaWxlU2VhcmNoQ29tcGxldGU+O1xuXHQkc2VhcmNoRGlyZWN0b3J5KGhhbmRsZTogSVdvcmtlckZpbGVTeXN0ZW1EaXJlY3RvcnlIYW5kbGUsIHF1ZXJ5UHJvcHM6IElUZXh0UXVlcnlQcm9wczxVcmlDb21wb25lbnRzPiwgZm9sZGVyUXVlcnk6IElGb2xkZXJRdWVyeSwgaWdub3JlUGF0aENhc2luZzogYm9vbGVhbiwgcXVlcnlJZDogbnVtYmVyKTogUHJvbWlzZTxJV29ya2VyVGV4dFNlYXJjaENvbXBsZXRlPjtcbn1cblxuZXhwb3J0IGFic3RyYWN0IGNsYXNzIExvY2FsRmlsZVNlYXJjaFdvcmtlckhvc3Qge1xuXHRwdWJsaWMgc3RhdGljIENIQU5ORUxfTkFNRSA9ICdsb2NhbEZpbGVTZWFyY2hXb3JrZXJIb3N0Jztcblx0cHVibGljIHN0YXRpYyBnZXRDaGFubmVsKHdvcmtlclNlcnZlcjogSVdlYldvcmtlclNlcnZlcik6IExvY2FsRmlsZVNlYXJjaFdvcmtlckhvc3Qge1xuXHRcdHJldHVybiB3b3JrZXJTZXJ2ZXIuZ2V0Q2hhbm5lbDxMb2NhbEZpbGVTZWFyY2hXb3JrZXJIb3N0PihMb2NhbEZpbGVTZWFyY2hXb3JrZXJIb3N0LkNIQU5ORUxfTkFNRSk7XG5cdH1cblx0cHVibGljIHN0YXRpYyBzZXRDaGFubmVsKHdvcmtlckNsaWVudDogSVdlYldvcmtlckNsaWVudDx1bmtub3duPiwgb2JqOiBMb2NhbEZpbGVTZWFyY2hXb3JrZXJIb3N0KTogdm9pZCB7XG5cdFx0d29ya2VyQ2xpZW50LnNldENoYW5uZWw8TG9jYWxGaWxlU2VhcmNoV29ya2VySG9zdD4oTG9jYWxGaWxlU2VhcmNoV29ya2VySG9zdC5DSEFOTkVMX05BTUUsIG9iaik7XG5cdH1cblxuXHRhYnN0cmFjdCAkc2VuZFRleHRTZWFyY2hNYXRjaChtYXRjaDogSUZpbGVNYXRjaDxVcmlDb21wb25lbnRzPiwgcXVlcnlJZDogbnVtYmVyKTogdm9pZDtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFrREEsT0FBTSxNQUFnQkEseUJBQXlCO0VBQ3ZDLE9BQU9DLFlBQVk7RUFBQTtFQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHLDJCQUEyQjtFQUNqRCxPQUFPQyxVQUFVQSxDQUFDQyxZQUE4QjtJQUFBO0lBQUFILGNBQUEsR0FBQUksQ0FBQTtJQUFBSixjQUFBLEdBQUFDLENBQUE7SUFDdEQsT0FBT0UsWUFBWSxDQUFDRCxVQUFVLENBQTRCSix5QkFBeUIsQ0FBQ0MsWUFBWSxDQUFDO0VBQ2xHO0VBQ08sT0FBT00sVUFBVUEsQ0FBQ0MsWUFBdUMsRUFBRUMsR0FBOEI7SUFBQTtJQUFBUCxjQUFBLEdBQUFJLENBQUE7SUFBQUosY0FBQSxHQUFBQyxDQUFBO0lBQy9GSyxZQUFZLENBQUNELFVBQVUsQ0FBNEJQLHlCQUF5QixDQUFDQyxZQUFZLEVBQUVRLEdBQUcsQ0FBQztFQUNoRyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,242 @@
+b47a053ea12f5ccd39a2e82806d62a90
+/* istanbul ignore next */
+function cov_1ordg49cq6() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditing.ts";
+  var hash = "c7d3cb78e356f2d7be642758c27efcd58f0bc508";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditing.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 23
+        },
+        end: {
+          line: 8,
+          column: 75
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 21
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 26
+        },
+        end: {
+          line: 12,
+          column: 67
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 26
+        },
+        end: {
+          line: 13,
+          column: 67
+        }
+      },
+      "5": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 14,
+          column: 108
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isTextDiffEditorForEntry",
+        decl: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 40
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 66
+          },
+          end: {
+            line: 15,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 9
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 14,
+            column: 11
+          },
+          end: {
+            line: 14,
+            column: 107
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 14,
+            column: 11
+          },
+          end: {
+            line: 14,
+            column: 57
+          }
+        }, {
+          start: {
+            line: 14,
+            column: 61
+          },
+          end: {
+            line: 14,
+            column: 107
+          }
+        }],
+        line: 14
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditing.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAE,MAAM,yCAAyC,CAAC;AAElE,OAAO,EAAE,kCAAkC,EAAE,MAAM,6DAA6D,CAAC;AAIjH,MAAM,UAAU,wBAAwB,CAAC,QAA0B,EAAE,KAAyB,EAAE,MAAmB;IAClH,MAAM,UAAU,GAAG,kCAAkC,CAAC,QAAQ,EAAE,MAAM,CAAC,CAAC;IACxE,IAAI,CAAC,UAAU,EAAE,CAAC;QACjB,OAAO,KAAK,CAAC;IACd,CAAC;IACD,MAAM,aAAa,GAAG,UAAU,CAAC,iBAAiB,EAAE,CAAC,QAAQ,EAAE,CAAC;IAChE,MAAM,aAAa,GAAG,UAAU,CAAC,iBAAiB,EAAE,CAAC,QAAQ,EAAE,CAAC;IAChE,OAAO,OAAO,CAAC,aAAa,EAAE,GAAG,EAAE,KAAK,CAAC,WAAW,CAAC,IAAI,OAAO,CAAC,aAAa,EAAE,GAAG,EAAE,KAAK,CAAC,WAAW,CAAC,CAAC;AACzG,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditing.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { isEqual } from '../../../../../base/common/resources.js';\nimport { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';\nimport { findDiffEditorContainingCodeEditor } from '../../../../../editor/browser/widget/diffEditor/commands.js';\nimport { ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';\nimport { IModifiedFileEntry } from '../../common/chatEditingService.js';\n\nexport function isTextDiffEditorForEntry(accessor: ServicesAccessor, entry: IModifiedFileEntry, editor: ICodeEditor) {\n\tconst diffEditor = findDiffEditorContainingCodeEditor(accessor, editor);\n\tif (!diffEditor) {\n\t\treturn false;\n\t}\n\tconst originalModel = diffEditor.getOriginalEditor().getModel();\n\tconst modifiedModel = diffEditor.getModifiedEditor().getModel();\n\treturn isEqual(originalModel?.uri, entry.originalURI) && isEqual(modifiedModel?.uri, entry.modifiedURI);\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c7d3cb78e356f2d7be642758c27efcd58f0bc508"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ordg49cq6 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ordg49cq6();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { isEqual } from '../../../../../base/common/resources.js';
+import { findDiffEditorContainingCodeEditor } from '../../../../../editor/browser/widget/diffEditor/commands.js';
+export function isTextDiffEditorForEntry(accessor, entry, editor) {
+  /* istanbul ignore next */
+  cov_1ordg49cq6().f[0]++;
+  const diffEditor =
+  /* istanbul ignore next */
+  (cov_1ordg49cq6().s[0]++, findDiffEditorContainingCodeEditor(accessor, editor));
+  /* istanbul ignore next */
+  cov_1ordg49cq6().s[1]++;
+  if (!diffEditor) {
+    /* istanbul ignore next */
+    cov_1ordg49cq6().b[0][0]++;
+    cov_1ordg49cq6().s[2]++;
+    return false;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_1ordg49cq6().b[0][1]++;
+  }
+  const originalModel =
+  /* istanbul ignore next */
+  (cov_1ordg49cq6().s[3]++, diffEditor.getOriginalEditor().getModel());
+  const modifiedModel =
+  /* istanbul ignore next */
+  (cov_1ordg49cq6().s[4]++, diffEditor.getModifiedEditor().getModel());
+  /* istanbul ignore next */
+  cov_1ordg49cq6().s[5]++;
+  return /* istanbul ignore next */(cov_1ordg49cq6().b[1][0]++, isEqual(originalModel?.uri, entry.originalURI)) &&
+  /* istanbul ignore next */
+  (cov_1ordg49cq6().b[1][1]++, isEqual(modifiedModel?.uri, entry.modifiedURI));
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJpc0VxdWFsIiwiZmluZERpZmZFZGl0b3JDb250YWluaW5nQ29kZUVkaXRvciIsImlzVGV4dERpZmZFZGl0b3JGb3JFbnRyeSIsImFjY2Vzc29yIiwiZW50cnkiLCJlZGl0b3IiLCJjb3ZfMW9yZGc0OWNxNiIsImYiLCJkaWZmRWRpdG9yIiwicyIsImIiLCJvcmlnaW5hbE1vZGVsIiwiZ2V0T3JpZ2luYWxFZGl0b3IiLCJnZXRNb2RlbCIsIm1vZGlmaWVkTW9kZWwiLCJnZXRNb2RpZmllZEVkaXRvciIsInVyaSIsIm9yaWdpbmFsVVJJIiwibW9kaWZpZWRVUkkiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL2NoYXQvYnJvd3Nlci9jaGF0RWRpdGluZy9jaGF0RWRpdGluZy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgaXNFcXVhbCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3Jlc291cmNlcy5qcyc7XG5pbXBvcnQgeyBJQ29kZUVkaXRvciB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2VkaXRvci9icm93c2VyL2VkaXRvckJyb3dzZXIuanMnO1xuaW1wb3J0IHsgZmluZERpZmZFZGl0b3JDb250YWluaW5nQ29kZUVkaXRvciB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2VkaXRvci9icm93c2VyL3dpZGdldC9kaWZmRWRpdG9yL2NvbW1hbmRzLmpzJztcbmltcG9ydCB7IFNlcnZpY2VzQWNjZXNzb3IgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IElNb2RpZmllZEZpbGVFbnRyeSB9IGZyb20gJy4uLy4uL2NvbW1vbi9jaGF0RWRpdGluZ1NlcnZpY2UuanMnO1xuXG5leHBvcnQgZnVuY3Rpb24gaXNUZXh0RGlmZkVkaXRvckZvckVudHJ5KGFjY2Vzc29yOiBTZXJ2aWNlc0FjY2Vzc29yLCBlbnRyeTogSU1vZGlmaWVkRmlsZUVudHJ5LCBlZGl0b3I6IElDb2RlRWRpdG9yKSB7XG5cdGNvbnN0IGRpZmZFZGl0b3IgPSBmaW5kRGlmZkVkaXRvckNvbnRhaW5pbmdDb2RlRWRpdG9yKGFjY2Vzc29yLCBlZGl0b3IpO1xuXHRpZiAoIWRpZmZFZGl0b3IpIHtcblx0XHRyZXR1cm4gZmFsc2U7XG5cdH1cblx0Y29uc3Qgb3JpZ2luYWxNb2RlbCA9IGRpZmZFZGl0b3IuZ2V0T3JpZ2luYWxFZGl0b3IoKS5nZXRNb2RlbCgpO1xuXHRjb25zdCBtb2RpZmllZE1vZGVsID0gZGlmZkVkaXRvci5nZXRNb2RpZmllZEVkaXRvcigpLmdldE1vZGVsKCk7XG5cdHJldHVybiBpc0VxdWFsKG9yaWdpbmFsTW9kZWw/LnVyaSwgZW50cnkub3JpZ2luYWxVUkkpICYmIGlzRXF1YWwobW9kaWZpZWRNb2RlbD8udXJpLCBlbnRyeS5tb2RpZmllZFVSSSk7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsT0FBTyxRQUFRLHlDQUF5QztBQUVqRSxTQUFTQyxrQ0FBa0MsUUFBUSw2REFBNkQ7QUFJaEgsT0FBTSxTQUFVQyx3QkFBd0JBLENBQUNDLFFBQTBCLEVBQUVDLEtBQXlCLEVBQUVDLE1BQW1CO0VBQUE7RUFBQUMsY0FBQSxHQUFBQyxDQUFBO0VBQ2xILE1BQU1DLFVBQVU7RUFBQTtFQUFBLENBQUFGLGNBQUEsR0FBQUcsQ0FBQSxPQUFHUixrQ0FBa0MsQ0FBQ0UsUUFBUSxFQUFFRSxNQUFNLENBQUM7RUFBQztFQUFBQyxjQUFBLEdBQUFHLENBQUE7RUFDeEUsSUFBSSxDQUFDRCxVQUFVLEVBQUU7SUFBQTtJQUFBRixjQUFBLEdBQUFJLENBQUE7SUFBQUosY0FBQSxHQUFBRyxDQUFBO0lBQ2hCLE9BQU8sS0FBSztFQUNiLENBQUM7RUFBQTtFQUFBO0lBQUFILGNBQUEsR0FBQUksQ0FBQTtFQUFBO0VBQ0QsTUFBTUMsYUFBYTtFQUFBO0VBQUEsQ0FBQUwsY0FBQSxHQUFBRyxDQUFBLE9BQUdELFVBQVUsQ0FBQ0ksaUJBQWlCLEVBQUUsQ0FBQ0MsUUFBUSxFQUFFO0VBQy9ELE1BQU1DLGFBQWE7RUFBQTtFQUFBLENBQUFSLGNBQUEsR0FBQUcsQ0FBQSxPQUFHRCxVQUFVLENBQUNPLGlCQUFpQixFQUFFLENBQUNGLFFBQVEsRUFBRTtFQUFDO0VBQUFQLGNBQUEsR0FBQUcsQ0FBQTtFQUNoRSxPQUFPLDJCQUFBSCxjQUFBLEdBQUFJLENBQUEsVUFBQVYsT0FBTyxDQUFDVyxhQUFhLEVBQUVLLEdBQUcsRUFBRVosS0FBSyxDQUFDYSxXQUFXLENBQUM7RUFBQTtFQUFBLENBQUFYLGNBQUEsR0FBQUksQ0FBQSxVQUFJVixPQUFPLENBQUNjLGFBQWEsRUFBRUUsR0FBRyxFQUFFWixLQUFLLENBQUNjLFdBQVcsQ0FBQztBQUN4RyIsImlnbm9yZUxpc3QiOltdfQ==

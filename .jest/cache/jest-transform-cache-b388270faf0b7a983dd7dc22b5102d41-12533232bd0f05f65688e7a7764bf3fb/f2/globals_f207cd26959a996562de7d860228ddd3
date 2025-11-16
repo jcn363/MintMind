@@ -1,0 +1,145 @@
+07d1d3fd7908a254d011bf4757ea5349
+/* istanbul ignore next */
+function cov_krt95ejkd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/electron-browser/globals.ts";
+  var hash = "cfcef635e1f0c85d52defdba4b43308a571ff3dc";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/electron-browser/globals.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 21
+        },
+        end: {
+          line: 5,
+          column: 38
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 27
+        },
+        end: {
+          line: 6,
+          column: 51
+        }
+      },
+      "2": {
+        start: {
+          line: 7,
+          column: 30
+        },
+        end: {
+          line: 7,
+          column: 57
+        }
+      },
+      "3": {
+        start: {
+          line: 8,
+          column: 24
+        },
+        end: {
+          line: 8,
+          column: 45
+        }
+      },
+      "4": {
+        start: {
+          line: 9,
+          column: 23
+        },
+        end: {
+          line: 9,
+          column: 43
+        }
+      },
+      "5": {
+        start: {
+          line: 10,
+          column: 23
+        },
+        end: {
+          line: 10,
+          column: 43
+        }
+      },
+      "6": {
+        start: {
+          line: 11,
+          column: 24
+        },
+        end: {
+          line: 11,
+          column: 45
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/electron-browser/globals.ts",
+      mappings: "AAAA;;;gGAGgG;AA6HhG,MAAM,YAAY,GAAI,UAAwC,CAAC,MAAM,CAAC;AACtE,MAAM,CAAC,MAAM,WAAW,GAAgB,YAAY,CAAC,WAAW,CAAC;AACjE,MAAM,CAAC,MAAM,cAAc,GAAmB,YAAY,CAAC,cAAc,CAAC;AAC1E,MAAM,CAAC,MAAM,QAAQ,GAAa,YAAY,CAAC,QAAQ,CAAC;AACxD,MAAM,CAAC,MAAM,OAAO,GAAwB,YAAY,CAAC,OAAO,CAAC;AACjE,MAAM,CAAC,MAAM,OAAO,GAAoB,YAAY,CAAC,OAAO,CAAC;AAC7D,MAAM,CAAC,MAAM,QAAQ,GAAa,YAAY,CAAC,QAAQ,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/sandbox/electron-browser/globals.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { INodeProcess, IProcessEnvironment } from '../../../common/platform.js';\nimport { ISandboxConfiguration } from '../common/sandboxTypes.js';\nimport { IpcRenderer, ProcessMemoryInfo, WebFrame, WebUtils } from './electronTypes.js';\n\n/**\n * In Electron renderers we cannot expose all of the `process` global of node.js\n */\nexport interface ISandboxNodeProcess extends INodeProcess {\n\n\t/**\n\t * The process.platform property returns a string identifying the operating system platform\n\t * on which the Node.js process is running.\n\t */\n\treadonly platform: string;\n\n\t/**\n\t * The process.arch property returns a string identifying the CPU architecture\n\t * on which the Node.js process is running.\n\t */\n\treadonly arch: string;\n\n\t/**\n\t * The type will always be `renderer`.\n\t */\n\treadonly type: string;\n\n\t/**\n\t * A list of versions for the current node.js/electron configuration.\n\t */\n\treadonly versions: { [key: string]: string | undefined };\n\n\t/**\n\t * The process.env property returns an object containing the user environment.\n\t */\n\treadonly env: IProcessEnvironment;\n\n\t/**\n\t * The `execPath` will be the location of the executable of this application.\n\t */\n\treadonly execPath: string;\n\n\t/**\n\t * A listener on the process. Only a small subset of listener types are allowed.\n\t */\n\ton: (type: string, callback: Function) => void;\n\n\t/**\n\t * The current working directory of the process.\n\t */\n\tcwd: () => string;\n\n\t/**\n\t * Resolves with a ProcessMemoryInfo\n\t *\n\t * Returns an object giving memory usage statistics about the current process. Note\n\t * that all statistics are reported in Kilobytes. This api should be called after\n\t * app ready.\n\t *\n\t * Chromium does not provide `residentSet` value for macOS. This is because macOS\n\t * performs in-memory compression of pages that haven't been recently used. As a\n\t * result the resident set size value is not what one would expect. `private`\n\t * memory is more representative of the actual pre-compression memory usage of the\n\t * process on macOS.\n\t */\n\tgetProcessMemoryInfo: () => Promise<ProcessMemoryInfo>;\n\n\t/**\n\t * Returns a process environment that includes all shell environment variables even if\n\t * the application was not started from a shell / terminal / console.\n\t *\n\t * There are different layers of environment that will apply:\n\t * - `process.env`: this is the actual environment of the process before this method\n\t * - `shellEnv`   : if the program was not started from a terminal, we resolve all shell\n\t *                  variables to get the same experience as if the program was started from\n\t *                  a terminal (Linux, macOS)\n\t * - `userEnv`    : this is instance specific environment, e.g. if the user started the program\n\t *                  from a terminal and changed certain variables\n\t *\n\t * The order of overwrites is `process.env` < `shellEnv` < `userEnv`.\n\t */\n\tshellEnv(): Promise<IProcessEnvironment>;\n}\n\nexport interface IpcMessagePort {\n\n\t/**\n\t * Acquire a `MessagePort`. The main process will transfer the port over to\n\t * the `responseChannel` with a payload of `requestNonce` so that the source can\n\t * correlate the response.\n\t *\n\t * The source should install a `window.on('message')` listener, ensuring `e.data`\n\t * matches `nonce`, `e.source` matches `window` and then receiving the `MessagePort`\n\t * via `e.ports[0]`.\n\t */\n\tacquire(responseChannel: string, nonce: string): void;\n}\n\nexport interface ISandboxContext {\n\n\t/**\n\t * A configuration object made accessible from the main side\n\t * to configure the sandbox browser window. Will be `undefined`\n\t * for as long as `resolveConfiguration` is not awaited.\n\t */\n\tconfiguration(): ISandboxConfiguration | undefined;\n\n\t/**\n\t * Allows to await the resolution of the configuration object.\n\t */\n\tresolveConfiguration(): Promise<ISandboxConfiguration>;\n}\n\ninterface ISandboxGlobal {\n\tvscode: {\n\t\treadonly ipcRenderer: IpcRenderer;\n\t\treadonly ipcMessagePort: IpcMessagePort;\n\t\treadonly webFrame: WebFrame;\n\t\treadonly process: ISandboxNodeProcess;\n\t\treadonly context: ISandboxContext;\n\t\treadonly webUtils: WebUtils;\n\t};\n}\n\nconst vscodeGlobal = (globalThis as unknown as ISandboxGlobal).vscode;\nexport const ipcRenderer: IpcRenderer = vscodeGlobal.ipcRenderer;\nexport const ipcMessagePort: IpcMessagePort = vscodeGlobal.ipcMessagePort;\nexport const webFrame: WebFrame = vscodeGlobal.webFrame;\nexport const process: ISandboxNodeProcess = vscodeGlobal.process;\nexport const context: ISandboxContext = vscodeGlobal.context;\nexport const webUtils: WebUtils = vscodeGlobal.webUtils;\n\n/**\n * A set of globals only available to main windows that depend\n * on `preload.js`.\n */\nexport interface IMainWindowSandboxGlobals {\n\treadonly ipcRenderer: IpcRenderer;\n\treadonly ipcMessagePort: IpcMessagePort;\n\treadonly webFrame: WebFrame;\n\treadonly process: ISandboxNodeProcess;\n\treadonly context: ISandboxContext;\n\treadonly webUtils: WebUtils;\n}\n\n/**\n * A set of globals that are available in all windows that either\n * depend on `preload.js` or `preload-aux.js`.\n */\nexport interface ISandboxGlobals {\n\treadonly ipcRenderer: Pick<import('./electronTypes.js').IpcRenderer, 'send' | 'invoke'>;\n\treadonly webFrame: import('./electronTypes.js').WebFrame;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "cfcef635e1f0c85d52defdba4b43308a571ff3dc"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_krt95ejkd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_krt95ejkd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+const vscodeGlobal =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[0]++, globalThis.vscode);
+export const ipcRenderer =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[1]++, vscodeGlobal.ipcRenderer);
+export const ipcMessagePort =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[2]++, vscodeGlobal.ipcMessagePort);
+export const webFrame =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[3]++, vscodeGlobal.webFrame);
+export const process =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[4]++, vscodeGlobal.process);
+export const context =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[5]++, vscodeGlobal.context);
+export const webUtils =
+/* istanbul ignore next */
+(cov_krt95ejkd().s[6]++, vscodeGlobal.webUtils);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJ2c2NvZGVHbG9iYWwiLCJjb3Zfa3J0OTVlamtkIiwicyIsImdsb2JhbFRoaXMiLCJ2c2NvZGUiLCJpcGNSZW5kZXJlciIsImlwY01lc3NhZ2VQb3J0Iiwid2ViRnJhbWUiLCJwcm9jZXNzIiwiY29udGV4dCIsIndlYlV0aWxzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL3BhcnRzL3NhbmRib3gvZWxlY3Ryb24tYnJvd3Nlci9nbG9iYWxzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJTm9kZVByb2Nlc3MsIElQcm9jZXNzRW52aXJvbm1lbnQgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vcGxhdGZvcm0uanMnO1xuaW1wb3J0IHsgSVNhbmRib3hDb25maWd1cmF0aW9uIH0gZnJvbSAnLi4vY29tbW9uL3NhbmRib3hUeXBlcy5qcyc7XG5pbXBvcnQgeyBJcGNSZW5kZXJlciwgUHJvY2Vzc01lbW9yeUluZm8sIFdlYkZyYW1lLCBXZWJVdGlscyB9IGZyb20gJy4vZWxlY3Ryb25UeXBlcy5qcyc7XG5cbi8qKlxuICogSW4gRWxlY3Ryb24gcmVuZGVyZXJzIHdlIGNhbm5vdCBleHBvc2UgYWxsIG9mIHRoZSBgcHJvY2Vzc2AgZ2xvYmFsIG9mIG5vZGUuanNcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJU2FuZGJveE5vZGVQcm9jZXNzIGV4dGVuZHMgSU5vZGVQcm9jZXNzIHtcblxuXHQvKipcblx0ICogVGhlIHByb2Nlc3MucGxhdGZvcm0gcHJvcGVydHkgcmV0dXJucyBhIHN0cmluZyBpZGVudGlmeWluZyB0aGUgb3BlcmF0aW5nIHN5c3RlbSBwbGF0Zm9ybVxuXHQgKiBvbiB3aGljaCB0aGUgTm9kZS5qcyBwcm9jZXNzIGlzIHJ1bm5pbmcuXG5cdCAqL1xuXHRyZWFkb25seSBwbGF0Zm9ybTogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBUaGUgcHJvY2Vzcy5hcmNoIHByb3BlcnR5IHJldHVybnMgYSBzdHJpbmcgaWRlbnRpZnlpbmcgdGhlIENQVSBhcmNoaXRlY3R1cmVcblx0ICogb24gd2hpY2ggdGhlIE5vZGUuanMgcHJvY2VzcyBpcyBydW5uaW5nLlxuXHQgKi9cblx0cmVhZG9ubHkgYXJjaDogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBUaGUgdHlwZSB3aWxsIGFsd2F5cyBiZSBgcmVuZGVyZXJgLlxuXHQgKi9cblx0cmVhZG9ubHkgdHlwZTogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBBIGxpc3Qgb2YgdmVyc2lvbnMgZm9yIHRoZSBjdXJyZW50IG5vZGUuanMvZWxlY3Ryb24gY29uZmlndXJhdGlvbi5cblx0ICovXG5cdHJlYWRvbmx5IHZlcnNpb25zOiB7IFtrZXk6IHN0cmluZ106IHN0cmluZyB8IHVuZGVmaW5lZCB9O1xuXG5cdC8qKlxuXHQgKiBUaGUgcHJvY2Vzcy5lbnYgcHJvcGVydHkgcmV0dXJucyBhbiBvYmplY3QgY29udGFpbmluZyB0aGUgdXNlciBlbnZpcm9ubWVudC5cblx0ICovXG5cdHJlYWRvbmx5IGVudjogSVByb2Nlc3NFbnZpcm9ubWVudDtcblxuXHQvKipcblx0ICogVGhlIGBleGVjUGF0aGAgd2lsbCBiZSB0aGUgbG9jYXRpb24gb2YgdGhlIGV4ZWN1dGFibGUgb2YgdGhpcyBhcHBsaWNhdGlvbi5cblx0ICovXG5cdHJlYWRvbmx5IGV4ZWNQYXRoOiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIEEgbGlzdGVuZXIgb24gdGhlIHByb2Nlc3MuIE9ubHkgYSBzbWFsbCBzdWJzZXQgb2YgbGlzdGVuZXIgdHlwZXMgYXJlIGFsbG93ZWQuXG5cdCAqL1xuXHRvbjogKHR5cGU6IHN0cmluZywgY2FsbGJhY2s6IEZ1bmN0aW9uKSA9PiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBUaGUgY3VycmVudCB3b3JraW5nIGRpcmVjdG9yeSBvZiB0aGUgcHJvY2Vzcy5cblx0ICovXG5cdGN3ZDogKCkgPT4gc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBSZXNvbHZlcyB3aXRoIGEgUHJvY2Vzc01lbW9yeUluZm9cblx0ICpcblx0ICogUmV0dXJucyBhbiBvYmplY3QgZ2l2aW5nIG1lbW9yeSB1c2FnZSBzdGF0aXN0aWNzIGFib3V0IHRoZSBjdXJyZW50IHByb2Nlc3MuIE5vdGVcblx0ICogdGhhdCBhbGwgc3RhdGlzdGljcyBhcmUgcmVwb3J0ZWQgaW4gS2lsb2J5dGVzLiBUaGlzIGFwaSBzaG91bGQgYmUgY2FsbGVkIGFmdGVyXG5cdCAqIGFwcCByZWFkeS5cblx0ICpcblx0ICogQ2hyb21pdW0gZG9lcyBub3QgcHJvdmlkZSBgcmVzaWRlbnRTZXRgIHZhbHVlIGZvciBtYWNPUy4gVGhpcyBpcyBiZWNhdXNlIG1hY09TXG5cdCAqIHBlcmZvcm1zIGluLW1lbW9yeSBjb21wcmVzc2lvbiBvZiBwYWdlcyB0aGF0IGhhdmVuJ3QgYmVlbiByZWNlbnRseSB1c2VkLiBBcyBhXG5cdCAqIHJlc3VsdCB0aGUgcmVzaWRlbnQgc2V0IHNpemUgdmFsdWUgaXMgbm90IHdoYXQgb25lIHdvdWxkIGV4cGVjdC4gYHByaXZhdGVgXG5cdCAqIG1lbW9yeSBpcyBtb3JlIHJlcHJlc2VudGF0aXZlIG9mIHRoZSBhY3R1YWwgcHJlLWNvbXByZXNzaW9uIG1lbW9yeSB1c2FnZSBvZiB0aGVcblx0ICogcHJvY2VzcyBvbiBtYWNPUy5cblx0ICovXG5cdGdldFByb2Nlc3NNZW1vcnlJbmZvOiAoKSA9PiBQcm9taXNlPFByb2Nlc3NNZW1vcnlJbmZvPjtcblxuXHQvKipcblx0ICogUmV0dXJucyBhIHByb2Nlc3MgZW52aXJvbm1lbnQgdGhhdCBpbmNsdWRlcyBhbGwgc2hlbGwgZW52aXJvbm1lbnQgdmFyaWFibGVzIGV2ZW4gaWZcblx0ICogdGhlIGFwcGxpY2F0aW9uIHdhcyBub3Qgc3RhcnRlZCBmcm9tIGEgc2hlbGwgLyB0ZXJtaW5hbCAvIGNvbnNvbGUuXG5cdCAqXG5cdCAqIFRoZXJlIGFyZSBkaWZmZXJlbnQgbGF5ZXJzIG9mIGVudmlyb25tZW50IHRoYXQgd2lsbCBhcHBseTpcblx0ICogLSBgcHJvY2Vzcy5lbnZgOiB0aGlzIGlzIHRoZSBhY3R1YWwgZW52aXJvbm1lbnQgb2YgdGhlIHByb2Nlc3MgYmVmb3JlIHRoaXMgbWV0aG9kXG5cdCAqIC0gYHNoZWxsRW52YCAgIDogaWYgdGhlIHByb2dyYW0gd2FzIG5vdCBzdGFydGVkIGZyb20gYSB0ZXJtaW5hbCwgd2UgcmVzb2x2ZSBhbGwgc2hlbGxcblx0ICogICAgICAgICAgICAgICAgICB2YXJpYWJsZXMgdG8gZ2V0IHRoZSBzYW1lIGV4cGVyaWVuY2UgYXMgaWYgdGhlIHByb2dyYW0gd2FzIHN0YXJ0ZWQgZnJvbVxuXHQgKiAgICAgICAgICAgICAgICAgIGEgdGVybWluYWwgKExpbnV4LCBtYWNPUylcblx0ICogLSBgdXNlckVudmAgICAgOiB0aGlzIGlzIGluc3RhbmNlIHNwZWNpZmljIGVudmlyb25tZW50LCBlLmcuIGlmIHRoZSB1c2VyIHN0YXJ0ZWQgdGhlIHByb2dyYW1cblx0ICogICAgICAgICAgICAgICAgICBmcm9tIGEgdGVybWluYWwgYW5kIGNoYW5nZWQgY2VydGFpbiB2YXJpYWJsZXNcblx0ICpcblx0ICogVGhlIG9yZGVyIG9mIG92ZXJ3cml0ZXMgaXMgYHByb2Nlc3MuZW52YCA8IGBzaGVsbEVudmAgPCBgdXNlckVudmAuXG5cdCAqL1xuXHRzaGVsbEVudigpOiBQcm9taXNlPElQcm9jZXNzRW52aXJvbm1lbnQ+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElwY01lc3NhZ2VQb3J0IHtcblxuXHQvKipcblx0ICogQWNxdWlyZSBhIGBNZXNzYWdlUG9ydGAuIFRoZSBtYWluIHByb2Nlc3Mgd2lsbCB0cmFuc2ZlciB0aGUgcG9ydCBvdmVyIHRvXG5cdCAqIHRoZSBgcmVzcG9uc2VDaGFubmVsYCB3aXRoIGEgcGF5bG9hZCBvZiBgcmVxdWVzdE5vbmNlYCBzbyB0aGF0IHRoZSBzb3VyY2UgY2FuXG5cdCAqIGNvcnJlbGF0ZSB0aGUgcmVzcG9uc2UuXG5cdCAqXG5cdCAqIFRoZSBzb3VyY2Ugc2hvdWxkIGluc3RhbGwgYSBgd2luZG93Lm9uKCdtZXNzYWdlJylgIGxpc3RlbmVyLCBlbnN1cmluZyBgZS5kYXRhYFxuXHQgKiBtYXRjaGVzIGBub25jZWAsIGBlLnNvdXJjZWAgbWF0Y2hlcyBgd2luZG93YCBhbmQgdGhlbiByZWNlaXZpbmcgdGhlIGBNZXNzYWdlUG9ydGBcblx0ICogdmlhIGBlLnBvcnRzWzBdYC5cblx0ICovXG5cdGFjcXVpcmUocmVzcG9uc2VDaGFubmVsOiBzdHJpbmcsIG5vbmNlOiBzdHJpbmcpOiB2b2lkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElTYW5kYm94Q29udGV4dCB7XG5cblx0LyoqXG5cdCAqIEEgY29uZmlndXJhdGlvbiBvYmplY3QgbWFkZSBhY2Nlc3NpYmxlIGZyb20gdGhlIG1haW4gc2lkZVxuXHQgKiB0byBjb25maWd1cmUgdGhlIHNhbmRib3ggYnJvd3NlciB3aW5kb3cuIFdpbGwgYmUgYHVuZGVmaW5lZGBcblx0ICogZm9yIGFzIGxvbmcgYXMgYHJlc29sdmVDb25maWd1cmF0aW9uYCBpcyBub3QgYXdhaXRlZC5cblx0ICovXG5cdGNvbmZpZ3VyYXRpb24oKTogSVNhbmRib3hDb25maWd1cmF0aW9uIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBBbGxvd3MgdG8gYXdhaXQgdGhlIHJlc29sdXRpb24gb2YgdGhlIGNvbmZpZ3VyYXRpb24gb2JqZWN0LlxuXHQgKi9cblx0cmVzb2x2ZUNvbmZpZ3VyYXRpb24oKTogUHJvbWlzZTxJU2FuZGJveENvbmZpZ3VyYXRpb24+O1xufVxuXG5pbnRlcmZhY2UgSVNhbmRib3hHbG9iYWwge1xuXHR2c2NvZGU6IHtcblx0XHRyZWFkb25seSBpcGNSZW5kZXJlcjogSXBjUmVuZGVyZXI7XG5cdFx0cmVhZG9ubHkgaXBjTWVzc2FnZVBvcnQ6IElwY01lc3NhZ2VQb3J0O1xuXHRcdHJlYWRvbmx5IHdlYkZyYW1lOiBXZWJGcmFtZTtcblx0XHRyZWFkb25seSBwcm9jZXNzOiBJU2FuZGJveE5vZGVQcm9jZXNzO1xuXHRcdHJlYWRvbmx5IGNvbnRleHQ6IElTYW5kYm94Q29udGV4dDtcblx0XHRyZWFkb25seSB3ZWJVdGlsczogV2ViVXRpbHM7XG5cdH07XG59XG5cbmNvbnN0IHZzY29kZUdsb2JhbCA9IChnbG9iYWxUaGlzIGFzIHVua25vd24gYXMgSVNhbmRib3hHbG9iYWwpLnZzY29kZTtcbmV4cG9ydCBjb25zdCBpcGNSZW5kZXJlcjogSXBjUmVuZGVyZXIgPSB2c2NvZGVHbG9iYWwuaXBjUmVuZGVyZXI7XG5leHBvcnQgY29uc3QgaXBjTWVzc2FnZVBvcnQ6IElwY01lc3NhZ2VQb3J0ID0gdnNjb2RlR2xvYmFsLmlwY01lc3NhZ2VQb3J0O1xuZXhwb3J0IGNvbnN0IHdlYkZyYW1lOiBXZWJGcmFtZSA9IHZzY29kZUdsb2JhbC53ZWJGcmFtZTtcbmV4cG9ydCBjb25zdCBwcm9jZXNzOiBJU2FuZGJveE5vZGVQcm9jZXNzID0gdnNjb2RlR2xvYmFsLnByb2Nlc3M7XG5leHBvcnQgY29uc3QgY29udGV4dDogSVNhbmRib3hDb250ZXh0ID0gdnNjb2RlR2xvYmFsLmNvbnRleHQ7XG5leHBvcnQgY29uc3Qgd2ViVXRpbHM6IFdlYlV0aWxzID0gdnNjb2RlR2xvYmFsLndlYlV0aWxzO1xuXG4vKipcbiAqIEEgc2V0IG9mIGdsb2JhbHMgb25seSBhdmFpbGFibGUgdG8gbWFpbiB3aW5kb3dzIHRoYXQgZGVwZW5kXG4gKiBvbiBgcHJlbG9hZC5qc2AuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSU1haW5XaW5kb3dTYW5kYm94R2xvYmFscyB7XG5cdHJlYWRvbmx5IGlwY1JlbmRlcmVyOiBJcGNSZW5kZXJlcjtcblx0cmVhZG9ubHkgaXBjTWVzc2FnZVBvcnQ6IElwY01lc3NhZ2VQb3J0O1xuXHRyZWFkb25seSB3ZWJGcmFtZTogV2ViRnJhbWU7XG5cdHJlYWRvbmx5IHByb2Nlc3M6IElTYW5kYm94Tm9kZVByb2Nlc3M7XG5cdHJlYWRvbmx5IGNvbnRleHQ6IElTYW5kYm94Q29udGV4dDtcblx0cmVhZG9ubHkgd2ViVXRpbHM6IFdlYlV0aWxzO1xufVxuXG4vKipcbiAqIEEgc2V0IG9mIGdsb2JhbHMgdGhhdCBhcmUgYXZhaWxhYmxlIGluIGFsbCB3aW5kb3dzIHRoYXQgZWl0aGVyXG4gKiBkZXBlbmQgb24gYHByZWxvYWQuanNgIG9yIGBwcmVsb2FkLWF1eC5qc2AuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSVNhbmRib3hHbG9iYWxzIHtcblx0cmVhZG9ubHkgaXBjUmVuZGVyZXI6IFBpY2s8aW1wb3J0KCcuL2VsZWN0cm9uVHlwZXMuanMnKS5JcGNSZW5kZXJlciwgJ3NlbmQnIHwgJ2ludm9rZSc+O1xuXHRyZWFkb25seSB3ZWJGcmFtZTogaW1wb3J0KCcuL2VsZWN0cm9uVHlwZXMuanMnKS5XZWJGcmFtZTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBZ0lBLE1BQU1BLFlBQVk7QUFBQTtBQUFBLENBQUFDLGFBQUEsR0FBQUMsQ0FBQSxPQUFJQyxVQUF3QyxDQUFDQyxNQUFNO0FBQ3JFLE9BQU8sTUFBTUMsV0FBVztBQUFBO0FBQUEsQ0FBQUosYUFBQSxHQUFBQyxDQUFBLE9BQWdCRixZQUFZLENBQUNLLFdBQVc7QUFDaEUsT0FBTyxNQUFNQyxjQUFjO0FBQUE7QUFBQSxDQUFBTCxhQUFBLEdBQUFDLENBQUEsT0FBbUJGLFlBQVksQ0FBQ00sY0FBYztBQUN6RSxPQUFPLE1BQU1DLFFBQVE7QUFBQTtBQUFBLENBQUFOLGFBQUEsR0FBQUMsQ0FBQSxPQUFhRixZQUFZLENBQUNPLFFBQVE7QUFDdkQsT0FBTyxNQUFNQyxPQUFPO0FBQUE7QUFBQSxDQUFBUCxhQUFBLEdBQUFDLENBQUEsT0FBd0JGLFlBQVksQ0FBQ1EsT0FBTztBQUNoRSxPQUFPLE1BQU1DLE9BQU87QUFBQTtBQUFBLENBQUFSLGFBQUEsR0FBQUMsQ0FBQSxPQUFvQkYsWUFBWSxDQUFDUyxPQUFPO0FBQzVELE9BQU8sTUFBTUMsUUFBUTtBQUFBO0FBQUEsQ0FBQVQsYUFBQSxHQUFBQyxDQUFBLE9BQWFGLFlBQVksQ0FBQ1UsUUFBUSIsImlnbm9yZUxpc3QiOltdfQ==

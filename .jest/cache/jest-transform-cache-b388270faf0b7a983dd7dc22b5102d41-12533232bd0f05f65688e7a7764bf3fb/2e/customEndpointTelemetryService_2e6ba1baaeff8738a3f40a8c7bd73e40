@@ -1,0 +1,63 @@
+96a5de658154b35b68a79f0812d38c65
+/* istanbul ignore next */
+function cov_13fv712z0w() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/telemetry/electron-browser/customEndpointTelemetryService.ts";
+  var hash = "375aa673745fdb58145a3670790d7de194923239";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/telemetry/electron-browser/customEndpointTelemetryService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 7,
+          column: 95
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/telemetry/electron-browser/customEndpointTelemetryService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,kCAAkC,EAAE,MAAM,wCAAwC,CAAC;AAC5F,OAAO,EAAE,+BAA+B,EAAE,MAAM,wBAAwB,CAAC;AAEzE,kCAAkC,CAAC,+BAA+B,EAAE,yBAAyB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/telemetry/electron-browser/customEndpointTelemetryService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { registerSharedProcessRemoteService } from '../../ipc/electron-browser/services.js';\nimport { ICustomEndpointTelemetryService } from '../common/telemetry.js';\n\nregisterSharedProcessRemoteService(ICustomEndpointTelemetryService, 'customEndpointTelemetry');\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "375aa673745fdb58145a3670790d7de194923239"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_13fv712z0w = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_13fv712z0w();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerSharedProcessRemoteService } from '../../ipc/electron-browser/services.js';
+import { ICustomEndpointTelemetryService } from '../common/telemetry.js';
+/* istanbul ignore next */
+cov_13fv712z0w().s[0]++;
+registerSharedProcessRemoteService(ICustomEndpointTelemetryService, 'customEndpointTelemetry');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlclNoYXJlZFByb2Nlc3NSZW1vdGVTZXJ2aWNlIiwiSUN1c3RvbUVuZHBvaW50VGVsZW1ldHJ5U2VydmljZSIsImNvdl8xM2Z2NzEyejB3IiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vdGVsZW1ldHJ5L2VsZWN0cm9uLWJyb3dzZXIvY3VzdG9tRW5kcG9pbnRUZWxlbWV0cnlTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyByZWdpc3RlclNoYXJlZFByb2Nlc3NSZW1vdGVTZXJ2aWNlIH0gZnJvbSAnLi4vLi4vaXBjL2VsZWN0cm9uLWJyb3dzZXIvc2VydmljZXMuanMnO1xuaW1wb3J0IHsgSUN1c3RvbUVuZHBvaW50VGVsZW1ldHJ5U2VydmljZSB9IGZyb20gJy4uL2NvbW1vbi90ZWxlbWV0cnkuanMnO1xuXG5yZWdpc3RlclNoYXJlZFByb2Nlc3NSZW1vdGVTZXJ2aWNlKElDdXN0b21FbmRwb2ludFRlbGVtZXRyeVNlcnZpY2UsICdjdXN0b21FbmRwb2ludFRlbGVtZXRyeScpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxrQ0FBa0MsUUFBUSx3Q0FBd0M7QUFDM0YsU0FBU0MsK0JBQStCLFFBQVEsd0JBQXdCO0FBQUM7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBRXpFSCxrQ0FBa0MsQ0FBQ0MsK0JBQStCLEVBQUUseUJBQXlCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

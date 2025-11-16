@@ -1,0 +1,72 @@
+5534b3efe4c00793c3c1157f6c91a8b8
+/* istanbul ignore next */
+function cov_4jswv8efb() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/editor.main.ts";
+  var hash = "a1b384a333528be776d37a3f709524a7250878b5";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/editor.main.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 15,
+          column: 26
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/editor.main.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,uBAAuB,EAAE,MAAM,iBAAiB,CAAC;AAC1D,OAAO,2DAA2D,CAAC;AACnE,OAAO,qDAAqD,CAAC;AAC7D,OAAO,+DAA+D,CAAC;AACvE,OAAO,mEAAmE,CAAC;AAC3E,OAAO,qEAAqE,CAAC;AAC7E,OAAO,mEAAmE,CAAC;AAC3E,OAAO,mEAAmE,CAAC;AAC3E,OAAO,+DAA+D,CAAC;AAEvE,2CAA2C;AAC3C,uBAAuB,EAAE,CAAC;AAE1B,cAAc,iBAAiB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/editor.main.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { loadEditorContributions } from './editor.all.js';\nimport './standalone/browser/iPadShowKeyboard/iPadShowKeyboard.js';\nimport './standalone/browser/inspectTokens/inspectTokens.js';\nimport './standalone/browser/quickAccess/standaloneHelpQuickAccess.js';\nimport './standalone/browser/quickAccess/standaloneGotoLineQuickAccess.js';\nimport './standalone/browser/quickAccess/standaloneGotoSymbolQuickAccess.js';\nimport './standalone/browser/quickAccess/standaloneCommandsQuickAccess.js';\nimport './standalone/browser/referenceSearch/standaloneReferenceSearch.js';\nimport './standalone/browser/toggleHighContrast/toggleHighContrast.js';\n\n// Load editor contributions asynchronously\nloadEditorContributions();\n\nexport * from './editor.api.js';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a1b384a333528be776d37a3f709524a7250878b5"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_4jswv8efb = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_4jswv8efb();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { loadEditorContributions } from './editor.all.js';
+import './standalone/browser/iPadShowKeyboard/iPadShowKeyboard.js';
+import './standalone/browser/inspectTokens/inspectTokens.js';
+import './standalone/browser/quickAccess/standaloneHelpQuickAccess.js';
+import './standalone/browser/quickAccess/standaloneGotoLineQuickAccess.js';
+import './standalone/browser/quickAccess/standaloneGotoSymbolQuickAccess.js';
+import './standalone/browser/quickAccess/standaloneCommandsQuickAccess.js';
+import './standalone/browser/referenceSearch/standaloneReferenceSearch.js';
+import './standalone/browser/toggleHighContrast/toggleHighContrast.js';
+// Load editor contributions asynchronously
+/* istanbul ignore next */
+cov_4jswv8efb().s[0]++;
+loadEditorContributions();
+export * from './editor.api.js';
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfNGpzd3Y4ZWZiIiwiYWN0dWFsQ292ZXJhZ2UiLCJsb2FkRWRpdG9yQ29udHJpYnV0aW9ucyIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9lZGl0b3IubWFpbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9hZEVkaXRvckNvbnRyaWJ1dGlvbnMgfSBmcm9tICcuL2VkaXRvci5hbGwuanMnO1xuaW1wb3J0ICcuL3N0YW5kYWxvbmUvYnJvd3Nlci9pUGFkU2hvd0tleWJvYXJkL2lQYWRTaG93S2V5Ym9hcmQuanMnO1xuaW1wb3J0ICcuL3N0YW5kYWxvbmUvYnJvd3Nlci9pbnNwZWN0VG9rZW5zL2luc3BlY3RUb2tlbnMuanMnO1xuaW1wb3J0ICcuL3N0YW5kYWxvbmUvYnJvd3Nlci9xdWlja0FjY2Vzcy9zdGFuZGFsb25lSGVscFF1aWNrQWNjZXNzLmpzJztcbmltcG9ydCAnLi9zdGFuZGFsb25lL2Jyb3dzZXIvcXVpY2tBY2Nlc3Mvc3RhbmRhbG9uZUdvdG9MaW5lUXVpY2tBY2Nlc3MuanMnO1xuaW1wb3J0ICcuL3N0YW5kYWxvbmUvYnJvd3Nlci9xdWlja0FjY2Vzcy9zdGFuZGFsb25lR290b1N5bWJvbFF1aWNrQWNjZXNzLmpzJztcbmltcG9ydCAnLi9zdGFuZGFsb25lL2Jyb3dzZXIvcXVpY2tBY2Nlc3Mvc3RhbmRhbG9uZUNvbW1hbmRzUXVpY2tBY2Nlc3MuanMnO1xuaW1wb3J0ICcuL3N0YW5kYWxvbmUvYnJvd3Nlci9yZWZlcmVuY2VTZWFyY2gvc3RhbmRhbG9uZVJlZmVyZW5jZVNlYXJjaC5qcyc7XG5pbXBvcnQgJy4vc3RhbmRhbG9uZS9icm93c2VyL3RvZ2dsZUhpZ2hDb250cmFzdC90b2dnbGVIaWdoQ29udHJhc3QuanMnO1xuXG4vLyBMb2FkIGVkaXRvciBjb250cmlidXRpb25zIGFzeW5jaHJvbm91c2x5XG5sb2FkRWRpdG9yQ29udHJpYnV0aW9ucygpO1xuXG5leHBvcnQgKiBmcm9tICcuL2VkaXRvci5hcGkuanMnO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCQTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBbEJBOzs7O0FBS0EsU0FBU0UsdUJBQXVCLFFBQVEsaUJBQWlCO0FBQ3pELE9BQU8sMkRBQTJEO0FBQ2xFLE9BQU8scURBQXFEO0FBQzVELE9BQU8sK0RBQStEO0FBQ3RFLE9BQU8sbUVBQW1FO0FBQzFFLE9BQU8scUVBQXFFO0FBQzVFLE9BQU8sbUVBQW1FO0FBQzFFLE9BQU8sbUVBQW1FO0FBQzFFLE9BQU8sK0RBQStEO0FBRXRFO0FBQUE7QUFBQUYsYUFBQSxHQUFBRyxDQUFBO0FBQ0FELHVCQUF1QixFQUFFO0FBRXpCLGNBQWMsaUJBQWlCIiwiaWdub3JlTGlzdCI6W119

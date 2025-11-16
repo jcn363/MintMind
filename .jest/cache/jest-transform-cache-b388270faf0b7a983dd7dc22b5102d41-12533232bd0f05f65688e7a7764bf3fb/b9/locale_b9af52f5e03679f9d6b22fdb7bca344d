@@ -1,0 +1,76 @@
+8c0b7823fc0e4d2e2c441bc6a647273d
+/* istanbul ignore next */
+function cov_e7k55g1k() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/localization/common/locale.ts";
+  var hash = "3cb7b892229d63b79b156e62deee00e10dfc281a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/localization/common/locale.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 30
+        },
+        end: {
+          line: 6,
+          column: 68
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 42
+        },
+        end: {
+          line: 7,
+          column: 82
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/localization/common/locale.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAG7F,MAAM,CAAC,MAAM,cAAc,GAAG,eAAe,CAAiB,qBAAqB,CAAC,CAAC;AAQrF,MAAM,CAAC,MAAM,0BAA0B,GAAG,eAAe,CAA6B,uBAAuB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/localization/common/locale.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { ILanguagePackItem } from '../../../../platform/languagePacks/common/languagePacks.js';\n\nexport const ILocaleService = createDecorator<ILocaleService>('localizationService');\n\nexport interface ILocaleService {\n\treadonly _serviceBrand: undefined;\n\tsetLocale(languagePackItem: ILanguagePackItem, skipDialog?: boolean): Promise<void>;\n\tclearLocalePreference(): Promise<void>;\n}\n\nexport const IActiveLanguagePackService = createDecorator<IActiveLanguagePackService>('activeLanguageService');\n\nexport interface IActiveLanguagePackService {\n\treadonly _serviceBrand: undefined;\n\tgetExtensionIdProvidingCurrentLocale(): Promise<string | undefined>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3cb7b892229d63b79b156e62deee00e10dfc281a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_e7k55g1k = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_e7k55g1k();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const ILocaleService =
+/* istanbul ignore next */
+(cov_e7k55g1k().s[0]++, createDecorator('localizationService'));
+export const IActiveLanguagePackService =
+/* istanbul ignore next */
+(cov_e7k55g1k().s[1]++, createDecorator('activeLanguageService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJTG9jYWxlU2VydmljZSIsImNvdl9lN2s1NWcxayIsInMiLCJJQWN0aXZlTGFuZ3VhZ2VQYWNrU2VydmljZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL2xvY2FsaXphdGlvbi9jb21tb24vbG9jYWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IElMYW5ndWFnZVBhY2tJdGVtIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vbGFuZ3VhZ2VQYWNrcy9jb21tb24vbGFuZ3VhZ2VQYWNrcy5qcyc7XG5cbmV4cG9ydCBjb25zdCBJTG9jYWxlU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJTG9jYWxlU2VydmljZT4oJ2xvY2FsaXphdGlvblNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJTG9jYWxlU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0c2V0TG9jYWxlKGxhbmd1YWdlUGFja0l0ZW06IElMYW5ndWFnZVBhY2tJdGVtLCBza2lwRGlhbG9nPzogYm9vbGVhbik6IFByb21pc2U8dm9pZD47XG5cdGNsZWFyTG9jYWxlUHJlZmVyZW5jZSgpOiBQcm9taXNlPHZvaWQ+O1xufVxuXG5leHBvcnQgY29uc3QgSUFjdGl2ZUxhbmd1YWdlUGFja1NlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUFjdGl2ZUxhbmd1YWdlUGFja1NlcnZpY2U+KCdhY3RpdmVMYW5ndWFnZVNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJQWN0aXZlTGFuZ3VhZ2VQYWNrU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0Z2V0RXh0ZW5zaW9uSWRQcm92aWRpbmdDdXJyZW50TG9jYWxlKCk6IFByb21pc2U8c3RyaW5nIHwgdW5kZWZpbmVkPjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxlQUFlLFFBQVEsNERBQTREO0FBRzVGLE9BQU8sTUFBTUMsY0FBYztBQUFBO0FBQUEsQ0FBQUMsWUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBaUIscUJBQXFCLENBQUM7QUFRcEYsT0FBTyxNQUFNSSwwQkFBMEI7QUFBQTtBQUFBLENBQUFGLFlBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQTZCLHVCQUF1QixDQUFDIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,286 @@
+ea3e38f3b6f521b71a8a775e2f00a335
+/* istanbul ignore next */
+function cov_1af6dslcz7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollElement.ts";
+  var hash = "5ecb3f6c851bccc390803a159d5cb9f6544e33d1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollElement.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 47
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 43
+        }
+      },
+      "2": {
+        start: {
+          line: 30,
+          column: 8
+        },
+        end: {
+          line: 30,
+          column: 27
+        }
+      },
+      "3": {
+        start: {
+          line: 31,
+          column: 8
+        },
+        end: {
+          line: 31,
+          column: 33
+        }
+      },
+      "4": {
+        start: {
+          line: 32,
+          column: 8
+        },
+        end: {
+          line: 32,
+          column: 29
+        }
+      },
+      "5": {
+        start: {
+          line: 41,
+          column: 8
+        },
+        end: {
+          line: 41,
+          column: 23
+        }
+      },
+      "6": {
+        start: {
+          line: 42,
+          column: 8
+        },
+        end: {
+          line: 42,
+          column: 31
+        }
+      },
+      "7": {
+        start: {
+          line: 43,
+          column: 8
+        },
+        end: {
+          line: 43,
+          column: 31
+        }
+      },
+      "8": {
+        start: {
+          line: 44,
+          column: 8
+        },
+        end: {
+          line: 44,
+          column: 51
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 48
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 17,
+            column: 4
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 29,
+            column: 12
+          },
+          end: {
+            line: 33,
+            column: 5
+          }
+        },
+        line: 29
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 40,
+            column: 4
+          },
+          end: {
+            line: 40,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 40,
+            column: 58
+          },
+          end: {
+            line: 45,
+            column: 5
+          }
+        },
+        line: 40
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollElement.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,OAAO,WAAW;IAEN;IACA;IAFjB,YACiB,eAAuB,EACvB,aAAqB;QADrB,oBAAe,GAAf,eAAe,CAAQ;QACvB,kBAAa,GAAb,aAAa,CAAQ;IAClC,CAAC;CACL;AAED,MAAM,OAAO,aAAa;IAMR;IAIA;IAIA;IAZjB;IACC;;OAEG;IACa,KAA8B;IAC9C;;MAEE;IACc,QAAyB;IACzC;;OAEG;IACa,MAAiC;QARjC,UAAK,GAAL,KAAK,CAAyB;QAI9B,aAAQ,GAAR,QAAQ,CAAiB;QAIzB,WAAM,GAAN,MAAM,CAA2B;IAElD,CAAC;CACD;AAED,MAAM,OAAO,WAAW;IAEb;IACA;IACA;IACA;IAJV,YACU,GAAQ,EACR,OAAe,EACf,OAAkC,EAClC,iBAAqC;QAHrC,QAAG,GAAH,GAAG,CAAK;QACR,YAAO,GAAP,OAAO,CAAQ;QACf,YAAO,GAAP,OAAO,CAA2B;QAClC,sBAAiB,GAAjB,iBAAiB,CAAoB;IAC3C,CAAC;CACL",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/stickyScroll/browser/stickyScrollElement.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../base/common/uri.js';\n\nexport class StickyRange {\n\tconstructor(\n\t\tpublic readonly startLineNumber: number,\n\t\tpublic readonly endLineNumber: number\n\t) { }\n}\n\nexport class StickyElement {\n\n\tconstructor(\n\t\t/**\n\t\t * Range of line numbers spanned by the current scope\n\t\t */\n\t\tpublic readonly range: StickyRange | undefined,\n\t\t/**\n\t\t * Must be sorted by start line number\n\t\t*/\n\t\tpublic readonly children: StickyElement[],\n\t\t/**\n\t\t * Parent sticky outline element\n\t\t */\n\t\tpublic readonly parent: StickyElement | undefined\n\t) {\n\t}\n}\n\nexport class StickyModel {\n\tconstructor(\n\t\treadonly uri: URI,\n\t\treadonly version: number,\n\t\treadonly element: StickyElement | undefined,\n\t\treadonly outlineProviderId: string | undefined\n\t) { }\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5ecb3f6c851bccc390803a159d5cb9f6544e33d1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1af6dslcz7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1af6dslcz7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class StickyRange {
+  startLineNumber;
+  endLineNumber;
+  constructor(startLineNumber, endLineNumber) {
+    /* istanbul ignore next */
+    cov_1af6dslcz7().f[0]++;
+    cov_1af6dslcz7().s[0]++;
+    this.startLineNumber = startLineNumber;
+    /* istanbul ignore next */
+    cov_1af6dslcz7().s[1]++;
+    this.endLineNumber = endLineNumber;
+  }
+}
+export class StickyElement {
+  range;
+  children;
+  parent;
+  constructor(
+  /**
+   * Range of line numbers spanned by the current scope
+   */
+  range,
+  /**
+   * Must be sorted by start line number
+  */
+  children,
+  /**
+   * Parent sticky outline element
+   */
+  parent) {
+    /* istanbul ignore next */
+    cov_1af6dslcz7().f[1]++;
+    cov_1af6dslcz7().s[2]++;
+    this.range = range;
+    /* istanbul ignore next */
+    cov_1af6dslcz7().s[3]++;
+    this.children = children;
+    /* istanbul ignore next */
+    cov_1af6dslcz7().s[4]++;
+    this.parent = parent;
+  }
+}
+export class StickyModel {
+  uri;
+  version;
+  element;
+  outlineProviderId;
+  constructor(uri, version, element, outlineProviderId) {
+    /* istanbul ignore next */
+    cov_1af6dslcz7().f[2]++;
+    cov_1af6dslcz7().s[5]++;
+    this.uri = uri;
+    /* istanbul ignore next */
+    cov_1af6dslcz7().s[6]++;
+    this.version = version;
+    /* istanbul ignore next */
+    cov_1af6dslcz7().s[7]++;
+    this.element = element;
+    /* istanbul ignore next */
+    cov_1af6dslcz7().s[8]++;
+    this.outlineProviderId = outlineProviderId;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMWFmNmRzbGN6NyIsImFjdHVhbENvdmVyYWdlIiwiU3RpY2t5UmFuZ2UiLCJzdGFydExpbmVOdW1iZXIiLCJlbmRMaW5lTnVtYmVyIiwiY29uc3RydWN0b3IiLCJmIiwicyIsIlN0aWNreUVsZW1lbnQiLCJyYW5nZSIsImNoaWxkcmVuIiwicGFyZW50IiwiU3RpY2t5TW9kZWwiLCJ1cmkiLCJ2ZXJzaW9uIiwiZWxlbWVudCIsIm91dGxpbmVQcm92aWRlcklkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29udHJpYi9zdGlja3lTY3JvbGwvYnJvd3Nlci9zdGlja3lTY3JvbGxFbGVtZW50LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuXG5leHBvcnQgY2xhc3MgU3RpY2t5UmFuZ2Uge1xuXHRjb25zdHJ1Y3Rvcihcblx0XHRwdWJsaWMgcmVhZG9ubHkgc3RhcnRMaW5lTnVtYmVyOiBudW1iZXIsXG5cdFx0cHVibGljIHJlYWRvbmx5IGVuZExpbmVOdW1iZXI6IG51bWJlclxuXHQpIHsgfVxufVxuXG5leHBvcnQgY2xhc3MgU3RpY2t5RWxlbWVudCB7XG5cblx0Y29uc3RydWN0b3IoXG5cdFx0LyoqXG5cdFx0ICogUmFuZ2Ugb2YgbGluZSBudW1iZXJzIHNwYW5uZWQgYnkgdGhlIGN1cnJlbnQgc2NvcGVcblx0XHQgKi9cblx0XHRwdWJsaWMgcmVhZG9ubHkgcmFuZ2U6IFN0aWNreVJhbmdlIHwgdW5kZWZpbmVkLFxuXHRcdC8qKlxuXHRcdCAqIE11c3QgYmUgc29ydGVkIGJ5IHN0YXJ0IGxpbmUgbnVtYmVyXG5cdFx0Ki9cblx0XHRwdWJsaWMgcmVhZG9ubHkgY2hpbGRyZW46IFN0aWNreUVsZW1lbnRbXSxcblx0XHQvKipcblx0XHQgKiBQYXJlbnQgc3RpY2t5IG91dGxpbmUgZWxlbWVudFxuXHRcdCAqL1xuXHRcdHB1YmxpYyByZWFkb25seSBwYXJlbnQ6IFN0aWNreUVsZW1lbnQgfCB1bmRlZmluZWRcblx0KSB7XG5cdH1cbn1cblxuZXhwb3J0IGNsYXNzIFN0aWNreU1vZGVsIHtcblx0Y29uc3RydWN0b3IoXG5cdFx0cmVhZG9ubHkgdXJpOiBVUkksXG5cdFx0cmVhZG9ubHkgdmVyc2lvbjogbnVtYmVyLFxuXHRcdHJlYWRvbmx5IGVsZW1lbnQ6IFN0aWNreUVsZW1lbnQgfCB1bmRlZmluZWQsXG5cdFx0cmVhZG9ubHkgb3V0bGluZVByb3ZpZGVySWQ6IHN0cmluZyB8IHVuZGVmaW5lZFxuXHQpIHsgfVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQTRCa0I7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQTVCbEI7Ozs7QUFPQSxPQUFNLE1BQU9FLFdBQVc7RUFFTkMsZUFBQTtFQUNBQyxhQUFBO0VBRmpCQyxZQUNpQkYsZUFBdUIsRUFDdkJDLGFBQXFCO0lBQUE7SUFBQUosY0FBQSxHQUFBTSxDQUFBO0lBQUFOLGNBQUEsR0FBQU8sQ0FBQTtJQURyQixLQUFBSixlQUFlLEdBQWZBLGVBQWU7SUFBUTtJQUFBSCxjQUFBLEdBQUFPLENBQUE7SUFDdkIsS0FBQUgsYUFBYSxHQUFiQSxhQUFhO0VBQzFCOztBQUdMLE9BQU0sTUFBT0ksYUFBYTtFQU1SQyxLQUFBO0VBSUFDLFFBQUE7RUFJQUMsTUFBQTtFQVpqQk47RUFDQzs7O0VBR2dCSSxLQUE4QjtFQUM5Qzs7O0VBR2dCQyxRQUF5QjtFQUN6Qzs7O0VBR2dCQyxNQUFpQztJQUFBO0lBQUFYLGNBQUEsR0FBQU0sQ0FBQTtJQUFBTixjQUFBLEdBQUFPLENBQUE7SUFSakMsS0FBQUUsS0FBSyxHQUFMQSxLQUFLO0lBQXlCO0lBQUFULGNBQUEsR0FBQU8sQ0FBQTtJQUk5QixLQUFBRyxRQUFRLEdBQVJBLFFBQVE7SUFBaUI7SUFBQVYsY0FBQSxHQUFBTyxDQUFBO0lBSXpCLEtBQUFJLE1BQU0sR0FBTkEsTUFBTTtFQUV2Qjs7QUFHRCxPQUFNLE1BQU9DLFdBQVc7RUFFYkMsR0FBQTtFQUNBQyxPQUFBO0VBQ0FDLE9BQUE7RUFDQUMsaUJBQUE7RUFKVlgsWUFDVVEsR0FBUSxFQUNSQyxPQUFlLEVBQ2ZDLE9BQWtDLEVBQ2xDQyxpQkFBcUM7SUFBQTtJQUFBaEIsY0FBQSxHQUFBTSxDQUFBO0lBQUFOLGNBQUEsR0FBQU8sQ0FBQTtJQUhyQyxLQUFBTSxHQUFHLEdBQUhBLEdBQUc7SUFBSztJQUFBYixjQUFBLEdBQUFPLENBQUE7SUFDUixLQUFBTyxPQUFPLEdBQVBBLE9BQU87SUFBUTtJQUFBZCxjQUFBLEdBQUFPLENBQUE7SUFDZixLQUFBUSxPQUFPLEdBQVBBLE9BQU87SUFBMkI7SUFBQWYsY0FBQSxHQUFBTyxDQUFBO0lBQ2xDLEtBQUFTLGlCQUFpQixHQUFqQkEsaUJBQWlCO0VBQ3ZCIiwiaWdub3JlTGlzdCI6W119

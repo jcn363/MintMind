@@ -1,0 +1,169 @@
+b2d707c5c980dbb2a2abd18f2e97640f
+/* istanbul ignore next */
+function cov_fp5ltzb2i() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/test/common/modes/supports/indentationRules.ts";
+  var hash = "fd605ae063420ea9ef6f5a21a3658ba8caf79d2a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/test/common/modes/supports/indentationRules.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 42
+        },
+        end: {
+          line: 11,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 36
+        },
+        end: {
+          line: 15,
+          column: 1
+        }
+      },
+      "2": {
+        start: {
+          line: 16,
+          column: 35
+        },
+        end: {
+          line: 19,
+          column: 1
+        }
+      },
+      "3": {
+        start: {
+          line: 20,
+          column: 34
+        },
+        end: {
+          line: 23,
+          column: 1
+        }
+      },
+      "4": {
+        start: {
+          line: 24,
+          column: 36
+        },
+        end: {
+          line: 27,
+          column: 1
+        }
+      },
+      "5": {
+        start: {
+          line: 28,
+          column: 37
+        },
+        end: {
+          line: 31,
+          column: 1
+        }
+      },
+      "6": {
+        start: {
+          line: 32,
+          column: 35
+        },
+        end: {
+          line: 35,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/test/common/modes/supports/indentationRules.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,CAAC,MAAM,0BAA0B,GAAG;IACzC,qBAAqB,EAAE,qCAAqC;IAC5D,qBAAqB,EAAE,qEAAqE;IAC5F,mCAAmC;IACnC,qBAAqB,EAAE,4FAA4F;IACnH,qBAAqB,EAAE,0DAA0D;CACjF,CAAC;AAEF,MAAM,CAAC,MAAM,oBAAoB,GAAG;IACnC,qBAAqB,EAAE,0FAA0F;IACjH,qBAAqB,EAAE,qMAAqM;CAC5N,CAAC;AAEF,MAAM,CAAC,MAAM,mBAAmB,GAAG;IAClC,qBAAqB,EAAE,gGAAgG;IACvH,qBAAqB,EAAE,4FAA4F;CACnH,CAAC;AAEF,MAAM,CAAC,MAAM,kBAAkB,GAAG;IACjC,qBAAqB,EAAE,oDAAoD;IAC3E,qBAAqB,EAAE,qGAAqG;CAC5H,CAAC;AAEF,MAAM,CAAC,MAAM,oBAAoB,GAAG;IACnC,qBAAqB,EAAE,kDAAkD;IACzE,qBAAqB,EAAE,yLAAyL;CAChN,CAAC;AAEF,MAAM,CAAC,MAAM,qBAAqB,GAAG;IACpC,qBAAqB,EAAE,wBAAwB;IAC/C,qBAAqB,EAAE,6CAA6C;CACpE,CAAC;AAEF,MAAM,CAAC,MAAM,mBAAmB,GAAG;IAClC,qBAAqB,EAAE,+CAA+C;IACtE,qBAAqB,EAAE,uFAAuF;CAC9G,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/test/common/modes/supports/indentationRules.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const javascriptIndentationRules = {\n\tdecreaseIndentPattern: /^((?!.*?\\/\\*).*\\*\\/)?\\s*[\\}\\]\\)].*$/,\n\tincreaseIndentPattern: /^((?!\\/\\/).)*(\\{([^}\"'`]*|(\\t|[ ])*\\/\\/.*)|\\([^)\"'`]*|\\[[^\\]\"'`]*)$/,\n\t// e.g.  * ...| or */| or *-----*/|\n\tunIndentedLinePattern: /^(\\t|[ ])*[ ]\\*[^/]*\\*\\/\\s*$|^(\\t|[ ])*[ ]\\*\\/\\s*$|^(\\t|[ ])*[ ]\\*([ ]([^\\*]|\\*(?!\\/))*)?$/,\n\tindentNextLinePattern: /^((.*=>\\s*)|((.*[^\\w]+|\\s*)(if|while|for)\\s*\\(.*\\)\\s*))$/,\n};\n\nexport const rubyIndentationRules = {\n\tdecreaseIndentPattern: /^\\s*([}\\]]([,)]?\\s*(#|$)|\\.[a-zA-Z_]\\w*\\b)|(end|rescue|ensure|else|elsif)\\b|(in|when)\\s)/,\n\tincreaseIndentPattern: /^\\s*((begin|class|(private|protected)\\s+def|def|else|elsif|ensure|for|if|module|rescue|unless|until|when|in|while|case)|([^#]*\\sdo\\b)|([^#]*=\\s*(case|if|unless)))\\b([^#\\{;]|(\\\"|'|\\/).*\\4)*(#.*)?$/,\n};\n\nexport const phpIndentationRules = {\n\tincreaseIndentPattern: /({(?!.*}).*|\\(|\\[|((else(\\s)?)?if|else|for(each)?|while|switch|case).*:)\\s*((\\/[/*].*|)?$|\\?>)/,\n\tdecreaseIndentPattern: /^(.*\\*\\/)?\\s*((\\})|(\\)+[;,])|(\\]\\)*[;,])|\\b(else:)|\\b((end(if|for(each)?|while|switch));))/,\n};\n\nexport const goIndentationRules = {\n\tdecreaseIndentPattern: /^\\s*(\\bcase\\b.*:|\\bdefault\\b:|}[)}]*[),]?|\\)[,]?)$/,\n\tincreaseIndentPattern: /^.*(\\bcase\\b.*:|\\bdefault\\b:|(\\b(func|if|else|switch|select|for|struct)\\b.*)?{[^}\"'`]*|\\([^)\"'`]*)$/,\n};\n\nexport const htmlIndentationRules = {\n\tdecreaseIndentPattern: /^\\s*(<\\/(?!html)[-_\\.A-Za-z0-9]+\\b[^>]*>|-->|\\})/,\n\tincreaseIndentPattern: /<(?!\\?|(?:area|base|br|col|frame|hr|html|img|input|keygen|link|menuitem|meta|param|source|track|wbr)\\b|[^>]*\\/>)([-_\\.A-Za-z0-9]+)(?=\\s|>)\\b[^>]*>(?!.*<\\/\\1>)|<!--(?!.*-->)|\\{[^}\"']*$/,\n};\n\nexport const latexIndentationRules = {\n\tdecreaseIndentPattern: /^\\s*\\\\end{(?!document)/,\n\tincreaseIndentPattern: /\\\\begin{(?!document)([^}]*)}(?!.*\\\\end{\\1})/,\n};\n\nexport const luaIndentationRules = {\n\tdecreaseIndentPattern: /^\\s*((\\b(elseif|else|end|until)\\b)|(\\})|(\\)))/,\n\tincreaseIndentPattern: /^((?!(\\-\\-)).)*((\\b(else|function|then|do|repeat)\\b((?!\\b(end|until)\\b).)*)|(\\{\\s*))$/,\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "fd605ae063420ea9ef6f5a21a3658ba8caf79d2a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_fp5ltzb2i = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_fp5ltzb2i();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const javascriptIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[0]++, {
+  decreaseIndentPattern: /^((?!.*?\/\*).*\*\/)?\s*[\}\]\)].*$/,
+  increaseIndentPattern: /^((?!\/\/).)*(\{([^}"'`]*|(\t|[ ])*\/\/.*)|\([^)"'`]*|\[[^\]"'`]*)$/,
+  // e.g.  * ...| or */| or *-----*/|
+  unIndentedLinePattern: /^(\t|[ ])*[ ]\*[^/]*\*\/\s*$|^(\t|[ ])*[ ]\*\/\s*$|^(\t|[ ])*[ ]\*([ ]([^\*]|\*(?!\/))*)?$/,
+  indentNextLinePattern: /^((.*=>\s*)|((.*[^\w]+|\s*)(if|while|for)\s*\(.*\)\s*))$/
+});
+export const rubyIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[1]++, {
+  decreaseIndentPattern: /^\s*([}\]]([,)]?\s*(#|$)|\.[a-zA-Z_]\w*\b)|(end|rescue|ensure|else|elsif)\b|(in|when)\s)/,
+  increaseIndentPattern: /^\s*((begin|class|(private|protected)\s+def|def|else|elsif|ensure|for|if|module|rescue|unless|until|when|in|while|case)|([^#]*\sdo\b)|([^#]*=\s*(case|if|unless)))\b([^#\{;]|(\"|'|\/).*\4)*(#.*)?$/
+});
+export const phpIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[2]++, {
+  increaseIndentPattern: /({(?!.*}).*|\(|\[|((else(\s)?)?if|else|for(each)?|while|switch|case).*:)\s*((\/[/*].*|)?$|\?>)/,
+  decreaseIndentPattern: /^(.*\*\/)?\s*((\})|(\)+[;,])|(\]\)*[;,])|\b(else:)|\b((end(if|for(each)?|while|switch));))/
+});
+export const goIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[3]++, {
+  decreaseIndentPattern: /^\s*(\bcase\b.*:|\bdefault\b:|}[)}]*[),]?|\)[,]?)$/,
+  increaseIndentPattern: /^.*(\bcase\b.*:|\bdefault\b:|(\b(func|if|else|switch|select|for|struct)\b.*)?{[^}"'`]*|\([^)"'`]*)$/
+});
+export const htmlIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[4]++, {
+  decreaseIndentPattern: /^\s*(<\/(?!html)[-_\.A-Za-z0-9]+\b[^>]*>|-->|\})/,
+  increaseIndentPattern: /<(?!\?|(?:area|base|br|col|frame|hr|html|img|input|keygen|link|menuitem|meta|param|source|track|wbr)\b|[^>]*\/>)([-_\.A-Za-z0-9]+)(?=\s|>)\b[^>]*>(?!.*<\/\1>)|<!--(?!.*-->)|\{[^}"']*$/
+});
+export const latexIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[5]++, {
+  decreaseIndentPattern: /^\s*\\end{(?!document)/,
+  increaseIndentPattern: /\\begin{(?!document)([^}]*)}(?!.*\\end{\1})/
+});
+export const luaIndentationRules =
+/* istanbul ignore next */
+(cov_fp5ltzb2i().s[6]++, {
+  decreaseIndentPattern: /^\s*((\b(elseif|else|end|until)\b)|(\})|(\)))/,
+  increaseIndentPattern: /^((?!(\-\-)).)*((\b(else|function|then|do|repeat)\b((?!\b(end|until)\b).)*)|(\{\s*))$/
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfZnA1bHR6YjJpIiwiYWN0dWFsQ292ZXJhZ2UiLCJqYXZhc2NyaXB0SW5kZW50YXRpb25SdWxlcyIsInMiLCJkZWNyZWFzZUluZGVudFBhdHRlcm4iLCJpbmNyZWFzZUluZGVudFBhdHRlcm4iLCJ1bkluZGVudGVkTGluZVBhdHRlcm4iLCJpbmRlbnROZXh0TGluZVBhdHRlcm4iLCJydWJ5SW5kZW50YXRpb25SdWxlcyIsInBocEluZGVudGF0aW9uUnVsZXMiLCJnb0luZGVudGF0aW9uUnVsZXMiLCJodG1sSW5kZW50YXRpb25SdWxlcyIsImxhdGV4SW5kZW50YXRpb25SdWxlcyIsImx1YUluZGVudGF0aW9uUnVsZXMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci90ZXN0L2NvbW1vbi9tb2Rlcy9zdXBwb3J0cy9pbmRlbnRhdGlvblJ1bGVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5leHBvcnQgY29uc3QgamF2YXNjcmlwdEluZGVudGF0aW9uUnVsZXMgPSB7XG5cdGRlY3JlYXNlSW5kZW50UGF0dGVybjogL14oKD8hLio/XFwvXFwqKS4qXFwqXFwvKT9cXHMqW1xcfVxcXVxcKV0uKiQvLFxuXHRpbmNyZWFzZUluZGVudFBhdHRlcm46IC9eKCg/IVxcL1xcLykuKSooXFx7KFtefVwiJ2BdKnwoXFx0fFsgXSkqXFwvXFwvLiopfFxcKFteKVwiJ2BdKnxcXFtbXlxcXVwiJ2BdKikkLyxcblx0Ly8gZS5nLiAgKiAuLi58IG9yICovfCBvciAqLS0tLS0qL3xcblx0dW5JbmRlbnRlZExpbmVQYXR0ZXJuOiAvXihcXHR8WyBdKSpbIF1cXCpbXi9dKlxcKlxcL1xccyokfF4oXFx0fFsgXSkqWyBdXFwqXFwvXFxzKiR8XihcXHR8WyBdKSpbIF1cXCooWyBdKFteXFwqXXxcXCooPyFcXC8pKSopPyQvLFxuXHRpbmRlbnROZXh0TGluZVBhdHRlcm46IC9eKCguKj0+XFxzKil8KCguKlteXFx3XSt8XFxzKikoaWZ8d2hpbGV8Zm9yKVxccypcXCguKlxcKVxccyopKSQvLFxufTtcblxuZXhwb3J0IGNvbnN0IHJ1YnlJbmRlbnRhdGlvblJ1bGVzID0ge1xuXHRkZWNyZWFzZUluZGVudFBhdHRlcm46IC9eXFxzKihbfVxcXV0oWywpXT9cXHMqKCN8JCl8XFwuW2EtekEtWl9dXFx3KlxcYil8KGVuZHxyZXNjdWV8ZW5zdXJlfGVsc2V8ZWxzaWYpXFxifChpbnx3aGVuKVxccykvLFxuXHRpbmNyZWFzZUluZGVudFBhdHRlcm46IC9eXFxzKigoYmVnaW58Y2xhc3N8KHByaXZhdGV8cHJvdGVjdGVkKVxccytkZWZ8ZGVmfGVsc2V8ZWxzaWZ8ZW5zdXJlfGZvcnxpZnxtb2R1bGV8cmVzY3VlfHVubGVzc3x1bnRpbHx3aGVufGlufHdoaWxlfGNhc2UpfChbXiNdKlxcc2RvXFxiKXwoW14jXSo9XFxzKihjYXNlfGlmfHVubGVzcykpKVxcYihbXiNcXHs7XXwoXFxcInwnfFxcLykuKlxcNCkqKCMuKik/JC8sXG59O1xuXG5leHBvcnQgY29uc3QgcGhwSW5kZW50YXRpb25SdWxlcyA9IHtcblx0aW5jcmVhc2VJbmRlbnRQYXR0ZXJuOiAvKHsoPyEuKn0pLip8XFwofFxcW3woKGVsc2UoXFxzKT8pP2lmfGVsc2V8Zm9yKGVhY2gpP3x3aGlsZXxzd2l0Y2h8Y2FzZSkuKjopXFxzKigoXFwvWy8qXS4qfCk/JHxcXD8+KS8sXG5cdGRlY3JlYXNlSW5kZW50UGF0dGVybjogL14oLipcXCpcXC8pP1xccyooKFxcfSl8KFxcKStbOyxdKXwoXFxdXFwpKls7LF0pfFxcYihlbHNlOil8XFxiKChlbmQoaWZ8Zm9yKGVhY2gpP3x3aGlsZXxzd2l0Y2gpKTspKS8sXG59O1xuXG5leHBvcnQgY29uc3QgZ29JbmRlbnRhdGlvblJ1bGVzID0ge1xuXHRkZWNyZWFzZUluZGVudFBhdHRlcm46IC9eXFxzKihcXGJjYXNlXFxiLio6fFxcYmRlZmF1bHRcXGI6fH1bKX1dKlspLF0/fFxcKVssXT8pJC8sXG5cdGluY3JlYXNlSW5kZW50UGF0dGVybjogL14uKihcXGJjYXNlXFxiLio6fFxcYmRlZmF1bHRcXGI6fChcXGIoZnVuY3xpZnxlbHNlfHN3aXRjaHxzZWxlY3R8Zm9yfHN0cnVjdClcXGIuKik/e1tefVwiJ2BdKnxcXChbXilcIidgXSopJC8sXG59O1xuXG5leHBvcnQgY29uc3QgaHRtbEluZGVudGF0aW9uUnVsZXMgPSB7XG5cdGRlY3JlYXNlSW5kZW50UGF0dGVybjogL15cXHMqKDxcXC8oPyFodG1sKVstX1xcLkEtWmEtejAtOV0rXFxiW14+XSo+fC0tPnxcXH0pLyxcblx0aW5jcmVhc2VJbmRlbnRQYXR0ZXJuOiAvPCg/IVxcP3woPzphcmVhfGJhc2V8YnJ8Y29sfGZyYW1lfGhyfGh0bWx8aW1nfGlucHV0fGtleWdlbnxsaW5rfG1lbnVpdGVtfG1ldGF8cGFyYW18c291cmNlfHRyYWNrfHdicilcXGJ8W14+XSpcXC8+KShbLV9cXC5BLVphLXowLTldKykoPz1cXHN8PilcXGJbXj5dKj4oPyEuKjxcXC9cXDE+KXw8IS0tKD8hLiotLT4pfFxce1tefVwiJ10qJC8sXG59O1xuXG5leHBvcnQgY29uc3QgbGF0ZXhJbmRlbnRhdGlvblJ1bGVzID0ge1xuXHRkZWNyZWFzZUluZGVudFBhdHRlcm46IC9eXFxzKlxcXFxlbmR7KD8hZG9jdW1lbnQpLyxcblx0aW5jcmVhc2VJbmRlbnRQYXR0ZXJuOiAvXFxcXGJlZ2lueyg/IWRvY3VtZW50KShbXn1dKil9KD8hLipcXFxcZW5ke1xcMX0pLyxcbn07XG5cbmV4cG9ydCBjb25zdCBsdWFJbmRlbnRhdGlvblJ1bGVzID0ge1xuXHRkZWNyZWFzZUluZGVudFBhdHRlcm46IC9eXFxzKigoXFxiKGVsc2VpZnxlbHNlfGVuZHx1bnRpbClcXGIpfChcXH0pfChcXCkpKS8sXG5cdGluY3JlYXNlSW5kZW50UGF0dGVybjogL14oKD8hKFxcLVxcLSkpLikqKChcXGIoZWxzZXxmdW5jdGlvbnx0aGVufGRvfHJlcGVhdClcXGIoKD8hXFxiKGVuZHx1bnRpbClcXGIpLikqKXwoXFx7XFxzKikpJC8sXG59O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCTztJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBbEJQOzs7O0FBS0EsT0FBTyxNQUFNRSwwQkFBMEI7QUFBQTtBQUFBLENBQUFGLGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ3pDQyxxQkFBcUIsRUFBRSxxQ0FBcUM7RUFDNURDLHFCQUFxQixFQUFFLHFFQUFxRTtFQUM1RjtFQUNBQyxxQkFBcUIsRUFBRSw0RkFBNEY7RUFDbkhDLHFCQUFxQixFQUFFO0NBQ3ZCO0FBRUQsT0FBTyxNQUFNQyxvQkFBb0I7QUFBQTtBQUFBLENBQUFSLGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ25DQyxxQkFBcUIsRUFBRSwwRkFBMEY7RUFDakhDLHFCQUFxQixFQUFFO0NBQ3ZCO0FBRUQsT0FBTyxNQUFNSSxtQkFBbUI7QUFBQTtBQUFBLENBQUFULGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ2xDRSxxQkFBcUIsRUFBRSxnR0FBZ0c7RUFDdkhELHFCQUFxQixFQUFFO0NBQ3ZCO0FBRUQsT0FBTyxNQUFNTSxrQkFBa0I7QUFBQTtBQUFBLENBQUFWLGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ2pDQyxxQkFBcUIsRUFBRSxvREFBb0Q7RUFDM0VDLHFCQUFxQixFQUFFO0NBQ3ZCO0FBRUQsT0FBTyxNQUFNTSxvQkFBb0I7QUFBQTtBQUFBLENBQUFYLGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ25DQyxxQkFBcUIsRUFBRSxrREFBa0Q7RUFDekVDLHFCQUFxQixFQUFFO0NBQ3ZCO0FBRUQsT0FBTyxNQUFNTyxxQkFBcUI7QUFBQTtBQUFBLENBQUFaLGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ3BDQyxxQkFBcUIsRUFBRSx3QkFBd0I7RUFDL0NDLHFCQUFxQixFQUFFO0NBQ3ZCO0FBRUQsT0FBTyxNQUFNUSxtQkFBbUI7QUFBQTtBQUFBLENBQUFiLGFBQUEsR0FBQUcsQ0FBQSxPQUFHO0VBQ2xDQyxxQkFBcUIsRUFBRSwrQ0FBK0M7RUFDdEVDLHFCQUFxQixFQUFFO0NBQ3ZCIiwiaWdub3JlTGlzdCI6W119

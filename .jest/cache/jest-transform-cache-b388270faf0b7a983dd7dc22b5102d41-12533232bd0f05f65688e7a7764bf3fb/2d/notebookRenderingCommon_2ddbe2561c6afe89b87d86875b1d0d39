@@ -1,0 +1,107 @@
+c00acd2c32ed2b6f79842bdd71357759
+/* istanbul ignore next */
+function cov_28w7ucwxsw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/view/notebookRenderingCommon.ts";
+  var hash = "a1bf4dc4eef9820a49a8c328750371d8dea1ac86";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/view/notebookRenderingCommon.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 37
+        },
+        end: {
+          line: 6,
+          column: 117
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 109
+        },
+        end: {
+          line: 6,
+          column: 114
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 6,
+            column: 100
+          },
+          end: {
+            line: 6,
+            column: 101
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 109
+          },
+          end: {
+            line: 6,
+            column: 114
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/view/notebookRenderingCommon.ts",
+      mappings: "AAAA;;;gGAGgG;AAmBhG,OAAO,EAAE,wBAAwB,EAAE,MAAM,6CAA6C,CAAC;AAwGvF,MAAM,CAAC,MAAM,qBAAqB,GAAG,wBAAwB,CAAC,sBAAsB,EAAE,EAAE,UAAU,EAAE,KAAK,CAAC,EAAE,CAAC,KAAK,EAAE,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/view/notebookRenderingCommon.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { FastDomNode } from '../../../../../base/browser/fastDomNode.js';\nimport { IMouseWheelEvent } from '../../../../../base/browser/mouseEvent.js';\nimport { IListContextMenuEvent, IListEvent, IListMouseEvent } from '../../../../../base/browser/ui/list/list.js';\nimport { IListStyles } from '../../../../../base/browser/ui/list/listWidget.js';\nimport { Event } from '../../../../../base/common/event.js';\nimport { DisposableStore } from '../../../../../base/common/lifecycle.js';\nimport { ScrollEvent } from '../../../../../base/common/scrollable.js';\nimport { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';\nimport { Range } from '../../../../../editor/common/core/range.js';\nimport { Selection } from '../../../../../editor/common/core/selection.js';\nimport { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';\nimport { IInstantiationService } from '../../../../../platform/instantiation/common/instantiation.js';\nimport { IWorkbenchListOptionsUpdate } from '../../../../../platform/list/browser/listService.js';\nimport { CellRevealRangeType, CellRevealType, ICellOutputViewModel, ICellViewModel, INotebookCellOverlayChangeAccessor, INotebookViewZoneChangeAccessor } from '../notebookBrowser.js';\nimport { CellPartsCollection } from './cellPart.js';\nimport { CellViewModel, NotebookViewModel } from '../viewModel/notebookViewModelImpl.js';\nimport { ICellRange } from '../../common/notebookRange.js';\nimport { createTrustedTypesPolicy } from '../../../../../base/browser/trustedTypes.js';\n\n\nexport interface INotebookCellList extends ICoordinatesConverter {\n\tisDisposed: boolean;\n\tinRenderingTransaction: boolean;\n\tviewModel: NotebookViewModel | null;\n\twebviewElement: FastDomNode<HTMLElement> | null;\n\treadonly contextKeyService: IContextKeyService;\n\telement(index: number): ICellViewModel | undefined;\n\telementAt(position: number): ICellViewModel | undefined;\n\telementHeight(element: ICellViewModel): number;\n\treadonly onWillScroll: Event<ScrollEvent>;\n\treadonly onDidScroll: Event<ScrollEvent>;\n\treadonly onDidChangeFocus: Event<IListEvent<ICellViewModel>>;\n\treadonly onDidChangeContentHeight: Event<number>;\n\treadonly onDidChangeVisibleRanges: Event<void>;\n\tvisibleRanges: ICellRange[];\n\tscrollTop: number;\n\tscrollHeight: number;\n\tscrollLeft: number;\n\tlength: number;\n\trowsContainer: HTMLElement;\n\tscrollableElement: HTMLElement;\n\tariaLabel: string;\n\treadonly onDidRemoveOutputs: Event<readonly ICellOutputViewModel[]>;\n\treadonly onDidHideOutputs: Event<readonly ICellOutputViewModel[]>;\n\treadonly onDidRemoveCellsFromView: Event<readonly ICellViewModel[]>;\n\treadonly onMouseUp: Event<IListMouseEvent<CellViewModel>>;\n\treadonly onMouseDown: Event<IListMouseEvent<CellViewModel>>;\n\treadonly onContextMenu: Event<IListContextMenuEvent<CellViewModel>>;\n\tdetachViewModel(): void;\n\tattachViewModel(viewModel: NotebookViewModel): void;\n\tattachWebview(element: HTMLElement): void;\n\tclear(): void;\n\tfocusElement(element: ICellViewModel): void;\n\tselectElements(elements: ICellViewModel[]): void;\n\tgetFocusedElements(): ICellViewModel[];\n\tgetSelectedElements(): ICellViewModel[];\n\tscrollToBottom(): void;\n\trevealCell(cell: ICellViewModel, revealType: CellRevealType): Promise<void>;\n\trevealCells(range: ICellRange): void;\n\trevealRangeInCell(cell: ICellViewModel, range: Selection | Range, revealType: CellRevealRangeType): Promise<void>;\n\trevealCellOffsetInCenter(element: ICellViewModel, offset: number): void;\n\trevealOffsetInCenterIfOutsideViewport(offset: number): void;\n\tsetHiddenAreas(_ranges: ICellRange[], triggerViewUpdate: boolean): boolean;\n\tchangeViewZones(callback: (accessor: INotebookViewZoneChangeAccessor) => void): void;\n\tchangeCellOverlays(callback: (accessor: INotebookCellOverlayChangeAccessor) => void): void;\n\tgetViewZoneLayoutInfo(viewZoneId: string): { height: number; top: number } | null;\n\tdomElementOfElement(element: ICellViewModel): HTMLElement | null;\n\tfocusView(): void;\n\ttriggerScrollFromMouseWheelEvent(browserEvent: IMouseWheelEvent): void;\n\tupdateElementHeight2(element: ICellViewModel, size: number, anchorElementIndex?: number | null): void;\n\tdomFocus(): void;\n\tfocusContainer(clearSelection: boolean): void;\n\tsetCellEditorSelection(element: ICellViewModel, range: Range): void;\n\tstyle(styles: IListStyles): void;\n\tgetRenderHeight(): number;\n\tgetScrollHeight(): number;\n\tupdateOptions(options: IWorkbenchListOptionsUpdate): void;\n\tlayout(height?: number, width?: number): void;\n\tdispose(): void;\n}\n\nexport interface BaseCellRenderTemplate {\n\treadonly rootContainer: HTMLElement;\n\treadonly editorPart: HTMLElement;\n\treadonly cellInputCollapsedContainer: HTMLElement;\n\treadonly instantiationService: IInstantiationService;\n\treadonly container: HTMLElement;\n\treadonly cellContainer: HTMLElement;\n\treadonly templateDisposables: DisposableStore;\n\treadonly elementDisposables: DisposableStore;\n\tcurrentRenderedCell?: ICellViewModel;\n\tcellParts: CellPartsCollection;\n\ttoJSON: () => object;\n}\n\nexport interface MarkdownCellRenderTemplate extends BaseCellRenderTemplate {\n\treadonly editorContainer: HTMLElement;\n\treadonly foldingIndicator: HTMLElement;\n\tcurrentEditor?: ICodeEditor;\n}\n\nexport interface CodeCellRenderTemplate extends BaseCellRenderTemplate {\n\toutputContainer: FastDomNode<HTMLElement>;\n\tcellOutputCollapsedContainer: HTMLElement;\n\toutputShowMoreContainer: FastDomNode<HTMLElement>;\n\tfocusSinkElement: HTMLElement;\n\teditor: ICodeEditor;\n}\n\nexport interface ICoordinatesConverter {\n\tgetCellViewScrollTop(cell: ICellViewModel): number;\n\tgetCellViewScrollBottom(cell: ICellViewModel): number;\n\tgetViewIndex(cell: ICellViewModel): number | undefined;\n\tgetViewIndex2(modelIndex: number): number | undefined;\n\tgetModelIndex(cell: CellViewModel): number | undefined;\n\tgetModelIndex2(viewIndex: number): number | undefined;\n\tgetVisibleRangesPlusViewportAboveAndBelow(): ICellRange[];\n\tmodelIndexIsVisible(modelIndex: number): boolean;\n\tconvertModelIndexToViewIndex(modelIndex: number): number;\n}\n\nexport const collapsedCellTTPolicy = createTrustedTypesPolicy('collapsedCellPreview', { createHTML: value => value });\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a1bf4dc4eef9820a49a8c328750371d8dea1ac86"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_28w7ucwxsw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_28w7ucwxsw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createTrustedTypesPolicy } from '../../../../../base/browser/trustedTypes.js';
+export const collapsedCellTTPolicy =
+/* istanbul ignore next */
+(cov_28w7ucwxsw().s[0]++, createTrustedTypesPolicy('collapsedCellPreview', {
+  createHTML: value => {
+    /* istanbul ignore next */
+    cov_28w7ucwxsw().f[0]++;
+    cov_28w7ucwxsw().s[1]++;
+    return value;
+  }
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVUcnVzdGVkVHlwZXNQb2xpY3kiLCJjb2xsYXBzZWRDZWxsVFRQb2xpY3kiLCJjb3ZfMjh3N3Vjd3hzdyIsInMiLCJjcmVhdGVIVE1MIiwidmFsdWUiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL25vdGVib29rL2Jyb3dzZXIvdmlldy9ub3RlYm9va1JlbmRlcmluZ0NvbW1vbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRmFzdERvbU5vZGUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2Jyb3dzZXIvZmFzdERvbU5vZGUuanMnO1xuaW1wb3J0IHsgSU1vdXNlV2hlZWxFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvYnJvd3Nlci9tb3VzZUV2ZW50LmpzJztcbmltcG9ydCB7IElMaXN0Q29udGV4dE1lbnVFdmVudCwgSUxpc3RFdmVudCwgSUxpc3RNb3VzZUV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9icm93c2VyL3VpL2xpc3QvbGlzdC5qcyc7XG5pbXBvcnQgeyBJTGlzdFN0eWxlcyB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvYnJvd3Nlci91aS9saXN0L2xpc3RXaWRnZXQuanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBEaXNwb3NhYmxlU3RvcmUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgU2Nyb2xsRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9zY3JvbGxhYmxlLmpzJztcbmltcG9ydCB7IElDb2RlRWRpdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vZWRpdG9yL2Jyb3dzZXIvZWRpdG9yQnJvd3Nlci5qcyc7XG5pbXBvcnQgeyBSYW5nZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2VkaXRvci9jb21tb24vY29yZS9yYW5nZS5qcyc7XG5pbXBvcnQgeyBTZWxlY3Rpb24gfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9lZGl0b3IvY29tbW9uL2NvcmUvc2VsZWN0aW9uLmpzJztcbmltcG9ydCB7IElDb250ZXh0S2V5U2VydmljZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbnRleHRrZXkvY29tbW9uL2NvbnRleHRrZXkuanMnO1xuaW1wb3J0IHsgSUluc3RhbnRpYXRpb25TZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBJV29ya2JlbmNoTGlzdE9wdGlvbnNVcGRhdGUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9saXN0L2Jyb3dzZXIvbGlzdFNlcnZpY2UuanMnO1xuaW1wb3J0IHsgQ2VsbFJldmVhbFJhbmdlVHlwZSwgQ2VsbFJldmVhbFR5cGUsIElDZWxsT3V0cHV0Vmlld01vZGVsLCBJQ2VsbFZpZXdNb2RlbCwgSU5vdGVib29rQ2VsbE92ZXJsYXlDaGFuZ2VBY2Nlc3NvciwgSU5vdGVib29rVmlld1pvbmVDaGFuZ2VBY2Nlc3NvciB9IGZyb20gJy4uL25vdGVib29rQnJvd3Nlci5qcyc7XG5pbXBvcnQgeyBDZWxsUGFydHNDb2xsZWN0aW9uIH0gZnJvbSAnLi9jZWxsUGFydC5qcyc7XG5pbXBvcnQgeyBDZWxsVmlld01vZGVsLCBOb3RlYm9va1ZpZXdNb2RlbCB9IGZyb20gJy4uL3ZpZXdNb2RlbC9ub3RlYm9va1ZpZXdNb2RlbEltcGwuanMnO1xuaW1wb3J0IHsgSUNlbGxSYW5nZSB9IGZyb20gJy4uLy4uL2NvbW1vbi9ub3RlYm9va1JhbmdlLmpzJztcbmltcG9ydCB7IGNyZWF0ZVRydXN0ZWRUeXBlc1BvbGljeSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvYnJvd3Nlci90cnVzdGVkVHlwZXMuanMnO1xuXG5cbmV4cG9ydCBpbnRlcmZhY2UgSU5vdGVib29rQ2VsbExpc3QgZXh0ZW5kcyBJQ29vcmRpbmF0ZXNDb252ZXJ0ZXIge1xuXHRpc0Rpc3Bvc2VkOiBib29sZWFuO1xuXHRpblJlbmRlcmluZ1RyYW5zYWN0aW9uOiBib29sZWFuO1xuXHR2aWV3TW9kZWw6IE5vdGVib29rVmlld01vZGVsIHwgbnVsbDtcblx0d2Vidmlld0VsZW1lbnQ6IEZhc3REb21Ob2RlPEhUTUxFbGVtZW50PiB8IG51bGw7XG5cdHJlYWRvbmx5IGNvbnRleHRLZXlTZXJ2aWNlOiBJQ29udGV4dEtleVNlcnZpY2U7XG5cdGVsZW1lbnQoaW5kZXg6IG51bWJlcik6IElDZWxsVmlld01vZGVsIHwgdW5kZWZpbmVkO1xuXHRlbGVtZW50QXQocG9zaXRpb246IG51bWJlcik6IElDZWxsVmlld01vZGVsIHwgdW5kZWZpbmVkO1xuXHRlbGVtZW50SGVpZ2h0KGVsZW1lbnQ6IElDZWxsVmlld01vZGVsKTogbnVtYmVyO1xuXHRyZWFkb25seSBvbldpbGxTY3JvbGw6IEV2ZW50PFNjcm9sbEV2ZW50Pjtcblx0cmVhZG9ubHkgb25EaWRTY3JvbGw6IEV2ZW50PFNjcm9sbEV2ZW50Pjtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VGb2N1czogRXZlbnQ8SUxpc3RFdmVudDxJQ2VsbFZpZXdNb2RlbD4+O1xuXHRyZWFkb25seSBvbkRpZENoYW5nZUNvbnRlbnRIZWlnaHQ6IEV2ZW50PG51bWJlcj47XG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlVmlzaWJsZVJhbmdlczogRXZlbnQ8dm9pZD47XG5cdHZpc2libGVSYW5nZXM6IElDZWxsUmFuZ2VbXTtcblx0c2Nyb2xsVG9wOiBudW1iZXI7XG5cdHNjcm9sbEhlaWdodDogbnVtYmVyO1xuXHRzY3JvbGxMZWZ0OiBudW1iZXI7XG5cdGxlbmd0aDogbnVtYmVyO1xuXHRyb3dzQ29udGFpbmVyOiBIVE1MRWxlbWVudDtcblx0c2Nyb2xsYWJsZUVsZW1lbnQ6IEhUTUxFbGVtZW50O1xuXHRhcmlhTGFiZWw6IHN0cmluZztcblx0cmVhZG9ubHkgb25EaWRSZW1vdmVPdXRwdXRzOiBFdmVudDxyZWFkb25seSBJQ2VsbE91dHB1dFZpZXdNb2RlbFtdPjtcblx0cmVhZG9ubHkgb25EaWRIaWRlT3V0cHV0czogRXZlbnQ8cmVhZG9ubHkgSUNlbGxPdXRwdXRWaWV3TW9kZWxbXT47XG5cdHJlYWRvbmx5IG9uRGlkUmVtb3ZlQ2VsbHNGcm9tVmlldzogRXZlbnQ8cmVhZG9ubHkgSUNlbGxWaWV3TW9kZWxbXT47XG5cdHJlYWRvbmx5IG9uTW91c2VVcDogRXZlbnQ8SUxpc3RNb3VzZUV2ZW50PENlbGxWaWV3TW9kZWw+Pjtcblx0cmVhZG9ubHkgb25Nb3VzZURvd246IEV2ZW50PElMaXN0TW91c2VFdmVudDxDZWxsVmlld01vZGVsPj47XG5cdHJlYWRvbmx5IG9uQ29udGV4dE1lbnU6IEV2ZW50PElMaXN0Q29udGV4dE1lbnVFdmVudDxDZWxsVmlld01vZGVsPj47XG5cdGRldGFjaFZpZXdNb2RlbCgpOiB2b2lkO1xuXHRhdHRhY2hWaWV3TW9kZWwodmlld01vZGVsOiBOb3RlYm9va1ZpZXdNb2RlbCk6IHZvaWQ7XG5cdGF0dGFjaFdlYnZpZXcoZWxlbWVudDogSFRNTEVsZW1lbnQpOiB2b2lkO1xuXHRjbGVhcigpOiB2b2lkO1xuXHRmb2N1c0VsZW1lbnQoZWxlbWVudDogSUNlbGxWaWV3TW9kZWwpOiB2b2lkO1xuXHRzZWxlY3RFbGVtZW50cyhlbGVtZW50czogSUNlbGxWaWV3TW9kZWxbXSk6IHZvaWQ7XG5cdGdldEZvY3VzZWRFbGVtZW50cygpOiBJQ2VsbFZpZXdNb2RlbFtdO1xuXHRnZXRTZWxlY3RlZEVsZW1lbnRzKCk6IElDZWxsVmlld01vZGVsW107XG5cdHNjcm9sbFRvQm90dG9tKCk6IHZvaWQ7XG5cdHJldmVhbENlbGwoY2VsbDogSUNlbGxWaWV3TW9kZWwsIHJldmVhbFR5cGU6IENlbGxSZXZlYWxUeXBlKTogUHJvbWlzZTx2b2lkPjtcblx0cmV2ZWFsQ2VsbHMocmFuZ2U6IElDZWxsUmFuZ2UpOiB2b2lkO1xuXHRyZXZlYWxSYW5nZUluQ2VsbChjZWxsOiBJQ2VsbFZpZXdNb2RlbCwgcmFuZ2U6IFNlbGVjdGlvbiB8IFJhbmdlLCByZXZlYWxUeXBlOiBDZWxsUmV2ZWFsUmFuZ2VUeXBlKTogUHJvbWlzZTx2b2lkPjtcblx0cmV2ZWFsQ2VsbE9mZnNldEluQ2VudGVyKGVsZW1lbnQ6IElDZWxsVmlld01vZGVsLCBvZmZzZXQ6IG51bWJlcik6IHZvaWQ7XG5cdHJldmVhbE9mZnNldEluQ2VudGVySWZPdXRzaWRlVmlld3BvcnQob2Zmc2V0OiBudW1iZXIpOiB2b2lkO1xuXHRzZXRIaWRkZW5BcmVhcyhfcmFuZ2VzOiBJQ2VsbFJhbmdlW10sIHRyaWdnZXJWaWV3VXBkYXRlOiBib29sZWFuKTogYm9vbGVhbjtcblx0Y2hhbmdlVmlld1pvbmVzKGNhbGxiYWNrOiAoYWNjZXNzb3I6IElOb3RlYm9va1ZpZXdab25lQ2hhbmdlQWNjZXNzb3IpID0+IHZvaWQpOiB2b2lkO1xuXHRjaGFuZ2VDZWxsT3ZlcmxheXMoY2FsbGJhY2s6IChhY2Nlc3NvcjogSU5vdGVib29rQ2VsbE92ZXJsYXlDaGFuZ2VBY2Nlc3NvcikgPT4gdm9pZCk6IHZvaWQ7XG5cdGdldFZpZXdab25lTGF5b3V0SW5mbyh2aWV3Wm9uZUlkOiBzdHJpbmcpOiB7IGhlaWdodDogbnVtYmVyOyB0b3A6IG51bWJlciB9IHwgbnVsbDtcblx0ZG9tRWxlbWVudE9mRWxlbWVudChlbGVtZW50OiBJQ2VsbFZpZXdNb2RlbCk6IEhUTUxFbGVtZW50IHwgbnVsbDtcblx0Zm9jdXNWaWV3KCk6IHZvaWQ7XG5cdHRyaWdnZXJTY3JvbGxGcm9tTW91c2VXaGVlbEV2ZW50KGJyb3dzZXJFdmVudDogSU1vdXNlV2hlZWxFdmVudCk6IHZvaWQ7XG5cdHVwZGF0ZUVsZW1lbnRIZWlnaHQyKGVsZW1lbnQ6IElDZWxsVmlld01vZGVsLCBzaXplOiBudW1iZXIsIGFuY2hvckVsZW1lbnRJbmRleD86IG51bWJlciB8IG51bGwpOiB2b2lkO1xuXHRkb21Gb2N1cygpOiB2b2lkO1xuXHRmb2N1c0NvbnRhaW5lcihjbGVhclNlbGVjdGlvbjogYm9vbGVhbik6IHZvaWQ7XG5cdHNldENlbGxFZGl0b3JTZWxlY3Rpb24oZWxlbWVudDogSUNlbGxWaWV3TW9kZWwsIHJhbmdlOiBSYW5nZSk6IHZvaWQ7XG5cdHN0eWxlKHN0eWxlczogSUxpc3RTdHlsZXMpOiB2b2lkO1xuXHRnZXRSZW5kZXJIZWlnaHQoKTogbnVtYmVyO1xuXHRnZXRTY3JvbGxIZWlnaHQoKTogbnVtYmVyO1xuXHR1cGRhdGVPcHRpb25zKG9wdGlvbnM6IElXb3JrYmVuY2hMaXN0T3B0aW9uc1VwZGF0ZSk6IHZvaWQ7XG5cdGxheW91dChoZWlnaHQ/OiBudW1iZXIsIHdpZHRoPzogbnVtYmVyKTogdm9pZDtcblx0ZGlzcG9zZSgpOiB2b2lkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEJhc2VDZWxsUmVuZGVyVGVtcGxhdGUge1xuXHRyZWFkb25seSByb290Q29udGFpbmVyOiBIVE1MRWxlbWVudDtcblx0cmVhZG9ubHkgZWRpdG9yUGFydDogSFRNTEVsZW1lbnQ7XG5cdHJlYWRvbmx5IGNlbGxJbnB1dENvbGxhcHNlZENvbnRhaW5lcjogSFRNTEVsZW1lbnQ7XG5cdHJlYWRvbmx5IGluc3RhbnRpYXRpb25TZXJ2aWNlOiBJSW5zdGFudGlhdGlvblNlcnZpY2U7XG5cdHJlYWRvbmx5IGNvbnRhaW5lcjogSFRNTEVsZW1lbnQ7XG5cdHJlYWRvbmx5IGNlbGxDb250YWluZXI6IEhUTUxFbGVtZW50O1xuXHRyZWFkb25seSB0ZW1wbGF0ZURpc3Bvc2FibGVzOiBEaXNwb3NhYmxlU3RvcmU7XG5cdHJlYWRvbmx5IGVsZW1lbnREaXNwb3NhYmxlczogRGlzcG9zYWJsZVN0b3JlO1xuXHRjdXJyZW50UmVuZGVyZWRDZWxsPzogSUNlbGxWaWV3TW9kZWw7XG5cdGNlbGxQYXJ0czogQ2VsbFBhcnRzQ29sbGVjdGlvbjtcblx0dG9KU09OOiAoKSA9PiBvYmplY3Q7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgTWFya2Rvd25DZWxsUmVuZGVyVGVtcGxhdGUgZXh0ZW5kcyBCYXNlQ2VsbFJlbmRlclRlbXBsYXRlIHtcblx0cmVhZG9ubHkgZWRpdG9yQ29udGFpbmVyOiBIVE1MRWxlbWVudDtcblx0cmVhZG9ubHkgZm9sZGluZ0luZGljYXRvcjogSFRNTEVsZW1lbnQ7XG5cdGN1cnJlbnRFZGl0b3I/OiBJQ29kZUVkaXRvcjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBDb2RlQ2VsbFJlbmRlclRlbXBsYXRlIGV4dGVuZHMgQmFzZUNlbGxSZW5kZXJUZW1wbGF0ZSB7XG5cdG91dHB1dENvbnRhaW5lcjogRmFzdERvbU5vZGU8SFRNTEVsZW1lbnQ+O1xuXHRjZWxsT3V0cHV0Q29sbGFwc2VkQ29udGFpbmVyOiBIVE1MRWxlbWVudDtcblx0b3V0cHV0U2hvd01vcmVDb250YWluZXI6IEZhc3REb21Ob2RlPEhUTUxFbGVtZW50Pjtcblx0Zm9jdXNTaW5rRWxlbWVudDogSFRNTEVsZW1lbnQ7XG5cdGVkaXRvcjogSUNvZGVFZGl0b3I7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNvb3JkaW5hdGVzQ29udmVydGVyIHtcblx0Z2V0Q2VsbFZpZXdTY3JvbGxUb3AoY2VsbDogSUNlbGxWaWV3TW9kZWwpOiBudW1iZXI7XG5cdGdldENlbGxWaWV3U2Nyb2xsQm90dG9tKGNlbGw6IElDZWxsVmlld01vZGVsKTogbnVtYmVyO1xuXHRnZXRWaWV3SW5kZXgoY2VsbDogSUNlbGxWaWV3TW9kZWwpOiBudW1iZXIgfCB1bmRlZmluZWQ7XG5cdGdldFZpZXdJbmRleDIobW9kZWxJbmRleDogbnVtYmVyKTogbnVtYmVyIHwgdW5kZWZpbmVkO1xuXHRnZXRNb2RlbEluZGV4KGNlbGw6IENlbGxWaWV3TW9kZWwpOiBudW1iZXIgfCB1bmRlZmluZWQ7XG5cdGdldE1vZGVsSW5kZXgyKHZpZXdJbmRleDogbnVtYmVyKTogbnVtYmVyIHwgdW5kZWZpbmVkO1xuXHRnZXRWaXNpYmxlUmFuZ2VzUGx1c1ZpZXdwb3J0QWJvdmVBbmRCZWxvdygpOiBJQ2VsbFJhbmdlW107XG5cdG1vZGVsSW5kZXhJc1Zpc2libGUobW9kZWxJbmRleDogbnVtYmVyKTogYm9vbGVhbjtcblx0Y29udmVydE1vZGVsSW5kZXhUb1ZpZXdJbmRleChtb2RlbEluZGV4OiBudW1iZXIpOiBudW1iZXI7XG59XG5cbmV4cG9ydCBjb25zdCBjb2xsYXBzZWRDZWxsVFRQb2xpY3kgPSBjcmVhdGVUcnVzdGVkVHlwZXNQb2xpY3koJ2NvbGxhcHNlZENlbGxQcmV2aWV3JywgeyBjcmVhdGVIVE1MOiB2YWx1ZSA9PiB2YWx1ZSB9KTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFzQkEsU0FBU0Esd0JBQXdCLFFBQVEsNkNBQTZDO0FBd0d0RixPQUFPLE1BQU1DLHFCQUFxQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdILHdCQUF3QixDQUFDLHNCQUFzQixFQUFFO0VBQUVJLFVBQVUsRUFBRUMsS0FBSyxJQUFJQTtJQUFBQTtJQUFBQSx1QkFBQTtJQUFBQSx1QkFBQTtJQUFBQSxNQUFBLENBQUFBLEtBQUs7RUFBTDtBQUFLLENBQUUsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,217 @@
+c9004ee8fe6373c25d7345ec4585c2c8
+/* istanbul ignore next */
+function cov_15kbonzepe() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/extensions.ts";
+  var hash = "7a6bd3b73248c121a4d117cddb6027148d1dc1c0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/extensions.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 18
+        },
+        end: {
+          line: 6,
+          column: 20
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 107
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 43
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 14,
+          column: 21
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "registerSingleton",
+        decl: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 33
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 86
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "getSingletonServiceDescriptors",
+        decl: {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 13,
+            column: 46
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 49
+          },
+          end: {
+            line: 15,
+            column: 1
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 8
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/extensions.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAGlD,MAAM,SAAS,GAAoD,EAAE,CAAC;AAkBtE,MAAM,UAAU,iBAAiB,CAAuC,EAAwB,EAAE,gBAAyE,EAAE,4BAA0D;IACtO,IAAI,CAAC,CAAC,gBAAgB,YAAY,cAAc,CAAC,EAAE,CAAC;QACnD,gBAAgB,GAAG,IAAI,cAAc,CAAI,gBAA6C,EAAE,EAAE,EAAE,OAAO,CAAC,4BAA4B,CAAC,CAAC,CAAC;IACpI,CAAC;IAED,SAAS,CAAC,IAAI,CAAC,CAAC,EAAE,EAAE,gBAAgB,CAAC,CAAC,CAAC;AACxC,CAAC;AAED,MAAM,UAAU,8BAA8B;IAC7C,OAAO,SAAS,CAAC;AAClB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/extensions.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { SyncDescriptor } from './descriptors.js';\nimport { BrandedService, ServiceIdentifier } from './instantiation.js';\n\nconst _registry: [ServiceIdentifier<any>, SyncDescriptor<any>][] = [];\n\nexport const enum InstantiationType {\n\t/**\n\t * Instantiate this service as soon as a consumer depends on it. _Note_ that this\n\t * is more costly as some upfront work is done that is likely not needed\n\t */\n\tEager = 0,\n\n\t/**\n\t * Instantiate this service as soon as a consumer uses it. This is the _better_\n\t * way of registering a service.\n\t */\n\tDelayed = 1\n}\n\nexport function registerSingleton<T, Services extends BrandedService[]>(id: ServiceIdentifier<T>, ctor: new (...services: Services) => T, supportsDelayedInstantiation: InstantiationType): void;\nexport function registerSingleton<T, Services extends BrandedService[]>(id: ServiceIdentifier<T>, descriptor: SyncDescriptor<any>): void;\nexport function registerSingleton<T, Services extends BrandedService[]>(id: ServiceIdentifier<T>, ctorOrDescriptor: { new(...services: Services): T } | SyncDescriptor<any>, supportsDelayedInstantiation?: boolean | InstantiationType): void {\n\tif (!(ctorOrDescriptor instanceof SyncDescriptor)) {\n\t\tctorOrDescriptor = new SyncDescriptor<T>(ctorOrDescriptor as new (...args: any[]) => T, [], Boolean(supportsDelayedInstantiation));\n\t}\n\n\t_registry.push([id, ctorOrDescriptor]);\n}\n\nexport function getSingletonServiceDescriptors(): [ServiceIdentifier<any>, SyncDescriptor<any>][] {\n\treturn _registry;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7a6bd3b73248c121a4d117cddb6027148d1dc1c0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_15kbonzepe = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_15kbonzepe();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { SyncDescriptor } from './descriptors.js';
+const _registry =
+/* istanbul ignore next */
+(cov_15kbonzepe().s[0]++, []);
+export function registerSingleton(id, ctorOrDescriptor, supportsDelayedInstantiation) {
+  /* istanbul ignore next */
+  cov_15kbonzepe().f[0]++;
+  cov_15kbonzepe().s[1]++;
+  if (!(ctorOrDescriptor instanceof SyncDescriptor)) {
+    /* istanbul ignore next */
+    cov_15kbonzepe().b[0][0]++;
+    cov_15kbonzepe().s[2]++;
+    ctorOrDescriptor = new SyncDescriptor(ctorOrDescriptor, [], Boolean(supportsDelayedInstantiation));
+  } else
+  /* istanbul ignore next */
+  {
+    cov_15kbonzepe().b[0][1]++;
+  }
+  cov_15kbonzepe().s[3]++;
+  _registry.push([id, ctorOrDescriptor]);
+}
+export function getSingletonServiceDescriptors() {
+  /* istanbul ignore next */
+  cov_15kbonzepe().f[1]++;
+  cov_15kbonzepe().s[4]++;
+  return _registry;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTeW5jRGVzY3JpcHRvciIsIl9yZWdpc3RyeSIsImNvdl8xNWtib256ZXBlIiwicyIsInJlZ2lzdGVyU2luZ2xldG9uIiwiaWQiLCJjdG9yT3JEZXNjcmlwdG9yIiwic3VwcG9ydHNEZWxheWVkSW5zdGFudGlhdGlvbiIsImYiLCJiIiwiQm9vbGVhbiIsInB1c2giLCJnZXRTaW5nbGV0b25TZXJ2aWNlRGVzY3JpcHRvcnMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2V4dGVuc2lvbnMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFN5bmNEZXNjcmlwdG9yIH0gZnJvbSAnLi9kZXNjcmlwdG9ycy5qcyc7XG5pbXBvcnQgeyBCcmFuZGVkU2VydmljZSwgU2VydmljZUlkZW50aWZpZXIgfSBmcm9tICcuL2luc3RhbnRpYXRpb24uanMnO1xuXG5jb25zdCBfcmVnaXN0cnk6IFtTZXJ2aWNlSWRlbnRpZmllcjxhbnk+LCBTeW5jRGVzY3JpcHRvcjxhbnk+XVtdID0gW107XG5cbmV4cG9ydCBjb25zdCBlbnVtIEluc3RhbnRpYXRpb25UeXBlIHtcblx0LyoqXG5cdCAqIEluc3RhbnRpYXRlIHRoaXMgc2VydmljZSBhcyBzb29uIGFzIGEgY29uc3VtZXIgZGVwZW5kcyBvbiBpdC4gX05vdGVfIHRoYXQgdGhpc1xuXHQgKiBpcyBtb3JlIGNvc3RseSBhcyBzb21lIHVwZnJvbnQgd29yayBpcyBkb25lIHRoYXQgaXMgbGlrZWx5IG5vdCBuZWVkZWRcblx0ICovXG5cdEVhZ2VyID0gMCxcblxuXHQvKipcblx0ICogSW5zdGFudGlhdGUgdGhpcyBzZXJ2aWNlIGFzIHNvb24gYXMgYSBjb25zdW1lciB1c2VzIGl0LiBUaGlzIGlzIHRoZSBfYmV0dGVyX1xuXHQgKiB3YXkgb2YgcmVnaXN0ZXJpbmcgYSBzZXJ2aWNlLlxuXHQgKi9cblx0RGVsYXllZCA9IDFcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIHJlZ2lzdGVyU2luZ2xldG9uPFQsIFNlcnZpY2VzIGV4dGVuZHMgQnJhbmRlZFNlcnZpY2VbXT4oaWQ6IFNlcnZpY2VJZGVudGlmaWVyPFQ+LCBjdG9yOiBuZXcgKC4uLnNlcnZpY2VzOiBTZXJ2aWNlcykgPT4gVCwgc3VwcG9ydHNEZWxheWVkSW5zdGFudGlhdGlvbjogSW5zdGFudGlhdGlvblR5cGUpOiB2b2lkO1xuZXhwb3J0IGZ1bmN0aW9uIHJlZ2lzdGVyU2luZ2xldG9uPFQsIFNlcnZpY2VzIGV4dGVuZHMgQnJhbmRlZFNlcnZpY2VbXT4oaWQ6IFNlcnZpY2VJZGVudGlmaWVyPFQ+LCBkZXNjcmlwdG9yOiBTeW5jRGVzY3JpcHRvcjxhbnk+KTogdm9pZDtcbmV4cG9ydCBmdW5jdGlvbiByZWdpc3RlclNpbmdsZXRvbjxULCBTZXJ2aWNlcyBleHRlbmRzIEJyYW5kZWRTZXJ2aWNlW10+KGlkOiBTZXJ2aWNlSWRlbnRpZmllcjxUPiwgY3Rvck9yRGVzY3JpcHRvcjogeyBuZXcoLi4uc2VydmljZXM6IFNlcnZpY2VzKTogVCB9IHwgU3luY0Rlc2NyaXB0b3I8YW55Piwgc3VwcG9ydHNEZWxheWVkSW5zdGFudGlhdGlvbj86IGJvb2xlYW4gfCBJbnN0YW50aWF0aW9uVHlwZSk6IHZvaWQge1xuXHRpZiAoIShjdG9yT3JEZXNjcmlwdG9yIGluc3RhbmNlb2YgU3luY0Rlc2NyaXB0b3IpKSB7XG5cdFx0Y3Rvck9yRGVzY3JpcHRvciA9IG5ldyBTeW5jRGVzY3JpcHRvcjxUPihjdG9yT3JEZXNjcmlwdG9yIGFzIG5ldyAoLi4uYXJnczogYW55W10pID0+IFQsIFtdLCBCb29sZWFuKHN1cHBvcnRzRGVsYXllZEluc3RhbnRpYXRpb24pKTtcblx0fVxuXG5cdF9yZWdpc3RyeS5wdXNoKFtpZCwgY3Rvck9yRGVzY3JpcHRvcl0pO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gZ2V0U2luZ2xldG9uU2VydmljZURlc2NyaXB0b3JzKCk6IFtTZXJ2aWNlSWRlbnRpZmllcjxhbnk+LCBTeW5jRGVzY3JpcHRvcjxhbnk+XVtdIHtcblx0cmV0dXJuIF9yZWdpc3RyeTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsY0FBYyxRQUFRLGtCQUFrQjtBQUdqRCxNQUFNQyxTQUFTO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBb0QsRUFBRTtBQWtCckUsT0FBTSxTQUFVQyxpQkFBaUJBLENBQXVDQyxFQUF3QixFQUFFQyxnQkFBeUUsRUFBRUMsNEJBQTBEO0VBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQUFOLGNBQUEsR0FBQUMsQ0FBQTtFQUN0TyxJQUFJLEVBQUVHLGdCQUFnQixZQUFZTixjQUFjLENBQUMsRUFBRTtJQUFBO0lBQUFFLGNBQUEsR0FBQU8sQ0FBQTtJQUFBUCxjQUFBLEdBQUFDLENBQUE7SUFDbERHLGdCQUFnQixHQUFHLElBQUlOLGNBQWMsQ0FBSU0sZ0JBQTZDLEVBQUUsRUFBRSxFQUFFSSxPQUFPLENBQUNILDRCQUE0QixDQUFDLENBQUM7RUFDbkksQ0FBQztFQUFBO0VBQUE7SUFBQUwsY0FBQSxHQUFBTyxDQUFBO0VBQUE7RUFBQVAsY0FBQSxHQUFBQyxDQUFBO0VBRURGLFNBQVMsQ0FBQ1UsSUFBSSxDQUFDLENBQUNOLEVBQUUsRUFBRUMsZ0JBQWdCLENBQUMsQ0FBQztBQUN2QztBQUVBLE9BQU0sU0FBVU0sOEJBQThCQSxDQUFBO0VBQUE7RUFBQVYsY0FBQSxHQUFBTSxDQUFBO0VBQUFOLGNBQUEsR0FBQUMsQ0FBQTtFQUM3QyxPQUFPRixTQUFTO0FBQ2pCIiwiaWdub3JlTGlzdCI6W119

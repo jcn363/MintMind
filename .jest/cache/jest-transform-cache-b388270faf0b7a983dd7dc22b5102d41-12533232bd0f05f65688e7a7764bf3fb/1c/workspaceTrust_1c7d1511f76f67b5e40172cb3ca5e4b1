@@ -1,0 +1,202 @@
+87ed3124ff79280e3c8c80ba9892c2fa
+/* istanbul ignore next */
+function cov_2lcajsh7ru() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/workspace/common/workspaceTrust.ts";
+  var hash = "10051579c02b96126875530bb002a72e015cfb4b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/workspace/common/workspaceTrust.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 54
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 68
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 70
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 48
+        },
+        end: {
+          line: 11,
+          column: 98
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 48
+        },
+        end: {
+          line: 12,
+          column: 98
+        }
+      },
+      "5": {
+        start: {
+          line: 13,
+          column: 45
+        },
+        end: {
+          line: 13,
+          column: 92
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 1
+          },
+          end: {
+            line: 7,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 32
+          },
+          end: {
+            line: 10,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 3
+          },
+          end: {
+            line: 10,
+            column: 52
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 10,
+            column: 3
+          },
+          end: {
+            line: 10,
+            column: 22
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 27
+          },
+          end: {
+            line: 10,
+            column: 51
+          }
+        }],
+        line: 10
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/workspace/common/workspaceTrust.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAN,IAAY,mBAGX;AAHD,WAAY,mBAAmB;IAC9B,+DAAS,CAAA;IACT,iEAAU,CAAA;AACX,CAAC,EAHW,mBAAmB,KAAnB,mBAAmB,QAG9B;AAYD,MAAM,CAAC,MAAM,gCAAgC,GAAG,eAAe,CAAmC,iCAAiC,CAAC,CAAC;AAQrI,MAAM,CAAC,MAAM,gCAAgC,GAAG,eAAe,CAAmC,iCAAiC,CAAC,CAAC;AAoCrI,MAAM,CAAC,MAAM,6BAA6B,GAAG,eAAe,CAAgC,8BAA8B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/workspace/common/workspaceTrust.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { IDisposable } from '../../../base/common/lifecycle.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport enum WorkspaceTrustScope {\n\tLocal = 0,\n\tRemote = 1\n}\n\nexport interface WorkspaceTrustRequestButton {\n\treadonly label: string;\n\treadonly type: 'ContinueWithTrust' | 'ContinueWithoutTrust' | 'Manage' | 'Cancel';\n}\n\nexport interface WorkspaceTrustRequestOptions {\n\treadonly buttons?: WorkspaceTrustRequestButton[];\n\treadonly message?: string;\n}\n\nexport const IWorkspaceTrustEnablementService = createDecorator<IWorkspaceTrustEnablementService>('workspaceTrustEnablementService');\n\nexport interface IWorkspaceTrustEnablementService {\n\treadonly _serviceBrand: undefined;\n\n\tisWorkspaceTrustEnabled(): boolean;\n}\n\nexport const IWorkspaceTrustManagementService = createDecorator<IWorkspaceTrustManagementService>('workspaceTrustManagementService');\n\nexport interface IWorkspaceTrustManagementService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidChangeTrust: Event<boolean>;\n\treadonly onDidChangeTrustedFolders: Event<void>;\n\n\treadonly workspaceResolved: Promise<void>;\n\treadonly workspaceTrustInitialized: Promise<void>;\n\tacceptsOutOfWorkspaceFiles: boolean;\n\n\tisWorkspaceTrusted(): boolean;\n\tisWorkspaceTrustForced(): boolean;\n\n\tcanSetParentFolderTrust(): boolean;\n\tsetParentFolderTrust(trusted: boolean): Promise<void>;\n\n\tcanSetWorkspaceTrust(): boolean;\n\tsetWorkspaceTrust(trusted: boolean): Promise<void>;\n\n\tgetUriTrustInfo(uri: URI): Promise<IWorkspaceTrustUriInfo>;\n\tsetUrisTrust(uri: URI[], trusted: boolean): Promise<void>;\n\n\tgetTrustedUris(): URI[];\n\tsetTrustedUris(uris: URI[]): Promise<void>;\n\n\taddWorkspaceTrustTransitionParticipant(participant: IWorkspaceTrustTransitionParticipant): IDisposable;\n}\n\nexport const enum WorkspaceTrustUriResponse {\n\tOpen = 1,\n\tOpenInNewWindow = 2,\n\tCancel = 3\n}\n\nexport const IWorkspaceTrustRequestService = createDecorator<IWorkspaceTrustRequestService>('workspaceTrustRequestService');\n\nexport interface IWorkspaceTrustRequestService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidInitiateOpenFilesTrustRequest: Event<void>;\n\treadonly onDidInitiateWorkspaceTrustRequest: Event<WorkspaceTrustRequestOptions | undefined>;\n\treadonly onDidInitiateWorkspaceTrustRequestOnStartup: Event<void>;\n\n\tcompleteOpenFilesTrustRequest(result: WorkspaceTrustUriResponse, saveResponse?: boolean): Promise<void>;\n\trequestOpenFilesTrust(openFiles: URI[]): Promise<WorkspaceTrustUriResponse>;\n\n\tcancelWorkspaceTrustRequest(): void;\n\tcompleteWorkspaceTrustRequest(trusted?: boolean): Promise<void>;\n\trequestWorkspaceTrust(options?: WorkspaceTrustRequestOptions): Promise<boolean | undefined>;\n\trequestWorkspaceTrustOnStartup(): void;\n}\n\nexport interface IWorkspaceTrustTransitionParticipant {\n\tparticipate(trusted: boolean): Promise<void>;\n}\n\nexport interface IWorkspaceTrustUriInfo {\n\turi: URI;\n\ttrusted: boolean;\n}\n\nexport interface IWorkspaceTrustInfo {\n\turiTrustInfo: IWorkspaceTrustUriInfo[];\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "10051579c02b96126875530bb002a72e015cfb4b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2lcajsh7ru = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2lcajsh7ru();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export var WorkspaceTrustScope;
+/* istanbul ignore next */
+cov_2lcajsh7ru().s[0]++;
+(function (WorkspaceTrustScope) {
+  /* istanbul ignore next */
+  cov_2lcajsh7ru().f[0]++;
+  cov_2lcajsh7ru().s[1]++;
+  WorkspaceTrustScope[WorkspaceTrustScope["Local"] = 0] = "Local";
+  /* istanbul ignore next */
+  cov_2lcajsh7ru().s[2]++;
+  WorkspaceTrustScope[WorkspaceTrustScope["Remote"] = 1] = "Remote";
+})(
+/* istanbul ignore next */
+(cov_2lcajsh7ru().b[0][0]++, WorkspaceTrustScope) ||
+/* istanbul ignore next */
+(cov_2lcajsh7ru().b[0][1]++, WorkspaceTrustScope = {}));
+export const IWorkspaceTrustEnablementService =
+/* istanbul ignore next */
+(cov_2lcajsh7ru().s[3]++, createDecorator('workspaceTrustEnablementService'));
+export const IWorkspaceTrustManagementService =
+/* istanbul ignore next */
+(cov_2lcajsh7ru().s[4]++, createDecorator('workspaceTrustManagementService'));
+export const IWorkspaceTrustRequestService =
+/* istanbul ignore next */
+(cov_2lcajsh7ru().s[5]++, createDecorator('workspaceTrustRequestService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJXb3Jrc3BhY2VUcnVzdFNjb3BlIiwiY292XzJsY2Fqc2g3cnUiLCJzIiwiZiIsImIiLCJJV29ya3NwYWNlVHJ1c3RFbmFibGVtZW50U2VydmljZSIsIklXb3Jrc3BhY2VUcnVzdE1hbmFnZW1lbnRTZXJ2aWNlIiwiSVdvcmtzcGFjZVRydXN0UmVxdWVzdFNlcnZpY2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL3dvcmtzcGFjZS9jb21tb24vd29ya3NwYWNlVHJ1c3QudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgZW51bSBXb3Jrc3BhY2VUcnVzdFNjb3BlIHtcblx0TG9jYWwgPSAwLFxuXHRSZW1vdGUgPSAxXG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgV29ya3NwYWNlVHJ1c3RSZXF1ZXN0QnV0dG9uIHtcblx0cmVhZG9ubHkgbGFiZWw6IHN0cmluZztcblx0cmVhZG9ubHkgdHlwZTogJ0NvbnRpbnVlV2l0aFRydXN0JyB8ICdDb250aW51ZVdpdGhvdXRUcnVzdCcgfCAnTWFuYWdlJyB8ICdDYW5jZWwnO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFdvcmtzcGFjZVRydXN0UmVxdWVzdE9wdGlvbnMge1xuXHRyZWFkb25seSBidXR0b25zPzogV29ya3NwYWNlVHJ1c3RSZXF1ZXN0QnV0dG9uW107XG5cdHJlYWRvbmx5IG1lc3NhZ2U/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBjb25zdCBJV29ya3NwYWNlVHJ1c3RFbmFibGVtZW50U2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJV29ya3NwYWNlVHJ1c3RFbmFibGVtZW50U2VydmljZT4oJ3dvcmtzcGFjZVRydXN0RW5hYmxlbWVudFNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJV29ya3NwYWNlVHJ1c3RFbmFibGVtZW50U2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRpc1dvcmtzcGFjZVRydXN0RW5hYmxlZCgpOiBib29sZWFuO1xufVxuXG5leHBvcnQgY29uc3QgSVdvcmtzcGFjZVRydXN0TWFuYWdlbWVudFNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVdvcmtzcGFjZVRydXN0TWFuYWdlbWVudFNlcnZpY2U+KCd3b3Jrc3BhY2VUcnVzdE1hbmFnZW1lbnRTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdvcmtzcGFjZVRydXN0TWFuYWdlbWVudFNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VUcnVzdDogRXZlbnQ8Ym9vbGVhbj47XG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlVHJ1c3RlZEZvbGRlcnM6IEV2ZW50PHZvaWQ+O1xuXG5cdHJlYWRvbmx5IHdvcmtzcGFjZVJlc29sdmVkOiBQcm9taXNlPHZvaWQ+O1xuXHRyZWFkb25seSB3b3Jrc3BhY2VUcnVzdEluaXRpYWxpemVkOiBQcm9taXNlPHZvaWQ+O1xuXHRhY2NlcHRzT3V0T2ZXb3Jrc3BhY2VGaWxlczogYm9vbGVhbjtcblxuXHRpc1dvcmtzcGFjZVRydXN0ZWQoKTogYm9vbGVhbjtcblx0aXNXb3Jrc3BhY2VUcnVzdEZvcmNlZCgpOiBib29sZWFuO1xuXG5cdGNhblNldFBhcmVudEZvbGRlclRydXN0KCk6IGJvb2xlYW47XG5cdHNldFBhcmVudEZvbGRlclRydXN0KHRydXN0ZWQ6IGJvb2xlYW4pOiBQcm9taXNlPHZvaWQ+O1xuXG5cdGNhblNldFdvcmtzcGFjZVRydXN0KCk6IGJvb2xlYW47XG5cdHNldFdvcmtzcGFjZVRydXN0KHRydXN0ZWQ6IGJvb2xlYW4pOiBQcm9taXNlPHZvaWQ+O1xuXG5cdGdldFVyaVRydXN0SW5mbyh1cmk6IFVSSSk6IFByb21pc2U8SVdvcmtzcGFjZVRydXN0VXJpSW5mbz47XG5cdHNldFVyaXNUcnVzdCh1cmk6IFVSSVtdLCB0cnVzdGVkOiBib29sZWFuKTogUHJvbWlzZTx2b2lkPjtcblxuXHRnZXRUcnVzdGVkVXJpcygpOiBVUklbXTtcblx0c2V0VHJ1c3RlZFVyaXModXJpczogVVJJW10pOiBQcm9taXNlPHZvaWQ+O1xuXG5cdGFkZFdvcmtzcGFjZVRydXN0VHJhbnNpdGlvblBhcnRpY2lwYW50KHBhcnRpY2lwYW50OiBJV29ya3NwYWNlVHJ1c3RUcmFuc2l0aW9uUGFydGljaXBhbnQpOiBJRGlzcG9zYWJsZTtcbn1cblxuZXhwb3J0IGNvbnN0IGVudW0gV29ya3NwYWNlVHJ1c3RVcmlSZXNwb25zZSB7XG5cdE9wZW4gPSAxLFxuXHRPcGVuSW5OZXdXaW5kb3cgPSAyLFxuXHRDYW5jZWwgPSAzXG59XG5cbmV4cG9ydCBjb25zdCBJV29ya3NwYWNlVHJ1c3RSZXF1ZXN0U2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJV29ya3NwYWNlVHJ1c3RSZXF1ZXN0U2VydmljZT4oJ3dvcmtzcGFjZVRydXN0UmVxdWVzdFNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJV29ya3NwYWNlVHJ1c3RSZXF1ZXN0U2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRyZWFkb25seSBvbkRpZEluaXRpYXRlT3BlbkZpbGVzVHJ1c3RSZXF1ZXN0OiBFdmVudDx2b2lkPjtcblx0cmVhZG9ubHkgb25EaWRJbml0aWF0ZVdvcmtzcGFjZVRydXN0UmVxdWVzdDogRXZlbnQ8V29ya3NwYWNlVHJ1c3RSZXF1ZXN0T3B0aW9ucyB8IHVuZGVmaW5lZD47XG5cdHJlYWRvbmx5IG9uRGlkSW5pdGlhdGVXb3Jrc3BhY2VUcnVzdFJlcXVlc3RPblN0YXJ0dXA6IEV2ZW50PHZvaWQ+O1xuXG5cdGNvbXBsZXRlT3BlbkZpbGVzVHJ1c3RSZXF1ZXN0KHJlc3VsdDogV29ya3NwYWNlVHJ1c3RVcmlSZXNwb25zZSwgc2F2ZVJlc3BvbnNlPzogYm9vbGVhbik6IFByb21pc2U8dm9pZD47XG5cdHJlcXVlc3RPcGVuRmlsZXNUcnVzdChvcGVuRmlsZXM6IFVSSVtdKTogUHJvbWlzZTxXb3Jrc3BhY2VUcnVzdFVyaVJlc3BvbnNlPjtcblxuXHRjYW5jZWxXb3Jrc3BhY2VUcnVzdFJlcXVlc3QoKTogdm9pZDtcblx0Y29tcGxldGVXb3Jrc3BhY2VUcnVzdFJlcXVlc3QodHJ1c3RlZD86IGJvb2xlYW4pOiBQcm9taXNlPHZvaWQ+O1xuXHRyZXF1ZXN0V29ya3NwYWNlVHJ1c3Qob3B0aW9ucz86IFdvcmtzcGFjZVRydXN0UmVxdWVzdE9wdGlvbnMpOiBQcm9taXNlPGJvb2xlYW4gfCB1bmRlZmluZWQ+O1xuXHRyZXF1ZXN0V29ya3NwYWNlVHJ1c3RPblN0YXJ0dXAoKTogdm9pZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJV29ya3NwYWNlVHJ1c3RUcmFuc2l0aW9uUGFydGljaXBhbnQge1xuXHRwYXJ0aWNpcGF0ZSh0cnVzdGVkOiBib29sZWFuKTogUHJvbWlzZTx2b2lkPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJV29ya3NwYWNlVHJ1c3RVcmlJbmZvIHtcblx0dXJpOiBVUkk7XG5cdHRydXN0ZWQ6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVdvcmtzcGFjZVRydXN0SW5mbyB7XG5cdHVyaVRydXN0SW5mbzogSVdvcmtzcGFjZVRydXN0VXJpSW5mb1tdO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBUUEsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQUU3RSxXQUFZQyxtQkFHWDtBQUFBO0FBQUFDLGNBQUEsR0FBQUMsQ0FBQTtBQUhELFdBQVlGLG1CQUFtQjtFQUFBO0VBQUFDLGNBQUEsR0FBQUUsQ0FBQTtFQUFBRixjQUFBLEdBQUFDLENBQUE7RUFDOUJGLG1CQUFBLENBQUFBLG1CQUFBLHdCQUFTO0VBQUE7RUFBQUMsY0FBQSxHQUFBQyxDQUFBO0VBQ1RGLG1CQUFBLENBQUFBLG1CQUFBLDBCQUFVO0FBQ1gsQ0FBQztBQUhXO0FBQUEsQ0FBQUMsY0FBQSxHQUFBRyxDQUFBLFVBQUFKLG1CQUFtQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBRyxDQUFBLFVBQW5CSixtQkFBbUI7QUFlL0IsT0FBTyxNQUFNSyxnQ0FBZ0M7QUFBQTtBQUFBLENBQUFKLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQW1DLGlDQUFpQyxDQUFDO0FBUXBJLE9BQU8sTUFBTU8sZ0NBQWdDO0FBQUE7QUFBQSxDQUFBTCxjQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFtQyxpQ0FBaUMsQ0FBQztBQW9DcEksT0FBTyxNQUFNUSw2QkFBNkI7QUFBQTtBQUFBLENBQUFOLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQWdDLDhCQUE4QixDQUFDIiwiaWdub3JlTGlzdCI6W119

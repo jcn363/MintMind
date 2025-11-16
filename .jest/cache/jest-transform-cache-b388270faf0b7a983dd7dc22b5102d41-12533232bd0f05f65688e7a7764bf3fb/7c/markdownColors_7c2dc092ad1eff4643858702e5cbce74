@@ -1,0 +1,123 @@
+b38df06a8960231dda96fdc07110ed5b
+/* istanbul ignore next */
+function cov_2590gvq3l8() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/markdown/common/markdownColors.ts";
+  var hash = "e15e165eb3e719569ad5df78d2cec38bf2904a0a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/markdown/common/markdownColors.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 38
+        },
+        end: {
+          line: 11,
+          column: 196
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 37
+        },
+        end: {
+          line: 12,
+          column: 183
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 43
+        },
+        end: {
+          line: 13,
+          column: 208
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 41
+        },
+        end: {
+          line: 14,
+          column: 211
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 41
+        },
+        end: {
+          line: 15,
+          column: 209
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/markdown/common/markdownColors.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,aAAa,EAAE,oBAAoB,EAAE,uBAAuB,EAAE,qBAAqB,EAAE,MAAM,oDAAoD,CAAC;AACzJ,OAAO,EAAE,WAAW,EAAE,YAAY,EAAE,MAAM,0DAA0D,CAAC;AAErG;;GAEG;AAEH,MAAM,CAAC,MAAM,sBAAsB,GAAG,aAAa,CAAC,+BAA+B,EAClF,oBAAoB,EACpB,QAAQ,CAAC,6BAA6B,EAAE,+CAA+C,CAAC,CAAC,CAAC;AAE3F,MAAM,CAAC,MAAM,qBAAqB,GAAG,aAAa,CAAC,8BAA8B,EAChF,WAAW,EACX,QAAQ,CAAC,4BAA4B,EAAE,8CAA8C,CAAC,CAAC,CAAC;AAEzF,MAAM,CAAC,MAAM,2BAA2B,GAAG,aAAa,CAAC,oCAAoC,EAC5F,YAAY,EACZ,QAAQ,CAAC,kCAAkC,EAAE,oDAAoD,CAAC,CAAC,CAAC;AAErG,MAAM,CAAC,MAAM,yBAAyB,GAAG,aAAa,CAAC,kCAAkC,EACxF,uBAAuB,EACvB,QAAQ,CAAC,gCAAgC,EAAE,kDAAkD,CAAC,CAAC,CAAC;AAEjG,MAAM,CAAC,MAAM,yBAAyB,GAAG,aAAa,CAAC,kCAAkC,EACxF,qBAAqB,EACrB,QAAQ,CAAC,gCAAgC,EAAE,kDAAkD,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/markdown/common/markdownColors.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize } from '../../../../nls.js';\nimport { registerColor, editorInfoForeground, editorWarningForeground, editorErrorForeground } from '../../../../platform/theme/common/colorRegistry.js';\nimport { chartsGreen, chartsPurple } from '../../../../platform/theme/common/colors/chartsColors.js';\n\n/*\n * Markdown alert colors for GitHub-style alert syntax.\n */\n\nexport const markdownAlertNoteColor = registerColor('markdownAlert.note.foreground',\n\teditorInfoForeground,\n\tlocalize('markdownAlertNoteForeground', \"Foreground color for note alerts in markdown.\"));\n\nexport const markdownAlertTipColor = registerColor('markdownAlert.tip.foreground',\n\tchartsGreen,\n\tlocalize('markdownAlertTipForeground', \"Foreground color for tip alerts in markdown.\"));\n\nexport const markdownAlertImportantColor = registerColor('markdownAlert.important.foreground',\n\tchartsPurple,\n\tlocalize('markdownAlertImportantForeground', \"Foreground color for important alerts in markdown.\"));\n\nexport const markdownAlertWarningColor = registerColor('markdownAlert.warning.foreground',\n\teditorWarningForeground,\n\tlocalize('markdownAlertWarningForeground', \"Foreground color for warning alerts in markdown.\"));\n\nexport const markdownAlertCautionColor = registerColor('markdownAlert.caution.foreground',\n\teditorErrorForeground,\n\tlocalize('markdownAlertCautionForeground', \"Foreground color for caution alerts in markdown.\"));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e15e165eb3e719569ad5df78d2cec38bf2904a0a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2590gvq3l8 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2590gvq3l8();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../nls.js';
+import { registerColor, editorInfoForeground, editorWarningForeground, editorErrorForeground } from '../../../../platform/theme/common/colorRegistry.js';
+import { chartsGreen, chartsPurple } from '../../../../platform/theme/common/colors/chartsColors.js';
+/*
+ * Markdown alert colors for GitHub-style alert syntax.
+ */
+export const markdownAlertNoteColor =
+/* istanbul ignore next */
+(cov_2590gvq3l8().s[0]++, registerColor('markdownAlert.note.foreground', editorInfoForeground, localize('markdownAlertNoteForeground', "Foreground color for note alerts in markdown.")));
+export const markdownAlertTipColor =
+/* istanbul ignore next */
+(cov_2590gvq3l8().s[1]++, registerColor('markdownAlert.tip.foreground', chartsGreen, localize('markdownAlertTipForeground', "Foreground color for tip alerts in markdown.")));
+export const markdownAlertImportantColor =
+/* istanbul ignore next */
+(cov_2590gvq3l8().s[2]++, registerColor('markdownAlert.important.foreground', chartsPurple, localize('markdownAlertImportantForeground', "Foreground color for important alerts in markdown.")));
+export const markdownAlertWarningColor =
+/* istanbul ignore next */
+(cov_2590gvq3l8().s[3]++, registerColor('markdownAlert.warning.foreground', editorWarningForeground, localize('markdownAlertWarningForeground', "Foreground color for warning alerts in markdown.")));
+export const markdownAlertCautionColor =
+/* istanbul ignore next */
+(cov_2590gvq3l8().s[4]++, registerColor('markdownAlert.caution.foreground', editorErrorForeground, localize('markdownAlertCautionForeground', "Foreground color for caution alerts in markdown.")));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZSIsInJlZ2lzdGVyQ29sb3IiLCJlZGl0b3JJbmZvRm9yZWdyb3VuZCIsImVkaXRvcldhcm5pbmdGb3JlZ3JvdW5kIiwiZWRpdG9yRXJyb3JGb3JlZ3JvdW5kIiwiY2hhcnRzR3JlZW4iLCJjaGFydHNQdXJwbGUiLCJtYXJrZG93bkFsZXJ0Tm90ZUNvbG9yIiwiY292XzI1OTBndnEzbDgiLCJzIiwibWFya2Rvd25BbGVydFRpcENvbG9yIiwibWFya2Rvd25BbGVydEltcG9ydGFudENvbG9yIiwibWFya2Rvd25BbGVydFdhcm5pbmdDb2xvciIsIm1hcmtkb3duQWxlcnRDYXV0aW9uQ29sb3IiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL21hcmtkb3duL2NvbW1vbi9tYXJrZG93bkNvbG9ycy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJDb2xvciwgZWRpdG9ySW5mb0ZvcmVncm91bmQsIGVkaXRvcldhcm5pbmdGb3JlZ3JvdW5kLCBlZGl0b3JFcnJvckZvcmVncm91bmQgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS90aGVtZS9jb21tb24vY29sb3JSZWdpc3RyeS5qcyc7XG5pbXBvcnQgeyBjaGFydHNHcmVlbiwgY2hhcnRzUHVycGxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vdGhlbWUvY29tbW9uL2NvbG9ycy9jaGFydHNDb2xvcnMuanMnO1xuXG4vKlxuICogTWFya2Rvd24gYWxlcnQgY29sb3JzIGZvciBHaXRIdWItc3R5bGUgYWxlcnQgc3ludGF4LlxuICovXG5cbmV4cG9ydCBjb25zdCBtYXJrZG93bkFsZXJ0Tm90ZUNvbG9yID0gcmVnaXN0ZXJDb2xvcignbWFya2Rvd25BbGVydC5ub3RlLmZvcmVncm91bmQnLFxuXHRlZGl0b3JJbmZvRm9yZWdyb3VuZCxcblx0bG9jYWxpemUoJ21hcmtkb3duQWxlcnROb3RlRm9yZWdyb3VuZCcsIFwiRm9yZWdyb3VuZCBjb2xvciBmb3Igbm90ZSBhbGVydHMgaW4gbWFya2Rvd24uXCIpKTtcblxuZXhwb3J0IGNvbnN0IG1hcmtkb3duQWxlcnRUaXBDb2xvciA9IHJlZ2lzdGVyQ29sb3IoJ21hcmtkb3duQWxlcnQudGlwLmZvcmVncm91bmQnLFxuXHRjaGFydHNHcmVlbixcblx0bG9jYWxpemUoJ21hcmtkb3duQWxlcnRUaXBGb3JlZ3JvdW5kJywgXCJGb3JlZ3JvdW5kIGNvbG9yIGZvciB0aXAgYWxlcnRzIGluIG1hcmtkb3duLlwiKSk7XG5cbmV4cG9ydCBjb25zdCBtYXJrZG93bkFsZXJ0SW1wb3J0YW50Q29sb3IgPSByZWdpc3RlckNvbG9yKCdtYXJrZG93bkFsZXJ0LmltcG9ydGFudC5mb3JlZ3JvdW5kJyxcblx0Y2hhcnRzUHVycGxlLFxuXHRsb2NhbGl6ZSgnbWFya2Rvd25BbGVydEltcG9ydGFudEZvcmVncm91bmQnLCBcIkZvcmVncm91bmQgY29sb3IgZm9yIGltcG9ydGFudCBhbGVydHMgaW4gbWFya2Rvd24uXCIpKTtcblxuZXhwb3J0IGNvbnN0IG1hcmtkb3duQWxlcnRXYXJuaW5nQ29sb3IgPSByZWdpc3RlckNvbG9yKCdtYXJrZG93bkFsZXJ0Lndhcm5pbmcuZm9yZWdyb3VuZCcsXG5cdGVkaXRvcldhcm5pbmdGb3JlZ3JvdW5kLFxuXHRsb2NhbGl6ZSgnbWFya2Rvd25BbGVydFdhcm5pbmdGb3JlZ3JvdW5kJywgXCJGb3JlZ3JvdW5kIGNvbG9yIGZvciB3YXJuaW5nIGFsZXJ0cyBpbiBtYXJrZG93bi5cIikpO1xuXG5leHBvcnQgY29uc3QgbWFya2Rvd25BbGVydENhdXRpb25Db2xvciA9IHJlZ2lzdGVyQ29sb3IoJ21hcmtkb3duQWxlcnQuY2F1dGlvbi5mb3JlZ3JvdW5kJyxcblx0ZWRpdG9yRXJyb3JGb3JlZ3JvdW5kLFxuXHRsb2NhbGl6ZSgnbWFya2Rvd25BbGVydENhdXRpb25Gb3JlZ3JvdW5kJywgXCJGb3JlZ3JvdW5kIGNvbG9yIGZvciBjYXV0aW9uIGFsZXJ0cyBpbiBtYXJrZG93bi5cIikpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLFFBQVEsUUFBUSxvQkFBb0I7QUFDN0MsU0FBU0MsYUFBYSxFQUFFQyxvQkFBb0IsRUFBRUMsdUJBQXVCLEVBQUVDLHFCQUFxQixRQUFRLG9EQUFvRDtBQUN4SixTQUFTQyxXQUFXLEVBQUVDLFlBQVksUUFBUSwwREFBMEQ7QUFFcEc7OztBQUlBLE9BQU8sTUFBTUMsc0JBQXNCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR1IsYUFBYSxDQUFDLCtCQUErQixFQUNsRkMsb0JBQW9CLEVBQ3BCRixRQUFRLENBQUMsNkJBQTZCLEVBQUUsK0NBQStDLENBQUMsQ0FBQztBQUUxRixPQUFPLE1BQU1VLHFCQUFxQjtBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBQyxDQUFBLE9BQUdSLGFBQWEsQ0FBQyw4QkFBOEIsRUFDaEZJLFdBQVcsRUFDWEwsUUFBUSxDQUFDLDRCQUE0QixFQUFFLDhDQUE4QyxDQUFDLENBQUM7QUFFeEYsT0FBTyxNQUFNVywyQkFBMkI7QUFBQTtBQUFBLENBQUFILGNBQUEsR0FBQUMsQ0FBQSxPQUFHUixhQUFhLENBQUMsb0NBQW9DLEVBQzVGSyxZQUFZLEVBQ1pOLFFBQVEsQ0FBQyxrQ0FBa0MsRUFBRSxvREFBb0QsQ0FBQyxDQUFDO0FBRXBHLE9BQU8sTUFBTVkseUJBQXlCO0FBQUE7QUFBQSxDQUFBSixjQUFBLEdBQUFDLENBQUEsT0FBR1IsYUFBYSxDQUFDLGtDQUFrQyxFQUN4RkUsdUJBQXVCLEVBQ3ZCSCxRQUFRLENBQUMsZ0NBQWdDLEVBQUUsa0RBQWtELENBQUMsQ0FBQztBQUVoRyxPQUFPLE1BQU1hLHlCQUF5QjtBQUFBO0FBQUEsQ0FBQUwsY0FBQSxHQUFBQyxDQUFBLE9BQUdSLGFBQWEsQ0FBQyxrQ0FBa0MsRUFDeEZHLHFCQUFxQixFQUNyQkosUUFBUSxDQUFDLGdDQUFnQyxFQUFFLGtEQUFrRCxDQUFDLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

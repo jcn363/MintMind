@@ -1,0 +1,219 @@
+81b9833015b503af8b9b781b39416a99
+/* istanbul ignore next */
+function cov_37teddzq7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/extensions/browser/extensionRecommendations.ts";
+  var hash = "b6599b29852b0e72009854d64b1a3f865929ab27";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/extensions/browser/extensionRecommendations.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 25
+        },
+        end: {
+          line: 7,
+          column: 29
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 22
+        },
+        end: {
+          line: 8,
+          column: 62
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 9
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 12
+        },
+        end: {
+          line: 11,
+          column: 56
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 39
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 20
+          },
+          end: {
+            line: 8,
+            column: 64
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 15
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 12,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 12,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 10
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/extensions/browser/extensionRecommendations.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,UAAU,EAAE,MAAM,sCAAsC,CAAC;AAgBlE,MAAM,OAAgB,wBAAyB,SAAQ,UAAU;IAKxD,kBAAkB,GAAyB,IAAI,CAAC;IACxD,IAAI,SAAS,KAAc,OAAO,IAAI,CAAC,kBAAkB,KAAK,IAAI,CAAC,CAAC,CAAC;IACrE,QAAQ;QACP,IAAI,CAAC,IAAI,CAAC,kBAAkB,EAAE,CAAC;YAC9B,IAAI,CAAC,kBAAkB,GAAG,IAAI,CAAC,UAAU,EAAE,CAAC;QAC7C,CAAC;QACD,OAAO,IAAI,CAAC,kBAAkB,CAAC;IAChC,CAAC;CAED",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/extensions/browser/extensionRecommendations.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Disposable } from '../../../../base/common/lifecycle.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { IExtensionRecommendationReason } from '../../../services/extensionRecommendations/common/extensionRecommendations.js';\n\nexport type GalleryExtensionRecommendation = {\n\treadonly extension: string;\n\treadonly reason: IExtensionRecommendationReason;\n};\n\nexport type ResourceExtensionRecommendation = {\n\treadonly extension: URI;\n\treadonly reason: IExtensionRecommendationReason;\n};\n\nexport type ExtensionRecommendation = GalleryExtensionRecommendation | ResourceExtensionRecommendation;\n\nexport abstract class ExtensionRecommendations extends Disposable {\n\n\treadonly abstract recommendations: ReadonlyArray<ExtensionRecommendation>;\n\tprotected abstract doActivate(): Promise<void>;\n\n\tprivate _activationPromise: Promise<void> | null = null;\n\tget activated(): boolean { return this._activationPromise !== null; }\n\tactivate(): Promise<void> {\n\t\tif (!this._activationPromise) {\n\t\t\tthis._activationPromise = this.doActivate();\n\t\t}\n\t\treturn this._activationPromise;\n\t}\n\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b6599b29852b0e72009854d64b1a3f865929ab27"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_37teddzq7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_37teddzq7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Disposable } from '../../../../base/common/lifecycle.js';
+export class ExtensionRecommendations extends Disposable {
+  _activationPromise =
+  /* istanbul ignore next */
+  (cov_37teddzq7().s[0]++, null);
+  get activated() {
+    /* istanbul ignore next */
+    cov_37teddzq7().f[0]++;
+    cov_37teddzq7().s[1]++;
+    return this._activationPromise !== null;
+  }
+  activate() {
+    /* istanbul ignore next */
+    cov_37teddzq7().f[1]++;
+    cov_37teddzq7().s[2]++;
+    if (!this._activationPromise) {
+      /* istanbul ignore next */
+      cov_37teddzq7().b[0][0]++;
+      cov_37teddzq7().s[3]++;
+      this._activationPromise = this.doActivate();
+    } else
+    /* istanbul ignore next */
+    {
+      cov_37teddzq7().b[0][1]++;
+    }
+    cov_37teddzq7().s[4]++;
+    return this._activationPromise;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJEaXNwb3NhYmxlIiwiRXh0ZW5zaW9uUmVjb21tZW5kYXRpb25zIiwiX2FjdGl2YXRpb25Qcm9taXNlIiwiY292XzM3dGVkZHpxNyIsInMiLCJhY3RpdmF0ZWQiLCJmIiwiYWN0aXZhdGUiLCJiIiwiZG9BY3RpdmF0ZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvZXh0ZW5zaW9ucy9icm93c2VyL2V4dGVuc2lvblJlY29tbWVuZGF0aW9ucy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSUV4dGVuc2lvblJlY29tbWVuZGF0aW9uUmVhc29uIH0gZnJvbSAnLi4vLi4vLi4vc2VydmljZXMvZXh0ZW5zaW9uUmVjb21tZW5kYXRpb25zL2NvbW1vbi9leHRlbnNpb25SZWNvbW1lbmRhdGlvbnMuanMnO1xuXG5leHBvcnQgdHlwZSBHYWxsZXJ5RXh0ZW5zaW9uUmVjb21tZW5kYXRpb24gPSB7XG5cdHJlYWRvbmx5IGV4dGVuc2lvbjogc3RyaW5nO1xuXHRyZWFkb25seSByZWFzb246IElFeHRlbnNpb25SZWNvbW1lbmRhdGlvblJlYXNvbjtcbn07XG5cbmV4cG9ydCB0eXBlIFJlc291cmNlRXh0ZW5zaW9uUmVjb21tZW5kYXRpb24gPSB7XG5cdHJlYWRvbmx5IGV4dGVuc2lvbjogVVJJO1xuXHRyZWFkb25seSByZWFzb246IElFeHRlbnNpb25SZWNvbW1lbmRhdGlvblJlYXNvbjtcbn07XG5cbmV4cG9ydCB0eXBlIEV4dGVuc2lvblJlY29tbWVuZGF0aW9uID0gR2FsbGVyeUV4dGVuc2lvblJlY29tbWVuZGF0aW9uIHwgUmVzb3VyY2VFeHRlbnNpb25SZWNvbW1lbmRhdGlvbjtcblxuZXhwb3J0IGFic3RyYWN0IGNsYXNzIEV4dGVuc2lvblJlY29tbWVuZGF0aW9ucyBleHRlbmRzIERpc3Bvc2FibGUge1xuXG5cdHJlYWRvbmx5IGFic3RyYWN0IHJlY29tbWVuZGF0aW9uczogUmVhZG9ubHlBcnJheTxFeHRlbnNpb25SZWNvbW1lbmRhdGlvbj47XG5cdHByb3RlY3RlZCBhYnN0cmFjdCBkb0FjdGl2YXRlKCk6IFByb21pc2U8dm9pZD47XG5cblx0cHJpdmF0ZSBfYWN0aXZhdGlvblByb21pc2U6IFByb21pc2U8dm9pZD4gfCBudWxsID0gbnVsbDtcblx0Z2V0IGFjdGl2YXRlZCgpOiBib29sZWFuIHsgcmV0dXJuIHRoaXMuX2FjdGl2YXRpb25Qcm9taXNlICE9PSBudWxsOyB9XG5cdGFjdGl2YXRlKCk6IFByb21pc2U8dm9pZD4ge1xuXHRcdGlmICghdGhpcy5fYWN0aXZhdGlvblByb21pc2UpIHtcblx0XHRcdHRoaXMuX2FjdGl2YXRpb25Qcm9taXNlID0gdGhpcy5kb0FjdGl2YXRlKCk7XG5cdFx0fVxuXHRcdHJldHVybiB0aGlzLl9hY3RpdmF0aW9uUHJvbWlzZTtcblx0fVxuXG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLFVBQVUsUUFBUSxzQ0FBc0M7QUFnQmpFLE9BQU0sTUFBZ0JDLHdCQUF5QixTQUFRRCxVQUFVO0VBS3hERSxrQkFBa0I7RUFBQTtFQUFBLENBQUFDLGFBQUEsR0FBQUMsQ0FBQSxPQUF5QixJQUFJO0VBQ3ZELElBQUlDLFNBQVNBLENBQUE7SUFBQTtJQUFBRixhQUFBLEdBQUFHLENBQUE7SUFBQUgsYUFBQSxHQUFBQyxDQUFBO0lBQWMsT0FBTyxJQUFJLENBQUNGLGtCQUFrQixLQUFLLElBQUk7RUFBRTtFQUNwRUssUUFBUUEsQ0FBQTtJQUFBO0lBQUFKLGFBQUEsR0FBQUcsQ0FBQTtJQUFBSCxhQUFBLEdBQUFDLENBQUE7SUFDUCxJQUFJLENBQUMsSUFBSSxDQUFDRixrQkFBa0IsRUFBRTtNQUFBO01BQUFDLGFBQUEsR0FBQUssQ0FBQTtNQUFBTCxhQUFBLEdBQUFDLENBQUE7TUFDN0IsSUFBSSxDQUFDRixrQkFBa0IsR0FBRyxJQUFJLENBQUNPLFVBQVUsRUFBRTtJQUM1QyxDQUFDO0lBQUE7SUFBQTtNQUFBTixhQUFBLEdBQUFLLENBQUE7SUFBQTtJQUFBTCxhQUFBLEdBQUFDLENBQUE7SUFDRCxPQUFPLElBQUksQ0FBQ0Ysa0JBQWtCO0VBQy9CIiwiaWdub3JlTGlzdCI6W119

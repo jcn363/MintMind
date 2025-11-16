@@ -1,0 +1,62 @@
+d7e8483a07c2a9ae5d1ca87085ccb6ac
+/* istanbul ignore next */
+function cov_2oru4zdeju() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/services/notebookEditorService.ts";
+  var hash = "7703b9eb3e0ca6756a41eda56503536d8cb057c3";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/services/notebookEditorService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 38
+        },
+        end: {
+          line: 6,
+          column: 85
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/services/notebookEditorService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAoB,MAAM,+DAA+D,CAAC;AAQlH,MAAM,CAAC,MAAM,sBAAsB,GAAG,eAAe,CAAyB,8BAA8B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/services/notebookEditorService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CodeWindow } from '../../../../../base/browser/window.js';\nimport { createDecorator, ServicesAccessor } from '../../../../../platform/instantiation/common/instantiation.js';\nimport { INotebookEditor, INotebookEditorCreationOptions } from '../notebookBrowser.js';\nimport { Event } from '../../../../../base/common/event.js';\nimport { Dimension } from '../../../../../base/browser/dom.js';\nimport { NotebookEditorWidget } from '../notebookEditorWidget.js';\nimport { URI } from '../../../../../base/common/uri.js';\nimport { ICodeEditor } from '../../../../../editor/browser/editorBrowser.js';\n\nexport const INotebookEditorService = createDecorator<INotebookEditorService>('INotebookEditorWidgetService');\n\nexport interface IBorrowValue<T> {\n\treadonly value: T | undefined;\n}\n\nexport interface INotebookEditorService {\n\t_serviceBrand: undefined;\n\n\tretrieveWidget(accessor: ServicesAccessor, groupId: number, input: { resource: URI; typeId: string }, creationOptions?: INotebookEditorCreationOptions, dimension?: Dimension, codeWindow?: CodeWindow): IBorrowValue<INotebookEditor>;\n\n\tretrieveExistingWidgetFromURI(resource: URI): IBorrowValue<NotebookEditorWidget> | undefined;\n\tretrieveAllExistingWidgets(): IBorrowValue<NotebookEditorWidget>[];\n\treadonly onDidAddNotebookEditor: Event<INotebookEditor>;\n\treadonly onDidRemoveNotebookEditor: Event<INotebookEditor>;\n\taddNotebookEditor(editor: INotebookEditor): void;\n\tremoveNotebookEditor(editor: INotebookEditor): void;\n\tgetNotebookEditor(editorId: string): INotebookEditor | undefined;\n\tlistNotebookEditors(): readonly INotebookEditor[];\n\tgetNotebookForPossibleCell(editor: ICodeEditor): INotebookEditor | undefined;\n\tupdateReplContextKey(uri: string): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7703b9eb3e0ca6756a41eda56503536d8cb057c3"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2oru4zdeju = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2oru4zdeju();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../../platform/instantiation/common/instantiation.js';
+export const INotebookEditorService =
+/* istanbul ignore next */
+(cov_2oru4zdeju().s[0]++, createDecorator('INotebookEditorWidgetService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJTm90ZWJvb2tFZGl0b3JTZXJ2aWNlIiwiY292XzJvcnU0emRlanUiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9ub3RlYm9vay9icm93c2VyL3NlcnZpY2VzL25vdGVib29rRWRpdG9yU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgQ29kZVdpbmRvdyB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvYnJvd3Nlci93aW5kb3cuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yLCBTZXJ2aWNlc0FjY2Vzc29yIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBJTm90ZWJvb2tFZGl0b3IsIElOb3RlYm9va0VkaXRvckNyZWF0aW9uT3B0aW9ucyB9IGZyb20gJy4uL25vdGVib29rQnJvd3Nlci5qcyc7XG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IERpbWVuc2lvbiB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvYnJvd3Nlci9kb20uanMnO1xuaW1wb3J0IHsgTm90ZWJvb2tFZGl0b3JXaWRnZXQgfSBmcm9tICcuLi9ub3RlYm9va0VkaXRvcldpZGdldC5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSUNvZGVFZGl0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9lZGl0b3IvYnJvd3Nlci9lZGl0b3JCcm93c2VyLmpzJztcblxuZXhwb3J0IGNvbnN0IElOb3RlYm9va0VkaXRvclNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SU5vdGVib29rRWRpdG9yU2VydmljZT4oJ0lOb3RlYm9va0VkaXRvcldpZGdldFNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJQm9ycm93VmFsdWU8VD4ge1xuXHRyZWFkb25seSB2YWx1ZTogVCB8IHVuZGVmaW5lZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJTm90ZWJvb2tFZGl0b3JTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdHJldHJpZXZlV2lkZ2V0KGFjY2Vzc29yOiBTZXJ2aWNlc0FjY2Vzc29yLCBncm91cElkOiBudW1iZXIsIGlucHV0OiB7IHJlc291cmNlOiBVUkk7IHR5cGVJZDogc3RyaW5nIH0sIGNyZWF0aW9uT3B0aW9ucz86IElOb3RlYm9va0VkaXRvckNyZWF0aW9uT3B0aW9ucywgZGltZW5zaW9uPzogRGltZW5zaW9uLCBjb2RlV2luZG93PzogQ29kZVdpbmRvdyk6IElCb3Jyb3dWYWx1ZTxJTm90ZWJvb2tFZGl0b3I+O1xuXG5cdHJldHJpZXZlRXhpc3RpbmdXaWRnZXRGcm9tVVJJKHJlc291cmNlOiBVUkkpOiBJQm9ycm93VmFsdWU8Tm90ZWJvb2tFZGl0b3JXaWRnZXQ+IHwgdW5kZWZpbmVkO1xuXHRyZXRyaWV2ZUFsbEV4aXN0aW5nV2lkZ2V0cygpOiBJQm9ycm93VmFsdWU8Tm90ZWJvb2tFZGl0b3JXaWRnZXQ+W107XG5cdHJlYWRvbmx5IG9uRGlkQWRkTm90ZWJvb2tFZGl0b3I6IEV2ZW50PElOb3RlYm9va0VkaXRvcj47XG5cdHJlYWRvbmx5IG9uRGlkUmVtb3ZlTm90ZWJvb2tFZGl0b3I6IEV2ZW50PElOb3RlYm9va0VkaXRvcj47XG5cdGFkZE5vdGVib29rRWRpdG9yKGVkaXRvcjogSU5vdGVib29rRWRpdG9yKTogdm9pZDtcblx0cmVtb3ZlTm90ZWJvb2tFZGl0b3IoZWRpdG9yOiBJTm90ZWJvb2tFZGl0b3IpOiB2b2lkO1xuXHRnZXROb3RlYm9va0VkaXRvcihlZGl0b3JJZDogc3RyaW5nKTogSU5vdGVib29rRWRpdG9yIHwgdW5kZWZpbmVkO1xuXHRsaXN0Tm90ZWJvb2tFZGl0b3JzKCk6IHJlYWRvbmx5IElOb3RlYm9va0VkaXRvcltdO1xuXHRnZXROb3RlYm9va0ZvclBvc3NpYmxlQ2VsbChlZGl0b3I6IElDb2RlRWRpdG9yKTogSU5vdGVib29rRWRpdG9yIHwgdW5kZWZpbmVkO1xuXHR1cGRhdGVSZXBsQ29udGV4dEtleSh1cmk6IHN0cmluZyk6IHZvaWQ7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLGVBQWUsUUFBMEIsK0RBQStEO0FBUWpILE9BQU8sTUFBTUMsc0JBQXNCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUF5Qiw4QkFBOEIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

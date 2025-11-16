@@ -1,0 +1,42 @@
+abc474dfecc48e79beb8f57013851801
+/* istanbul ignore next */
+function cov_6oxhqjil6() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/searchExtTypesInternal.ts";
+  var hash = "b3d870db7f138f4b7c68947e24b736194112448c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/searchExtTypesInternal.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/searchExtTypesInternal.ts",
+      mappings: "",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/search/common/searchExtTypesInternal.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\nimport { FileSearchProviderFolderOptions, FileSearchProviderOptions, TextSearchProviderFolderOptions, TextSearchProviderOptions } from './searchExtTypes.js';\n\ninterface RipgrepSearchOptionsCommon {\n\tnumThreads?: number;\n}\n\nexport type TextSearchProviderOptionsRipgrep = Omit<Partial<TextSearchProviderOptions>, 'folderOptions'> & {\n\tfolderOptions: TextSearchProviderFolderOptions;\n};\n\nexport type FileSearchProviderOptionsRipgrep = & {\n\tfolderOptions: FileSearchProviderFolderOptions;\n} & FileSearchProviderOptions;\n\nexport interface RipgrepTextSearchOptions extends TextSearchProviderOptionsRipgrep, RipgrepSearchOptionsCommon { }\n\nexport interface RipgrepFileSearchOptions extends FileSearchProviderOptionsRipgrep, RipgrepSearchOptionsCommon { }\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b3d870db7f138f4b7c68947e24b736194112448c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_6oxhqjil6 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_6oxhqjil6();
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvc2VhcmNoL2NvbW1vbi9zZWFyY2hFeHRUeXBlc0ludGVybmFsLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuaW1wb3J0IHsgRmlsZVNlYXJjaFByb3ZpZGVyRm9sZGVyT3B0aW9ucywgRmlsZVNlYXJjaFByb3ZpZGVyT3B0aW9ucywgVGV4dFNlYXJjaFByb3ZpZGVyRm9sZGVyT3B0aW9ucywgVGV4dFNlYXJjaFByb3ZpZGVyT3B0aW9ucyB9IGZyb20gJy4vc2VhcmNoRXh0VHlwZXMuanMnO1xuXG5pbnRlcmZhY2UgUmlwZ3JlcFNlYXJjaE9wdGlvbnNDb21tb24ge1xuXHRudW1UaHJlYWRzPzogbnVtYmVyO1xufVxuXG5leHBvcnQgdHlwZSBUZXh0U2VhcmNoUHJvdmlkZXJPcHRpb25zUmlwZ3JlcCA9IE9taXQ8UGFydGlhbDxUZXh0U2VhcmNoUHJvdmlkZXJPcHRpb25zPiwgJ2ZvbGRlck9wdGlvbnMnPiAmIHtcblx0Zm9sZGVyT3B0aW9uczogVGV4dFNlYXJjaFByb3ZpZGVyRm9sZGVyT3B0aW9ucztcbn07XG5cbmV4cG9ydCB0eXBlIEZpbGVTZWFyY2hQcm92aWRlck9wdGlvbnNSaXBncmVwID0gJiB7XG5cdGZvbGRlck9wdGlvbnM6IEZpbGVTZWFyY2hQcm92aWRlckZvbGRlck9wdGlvbnM7XG59ICYgRmlsZVNlYXJjaFByb3ZpZGVyT3B0aW9ucztcblxuZXhwb3J0IGludGVyZmFjZSBSaXBncmVwVGV4dFNlYXJjaE9wdGlvbnMgZXh0ZW5kcyBUZXh0U2VhcmNoUHJvdmlkZXJPcHRpb25zUmlwZ3JlcCwgUmlwZ3JlcFNlYXJjaE9wdGlvbnNDb21tb24geyB9XG5cbmV4cG9ydCBpbnRlcmZhY2UgUmlwZ3JlcEZpbGVTZWFyY2hPcHRpb25zIGV4dGVuZHMgRmlsZVNlYXJjaFByb3ZpZGVyT3B0aW9uc1JpcGdyZXAsIFJpcGdyZXBTZWFyY2hPcHRpb25zQ29tbW9uIHsgfVxuIl0sIm1hcHBpbmdzIjoiIiwiaWdub3JlTGlzdCI6W119

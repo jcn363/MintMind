@@ -1,0 +1,46 @@
+bce8f84b8012769c4fa36e14da3792de
+/* istanbul ignore next */
+function cov_vj2hs58rg() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/common/composite.ts";
+  var hash = "3df920ae90bd99a3079e966e03b9a99628230e4e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/common/composite.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/common/composite.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/common/composite.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../base/common/event.js';\n\nexport interface IComposite {\n\n\t/**\n\t * An event when the composite gained focus.\n\t */\n\treadonly onDidFocus: Event<void>;\n\n\t/**\n\t * An event when the composite lost focus.\n\t */\n\treadonly onDidBlur: Event<void>;\n\n\t/**\n\t * Returns true if the composite has focus.\n\t */\n\thasFocus(): boolean;\n\n\t/**\n\t * Returns the unique identifier of this composite.\n\t */\n\tgetId(): string;\n\n\t/**\n\t * Returns the name of this composite to show in the title area.\n\t */\n\tgetTitle(): string | undefined;\n\n\t/**\n\t * Returns the underlying control of this composite.\n\t */\n\tgetControl(): ICompositeControl | undefined;\n\n\t/**\n\t * Asks the underlying control to focus.\n\t */\n\tfocus(): void;\n}\n\n/**\n * Marker interface for the composite control\n */\nexport interface ICompositeControl { }\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3df920ae90bd99a3079e966e03b9a99628230e4e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_vj2hs58rg = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_vj2hs58rg();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29tbW9uL2NvbXBvc2l0ZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNvbXBvc2l0ZSB7XG5cblx0LyoqXG5cdCAqIEFuIGV2ZW50IHdoZW4gdGhlIGNvbXBvc2l0ZSBnYWluZWQgZm9jdXMuXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZEZvY3VzOiBFdmVudDx2b2lkPjtcblxuXHQvKipcblx0ICogQW4gZXZlbnQgd2hlbiB0aGUgY29tcG9zaXRlIGxvc3QgZm9jdXMuXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZEJsdXI6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRydWUgaWYgdGhlIGNvbXBvc2l0ZSBoYXMgZm9jdXMuXG5cdCAqL1xuXHRoYXNGb2N1cygpOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRoZSB1bmlxdWUgaWRlbnRpZmllciBvZiB0aGlzIGNvbXBvc2l0ZS5cblx0ICovXG5cdGdldElkKCk6IHN0cmluZztcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgbmFtZSBvZiB0aGlzIGNvbXBvc2l0ZSB0byBzaG93IGluIHRoZSB0aXRsZSBhcmVhLlxuXHQgKi9cblx0Z2V0VGl0bGUoKTogc3RyaW5nIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRoZSB1bmRlcmx5aW5nIGNvbnRyb2wgb2YgdGhpcyBjb21wb3NpdGUuXG5cdCAqL1xuXHRnZXRDb250cm9sKCk6IElDb21wb3NpdGVDb250cm9sIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBBc2tzIHRoZSB1bmRlcmx5aW5nIGNvbnRyb2wgdG8gZm9jdXMuXG5cdCAqL1xuXHRmb2N1cygpOiB2b2lkO1xufVxuXG4vKipcbiAqIE1hcmtlciBpbnRlcmZhY2UgZm9yIHRoZSBjb21wb3NpdGUgY29udHJvbFxuICovXG5leHBvcnQgaW50ZXJmYWNlIElDb21wb3NpdGVDb250cm9sIHsgfVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

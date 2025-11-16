@@ -1,0 +1,62 @@
+f6e28f11a02444d5aea4942bde120d4f
+/* istanbul ignore next */
+function cov_2gzwypixco() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/semanticTokensStyling.ts";
+  var hash = "fb142acfa49f163c1923529755feac04d899d0e2";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/semanticTokensStyling.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 45
+        },
+        end: {
+          line: 6,
+          column: 92
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/semanticTokensStyling.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,yDAAyD,CAAC;AAI1F,MAAM,CAAC,MAAM,6BAA6B,GAAG,eAAe,CAAgC,8BAA8B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/semanticTokensStyling.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../platform/instantiation/common/instantiation.js';\nimport { DocumentSemanticTokensProvider, DocumentRangeSemanticTokensProvider } from '../languages.js';\nimport { SemanticTokensProviderStyling } from './semanticTokensProviderStyling.js';\n\nexport const ISemanticTokensStylingService = createDecorator<ISemanticTokensStylingService>('semanticTokensStylingService');\n\nexport type DocumentTokensProvider = DocumentSemanticTokensProvider | DocumentRangeSemanticTokensProvider;\n\nexport interface ISemanticTokensStylingService {\n\treadonly _serviceBrand: undefined;\n\n\tgetStyling(provider: DocumentTokensProvider): SemanticTokensProviderStyling;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "fb142acfa49f163c1923529755feac04d899d0e2"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2gzwypixco = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2gzwypixco();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+export const ISemanticTokensStylingService =
+/* istanbul ignore next */
+(cov_2gzwypixco().s[0]++, createDecorator('semanticTokensStylingService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJU2VtYW50aWNUb2tlbnNTdHlsaW5nU2VydmljZSIsImNvdl8yZ3p3eXBpeGNvIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbW1vbi9zZXJ2aWNlcy9zZW1hbnRpY1Rva2Vuc1N0eWxpbmcudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgRG9jdW1lbnRTZW1hbnRpY1Rva2Vuc1Byb3ZpZGVyLCBEb2N1bWVudFJhbmdlU2VtYW50aWNUb2tlbnNQcm92aWRlciB9IGZyb20gJy4uL2xhbmd1YWdlcy5qcyc7XG5pbXBvcnQgeyBTZW1hbnRpY1Rva2Vuc1Byb3ZpZGVyU3R5bGluZyB9IGZyb20gJy4vc2VtYW50aWNUb2tlbnNQcm92aWRlclN0eWxpbmcuanMnO1xuXG5leHBvcnQgY29uc3QgSVNlbWFudGljVG9rZW5zU3R5bGluZ1NlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVNlbWFudGljVG9rZW5zU3R5bGluZ1NlcnZpY2U+KCdzZW1hbnRpY1Rva2Vuc1N0eWxpbmdTZXJ2aWNlJyk7XG5cbmV4cG9ydCB0eXBlIERvY3VtZW50VG9rZW5zUHJvdmlkZXIgPSBEb2N1bWVudFNlbWFudGljVG9rZW5zUHJvdmlkZXIgfCBEb2N1bWVudFJhbmdlU2VtYW50aWNUb2tlbnNQcm92aWRlcjtcblxuZXhwb3J0IGludGVyZmFjZSBJU2VtYW50aWNUb2tlbnNTdHlsaW5nU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRnZXRTdHlsaW5nKHByb3ZpZGVyOiBEb2N1bWVudFRva2Vuc1Byb3ZpZGVyKTogU2VtYW50aWNUb2tlbnNQcm92aWRlclN0eWxpbmc7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLGVBQWUsUUFBUSx5REFBeUQ7QUFJekYsT0FBTyxNQUFNQyw2QkFBNkI7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQWdDLDhCQUE4QixDQUFDIiwiaWdub3JlTGlzdCI6W119

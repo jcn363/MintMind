@@ -1,0 +1,46 @@
+da0c78043cc336bc6348295f0ebf9f19
+/* istanbul ignore next */
+function cov_1pljvwww3b() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/navigatorKeyboard.ts";
+  var hash = "a6213d4049fbcb074117c66725a3de40fc451d3a";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/navigatorKeyboard.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/navigatorKeyboard.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/navigatorKeyboard.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport interface IKeyboard {\n\tgetLayoutMap(): Promise<Object>;\n\tlock(keyCodes?: string[]): Promise<void>;\n\tunlock(): void;\n\taddEventListener?(type: string, listener: () => void): void;\n\n}\nexport type INavigatorWithKeyboard = Navigator & {\n\tkeyboard: IKeyboard;\n};"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a6213d4049fbcb074117c66725a3de40fc451d3a"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1pljvwww3b = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1pljvwww3b();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMva2V5YmluZGluZy9icm93c2VyL25hdmlnYXRvcktleWJvYXJkLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5leHBvcnQgaW50ZXJmYWNlIElLZXlib2FyZCB7XG5cdGdldExheW91dE1hcCgpOiBQcm9taXNlPE9iamVjdD47XG5cdGxvY2soa2V5Q29kZXM/OiBzdHJpbmdbXSk6IFByb21pc2U8dm9pZD47XG5cdHVubG9jaygpOiB2b2lkO1xuXHRhZGRFdmVudExpc3RlbmVyPyh0eXBlOiBzdHJpbmcsIGxpc3RlbmVyOiAoKSA9PiB2b2lkKTogdm9pZDtcblxufVxuZXhwb3J0IHR5cGUgSU5hdmlnYXRvcldpdGhLZXlib2FyZCA9IE5hdmlnYXRvciAmIHtcblx0a2V5Ym9hcmQ6IElLZXlib2FyZDtcbn07Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

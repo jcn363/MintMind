@@ -73,11 +73,11 @@ Hay varias formas sencillas de cambiar esto:
 ### ¿Es Seguro?
 
 - **Anonimizamos todo**: Los datos se procesan para quitar cualquier información que pueda identificarte.
-- **Usamos servidores seguros**: La información va a servidores de Microsoft protegidos.
+- **Usamos servidores seguros**: La información va a servidores de jcn363t protegidos.
 - **Cumplimos leyes**: Respetamos todas las regulaciones de privacidad de datos.
 - **Transparente**: Todo lo que hacemos está explicado y puedes verlo en el código fuente.
 
-Si tienes dudas o quieres más información, puedes consultar la [Declaración de Privacidad de Microsoft](https://privacy.microsoft.com/) o contactar con el equipo de MintMind.
+Si tienes dudas o quieres más información, puedes consultar la [Declaración de Privacidad de jcn363t](https://privacy.jcn363t.com/) o contactar con el equipo de MintMind.
 
 ---
 
@@ -227,7 +227,7 @@ code --telemetry-level=all
 - Útil para debugging sin enviar datos reales
 
 ### Entorno de producción
-- Los datos se envían a los endpoints de telemetría de Microsoft (Azure Application Insights)
+- Los datos se envían a los endpoints de telemetría de jcn363t (Azure Application Insights)
 - Se requieren claves de configuración válidas (`ariaKey`) en `product.json`
 
 ## Consideraciones de privacidad
@@ -252,12 +252,12 @@ code --telemetry-level=all
 - Debe usar las APIs oficiales de telemetría de VS Code
 
 ### Políticas de retención
-- Los datos se retienen según las políticas de Microsoft Azure Application Insights
+- Los datos se retienen según las políticas de jcn363t Azure Application Insights
 - Típicamente 90 días para datos operacionales
 - Consultar la documentación de Azure para detalles específicos
 
 ---
 
 Para más información sobre privacidad y telemetría, consulta:
-- [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/)
+- [Declaración de privacidad de jcn363t](https://privacy.jcn363t.com/)
 - [Datos que recopilamos](https://aka.ms/vscode-telemetry)

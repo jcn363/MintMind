@@ -1,0 +1,233 @@
+205e7b0f0cc6d64e7ea253fdf13d85ad
+/* istanbul ignore next */
+function cov_2q52h24dlx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/browser/ui/progressbar/progressAccessibilitySignal.ts";
+  var hash = "b80fa58e576865a6bb719b231bc392dc796a7de8";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/progressbar/progressAccessibilitySignal.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 53
+        },
+        end: {
+          line: 9,
+          column: 2
+        }
+      },
+      "1": {
+        start: {
+          line: 5,
+          column: 60
+        },
+        end: {
+          line: 9,
+          column: 1
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 50
+        },
+        end: {
+          line: 10,
+          column: 94
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 87
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 4
+        },
+        end: {
+          line: 15,
+          column: 80
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 5,
+            column: 53
+          },
+          end: {
+            line: 5,
+            column: 54
+          }
+        },
+        loc: {
+          start: {
+            line: 5,
+            column: 60
+          },
+          end: {
+            line: 9,
+            column: 1
+          }
+        },
+        line: 5
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 8,
+            column: 13
+          },
+          end: {
+            line: 8,
+            column: 14
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 19
+          },
+          end: {
+            line: 8,
+            column: 22
+          }
+        },
+        line: 8
+      },
+      "2": {
+        name: "setProgressAccessibilitySignalScheduler",
+        decl: {
+          start: {
+            line: 11,
+            column: 16
+          },
+          end: {
+            line: 11,
+            column: 55
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 94
+          },
+          end: {
+            line: 13,
+            column: 1
+          }
+        },
+        line: 11
+      },
+      "3": {
+        name: "getProgressAccessibilitySignalScheduler",
+        decl: {
+          start: {
+            line: 14,
+            column: 16
+          },
+          end: {
+            line: 14,
+            column: 55
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 81
+          },
+          end: {
+            line: 16,
+            column: 1
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/progressbar/progressAccessibilitySignal.ts",
+      mappings: "AAAA;;;gGAGgG;AAMhG,MAAM,4CAA4C,GAAG,GAAG,EAAE,CAAC,CAAC;IAC3D,UAAU,EAAE,CAAC,CAAC;IACd,WAAW,EAAE,CAAC,CAAC;IACf,OAAO,EAAE,GAAG,EAAE,GAAG,CAAC;CAClB,CAAC,CAAC;AACH,IAAI,2CAA2C,GAA6F,4CAA4C,CAAC;AAEzL,MAAM,UAAU,uCAAuC,CAAC,oCAA8H;IACrL,2CAA2C,GAAG,oCAAoC,CAAC;AACpF,CAAC;AAED,MAAM,UAAU,uCAAuC,CAAC,WAAmB,EAAE,UAAmB;IAC/F,OAAO,2CAA2C,CAAC,WAAW,EAAE,UAAU,CAAC,CAAC;AAC7E,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/browser/ui/progressbar/progressAccessibilitySignal.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../common/lifecycle.js';\n\nexport interface IScopedAccessibilityProgressSignalDelegate extends IDisposable { }\n\nconst nullScopedAccessibilityProgressSignalFactory = () => ({\n\tmsLoopTime: -1,\n\tmsDelayTime: -1,\n\tdispose: () => { },\n});\nlet progressAccessibilitySignalSchedulerFactory: (msDelayTime: number, msLoopTime?: number) => IScopedAccessibilityProgressSignalDelegate = nullScopedAccessibilityProgressSignalFactory;\n\nexport function setProgressAccessibilitySignalScheduler(progressAccessibilitySignalScheduler: (msDelayTime: number, msLoopTime?: number) => IScopedAccessibilityProgressSignalDelegate) {\n\tprogressAccessibilitySignalSchedulerFactory = progressAccessibilitySignalScheduler;\n}\n\nexport function getProgressAccessibilitySignalScheduler(msDelayTime: number, msLoopTime?: number): IScopedAccessibilityProgressSignalDelegate {\n\treturn progressAccessibilitySignalSchedulerFactory(msDelayTime, msLoopTime);\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b80fa58e576865a6bb719b231bc392dc796a7de8"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2q52h24dlx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2q52h24dlx();
+cov_2q52h24dlx().s[0]++;
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+const nullScopedAccessibilityProgressSignalFactory = () => {
+  /* istanbul ignore next */
+  cov_2q52h24dlx().f[0]++;
+  cov_2q52h24dlx().s[1]++;
+  return {
+    msLoopTime: -1,
+    msDelayTime: -1,
+    dispose: () => {
+      /* istanbul ignore next */
+      cov_2q52h24dlx().f[1]++;
+    }
+  };
+};
+let progressAccessibilitySignalSchedulerFactory =
+/* istanbul ignore next */
+(cov_2q52h24dlx().s[2]++, nullScopedAccessibilityProgressSignalFactory);
+export function setProgressAccessibilitySignalScheduler(progressAccessibilitySignalScheduler) {
+  /* istanbul ignore next */
+  cov_2q52h24dlx().f[2]++;
+  cov_2q52h24dlx().s[3]++;
+  progressAccessibilitySignalSchedulerFactory = progressAccessibilitySignalScheduler;
+}
+export function getProgressAccessibilitySignalScheduler(msDelayTime, msLoopTime) {
+  /* istanbul ignore next */
+  cov_2q52h24dlx().f[3]++;
+  cov_2q52h24dlx().s[4]++;
+  return progressAccessibilitySignalSchedulerFactory(msDelayTime, msLoopTime);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMnE1MmgyNGRseCIsImFjdHVhbENvdmVyYWdlIiwicyIsIm51bGxTY29wZWRBY2Nlc3NpYmlsaXR5UHJvZ3Jlc3NTaWduYWxGYWN0b3J5IiwiZiIsIm1zTG9vcFRpbWUiLCJtc0RlbGF5VGltZSIsImRpc3Bvc2UiLCJwcm9ncmVzc0FjY2Vzc2liaWxpdHlTaWduYWxTY2hlZHVsZXJGYWN0b3J5Iiwic2V0UHJvZ3Jlc3NBY2Nlc3NpYmlsaXR5U2lnbmFsU2NoZWR1bGVyIiwicHJvZ3Jlc3NBY2Nlc3NpYmlsaXR5U2lnbmFsU2NoZWR1bGVyIiwiZ2V0UHJvZ3Jlc3NBY2Nlc3NpYmlsaXR5U2lnbmFsU2NoZWR1bGVyIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2Jyb3dzZXIvdWkvcHJvZ3Jlc3NiYXIvcHJvZ3Jlc3NBY2Nlc3NpYmlsaXR5U2lnbmFsLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElTY29wZWRBY2Nlc3NpYmlsaXR5UHJvZ3Jlc3NTaWduYWxEZWxlZ2F0ZSBleHRlbmRzIElEaXNwb3NhYmxlIHsgfVxuXG5jb25zdCBudWxsU2NvcGVkQWNjZXNzaWJpbGl0eVByb2dyZXNzU2lnbmFsRmFjdG9yeSA9ICgpID0+ICh7XG5cdG1zTG9vcFRpbWU6IC0xLFxuXHRtc0RlbGF5VGltZTogLTEsXG5cdGRpc3Bvc2U6ICgpID0+IHsgfSxcbn0pO1xubGV0IHByb2dyZXNzQWNjZXNzaWJpbGl0eVNpZ25hbFNjaGVkdWxlckZhY3Rvcnk6IChtc0RlbGF5VGltZTogbnVtYmVyLCBtc0xvb3BUaW1lPzogbnVtYmVyKSA9PiBJU2NvcGVkQWNjZXNzaWJpbGl0eVByb2dyZXNzU2lnbmFsRGVsZWdhdGUgPSBudWxsU2NvcGVkQWNjZXNzaWJpbGl0eVByb2dyZXNzU2lnbmFsRmFjdG9yeTtcblxuZXhwb3J0IGZ1bmN0aW9uIHNldFByb2dyZXNzQWNjZXNzaWJpbGl0eVNpZ25hbFNjaGVkdWxlcihwcm9ncmVzc0FjY2Vzc2liaWxpdHlTaWduYWxTY2hlZHVsZXI6IChtc0RlbGF5VGltZTogbnVtYmVyLCBtc0xvb3BUaW1lPzogbnVtYmVyKSA9PiBJU2NvcGVkQWNjZXNzaWJpbGl0eVByb2dyZXNzU2lnbmFsRGVsZWdhdGUpIHtcblx0cHJvZ3Jlc3NBY2Nlc3NpYmlsaXR5U2lnbmFsU2NoZWR1bGVyRmFjdG9yeSA9IHByb2dyZXNzQWNjZXNzaWJpbGl0eVNpZ25hbFNjaGVkdWxlcjtcbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGdldFByb2dyZXNzQWNjZXNzaWJpbGl0eVNpZ25hbFNjaGVkdWxlcihtc0RlbGF5VGltZTogbnVtYmVyLCBtc0xvb3BUaW1lPzogbnVtYmVyKTogSVNjb3BlZEFjY2Vzc2liaWxpdHlQcm9ncmVzc1NpZ25hbERlbGVnYXRlIHtcblx0cmV0dXJuIHByb2dyZXNzQWNjZXNzaWJpbGl0eVNpZ25hbFNjaGVkdWxlckZhY3RvcnkobXNEZWxheVRpbWUsIG1zTG9vcFRpbWUpO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBc0JDO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFBQUEsY0FBQSxHQUFBRSxDQUFBO0FBdEJEOzs7O0FBU0EsTUFBTUMsNENBQTRDLEdBQUdBLENBQUEsS0FBTztFQUFBO0VBQUFILGNBQUEsR0FBQUksQ0FBQTtFQUFBSixjQUFBLEdBQUFFLENBQUE7RUFBQTtJQUMzREcsVUFBVSxFQUFFLENBQUMsQ0FBQztJQUNkQyxXQUFXLEVBQUUsQ0FBQyxDQUFDO0lBQ2ZDLE9BQU8sRUFBRUEsQ0FBQSxLQUFLO01BQUE7TUFBQVAsY0FBQSxHQUFBSSxDQUFBO0lBQUc7R0FDakI7Q0FBQztBQUNGLElBQUlJLDJDQUEyQztBQUFBO0FBQUEsQ0FBQVIsY0FBQSxHQUFBRSxDQUFBLE9BQTZGQyw0Q0FBNEM7QUFFeEwsT0FBTSxTQUFVTSx1Q0FBdUNBLENBQUNDLG9DQUE4SDtFQUFBO0VBQUFWLGNBQUEsR0FBQUksQ0FBQTtFQUFBSixjQUFBLEdBQUFFLENBQUE7RUFDckxNLDJDQUEyQyxHQUFHRSxvQ0FBb0M7QUFDbkY7QUFFQSxPQUFNLFNBQVVDLHVDQUF1Q0EsQ0FBQ0wsV0FBbUIsRUFBRUQsVUFBbUI7RUFBQTtFQUFBTCxjQUFBLEdBQUFJLENBQUE7RUFBQUosY0FBQSxHQUFBRSxDQUFBO0VBQy9GLE9BQU9NLDJDQUEyQyxDQUFDRixXQUFXLEVBQUVELFVBQVUsQ0FBQztBQUM1RSIsImlnbm9yZUxpc3QiOltdfQ==

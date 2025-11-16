@@ -1,0 +1,64 @@
+096445eddc12c72052d69b7abced3ef8
+/* istanbul ignore next */
+function cov_19a7egqadt() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/webview/browser/webview.web.contribution.ts";
+  var hash = "851b2c9aca6944bc2d471ced8b0bde8f1c7fa8c6";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/webview/browser/webview.web.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 8,
+          column: 86
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/webview/browser/webview.web.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,eAAe,EAAE,MAAM,cAAc,CAAC;AAC/C,OAAO,EAAE,cAAc,EAAE,MAAM,qBAAqB,CAAC;AAErD,iBAAiB,CAAC,eAAe,EAAE,cAAc,oCAA4B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/webview/browser/webview.web.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\nimport { IWebviewService } from './webview.js';\nimport { WebviewService } from './webviewService.js';\n\nregisterSingleton(IWebviewService, WebviewService, InstantiationType.Delayed);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "851b2c9aca6944bc2d471ced8b0bde8f1c7fa8c6"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_19a7egqadt = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_19a7egqadt();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { IWebviewService } from './webview.js';
+import { WebviewService } from './webviewService.js';
+/* istanbul ignore next */
+cov_19a7egqadt().s[0]++;
+registerSingleton(IWebviewService, WebviewService, 1 /* InstantiationType.Delayed */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWdpc3RlclNpbmdsZXRvbiIsIklXZWJ2aWV3U2VydmljZSIsIldlYnZpZXdTZXJ2aWNlIiwiY292XzE5YTdlZ3FhZHQiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi93ZWJ2aWV3L2Jyb3dzZXIvd2Vidmlldy53ZWIuY29udHJpYnV0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJbnN0YW50aWF0aW9uVHlwZSwgcmVnaXN0ZXJTaW5nbGV0b24gfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9leHRlbnNpb25zLmpzJztcbmltcG9ydCB7IElXZWJ2aWV3U2VydmljZSB9IGZyb20gJy4vd2Vidmlldy5qcyc7XG5pbXBvcnQgeyBXZWJ2aWV3U2VydmljZSB9IGZyb20gJy4vd2Vidmlld1NlcnZpY2UuanMnO1xuXG5yZWdpc3RlclNpbmdsZXRvbihJV2Vidmlld1NlcnZpY2UsIFdlYnZpZXdTZXJ2aWNlLCBJbnN0YW50aWF0aW9uVHlwZS5EZWxheWVkKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBNEJBLGlCQUFpQixRQUFRLHlEQUF5RDtBQUM5RyxTQUFTQyxlQUFlLFFBQVEsY0FBYztBQUM5QyxTQUFTQyxjQUFjLFFBQVEscUJBQXFCO0FBQUM7QUFBQUMsY0FBQSxHQUFBQyxDQUFBO0FBRXJESixpQkFBaUIsQ0FBQ0MsZUFBZSxFQUFFQyxjQUFjLG9DQUE0QiIsImlnbm9yZUxpc3QiOltdfQ==

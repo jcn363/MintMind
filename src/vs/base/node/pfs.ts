@@ -16,6 +16,20 @@ import { URI } from '../common/uri.js';
 import { CancellationToken } from '../common/cancellation.js';
 import { rtrim } from '../common/strings.js';
 
+// Tauri imports for runtime detection and filesystem operations
+let invoke: (cmd: string, args?: any) => Promise<any>;
+let isTauri = false;
+
+// Runtime detection for Tauri
+try {
+	if (typeof window !== 'undefined' && (window as any).__TAURI__) {
+		isTauri = true;
+		invoke = (window as any).__TAURI__.invoke;
+	}
+} catch {
+	// Not in Tauri environment, continue with Node.js fs
+}
+
 //#region rimraf
 
 export enum RimRafMode {
@@ -104,6 +118,23 @@ export interface IDirent {
 async function readdir(path: string): Promise<string[]>;
 async function readdir(path: string, options: { withFileTypes: true }): Promise<IDirent[]>;
 async function readdir(path: string, options?: { withFileTypes: true }): Promise<(string | IDirent)[]> {
+	if (isTauri) {
+		try {
+			const entries = await invoke('read_dir', { path });
+			if (options?.withFileTypes) {
+				return entries.map((entry: any) => ({
+					name: entry.name,
+					isFile: () => entry.is_file,
+					isDirectory: () => entry.is_dir,
+					isSymbolicLink: () => false, // Tauri doesn't distinguish symlinks in readdir yet
+				}));
+			} else {
+				return entries.map((entry: any) => entry.name);
+			}
+		} catch (error) {
+			throw error;
+		}
+	}
 	try {
 		return await doReaddir(path, options);
 	} catch (error) {
@@ -258,6 +289,44 @@ export namespace SymlinkSupport {
 	 * as `symbolicLink` value.
 	 */
 	export async function stat(path: string): Promise<IStats> {
+		if (isTauri) {
+			try {
+				const metadata = await invoke('metadata', { path });
+				const stat = {
+					isFile: () => metadata.is_file,
+					isDirectory: () => metadata.is_dir,
+					isSymbolicLink: () => false, // Tauri metadata doesn't distinguish symlinks yet
+					size: metadata.size,
+					atime: new Date(metadata.modified ? metadata.modified * 1000 : 0),
+					mtime: new Date(metadata.modified ? metadata.modified * 1000 : 0),
+					ctime: new Date(metadata.created ? metadata.created * 1000 : 0),
+					birthtime: new Date(metadata.created ? metadata.created * 1000 : 0),
+					mode: 0o666, // Default mode
+					uid: 0,
+					gid: 0,
+					dev: 0,
+					ino: 0,
+					nlink: 1,
+					rdev: 0,
+					blksize: 4096,
+					blocks: 0,
+				} as fs.Stats;
+
+				// Check for dangling symlinks by trying to read the path
+				let symbolicLink: { dangling: boolean } | undefined;
+				try {
+					await invoke('read_text_file', { path });
+				} catch (error) {
+					if (error.includes && error.includes('No such file or directory')) {
+						symbolicLink = { dangling: true };
+					}
+				}
+
+				return { stat, symbolicLink };
+			} catch (error) {
+				throw error;
+			}
+		}
 
 		// First stat the link
 		let lstats: fs.Stats | undefined;
@@ -320,6 +389,14 @@ export namespace SymlinkSupport {
 	 * or not without support for symbolic links.
 	 */
 	export async function existsFile(path: string): Promise<boolean> {
+		if (isTauri) {
+			try {
+				const metadata = await invoke('metadata', { path });
+				return metadata.is_file;
+			} catch {
+				return false;
+			}
+		}
 		try {
 			const { stat, symbolicLink } = await SymlinkSupport.stat(path);
 
@@ -342,6 +419,14 @@ export namespace SymlinkSupport {
 	 * or not without support for symbolic links.
 	 */
 	export async function existsDirectory(path: string): Promise<boolean> {
+		if (isTauri) {
+			try {
+				const metadata = await invoke('metadata', { path });
+				return metadata.is_dir;
+			} catch {
+				return false;
+			}
+		}
 		try {
 			const { stat, symbolicLink } = await SymlinkSupport.stat(path);
 
@@ -403,6 +488,15 @@ export function configureFlushOnWrite(enabled: boolean): void {
 //
 // See https://github.com/nodejs/node/blob/v5.10.0/lib/fs.js#L1194
 function doWriteFileAndFlush(path: string, data: string | Buffer | Uint8Array, options: IEnsuredWriteFileOptions, callback: (error: Error | null) => void): void {
+	if (isTauri) {
+		// For Tauri, use string content for now (binary support can be added later)
+		const content = typeof data === 'string' ? data : Buffer.isBuffer(data) ? data.toString() : new TextDecoder().decode(data);
+		invoke('write_text_file', { path, content })
+			.then(() => callback(null))
+			.catch(error => callback(error));
+		return;
+	}
+
 	if (!canFlush) {
 		return fs.writeFile(path, data, { mode: options.mode, flag: options.flag }, callback);
 	}
@@ -793,6 +887,10 @@ export const Promises = new class {
 
 		return (fd: number, buffer: Uint8Array, offset: number, length: number, position: number | null) => {
 			return new Promise<{ bytesRead: number; buffer: Uint8Array }>((resolve, reject) => {
+				if (isTauri) {
+					// TODO: Implement Tauri file descriptor operations if needed
+					return reject(new Error('File descriptor operations not yet supported in Tauri'));
+				}
 				fs.read(fd, buffer, offset, length, position, (err, bytesRead, buffer) => {
 					if (err) {
 						return reject(err);
@@ -812,6 +910,10 @@ export const Promises = new class {
 
 		return (fd: number, buffer: Uint8Array, offset: number | undefined | null, length: number | undefined | null, position: number | undefined | null) => {
 			return new Promise<{ bytesWritten: number; buffer: Uint8Array }>((resolve, reject) => {
+				if (isTauri) {
+					// TODO: Implement Tauri file descriptor operations if needed
+					return reject(new Error('File descriptor operations not yet supported in Tauri'));
+				}
 				fs.write(fd, buffer, offset, length, position, (err, bytesWritten, buffer) => {
 					if (err) {
 						return reject(err);
@@ -823,18 +925,51 @@ export const Promises = new class {
 		};
 	}
 
-	get fdatasync() { return promisify(fs.fdatasync); } // not exposed as API in 22.x yet
+	get fdatasync() {
+		if (isTauri) {
+			// TODO: Implement Tauri fdatasync if needed
+			return async () => { throw new Error('fdatasync not yet supported in Tauri'); };
+		}
+		return promisify(fs.fdatasync);
+	} // not exposed as API in 22.x yet
 
-	get open() { return promisify(fs.open); } 			// changed to return `FileHandle` in promise API
-	get close() { return promisify(fs.close); } 		// not exposed as API due to the `FileHandle` return type of `open`
+	get open() {
+		if (isTauri) {
+			// TODO: Implement Tauri file opening if needed
+			return async () => { throw new Error('File opening not yet supported in Tauri'); };
+		}
+		return promisify(fs.open);
+	} 			// changed to return `FileHandle` in promise API
 
-	get ftruncate() { return promisify(fs.ftruncate); } // not exposed as API in 22.x yet
+	get close() {
+		if (isTauri) {
+			// TODO: Implement Tauri file closing if needed
+			return async () => { throw new Error('File closing not yet supported in Tauri'); };
+		}
+		return promisify(fs.close);
+	} 		// not exposed as API due to the `FileHandle` return type of `open`
+
+	get ftruncate() {
+		if (isTauri) {
+			// TODO: Implement Tauri ftruncate if needed
+			return async () => { throw new Error('ftruncate not yet supported in Tauri'); };
+		}
+		return promisify(fs.ftruncate);
+	} // not exposed as API in 22.x yet
 
 	//#endregion
 
 	//#region Implemented by us
 
 	async exists(path: string): Promise<boolean> {
+		if (isTauri) {
+			try {
+				await invoke('exists', { path });
+				return true;
+			} catch {
+				return false;
+			}
+		}
 		try {
 			await fs.promises.access(path);
 

@@ -1,0 +1,106 @@
+5479f27a0d4b88d7e6a7f456549f7fbd
+/* istanbul ignore next */
+function cov_dhxtrdfik() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/common/languageDetectionWorkerService.ts";
+  var hash = "fa92caa57fd6bc94d96c5656dbeaa9caee04464f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/common/languageDetectionWorkerService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 41
+        },
+        end: {
+          line: 6,
+          column: 85
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 52
+        },
+        end: {
+          line: 7,
+          column: 71
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 55
+        },
+        end: {
+          line: 9,
+          column: 95
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 40
+        },
+        end: {
+          line: 10,
+          column: 74
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/common/languageDetectionWorkerService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAE7F,MAAM,CAAC,MAAM,yBAAyB,GAAG,eAAe,CAA4B,2BAA2B,CAAC,CAAC;AAEjH,MAAM,CAAC,MAAM,oCAAoC,GAAG,mBAAmB,CAAC;AAwBxE,0BAA0B;AAE1B,MAAM,CAAC,MAAM,uCAAuC,GAAG,wCAAwC,CAAC;AAkBhG,MAAM,CAAC,MAAM,wBAAwB,GAAG,kCAAkC,CAAC;AAgB3E,YAAY",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/common/languageDetectionWorkerService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\n\nexport const ILanguageDetectionService = createDecorator<ILanguageDetectionService>('ILanguageDetectionService');\n\nexport const LanguageDetectionLanguageEventSource = 'languageDetection';\n\nexport interface ILanguageDetectionService {\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * @param languageId The languageId to check if language detection is currently enabled.\n\t * @returns whether or not language detection is on for this language.\n\t */\n\tisEnabledForLanguage(languageId: string): boolean;\n\n\t/**\n\t * @param resource The resource to detect the language for.\n\t * @param supportedLangs Optional. When populated, the model will only return languages from the provided list\n\t * @returns the language id for the given resource or undefined if the model is not confident enough.\n\t */\n\tdetectLanguage(resource: URI, supportedLangs?: string[]): Promise<string | undefined>;\n}\n\nexport type LanguageDetectionHintConfig = {\n\tuntitledEditors: boolean;\n\tnotebookEditors: boolean;\n};\n\n//#region Telemetry events\n\nexport const AutomaticLanguageDetectionLikelyWrongId = 'automaticlanguagedetection.likelywrong';\n\nexport interface IAutomaticLanguageDetectionLikelyWrongData {\n\tcurrentLanguageId: string;\n\tnextLanguageId: string;\n\tlineCount: number;\n\tmodelPreference: string;\n}\n\nexport type AutomaticLanguageDetectionLikelyWrongClassification = {\n\towner: 'TylerLeonhardt';\n\tcomment: 'Used to determine how often language detection is likely wrong.';\n\tcurrentLanguageId: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The language id we guessed.' };\n\tnextLanguageId: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The language id the user chose.' };\n\tlineCount: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The number of lines in the file.' };\n\tmodelPreference: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'What the user\\'s model preference is.' };\n};\n\nexport const LanguageDetectionStatsId = 'automaticlanguagedetection.stats';\n\nexport interface ILanguageDetectionStats {\n\tlanguages: string;\n\tconfidences: string;\n\ttimeSpent: number;\n}\n\nexport type LanguageDetectionStatsClassification = {\n\towner: 'TylerLeonhardt';\n\tcomment: 'Used to determine how definitive language detection is and how long it takes.';\n\tlanguages: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The languages the model supports.' };\n\tconfidences: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The confidences of those languages.' };\n\ttimeSpent: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'How long the operation took.' };\n};\n\n//#endregion\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "fa92caa57fd6bc94d96c5656dbeaa9caee04464f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_dhxtrdfik = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_dhxtrdfik();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const ILanguageDetectionService =
+/* istanbul ignore next */
+(cov_dhxtrdfik().s[0]++, createDecorator('ILanguageDetectionService'));
+export const LanguageDetectionLanguageEventSource =
+/* istanbul ignore next */
+(cov_dhxtrdfik().s[1]++, 'languageDetection');
+//#region Telemetry events
+export const AutomaticLanguageDetectionLikelyWrongId =
+/* istanbul ignore next */
+(cov_dhxtrdfik().s[2]++, 'automaticlanguagedetection.likelywrong');
+export const LanguageDetectionStatsId =
+/* istanbul ignore next */
+(cov_dhxtrdfik().s[3]++, 'automaticlanguagedetection.stats');
+//#endregion
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJTGFuZ3VhZ2VEZXRlY3Rpb25TZXJ2aWNlIiwiY292X2RoeHRyZGZpayIsInMiLCJMYW5ndWFnZURldGVjdGlvbkxhbmd1YWdlRXZlbnRTb3VyY2UiLCJBdXRvbWF0aWNMYW5ndWFnZURldGVjdGlvbkxpa2VseVdyb25nSWQiLCJMYW5ndWFnZURldGVjdGlvblN0YXRzSWQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9sYW5ndWFnZURldGVjdGlvbi9jb21tb24vbGFuZ3VhZ2VEZXRlY3Rpb25Xb3JrZXJTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5cbmV4cG9ydCBjb25zdCBJTGFuZ3VhZ2VEZXRlY3Rpb25TZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElMYW5ndWFnZURldGVjdGlvblNlcnZpY2U+KCdJTGFuZ3VhZ2VEZXRlY3Rpb25TZXJ2aWNlJyk7XG5cbmV4cG9ydCBjb25zdCBMYW5ndWFnZURldGVjdGlvbkxhbmd1YWdlRXZlbnRTb3VyY2UgPSAnbGFuZ3VhZ2VEZXRlY3Rpb24nO1xuXG5leHBvcnQgaW50ZXJmYWNlIElMYW5ndWFnZURldGVjdGlvblNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEBwYXJhbSBsYW5ndWFnZUlkIFRoZSBsYW5ndWFnZUlkIHRvIGNoZWNrIGlmIGxhbmd1YWdlIGRldGVjdGlvbiBpcyBjdXJyZW50bHkgZW5hYmxlZC5cblx0ICogQHJldHVybnMgd2hldGhlciBvciBub3QgbGFuZ3VhZ2UgZGV0ZWN0aW9uIGlzIG9uIGZvciB0aGlzIGxhbmd1YWdlLlxuXHQgKi9cblx0aXNFbmFibGVkRm9yTGFuZ3VhZ2UobGFuZ3VhZ2VJZDogc3RyaW5nKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogQHBhcmFtIHJlc291cmNlIFRoZSByZXNvdXJjZSB0byBkZXRlY3QgdGhlIGxhbmd1YWdlIGZvci5cblx0ICogQHBhcmFtIHN1cHBvcnRlZExhbmdzIE9wdGlvbmFsLiBXaGVuIHBvcHVsYXRlZCwgdGhlIG1vZGVsIHdpbGwgb25seSByZXR1cm4gbGFuZ3VhZ2VzIGZyb20gdGhlIHByb3ZpZGVkIGxpc3Rcblx0ICogQHJldHVybnMgdGhlIGxhbmd1YWdlIGlkIGZvciB0aGUgZ2l2ZW4gcmVzb3VyY2Ugb3IgdW5kZWZpbmVkIGlmIHRoZSBtb2RlbCBpcyBub3QgY29uZmlkZW50IGVub3VnaC5cblx0ICovXG5cdGRldGVjdExhbmd1YWdlKHJlc291cmNlOiBVUkksIHN1cHBvcnRlZExhbmdzPzogc3RyaW5nW10pOiBQcm9taXNlPHN0cmluZyB8IHVuZGVmaW5lZD47XG59XG5cbmV4cG9ydCB0eXBlIExhbmd1YWdlRGV0ZWN0aW9uSGludENvbmZpZyA9IHtcblx0dW50aXRsZWRFZGl0b3JzOiBib29sZWFuO1xuXHRub3RlYm9va0VkaXRvcnM6IGJvb2xlYW47XG59O1xuXG4vLyNyZWdpb24gVGVsZW1ldHJ5IGV2ZW50c1xuXG5leHBvcnQgY29uc3QgQXV0b21hdGljTGFuZ3VhZ2VEZXRlY3Rpb25MaWtlbHlXcm9uZ0lkID0gJ2F1dG9tYXRpY2xhbmd1YWdlZGV0ZWN0aW9uLmxpa2VseXdyb25nJztcblxuZXhwb3J0IGludGVyZmFjZSBJQXV0b21hdGljTGFuZ3VhZ2VEZXRlY3Rpb25MaWtlbHlXcm9uZ0RhdGEge1xuXHRjdXJyZW50TGFuZ3VhZ2VJZDogc3RyaW5nO1xuXHRuZXh0TGFuZ3VhZ2VJZDogc3RyaW5nO1xuXHRsaW5lQ291bnQ6IG51bWJlcjtcblx0bW9kZWxQcmVmZXJlbmNlOiBzdHJpbmc7XG59XG5cbmV4cG9ydCB0eXBlIEF1dG9tYXRpY0xhbmd1YWdlRGV0ZWN0aW9uTGlrZWx5V3JvbmdDbGFzc2lmaWNhdGlvbiA9IHtcblx0b3duZXI6ICdUeWxlckxlb25oYXJkdCc7XG5cdGNvbW1lbnQ6ICdVc2VkIHRvIGRldGVybWluZSBob3cgb2Z0ZW4gbGFuZ3VhZ2UgZGV0ZWN0aW9uIGlzIGxpa2VseSB3cm9uZy4nO1xuXHRjdXJyZW50TGFuZ3VhZ2VJZDogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgY29tbWVudDogJ1RoZSBsYW5ndWFnZSBpZCB3ZSBndWVzc2VkLicgfTtcblx0bmV4dExhbmd1YWdlSWQ6IHsgY2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YSc7IHB1cnBvc2U6ICdGZWF0dXJlSW5zaWdodCc7IGNvbW1lbnQ6ICdUaGUgbGFuZ3VhZ2UgaWQgdGhlIHVzZXIgY2hvc2UuJyB9O1xuXHRsaW5lQ291bnQ6IHsgY2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YSc7IHB1cnBvc2U6ICdGZWF0dXJlSW5zaWdodCc7IGNvbW1lbnQ6ICdUaGUgbnVtYmVyIG9mIGxpbmVzIGluIHRoZSBmaWxlLicgfTtcblx0bW9kZWxQcmVmZXJlbmNlOiB7IGNsYXNzaWZpY2F0aW9uOiAnU3lzdGVtTWV0YURhdGEnOyBwdXJwb3NlOiAnRmVhdHVyZUluc2lnaHQnOyBjb21tZW50OiAnV2hhdCB0aGUgdXNlclxcJ3MgbW9kZWwgcHJlZmVyZW5jZSBpcy4nIH07XG59O1xuXG5leHBvcnQgY29uc3QgTGFuZ3VhZ2VEZXRlY3Rpb25TdGF0c0lkID0gJ2F1dG9tYXRpY2xhbmd1YWdlZGV0ZWN0aW9uLnN0YXRzJztcblxuZXhwb3J0IGludGVyZmFjZSBJTGFuZ3VhZ2VEZXRlY3Rpb25TdGF0cyB7XG5cdGxhbmd1YWdlczogc3RyaW5nO1xuXHRjb25maWRlbmNlczogc3RyaW5nO1xuXHR0aW1lU3BlbnQ6IG51bWJlcjtcbn1cblxuZXhwb3J0IHR5cGUgTGFuZ3VhZ2VEZXRlY3Rpb25TdGF0c0NsYXNzaWZpY2F0aW9uID0ge1xuXHRvd25lcjogJ1R5bGVyTGVvbmhhcmR0Jztcblx0Y29tbWVudDogJ1VzZWQgdG8gZGV0ZXJtaW5lIGhvdyBkZWZpbml0aXZlIGxhbmd1YWdlIGRldGVjdGlvbiBpcyBhbmQgaG93IGxvbmcgaXQgdGFrZXMuJztcblx0bGFuZ3VhZ2VzOiB7IGNsYXNzaWZpY2F0aW9uOiAnU3lzdGVtTWV0YURhdGEnOyBwdXJwb3NlOiAnRmVhdHVyZUluc2lnaHQnOyBjb21tZW50OiAnVGhlIGxhbmd1YWdlcyB0aGUgbW9kZWwgc3VwcG9ydHMuJyB9O1xuXHRjb25maWRlbmNlczogeyBjbGFzc2lmaWNhdGlvbjogJ1N5c3RlbU1ldGFEYXRhJzsgcHVycG9zZTogJ0ZlYXR1cmVJbnNpZ2h0JzsgY29tbWVudDogJ1RoZSBjb25maWRlbmNlcyBvZiB0aG9zZSBsYW5ndWFnZXMuJyB9O1xuXHR0aW1lU3BlbnQ6IHsgY2xhc3NpZmljYXRpb246ICdTeXN0ZW1NZXRhRGF0YSc7IHB1cnBvc2U6ICdGZWF0dXJlSW5zaWdodCc7IGNvbW1lbnQ6ICdIb3cgbG9uZyB0aGUgb3BlcmF0aW9uIHRvb2suJyB9O1xufTtcblxuLy8jZW5kcmVnaW9uXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFFNUYsT0FBTyxNQUFNQyx5QkFBeUI7QUFBQTtBQUFBLENBQUFDLGFBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQTRCLDJCQUEyQixDQUFDO0FBRWhILE9BQU8sTUFBTUksb0NBQW9DO0FBQUE7QUFBQSxDQUFBRixhQUFBLEdBQUFDLENBQUEsT0FBRyxtQkFBbUI7QUF3QnZFO0FBRUEsT0FBTyxNQUFNRSx1Q0FBdUM7QUFBQTtBQUFBLENBQUFILGFBQUEsR0FBQUMsQ0FBQSxPQUFHLHdDQUF3QztBQWtCL0YsT0FBTyxNQUFNRyx3QkFBd0I7QUFBQTtBQUFBLENBQUFKLGFBQUEsR0FBQUMsQ0FBQSxPQUFHLGtDQUFrQztBQWdCMUUiLCJpZ25vcmVMaXN0IjpbXX0=

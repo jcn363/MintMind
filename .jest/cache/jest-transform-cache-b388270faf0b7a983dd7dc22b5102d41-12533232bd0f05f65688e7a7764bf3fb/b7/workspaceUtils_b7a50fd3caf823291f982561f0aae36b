@@ -1,0 +1,224 @@
+22bbb69b2e137f4ca43c269f91da1d62
+/* istanbul ignore next */
+function cov_q37b2i1yx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/workspaces/common/workspaceUtils.ts";
+  var hash = "12ac909ec184639e37f9854c35243efc69b685a8";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/workspaces/common/workspaceUtils.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 4
+        },
+        end: {
+          line: 7,
+          column: 5
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 27
+        },
+        end: {
+          line: 3,
+          column: 64
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 8
+        },
+        end: {
+          line: 6,
+          column: 9
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 12
+        },
+        end: {
+          line: 5,
+          column: 25
+        }
+      },
+      "4": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 16
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "areWorkspaceFoldersEmpty",
+        decl: {
+          start: {
+            line: 1,
+            column: 22
+          },
+          end: {
+            line: 1,
+            column: 46
+          }
+        },
+        loc: {
+          start: {
+            line: 1,
+            column: 71
+          },
+          end: {
+            line: 9,
+            column: 1
+          }
+        },
+        line: 1
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 4,
+            column: 8
+          },
+          end: {
+            line: 6,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 4,
+            column: 8
+          },
+          end: {
+            line: 6,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 4
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 4,
+            column: 12
+          },
+          end: {
+            line: 4,
+            column: 65
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 4,
+            column: 12
+          },
+          end: {
+            line: 4,
+            column: 31
+          }
+        }, {
+          start: {
+            line: 4,
+            column: 35
+          },
+          end: {
+            line: 4,
+            column: 65
+          }
+        }],
+        line: 4
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/workspaces/common/workspaceUtils.ts",
+      mappings: "AAOA,MAAM,CAAC,KAAK,UAAU,wBAAwB,CAAC,SAAqB,EAAE,WAAyB;IAC9F,KAAK,MAAM,MAAM,IAAI,SAAS,CAAC,OAAO,EAAE,CAAC;QACxC,MAAM,UAAU,GAAG,MAAM,WAAW,CAAC,OAAO,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC;QACzD,IAAI,UAAU,CAAC,QAAQ,IAAI,UAAU,CAAC,QAAQ,CAAC,MAAM,GAAG,CAAC,EAAE,CAAC;YAC3D,OAAO,KAAK,CAAC;QACd,CAAC;IACF,CAAC;IACD,OAAO,IAAI,CAAC;AACb,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/workspaces/common/workspaceUtils.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\nimport { IWorkspace } from '../../../../platform/workspace/common/workspace.js';\nimport { IFileService } from '../../../../platform/files/common/files.js';\n\nexport async function areWorkspaceFoldersEmpty(workspace: IWorkspace, fileService: IFileService): Promise<boolean> {\n\tfor (const folder of workspace.folders) {\n\t\tconst folderStat = await fileService.resolve(folder.uri);\n\t\tif (folderStat.children && folderStat.children.length > 0) {\n\t\t\treturn false;\n\t\t}\n\t}\n\treturn true;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "12ac909ec184639e37f9854c35243efc69b685a8"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_q37b2i1yx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_q37b2i1yx();
+export async function areWorkspaceFoldersEmpty(workspace, fileService) {
+  /* istanbul ignore next */
+  cov_q37b2i1yx().f[0]++;
+  cov_q37b2i1yx().s[0]++;
+  for (const folder of workspace.folders) {
+    const folderStat =
+    /* istanbul ignore next */
+    (cov_q37b2i1yx().s[1]++, await fileService.resolve(folder.uri));
+    /* istanbul ignore next */
+    cov_q37b2i1yx().s[2]++;
+    if (
+    /* istanbul ignore next */
+    (cov_q37b2i1yx().b[1][0]++, folderStat.children) &&
+    /* istanbul ignore next */
+    (cov_q37b2i1yx().b[1][1]++, folderStat.children.length > 0)) {
+      /* istanbul ignore next */
+      cov_q37b2i1yx().b[0][0]++;
+      cov_q37b2i1yx().s[3]++;
+      return false;
+    } else
+    /* istanbul ignore next */
+    {
+      cov_q37b2i1yx().b[0][1]++;
+    }
+  }
+  /* istanbul ignore next */
+  cov_q37b2i1yx().s[4]++;
+  return true;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJhcmVXb3Jrc3BhY2VGb2xkZXJzRW1wdHkiLCJ3b3Jrc3BhY2UiLCJmaWxlU2VydmljZSIsImNvdl9xMzdiMmkxeXgiLCJmIiwicyIsImZvbGRlciIsImZvbGRlcnMiLCJmb2xkZXJTdGF0IiwicmVzb2x2ZSIsInVyaSIsImIiLCJjaGlsZHJlbiIsImxlbmd0aCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL3dvcmtzcGFjZXMvY29tbW9uL3dvcmtzcGFjZVV0aWxzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuaW1wb3J0IHsgSVdvcmtzcGFjZSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3dvcmtzcGFjZS9jb21tb24vd29ya3NwYWNlLmpzJztcbmltcG9ydCB7IElGaWxlU2VydmljZSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2ZpbGVzL2NvbW1vbi9maWxlcy5qcyc7XG5cbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBhcmVXb3Jrc3BhY2VGb2xkZXJzRW1wdHkod29ya3NwYWNlOiBJV29ya3NwYWNlLCBmaWxlU2VydmljZTogSUZpbGVTZXJ2aWNlKTogUHJvbWlzZTxib29sZWFuPiB7XG5cdGZvciAoY29uc3QgZm9sZGVyIG9mIHdvcmtzcGFjZS5mb2xkZXJzKSB7XG5cdFx0Y29uc3QgZm9sZGVyU3RhdCA9IGF3YWl0IGZpbGVTZXJ2aWNlLnJlc29sdmUoZm9sZGVyLnVyaSk7XG5cdFx0aWYgKGZvbGRlclN0YXQuY2hpbGRyZW4gJiYgZm9sZGVyU3RhdC5jaGlsZHJlbi5sZW5ndGggPiAwKSB7XG5cdFx0XHRyZXR1cm4gZmFsc2U7XG5cdFx0fVxuXHR9XG5cdHJldHVybiB0cnVlO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBT0EsT0FBTyxlQUFlQSx3QkFBd0JBLENBQUNDLFNBQXFCLEVBQUVDLFdBQXlCO0VBQUE7RUFBQUMsYUFBQSxHQUFBQyxDQUFBO0VBQUFELGFBQUEsR0FBQUUsQ0FBQTtFQUM5RixLQUFLLE1BQU1DLE1BQU0sSUFBSUwsU0FBUyxDQUFDTSxPQUFPLEVBQUU7SUFDdkMsTUFBTUMsVUFBVTtJQUFBO0lBQUEsQ0FBQUwsYUFBQSxHQUFBRSxDQUFBLE9BQUcsTUFBTUgsV0FBVyxDQUFDTyxPQUFPLENBQUNILE1BQU0sQ0FBQ0ksR0FBRyxDQUFDO0lBQUM7SUFBQVAsYUFBQSxHQUFBRSxDQUFBO0lBQ3pEO0lBQUk7SUFBQSxDQUFBRixhQUFBLEdBQUFRLENBQUEsVUFBQUgsVUFBVSxDQUFDSSxRQUFRO0lBQUE7SUFBQSxDQUFBVCxhQUFBLEdBQUFRLENBQUEsVUFBSUgsVUFBVSxDQUFDSSxRQUFRLENBQUNDLE1BQU0sR0FBRyxDQUFDLEdBQUU7TUFBQTtNQUFBVixhQUFBLEdBQUFRLENBQUE7TUFBQVIsYUFBQSxHQUFBRSxDQUFBO01BQzFELE9BQU8sS0FBSztJQUNiLENBQUM7SUFBQTtJQUFBO01BQUFGLGFBQUEsR0FBQVEsQ0FBQTtJQUFBO0VBQ0Y7RUFBQztFQUFBUixhQUFBLEdBQUFFLENBQUE7RUFDRCxPQUFPLElBQUk7QUFDWiIsImlnbm9yZUxpc3QiOltdfQ==

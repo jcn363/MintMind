@@ -1,0 +1,102 @@
+67acd34faf677f1ae2c966e9fc9f61b1
+/* istanbul ignore next */
+function cov_2qdsz026ok() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/browser/ipc.mp.ts";
+  var hash = "842a491c12db87e20a5920b9d58205c84df3ad2f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/browser/ipc.mp.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 30
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 15,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 32
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 15
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/browser/ipc.mp.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,MAAM,IAAI,iBAAiB,EAAE,MAAM,qBAAqB,CAAC;AAElE;;GAEG;AACH,MAAM,OAAO,MAAO,SAAQ,iBAAiB;IAE5C;;;;OAIG;IACH,YAAY,IAAiB,EAAE,QAAgB;QAC9C,KAAK,CAAC,IAAI,EAAE,QAAQ,CAAC,CAAC;IACvB,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/ipc/browser/ipc.mp.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../common/lifecycle.js';\nimport { Client as MessagePortClient } from '../common/ipc.mp.js';\n\n/**\n * An implementation of a `IPCClient` on top of DOM `MessagePort`.\n */\nexport class Client extends MessagePortClient implements IDisposable {\n\n\t/**\n\t * @param clientId a way to uniquely identify this client among\n\t * other clients. this is important for routing because every\n\t * client can also be a server\n\t */\n\tconstructor(port: MessagePort, clientId: string) {\n\t\tsuper(port, clientId);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "842a491c12db87e20a5920b9d58205c84df3ad2f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2qdsz026ok = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2qdsz026ok();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Client as MessagePortClient } from '../common/ipc.mp.js';
+/**
+ * An implementation of a `IPCClient` on top of DOM `MessagePort`.
+ */
+export class Client extends MessagePortClient {
+  /**
+   * @param clientId a way to uniquely identify this client among
+   * other clients. this is important for routing because every
+   * client can also be a server
+   */
+  constructor(port, clientId) {
+    /* istanbul ignore next */
+    cov_2qdsz026ok().f[0]++;
+    cov_2qdsz026ok().s[0]++;
+    super(port, clientId);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMnFkc3owMjZvayIsImFjdHVhbENvdmVyYWdlIiwiQ2xpZW50IiwiTWVzc2FnZVBvcnRDbGllbnQiLCJjb25zdHJ1Y3RvciIsInBvcnQiLCJjbGllbnRJZCIsImYiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL3BhcnRzL2lwYy9icm93c2VyL2lwYy5tcC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IENsaWVudCBhcyBNZXNzYWdlUG9ydENsaWVudCB9IGZyb20gJy4uL2NvbW1vbi9pcGMubXAuanMnO1xuXG4vKipcbiAqIEFuIGltcGxlbWVudGF0aW9uIG9mIGEgYElQQ0NsaWVudGAgb24gdG9wIG9mIERPTSBgTWVzc2FnZVBvcnRgLlxuICovXG5leHBvcnQgY2xhc3MgQ2xpZW50IGV4dGVuZHMgTWVzc2FnZVBvcnRDbGllbnQgaW1wbGVtZW50cyBJRGlzcG9zYWJsZSB7XG5cblx0LyoqXG5cdCAqIEBwYXJhbSBjbGllbnRJZCBhIHdheSB0byB1bmlxdWVseSBpZGVudGlmeSB0aGlzIGNsaWVudCBhbW9uZ1xuXHQgKiBvdGhlciBjbGllbnRzLiB0aGlzIGlzIGltcG9ydGFudCBmb3Igcm91dGluZyBiZWNhdXNlIGV2ZXJ5XG5cdCAqIGNsaWVudCBjYW4gYWxzbyBiZSBhIHNlcnZlclxuXHQgKi9cblx0Y29uc3RydWN0b3IocG9ydDogTWVzc2FnZVBvcnQsIGNsaWVudElkOiBzdHJpbmcpIHtcblx0XHRzdXBlcihwb3J0LCBjbGllbnRJZCk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFtQkU7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQW5CRjs7OztBQU1BLFNBQVNFLE1BQU0sSUFBSUMsaUJBQWlCLFFBQVEscUJBQXFCO0FBRWpFOzs7QUFHQSxPQUFNLE1BQU9ELE1BQU8sU0FBUUMsaUJBQWlCO0VBRTVDOzs7OztFQUtBQyxZQUFZQyxJQUFpQixFQUFFQyxRQUFnQjtJQUFBO0lBQUFOLGNBQUEsR0FBQU8sQ0FBQTtJQUFBUCxjQUFBLEdBQUFRLENBQUE7SUFDOUMsS0FBSyxDQUFDSCxJQUFJLEVBQUVDLFFBQVEsQ0FBQztFQUN0QiIsImlnbm9yZUxpc3QiOltdfQ==

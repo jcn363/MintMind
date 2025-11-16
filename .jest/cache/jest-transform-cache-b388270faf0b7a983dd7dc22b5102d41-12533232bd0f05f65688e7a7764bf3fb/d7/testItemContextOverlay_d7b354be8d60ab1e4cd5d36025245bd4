@@ -1,0 +1,191 @@
+46f8d609cba4acf070dc018a702e2d8e
+/* istanbul ignore next */
+function cov_107vyibphi() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testItemContextOverlay.ts";
+  var hash = "867e941caa5df6c409782b9e98587a8421a96826";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testItemContextOverlay.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 41
+        },
+        end: {
+          line: 19,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 18
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 19
+        },
+        end: {
+          line: 12,
+          column: 53
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 4
+        },
+        end: {
+          line: 18,
+          column: 6
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 41
+          },
+          end: {
+            line: 8,
+            column: 42
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 65
+          },
+          end: {
+            line: 19,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 9
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testItemContextOverlay.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,qBAAqB,EAAE,MAAM,oCAAoC,CAAC;AAC3E,OAAO,EAAE,MAAM,EAAE,MAAM,wBAAwB,CAAC;AAChD,OAAO,EAAE,kBAAkB,EAAE,MAAM,oCAAoC,CAAC;AAExE,MAAM,CAAC,MAAM,yBAAyB,GAAG,CAAC,IAAkC,EAAE,YAAoB,EAAuB,EAAE;IAC1H,IAAI,CAAC,IAAI,EAAE,CAAC;QACX,OAAO,EAAE,CAAC;IACX,CAAC;IAED,MAAM,MAAM,GAAG,MAAM,CAAC,UAAU,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC;IAElD,OAAO;QACN,CAAC,kBAAkB,CAAC,aAAa,CAAC,GAAG,EAAE,MAAM,CAAC,OAAO,CAAC;QACtD,CAAC,kBAAkB,CAAC,YAAY,CAAC,GAAG,EAAE,IAAI,CAAC,YAAY,CAAC;QACxD,CAAC,kBAAkB,CAAC,cAAc,CAAC,GAAG,EAAE,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,GAAG,CAAC;QACxD,GAAG,qBAAqB,CAAC,YAAY,CAAC;KACtC,CAAC;AACH,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/testing/browser/explorerProjections/testItemContextOverlay.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { InternalTestItem } from '../../common/testTypes.js';\nimport { capabilityContextKeys } from '../../common/testProfileService.js';\nimport { TestId } from '../../common/testId.js';\nimport { TestingContextKeys } from '../../common/testingContextKeys.js';\n\nexport const getTestItemContextOverlay = (test: InternalTestItem | undefined, capabilities: number): [string, unknown][] => {\n\tif (!test) {\n\t\treturn [];\n\t}\n\n\tconst testId = TestId.fromString(test.item.extId);\n\n\treturn [\n\t\t[TestingContextKeys.testItemExtId.key, testId.localId],\n\t\t[TestingContextKeys.controllerId.key, test.controllerId],\n\t\t[TestingContextKeys.testItemHasUri.key, !!test.item.uri],\n\t\t...capabilityContextKeys(capabilities),\n\t];\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "867e941caa5df6c409782b9e98587a8421a96826"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_107vyibphi = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_107vyibphi();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { capabilityContextKeys } from '../../common/testProfileService.js';
+import { TestId } from '../../common/testId.js';
+import { TestingContextKeys } from '../../common/testingContextKeys.js';
+/* istanbul ignore next */
+cov_107vyibphi().s[0]++;
+export const getTestItemContextOverlay = (test, capabilities) => {
+  /* istanbul ignore next */
+  cov_107vyibphi().f[0]++;
+  cov_107vyibphi().s[1]++;
+  if (!test) {
+    /* istanbul ignore next */
+    cov_107vyibphi().b[0][0]++;
+    cov_107vyibphi().s[2]++;
+    return [];
+  } else
+  /* istanbul ignore next */
+  {
+    cov_107vyibphi().b[0][1]++;
+  }
+  const testId =
+  /* istanbul ignore next */
+  (cov_107vyibphi().s[3]++, TestId.fromString(test.item.extId));
+  /* istanbul ignore next */
+  cov_107vyibphi().s[4]++;
+  return [[TestingContextKeys.testItemExtId.key, testId.localId], [TestingContextKeys.controllerId.key, test.controllerId], [TestingContextKeys.testItemHasUri.key, !!test.item.uri], ...capabilityContextKeys(capabilities)];
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTA3dnlpYnBoaSIsImFjdHVhbENvdmVyYWdlIiwiY2FwYWJpbGl0eUNvbnRleHRLZXlzIiwiVGVzdElkIiwiVGVzdGluZ0NvbnRleHRLZXlzIiwicyIsImdldFRlc3RJdGVtQ29udGV4dE92ZXJsYXkiLCJ0ZXN0IiwiY2FwYWJpbGl0aWVzIiwiZiIsImIiLCJ0ZXN0SWQiLCJmcm9tU3RyaW5nIiwiaXRlbSIsImV4dElkIiwidGVzdEl0ZW1FeHRJZCIsImtleSIsImxvY2FsSWQiLCJjb250cm9sbGVySWQiLCJ0ZXN0SXRlbUhhc1VyaSIsInVyaSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVzdGluZy9icm93c2VyL2V4cGxvcmVyUHJvamVjdGlvbnMvdGVzdEl0ZW1Db250ZXh0T3ZlcmxheS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSW50ZXJuYWxUZXN0SXRlbSB9IGZyb20gJy4uLy4uL2NvbW1vbi90ZXN0VHlwZXMuanMnO1xuaW1wb3J0IHsgY2FwYWJpbGl0eUNvbnRleHRLZXlzIH0gZnJvbSAnLi4vLi4vY29tbW9uL3Rlc3RQcm9maWxlU2VydmljZS5qcyc7XG5pbXBvcnQgeyBUZXN0SWQgfSBmcm9tICcuLi8uLi9jb21tb24vdGVzdElkLmpzJztcbmltcG9ydCB7IFRlc3RpbmdDb250ZXh0S2V5cyB9IGZyb20gJy4uLy4uL2NvbW1vbi90ZXN0aW5nQ29udGV4dEtleXMuanMnO1xuXG5leHBvcnQgY29uc3QgZ2V0VGVzdEl0ZW1Db250ZXh0T3ZlcmxheSA9ICh0ZXN0OiBJbnRlcm5hbFRlc3RJdGVtIHwgdW5kZWZpbmVkLCBjYXBhYmlsaXRpZXM6IG51bWJlcik6IFtzdHJpbmcsIHVua25vd25dW10gPT4ge1xuXHRpZiAoIXRlc3QpIHtcblx0XHRyZXR1cm4gW107XG5cdH1cblxuXHRjb25zdCB0ZXN0SWQgPSBUZXN0SWQuZnJvbVN0cmluZyh0ZXN0Lml0ZW0uZXh0SWQpO1xuXG5cdHJldHVybiBbXG5cdFx0W1Rlc3RpbmdDb250ZXh0S2V5cy50ZXN0SXRlbUV4dElkLmtleSwgdGVzdElkLmxvY2FsSWRdLFxuXHRcdFtUZXN0aW5nQ29udGV4dEtleXMuY29udHJvbGxlcklkLmtleSwgdGVzdC5jb250cm9sbGVySWRdLFxuXHRcdFtUZXN0aW5nQ29udGV4dEtleXMudGVzdEl0ZW1IYXNVcmkua2V5LCAhIXRlc3QuaXRlbS51cmldLFxuXHRcdC4uLmNhcGFiaWxpdHlDb250ZXh0S2V5cyhjYXBhYmlsaXRpZXMpLFxuXHRdO1xufTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW9CRztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBcEJIOzs7O0FBTUEsU0FBU0UscUJBQXFCLFFBQVEsb0NBQW9DO0FBQzFFLFNBQVNDLE1BQU0sUUFBUSx3QkFBd0I7QUFDL0MsU0FBU0Msa0JBQWtCLFFBQVEsb0NBQW9DO0FBQUM7QUFBQUosY0FBQSxHQUFBSyxDQUFBO0FBRXhFLE9BQU8sTUFBTUMseUJBQXlCLEdBQUdBLENBQUNDLElBQWtDLEVBQUVDLFlBQW9CLEtBQXlCO0VBQUE7RUFBQVIsY0FBQSxHQUFBUyxDQUFBO0VBQUFULGNBQUEsR0FBQUssQ0FBQTtFQUMxSCxJQUFJLENBQUNFLElBQUksRUFBRTtJQUFBO0lBQUFQLGNBQUEsR0FBQVUsQ0FBQTtJQUFBVixjQUFBLEdBQUFLLENBQUE7SUFDVixPQUFPLEVBQUU7RUFDVixDQUFDO0VBQUE7RUFBQTtJQUFBTCxjQUFBLEdBQUFVLENBQUE7RUFBQTtFQUVELE1BQU1DLE1BQU07RUFBQTtFQUFBLENBQUFYLGNBQUEsR0FBQUssQ0FBQSxPQUFHRixNQUFNLENBQUNTLFVBQVUsQ0FBQ0wsSUFBSSxDQUFDTSxJQUFJLENBQUNDLEtBQUssQ0FBQztFQUFDO0VBQUFkLGNBQUEsR0FBQUssQ0FBQTtFQUVsRCxPQUFPLENBQ04sQ0FBQ0Qsa0JBQWtCLENBQUNXLGFBQWEsQ0FBQ0MsR0FBRyxFQUFFTCxNQUFNLENBQUNNLE9BQU8sQ0FBQyxFQUN0RCxDQUFDYixrQkFBa0IsQ0FBQ2MsWUFBWSxDQUFDRixHQUFHLEVBQUVULElBQUksQ0FBQ1csWUFBWSxDQUFDLEVBQ3hELENBQUNkLGtCQUFrQixDQUFDZSxjQUFjLENBQUNILEdBQUcsRUFBRSxDQUFDLENBQUNULElBQUksQ0FBQ00sSUFBSSxDQUFDTyxHQUFHLENBQUMsRUFDeEQsR0FBR2xCLHFCQUFxQixDQUFDTSxZQUFZLENBQUMsQ0FDdEM7QUFDRixDQUFDIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,220 @@
+4ab7fc58e01e84b4f8f53e735f4063bc
+/* istanbul ignore next */
+function cov_1vbw5yiupu() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/model/textModelPart.ts";
+  var hash = "befef01679f9d2a2afe7126e895bd6b2f3456535";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/model/textModelPart.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 18
+        },
+        end: {
+          line: 7,
+          column: 23
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 24
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 32
+        }
+      },
+      "3": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 9
+        }
+      },
+      "4": {
+        start: {
+          line: 14,
+          column: 12
+        },
+        end: {
+          line: 14,
+          column: 58
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 14
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 12,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 24
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 12
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 13,
+            column: 8
+          },
+          end: {
+            line: 15,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 13,
+            column: 8
+          },
+          end: {
+            line: 15,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 13
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/model/textModelPart.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,UAAU,EAAE,MAAM,mCAAmC,CAAC;AAE/D,MAAM,OAAO,aAAc,SAAQ,UAAU;IACpC,WAAW,GAAG,KAAK,CAAC;IAEZ,OAAO;QACtB,KAAK,CAAC,OAAO,EAAE,CAAC;QAChB,IAAI,CAAC,WAAW,GAAG,IAAI,CAAC;IACzB,CAAC;IACS,iBAAiB;QAC1B,IAAI,IAAI,CAAC,WAAW,EAAE,CAAC;YACtB,MAAM,IAAI,KAAK,CAAC,4BAA4B,CAAC,CAAC;QAC/C,CAAC;IACF,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/model/textModelPart.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Disposable } from '../../../base/common/lifecycle.js';\n\nexport class TextModelPart extends Disposable {\n\tprivate _isDisposed = false;\n\n\tpublic override dispose(): void {\n\t\tsuper.dispose();\n\t\tthis._isDisposed = true;\n\t}\n\tprotected assertNotDisposed(): void {\n\t\tif (this._isDisposed) {\n\t\t\tthrow new Error('TextModelPart is disposed!');\n\t\t}\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "befef01679f9d2a2afe7126e895bd6b2f3456535"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1vbw5yiupu = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1vbw5yiupu();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Disposable } from '../../../base/common/lifecycle.js';
+export class TextModelPart extends Disposable {
+  _isDisposed =
+  /* istanbul ignore next */
+  (cov_1vbw5yiupu().s[0]++, false);
+  dispose() {
+    /* istanbul ignore next */
+    cov_1vbw5yiupu().f[0]++;
+    cov_1vbw5yiupu().s[1]++;
+    super.dispose();
+    /* istanbul ignore next */
+    cov_1vbw5yiupu().s[2]++;
+    this._isDisposed = true;
+  }
+  assertNotDisposed() {
+    /* istanbul ignore next */
+    cov_1vbw5yiupu().f[1]++;
+    cov_1vbw5yiupu().s[3]++;
+    if (this._isDisposed) {
+      /* istanbul ignore next */
+      cov_1vbw5yiupu().b[0][0]++;
+      cov_1vbw5yiupu().s[4]++;
+      throw new Error('TextModelPart is disposed!');
+    } else
+    /* istanbul ignore next */
+    {
+      cov_1vbw5yiupu().b[0][1]++;
+    }
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXZidzV5aXVwdSIsImFjdHVhbENvdmVyYWdlIiwiRGlzcG9zYWJsZSIsIlRleHRNb2RlbFBhcnQiLCJfaXNEaXNwb3NlZCIsInMiLCJkaXNwb3NlIiwiZiIsImFzc2VydE5vdERpc3Bvc2VkIiwiYiIsIkVycm9yIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL21vZGVsL3RleHRNb2RlbFBhcnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IERpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuXG5leHBvcnQgY2xhc3MgVGV4dE1vZGVsUGFydCBleHRlbmRzIERpc3Bvc2FibGUge1xuXHRwcml2YXRlIF9pc0Rpc3Bvc2VkID0gZmFsc2U7XG5cblx0cHVibGljIG92ZXJyaWRlIGRpc3Bvc2UoKTogdm9pZCB7XG5cdFx0c3VwZXIuZGlzcG9zZSgpO1xuXHRcdHRoaXMuX2lzRGlzcG9zZWQgPSB0cnVlO1xuXHR9XG5cdHByb3RlY3RlZCBhc3NlcnROb3REaXNwb3NlZCgpOiB2b2lkIHtcblx0XHRpZiAodGhpcy5faXNEaXNwb3NlZCkge1xuXHRcdFx0dGhyb3cgbmV3IEVycm9yKCdUZXh0TW9kZWxQYXJ0IGlzIGRpc3Bvc2VkIScpO1xuXHRcdH1cblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCRTtJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbEJGOzs7O0FBS0EsU0FBU0UsVUFBVSxRQUFRLG1DQUFtQztBQUU5RCxPQUFNLE1BQU9DLGFBQWMsU0FBUUQsVUFBVTtFQUNwQ0UsV0FBVztFQUFBO0VBQUEsQ0FBQUosY0FBQSxHQUFBSyxDQUFBLE9BQUcsS0FBSztFQUVYQyxPQUFPQSxDQUFBO0lBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQUssQ0FBQTtJQUN0QixLQUFLLENBQUNDLE9BQU8sRUFBRTtJQUFDO0lBQUFOLGNBQUEsR0FBQUssQ0FBQTtJQUNoQixJQUFJLENBQUNELFdBQVcsR0FBRyxJQUFJO0VBQ3hCO0VBQ1VJLGlCQUFpQkEsQ0FBQTtJQUFBO0lBQUFSLGNBQUEsR0FBQU8sQ0FBQTtJQUFBUCxjQUFBLEdBQUFLLENBQUE7SUFDMUIsSUFBSSxJQUFJLENBQUNELFdBQVcsRUFBRTtNQUFBO01BQUFKLGNBQUEsR0FBQVMsQ0FBQTtNQUFBVCxjQUFBLEdBQUFLLENBQUE7TUFDckIsTUFBTSxJQUFJSyxLQUFLLENBQUMsNEJBQTRCLENBQUM7SUFDOUMsQ0FBQztJQUFBO0lBQUE7TUFBQVYsY0FBQSxHQUFBUyxDQUFBO0lBQUE7RUFDRiIsImlnbm9yZUxpc3QiOltdfQ==

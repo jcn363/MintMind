@@ -1,0 +1,79 @@
+5e7a5b32c15e9b4769904c30469548ec
+/* istanbul ignore next */
+function cov_212l2n11fj() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/localization/browser/localization.contribution.ts";
+  var hash = "b996eff504b9c0719698395a496740cc346f6fec";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/localization/browser/localization.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 26
+        },
+        end: {
+          line: 10,
+          column: 68
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 121
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/localization/browser/localization.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,qCAAqC,EAAE,MAAM,wCAAwC,CAAC;AAC/F,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,UAAU,IAAI,mBAAmB,EAAmC,MAAM,kCAAkC,CAAC;AAGtH,MAAM,OAAO,oCAAqC,SAAQ,qCAAqC;CAAI;AAEnG,MAAM,iBAAiB,GAAG,QAAQ,CAAC,EAAE,CAAkC,mBAAmB,CAAC,SAAS,CAAC,CAAC;AACtG,iBAAiB,CAAC,6BAA6B,CAAC,oCAAoC,oCAA4B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/localization/browser/localization.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { BaseLocalizationWorkbenchContribution } from '../common/localization.contribution.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';\nimport { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';\n\nexport class WebLocalizationWorkbenchContribution extends BaseLocalizationWorkbenchContribution { }\n\nconst workbenchRegistry = Registry.as<IWorkbenchContributionsRegistry>(WorkbenchExtensions.Workbench);\nworkbenchRegistry.registerWorkbenchContribution(WebLocalizationWorkbenchContribution, LifecyclePhase.Eventually);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b996eff504b9c0719698395a496740cc346f6fec"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_212l2n11fj = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_212l2n11fj();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { BaseLocalizationWorkbenchContribution } from '../common/localization.contribution.js';
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { Extensions as WorkbenchExtensions } from '../../../common/contributions.js';
+export class WebLocalizationWorkbenchContribution extends BaseLocalizationWorkbenchContribution {}
+const workbenchRegistry =
+/* istanbul ignore next */
+(cov_212l2n11fj().s[0]++, Registry.as(WorkbenchExtensions.Workbench));
+/* istanbul ignore next */
+cov_212l2n11fj().s[1]++;
+workbenchRegistry.registerWorkbenchContribution(WebLocalizationWorkbenchContribution, 4 /* LifecyclePhase.Eventually */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJCYXNlTG9jYWxpemF0aW9uV29ya2JlbmNoQ29udHJpYnV0aW9uIiwiUmVnaXN0cnkiLCJFeHRlbnNpb25zIiwiV29ya2JlbmNoRXh0ZW5zaW9ucyIsIldlYkxvY2FsaXphdGlvbldvcmtiZW5jaENvbnRyaWJ1dGlvbiIsIndvcmtiZW5jaFJlZ2lzdHJ5IiwiY292XzIxMmwybjExZmoiLCJzIiwiYXMiLCJXb3JrYmVuY2giLCJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvbG9jYWxpemF0aW9uL2Jyb3dzZXIvbG9jYWxpemF0aW9uLmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgQmFzZUxvY2FsaXphdGlvbldvcmtiZW5jaENvbnRyaWJ1dGlvbiB9IGZyb20gJy4uL2NvbW1vbi9sb2NhbGl6YXRpb24uY29udHJpYnV0aW9uLmpzJztcbmltcG9ydCB7IFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcmVnaXN0cnkvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB7IEV4dGVuc2lvbnMgYXMgV29ya2JlbmNoRXh0ZW5zaW9ucywgSVdvcmtiZW5jaENvbnRyaWJ1dGlvbnNSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9jb250cmlidXRpb25zLmpzJztcbmltcG9ydCB7IExpZmVjeWNsZVBoYXNlIH0gZnJvbSAnLi4vLi4vLi4vc2VydmljZXMvbGlmZWN5Y2xlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuXG5leHBvcnQgY2xhc3MgV2ViTG9jYWxpemF0aW9uV29ya2JlbmNoQ29udHJpYnV0aW9uIGV4dGVuZHMgQmFzZUxvY2FsaXphdGlvbldvcmtiZW5jaENvbnRyaWJ1dGlvbiB7IH1cblxuY29uc3Qgd29ya2JlbmNoUmVnaXN0cnkgPSBSZWdpc3RyeS5hczxJV29ya2JlbmNoQ29udHJpYnV0aW9uc1JlZ2lzdHJ5PihXb3JrYmVuY2hFeHRlbnNpb25zLldvcmtiZW5jaCk7XG53b3JrYmVuY2hSZWdpc3RyeS5yZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbihXZWJMb2NhbGl6YXRpb25Xb3JrYmVuY2hDb250cmlidXRpb24sIExpZmVjeWNsZVBoYXNlLkV2ZW50dWFsbHkpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLHFDQUFxQyxRQUFRLHdDQUF3QztBQUM5RixTQUFTQyxRQUFRLFFBQVEsa0RBQWtEO0FBQzNFLFNBQVNDLFVBQVUsSUFBSUMsbUJBQW1CLFFBQXlDLGtDQUFrQztBQUdySCxPQUFNLE1BQU9DLG9DQUFxQyxTQUFRSixxQ0FBcUM7QUFFL0YsTUFBTUssaUJBQWlCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR04sUUFBUSxDQUFDTyxFQUFFLENBQWtDTCxtQkFBbUIsQ0FBQ00sU0FBUyxDQUFDO0FBQUM7QUFBQUgsY0FBQSxHQUFBQyxDQUFBO0FBQ3RHRixpQkFBaUIsQ0FBQ0ssNkJBQTZCLENBQUNOLG9DQUFvQyxvQ0FBNEIiLCJpZ25vcmVMaXN0IjpbXX0=

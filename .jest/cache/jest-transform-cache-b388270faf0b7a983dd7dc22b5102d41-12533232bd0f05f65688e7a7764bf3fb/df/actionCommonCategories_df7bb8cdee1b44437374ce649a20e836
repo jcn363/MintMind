@@ -1,0 +1,72 @@
+69de1c4f60099982455187e7bf625fd1
+/* istanbul ignore next */
+function cov_1ecbydl3ba() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/action/common/actionCommonCategories.ts";
+  var hash = "36ebcf3ef18752abbe5493487cc323a7c9157d23";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/action/common/actionCommonCategories.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 26
+        },
+        end: {
+          line: 13,
+          column: 2
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/action/common/actionCommonCategories.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAE5C,MAAM,CAAC,MAAM,UAAU,GAAG,MAAM,CAAC,MAAM,CAAC;IACvC,IAAI,EAAE,SAAS,CAAC,MAAM,EAAE,MAAM,CAAC;IAC/B,IAAI,EAAE,SAAS,CAAC,MAAM,EAAE,MAAM,CAAC;IAC/B,IAAI,EAAE,SAAS,CAAC,MAAM,EAAE,MAAM,CAAC;IAC/B,IAAI,EAAE,SAAS,CAAC,MAAM,EAAE,MAAM,CAAC;IAC/B,WAAW,EAAE,SAAS,CAAC,aAAa,EAAE,aAAa,CAAC;IACpD,SAAS,EAAE,SAAS,CAAC,EAAE,GAAG,EAAE,WAAW,EAAE,OAAO,EAAE,CAAC,iEAAiE,CAAC,EAAE,EAAE,WAAW,CAAC;CACrI,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/action/common/actionCommonCategories.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize2 } from '../../../nls.js';\n\nexport const Categories = Object.freeze({\n\tView: localize2('view', 'View'),\n\tHelp: localize2('help', 'Help'),\n\tTest: localize2('test', 'Test'),\n\tFile: localize2('file', 'File'),\n\tPreferences: localize2('preferences', 'Preferences'),\n\tDeveloper: localize2({ key: 'developer', comment: ['A developer on Code itself or someone diagnosing issues in Code'] }, \"Developer\"),\n});\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "36ebcf3ef18752abbe5493487cc323a7c9157d23"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ecbydl3ba = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ecbydl3ba();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize2 } from '../../../nls.js';
+export const Categories =
+/* istanbul ignore next */
+(cov_1ecbydl3ba().s[0]++, Object.freeze({
+  View: localize2('view', 'View'),
+  Help: localize2('help', 'Help'),
+  Test: localize2('test', 'Test'),
+  File: localize2('file', 'File'),
+  Preferences: localize2('preferences', 'Preferences'),
+  Developer: localize2({
+    key: 'developer',
+    comment: ['A developer on Code itself or someone diagnosing issues in Code']
+  }, "Developer")
+}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZTIiLCJDYXRlZ29yaWVzIiwiY292XzFlY2J5ZGwzYmEiLCJzIiwiT2JqZWN0IiwiZnJlZXplIiwiVmlldyIsIkhlbHAiLCJUZXN0IiwiRmlsZSIsIlByZWZlcmVuY2VzIiwiRGV2ZWxvcGVyIiwia2V5IiwiY29tbWVudCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vYWN0aW9uL2NvbW1vbi9hY3Rpb25Db21tb25DYXRlZ29yaWVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBsb2NhbGl6ZTIgfSBmcm9tICcuLi8uLi8uLi9ubHMuanMnO1xuXG5leHBvcnQgY29uc3QgQ2F0ZWdvcmllcyA9IE9iamVjdC5mcmVlemUoe1xuXHRWaWV3OiBsb2NhbGl6ZTIoJ3ZpZXcnLCAnVmlldycpLFxuXHRIZWxwOiBsb2NhbGl6ZTIoJ2hlbHAnLCAnSGVscCcpLFxuXHRUZXN0OiBsb2NhbGl6ZTIoJ3Rlc3QnLCAnVGVzdCcpLFxuXHRGaWxlOiBsb2NhbGl6ZTIoJ2ZpbGUnLCAnRmlsZScpLFxuXHRQcmVmZXJlbmNlczogbG9jYWxpemUyKCdwcmVmZXJlbmNlcycsICdQcmVmZXJlbmNlcycpLFxuXHREZXZlbG9wZXI6IGxvY2FsaXplMih7IGtleTogJ2RldmVsb3BlcicsIGNvbW1lbnQ6IFsnQSBkZXZlbG9wZXIgb24gQ29kZSBpdHNlbGYgb3Igc29tZW9uZSBkaWFnbm9zaW5nIGlzc3VlcyBpbiBDb2RlJ10gfSwgXCJEZXZlbG9wZXJcIiksXG59KTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsU0FBUyxRQUFRLGlCQUFpQjtBQUUzQyxPQUFPLE1BQU1DLFVBQVU7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHQyxNQUFNLENBQUNDLE1BQU0sQ0FBQztFQUN2Q0MsSUFBSSxFQUFFTixTQUFTLENBQUMsTUFBTSxFQUFFLE1BQU0sQ0FBQztFQUMvQk8sSUFBSSxFQUFFUCxTQUFTLENBQUMsTUFBTSxFQUFFLE1BQU0sQ0FBQztFQUMvQlEsSUFBSSxFQUFFUixTQUFTLENBQUMsTUFBTSxFQUFFLE1BQU0sQ0FBQztFQUMvQlMsSUFBSSxFQUFFVCxTQUFTLENBQUMsTUFBTSxFQUFFLE1BQU0sQ0FBQztFQUMvQlUsV0FBVyxFQUFFVixTQUFTLENBQUMsYUFBYSxFQUFFLGFBQWEsQ0FBQztFQUNwRFcsU0FBUyxFQUFFWCxTQUFTLENBQUM7SUFBRVksR0FBRyxFQUFFLFdBQVc7SUFBRUMsT0FBTyxFQUFFLENBQUMsaUVBQWlFO0VBQUMsQ0FBRSxFQUFFLFdBQVc7Q0FDcEksQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

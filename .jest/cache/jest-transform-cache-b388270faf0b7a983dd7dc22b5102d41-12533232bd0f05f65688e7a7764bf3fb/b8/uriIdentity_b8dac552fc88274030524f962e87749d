@@ -1,0 +1,62 @@
+bf462d07897383a203d7bf11f232c166
+/* istanbul ignore next */
+function cov_yadcfzxm0() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/uriIdentity/common/uriIdentity.ts";
+  var hash = "303d0294baf4c65be9d92e66fc79a264d2afc67f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/uriIdentity/common/uriIdentity.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 35
+        },
+        end: {
+          line: 6,
+          column: 73
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/uriIdentity/common/uriIdentity.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAI9E,MAAM,CAAC,MAAM,mBAAmB,GAAG,eAAe,CAAsB,qBAAqB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/uriIdentity/common/uriIdentity.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\nimport { IExtUri } from '../../../base/common/resources.js';\n\n\nexport const IUriIdentityService = createDecorator<IUriIdentityService>('IUriIdentityService');\n\nexport interface IUriIdentityService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Uri extensions that are aware of casing.\n\t */\n\treadonly extUri: IExtUri;\n\n\t/**\n\t * Returns a canonical uri for the given resource. Different uris can point to the same\n\t * resource. That's because of casing or missing normalization, e.g the following uris\n\t * are different but refer to the same document (because windows paths are not case-sensitive)\n\t *\n\t * ```txt\n\t * file:///c:/foo/bar.txt\n\t * file:///c:/FOO/BAR.txt\n\t * ```\n\t *\n\t * This function should be invoked when feeding uris into the system that represent the truth,\n\t * e.g document uris or marker-to-document associations etc. This function should NOT be called\n\t * to pretty print a label nor to sanitize a uri.\n\t *\n\t * Samples:\n\t *\n\t * | in | out | |\n\t * |---|---|---|\n\t * | `file:///foo/bar/../bar` | `file:///foo/bar` | n/a |\n\t * | `file:///foo/bar/../bar#frag` | `file:///foo/bar#frag` | keep fragment |\n\t * | `file:///foo/BAR` | `file:///foo/bar` | assume ignore case |\n\t * | `file:///foo/bar/../BAR?q=2` | `file:///foo/BAR?q=2` | query makes it a different document |\n\t */\n\tasCanonicalUri(uri: URI): URI;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "303d0294baf4c65be9d92e66fc79a264d2afc67f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_yadcfzxm0 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_yadcfzxm0();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IUriIdentityService =
+/* istanbul ignore next */
+(cov_yadcfzxm0().s[0]++, createDecorator('IUriIdentityService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJVXJpSWRlbnRpdHlTZXJ2aWNlIiwiY292X3lhZGNmenhtMCIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL3VyaUlkZW50aXR5L2NvbW1vbi91cmlJZGVudGl0eS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUV4dFVyaSB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL3Jlc291cmNlcy5qcyc7XG5cblxuZXhwb3J0IGNvbnN0IElVcmlJZGVudGl0eVNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVVyaUlkZW50aXR5U2VydmljZT4oJ0lVcmlJZGVudGl0eVNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJVXJpSWRlbnRpdHlTZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFVyaSBleHRlbnNpb25zIHRoYXQgYXJlIGF3YXJlIG9mIGNhc2luZy5cblx0ICovXG5cdHJlYWRvbmx5IGV4dFVyaTogSUV4dFVyaTtcblxuXHQvKipcblx0ICogUmV0dXJucyBhIGNhbm9uaWNhbCB1cmkgZm9yIHRoZSBnaXZlbiByZXNvdXJjZS4gRGlmZmVyZW50IHVyaXMgY2FuIHBvaW50IHRvIHRoZSBzYW1lXG5cdCAqIHJlc291cmNlLiBUaGF0J3MgYmVjYXVzZSBvZiBjYXNpbmcgb3IgbWlzc2luZyBub3JtYWxpemF0aW9uLCBlLmcgdGhlIGZvbGxvd2luZyB1cmlzXG5cdCAqIGFyZSBkaWZmZXJlbnQgYnV0IHJlZmVyIHRvIHRoZSBzYW1lIGRvY3VtZW50IChiZWNhdXNlIHdpbmRvd3MgcGF0aHMgYXJlIG5vdCBjYXNlLXNlbnNpdGl2ZSlcblx0ICpcblx0ICogYGBgdHh0XG5cdCAqIGZpbGU6Ly8vYzovZm9vL2Jhci50eHRcblx0ICogZmlsZTovLy9jOi9GT08vQkFSLnR4dFxuXHQgKiBgYGBcblx0ICpcblx0ICogVGhpcyBmdW5jdGlvbiBzaG91bGQgYmUgaW52b2tlZCB3aGVuIGZlZWRpbmcgdXJpcyBpbnRvIHRoZSBzeXN0ZW0gdGhhdCByZXByZXNlbnQgdGhlIHRydXRoLFxuXHQgKiBlLmcgZG9jdW1lbnQgdXJpcyBvciBtYXJrZXItdG8tZG9jdW1lbnQgYXNzb2NpYXRpb25zIGV0Yy4gVGhpcyBmdW5jdGlvbiBzaG91bGQgTk9UIGJlIGNhbGxlZFxuXHQgKiB0byBwcmV0dHkgcHJpbnQgYSBsYWJlbCBub3IgdG8gc2FuaXRpemUgYSB1cmkuXG5cdCAqXG5cdCAqIFNhbXBsZXM6XG5cdCAqXG5cdCAqIHwgaW4gfCBvdXQgfCB8XG5cdCAqIHwtLS18LS0tfC0tLXxcblx0ICogfCBgZmlsZTovLy9mb28vYmFyLy4uL2JhcmAgfCBgZmlsZTovLy9mb28vYmFyYCB8IG4vYSB8XG5cdCAqIHwgYGZpbGU6Ly8vZm9vL2Jhci8uLi9iYXIjZnJhZ2AgfCBgZmlsZTovLy9mb28vYmFyI2ZyYWdgIHwga2VlcCBmcmFnbWVudCB8XG5cdCAqIHwgYGZpbGU6Ly8vZm9vL0JBUmAgfCBgZmlsZTovLy9mb28vYmFyYCB8IGFzc3VtZSBpZ25vcmUgY2FzZSB8XG5cdCAqIHwgYGZpbGU6Ly8vZm9vL2Jhci8uLi9CQVI/cT0yYCB8IGBmaWxlOi8vL2Zvby9CQVI/cT0yYCB8IHF1ZXJ5IG1ha2VzIGl0IGEgZGlmZmVyZW50IGRvY3VtZW50IHxcblx0ICovXG5cdGFzQ2Fub25pY2FsVXJpKHVyaTogVVJJKTogVVJJO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxlQUFlLFFBQVEsNkNBQTZDO0FBSTdFLE9BQU8sTUFBTUMsbUJBQW1CO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFzQixxQkFBcUIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

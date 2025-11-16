@@ -1,0 +1,174 @@
+dad646dbcda81a0de5d051151f451778
+/* istanbul ignore next */
+function cov_1q2qeubht4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/browserElements/common/browserElements.ts";
+  var hash = "6dc0e8f90c8d7f4e06f06c27273cd55547b223e7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/browserElements/common/browserElements.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 45
+        },
+        end: {
+          line: 6,
+          column: 92
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 11,
+          column: 38
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 51
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 45
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 1
+          },
+          end: {
+            line: 8,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 24
+          },
+          end: {
+            line: 11,
+            column: 1
+          }
+        },
+        line: 8
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 11,
+            column: 3
+          },
+          end: {
+            line: 11,
+            column: 36
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 11,
+            column: 3
+          },
+          end: {
+            line: 11,
+            column: 14
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 19
+          },
+          end: {
+            line: 11,
+            column: 35
+          }
+        }],
+        line: 11
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/browserElements/common/browserElements.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAG9E,MAAM,CAAC,MAAM,6BAA6B,GAAG,eAAe,CAAgC,8BAA8B,CAAC,CAAC;AAQ5H,MAAM,CAAN,IAAY,WAGX;AAHD,WAAY,WAAW;IACtB,8CAA+B,CAAA;IAC/B,wCAAyB,CAAA;AAC1B,CAAC,EAHW,WAAW,KAAX,WAAW,QAGtB",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/browserElements/common/browserElements.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../base/common/cancellation.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\nimport { IRectangle } from '../../window/common/window.js';\n\nexport const INativeBrowserElementsService = createDecorator<INativeBrowserElementsService>('nativeBrowserElementsService');\n\nexport interface IElementData {\n\treadonly outerHTML: string;\n\treadonly computedStyle: string;\n\treadonly bounds: IRectangle;\n}\n\nexport enum BrowserType {\n\tSimpleBrowser = 'simpleBrowser',\n\tLiveServer = 'liveServer',\n}\n\n\nexport interface INativeBrowserElementsService {\n\n\treadonly _serviceBrand: undefined;\n\n\t// Properties\n\treadonly windowId: number;\n\n\tgetElementData(rect: IRectangle, token: CancellationToken, browserType: BrowserType, cancellationId?: number): Promise<IElementData | undefined>;\n\n\tstartDebugSession(token: CancellationToken, browserType: BrowserType, cancelAndDetachId?: number): Promise<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6dc0e8f90c8d7f4e06f06c27273cd55547b223e7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1q2qeubht4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1q2qeubht4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const INativeBrowserElementsService =
+/* istanbul ignore next */
+(cov_1q2qeubht4().s[0]++, createDecorator('nativeBrowserElementsService'));
+export var BrowserType;
+/* istanbul ignore next */
+cov_1q2qeubht4().s[1]++;
+(function (BrowserType) {
+  /* istanbul ignore next */
+  cov_1q2qeubht4().f[0]++;
+  cov_1q2qeubht4().s[2]++;
+  BrowserType["SimpleBrowser"] = "simpleBrowser";
+  /* istanbul ignore next */
+  cov_1q2qeubht4().s[3]++;
+  BrowserType["LiveServer"] = "liveServer";
+})(
+/* istanbul ignore next */
+(cov_1q2qeubht4().b[0][0]++, BrowserType) ||
+/* istanbul ignore next */
+(cov_1q2qeubht4().b[0][1]++, BrowserType = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJTmF0aXZlQnJvd3NlckVsZW1lbnRzU2VydmljZSIsImNvdl8xcTJxZXViaHQ0IiwicyIsIkJyb3dzZXJUeXBlIiwiZiIsImIiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL2Jyb3dzZXJFbGVtZW50cy9jb21tb24vYnJvd3NlckVsZW1lbnRzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IElSZWN0YW5nbGUgfSBmcm9tICcuLi8uLi93aW5kb3cvY29tbW9uL3dpbmRvdy5qcyc7XG5cbmV4cG9ydCBjb25zdCBJTmF0aXZlQnJvd3NlckVsZW1lbnRzU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJTmF0aXZlQnJvd3NlckVsZW1lbnRzU2VydmljZT4oJ25hdGl2ZUJyb3dzZXJFbGVtZW50c1NlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJRWxlbWVudERhdGEge1xuXHRyZWFkb25seSBvdXRlckhUTUw6IHN0cmluZztcblx0cmVhZG9ubHkgY29tcHV0ZWRTdHlsZTogc3RyaW5nO1xuXHRyZWFkb25seSBib3VuZHM6IElSZWN0YW5nbGU7XG59XG5cbmV4cG9ydCBlbnVtIEJyb3dzZXJUeXBlIHtcblx0U2ltcGxlQnJvd3NlciA9ICdzaW1wbGVCcm93c2VyJyxcblx0TGl2ZVNlcnZlciA9ICdsaXZlU2VydmVyJyxcbn1cblxuXG5leHBvcnQgaW50ZXJmYWNlIElOYXRpdmVCcm93c2VyRWxlbWVudHNTZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0Ly8gUHJvcGVydGllc1xuXHRyZWFkb25seSB3aW5kb3dJZDogbnVtYmVyO1xuXG5cdGdldEVsZW1lbnREYXRhKHJlY3Q6IElSZWN0YW5nbGUsIHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbiwgYnJvd3NlclR5cGU6IEJyb3dzZXJUeXBlLCBjYW5jZWxsYXRpb25JZD86IG51bWJlcik6IFByb21pc2U8SUVsZW1lbnREYXRhIHwgdW5kZWZpbmVkPjtcblxuXHRzdGFydERlYnVnU2Vzc2lvbih0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4sIGJyb3dzZXJUeXBlOiBCcm93c2VyVHlwZSwgY2FuY2VsQW5kRGV0YWNoSWQ/OiBudW1iZXIpOiBQcm9taXNlPHZvaWQ+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxlQUFlLFFBQVEsNkNBQTZDO0FBRzdFLE9BQU8sTUFBTUMsNkJBQTZCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFnQyw4QkFBOEIsQ0FBQztBQVEzSCxXQUFZSSxXQUdYO0FBQUE7QUFBQUYsY0FBQSxHQUFBQyxDQUFBO0FBSEQsV0FBWUMsV0FBVztFQUFBO0VBQUFGLGNBQUEsR0FBQUcsQ0FBQTtFQUFBSCxjQUFBLEdBQUFDLENBQUE7RUFDdEJDLFdBQUEsbUNBQStCO0VBQUE7RUFBQUYsY0FBQSxHQUFBQyxDQUFBO0VBQy9CQyxXQUFBLDZCQUF5QjtBQUMxQixDQUFDO0FBSFc7QUFBQSxDQUFBRixjQUFBLEdBQUFJLENBQUEsVUFBQUYsV0FBVztBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBSSxDQUFBLFVBQVhGLFdBQVciLCJpZ25vcmVMaXN0IjpbXX0=

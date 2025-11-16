@@ -1,0 +1,560 @@
+fa6d8374e224f56c812e96872b8c9354
+/* istanbul ignore next */
+function cov_1ham89bnl3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/processes.ts";
+  var hash = "5a2e99cb27562a1481f5772d370770ea5fc4ba39";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/processes.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 16
+        },
+        end: {
+          line: 13,
+          column: 10
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 24
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 19
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 25
+        },
+        end: {
+          line: 19,
+          column: 5
+        }
+      },
+      "4": {
+        start: {
+          line: 20,
+          column: 20
+        },
+        end: {
+          line: 20,
+          column: 36
+        }
+      },
+      "5": {
+        start: {
+          line: 21,
+          column: 4
+        },
+        end: {
+          line: 30,
+          column: 7
+        }
+      },
+      "6": {
+        start: {
+          line: 22,
+          column: 23
+        },
+        end: {
+          line: 22,
+          column: 32
+        }
+      },
+      "7": {
+        start: {
+          line: 24,
+          column: 8
+        },
+        end: {
+          line: 29,
+          column: 9
+        }
+      },
+      "8": {
+        start: {
+          line: 24,
+          column: 21
+        },
+        end: {
+          line: 24,
+          column: 22
+        }
+      },
+      "9": {
+        start: {
+          line: 25,
+          column: 12
+        },
+        end: {
+          line: 28,
+          column: 13
+        }
+      },
+      "10": {
+        start: {
+          line: 26,
+          column: 16
+        },
+        end: {
+          line: 26,
+          column: 35
+        }
+      },
+      "11": {
+        start: {
+          line: 27,
+          column: 16
+        },
+        end: {
+          line: 27,
+          column: 22
+        }
+      },
+      "12": {
+        start: {
+          line: 39,
+          column: 4
+        },
+        end: {
+          line: 41,
+          column: 5
+        }
+      },
+      "13": {
+        start: {
+          line: 40,
+          column: 8
+        },
+        end: {
+          line: 40,
+          column: 15
+        }
+      },
+      "14": {
+        start: {
+          line: 44,
+          column: 4
+        },
+        end: {
+          line: 44,
+          column: 24
+        }
+      },
+      "15": {
+        start: {
+          line: 45,
+          column: 4
+        },
+        end: {
+          line: 49,
+          column: 5
+        }
+      },
+      "16": {
+        start: {
+          line: 48,
+          column: 8
+        },
+        end: {
+          line: 48,
+          column: 33
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "sanitizeProcessEnvironment",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 42
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 61
+          },
+          end: {
+            line: 31,
+            column: 1
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 32
+          },
+          end: {
+            line: 10,
+            column: 33
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 46
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 22,
+            column: 16
+          },
+          end: {
+            line: 22,
+            column: 17
+          }
+        },
+        loc: {
+          start: {
+            line: 22,
+            column: 23
+          },
+          end: {
+            line: 22,
+            column: 32
+          }
+        },
+        line: 22
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 23,
+            column: 17
+          },
+          end: {
+            line: 23,
+            column: 18
+          }
+        },
+        loc: {
+          start: {
+            line: 23,
+            column: 27
+          },
+          end: {
+            line: 30,
+            column: 5
+          }
+        },
+        line: 23
+      },
+      "4": {
+        name: "removeDangerousEnvVariables",
+        decl: {
+          start: {
+            line: 38,
+            column: 16
+          },
+          end: {
+            line: 38,
+            column: 43
+          }
+        },
+        loc: {
+          start: {
+            line: 38,
+            column: 49
+          },
+          end: {
+            line: 50,
+            column: 1
+          }
+        },
+        line: 38
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 25,
+            column: 12
+          },
+          end: {
+            line: 28,
+            column: 13
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 25,
+            column: 12
+          },
+          end: {
+            line: 28,
+            column: 13
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 25
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 39,
+            column: 4
+          },
+          end: {
+            line: 41,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 39,
+            column: 4
+          },
+          end: {
+            line: 41,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 39
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 45,
+            column: 4
+          },
+          end: {
+            line: 49,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 45,
+            column: 4
+          },
+          end: {
+            line: 49,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 45
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/processes.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAuB,OAAO,EAAE,MAAM,eAAe,CAAC;AA+F7D;;GAEG;AACH,MAAM,UAAU,0BAA0B,CAAC,GAAwB,EAAE,GAAG,QAAkB;IACzF,MAAM,GAAG,GAAG,QAAQ,CAAC,MAAM,CAA0B,CAAC,GAAG,EAAE,GAAG,EAAE,EAAE;QACjE,GAAG,CAAC,GAAG,CAAC,GAAG,IAAI,CAAC;QAChB,OAAO,GAAG,CAAC;IACZ,CAAC,EAAE,EAAE,CAAC,CAAC;IACP,MAAM,YAAY,GAAG;QACpB,eAAe;QACf,0EAA0E;QAC1E,cAAc;QACd,iBAAiB;KACjB,CAAC;IACF,MAAM,OAAO,GAAG,MAAM,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;IACjC,OAAO;SACL,MAAM,CAAC,GAAG,CAAC,EAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC;SACxB,OAAO,CAAC,MAAM,CAAC,EAAE;QACjB,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,YAAY,CAAC,MAAM,EAAE,CAAC,EAAE,EAAE,CAAC;YAC9C,IAAI,MAAM,CAAC,MAAM,CAAC,YAAY,CAAC,CAAC,CAAC,CAAC,KAAK,CAAC,CAAC,EAAE,CAAC;gBAC3C,OAAO,GAAG,CAAC,MAAM,CAAC,CAAC;gBACnB,MAAM;YACP,CAAC;QACF,CAAC;IACF,CAAC,CAAC,CAAC;AACL,CAAC;AAED;;;;;GAKG;AACH,MAAM,UAAU,2BAA2B,CAAC,GAAoC;IAC/E,IAAI,CAAC,GAAG,EAAE,CAAC;QACV,OAAO;IACR,CAAC;IAED,mEAAmE;IACnE,wDAAwD;IACxD,OAAO,GAAG,CAAC,OAAO,CAAC,CAAC;IAEpB,IAAI,OAAO,EAAE,CAAC;QACb,0DAA0D;QAC1D,wDAAwD;QACxD,OAAO,GAAG,CAAC,YAAY,CAAC,CAAC;IAC1B,CAAC;AACF,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/processes.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IProcessEnvironment, isLinux } from './platform.js';\n\n/**\n * Options to be passed to the external program or shell.\n */\nexport interface CommandOptions {\n\t/**\n\t * The current working directory of the executed program or shell.\n\t * If omitted VSCode's current workspace root is used.\n\t */\n\tcwd?: string;\n\n\t/**\n\t * The environment of the executed program or shell. If omitted\n\t * the parent process' environment is used.\n\t */\n\tenv?: { [key: string]: string };\n}\n\nexport interface Executable {\n\t/**\n\t * The command to be executed. Can be an external program or a shell\n\t * command.\n\t */\n\tcommand: string;\n\n\t/**\n\t * Specifies whether the command is a shell command and therefore must\n\t * be executed in a shell interpreter (e.g. cmd.exe, bash, ...).\n\t */\n\tisShellCommand: boolean;\n\n\t/**\n\t * The arguments passed to the command.\n\t */\n\targs: string[];\n\n\t/**\n\t * The command options used when the command is executed. Can be omitted.\n\t */\n\toptions?: CommandOptions;\n}\n\nexport interface ForkOptions extends CommandOptions {\n\texecArgv?: string[];\n}\n\nexport const enum Source {\n\tstdout,\n\tstderr\n}\n\n/**\n * The data send via a success callback\n */\nexport interface SuccessData {\n\terror?: Error;\n\tcmdCode?: number;\n\tterminated?: boolean;\n}\n\n/**\n * The data send via a error callback\n */\nexport interface ErrorData {\n\terror?: Error;\n\tterminated?: boolean;\n\tstdout?: string;\n\tstderr?: string;\n}\n\nexport interface TerminateResponse {\n\tsuccess: boolean;\n\tcode?: TerminateResponseCode;\n\terror?: any;\n}\n\nexport const enum TerminateResponseCode {\n\tSuccess = 0,\n\tUnknown = 1,\n\tAccessDenied = 2,\n\tProcessNotFound = 3,\n}\n\nexport interface ProcessItem {\n\tname: string;\n\tcmd: string;\n\tpid: number;\n\tppid: number;\n\tload: number;\n\tmem: number;\n\n\tchildren?: ProcessItem[];\n}\n\n/**\n * Sanitizes a VS Code process environment by removing all Electron/VS Code-related values.\n */\nexport function sanitizeProcessEnvironment(env: IProcessEnvironment, ...preserve: string[]): void {\n\tconst set = preserve.reduce<Record<string, boolean>>((set, key) => {\n\t\tset[key] = true;\n\t\treturn set;\n\t}, {});\n\tconst keysToRemove = [\n\t\t/^ELECTRON_.+$/,\n\t\t/^VSCODE_(?!(PORTABLE|SHELL_LOGIN|ENV_REPLACE|ENV_APPEND|ENV_PREPEND)).+$/,\n\t\t/^SNAP(|_.*)$/,\n\t\t/^GDK_PIXBUF_.+$/,\n\t];\n\tconst envKeys = Object.keys(env);\n\tenvKeys\n\t\t.filter(key => !set[key])\n\t\t.forEach(envKey => {\n\t\t\tfor (let i = 0; i < keysToRemove.length; i++) {\n\t\t\t\tif (envKey.search(keysToRemove[i]) !== -1) {\n\t\t\t\t\tdelete env[envKey];\n\t\t\t\t\tbreak;\n\t\t\t\t}\n\t\t\t}\n\t\t});\n}\n\n/**\n * Remove dangerous environment variables that have caused crashes\n * in forked processes (i.e. in ELECTRON_RUN_AS_NODE processes)\n *\n * @param env The env object to change\n */\nexport function removeDangerousEnvVariables(env: IProcessEnvironment | undefined): void {\n\tif (!env) {\n\t\treturn;\n\t}\n\n\t// Unset `DEBUG`, as an invalid value might lead to process crashes\n\t// See https://github.com/microsoft/vscode/issues/130072\n\tdelete env['DEBUG'];\n\n\tif (isLinux) {\n\t\t// Unset `LD_PRELOAD`, as it might lead to process crashes\n\t\t// See https://github.com/microsoft/vscode/issues/134177\n\t\tdelete env['LD_PRELOAD'];\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5a2e99cb27562a1481f5772d370770ea5fc4ba39"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ham89bnl3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ham89bnl3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { isLinux } from './platform.js';
+/**
+ * Sanitizes a VS Code process environment by removing all Electron/VS Code-related values.
+ */
+export function sanitizeProcessEnvironment(env, ...preserve) {
+  /* istanbul ignore next */
+  cov_1ham89bnl3().f[0]++;
+  const set =
+  /* istanbul ignore next */
+  (cov_1ham89bnl3().s[0]++, preserve.reduce((set, key) => {
+    /* istanbul ignore next */
+    cov_1ham89bnl3().f[1]++;
+    cov_1ham89bnl3().s[1]++;
+    set[key] = true;
+    /* istanbul ignore next */
+    cov_1ham89bnl3().s[2]++;
+    return set;
+  }, {}));
+  const keysToRemove =
+  /* istanbul ignore next */
+  (cov_1ham89bnl3().s[3]++, [/^ELECTRON_.+$/, /^VSCODE_(?!(PORTABLE|SHELL_LOGIN|ENV_REPLACE|ENV_APPEND|ENV_PREPEND)).+$/, /^SNAP(|_.*)$/, /^GDK_PIXBUF_.+$/]);
+  const envKeys =
+  /* istanbul ignore next */
+  (cov_1ham89bnl3().s[4]++, Object.keys(env));
+  /* istanbul ignore next */
+  cov_1ham89bnl3().s[5]++;
+  envKeys.filter(key => {
+    /* istanbul ignore next */
+    cov_1ham89bnl3().f[2]++;
+    cov_1ham89bnl3().s[6]++;
+    return !set[key];
+  }).forEach(envKey => {
+    /* istanbul ignore next */
+    cov_1ham89bnl3().f[3]++;
+    cov_1ham89bnl3().s[7]++;
+    for (let i =
+    /* istanbul ignore next */
+    (cov_1ham89bnl3().s[8]++, 0); i < keysToRemove.length; i++) {
+      /* istanbul ignore next */
+      cov_1ham89bnl3().s[9]++;
+      if (envKey.search(keysToRemove[i]) !== -1) {
+        /* istanbul ignore next */
+        cov_1ham89bnl3().b[0][0]++;
+        cov_1ham89bnl3().s[10]++;
+        delete env[envKey];
+        /* istanbul ignore next */
+        cov_1ham89bnl3().s[11]++;
+        break;
+      } else
+      /* istanbul ignore next */
+      {
+        cov_1ham89bnl3().b[0][1]++;
+      }
+    }
+  });
+}
+/**
+ * Remove dangerous environment variables that have caused crashes
+ * in forked processes (i.e. in ELECTRON_RUN_AS_NODE processes)
+ *
+ * @param env The env object to change
+ */
+export function removeDangerousEnvVariables(env) {
+  /* istanbul ignore next */
+  cov_1ham89bnl3().f[4]++;
+  cov_1ham89bnl3().s[12]++;
+  if (!env) {
+    /* istanbul ignore next */
+    cov_1ham89bnl3().b[1][0]++;
+    cov_1ham89bnl3().s[13]++;
+    return;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_1ham89bnl3().b[1][1]++;
+  }
+  // Unset `DEBUG`, as an invalid value might lead to process crashes
+  // See https://github.com/microsoft/vscode/issues/130072
+  cov_1ham89bnl3().s[14]++;
+  delete env['DEBUG'];
+  /* istanbul ignore next */
+  cov_1ham89bnl3().s[15]++;
+  if (isLinux) {
+    /* istanbul ignore next */
+    cov_1ham89bnl3().b[2][0]++;
+    cov_1ham89bnl3().s[16]++;
+    // Unset `LD_PRELOAD`, as it might lead to process crashes
+    // See https://github.com/microsoft/vscode/issues/134177
+    delete env['LD_PRELOAD'];
+  } else
+  /* istanbul ignore next */
+  {
+    cov_1ham89bnl3().b[2][1]++;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMWhhbTg5Ym5sMyIsImFjdHVhbENvdmVyYWdlIiwiaXNMaW51eCIsInNhbml0aXplUHJvY2Vzc0Vudmlyb25tZW50IiwiZW52IiwicHJlc2VydmUiLCJmIiwic2V0IiwicyIsInJlZHVjZSIsImtleSIsImtleXNUb1JlbW92ZSIsImVudktleXMiLCJPYmplY3QiLCJrZXlzIiwiZmlsdGVyIiwiZm9yRWFjaCIsImVudktleSIsImkiLCJsZW5ndGgiLCJzZWFyY2giLCJiIiwicmVtb3ZlRGFuZ2Vyb3VzRW52VmFyaWFibGVzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2NvbW1vbi9wcm9jZXNzZXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElQcm9jZXNzRW52aXJvbm1lbnQsIGlzTGludXggfSBmcm9tICcuL3BsYXRmb3JtLmpzJztcblxuLyoqXG4gKiBPcHRpb25zIHRvIGJlIHBhc3NlZCB0byB0aGUgZXh0ZXJuYWwgcHJvZ3JhbSBvciBzaGVsbC5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBDb21tYW5kT3B0aW9ucyB7XG5cdC8qKlxuXHQgKiBUaGUgY3VycmVudCB3b3JraW5nIGRpcmVjdG9yeSBvZiB0aGUgZXhlY3V0ZWQgcHJvZ3JhbSBvciBzaGVsbC5cblx0ICogSWYgb21pdHRlZCBWU0NvZGUncyBjdXJyZW50IHdvcmtzcGFjZSByb290IGlzIHVzZWQuXG5cdCAqL1xuXHRjd2Q/OiBzdHJpbmc7XG5cblx0LyoqXG5cdCAqIFRoZSBlbnZpcm9ubWVudCBvZiB0aGUgZXhlY3V0ZWQgcHJvZ3JhbSBvciBzaGVsbC4gSWYgb21pdHRlZFxuXHQgKiB0aGUgcGFyZW50IHByb2Nlc3MnIGVudmlyb25tZW50IGlzIHVzZWQuXG5cdCAqL1xuXHRlbnY/OiB7IFtrZXk6IHN0cmluZ106IHN0cmluZyB9O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEV4ZWN1dGFibGUge1xuXHQvKipcblx0ICogVGhlIGNvbW1hbmQgdG8gYmUgZXhlY3V0ZWQuIENhbiBiZSBhbiBleHRlcm5hbCBwcm9ncmFtIG9yIGEgc2hlbGxcblx0ICogY29tbWFuZC5cblx0ICovXG5cdGNvbW1hbmQ6IHN0cmluZztcblxuXHQvKipcblx0ICogU3BlY2lmaWVzIHdoZXRoZXIgdGhlIGNvbW1hbmQgaXMgYSBzaGVsbCBjb21tYW5kIGFuZCB0aGVyZWZvcmUgbXVzdFxuXHQgKiBiZSBleGVjdXRlZCBpbiBhIHNoZWxsIGludGVycHJldGVyIChlLmcuIGNtZC5leGUsIGJhc2gsIC4uLikuXG5cdCAqL1xuXHRpc1NoZWxsQ29tbWFuZDogYm9vbGVhbjtcblxuXHQvKipcblx0ICogVGhlIGFyZ3VtZW50cyBwYXNzZWQgdG8gdGhlIGNvbW1hbmQuXG5cdCAqL1xuXHRhcmdzOiBzdHJpbmdbXTtcblxuXHQvKipcblx0ICogVGhlIGNvbW1hbmQgb3B0aW9ucyB1c2VkIHdoZW4gdGhlIGNvbW1hbmQgaXMgZXhlY3V0ZWQuIENhbiBiZSBvbWl0dGVkLlxuXHQgKi9cblx0b3B0aW9ucz86IENvbW1hbmRPcHRpb25zO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEZvcmtPcHRpb25zIGV4dGVuZHMgQ29tbWFuZE9wdGlvbnMge1xuXHRleGVjQXJndj86IHN0cmluZ1tdO1xufVxuXG5leHBvcnQgY29uc3QgZW51bSBTb3VyY2Uge1xuXHRzdGRvdXQsXG5cdHN0ZGVyclxufVxuXG4vKipcbiAqIFRoZSBkYXRhIHNlbmQgdmlhIGEgc3VjY2VzcyBjYWxsYmFja1xuICovXG5leHBvcnQgaW50ZXJmYWNlIFN1Y2Nlc3NEYXRhIHtcblx0ZXJyb3I/OiBFcnJvcjtcblx0Y21kQ29kZT86IG51bWJlcjtcblx0dGVybWluYXRlZD86IGJvb2xlYW47XG59XG5cbi8qKlxuICogVGhlIGRhdGEgc2VuZCB2aWEgYSBlcnJvciBjYWxsYmFja1xuICovXG5leHBvcnQgaW50ZXJmYWNlIEVycm9yRGF0YSB7XG5cdGVycm9yPzogRXJyb3I7XG5cdHRlcm1pbmF0ZWQ/OiBib29sZWFuO1xuXHRzdGRvdXQ/OiBzdHJpbmc7XG5cdHN0ZGVycj86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBUZXJtaW5hdGVSZXNwb25zZSB7XG5cdHN1Y2Nlc3M6IGJvb2xlYW47XG5cdGNvZGU/OiBUZXJtaW5hdGVSZXNwb25zZUNvZGU7XG5cdGVycm9yPzogYW55O1xufVxuXG5leHBvcnQgY29uc3QgZW51bSBUZXJtaW5hdGVSZXNwb25zZUNvZGUge1xuXHRTdWNjZXNzID0gMCxcblx0VW5rbm93biA9IDEsXG5cdEFjY2Vzc0RlbmllZCA9IDIsXG5cdFByb2Nlc3NOb3RGb3VuZCA9IDMsXG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgUHJvY2Vzc0l0ZW0ge1xuXHRuYW1lOiBzdHJpbmc7XG5cdGNtZDogc3RyaW5nO1xuXHRwaWQ6IG51bWJlcjtcblx0cHBpZDogbnVtYmVyO1xuXHRsb2FkOiBudW1iZXI7XG5cdG1lbTogbnVtYmVyO1xuXG5cdGNoaWxkcmVuPzogUHJvY2Vzc0l0ZW1bXTtcbn1cblxuLyoqXG4gKiBTYW5pdGl6ZXMgYSBWUyBDb2RlIHByb2Nlc3MgZW52aXJvbm1lbnQgYnkgcmVtb3ZpbmcgYWxsIEVsZWN0cm9uL1ZTIENvZGUtcmVsYXRlZCB2YWx1ZXMuXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBzYW5pdGl6ZVByb2Nlc3NFbnZpcm9ubWVudChlbnY6IElQcm9jZXNzRW52aXJvbm1lbnQsIC4uLnByZXNlcnZlOiBzdHJpbmdbXSk6IHZvaWQge1xuXHRjb25zdCBzZXQgPSBwcmVzZXJ2ZS5yZWR1Y2U8UmVjb3JkPHN0cmluZywgYm9vbGVhbj4+KChzZXQsIGtleSkgPT4ge1xuXHRcdHNldFtrZXldID0gdHJ1ZTtcblx0XHRyZXR1cm4gc2V0O1xuXHR9LCB7fSk7XG5cdGNvbnN0IGtleXNUb1JlbW92ZSA9IFtcblx0XHQvXkVMRUNUUk9OXy4rJC8sXG5cdFx0L15WU0NPREVfKD8hKFBPUlRBQkxFfFNIRUxMX0xPR0lOfEVOVl9SRVBMQUNFfEVOVl9BUFBFTkR8RU5WX1BSRVBFTkQpKS4rJC8sXG5cdFx0L15TTkFQKHxfLiopJC8sXG5cdFx0L15HREtfUElYQlVGXy4rJC8sXG5cdF07XG5cdGNvbnN0IGVudktleXMgPSBPYmplY3Qua2V5cyhlbnYpO1xuXHRlbnZLZXlzXG5cdFx0LmZpbHRlcihrZXkgPT4gIXNldFtrZXldKVxuXHRcdC5mb3JFYWNoKGVudktleSA9PiB7XG5cdFx0XHRmb3IgKGxldCBpID0gMDsgaSA8IGtleXNUb1JlbW92ZS5sZW5ndGg7IGkrKykge1xuXHRcdFx0XHRpZiAoZW52S2V5LnNlYXJjaChrZXlzVG9SZW1vdmVbaV0pICE9PSAtMSkge1xuXHRcdFx0XHRcdGRlbGV0ZSBlbnZbZW52S2V5XTtcblx0XHRcdFx0XHRicmVhaztcblx0XHRcdFx0fVxuXHRcdFx0fVxuXHRcdH0pO1xufVxuXG4vKipcbiAqIFJlbW92ZSBkYW5nZXJvdXMgZW52aXJvbm1lbnQgdmFyaWFibGVzIHRoYXQgaGF2ZSBjYXVzZWQgY3Jhc2hlc1xuICogaW4gZm9ya2VkIHByb2Nlc3NlcyAoaS5lLiBpbiBFTEVDVFJPTl9SVU5fQVNfTk9ERSBwcm9jZXNzZXMpXG4gKlxuICogQHBhcmFtIGVudiBUaGUgZW52IG9iamVjdCB0byBjaGFuZ2VcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIHJlbW92ZURhbmdlcm91c0VudlZhcmlhYmxlcyhlbnY6IElQcm9jZXNzRW52aXJvbm1lbnQgfCB1bmRlZmluZWQpOiB2b2lkIHtcblx0aWYgKCFlbnYpIHtcblx0XHRyZXR1cm47XG5cdH1cblxuXHQvLyBVbnNldCBgREVCVUdgLCBhcyBhbiBpbnZhbGlkIHZhbHVlIG1pZ2h0IGxlYWQgdG8gcHJvY2VzcyBjcmFzaGVzXG5cdC8vIFNlZSBodHRwczovL2dpdGh1Yi5jb20vbWljcm9zb2Z0L3ZzY29kZS9pc3N1ZXMvMTMwMDcyXG5cdGRlbGV0ZSBlbnZbJ0RFQlVHJ107XG5cblx0aWYgKGlzTGludXgpIHtcblx0XHQvLyBVbnNldCBgTERfUFJFTE9BRGAsIGFzIGl0IG1pZ2h0IGxlYWQgdG8gcHJvY2VzcyBjcmFzaGVzXG5cdFx0Ly8gU2VlIGh0dHBzOi8vZ2l0aHViLmNvbS9taWNyb3NvZnQvdnNjb2RlL2lzc3Vlcy8xMzQxNzdcblx0XHRkZWxldGUgZW52WydMRF9QUkVMT0FEJ107XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7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

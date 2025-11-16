@@ -1,0 +1,68 @@
+7859c598df5daba197640e8ce76d4534
+/* istanbul ignore next */
+function cov_1ln9sl5vso() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/processExplorer/browser/processExplorer.web.contribution.ts";
+  var hash = "a3d2d6859951a681f9b62664d7ce5db9bb38e50c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/processExplorer/browser/processExplorer.web.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 12,
+          column: 0
+        },
+        end: {
+          line: 12,
+          column: 237
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/processExplorer/browser/processExplorer.web.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,cAAc,EAAE,MAAM,0DAA0D,CAAC;AAC1F,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,oBAAoB,EAAuB,MAAM,4BAA4B,CAAC;AACvF,OAAO,EAAE,gBAAgB,EAAE,MAAM,2BAA2B,CAAC;AAC7D,OAAO,EAAE,0BAA0B,EAAE,MAAM,iCAAiC,CAAC;AAC7E,OAAO,EAAE,qBAAqB,EAAE,MAAM,4BAA4B,CAAC;AAEnE,QAAQ,CAAC,EAAE,CAAsB,gBAAgB,CAAC,UAAU,CAAC,CAAC,kBAAkB,CAC/E,oBAAoB,CAAC,MAAM,CAAC,qBAAqB,EAAE,qBAAqB,CAAC,EAAE,EAAE,QAAQ,CAAC,iBAAiB,EAAE,kBAAkB,CAAC,CAAC,EAC7H,CAAC,IAAI,cAAc,CAAC,0BAA0B,CAAC,CAAC,CAChD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/processExplorer/browser/processExplorer.web.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize } from '../../../../nls.js';\nimport { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { EditorPaneDescriptor, IEditorPaneRegistry } from '../../../browser/editor.js';\nimport { EditorExtensions } from '../../../common/editor.js';\nimport { ProcessExplorerEditorInput } from './processExplorerEditorInput.js';\nimport { ProcessExplorerEditor } from './processExplorerEditor.js';\n\nRegistry.as<IEditorPaneRegistry>(EditorExtensions.EditorPane).registerEditorPane(\n\tEditorPaneDescriptor.create(ProcessExplorerEditor, ProcessExplorerEditor.ID, localize('processExplorer', \"Process Explorer\")),\n\t[new SyncDescriptor(ProcessExplorerEditorInput)]\n);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a3d2d6859951a681f9b62664d7ce5db9bb38e50c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ln9sl5vso = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ln9sl5vso();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../nls.js';
+import { SyncDescriptor } from '../../../../platform/instantiation/common/descriptors.js';
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { EditorPaneDescriptor } from '../../../browser/editor.js';
+import { EditorExtensions } from '../../../common/editor.js';
+import { ProcessExplorerEditorInput } from './processExplorerEditorInput.js';
+import { ProcessExplorerEditor } from './processExplorerEditor.js';
+/* istanbul ignore next */
+cov_1ln9sl5vso().s[0]++;
+Registry.as(EditorExtensions.EditorPane).registerEditorPane(EditorPaneDescriptor.create(ProcessExplorerEditor, ProcessExplorerEditor.ID, localize('processExplorer', "Process Explorer")), [new SyncDescriptor(ProcessExplorerEditorInput)]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJsb2NhbGl6ZSIsIlN5bmNEZXNjcmlwdG9yIiwiUmVnaXN0cnkiLCJFZGl0b3JQYW5lRGVzY3JpcHRvciIsIkVkaXRvckV4dGVuc2lvbnMiLCJQcm9jZXNzRXhwbG9yZXJFZGl0b3JJbnB1dCIsIlByb2Nlc3NFeHBsb3JlckVkaXRvciIsImNvdl8xbG45c2w1dnNvIiwicyIsImFzIiwiRWRpdG9yUGFuZSIsInJlZ2lzdGVyRWRpdG9yUGFuZSIsImNyZWF0ZSIsIklEIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9wcm9jZXNzRXhwbG9yZXIvYnJvd3Nlci9wcm9jZXNzRXhwbG9yZXIud2ViLmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgU3luY0Rlc2NyaXB0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9kZXNjcmlwdG9ycy5qcyc7XG5pbXBvcnQgeyBSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3JlZ2lzdHJ5L2NvbW1vbi9wbGF0Zm9ybS5qcyc7XG5pbXBvcnQgeyBFZGl0b3JQYW5lRGVzY3JpcHRvciwgSUVkaXRvclBhbmVSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uL2Jyb3dzZXIvZWRpdG9yLmpzJztcbmltcG9ydCB7IEVkaXRvckV4dGVuc2lvbnMgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vZWRpdG9yLmpzJztcbmltcG9ydCB7IFByb2Nlc3NFeHBsb3JlckVkaXRvcklucHV0IH0gZnJvbSAnLi9wcm9jZXNzRXhwbG9yZXJFZGl0b3JJbnB1dC5qcyc7XG5pbXBvcnQgeyBQcm9jZXNzRXhwbG9yZXJFZGl0b3IgfSBmcm9tICcuL3Byb2Nlc3NFeHBsb3JlckVkaXRvci5qcyc7XG5cblJlZ2lzdHJ5LmFzPElFZGl0b3JQYW5lUmVnaXN0cnk+KEVkaXRvckV4dGVuc2lvbnMuRWRpdG9yUGFuZSkucmVnaXN0ZXJFZGl0b3JQYW5lKFxuXHRFZGl0b3JQYW5lRGVzY3JpcHRvci5jcmVhdGUoUHJvY2Vzc0V4cGxvcmVyRWRpdG9yLCBQcm9jZXNzRXhwbG9yZXJFZGl0b3IuSUQsIGxvY2FsaXplKCdwcm9jZXNzRXhwbG9yZXInLCBcIlByb2Nlc3MgRXhwbG9yZXJcIikpLFxuXHRbbmV3IFN5bmNEZXNjcmlwdG9yKFByb2Nlc3NFeHBsb3JlckVkaXRvcklucHV0KV1cbik7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLFFBQVEsUUFBUSxvQkFBb0I7QUFDN0MsU0FBU0MsY0FBYyxRQUFRLDBEQUEwRDtBQUN6RixTQUFTQyxRQUFRLFFBQVEsa0RBQWtEO0FBQzNFLFNBQVNDLG9CQUFvQixRQUE2Qiw0QkFBNEI7QUFDdEYsU0FBU0MsZ0JBQWdCLFFBQVEsMkJBQTJCO0FBQzVELFNBQVNDLDBCQUEwQixRQUFRLGlDQUFpQztBQUM1RSxTQUFTQyxxQkFBcUIsUUFBUSw0QkFBNEI7QUFBQztBQUFBQyxjQUFBLEdBQUFDLENBQUE7QUFFbkVOLFFBQVEsQ0FBQ08sRUFBRSxDQUFzQkwsZ0JBQWdCLENBQUNNLFVBQVUsQ0FBQyxDQUFDQyxrQkFBa0IsQ0FDL0VSLG9CQUFvQixDQUFDUyxNQUFNLENBQUNOLHFCQUFxQixFQUFFQSxxQkFBcUIsQ0FBQ08sRUFBRSxFQUFFYixRQUFRLENBQUMsaUJBQWlCLEVBQUUsa0JBQWtCLENBQUMsQ0FBQyxFQUM3SCxDQUFDLElBQUlDLGNBQWMsQ0FBQ0ksMEJBQTBCLENBQUMsQ0FBQyxDQUNoRCIsImlnbm9yZUxpc3QiOltdfQ==

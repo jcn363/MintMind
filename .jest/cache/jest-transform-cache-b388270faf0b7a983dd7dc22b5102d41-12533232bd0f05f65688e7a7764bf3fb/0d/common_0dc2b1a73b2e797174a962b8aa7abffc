@@ -1,0 +1,278 @@
+a6553367e819bac3c4393c24ac15355f
+/* istanbul ignore next */
+function cov_misgbvcnk() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/tokens/common.ts";
+  var hash = "935ca993ea6659eef5f8021e2a0d2e3eca385b23";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/tokens/common.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 45
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 26
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 61
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 20
+        },
+        end: {
+          line: 15,
+          column: 30
+        }
+      },
+      "4": {
+        start: {
+          line: 16,
+          column: 8
+        },
+        end: {
+          line: 19,
+          column: 9
+        }
+      },
+      "5": {
+        start: {
+          line: 17,
+          column: 12
+        },
+        end: {
+          line: 17,
+          column: 32
+        }
+      },
+      "6": {
+        start: {
+          line: 18,
+          column: 12
+        },
+        end: {
+          line: 18,
+          column: 23
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 36
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 14,
+            column: 4
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 30
+          },
+          end: {
+            line: 20,
+            column: 5
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 34
+          }
+        },
+        type: "default-arg",
+        locations: [{
+          start: {
+            line: 9,
+            column: 33
+          },
+          end: {
+            line: 9,
+            column: 34
+          }
+        }],
+        line: 9
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 16,
+            column: 8
+          },
+          end: {
+            line: 19,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 16,
+            column: 8
+          },
+          end: {
+            line: 19,
+            column: 9
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 16
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0],
+      "1": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/tokens/common.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,OAAO,WAAW;IAIK;IAHpB,QAAQ,CAAS;IACR,uBAAuB,CAAS;IAEjD,YAA4B,iBAAyB,CAAC;QAA1B,mBAAc,GAAd,cAAc,CAAY;QACrD,IAAI,CAAC,QAAQ,GAAG,CAAC,CAAC;QAClB,IAAI,CAAC,uBAAuB,GAAG,IAAI,GAAG,cAAc,CAAC;IACtD,CAAC;IAEM,eAAe,CAAC,QAAoB;QAC1C,MAAM,GAAG,GAAG,IAAI,CAAC,GAAG,EAAE,CAAC;QACvB,IAAI,GAAG,GAAG,IAAI,CAAC,QAAQ,IAAI,IAAI,CAAC,uBAAuB,EAAE,CAAC;YACzD,IAAI,CAAC,QAAQ,GAAG,GAAG,CAAC;YACpB,QAAQ,EAAE,CAAC;QACZ,CAAC;IACF,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/tokens/common.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport class RateLimiter {\n\tprivate _lastRun: number;\n\tprivate readonly _minimumTimeBetweenRuns: number;\n\n\tconstructor(public readonly timesPerSecond: number = 5) {\n\t\tthis._lastRun = 0;\n\t\tthis._minimumTimeBetweenRuns = 1000 / timesPerSecond;\n\t}\n\n\tpublic runIfNotLimited(callback: () => void): void {\n\t\tconst now = Date.now();\n\t\tif (now - this._lastRun >= this._minimumTimeBetweenRuns) {\n\t\t\tthis._lastRun = now;\n\t\t\tcallback();\n\t\t}\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "935ca993ea6659eef5f8021e2a0d2e3eca385b23"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_misgbvcnk = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_misgbvcnk();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class RateLimiter {
+  timesPerSecond;
+  _lastRun;
+  _minimumTimeBetweenRuns;
+  constructor(timesPerSecond =
+  /* istanbul ignore next */
+  (cov_misgbvcnk().b[0][0]++, 5)) {
+    /* istanbul ignore next */
+    cov_misgbvcnk().f[0]++;
+    cov_misgbvcnk().s[0]++;
+    this.timesPerSecond = timesPerSecond;
+    /* istanbul ignore next */
+    cov_misgbvcnk().s[1]++;
+    this._lastRun = 0;
+    /* istanbul ignore next */
+    cov_misgbvcnk().s[2]++;
+    this._minimumTimeBetweenRuns = 1000 / timesPerSecond;
+  }
+  runIfNotLimited(callback) {
+    /* istanbul ignore next */
+    cov_misgbvcnk().f[1]++;
+    const now =
+    /* istanbul ignore next */
+    (cov_misgbvcnk().s[3]++, Date.now());
+    /* istanbul ignore next */
+    cov_misgbvcnk().s[4]++;
+    if (now - this._lastRun >= this._minimumTimeBetweenRuns) {
+      /* istanbul ignore next */
+      cov_misgbvcnk().b[1][0]++;
+      cov_misgbvcnk().s[5]++;
+      this._lastRun = now;
+      /* istanbul ignore next */
+      cov_misgbvcnk().s[6]++;
+      callback();
+    } else
+    /* istanbul ignore next */
+    {
+      cov_misgbvcnk().b[1][1]++;
+    }
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfbWlzZ2J2Y25rIiwiYWN0dWFsQ292ZXJhZ2UiLCJSYXRlTGltaXRlciIsInRpbWVzUGVyU2Vjb25kIiwiX2xhc3RSdW4iLCJfbWluaW11bVRpbWVCZXR3ZWVuUnVucyIsImNvbnN0cnVjdG9yIiwiYiIsImYiLCJzIiwicnVuSWZOb3RMaW1pdGVkIiwiY2FsbGJhY2siLCJub3ciLCJEYXRlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL3Rva2Vucy9jb21tb24udHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCBjbGFzcyBSYXRlTGltaXRlciB7XG5cdHByaXZhdGUgX2xhc3RSdW46IG51bWJlcjtcblx0cHJpdmF0ZSByZWFkb25seSBfbWluaW11bVRpbWVCZXR3ZWVuUnVuczogbnVtYmVyO1xuXG5cdGNvbnN0cnVjdG9yKHB1YmxpYyByZWFkb25seSB0aW1lc1BlclNlY29uZDogbnVtYmVyID0gNSkge1xuXHRcdHRoaXMuX2xhc3RSdW4gPSAwO1xuXHRcdHRoaXMuX21pbmltdW1UaW1lQmV0d2VlblJ1bnMgPSAxMDAwIC8gdGltZXNQZXJTZWNvbmQ7XG5cdH1cblxuXHRwdWJsaWMgcnVuSWZOb3RMaW1pdGVkKGNhbGxiYWNrOiAoKSA9PiB2b2lkKTogdm9pZCB7XG5cdFx0Y29uc3Qgbm93ID0gRGF0ZS5ub3coKTtcblx0XHRpZiAobm93IC0gdGhpcy5fbGFzdFJ1biA+PSB0aGlzLl9taW5pbXVtVGltZUJldHdlZW5SdW5zKSB7XG5cdFx0XHR0aGlzLl9sYXN0UnVuID0gbm93O1xuXHRcdFx0Y2FsbGJhY2soKTtcblx0XHR9XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWdCTTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBaEJOOzs7O0FBS0EsT0FBTSxNQUFPRSxXQUFXO0VBSUtDLGNBQUE7RUFIcEJDLFFBQVE7RUFDQ0MsdUJBQXVCO0VBRXhDQyxZQUE0QkgsY0FBQTtFQUFBO0VBQUEsQ0FBQUgsYUFBQSxHQUFBTyxDQUFBLFVBQXlCLENBQUM7SUFBQTtJQUFBUCxhQUFBLEdBQUFRLENBQUE7SUFBQVIsYUFBQSxHQUFBUyxDQUFBO0lBQTFCLEtBQUFOLGNBQWMsR0FBZEEsY0FBYztJQUFZO0lBQUFILGFBQUEsR0FBQVMsQ0FBQTtJQUNyRCxJQUFJLENBQUNMLFFBQVEsR0FBRyxDQUFDO0lBQUM7SUFBQUosYUFBQSxHQUFBUyxDQUFBO0lBQ2xCLElBQUksQ0FBQ0osdUJBQXVCLEdBQUcsSUFBSSxHQUFHRixjQUFjO0VBQ3JEO0VBRU9PLGVBQWVBLENBQUNDLFFBQW9CO0lBQUE7SUFBQVgsYUFBQSxHQUFBUSxDQUFBO0lBQzFDLE1BQU1JLEdBQUc7SUFBQTtJQUFBLENBQUFaLGFBQUEsR0FBQVMsQ0FBQSxPQUFHSSxJQUFJLENBQUNELEdBQUcsRUFBRTtJQUFDO0lBQUFaLGFBQUEsR0FBQVMsQ0FBQTtJQUN2QixJQUFJRyxHQUFHLEdBQUcsSUFBSSxDQUFDUixRQUFRLElBQUksSUFBSSxDQUFDQyx1QkFBdUIsRUFBRTtNQUFBO01BQUFMLGFBQUEsR0FBQU8sQ0FBQTtNQUFBUCxhQUFBLEdBQUFTLENBQUE7TUFDeEQsSUFBSSxDQUFDTCxRQUFRLEdBQUdRLEdBQUc7TUFBQztNQUFBWixhQUFBLEdBQUFTLENBQUE7TUFDcEJFLFFBQVEsRUFBRTtJQUNYLENBQUM7SUFBQTtJQUFBO01BQUFYLGFBQUEsR0FBQU8sQ0FBQTtJQUFBO0VBQ0YiLCJpZ25vcmVMaXN0IjpbXX0=

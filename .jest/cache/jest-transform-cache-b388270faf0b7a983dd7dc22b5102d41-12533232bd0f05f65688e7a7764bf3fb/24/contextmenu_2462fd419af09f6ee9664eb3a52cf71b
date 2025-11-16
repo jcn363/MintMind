@@ -1,0 +1,75 @@
+7c852144ae23cef75eeee21ada90535c
+/* istanbul ignore next */
+function cov_2kwma27icy() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/contextmenu/common/contextmenu.ts";
+  var hash = "dd7ef995200ec6ace3dcc67e98e5b3dbba1b8ec4";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/contextmenu/common/contextmenu.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 36
+        },
+        end: {
+          line: 5,
+          column: 56
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 42
+        },
+        end: {
+          line: 6,
+          column: 69
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/contextmenu/common/contextmenu.ts",
+      mappings: "AAAA;;;gGAGgG;AAqChG,MAAM,CAAC,MAAM,oBAAoB,GAAG,oBAAoB,CAAC;AACzD,MAAM,CAAC,MAAM,0BAA0B,GAAG,2BAA2B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/contextmenu/common/contextmenu.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport interface ICommonContextMenuItem {\n\tlabel?: string;\n\n\ttype?: 'normal' | 'separator' | 'submenu' | 'checkbox' | 'radio';\n\n\taccelerator?: string;\n\n\tenabled?: boolean;\n\tvisible?: boolean;\n\tchecked?: boolean;\n}\n\nexport interface ISerializableContextMenuItem extends ICommonContextMenuItem {\n\tid: number;\n\tsubmenu?: ISerializableContextMenuItem[];\n}\n\nexport interface IContextMenuItem extends ICommonContextMenuItem {\n\tclick?: (event: IContextMenuEvent) => void;\n\tsubmenu?: IContextMenuItem[];\n}\n\nexport interface IContextMenuEvent {\n\tshiftKey?: boolean;\n\tctrlKey?: boolean;\n\taltKey?: boolean;\n\tmetaKey?: boolean;\n}\n\nexport interface IPopupOptions {\n\tx?: number;\n\ty?: number;\n\tpositioningItem?: number;\n}\n\nexport const CONTEXT_MENU_CHANNEL = 'vscode:contextmenu';\nexport const CONTEXT_MENU_CLOSE_CHANNEL = 'vscode:onCloseContextMenu';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "dd7ef995200ec6ace3dcc67e98e5b3dbba1b8ec4"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2kwma27icy = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2kwma27icy();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const CONTEXT_MENU_CHANNEL =
+/* istanbul ignore next */
+(cov_2kwma27icy().s[0]++, 'vscode:contextmenu');
+export const CONTEXT_MENU_CLOSE_CHANNEL =
+/* istanbul ignore next */
+(cov_2kwma27icy().s[1]++, 'vscode:onCloseContextMenu');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJDT05URVhUX01FTlVfQ0hBTk5FTCIsImNvdl8ya3dtYTI3aWN5IiwicyIsIkNPTlRFWFRfTUVOVV9DTE9TRV9DSEFOTkVMIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL3BhcnRzL2NvbnRleHRtZW51L2NvbW1vbi9jb250ZXh0bWVudS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGludGVyZmFjZSBJQ29tbW9uQ29udGV4dE1lbnVJdGVtIHtcblx0bGFiZWw/OiBzdHJpbmc7XG5cblx0dHlwZT86ICdub3JtYWwnIHwgJ3NlcGFyYXRvcicgfCAnc3VibWVudScgfCAnY2hlY2tib3gnIHwgJ3JhZGlvJztcblxuXHRhY2NlbGVyYXRvcj86IHN0cmluZztcblxuXHRlbmFibGVkPzogYm9vbGVhbjtcblx0dmlzaWJsZT86IGJvb2xlYW47XG5cdGNoZWNrZWQ/OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElTZXJpYWxpemFibGVDb250ZXh0TWVudUl0ZW0gZXh0ZW5kcyBJQ29tbW9uQ29udGV4dE1lbnVJdGVtIHtcblx0aWQ6IG51bWJlcjtcblx0c3VibWVudT86IElTZXJpYWxpemFibGVDb250ZXh0TWVudUl0ZW1bXTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQ29udGV4dE1lbnVJdGVtIGV4dGVuZHMgSUNvbW1vbkNvbnRleHRNZW51SXRlbSB7XG5cdGNsaWNrPzogKGV2ZW50OiBJQ29udGV4dE1lbnVFdmVudCkgPT4gdm9pZDtcblx0c3VibWVudT86IElDb250ZXh0TWVudUl0ZW1bXTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQ29udGV4dE1lbnVFdmVudCB7XG5cdHNoaWZ0S2V5PzogYm9vbGVhbjtcblx0Y3RybEtleT86IGJvb2xlYW47XG5cdGFsdEtleT86IGJvb2xlYW47XG5cdG1ldGFLZXk/OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElQb3B1cE9wdGlvbnMge1xuXHR4PzogbnVtYmVyO1xuXHR5PzogbnVtYmVyO1xuXHRwb3NpdGlvbmluZ0l0ZW0/OiBudW1iZXI7XG59XG5cbmV4cG9ydCBjb25zdCBDT05URVhUX01FTlVfQ0hBTk5FTCA9ICd2c2NvZGU6Y29udGV4dG1lbnUnO1xuZXhwb3J0IGNvbnN0IENPTlRFWFRfTUVOVV9DTE9TRV9DSEFOTkVMID0gJ3ZzY29kZTpvbkNsb3NlQ29udGV4dE1lbnUnO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQXdDQSxPQUFPLE1BQU1BLG9CQUFvQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUcsb0JBQW9CO0FBQ3hELE9BQU8sTUFBTUMsMEJBQTBCO0FBQUE7QUFBQSxDQUFBRixjQUFBLEdBQUFDLENBQUEsT0FBRywyQkFBMkIiLCJpZ25vcmVMaXN0IjpbXX0=

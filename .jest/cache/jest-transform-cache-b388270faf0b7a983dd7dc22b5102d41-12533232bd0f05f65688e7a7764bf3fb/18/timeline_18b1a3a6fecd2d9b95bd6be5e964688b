@@ -1,0 +1,175 @@
+eef6d7af19e9a56b6376f8912def8516
+/* istanbul ignore next */
+function cov_6kjzdkkvz() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/timeline/common/timeline.ts";
+  var hash = "bfc6332dcd2e6ff931e738820a7ada0732d56a7e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/timeline/common/timeline.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 107
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 30
+        },
+        end: {
+          line: 10,
+          column: 40
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 28
+        },
+        end: {
+          line: 11,
+          column: 38
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 32
+        },
+        end: {
+          line: 12,
+          column: 68
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "toKey",
+        decl: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 21
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 41
+          },
+          end: {
+            line: 9,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 8,
+            column: 14
+          },
+          end: {
+            line: 8,
+            column: 94
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 8,
+            column: 46
+          },
+          end: {
+            line: 8,
+            column: 55
+          }
+        }, {
+          start: {
+            line: 8,
+            column: 58
+          },
+          end: {
+            line: 8,
+            column: 94
+          }
+        }],
+        line: 8
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/timeline/common/timeline.ts",
+      mappings: "AAAA;;;gGAGgG;AAOhG,OAAO,EAAE,mBAAmB,EAAE,MAAM,sDAAsD,CAAC;AAC3F,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAK7F,MAAM,UAAU,KAAK,CAAC,SAAuC,EAAE,MAAc;IAC5E,OAAO,GAAG,OAAO,SAAS,KAAK,QAAQ,CAAC,CAAC,CAAC,SAAS,CAAC,CAAC,CAAC,mBAAmB,CAAC,KAAK,CAAC,SAAS,CAAC,IAAI,MAAM,EAAE,CAAC;AACxG,CAAC;AAED,MAAM,CAAC,MAAM,cAAc,GAAG,UAAU,CAAC;AAwIzC,MAAM,mBAAmB,GAAG,UAAU,CAAC;AACvC,MAAM,CAAC,MAAM,gBAAgB,GAAG,eAAe,CAAmB,mBAAmB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/timeline/common/timeline.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken, CancellationTokenSource } from '../../../../base/common/cancellation.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { Command } from '../../../../editor/common/languages.js';\nimport { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IAccessibilityInformation } from '../../../../platform/accessibility/common/accessibility.js';\nimport { ThemeIcon } from '../../../../base/common/themables.js';\nimport { IMarkdownString } from '../../../../base/common/htmlContent.js';\n\nexport function toKey(extension: ExtensionIdentifier | string, source: string) {\n\treturn `${typeof extension === 'string' ? extension : ExtensionIdentifier.toKey(extension)}|${source}`;\n}\n\nexport const TimelinePaneId = 'timeline';\n\nexport interface TimelineItem {\n\n\t/**\n\t * The handle of the item must be unique across all the\n\t * timeline items provided by this source.\n\t */\n\thandle: string;\n\n\t/**\n\t * The identifier of the timeline provider this timeline item is from.\n\t */\n\tsource: string;\n\n\tid?: string;\n\n\tlabel: string;\n\tdescription?: string;\n\ttooltip?: string | IMarkdownString | undefined;\n\n\ttimestamp: number;\n\n\taccessibilityInformation?: IAccessibilityInformation;\n\n\ticon?: URI;\n\ticonDark?: URI;\n\tthemeIcon?: ThemeIcon;\n\n\tcommand?: Command;\n\tcontextValue?: string;\n\n\trelativeTime?: string;\n\trelativeTimeFullWord?: string;\n\thideRelativeTime?: boolean;\n}\n\nexport interface TimelineChangeEvent {\n\n\t/**\n\t * The identifier of the timeline provider this event is from.\n\t */\n\tid: string;\n\n\t/**\n\t * The resource that has timeline entries changed or `undefined`\n\t * if not known.\n\t */\n\turi: URI | undefined;\n\n\t/**\n\t * Whether to drop all timeline entries and refresh them again.\n\t */\n\treset: boolean;\n}\n\nexport interface TimelineOptions {\n\tcursor?: string;\n\tlimit?: number | { timestamp: number; id?: string };\n\tresetCache?: boolean;\n\tcacheResults?: boolean;\n}\n\nexport interface Timeline {\n\n\t/**\n\t * The identifier of the timeline provider this timeline is from.\n\t */\n\tsource: string;\n\n\titems: TimelineItem[];\n\n\tpaging?: {\n\t\tcursor: string | undefined;\n\t};\n}\n\nexport interface TimelineProvider extends TimelineProviderDescriptor, IDisposable {\n\treadonly onDidChange?: Event<TimelineChangeEvent>;\n\n\tprovideTimeline(uri: URI, options: TimelineOptions, token: CancellationToken): Promise<Timeline | undefined>;\n}\n\nexport interface TimelineSource {\n\tid: string;\n\tlabel: string;\n}\n\nexport interface TimelineProviderDescriptor {\n\n\t/**\n\t * An identifier of the source of the timeline items. This can be used to filter sources.\n\t */\n\tid: string;\n\n\t/**\n\t * A human-readable string describing the source of the timeline items. This can be used as the display label when filtering sources.\n\t */\n\tlabel: string;\n\n\t/**\n\t * The resource scheme(s) this timeline provider is providing entries for.\n\t */\n\tscheme: string | string[];\n}\n\nexport interface TimelineProvidersChangeEvent {\n\treadonly added?: string[];\n\treadonly removed?: string[];\n}\n\nexport interface TimelineRequest {\n\treadonly result: Promise<Timeline | undefined>;\n\treadonly options: TimelineOptions;\n\treadonly source: string;\n\treadonly tokenSource: CancellationTokenSource;\n\treadonly uri: URI;\n}\n\nexport interface ITimelineService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidChangeProviders: Event<TimelineProvidersChangeEvent>;\n\treadonly onDidChangeTimeline: Event<TimelineChangeEvent>;\n\treadonly onDidChangeUri: Event<URI>;\n\n\tregisterTimelineProvider(provider: TimelineProvider): IDisposable;\n\tunregisterTimelineProvider(id: string): void;\n\n\tgetSources(): TimelineSource[];\n\n\tgetTimeline(id: string, uri: URI, options: TimelineOptions, tokenSource: CancellationTokenSource): TimelineRequest | undefined;\n\n\tsetUri(uri: URI): void;\n}\n\nconst TIMELINE_SERVICE_ID = 'timeline';\nexport const ITimelineService = createDecorator<ITimelineService>(TIMELINE_SERVICE_ID);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "bfc6332dcd2e6ff931e738820a7ada0732d56a7e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_6kjzdkkvz = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_6kjzdkkvz();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { ExtensionIdentifier } from '../../../../platform/extensions/common/extensions.js';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export function toKey(extension, source) {
+  /* istanbul ignore next */
+  cov_6kjzdkkvz().f[0]++;
+  cov_6kjzdkkvz().s[0]++;
+  return `${typeof extension === 'string' ?
+  /* istanbul ignore next */
+  (cov_6kjzdkkvz().b[0][0]++, extension) :
+  /* istanbul ignore next */
+  (cov_6kjzdkkvz().b[0][1]++, ExtensionIdentifier.toKey(extension))}|${source}`;
+}
+export const TimelinePaneId =
+/* istanbul ignore next */
+(cov_6kjzdkkvz().s[1]++, 'timeline');
+const TIMELINE_SERVICE_ID =
+/* istanbul ignore next */
+(cov_6kjzdkkvz().s[2]++, 'timeline');
+export const ITimelineService =
+/* istanbul ignore next */
+(cov_6kjzdkkvz().s[3]++, createDecorator(TIMELINE_SERVICE_ID));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJFeHRlbnNpb25JZGVudGlmaWVyIiwiY3JlYXRlRGVjb3JhdG9yIiwidG9LZXkiLCJleHRlbnNpb24iLCJzb3VyY2UiLCJjb3ZfNmtqemRra3Z6IiwiZiIsInMiLCJiIiwiVGltZWxpbmVQYW5lSWQiLCJUSU1FTElORV9TRVJWSUNFX0lEIiwiSVRpbWVsaW5lU2VydmljZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGltZWxpbmUvY29tbW9uL3RpbWVsaW5lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiwgQ2FuY2VsbGF0aW9uVG9rZW5Tb3VyY2UgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9jYW5jZWxsYXRpb24uanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgQ29tbWFuZCB9IGZyb20gJy4uLy4uLy4uLy4uL2VkaXRvci9jb21tb24vbGFuZ3VhZ2VzLmpzJztcbmltcG9ydCB7IEV4dGVuc2lvbklkZW50aWZpZXIgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9leHRlbnNpb25zL2NvbW1vbi9leHRlbnNpb25zLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUFjY2Vzc2liaWxpdHlJbmZvcm1hdGlvbiB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2FjY2Vzc2liaWxpdHkvY29tbW9uL2FjY2Vzc2liaWxpdHkuanMnO1xuaW1wb3J0IHsgVGhlbWVJY29uIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdGhlbWFibGVzLmpzJztcbmltcG9ydCB7IElNYXJrZG93blN0cmluZyB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2h0bWxDb250ZW50LmpzJztcblxuZXhwb3J0IGZ1bmN0aW9uIHRvS2V5KGV4dGVuc2lvbjogRXh0ZW5zaW9uSWRlbnRpZmllciB8IHN0cmluZywgc291cmNlOiBzdHJpbmcpIHtcblx0cmV0dXJuIGAke3R5cGVvZiBleHRlbnNpb24gPT09ICdzdHJpbmcnID8gZXh0ZW5zaW9uIDogRXh0ZW5zaW9uSWRlbnRpZmllci50b0tleShleHRlbnNpb24pfXwke3NvdXJjZX1gO1xufVxuXG5leHBvcnQgY29uc3QgVGltZWxpbmVQYW5lSWQgPSAndGltZWxpbmUnO1xuXG5leHBvcnQgaW50ZXJmYWNlIFRpbWVsaW5lSXRlbSB7XG5cblx0LyoqXG5cdCAqIFRoZSBoYW5kbGUgb2YgdGhlIGl0ZW0gbXVzdCBiZSB1bmlxdWUgYWNyb3NzIGFsbCB0aGVcblx0ICogdGltZWxpbmUgaXRlbXMgcHJvdmlkZWQgYnkgdGhpcyBzb3VyY2UuXG5cdCAqL1xuXHRoYW5kbGU6IHN0cmluZztcblxuXHQvKipcblx0ICogVGhlIGlkZW50aWZpZXIgb2YgdGhlIHRpbWVsaW5lIHByb3ZpZGVyIHRoaXMgdGltZWxpbmUgaXRlbSBpcyBmcm9tLlxuXHQgKi9cblx0c291cmNlOiBzdHJpbmc7XG5cblx0aWQ/OiBzdHJpbmc7XG5cblx0bGFiZWw6IHN0cmluZztcblx0ZGVzY3JpcHRpb24/OiBzdHJpbmc7XG5cdHRvb2x0aXA/OiBzdHJpbmcgfCBJTWFya2Rvd25TdHJpbmcgfCB1bmRlZmluZWQ7XG5cblx0dGltZXN0YW1wOiBudW1iZXI7XG5cblx0YWNjZXNzaWJpbGl0eUluZm9ybWF0aW9uPzogSUFjY2Vzc2liaWxpdHlJbmZvcm1hdGlvbjtcblxuXHRpY29uPzogVVJJO1xuXHRpY29uRGFyaz86IFVSSTtcblx0dGhlbWVJY29uPzogVGhlbWVJY29uO1xuXG5cdGNvbW1hbmQ/OiBDb21tYW5kO1xuXHRjb250ZXh0VmFsdWU/OiBzdHJpbmc7XG5cblx0cmVsYXRpdmVUaW1lPzogc3RyaW5nO1xuXHRyZWxhdGl2ZVRpbWVGdWxsV29yZD86IHN0cmluZztcblx0aGlkZVJlbGF0aXZlVGltZT86IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgVGltZWxpbmVDaGFuZ2VFdmVudCB7XG5cblx0LyoqXG5cdCAqIFRoZSBpZGVudGlmaWVyIG9mIHRoZSB0aW1lbGluZSBwcm92aWRlciB0aGlzIGV2ZW50IGlzIGZyb20uXG5cdCAqL1xuXHRpZDogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBUaGUgcmVzb3VyY2UgdGhhdCBoYXMgdGltZWxpbmUgZW50cmllcyBjaGFuZ2VkIG9yIGB1bmRlZmluZWRgXG5cdCAqIGlmIG5vdCBrbm93bi5cblx0ICovXG5cdHVyaTogVVJJIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRvIGRyb3AgYWxsIHRpbWVsaW5lIGVudHJpZXMgYW5kIHJlZnJlc2ggdGhlbSBhZ2Fpbi5cblx0ICovXG5cdHJlc2V0OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFRpbWVsaW5lT3B0aW9ucyB7XG5cdGN1cnNvcj86IHN0cmluZztcblx0bGltaXQ/OiBudW1iZXIgfCB7IHRpbWVzdGFtcDogbnVtYmVyOyBpZD86IHN0cmluZyB9O1xuXHRyZXNldENhY2hlPzogYm9vbGVhbjtcblx0Y2FjaGVSZXN1bHRzPzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBUaW1lbGluZSB7XG5cblx0LyoqXG5cdCAqIFRoZSBpZGVudGlmaWVyIG9mIHRoZSB0aW1lbGluZSBwcm92aWRlciB0aGlzIHRpbWVsaW5lIGlzIGZyb20uXG5cdCAqL1xuXHRzb3VyY2U6IHN0cmluZztcblxuXHRpdGVtczogVGltZWxpbmVJdGVtW107XG5cblx0cGFnaW5nPzoge1xuXHRcdGN1cnNvcjogc3RyaW5nIHwgdW5kZWZpbmVkO1xuXHR9O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFRpbWVsaW5lUHJvdmlkZXIgZXh0ZW5kcyBUaW1lbGluZVByb3ZpZGVyRGVzY3JpcHRvciwgSURpc3Bvc2FibGUge1xuXHRyZWFkb25seSBvbkRpZENoYW5nZT86IEV2ZW50PFRpbWVsaW5lQ2hhbmdlRXZlbnQ+O1xuXG5cdHByb3ZpZGVUaW1lbGluZSh1cmk6IFVSSSwgb3B0aW9uczogVGltZWxpbmVPcHRpb25zLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPFRpbWVsaW5lIHwgdW5kZWZpbmVkPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBUaW1lbGluZVNvdXJjZSB7XG5cdGlkOiBzdHJpbmc7XG5cdGxhYmVsOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgVGltZWxpbmVQcm92aWRlckRlc2NyaXB0b3Ige1xuXG5cdC8qKlxuXHQgKiBBbiBpZGVudGlmaWVyIG9mIHRoZSBzb3VyY2Ugb2YgdGhlIHRpbWVsaW5lIGl0ZW1zLiBUaGlzIGNhbiBiZSB1c2VkIHRvIGZpbHRlciBzb3VyY2VzLlxuXHQgKi9cblx0aWQ6IHN0cmluZztcblxuXHQvKipcblx0ICogQSBodW1hbi1yZWFkYWJsZSBzdHJpbmcgZGVzY3JpYmluZyB0aGUgc291cmNlIG9mIHRoZSB0aW1lbGluZSBpdGVtcy4gVGhpcyBjYW4gYmUgdXNlZCBhcyB0aGUgZGlzcGxheSBsYWJlbCB3aGVuIGZpbHRlcmluZyBzb3VyY2VzLlxuXHQgKi9cblx0bGFiZWw6IHN0cmluZztcblxuXHQvKipcblx0ICogVGhlIHJlc291cmNlIHNjaGVtZShzKSB0aGlzIHRpbWVsaW5lIHByb3ZpZGVyIGlzIHByb3ZpZGluZyBlbnRyaWVzIGZvci5cblx0ICovXG5cdHNjaGVtZTogc3RyaW5nIHwgc3RyaW5nW107XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgVGltZWxpbmVQcm92aWRlcnNDaGFuZ2VFdmVudCB7XG5cdHJlYWRvbmx5IGFkZGVkPzogc3RyaW5nW107XG5cdHJlYWRvbmx5IHJlbW92ZWQ/OiBzdHJpbmdbXTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBUaW1lbGluZVJlcXVlc3Qge1xuXHRyZWFkb25seSByZXN1bHQ6IFByb21pc2U8VGltZWxpbmUgfCB1bmRlZmluZWQ+O1xuXHRyZWFkb25seSBvcHRpb25zOiBUaW1lbGluZU9wdGlvbnM7XG5cdHJlYWRvbmx5IHNvdXJjZTogc3RyaW5nO1xuXHRyZWFkb25seSB0b2tlblNvdXJjZTogQ2FuY2VsbGF0aW9uVG9rZW5Tb3VyY2U7XG5cdHJlYWRvbmx5IHVyaTogVVJJO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElUaW1lbGluZVNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VQcm92aWRlcnM6IEV2ZW50PFRpbWVsaW5lUHJvdmlkZXJzQ2hhbmdlRXZlbnQ+O1xuXHRyZWFkb25seSBvbkRpZENoYW5nZVRpbWVsaW5lOiBFdmVudDxUaW1lbGluZUNoYW5nZUV2ZW50Pjtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VVcmk6IEV2ZW50PFVSST47XG5cblx0cmVnaXN0ZXJUaW1lbGluZVByb3ZpZGVyKHByb3ZpZGVyOiBUaW1lbGluZVByb3ZpZGVyKTogSURpc3Bvc2FibGU7XG5cdHVucmVnaXN0ZXJUaW1lbGluZVByb3ZpZGVyKGlkOiBzdHJpbmcpOiB2b2lkO1xuXG5cdGdldFNvdXJjZXMoKTogVGltZWxpbmVTb3VyY2VbXTtcblxuXHRnZXRUaW1lbGluZShpZDogc3RyaW5nLCB1cmk6IFVSSSwgb3B0aW9uczogVGltZWxpbmVPcHRpb25zLCB0b2tlblNvdXJjZTogQ2FuY2VsbGF0aW9uVG9rZW5Tb3VyY2UpOiBUaW1lbGluZVJlcXVlc3QgfCB1bmRlZmluZWQ7XG5cblx0c2V0VXJpKHVyaTogVVJJKTogdm9pZDtcbn1cblxuY29uc3QgVElNRUxJTkVfU0VSVklDRV9JRCA9ICd0aW1lbGluZSc7XG5leHBvcnQgY29uc3QgSVRpbWVsaW5lU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJVGltZWxpbmVTZXJ2aWNlPihUSU1FTElORV9TRVJWSUNFX0lEKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBVUEsU0FBU0EsbUJBQW1CLFFBQVEsc0RBQXNEO0FBQzFGLFNBQVNDLGVBQWUsUUFBUSw0REFBNEQ7QUFLNUYsT0FBTSxTQUFVQyxLQUFLQSxDQUFDQyxTQUF1QyxFQUFFQyxNQUFjO0VBQUE7RUFBQUMsYUFBQSxHQUFBQyxDQUFBO0VBQUFELGFBQUEsR0FBQUUsQ0FBQTtFQUM1RSxPQUFPLEdBQUcsT0FBT0osU0FBUyxLQUFLLFFBQVE7RUFBQTtFQUFBLENBQUFFLGFBQUEsR0FBQUcsQ0FBQSxVQUFHTCxTQUFTO0VBQUE7RUFBQSxDQUFBRSxhQUFBLEdBQUFHLENBQUEsVUFBR1IsbUJBQW1CLENBQUNFLEtBQUssQ0FBQ0MsU0FBUyxDQUFDLEtBQUlDLE1BQU0sRUFBRTtBQUN2RztBQUVBLE9BQU8sTUFBTUssY0FBYztBQUFBO0FBQUEsQ0FBQUosYUFBQSxHQUFBRSxDQUFBLE9BQUcsVUFBVTtBQXdJeEMsTUFBTUcsbUJBQW1CO0FBQUE7QUFBQSxDQUFBTCxhQUFBLEdBQUFFLENBQUEsT0FBRyxVQUFVO0FBQ3RDLE9BQU8sTUFBTUksZ0JBQWdCO0FBQUE7QUFBQSxDQUFBTixhQUFBLEdBQUFFLENBQUEsT0FBR04sZUFBZSxDQUFtQlMsbUJBQW1CLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

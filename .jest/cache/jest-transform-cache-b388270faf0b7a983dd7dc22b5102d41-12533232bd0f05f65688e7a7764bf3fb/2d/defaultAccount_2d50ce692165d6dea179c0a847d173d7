@@ -1,0 +1,46 @@
+8f848fceec77df1fbaae89c85e53dc9d
+/* istanbul ignore next */
+function cov_1xe6tvozjf() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/defaultAccount.ts";
+  var hash = "79034484a7c55294648c5d10129dbe1b4374e73e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/defaultAccount.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/defaultAccount.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/defaultAccount.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport interface IDefaultAccount {\n\treadonly sessionId: string;\n\treadonly enterprise: boolean;\n\treadonly access_type_sku?: string;\n\treadonly assigned_date?: string;\n\treadonly can_signup_for_limited?: boolean;\n\treadonly chat_enabled?: boolean;\n\treadonly chat_preview_features_enabled?: boolean;\n\treadonly mcp?: boolean;\n\treadonly mcpRegistryUrl?: string;\n\treadonly mcpAccess?: 'allow_all' | 'registry_only';\n\treadonly analytics_tracking_id?: string;\n\treadonly limited_user_quotas?: {\n\t\treadonly chat: number;\n\t\treadonly completions: number;\n\t};\n\treadonly monthly_quotas?: {\n\t\treadonly chat: number;\n\t\treadonly completions: number;\n\t};\n\treadonly limited_user_reset_date?: string;\n\treadonly chat_agent_enabled?: boolean;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "79034484a7c55294648c5d10129dbe1b4374e73e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1xe6tvozjf = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1xe6tvozjf();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2NvbW1vbi9kZWZhdWx0QWNjb3VudC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGludGVyZmFjZSBJRGVmYXVsdEFjY291bnQge1xuXHRyZWFkb25seSBzZXNzaW9uSWQ6IHN0cmluZztcblx0cmVhZG9ubHkgZW50ZXJwcmlzZTogYm9vbGVhbjtcblx0cmVhZG9ubHkgYWNjZXNzX3R5cGVfc2t1Pzogc3RyaW5nO1xuXHRyZWFkb25seSBhc3NpZ25lZF9kYXRlPzogc3RyaW5nO1xuXHRyZWFkb25seSBjYW5fc2lnbnVwX2Zvcl9saW1pdGVkPzogYm9vbGVhbjtcblx0cmVhZG9ubHkgY2hhdF9lbmFibGVkPzogYm9vbGVhbjtcblx0cmVhZG9ubHkgY2hhdF9wcmV2aWV3X2ZlYXR1cmVzX2VuYWJsZWQ/OiBib29sZWFuO1xuXHRyZWFkb25seSBtY3A/OiBib29sZWFuO1xuXHRyZWFkb25seSBtY3BSZWdpc3RyeVVybD86IHN0cmluZztcblx0cmVhZG9ubHkgbWNwQWNjZXNzPzogJ2FsbG93X2FsbCcgfCAncmVnaXN0cnlfb25seSc7XG5cdHJlYWRvbmx5IGFuYWx5dGljc190cmFja2luZ19pZD86IHN0cmluZztcblx0cmVhZG9ubHkgbGltaXRlZF91c2VyX3F1b3Rhcz86IHtcblx0XHRyZWFkb25seSBjaGF0OiBudW1iZXI7XG5cdFx0cmVhZG9ubHkgY29tcGxldGlvbnM6IG51bWJlcjtcblx0fTtcblx0cmVhZG9ubHkgbW9udGhseV9xdW90YXM/OiB7XG5cdFx0cmVhZG9ubHkgY2hhdDogbnVtYmVyO1xuXHRcdHJlYWRvbmx5IGNvbXBsZXRpb25zOiBudW1iZXI7XG5cdH07XG5cdHJlYWRvbmx5IGxpbWl0ZWRfdXNlcl9yZXNldF9kYXRlPzogc3RyaW5nO1xuXHRyZWFkb25seSBjaGF0X2FnZW50X2VuYWJsZWQ/OiBib29sZWFuO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

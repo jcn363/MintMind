@@ -1,0 +1,139 @@
+4e5c7b314f96b8e95c925654cacbb1d6
+/* istanbul ignore next */
+function cov_h37ougu8y() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookService.ts";
+  var hash = "79b0c5787673a038fd1a2ef93839cea5c1889dab";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 32
+        },
+        end: {
+          line: 6,
+          column: 66
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 33
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 37
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 43
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 53
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 11
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAkB7F,MAAM,CAAC,MAAM,gBAAgB,GAAG,eAAe,CAAmB,iBAAiB,CAAC,CAAC;AAsBrF,MAAM,OAAO,0BAA0B;IAE5B;IACA;IACA;IAHV,YACU,QAAgB,EAChB,UAA+B,EAC/B,aAA2C;QAF3C,aAAQ,GAAR,QAAQ,CAAQ;QAChB,eAAU,GAAV,UAAU,CAAqB;QAC/B,kBAAa,GAAb,aAAa,CAA8B;IACjD,CAAC;CACL",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/common/notebookService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { NotebookProviderInfo } from './notebookProvider.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { INotebookRendererInfo, NotebookData, TransientOptions, IOrderedMimeType, IOutputDto, INotebookContributionData, NotebookExtensionDescription, INotebookStaticPreloadInfo } from './notebookCommon.js';\nimport { NotebookTextModel } from './model/notebookTextModel.js';\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { NotebookCellTextModel } from './model/notebookCellTextModel.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { VSBuffer, VSBufferReadableStream } from '../../../../base/common/buffer.js';\nimport { ConfigurationTarget } from '../../../../platform/configuration/common/configuration.js';\nimport { IFileStatWithMetadata, IWriteFileOptions } from '../../../../platform/files/common/files.js';\nimport { ITextQuery } from '../../../services/search/common/search.js';\nimport { NotebookPriorityInfo } from '../../search/common/search.js';\nimport { INotebookFileMatchNoModel } from '../../search/common/searchNotebookHelpers.js';\nimport { SnapshotContext } from '../../../services/workingCopy/common/fileWorkingCopy.js';\n\n\nexport const INotebookService = createDecorator<INotebookService>('notebookService');\n\nexport interface INotebookContentProvider {\n\toptions: TransientOptions;\n\n\topen(uri: URI, backupId: string | VSBuffer | undefined, untitledDocumentData: VSBuffer | undefined, token: CancellationToken): Promise<{ data: NotebookData; transientOptions: TransientOptions }>;\n\tbackup(uri: URI, token: CancellationToken): Promise<string | VSBuffer>;\n}\n\nexport interface INotebookSerializer {\n\toptions: TransientOptions;\n\tdataToNotebook(data: VSBuffer): Promise<NotebookData>;\n\tnotebookToData(data: NotebookData): Promise<VSBuffer>;\n\tsave(uri: URI, versionId: number, options: IWriteFileOptions, token: CancellationToken): Promise<IFileStatWithMetadata>;\n\tsearchInNotebooks(textQuery: ITextQuery, token: CancellationToken, allPriorityInfo: Map<string, NotebookPriorityInfo[]>): Promise<{ results: INotebookFileMatchNoModel<URI>[]; limitHit: boolean }>;\n}\n\nexport interface INotebookRawData {\n\tdata: NotebookData;\n\ttransientOptions: TransientOptions;\n}\n\nexport class SimpleNotebookProviderInfo {\n\tconstructor(\n\t\treadonly viewType: string,\n\t\treadonly serializer: INotebookSerializer,\n\t\treadonly extensionData: NotebookExtensionDescription\n\t) { }\n}\n\nexport interface INotebookService {\n\treadonly _serviceBrand: undefined;\n\tcanResolve(viewType: string): Promise<boolean>;\n\n\treadonly onAddViewType: Event<string>;\n\treadonly onWillRemoveViewType: Event<string>;\n\treadonly onDidChangeOutputRenderers: Event<void>;\n\treadonly onWillAddNotebookDocument: Event<NotebookTextModel>;\n\treadonly onDidAddNotebookDocument: Event<NotebookTextModel>;\n\n\treadonly onWillRemoveNotebookDocument: Event<NotebookTextModel>;\n\treadonly onDidRemoveNotebookDocument: Event<NotebookTextModel>;\n\n\tregisterNotebookSerializer(viewType: string, extensionData: NotebookExtensionDescription, serializer: INotebookSerializer): IDisposable;\n\twithNotebookDataProvider(viewType: string): Promise<SimpleNotebookProviderInfo>;\n\ttryGetDataProviderSync(viewType: string): SimpleNotebookProviderInfo | undefined;\n\n\tgetOutputMimeTypeInfo(textModel: NotebookTextModel, kernelProvides: readonly string[] | undefined, output: IOutputDto): readonly IOrderedMimeType[];\n\n\tgetViewTypeProvider(viewType: string): string | undefined;\n\tgetRendererInfo(id: string): INotebookRendererInfo | undefined;\n\tgetRenderers(): INotebookRendererInfo[];\n\n\tgetStaticPreloads(viewType: string): Iterable<INotebookStaticPreloadInfo>;\n\n\t/** Updates the preferred renderer for the given mimetype in the workspace. */\n\tupdateMimePreferredRenderer(viewType: string, mimeType: string, rendererId: string, otherMimetypes: readonly string[]): void;\n\tsaveMimeDisplayOrder(target: ConfigurationTarget): void;\n\n\tcreateNotebookTextModel(viewType: string, uri: URI, stream?: VSBufferReadableStream): Promise<NotebookTextModel>;\n\tcreateNotebookTextDocumentSnapshot(uri: URI, context: SnapshotContext, token: CancellationToken): Promise<VSBufferReadableStream>;\n\trestoreNotebookTextModelFromSnapshot(uri: URI, viewType: string, snapshot: VSBufferReadableStream): Promise<NotebookTextModel>;\n\tgetNotebookTextModel(uri: URI): NotebookTextModel | undefined;\n\tgetNotebookTextModels(): Iterable<NotebookTextModel>;\n\tlistNotebookDocuments(): readonly NotebookTextModel[];\n\n\t/**\tRegister a notebook type that we will handle. The notebook editor will be registered for notebook types contributed by extensions */\n\tregisterContributedNotebookType(viewType: string, data: INotebookContributionData): IDisposable;\n\tgetContributedNotebookType(viewType: string): NotebookProviderInfo | undefined;\n\tgetContributedNotebookTypes(resource?: URI): readonly NotebookProviderInfo[];\n\thasSupportedNotebooks(resource: URI): boolean;\n\tgetNotebookProviderResourceRoots(): URI[];\n\n\tsetToCopy(items: NotebookCellTextModel[], isCopy: boolean): void;\n\tgetToCopy(): { items: NotebookCellTextModel[]; isCopy: boolean } | undefined;\n\tclearEditorCache(): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "79b0c5787673a038fd1a2ef93839cea5c1889dab"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_h37ougu8y = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_h37ougu8y();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const INotebookService =
+/* istanbul ignore next */
+(cov_h37ougu8y().s[0]++, createDecorator('notebookService'));
+export class SimpleNotebookProviderInfo {
+  viewType;
+  serializer;
+  extensionData;
+  constructor(viewType, serializer, extensionData) {
+    /* istanbul ignore next */
+    cov_h37ougu8y().f[0]++;
+    cov_h37ougu8y().s[1]++;
+    this.viewType = viewType;
+    /* istanbul ignore next */
+    cov_h37ougu8y().s[2]++;
+    this.serializer = serializer;
+    /* istanbul ignore next */
+    cov_h37ougu8y().s[3]++;
+    this.extensionData = extensionData;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfaDM3b3VndTh5IiwiYWN0dWFsQ292ZXJhZ2UiLCJjcmVhdGVEZWNvcmF0b3IiLCJJTm90ZWJvb2tTZXJ2aWNlIiwicyIsIlNpbXBsZU5vdGVib29rUHJvdmlkZXJJbmZvIiwidmlld1R5cGUiLCJzZXJpYWxpemVyIiwiZXh0ZW5zaW9uRGF0YSIsImNvbnN0cnVjdG9yIiwiZiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvbm90ZWJvb2svY29tbW9uL25vdGVib29rU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgTm90ZWJvb2tQcm92aWRlckluZm8gfSBmcm9tICcuL25vdGVib29rUHJvdmlkZXIuanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBJTm90ZWJvb2tSZW5kZXJlckluZm8sIE5vdGVib29rRGF0YSwgVHJhbnNpZW50T3B0aW9ucywgSU9yZGVyZWRNaW1lVHlwZSwgSU91dHB1dER0bywgSU5vdGVib29rQ29udHJpYnV0aW9uRGF0YSwgTm90ZWJvb2tFeHRlbnNpb25EZXNjcmlwdGlvbiwgSU5vdGVib29rU3RhdGljUHJlbG9hZEluZm8gfSBmcm9tICcuL25vdGVib29rQ29tbW9uLmpzJztcbmltcG9ydCB7IE5vdGVib29rVGV4dE1vZGVsIH0gZnJvbSAnLi9tb2RlbC9ub3RlYm9va1RleHRNb2RlbC5qcyc7XG5pbXBvcnQgeyBDYW5jZWxsYXRpb25Ub2tlbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NhbmNlbGxhdGlvbi5qcyc7XG5pbXBvcnQgeyBOb3RlYm9va0NlbGxUZXh0TW9kZWwgfSBmcm9tICcuL21vZGVsL25vdGVib29rQ2VsbFRleHRNb2RlbC5qcyc7XG5pbXBvcnQgeyBJRGlzcG9zYWJsZSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2xpZmVjeWNsZS5qcyc7XG5pbXBvcnQgeyBWU0J1ZmZlciwgVlNCdWZmZXJSZWFkYWJsZVN0cmVhbSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2J1ZmZlci5qcyc7XG5pbXBvcnQgeyBDb25maWd1cmF0aW9uVGFyZ2V0IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29uZmlndXJhdGlvbi9jb21tb24vY29uZmlndXJhdGlvbi5qcyc7XG5pbXBvcnQgeyBJRmlsZVN0YXRXaXRoTWV0YWRhdGEsIElXcml0ZUZpbGVPcHRpb25zIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vZmlsZXMvY29tbW9uL2ZpbGVzLmpzJztcbmltcG9ydCB7IElUZXh0UXVlcnkgfSBmcm9tICcuLi8uLi8uLi9zZXJ2aWNlcy9zZWFyY2gvY29tbW9uL3NlYXJjaC5qcyc7XG5pbXBvcnQgeyBOb3RlYm9va1ByaW9yaXR5SW5mbyB9IGZyb20gJy4uLy4uL3NlYXJjaC9jb21tb24vc2VhcmNoLmpzJztcbmltcG9ydCB7IElOb3RlYm9va0ZpbGVNYXRjaE5vTW9kZWwgfSBmcm9tICcuLi8uLi9zZWFyY2gvY29tbW9uL3NlYXJjaE5vdGVib29rSGVscGVycy5qcyc7XG5pbXBvcnQgeyBTbmFwc2hvdENvbnRleHQgfSBmcm9tICcuLi8uLi8uLi9zZXJ2aWNlcy93b3JraW5nQ29weS9jb21tb24vZmlsZVdvcmtpbmdDb3B5LmpzJztcblxuXG5leHBvcnQgY29uc3QgSU5vdGVib29rU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJTm90ZWJvb2tTZXJ2aWNlPignbm90ZWJvb2tTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU5vdGVib29rQ29udGVudFByb3ZpZGVyIHtcblx0b3B0aW9uczogVHJhbnNpZW50T3B0aW9ucztcblxuXHRvcGVuKHVyaTogVVJJLCBiYWNrdXBJZDogc3RyaW5nIHwgVlNCdWZmZXIgfCB1bmRlZmluZWQsIHVudGl0bGVkRG9jdW1lbnREYXRhOiBWU0J1ZmZlciB8IHVuZGVmaW5lZCwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTx7IGRhdGE6IE5vdGVib29rRGF0YTsgdHJhbnNpZW50T3B0aW9uczogVHJhbnNpZW50T3B0aW9ucyB9Pjtcblx0YmFja3VwKHVyaTogVVJJLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPHN0cmluZyB8IFZTQnVmZmVyPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJTm90ZWJvb2tTZXJpYWxpemVyIHtcblx0b3B0aW9uczogVHJhbnNpZW50T3B0aW9ucztcblx0ZGF0YVRvTm90ZWJvb2soZGF0YTogVlNCdWZmZXIpOiBQcm9taXNlPE5vdGVib29rRGF0YT47XG5cdG5vdGVib29rVG9EYXRhKGRhdGE6IE5vdGVib29rRGF0YSk6IFByb21pc2U8VlNCdWZmZXI+O1xuXHRzYXZlKHVyaTogVVJJLCB2ZXJzaW9uSWQ6IG51bWJlciwgb3B0aW9uczogSVdyaXRlRmlsZU9wdGlvbnMsIHRva2VuOiBDYW5jZWxsYXRpb25Ub2tlbik6IFByb21pc2U8SUZpbGVTdGF0V2l0aE1ldGFkYXRhPjtcblx0c2VhcmNoSW5Ob3RlYm9va3ModGV4dFF1ZXJ5OiBJVGV4dFF1ZXJ5LCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4sIGFsbFByaW9yaXR5SW5mbzogTWFwPHN0cmluZywgTm90ZWJvb2tQcmlvcml0eUluZm9bXT4pOiBQcm9taXNlPHsgcmVzdWx0czogSU5vdGVib29rRmlsZU1hdGNoTm9Nb2RlbDxVUkk+W107IGxpbWl0SGl0OiBib29sZWFuIH0+O1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElOb3RlYm9va1Jhd0RhdGEge1xuXHRkYXRhOiBOb3RlYm9va0RhdGE7XG5cdHRyYW5zaWVudE9wdGlvbnM6IFRyYW5zaWVudE9wdGlvbnM7XG59XG5cbmV4cG9ydCBjbGFzcyBTaW1wbGVOb3RlYm9va1Byb3ZpZGVySW5mbyB7XG5cdGNvbnN0cnVjdG9yKFxuXHRcdHJlYWRvbmx5IHZpZXdUeXBlOiBzdHJpbmcsXG5cdFx0cmVhZG9ubHkgc2VyaWFsaXplcjogSU5vdGVib29rU2VyaWFsaXplcixcblx0XHRyZWFkb25seSBleHRlbnNpb25EYXRhOiBOb3RlYm9va0V4dGVuc2lvbkRlc2NyaXB0aW9uXG5cdCkgeyB9XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU5vdGVib29rU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0Y2FuUmVzb2x2ZSh2aWV3VHlwZTogc3RyaW5nKTogUHJvbWlzZTxib29sZWFuPjtcblxuXHRyZWFkb25seSBvbkFkZFZpZXdUeXBlOiBFdmVudDxzdHJpbmc+O1xuXHRyZWFkb25seSBvbldpbGxSZW1vdmVWaWV3VHlwZTogRXZlbnQ8c3RyaW5nPjtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VPdXRwdXRSZW5kZXJlcnM6IEV2ZW50PHZvaWQ+O1xuXHRyZWFkb25seSBvbldpbGxBZGROb3RlYm9va0RvY3VtZW50OiBFdmVudDxOb3RlYm9va1RleHRNb2RlbD47XG5cdHJlYWRvbmx5IG9uRGlkQWRkTm90ZWJvb2tEb2N1bWVudDogRXZlbnQ8Tm90ZWJvb2tUZXh0TW9kZWw+O1xuXG5cdHJlYWRvbmx5IG9uV2lsbFJlbW92ZU5vdGVib29rRG9jdW1lbnQ6IEV2ZW50PE5vdGVib29rVGV4dE1vZGVsPjtcblx0cmVhZG9ubHkgb25EaWRSZW1vdmVOb3RlYm9va0RvY3VtZW50OiBFdmVudDxOb3RlYm9va1RleHRNb2RlbD47XG5cblx0cmVnaXN0ZXJOb3RlYm9va1NlcmlhbGl6ZXIodmlld1R5cGU6IHN0cmluZywgZXh0ZW5zaW9uRGF0YTogTm90ZWJvb2tFeHRlbnNpb25EZXNjcmlwdGlvbiwgc2VyaWFsaXplcjogSU5vdGVib29rU2VyaWFsaXplcik6IElEaXNwb3NhYmxlO1xuXHR3aXRoTm90ZWJvb2tEYXRhUHJvdmlkZXIodmlld1R5cGU6IHN0cmluZyk6IFByb21pc2U8U2ltcGxlTm90ZWJvb2tQcm92aWRlckluZm8+O1xuXHR0cnlHZXREYXRhUHJvdmlkZXJTeW5jKHZpZXdUeXBlOiBzdHJpbmcpOiBTaW1wbGVOb3RlYm9va1Byb3ZpZGVySW5mbyB8IHVuZGVmaW5lZDtcblxuXHRnZXRPdXRwdXRNaW1lVHlwZUluZm8odGV4dE1vZGVsOiBOb3RlYm9va1RleHRNb2RlbCwga2VybmVsUHJvdmlkZXM6IHJlYWRvbmx5IHN0cmluZ1tdIHwgdW5kZWZpbmVkLCBvdXRwdXQ6IElPdXRwdXREdG8pOiByZWFkb25seSBJT3JkZXJlZE1pbWVUeXBlW107XG5cblx0Z2V0Vmlld1R5cGVQcm92aWRlcih2aWV3VHlwZTogc3RyaW5nKTogc3RyaW5nIHwgdW5kZWZpbmVkO1xuXHRnZXRSZW5kZXJlckluZm8oaWQ6IHN0cmluZyk6IElOb3RlYm9va1JlbmRlcmVySW5mbyB8IHVuZGVmaW5lZDtcblx0Z2V0UmVuZGVyZXJzKCk6IElOb3RlYm9va1JlbmRlcmVySW5mb1tdO1xuXG5cdGdldFN0YXRpY1ByZWxvYWRzKHZpZXdUeXBlOiBzdHJpbmcpOiBJdGVyYWJsZTxJTm90ZWJvb2tTdGF0aWNQcmVsb2FkSW5mbz47XG5cblx0LyoqIFVwZGF0ZXMgdGhlIHByZWZlcnJlZCByZW5kZXJlciBmb3IgdGhlIGdpdmVuIG1pbWV0eXBlIGluIHRoZSB3b3Jrc3BhY2UuICovXG5cdHVwZGF0ZU1pbWVQcmVmZXJyZWRSZW5kZXJlcih2aWV3VHlwZTogc3RyaW5nLCBtaW1lVHlwZTogc3RyaW5nLCByZW5kZXJlcklkOiBzdHJpbmcsIG90aGVyTWltZXR5cGVzOiByZWFkb25seSBzdHJpbmdbXSk6IHZvaWQ7XG5cdHNhdmVNaW1lRGlzcGxheU9yZGVyKHRhcmdldDogQ29uZmlndXJhdGlvblRhcmdldCk6IHZvaWQ7XG5cblx0Y3JlYXRlTm90ZWJvb2tUZXh0TW9kZWwodmlld1R5cGU6IHN0cmluZywgdXJpOiBVUkksIHN0cmVhbT86IFZTQnVmZmVyUmVhZGFibGVTdHJlYW0pOiBQcm9taXNlPE5vdGVib29rVGV4dE1vZGVsPjtcblx0Y3JlYXRlTm90ZWJvb2tUZXh0RG9jdW1lbnRTbmFwc2hvdCh1cmk6IFVSSSwgY29udGV4dDogU25hcHNob3RDb250ZXh0LCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPFZTQnVmZmVyUmVhZGFibGVTdHJlYW0+O1xuXHRyZXN0b3JlTm90ZWJvb2tUZXh0TW9kZWxGcm9tU25hcHNob3QodXJpOiBVUkksIHZpZXdUeXBlOiBzdHJpbmcsIHNuYXBzaG90OiBWU0J1ZmZlclJlYWRhYmxlU3RyZWFtKTogUHJvbWlzZTxOb3RlYm9va1RleHRNb2RlbD47XG5cdGdldE5vdGVib29rVGV4dE1vZGVsKHVyaTogVVJJKTogTm90ZWJvb2tUZXh0TW9kZWwgfCB1bmRlZmluZWQ7XG5cdGdldE5vdGVib29rVGV4dE1vZGVscygpOiBJdGVyYWJsZTxOb3RlYm9va1RleHRNb2RlbD47XG5cdGxpc3ROb3RlYm9va0RvY3VtZW50cygpOiByZWFkb25seSBOb3RlYm9va1RleHRNb2RlbFtdO1xuXG5cdC8qKlx0UmVnaXN0ZXIgYSBub3RlYm9vayB0eXBlIHRoYXQgd2Ugd2lsbCBoYW5kbGUuIFRoZSBub3RlYm9vayBlZGl0b3Igd2lsbCBiZSByZWdpc3RlcmVkIGZvciBub3RlYm9vayB0eXBlcyBjb250cmlidXRlZCBieSBleHRlbnNpb25zICovXG5cdHJlZ2lzdGVyQ29udHJpYnV0ZWROb3RlYm9va1R5cGUodmlld1R5cGU6IHN0cmluZywgZGF0YTogSU5vdGVib29rQ29udHJpYnV0aW9uRGF0YSk6IElEaXNwb3NhYmxlO1xuXHRnZXRDb250cmlidXRlZE5vdGVib29rVHlwZSh2aWV3VHlwZTogc3RyaW5nKTogTm90ZWJvb2tQcm92aWRlckluZm8gfCB1bmRlZmluZWQ7XG5cdGdldENvbnRyaWJ1dGVkTm90ZWJvb2tUeXBlcyhyZXNvdXJjZT86IFVSSSk6IHJlYWRvbmx5IE5vdGVib29rUHJvdmlkZXJJbmZvW107XG5cdGhhc1N1cHBvcnRlZE5vdGVib29rcyhyZXNvdXJjZTogVVJJKTogYm9vbGVhbjtcblx0Z2V0Tm90ZWJvb2tQcm92aWRlclJlc291cmNlUm9vdHMoKTogVVJJW107XG5cblx0c2V0VG9Db3B5KGl0ZW1zOiBOb3RlYm9va0NlbGxUZXh0TW9kZWxbXSwgaXNDb3B5OiBib29sZWFuKTogdm9pZDtcblx0Z2V0VG9Db3B5KCk6IHsgaXRlbXM6IE5vdGVib29rQ2VsbFRleHRNb2RlbFtdOyBpc0NvcHk6IGJvb2xlYW4gfSB8IHVuZGVmaW5lZDtcblx0Y2xlYXJFZGl0b3JDYWNoZSgpOiB2b2lkO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1EQztJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBbkREOzs7O0FBS0EsU0FBU0UsZUFBZSxRQUFRLDREQUE0RDtBQWtCNUYsT0FBTyxNQUFNQyxnQkFBZ0I7QUFBQTtBQUFBLENBQUFILGFBQUEsR0FBQUksQ0FBQSxPQUFHRixlQUFlLENBQW1CLGlCQUFpQixDQUFDO0FBc0JwRixPQUFNLE1BQU9HLDBCQUEwQjtFQUU1QkMsUUFBQTtFQUNBQyxVQUFBO0VBQ0FDLGFBQUE7RUFIVkMsWUFDVUgsUUFBZ0IsRUFDaEJDLFVBQStCLEVBQy9CQyxhQUEyQztJQUFBO0lBQUFSLGFBQUEsR0FBQVUsQ0FBQTtJQUFBVixhQUFBLEdBQUFJLENBQUE7SUFGM0MsS0FBQUUsUUFBUSxHQUFSQSxRQUFRO0lBQVE7SUFBQU4sYUFBQSxHQUFBSSxDQUFBO0lBQ2hCLEtBQUFHLFVBQVUsR0FBVkEsVUFBVTtJQUFxQjtJQUFBUCxhQUFBLEdBQUFJLENBQUE7SUFDL0IsS0FBQUksYUFBYSxHQUFiQSxhQUFhO0VBQ25CIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,180 @@
+65716c62ff00d38ea7b36707984b80a6
+/* istanbul ignore next */
+function cov_26qc2tbzgt() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/descriptors.ts";
+  var hash = "c835d5353c89a100c190a0195cfa9ac7c9192799";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/descriptors.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 25
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 47
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 73
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 82
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 22
+          },
+          end: {
+            line: 9,
+            column: 42
+          }
+        },
+        type: "default-arg",
+        locations: [{
+          start: {
+            line: 9,
+            column: 40
+          },
+          end: {
+            line: 9,
+            column: 42
+          }
+        }],
+        line: 9
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 9,
+            column: 44
+          },
+          end: {
+            line: 9,
+            column: 80
+          }
+        },
+        type: "default-arg",
+        locations: [{
+          start: {
+            line: 9,
+            column: 75
+          },
+          end: {
+            line: 9,
+            column: 80
+          }
+        }],
+        line: 9
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0],
+      "1": [0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/descriptors.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,OAAO,cAAc;IAEjB,IAAI,CAAM;IACV,eAAe,CAAY;IAC3B,4BAA4B,CAAU;IAE/C,YAAY,IAA+B,EAAE,kBAA6B,EAAE,EAAE,+BAAwC,KAAK;QAC1H,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;QACjB,IAAI,CAAC,eAAe,GAAG,eAAe,CAAC;QACvC,IAAI,CAAC,4BAA4B,GAAG,4BAA4B,CAAC;IAClE,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/instantiation/common/descriptors.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport class SyncDescriptor<T> {\n\n\treadonly ctor: any;\n\treadonly staticArguments: unknown[];\n\treadonly supportsDelayedInstantiation: boolean;\n\n\tconstructor(ctor: new (...args: any[]) => T, staticArguments: unknown[] = [], supportsDelayedInstantiation: boolean = false) {\n\t\tthis.ctor = ctor;\n\t\tthis.staticArguments = staticArguments;\n\t\tthis.supportsDelayedInstantiation = supportsDelayedInstantiation;\n\t}\n}\n\nexport interface SyncDescriptor0<T> {\n\treadonly ctor: new () => T;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c835d5353c89a100c190a0195cfa9ac7c9192799"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_26qc2tbzgt = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_26qc2tbzgt();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class SyncDescriptor {
+  ctor;
+  staticArguments;
+  supportsDelayedInstantiation;
+  constructor(ctor, staticArguments =
+  /* istanbul ignore next */
+  (cov_26qc2tbzgt().b[0][0]++, []), supportsDelayedInstantiation =
+  /* istanbul ignore next */
+  (cov_26qc2tbzgt().b[1][0]++, false)) {
+    /* istanbul ignore next */
+    cov_26qc2tbzgt().f[0]++;
+    cov_26qc2tbzgt().s[0]++;
+    this.ctor = ctor;
+    /* istanbul ignore next */
+    cov_26qc2tbzgt().s[1]++;
+    this.staticArguments = staticArguments;
+    /* istanbul ignore next */
+    cov_26qc2tbzgt().s[2]++;
+    this.supportsDelayedInstantiation = supportsDelayedInstantiation;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTeW5jRGVzY3JpcHRvciIsImN0b3IiLCJzdGF0aWNBcmd1bWVudHMiLCJzdXBwb3J0c0RlbGF5ZWRJbnN0YW50aWF0aW9uIiwiY29uc3RydWN0b3IiLCJjb3ZfMjZxYzJ0YnpndCIsImIiLCJmIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vZGVzY3JpcHRvcnMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCBjbGFzcyBTeW5jRGVzY3JpcHRvcjxUPiB7XG5cblx0cmVhZG9ubHkgY3RvcjogYW55O1xuXHRyZWFkb25seSBzdGF0aWNBcmd1bWVudHM6IHVua25vd25bXTtcblx0cmVhZG9ubHkgc3VwcG9ydHNEZWxheWVkSW5zdGFudGlhdGlvbjogYm9vbGVhbjtcblxuXHRjb25zdHJ1Y3RvcihjdG9yOiBuZXcgKC4uLmFyZ3M6IGFueVtdKSA9PiBULCBzdGF0aWNBcmd1bWVudHM6IHVua25vd25bXSA9IFtdLCBzdXBwb3J0c0RlbGF5ZWRJbnN0YW50aWF0aW9uOiBib29sZWFuID0gZmFsc2UpIHtcblx0XHR0aGlzLmN0b3IgPSBjdG9yO1xuXHRcdHRoaXMuc3RhdGljQXJndW1lbnRzID0gc3RhdGljQXJndW1lbnRzO1xuXHRcdHRoaXMuc3VwcG9ydHNEZWxheWVkSW5zdGFudGlhdGlvbiA9IHN1cHBvcnRzRGVsYXllZEluc3RhbnRpYXRpb247XG5cdH1cbn1cblxuZXhwb3J0IGludGVyZmFjZSBTeW5jRGVzY3JpcHRvcjA8VD4ge1xuXHRyZWFkb25seSBjdG9yOiBuZXcgKCkgPT4gVDtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxPQUFNLE1BQU9BLGNBQWM7RUFFakJDLElBQUk7RUFDSkMsZUFBZTtFQUNmQyw0QkFBNEI7RUFFckNDLFlBQVlILElBQStCLEVBQUVDLGVBQUE7RUFBQTtFQUFBLENBQUFHLGNBQUEsR0FBQUMsQ0FBQSxVQUE2QixFQUFFLEdBQUVILDRCQUFBO0VBQUE7RUFBQSxDQUFBRSxjQUFBLEdBQUFDLENBQUEsVUFBd0MsS0FBSztJQUFBO0lBQUFELGNBQUEsR0FBQUUsQ0FBQTtJQUFBRixjQUFBLEdBQUFHLENBQUE7SUFDMUgsSUFBSSxDQUFDUCxJQUFJLEdBQUdBLElBQUk7SUFBQztJQUFBSSxjQUFBLEdBQUFHLENBQUE7SUFDakIsSUFBSSxDQUFDTixlQUFlLEdBQUdBLGVBQWU7SUFBQztJQUFBRyxjQUFBLEdBQUFHLENBQUE7SUFDdkMsSUFBSSxDQUFDTCw0QkFBNEIsR0FBR0EsNEJBQTRCO0VBQ2pFIiwiaWdub3JlTGlzdCI6W119

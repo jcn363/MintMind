@@ -1,0 +1,66 @@
+47d5f047c58b28e44059e94c6f5480f9
+/* istanbul ignore next */
+function cov_24glnnvzz0() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatParticipantContribTypes.ts";
+  var hash = "55dec62005e238bd11672dce574ecc06af3c6816";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatParticipantContribTypes.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 32
+        },
+        end: {
+          line: 10,
+          column: 41
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatParticipantContribTypes.ts",
+      mappings: "AAAA;;;gGAGgG;AA+BhG;;;;GAIG;AACH,MAAM,CAAC,MAAM,gBAAgB,GAAG,SAAS,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/common/chatParticipantContribTypes.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ChatModeKind, RawChatParticipantLocation } from './constants.js';\n\nexport interface IRawChatCommandContribution {\n\tname: string;\n\tdescription: string;\n\tsampleRequest?: string;\n\tisSticky?: boolean;\n\twhen?: string;\n\tdisambiguation?: { category: string; categoryName?: string /** Deprecated */; description: string; examples: string[] }[];\n}\n\nexport interface IRawChatParticipantContribution {\n\tid: string;\n\tname: string;\n\tfullName: string;\n\twhen?: string;\n\tdescription?: string;\n\tisDefault?: boolean;\n\tisSticky?: boolean;\n\tsampleRequest?: string;\n\tcommands?: IRawChatCommandContribution[];\n\tlocations?: RawChatParticipantLocation[];\n\t/**\n\t * Valid for default participants in 'panel' location\n\t */\n\tmodes?: ChatModeKind[];\n\tdisambiguation?: { category: string; categoryName?: string /** Deprecated */; description: string; examples: string[] }[];\n}\n\n/**\n * Hardcoding the previous id of the Copilot Chat provider to avoid breaking view locations, persisted data, etc.\n * DON'T use this for any new data, only for old persisted data.\n * @deprecated\n */\nexport const CHAT_PROVIDER_ID = 'copilot';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "55dec62005e238bd11672dce574ecc06af3c6816"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_24glnnvzz0 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_24glnnvzz0();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/**
+ * Hardcoding the previous id of the Copilot Chat provider to avoid breaking view locations, persisted data, etc.
+ * DON'T use this for any new data, only for old persisted data.
+ * @deprecated
+ */
+export const CHAT_PROVIDER_ID =
+/* istanbul ignore next */
+(cov_24glnnvzz0().s[0]++, 'copilot');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJDSEFUX1BST1ZJREVSX0lEIiwiY292XzI0Z2xubnZ6ejAiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jaGF0L2NvbW1vbi9jaGF0UGFydGljaXBhbnRDb250cmliVHlwZXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IENoYXRNb2RlS2luZCwgUmF3Q2hhdFBhcnRpY2lwYW50TG9jYXRpb24gfSBmcm9tICcuL2NvbnN0YW50cy5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJhd0NoYXRDb21tYW5kQ29udHJpYnV0aW9uIHtcblx0bmFtZTogc3RyaW5nO1xuXHRkZXNjcmlwdGlvbjogc3RyaW5nO1xuXHRzYW1wbGVSZXF1ZXN0Pzogc3RyaW5nO1xuXHRpc1N0aWNreT86IGJvb2xlYW47XG5cdHdoZW4/OiBzdHJpbmc7XG5cdGRpc2FtYmlndWF0aW9uPzogeyBjYXRlZ29yeTogc3RyaW5nOyBjYXRlZ29yeU5hbWU/OiBzdHJpbmcgLyoqIERlcHJlY2F0ZWQgKi87IGRlc2NyaXB0aW9uOiBzdHJpbmc7IGV4YW1wbGVzOiBzdHJpbmdbXSB9W107XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJhd0NoYXRQYXJ0aWNpcGFudENvbnRyaWJ1dGlvbiB7XG5cdGlkOiBzdHJpbmc7XG5cdG5hbWU6IHN0cmluZztcblx0ZnVsbE5hbWU6IHN0cmluZztcblx0d2hlbj86IHN0cmluZztcblx0ZGVzY3JpcHRpb24/OiBzdHJpbmc7XG5cdGlzRGVmYXVsdD86IGJvb2xlYW47XG5cdGlzU3RpY2t5PzogYm9vbGVhbjtcblx0c2FtcGxlUmVxdWVzdD86IHN0cmluZztcblx0Y29tbWFuZHM/OiBJUmF3Q2hhdENvbW1hbmRDb250cmlidXRpb25bXTtcblx0bG9jYXRpb25zPzogUmF3Q2hhdFBhcnRpY2lwYW50TG9jYXRpb25bXTtcblx0LyoqXG5cdCAqIFZhbGlkIGZvciBkZWZhdWx0IHBhcnRpY2lwYW50cyBpbiAncGFuZWwnIGxvY2F0aW9uXG5cdCAqL1xuXHRtb2Rlcz86IENoYXRNb2RlS2luZFtdO1xuXHRkaXNhbWJpZ3VhdGlvbj86IHsgY2F0ZWdvcnk6IHN0cmluZzsgY2F0ZWdvcnlOYW1lPzogc3RyaW5nIC8qKiBEZXByZWNhdGVkICovOyBkZXNjcmlwdGlvbjogc3RyaW5nOyBleGFtcGxlczogc3RyaW5nW10gfVtdO1xufVxuXG4vKipcbiAqIEhhcmRjb2RpbmcgdGhlIHByZXZpb3VzIGlkIG9mIHRoZSBDb3BpbG90IENoYXQgcHJvdmlkZXIgdG8gYXZvaWQgYnJlYWtpbmcgdmlldyBsb2NhdGlvbnMsIHBlcnNpc3RlZCBkYXRhLCBldGMuXG4gKiBET04nVCB1c2UgdGhpcyBmb3IgYW55IG5ldyBkYXRhLCBvbmx5IGZvciBvbGQgcGVyc2lzdGVkIGRhdGEuXG4gKiBAZGVwcmVjYXRlZFxuICovXG5leHBvcnQgY29uc3QgQ0hBVF9QUk9WSURFUl9JRCA9ICdjb3BpbG90JztcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBa0NBOzs7OztBQUtBLE9BQU8sTUFBTUEsZ0JBQWdCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBRyxTQUFTIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,62 @@
+1541789df1d6bb02e49a4be2b39bf8ac
+/* istanbul ignore next */
+function cov_1rsg9kxhnt() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterLibraryService.ts";
+  var hash = "6362ff922bd0b1c1c82ac0c42386fe7dcf41e5f5";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterLibraryService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 41
+        },
+        end: {
+          line: 6,
+          column: 84
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterLibraryService.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAG7F,MAAM,CAAC,MAAM,yBAAyB,GAAG,eAAe,CAA4B,0BAA0B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/treeSitter/treeSitterLibraryService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { Language, Parser, Query } from '@vscode/tree-sitter-wasm';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IReader } from '../../../../base/common/observable.js';\n\nexport const ITreeSitterLibraryService = createDecorator<ITreeSitterLibraryService>('treeSitterLibraryService');\n\nexport interface ITreeSitterLibraryService {\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Gets the tree sitter Parser constructor.\n\t */\n\tgetParserClass(): Promise<typeof Parser>;\n\n\t/**\n\t * Checks whether a language is supported and available based setting enablement.\n\t * @param languageId The language identifier to check.\n\t * @param reader Optional observable reader.\n\t */\n\tsupportsLanguage(languageId: string, reader: IReader | undefined): boolean;\n\n\t/**\n\t * Gets the tree sitter Language object synchronously.\n\t * @param languageId The language identifier to retrieve.\n\t * @param ignoreSupportsCheck Whether to ignore the supportsLanguage check.\n\t * @param reader Optional observable reader.\n\t */\n\tgetLanguage(languageId: string, ignoreSupportsCheck: boolean, reader: IReader | undefined): Language | undefined;\n\n\t/**\n\t * Gets the language as a promise, as opposed to via observables. This ignores the automatic\n\t * supportsLanguage check.\n\t *\n\t * Warning: This approach is generally not recommended as it's not reactive, but it's the only\n\t * way to catch and handle import errors when the grammar fails to load.\n\t * @param languageId The language identifier to retrieve.\n\t */\n\tgetLanguagePromise(languageId: string): Promise<Language | undefined>;\n\n\t/**\n\t * Gets the injection queries for a language. A return value of `null`\n\t * indicates that there are no highlights queries for this language.\n\t * @param languageId The language identifier to retrieve queries for.\n\t * @param reader Optional observable reader.\n\t */\n\tgetInjectionQueries(languageId: string, reader: IReader | undefined): Query | null | undefined;\n\n\t/**\n\t * Gets the highlighting queries for a language. A return value of `null`\n\t * indicates that there are no highlights queries for this language.\n\t * @param languageId The language identifier to retrieve queries for.\n\t * @param reader Optional observable reader.\n\t */\n\tgetHighlightingQueries(languageId: string, reader: IReader | undefined): Query | null | undefined;\n\n\t/**\n\t * Creates a one-off custom query for a language.\n\t * @param language The Language to create the query for.\n\t * @param querySource The query source string to compile.\n\t */\n\tcreateQuery(language: Language, querySource: string): Promise<Query>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6362ff922bd0b1c1c82ac0c42386fe7dcf41e5f5"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1rsg9kxhnt = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1rsg9kxhnt();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const ITreeSitterLibraryService =
+/* istanbul ignore next */
+(cov_1rsg9kxhnt().s[0]++, createDecorator('treeSitterLibraryService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJVHJlZVNpdHRlckxpYnJhcnlTZXJ2aWNlIiwiY292XzFyc2c5a3hobnQiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL3NlcnZpY2VzL3RyZWVTaXR0ZXIvdHJlZVNpdHRlckxpYnJhcnlTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgdHlwZSB7IExhbmd1YWdlLCBQYXJzZXIsIFF1ZXJ5IH0gZnJvbSAnQHZzY29kZS90cmVlLXNpdHRlci13YXNtJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSVJlYWRlciB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL29ic2VydmFibGUuanMnO1xuXG5leHBvcnQgY29uc3QgSVRyZWVTaXR0ZXJMaWJyYXJ5U2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJVHJlZVNpdHRlckxpYnJhcnlTZXJ2aWNlPigndHJlZVNpdHRlckxpYnJhcnlTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVRyZWVTaXR0ZXJMaWJyYXJ5U2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogR2V0cyB0aGUgdHJlZSBzaXR0ZXIgUGFyc2VyIGNvbnN0cnVjdG9yLlxuXHQgKi9cblx0Z2V0UGFyc2VyQ2xhc3MoKTogUHJvbWlzZTx0eXBlb2YgUGFyc2VyPjtcblxuXHQvKipcblx0ICogQ2hlY2tzIHdoZXRoZXIgYSBsYW5ndWFnZSBpcyBzdXBwb3J0ZWQgYW5kIGF2YWlsYWJsZSBiYXNlZCBzZXR0aW5nIGVuYWJsZW1lbnQuXG5cdCAqIEBwYXJhbSBsYW5ndWFnZUlkIFRoZSBsYW5ndWFnZSBpZGVudGlmaWVyIHRvIGNoZWNrLlxuXHQgKiBAcGFyYW0gcmVhZGVyIE9wdGlvbmFsIG9ic2VydmFibGUgcmVhZGVyLlxuXHQgKi9cblx0c3VwcG9ydHNMYW5ndWFnZShsYW5ndWFnZUlkOiBzdHJpbmcsIHJlYWRlcjogSVJlYWRlciB8IHVuZGVmaW5lZCk6IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIEdldHMgdGhlIHRyZWUgc2l0dGVyIExhbmd1YWdlIG9iamVjdCBzeW5jaHJvbm91c2x5LlxuXHQgKiBAcGFyYW0gbGFuZ3VhZ2VJZCBUaGUgbGFuZ3VhZ2UgaWRlbnRpZmllciB0byByZXRyaWV2ZS5cblx0ICogQHBhcmFtIGlnbm9yZVN1cHBvcnRzQ2hlY2sgV2hldGhlciB0byBpZ25vcmUgdGhlIHN1cHBvcnRzTGFuZ3VhZ2UgY2hlY2suXG5cdCAqIEBwYXJhbSByZWFkZXIgT3B0aW9uYWwgb2JzZXJ2YWJsZSByZWFkZXIuXG5cdCAqL1xuXHRnZXRMYW5ndWFnZShsYW5ndWFnZUlkOiBzdHJpbmcsIGlnbm9yZVN1cHBvcnRzQ2hlY2s6IGJvb2xlYW4sIHJlYWRlcjogSVJlYWRlciB8IHVuZGVmaW5lZCk6IExhbmd1YWdlIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBHZXRzIHRoZSBsYW5ndWFnZSBhcyBhIHByb21pc2UsIGFzIG9wcG9zZWQgdG8gdmlhIG9ic2VydmFibGVzLiBUaGlzIGlnbm9yZXMgdGhlIGF1dG9tYXRpY1xuXHQgKiBzdXBwb3J0c0xhbmd1YWdlIGNoZWNrLlxuXHQgKlxuXHQgKiBXYXJuaW5nOiBUaGlzIGFwcHJvYWNoIGlzIGdlbmVyYWxseSBub3QgcmVjb21tZW5kZWQgYXMgaXQncyBub3QgcmVhY3RpdmUsIGJ1dCBpdCdzIHRoZSBvbmx5XG5cdCAqIHdheSB0byBjYXRjaCBhbmQgaGFuZGxlIGltcG9ydCBlcnJvcnMgd2hlbiB0aGUgZ3JhbW1hciBmYWlscyB0byBsb2FkLlxuXHQgKiBAcGFyYW0gbGFuZ3VhZ2VJZCBUaGUgbGFuZ3VhZ2UgaWRlbnRpZmllciB0byByZXRyaWV2ZS5cblx0ICovXG5cdGdldExhbmd1YWdlUHJvbWlzZShsYW5ndWFnZUlkOiBzdHJpbmcpOiBQcm9taXNlPExhbmd1YWdlIHwgdW5kZWZpbmVkPjtcblxuXHQvKipcblx0ICogR2V0cyB0aGUgaW5qZWN0aW9uIHF1ZXJpZXMgZm9yIGEgbGFuZ3VhZ2UuIEEgcmV0dXJuIHZhbHVlIG9mIGBudWxsYFxuXHQgKiBpbmRpY2F0ZXMgdGhhdCB0aGVyZSBhcmUgbm8gaGlnaGxpZ2h0cyBxdWVyaWVzIGZvciB0aGlzIGxhbmd1YWdlLlxuXHQgKiBAcGFyYW0gbGFuZ3VhZ2VJZCBUaGUgbGFuZ3VhZ2UgaWRlbnRpZmllciB0byByZXRyaWV2ZSBxdWVyaWVzIGZvci5cblx0ICogQHBhcmFtIHJlYWRlciBPcHRpb25hbCBvYnNlcnZhYmxlIHJlYWRlci5cblx0ICovXG5cdGdldEluamVjdGlvblF1ZXJpZXMobGFuZ3VhZ2VJZDogc3RyaW5nLCByZWFkZXI6IElSZWFkZXIgfCB1bmRlZmluZWQpOiBRdWVyeSB8IG51bGwgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEdldHMgdGhlIGhpZ2hsaWdodGluZyBxdWVyaWVzIGZvciBhIGxhbmd1YWdlLiBBIHJldHVybiB2YWx1ZSBvZiBgbnVsbGBcblx0ICogaW5kaWNhdGVzIHRoYXQgdGhlcmUgYXJlIG5vIGhpZ2hsaWdodHMgcXVlcmllcyBmb3IgdGhpcyBsYW5ndWFnZS5cblx0ICogQHBhcmFtIGxhbmd1YWdlSWQgVGhlIGxhbmd1YWdlIGlkZW50aWZpZXIgdG8gcmV0cmlldmUgcXVlcmllcyBmb3IuXG5cdCAqIEBwYXJhbSByZWFkZXIgT3B0aW9uYWwgb2JzZXJ2YWJsZSByZWFkZXIuXG5cdCAqL1xuXHRnZXRIaWdobGlnaHRpbmdRdWVyaWVzKGxhbmd1YWdlSWQ6IHN0cmluZywgcmVhZGVyOiBJUmVhZGVyIHwgdW5kZWZpbmVkKTogUXVlcnkgfCBudWxsIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBDcmVhdGVzIGEgb25lLW9mZiBjdXN0b20gcXVlcnkgZm9yIGEgbGFuZ3VhZ2UuXG5cdCAqIEBwYXJhbSBsYW5ndWFnZSBUaGUgTGFuZ3VhZ2UgdG8gY3JlYXRlIHRoZSBxdWVyeSBmb3IuXG5cdCAqIEBwYXJhbSBxdWVyeVNvdXJjZSBUaGUgcXVlcnkgc291cmNlIHN0cmluZyB0byBjb21waWxlLlxuXHQgKi9cblx0Y3JlYXRlUXVlcnkobGFuZ3VhZ2U6IExhbmd1YWdlLCBxdWVyeVNvdXJjZTogc3RyaW5nKTogUHJvbWlzZTxRdWVyeT47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFHNUYsT0FBTyxNQUFNQyx5QkFBeUI7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQTRCLDBCQUEwQixDQUFDIiwiaWdub3JlTGlzdCI6W119

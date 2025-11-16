@@ -1,0 +1,262 @@
+c5d0d19bfc58c8f021cd555751ed05b6
+/* istanbul ignore next */
+function cov_t3ycms0lt() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/editorTheme.ts";
+  var hash = "e8058114929be077f29be0845302033dcc81a439";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/editorTheme.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 32
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 27
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 28
+        }
+      },
+      "3": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 28
+        }
+      },
+      "4": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 43
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 15
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 16
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 23
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 18
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        line: 16
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 19,
+            column: 4
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 20
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 19
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/editorTheme.ts",
+      mappings: "AAAA;;;gGAGgG;AAOhG,MAAM,OAAO,WAAW;IAEf,MAAM,CAAc;IAE5B,IAAW,IAAI;QACd,OAAO,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC;IACzB,CAAC;IAED,IAAW,KAAK;QACf,OAAO,IAAI,CAAC,MAAM,CAAC;IACpB,CAAC;IAED,YAAY,KAAkB;QAC7B,IAAI,CAAC,MAAM,GAAG,KAAK,CAAC;IACrB,CAAC;IAEM,MAAM,CAAC,KAAkB;QAC/B,IAAI,CAAC,MAAM,GAAG,KAAK,CAAC;IACrB,CAAC;IAEM,QAAQ,CAAC,KAAsB;QACrC,OAAO,IAAI,CAAC,MAAM,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC;IACpC,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/editorTheme.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IColorTheme } from '../../platform/theme/common/themeService.js';\nimport { ColorIdentifier } from '../../platform/theme/common/colorRegistry.js';\nimport { Color } from '../../base/common/color.js';\nimport { ColorScheme } from '../../platform/theme/common/theme.js';\n\nexport class EditorTheme {\n\n\tprivate _theme: IColorTheme;\n\n\tpublic get type(): ColorScheme {\n\t\treturn this._theme.type;\n\t}\n\n\tpublic get value(): IColorTheme {\n\t\treturn this._theme;\n\t}\n\n\tconstructor(theme: IColorTheme) {\n\t\tthis._theme = theme;\n\t}\n\n\tpublic update(theme: IColorTheme): void {\n\t\tthis._theme = theme;\n\t}\n\n\tpublic getColor(color: ColorIdentifier): Color | undefined {\n\t\treturn this._theme.getColor(color);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e8058114929be077f29be0845302033dcc81a439"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_t3ycms0lt = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_t3ycms0lt();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class EditorTheme {
+  _theme;
+  get type() {
+    /* istanbul ignore next */
+    cov_t3ycms0lt().f[0]++;
+    cov_t3ycms0lt().s[0]++;
+    return this._theme.type;
+  }
+  get value() {
+    /* istanbul ignore next */
+    cov_t3ycms0lt().f[1]++;
+    cov_t3ycms0lt().s[1]++;
+    return this._theme;
+  }
+  constructor(theme) {
+    /* istanbul ignore next */
+    cov_t3ycms0lt().f[2]++;
+    cov_t3ycms0lt().s[2]++;
+    this._theme = theme;
+  }
+  update(theme) {
+    /* istanbul ignore next */
+    cov_t3ycms0lt().f[3]++;
+    cov_t3ycms0lt().s[3]++;
+    this._theme = theme;
+  }
+  getColor(color) {
+    /* istanbul ignore next */
+    cov_t3ycms0lt().f[4]++;
+    cov_t3ycms0lt().s[4]++;
+    return this._theme.getColor(color);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfdDN5Y21zMGx0IiwiYWN0dWFsQ292ZXJhZ2UiLCJFZGl0b3JUaGVtZSIsIl90aGVtZSIsInR5cGUiLCJmIiwicyIsInZhbHVlIiwiY29uc3RydWN0b3IiLCJ0aGVtZSIsInVwZGF0ZSIsImdldENvbG9yIiwiY29sb3IiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9jb21tb24vZWRpdG9yVGhlbWUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElDb2xvclRoZW1lIH0gZnJvbSAnLi4vLi4vcGxhdGZvcm0vdGhlbWUvY29tbW9uL3RoZW1lU2VydmljZS5qcyc7XG5pbXBvcnQgeyBDb2xvcklkZW50aWZpZXIgfSBmcm9tICcuLi8uLi9wbGF0Zm9ybS90aGVtZS9jb21tb24vY29sb3JSZWdpc3RyeS5qcyc7XG5pbXBvcnQgeyBDb2xvciB9IGZyb20gJy4uLy4uL2Jhc2UvY29tbW9uL2NvbG9yLmpzJztcbmltcG9ydCB7IENvbG9yU2NoZW1lIH0gZnJvbSAnLi4vLi4vcGxhdGZvcm0vdGhlbWUvY29tbW9uL3RoZW1lLmpzJztcblxuZXhwb3J0IGNsYXNzIEVkaXRvclRoZW1lIHtcblxuXHRwcml2YXRlIF90aGVtZTogSUNvbG9yVGhlbWU7XG5cblx0cHVibGljIGdldCB0eXBlKCk6IENvbG9yU2NoZW1lIHtcblx0XHRyZXR1cm4gdGhpcy5fdGhlbWUudHlwZTtcblx0fVxuXG5cdHB1YmxpYyBnZXQgdmFsdWUoKTogSUNvbG9yVGhlbWUge1xuXHRcdHJldHVybiB0aGlzLl90aGVtZTtcblx0fVxuXG5cdGNvbnN0cnVjdG9yKHRoZW1lOiBJQ29sb3JUaGVtZSkge1xuXHRcdHRoaXMuX3RoZW1lID0gdGhlbWU7XG5cdH1cblxuXHRwdWJsaWMgdXBkYXRlKHRoZW1lOiBJQ29sb3JUaGVtZSk6IHZvaWQge1xuXHRcdHRoaXMuX3RoZW1lID0gdGhlbWU7XG5cdH1cblxuXHRwdWJsaWMgZ2V0Q29sb3IoY29sb3I6IENvbG9ySWRlbnRpZmllcik6IENvbG9yIHwgdW5kZWZpbmVkIHtcblx0XHRyZXR1cm4gdGhpcy5fdGhlbWUuZ2V0Q29sb3IoY29sb3IpO1xuXHR9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBMEJlO0lBQUFBLGFBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGFBQUE7QUExQmY7Ozs7QUFVQSxPQUFNLE1BQU9FLFdBQVc7RUFFZkMsTUFBTTtFQUVkLElBQVdDLElBQUlBLENBQUE7SUFBQTtJQUFBSixhQUFBLEdBQUFLLENBQUE7SUFBQUwsYUFBQSxHQUFBTSxDQUFBO0lBQ2QsT0FBTyxJQUFJLENBQUNILE1BQU0sQ0FBQ0MsSUFBSTtFQUN4QjtFQUVBLElBQVdHLEtBQUtBLENBQUE7SUFBQTtJQUFBUCxhQUFBLEdBQUFLLENBQUE7SUFBQUwsYUFBQSxHQUFBTSxDQUFBO0lBQ2YsT0FBTyxJQUFJLENBQUNILE1BQU07RUFDbkI7RUFFQUssWUFBWUMsS0FBa0I7SUFBQTtJQUFBVCxhQUFBLEdBQUFLLENBQUE7SUFBQUwsYUFBQSxHQUFBTSxDQUFBO0lBQzdCLElBQUksQ0FBQ0gsTUFBTSxHQUFHTSxLQUFLO0VBQ3BCO0VBRU9DLE1BQU1BLENBQUNELEtBQWtCO0lBQUE7SUFBQVQsYUFBQSxHQUFBSyxDQUFBO0lBQUFMLGFBQUEsR0FBQU0sQ0FBQTtJQUMvQixJQUFJLENBQUNILE1BQU0sR0FBR00sS0FBSztFQUNwQjtFQUVPRSxRQUFRQSxDQUFDQyxLQUFzQjtJQUFBO0lBQUFaLGFBQUEsR0FBQUssQ0FBQTtJQUFBTCxhQUFBLEdBQUFNLENBQUE7SUFDckMsT0FBTyxJQUFJLENBQUNILE1BQU0sQ0FBQ1EsUUFBUSxDQUFDQyxLQUFLLENBQUM7RUFDbkMiLCJpZ25vcmVMaXN0IjpbXX0=

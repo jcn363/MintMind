@@ -1,0 +1,205 @@
+8b7296d4b08e49571418d977a623d6b1
+/* istanbul ignore next */
+function cov_fe41lwa34() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/codeBlockContextProviderService.ts";
+  var hash = "07f413064a1a7debc59989036214da85b7b8c8ca";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/codeBlockContextProviderService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 17
+        },
+        end: {
+          line: 7,
+          column: 26
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 45
+        }
+      },
+      "2": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 42
+        }
+      },
+      "3": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 62
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 34
+        },
+        end: {
+          line: 13,
+          column: 60
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 20
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 35
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 13,
+            column: 28
+          },
+          end: {
+            line: 13,
+            column: 29
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 34
+          },
+          end: {
+            line: 13,
+            column: 60
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/codeBlockContextProviderService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAe,YAAY,EAAE,MAAM,sCAAsC,CAAC;AAGjF,MAAM,OAAO,mCAAmC;IAE9B,UAAU,GAAG,IAAI,GAAG,EAA2C,CAAC;IAEjF,IAAI,SAAS;QACZ,OAAO,CAAC,GAAG,IAAI,CAAC,UAAU,CAAC,MAAM,EAAE,CAAC,CAAC;IACtC,CAAC;IACD,gBAAgB,CAAC,QAAyC,EAAE,EAAU;QACrE,IAAI,CAAC,UAAU,CAAC,GAAG,CAAC,EAAE,EAAE,QAAQ,CAAC,CAAC;QAClC,OAAO,YAAY,CAAC,GAAG,EAAE,CAAC,IAAI,CAAC,UAAU,CAAC,MAAM,CAAC,EAAE,CAAC,CAAC,CAAC;IACvD,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/codeBlockContextProviderService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable, toDisposable } from '../../../../base/common/lifecycle.js';\nimport { ICodeBlockActionContextProvider, IChatCodeBlockContextProviderService } from './chat.js';\n\nexport class ChatCodeBlockContextProviderService implements IChatCodeBlockContextProviderService {\n\tdeclare _serviceBrand: undefined;\n\tprivate readonly _providers = new Map<string, ICodeBlockActionContextProvider>();\n\n\tget providers(): ICodeBlockActionContextProvider[] {\n\t\treturn [...this._providers.values()];\n\t}\n\tregisterProvider(provider: ICodeBlockActionContextProvider, id: string): IDisposable {\n\t\tthis._providers.set(id, provider);\n\t\treturn toDisposable(() => this._providers.delete(id));\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "07f413064a1a7debc59989036214da85b7b8c8ca"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_fe41lwa34 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_fe41lwa34();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { toDisposable } from '../../../../base/common/lifecycle.js';
+export class ChatCodeBlockContextProviderService {
+  _providers =
+  /* istanbul ignore next */
+  (cov_fe41lwa34().s[0]++, new Map());
+  get providers() {
+    /* istanbul ignore next */
+    cov_fe41lwa34().f[0]++;
+    cov_fe41lwa34().s[1]++;
+    return [...this._providers.values()];
+  }
+  registerProvider(provider, id) {
+    /* istanbul ignore next */
+    cov_fe41lwa34().f[1]++;
+    cov_fe41lwa34().s[2]++;
+    this._providers.set(id, provider);
+    /* istanbul ignore next */
+    cov_fe41lwa34().s[3]++;
+    return toDisposable(() => {
+      /* istanbul ignore next */
+      cov_fe41lwa34().f[2]++;
+      cov_fe41lwa34().s[4]++;
+      return this._providers.delete(id);
+    });
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJ0b0Rpc3Bvc2FibGUiLCJDaGF0Q29kZUJsb2NrQ29udGV4dFByb3ZpZGVyU2VydmljZSIsIl9wcm92aWRlcnMiLCJjb3ZfZmU0MWx3YTM0IiwicyIsIk1hcCIsInByb3ZpZGVycyIsImYiLCJ2YWx1ZXMiLCJyZWdpc3RlclByb3ZpZGVyIiwicHJvdmlkZXIiLCJpZCIsInNldCIsImRlbGV0ZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvY2hhdC9icm93c2VyL2NvZGVCbG9ja0NvbnRleHRQcm92aWRlclNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElEaXNwb3NhYmxlLCB0b0Rpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgSUNvZGVCbG9ja0FjdGlvbkNvbnRleHRQcm92aWRlciwgSUNoYXRDb2RlQmxvY2tDb250ZXh0UHJvdmlkZXJTZXJ2aWNlIH0gZnJvbSAnLi9jaGF0LmpzJztcblxuZXhwb3J0IGNsYXNzIENoYXRDb2RlQmxvY2tDb250ZXh0UHJvdmlkZXJTZXJ2aWNlIGltcGxlbWVudHMgSUNoYXRDb2RlQmxvY2tDb250ZXh0UHJvdmlkZXJTZXJ2aWNlIHtcblx0ZGVjbGFyZSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cdHByaXZhdGUgcmVhZG9ubHkgX3Byb3ZpZGVycyA9IG5ldyBNYXA8c3RyaW5nLCBJQ29kZUJsb2NrQWN0aW9uQ29udGV4dFByb3ZpZGVyPigpO1xuXG5cdGdldCBwcm92aWRlcnMoKTogSUNvZGVCbG9ja0FjdGlvbkNvbnRleHRQcm92aWRlcltdIHtcblx0XHRyZXR1cm4gWy4uLnRoaXMuX3Byb3ZpZGVycy52YWx1ZXMoKV07XG5cdH1cblx0cmVnaXN0ZXJQcm92aWRlcihwcm92aWRlcjogSUNvZGVCbG9ja0FjdGlvbkNvbnRleHRQcm92aWRlciwgaWQ6IHN0cmluZyk6IElEaXNwb3NhYmxlIHtcblx0XHR0aGlzLl9wcm92aWRlcnMuc2V0KGlkLCBwcm92aWRlcik7XG5cdFx0cmV0dXJuIHRvRGlzcG9zYWJsZSgoKSA9PiB0aGlzLl9wcm92aWRlcnMuZGVsZXRlKGlkKSk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQXNCQSxZQUFZLFFBQVEsc0NBQXNDO0FBR2hGLE9BQU0sTUFBT0MsbUNBQW1DO0VBRTlCQyxVQUFVO0VBQUE7RUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJQyxHQUFHLEVBQTJDO0VBRWhGLElBQUlDLFNBQVNBLENBQUE7SUFBQTtJQUFBSCxhQUFBLEdBQUFJLENBQUE7SUFBQUosYUFBQSxHQUFBQyxDQUFBO0lBQ1osT0FBTyxDQUFDLEdBQUcsSUFBSSxDQUFDRixVQUFVLENBQUNNLE1BQU0sRUFBRSxDQUFDO0VBQ3JDO0VBQ0FDLGdCQUFnQkEsQ0FBQ0MsUUFBeUMsRUFBRUMsRUFBVTtJQUFBO0lBQUFSLGFBQUEsR0FBQUksQ0FBQTtJQUFBSixhQUFBLEdBQUFDLENBQUE7SUFDckUsSUFBSSxDQUFDRixVQUFVLENBQUNVLEdBQUcsQ0FBQ0QsRUFBRSxFQUFFRCxRQUFRLENBQUM7SUFBQztJQUFBUCxhQUFBLEdBQUFDLENBQUE7SUFDbEMsT0FBT0osWUFBWSxDQUFDLE1BQU07TUFBQTtNQUFBRyxhQUFBLEdBQUFJLENBQUE7TUFBQUosYUFBQSxHQUFBQyxDQUFBO01BQUEsV0FBSSxDQUFDRixVQUFVLENBQUNXLE1BQU0sQ0FBQ0YsRUFBRSxDQUFDO0lBQUQsQ0FBQyxDQUFDO0VBQ3REIiwiaWdub3JlTGlzdCI6W119

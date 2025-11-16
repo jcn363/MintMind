@@ -1,0 +1,46 @@
+8b1ff331bf14695f889ae7c2d4f276de
+/* istanbul ignore next */
+function cov_p3xqahw6h() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/viewModel/screenReaderSimpleModel.ts";
+  var hash = "710295f2bd24cc5573f5833ac311fde2da67ab8b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/viewModel/screenReaderSimpleModel.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/viewModel/screenReaderSimpleModel.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/viewModel/screenReaderSimpleModel.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Position } from '../core/position.js';\nimport { Range } from '../core/range.js';\nimport { EndOfLinePreference } from '../model.js';\n\nexport interface ISimpleModel {\n\tgetLineContent(lineNumber: number): string;\n\tgetLineCount(): number;\n\tgetLineMaxColumn(lineNumber: number): number;\n\tgetValueInRange(range: Range, eol: EndOfLinePreference): string;\n\tgetValueLengthInRange(range: Range, eol: EndOfLinePreference): number;\n\tmodifyPosition(position: Position, offset: number): Position;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "710295f2bd24cc5573f5833ac311fde2da67ab8b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_p3xqahw6h = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_p3xqahw6h();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL3ZpZXdNb2RlbC9zY3JlZW5SZWFkZXJTaW1wbGVNb2RlbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgUG9zaXRpb24gfSBmcm9tICcuLi9jb3JlL3Bvc2l0aW9uLmpzJztcbmltcG9ydCB7IFJhbmdlIH0gZnJvbSAnLi4vY29yZS9yYW5nZS5qcyc7XG5pbXBvcnQgeyBFbmRPZkxpbmVQcmVmZXJlbmNlIH0gZnJvbSAnLi4vbW9kZWwuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElTaW1wbGVNb2RlbCB7XG5cdGdldExpbmVDb250ZW50KGxpbmVOdW1iZXI6IG51bWJlcik6IHN0cmluZztcblx0Z2V0TGluZUNvdW50KCk6IG51bWJlcjtcblx0Z2V0TGluZU1heENvbHVtbihsaW5lTnVtYmVyOiBudW1iZXIpOiBudW1iZXI7XG5cdGdldFZhbHVlSW5SYW5nZShyYW5nZTogUmFuZ2UsIGVvbDogRW5kT2ZMaW5lUHJlZmVyZW5jZSk6IHN0cmluZztcblx0Z2V0VmFsdWVMZW5ndGhJblJhbmdlKHJhbmdlOiBSYW5nZSwgZW9sOiBFbmRPZkxpbmVQcmVmZXJlbmNlKTogbnVtYmVyO1xuXHRtb2RpZnlQb3NpdGlvbihwb3NpdGlvbjogUG9zaXRpb24sIG9mZnNldDogbnVtYmVyKTogUG9zaXRpb247XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

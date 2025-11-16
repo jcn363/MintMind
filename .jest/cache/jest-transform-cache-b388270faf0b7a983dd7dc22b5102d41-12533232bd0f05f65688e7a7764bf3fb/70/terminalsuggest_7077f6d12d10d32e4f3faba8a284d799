@@ -1,0 +1,61 @@
+e2bdbdae326c26c4dd70ad445bff31c8
+/* istanbul ignore next */
+function cov_159xv8p5p1() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/common/terminal.suggest.ts";
+  var hash = "2b12572679ad86a5f6b9d71b882af6ec09d90c25";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/common/terminal.suggest.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 57
+        },
+        end: {
+          line: 16,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/common/terminal.suggest.ts",
+      mappings: "AAAA;;;gGAGgG;AAoBhG,MAAM,CAAC,MAAM,yCAAyC,GAAG;;;;;;;;;;;CAWxD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/common/terminal.suggest.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum TerminalSuggestCommandId {\n\tSelectPrevSuggestion = 'workbench.action.terminal.selectPrevSuggestion',\n\tSelectPrevPageSuggestion = 'workbench.action.terminal.selectPrevPageSuggestion',\n\tSelectNextSuggestion = 'workbench.action.terminal.selectNextSuggestion',\n\tSelectNextPageSuggestion = 'workbench.action.terminal.selectNextPageSuggestion',\n\tAcceptSelectedSuggestion = 'workbench.action.terminal.acceptSelectedSuggestion',\n\tAcceptSelectedSuggestionEnter = 'workbench.action.terminal.acceptSelectedSuggestionEnter',\n\tHideSuggestWidget = 'workbench.action.terminal.hideSuggestWidget',\n\tHideSuggestWidgetAndNavigateHistory = 'workbench.action.terminal.hideSuggestWidgetAndNavigateHistory',\n\tTriggerSuggest = 'workbench.action.terminal.triggerSuggest',\n\tResetWidgetSize = 'workbench.action.terminal.resetSuggestWidgetSize',\n\tToggleDetails = 'workbench.action.terminal.suggestToggleDetails',\n\tToggleDetailsFocus = 'workbench.action.terminal.suggestToggleDetailsFocus',\n\tConfigureSettings = 'workbench.action.terminal.configureSuggestSettings',\n\tLearnMore = 'workbench.action.terminal.suggestLearnMore',\n\tResetDiscoverability = 'workbench.action.terminal.resetDiscoverability'\n}\n\nexport const defaultTerminalSuggestCommandsToSkipShell = [\n\tTerminalSuggestCommandId.SelectPrevSuggestion,\n\tTerminalSuggestCommandId.SelectPrevPageSuggestion,\n\tTerminalSuggestCommandId.SelectNextSuggestion,\n\tTerminalSuggestCommandId.SelectNextPageSuggestion,\n\tTerminalSuggestCommandId.AcceptSelectedSuggestion,\n\tTerminalSuggestCommandId.AcceptSelectedSuggestionEnter,\n\tTerminalSuggestCommandId.HideSuggestWidget,\n\tTerminalSuggestCommandId.TriggerSuggest,\n\tTerminalSuggestCommandId.ToggleDetails,\n\tTerminalSuggestCommandId.ToggleDetailsFocus,\n];\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2b12572679ad86a5f6b9d71b882af6ec09d90c25"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_159xv8p5p1 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_159xv8p5p1();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const defaultTerminalSuggestCommandsToSkipShell =
+/* istanbul ignore next */
+(cov_159xv8p5p1().s[0]++, ["workbench.action.terminal.selectPrevSuggestion" /* TerminalSuggestCommandId.SelectPrevSuggestion */, "workbench.action.terminal.selectPrevPageSuggestion" /* TerminalSuggestCommandId.SelectPrevPageSuggestion */, "workbench.action.terminal.selectNextSuggestion" /* TerminalSuggestCommandId.SelectNextSuggestion */, "workbench.action.terminal.selectNextPageSuggestion" /* TerminalSuggestCommandId.SelectNextPageSuggestion */, "workbench.action.terminal.acceptSelectedSuggestion" /* TerminalSuggestCommandId.AcceptSelectedSuggestion */, "workbench.action.terminal.acceptSelectedSuggestionEnter" /* TerminalSuggestCommandId.AcceptSelectedSuggestionEnter */, "workbench.action.terminal.hideSuggestWidget" /* TerminalSuggestCommandId.HideSuggestWidget */, "workbench.action.terminal.triggerSuggest" /* TerminalSuggestCommandId.TriggerSuggest */, "workbench.action.terminal.suggestToggleDetails" /* TerminalSuggestCommandId.ToggleDetails */, "workbench.action.terminal.suggestToggleDetailsFocus" /* TerminalSuggestCommandId.ToggleDetailsFocus */]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTU5eHY4cDVwMSIsImFjdHVhbENvdmVyYWdlIiwiZGVmYXVsdFRlcm1pbmFsU3VnZ2VzdENvbW1hbmRzVG9Ta2lwU2hlbGwiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvc3VnZ2VzdC9jb21tb24vdGVybWluYWwuc3VnZ2VzdC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGNvbnN0IGVudW0gVGVybWluYWxTdWdnZXN0Q29tbWFuZElkIHtcblx0U2VsZWN0UHJldlN1Z2dlc3Rpb24gPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5zZWxlY3RQcmV2U3VnZ2VzdGlvbicsXG5cdFNlbGVjdFByZXZQYWdlU3VnZ2VzdGlvbiA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnNlbGVjdFByZXZQYWdlU3VnZ2VzdGlvbicsXG5cdFNlbGVjdE5leHRTdWdnZXN0aW9uID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuc2VsZWN0TmV4dFN1Z2dlc3Rpb24nLFxuXHRTZWxlY3ROZXh0UGFnZVN1Z2dlc3Rpb24gPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5zZWxlY3ROZXh0UGFnZVN1Z2dlc3Rpb24nLFxuXHRBY2NlcHRTZWxlY3RlZFN1Z2dlc3Rpb24gPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5hY2NlcHRTZWxlY3RlZFN1Z2dlc3Rpb24nLFxuXHRBY2NlcHRTZWxlY3RlZFN1Z2dlc3Rpb25FbnRlciA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmFjY2VwdFNlbGVjdGVkU3VnZ2VzdGlvbkVudGVyJyxcblx0SGlkZVN1Z2dlc3RXaWRnZXQgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5oaWRlU3VnZ2VzdFdpZGdldCcsXG5cdEhpZGVTdWdnZXN0V2lkZ2V0QW5kTmF2aWdhdGVIaXN0b3J5ID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwuaGlkZVN1Z2dlc3RXaWRnZXRBbmROYXZpZ2F0ZUhpc3RvcnknLFxuXHRUcmlnZ2VyU3VnZ2VzdCA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnRyaWdnZXJTdWdnZXN0Jyxcblx0UmVzZXRXaWRnZXRTaXplID0gJ3dvcmtiZW5jaC5hY3Rpb24udGVybWluYWwucmVzZXRTdWdnZXN0V2lkZ2V0U2l6ZScsXG5cdFRvZ2dsZURldGFpbHMgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5zdWdnZXN0VG9nZ2xlRGV0YWlscycsXG5cdFRvZ2dsZURldGFpbHNGb2N1cyA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnN1Z2dlc3RUb2dnbGVEZXRhaWxzRm9jdXMnLFxuXHRDb25maWd1cmVTZXR0aW5ncyA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmNvbmZpZ3VyZVN1Z2dlc3RTZXR0aW5ncycsXG5cdExlYXJuTW9yZSA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnN1Z2dlc3RMZWFybk1vcmUnLFxuXHRSZXNldERpc2NvdmVyYWJpbGl0eSA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnJlc2V0RGlzY292ZXJhYmlsaXR5J1xufVxuXG5leHBvcnQgY29uc3QgZGVmYXVsdFRlcm1pbmFsU3VnZ2VzdENvbW1hbmRzVG9Ta2lwU2hlbGwgPSBbXG5cdFRlcm1pbmFsU3VnZ2VzdENvbW1hbmRJZC5TZWxlY3RQcmV2U3VnZ2VzdGlvbixcblx0VGVybWluYWxTdWdnZXN0Q29tbWFuZElkLlNlbGVjdFByZXZQYWdlU3VnZ2VzdGlvbixcblx0VGVybWluYWxTdWdnZXN0Q29tbWFuZElkLlNlbGVjdE5leHRTdWdnZXN0aW9uLFxuXHRUZXJtaW5hbFN1Z2dlc3RDb21tYW5kSWQuU2VsZWN0TmV4dFBhZ2VTdWdnZXN0aW9uLFxuXHRUZXJtaW5hbFN1Z2dlc3RDb21tYW5kSWQuQWNjZXB0U2VsZWN0ZWRTdWdnZXN0aW9uLFxuXHRUZXJtaW5hbFN1Z2dlc3RDb21tYW5kSWQuQWNjZXB0U2VsZWN0ZWRTdWdnZXN0aW9uRW50ZXIsXG5cdFRlcm1pbmFsU3VnZ2VzdENvbW1hbmRJZC5IaWRlU3VnZ2VzdFdpZGdldCxcblx0VGVybWluYWxTdWdnZXN0Q29tbWFuZElkLlRyaWdnZXJTdWdnZXN0LFxuXHRUZXJtaW5hbFN1Z2dlc3RDb21tYW5kSWQuVG9nZ2xlRGV0YWlscyxcblx0VGVybWluYWxTdWdnZXN0Q29tbWFuZElkLlRvZ2dsZURldGFpbHNGb2N1cyxcbl07XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBa0NFO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFsQ0Y7Ozs7QUF1QkEsT0FBTyxNQUFNRSx5Q0FBeUM7QUFBQTtBQUFBLENBQUFGLGNBQUEsR0FBQUcsQ0FBQSxPQUFHLEMsK2dDQVd4RCIsImlnbm9yZUxpc3QiOltdfQ==

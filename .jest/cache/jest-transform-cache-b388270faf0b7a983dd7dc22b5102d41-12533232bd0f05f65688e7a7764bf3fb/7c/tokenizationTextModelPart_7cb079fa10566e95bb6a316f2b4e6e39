@@ -1,0 +1,46 @@
+bdac4455e26117d3d49bc857042a902e
+/* istanbul ignore next */
+function cov_rs4v4hfhw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/tokenizationTextModelPart.ts";
+  var hash = "0a9d2c85dd3d654ae5ec6246bf35602caa9774c1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/tokenizationTextModelPart.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/tokenizationTextModelPart.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/tokenizationTextModelPart.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Range } from './core/range.js';\nimport { StandardTokenType } from './encodedTokenAttributes.js';\nimport { LineTokens } from './tokens/lineTokens.js';\nimport { SparseMultilineTokens } from './tokens/sparseMultilineTokens.js';\n\n/**\n * Provides tokenization related functionality of the text model.\n*/\nexport interface ITokenizationTextModelPart {\n\treadonly hasTokens: boolean;\n\n\t/**\n\t * Replaces all semantic tokens with the provided `tokens`.\n\t * @internal\n\t */\n\tsetSemanticTokens(tokens: SparseMultilineTokens[] | null, isComplete: boolean): void;\n\n\t/**\n\t * Merges the provided semantic tokens into existing semantic tokens.\n\t * @internal\n\t */\n\tsetPartialSemanticTokens(range: Range, tokens: SparseMultilineTokens[] | null): void;\n\n\t/**\n\t * @internal\n\t */\n\thasCompleteSemanticTokens(): boolean;\n\n\t/**\n\t * @internal\n\t */\n\thasSomeSemanticTokens(): boolean;\n\n\t/**\n\t * Flush all tokenization state.\n\t * @internal\n\t */\n\tresetTokenization(): void;\n\n\t/**\n\t * Force tokenization information for `lineNumber` to be accurate.\n\t * @internal\n\t */\n\tforceTokenization(lineNumber: number): void;\n\n\t/**\n\t * If it is cheap, force tokenization information for `lineNumber` to be accurate.\n\t * This is based on a heuristic.\n\t * @internal\n\t */\n\ttokenizeIfCheap(lineNumber: number): void;\n\n\t/**\n\t * Check if tokenization information is accurate for `lineNumber`.\n\t * @internal\n\t */\n\thasAccurateTokensForLine(lineNumber: number): boolean;\n\n\t/**\n\t * Check if calling `forceTokenization` for this `lineNumber` will be cheap (time-wise).\n\t * This is based on a heuristic.\n\t * @internal\n\t */\n\tisCheapToTokenize(lineNumber: number): boolean;\n\n\t/**\n\t * Get the tokens for the line `lineNumber`.\n\t * The tokens might be inaccurate. Use `forceTokenization` to ensure accurate tokens.\n\t * @internal\n\t */\n\tgetLineTokens(lineNumber: number): LineTokens;\n\n\t/**\n\t* Returns the standard token type for a character if the character were to be inserted at\n\t* the given position. If the result cannot be accurate, it returns null.\n\t* @internal\n\t*/\n\tgetTokenTypeIfInsertingCharacter(lineNumber: number, column: number, character: string): StandardTokenType;\n\n\t/**\n\t * Tokens the lines as if they were inserted at [lineNumber, lineNumber).\n\t * @internal\n\t*/\n\ttokenizeLinesAt(lineNumber: number, lines: string[]): LineTokens[] | null;\n\n\tgetLanguageId(): string;\n\tgetLanguageIdAtPosition(lineNumber: number, column: number): string;\n\n\tsetLanguageId(languageId: string, source?: string): void;\n\n\treadonly backgroundTokenizationState: BackgroundTokenizationState;\n}\n\nexport const enum BackgroundTokenizationState {\n\tInProgress = 1,\n\tCompleted = 2,\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "0a9d2c85dd3d654ae5ec6246bf35602caa9774c1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_rs4v4hfhw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_rs4v4hfhw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL3Rva2VuaXphdGlvblRleHRNb2RlbFBhcnQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFJhbmdlIH0gZnJvbSAnLi9jb3JlL3JhbmdlLmpzJztcbmltcG9ydCB7IFN0YW5kYXJkVG9rZW5UeXBlIH0gZnJvbSAnLi9lbmNvZGVkVG9rZW5BdHRyaWJ1dGVzLmpzJztcbmltcG9ydCB7IExpbmVUb2tlbnMgfSBmcm9tICcuL3Rva2Vucy9saW5lVG9rZW5zLmpzJztcbmltcG9ydCB7IFNwYXJzZU11bHRpbGluZVRva2VucyB9IGZyb20gJy4vdG9rZW5zL3NwYXJzZU11bHRpbGluZVRva2Vucy5qcyc7XG5cbi8qKlxuICogUHJvdmlkZXMgdG9rZW5pemF0aW9uIHJlbGF0ZWQgZnVuY3Rpb25hbGl0eSBvZiB0aGUgdGV4dCBtb2RlbC5cbiovXG5leHBvcnQgaW50ZXJmYWNlIElUb2tlbml6YXRpb25UZXh0TW9kZWxQYXJ0IHtcblx0cmVhZG9ubHkgaGFzVG9rZW5zOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBSZXBsYWNlcyBhbGwgc2VtYW50aWMgdG9rZW5zIHdpdGggdGhlIHByb3ZpZGVkIGB0b2tlbnNgLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdHNldFNlbWFudGljVG9rZW5zKHRva2VuczogU3BhcnNlTXVsdGlsaW5lVG9rZW5zW10gfCBudWxsLCBpc0NvbXBsZXRlOiBib29sZWFuKTogdm9pZDtcblxuXHQvKipcblx0ICogTWVyZ2VzIHRoZSBwcm92aWRlZCBzZW1hbnRpYyB0b2tlbnMgaW50byBleGlzdGluZyBzZW1hbnRpYyB0b2tlbnMuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0c2V0UGFydGlhbFNlbWFudGljVG9rZW5zKHJhbmdlOiBSYW5nZSwgdG9rZW5zOiBTcGFyc2VNdWx0aWxpbmVUb2tlbnNbXSB8IG51bGwpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdGhhc0NvbXBsZXRlU2VtYW50aWNUb2tlbnMoKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRoYXNTb21lU2VtYW50aWNUb2tlbnMoKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogRmx1c2ggYWxsIHRva2VuaXphdGlvbiBzdGF0ZS5cblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRyZXNldFRva2VuaXphdGlvbigpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBGb3JjZSB0b2tlbml6YXRpb24gaW5mb3JtYXRpb24gZm9yIGBsaW5lTnVtYmVyYCB0byBiZSBhY2N1cmF0ZS5cblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRmb3JjZVRva2VuaXphdGlvbihsaW5lTnVtYmVyOiBudW1iZXIpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBJZiBpdCBpcyBjaGVhcCwgZm9yY2UgdG9rZW5pemF0aW9uIGluZm9ybWF0aW9uIGZvciBgbGluZU51bWJlcmAgdG8gYmUgYWNjdXJhdGUuXG5cdCAqIFRoaXMgaXMgYmFzZWQgb24gYSBoZXVyaXN0aWMuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0dG9rZW5pemVJZkNoZWFwKGxpbmVOdW1iZXI6IG51bWJlcik6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIENoZWNrIGlmIHRva2VuaXphdGlvbiBpbmZvcm1hdGlvbiBpcyBhY2N1cmF0ZSBmb3IgYGxpbmVOdW1iZXJgLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdGhhc0FjY3VyYXRlVG9rZW5zRm9yTGluZShsaW5lTnVtYmVyOiBudW1iZXIpOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBDaGVjayBpZiBjYWxsaW5nIGBmb3JjZVRva2VuaXphdGlvbmAgZm9yIHRoaXMgYGxpbmVOdW1iZXJgIHdpbGwgYmUgY2hlYXAgKHRpbWUtd2lzZSkuXG5cdCAqIFRoaXMgaXMgYmFzZWQgb24gYSBoZXVyaXN0aWMuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0aXNDaGVhcFRvVG9rZW5pemUobGluZU51bWJlcjogbnVtYmVyKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogR2V0IHRoZSB0b2tlbnMgZm9yIHRoZSBsaW5lIGBsaW5lTnVtYmVyYC5cblx0ICogVGhlIHRva2VucyBtaWdodCBiZSBpbmFjY3VyYXRlLiBVc2UgYGZvcmNlVG9rZW5pemF0aW9uYCB0byBlbnN1cmUgYWNjdXJhdGUgdG9rZW5zLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdGdldExpbmVUb2tlbnMobGluZU51bWJlcjogbnVtYmVyKTogTGluZVRva2VucztcblxuXHQvKipcblx0KiBSZXR1cm5zIHRoZSBzdGFuZGFyZCB0b2tlbiB0eXBlIGZvciBhIGNoYXJhY3RlciBpZiB0aGUgY2hhcmFjdGVyIHdlcmUgdG8gYmUgaW5zZXJ0ZWQgYXRcblx0KiB0aGUgZ2l2ZW4gcG9zaXRpb24uIElmIHRoZSByZXN1bHQgY2Fubm90IGJlIGFjY3VyYXRlLCBpdCByZXR1cm5zIG51bGwuXG5cdCogQGludGVybmFsXG5cdCovXG5cdGdldFRva2VuVHlwZUlmSW5zZXJ0aW5nQ2hhcmFjdGVyKGxpbmVOdW1iZXI6IG51bWJlciwgY29sdW1uOiBudW1iZXIsIGNoYXJhY3Rlcjogc3RyaW5nKTogU3RhbmRhcmRUb2tlblR5cGU7XG5cblx0LyoqXG5cdCAqIFRva2VucyB0aGUgbGluZXMgYXMgaWYgdGhleSB3ZXJlIGluc2VydGVkIGF0IFtsaW5lTnVtYmVyLCBsaW5lTnVtYmVyKS5cblx0ICogQGludGVybmFsXG5cdCovXG5cdHRva2VuaXplTGluZXNBdChsaW5lTnVtYmVyOiBudW1iZXIsIGxpbmVzOiBzdHJpbmdbXSk6IExpbmVUb2tlbnNbXSB8IG51bGw7XG5cblx0Z2V0TGFuZ3VhZ2VJZCgpOiBzdHJpbmc7XG5cdGdldExhbmd1YWdlSWRBdFBvc2l0aW9uKGxpbmVOdW1iZXI6IG51bWJlciwgY29sdW1uOiBudW1iZXIpOiBzdHJpbmc7XG5cblx0c2V0TGFuZ3VhZ2VJZChsYW5ndWFnZUlkOiBzdHJpbmcsIHNvdXJjZT86IHN0cmluZyk6IHZvaWQ7XG5cblx0cmVhZG9ubHkgYmFja2dyb3VuZFRva2VuaXphdGlvblN0YXRlOiBCYWNrZ3JvdW5kVG9rZW5pemF0aW9uU3RhdGU7XG59XG5cbmV4cG9ydCBjb25zdCBlbnVtIEJhY2tncm91bmRUb2tlbml6YXRpb25TdGF0ZSB7XG5cdEluUHJvZ3Jlc3MgPSAxLFxuXHRDb21wbGV0ZWQgPSAyLFxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

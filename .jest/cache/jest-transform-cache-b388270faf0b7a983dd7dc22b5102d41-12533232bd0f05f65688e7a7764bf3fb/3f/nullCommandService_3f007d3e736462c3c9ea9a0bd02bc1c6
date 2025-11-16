@@ -1,0 +1,192 @@
+0fc4041f8c4dea10890d28e951290d77
+/* istanbul ignore next */
+function cov_1bzrst1l7q() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/commands/test/common/nullCommandService.ts";
+  var hash = "4ca56f4414772e968c6a35063ae1b5e25e4ea524";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/commands/test/common/nullCommandService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 34
+        },
+        end: {
+          line: 13,
+          column: 1
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 32
+        },
+        end: {
+          line: 8,
+          column: 47
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 31
+        },
+        end: {
+          line: 9,
+          column: 46
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 42
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 26
+          },
+          end: {
+            line: 8,
+            column: 27
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 32
+          },
+          end: {
+            line: 8,
+            column: 47
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 9,
+            column: 25
+          },
+          end: {
+            line: 9,
+            column: 26
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 31
+          },
+          end: {
+            line: 9,
+            column: 46
+          }
+        },
+        line: 9
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 21
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/commands/test/common/nullCommandService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,UAAU,EAAE,MAAM,sCAAsC,CAAC;AAGlE,MAAM,CAAC,MAAM,kBAAkB,GAAoB;IAClD,aAAa,EAAE,SAAS;IACxB,oBAAoB,EAAE,GAAG,EAAE,CAAC,UAAU,CAAC,IAAI;IAC3C,mBAAmB,EAAE,GAAG,EAAE,CAAC,UAAU,CAAC,IAAI;IAC1C,cAAc;QACb,OAAO,OAAO,CAAC,OAAO,CAAC,SAAS,CAAC,CAAC;IACnC,CAAC;CACD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/commands/test/common/nullCommandService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Disposable } from '../../../../base/common/lifecycle.js';\nimport { ICommandService } from '../../common/commands.js';\n\nexport const NullCommandService: ICommandService = {\n\t_serviceBrand: undefined,\n\tonWillExecuteCommand: () => Disposable.None,\n\tonDidExecuteCommand: () => Disposable.None,\n\texecuteCommand() {\n\t\treturn Promise.resolve(undefined);\n\t}\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4ca56f4414772e968c6a35063ae1b5e25e4ea524"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1bzrst1l7q = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1bzrst1l7q();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Disposable } from '../../../../base/common/lifecycle.js';
+export const NullCommandService =
+/* istanbul ignore next */
+(cov_1bzrst1l7q().s[0]++, {
+  _serviceBrand: undefined,
+  onWillExecuteCommand: () => {
+    /* istanbul ignore next */
+    cov_1bzrst1l7q().f[0]++;
+    cov_1bzrst1l7q().s[1]++;
+    return Disposable.None;
+  },
+  onDidExecuteCommand: () => {
+    /* istanbul ignore next */
+    cov_1bzrst1l7q().f[1]++;
+    cov_1bzrst1l7q().s[2]++;
+    return Disposable.None;
+  },
+  executeCommand() {
+    /* istanbul ignore next */
+    cov_1bzrst1l7q().f[2]++;
+    cov_1bzrst1l7q().s[3]++;
+    return Promise.resolve(undefined);
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJEaXNwb3NhYmxlIiwiTnVsbENvbW1hbmRTZXJ2aWNlIiwiY292XzFienJzdDFsN3EiLCJzIiwiX3NlcnZpY2VCcmFuZCIsInVuZGVmaW5lZCIsIm9uV2lsbEV4ZWN1dGVDb21tYW5kIiwiZiIsIk5vbmUiLCJvbkRpZEV4ZWN1dGVDb21tYW5kIiwiZXhlY3V0ZUNvbW1hbmQiLCJQcm9taXNlIiwicmVzb2x2ZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vY29tbWFuZHMvdGVzdC9jb21tb24vbnVsbENvbW1hbmRTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IElDb21tYW5kU2VydmljZSB9IGZyb20gJy4uLy4uL2NvbW1vbi9jb21tYW5kcy5qcyc7XG5cbmV4cG9ydCBjb25zdCBOdWxsQ29tbWFuZFNlcnZpY2U6IElDb21tYW5kU2VydmljZSA9IHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkLFxuXHRvbldpbGxFeGVjdXRlQ29tbWFuZDogKCkgPT4gRGlzcG9zYWJsZS5Ob25lLFxuXHRvbkRpZEV4ZWN1dGVDb21tYW5kOiAoKSA9PiBEaXNwb3NhYmxlLk5vbmUsXG5cdGV4ZWN1dGVDb21tYW5kKCkge1xuXHRcdHJldHVybiBQcm9taXNlLnJlc29sdmUodW5kZWZpbmVkKTtcblx0fVxufTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxVQUFVLFFBQVEsc0NBQXNDO0FBR2pFLE9BQU8sTUFBTUMsa0JBQWtCO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBb0I7RUFDbERDLGFBQWEsRUFBRUMsU0FBUztFQUN4QkMsb0JBQW9CLEVBQUVBLENBQUEsS0FBTTtJQUFBO0lBQUFKLGNBQUEsR0FBQUssQ0FBQTtJQUFBTCxjQUFBLEdBQUFDLENBQUE7SUFBQSxPQUFBSCxVQUFVLENBQUNRLElBQUk7RUFBSixDQUFJO0VBQzNDQyxtQkFBbUIsRUFBRUEsQ0FBQSxLQUFNO0lBQUE7SUFBQVAsY0FBQSxHQUFBSyxDQUFBO0lBQUFMLGNBQUEsR0FBQUMsQ0FBQTtJQUFBLE9BQUFILFVBQVUsQ0FBQ1EsSUFBSTtFQUFKLENBQUk7RUFDMUNFLGNBQWNBLENBQUE7SUFBQTtJQUFBUixjQUFBLEdBQUFLLENBQUE7SUFBQUwsY0FBQSxHQUFBQyxDQUFBO0lBQ2IsT0FBT1EsT0FBTyxDQUFDQyxPQUFPLENBQUNQLFNBQVMsQ0FBQztFQUNsQztDQUNBIiwiaWdub3JlTGlzdCI6W119

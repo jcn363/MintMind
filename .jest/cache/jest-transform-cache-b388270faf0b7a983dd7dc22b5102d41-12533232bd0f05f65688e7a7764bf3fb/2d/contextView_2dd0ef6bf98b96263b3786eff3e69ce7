@@ -1,0 +1,76 @@
+24304b6313acbce50e73bbe707286ef9
+/* istanbul ignore next */
+function cov_1kv5rdsrs9() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/contextview/browser/contextView.ts";
+  var hash = "2fd576b52ceeeb3de1718136104d24f1e3bca870";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/contextview/browser/contextView.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 35
+        },
+        end: {
+          line: 6,
+          column: 72
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 35
+        },
+        end: {
+          line: 7,
+          column: 72
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/contextview/browser/contextView.ts",
+      mappings: "AAAA;;;gGAGgG;AAUhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,mBAAmB,GAAG,eAAe,CAAsB,oBAAoB,CAAC,CAAC;AAuC9F,MAAM,CAAC,MAAM,mBAAmB,GAAG,eAAe,CAAsB,oBAAoB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/contextview/browser/contextView.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IContextMenuDelegate } from '../../../base/browser/contextmenu.js';\nimport { StandardMouseEvent } from '../../../base/browser/mouseEvent.js';\nimport { AnchorAlignment, AnchorAxisAlignment, IAnchor, IContextViewProvider } from '../../../base/browser/ui/contextview/contextview.js';\nimport { IAction } from '../../../base/common/actions.js';\nimport { Event } from '../../../base/common/event.js';\nimport { IDisposable } from '../../../base/common/lifecycle.js';\nimport { IMenuActionOptions, MenuId } from '../../actions/common/actions.js';\nimport { IContextKeyService } from '../../contextkey/common/contextkey.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IContextViewService = createDecorator<IContextViewService>('contextViewService');\n\nexport interface IContextViewService extends IContextViewProvider {\n\n\treadonly _serviceBrand: undefined;\n\n\tshowContextView(delegate: IContextViewDelegate, container?: HTMLElement, shadowRoot?: boolean): IOpenContextView;\n\thideContextView(data?: any): void;\n\tgetContextViewElement(): HTMLElement;\n\tlayout(): void;\n\tanchorAlignment?: AnchorAlignment;\n}\n\nexport interface IContextViewDelegate {\n\n\tcanRelayout?: boolean; // Default: true\n\n\t/**\n\t * The anchor where to position the context view.\n\t * Use a `HTMLElement` to position the view at the element,\n\t * a `StandardMouseEvent` to position it at the mouse position\n\t * or an `IAnchor` to position it at a specific location.\n\t */\n\tgetAnchor(): HTMLElement | StandardMouseEvent | IAnchor;\n\trender(container: HTMLElement): IDisposable;\n\tonDOMEvent?(e: any, activeElement: HTMLElement): void;\n\tonHide?(data?: any): void;\n\tfocus?(): void;\n\tanchorAlignment?: AnchorAlignment;\n\tanchorAxisAlignment?: AnchorAxisAlignment;\n\n\t// context views with higher layers are rendered over contet views with lower layers\n\tlayer?: number; // Default: 0\n}\n\nexport interface IOpenContextView {\n\tclose: () => void;\n}\n\nexport const IContextMenuService = createDecorator<IContextMenuService>('contextMenuService');\n\nexport interface IContextMenuService {\n\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidShowContextMenu: Event<void>;\n\treadonly onDidHideContextMenu: Event<void>;\n\n\tshowContextMenu(delegate: IContextMenuDelegate | IContextMenuMenuDelegate): void;\n}\n\nexport type IContextMenuMenuDelegate = {\n\t/**\n\t * The MenuId that should be used to populate the context menu.\n\t */\n\tmenuId?: MenuId;\n\t/**\n\t * Optional options how menu actions are invoked\n\t */\n\tmenuActionOptions?: IMenuActionOptions;\n\t/**\n\t * Optional context key service which drives the given menu\n\t */\n\tcontextKeyService?: IContextKeyService;\n\n\t/**\n\t * Optional getter for extra actions. They will be prepended to the menu actions.\n\t */\n\tgetActions?(): IAction[];\n} & Omit<IContextMenuDelegate, 'getActions'>;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2fd576b52ceeeb3de1718136104d24f1e3bca870"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1kv5rdsrs9 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1kv5rdsrs9();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IContextViewService =
+/* istanbul ignore next */
+(cov_1kv5rdsrs9().s[0]++, createDecorator('contextViewService'));
+export const IContextMenuService =
+/* istanbul ignore next */
+(cov_1kv5rdsrs9().s[1]++, createDecorator('contextMenuService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQ29udGV4dFZpZXdTZXJ2aWNlIiwiY292XzFrdjVyZHNyczkiLCJzIiwiSUNvbnRleHRNZW51U2VydmljZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vY29udGV4dHZpZXcvYnJvd3Nlci9jb250ZXh0Vmlldy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUNvbnRleHRNZW51RGVsZWdhdGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2Jyb3dzZXIvY29udGV4dG1lbnUuanMnO1xuaW1wb3J0IHsgU3RhbmRhcmRNb3VzZUV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9icm93c2VyL21vdXNlRXZlbnQuanMnO1xuaW1wb3J0IHsgQW5jaG9yQWxpZ25tZW50LCBBbmNob3JBeGlzQWxpZ25tZW50LCBJQW5jaG9yLCBJQ29udGV4dFZpZXdQcm92aWRlciB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvYnJvd3Nlci91aS9jb250ZXh0dmlldy9jb250ZXh0dmlldy5qcyc7XG5pbXBvcnQgeyBJQWN0aW9uIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vYWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IElNZW51QWN0aW9uT3B0aW9ucywgTWVudUlkIH0gZnJvbSAnLi4vLi4vYWN0aW9ucy9jb21tb24vYWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBJQ29udGV4dEtleVNlcnZpY2UgfSBmcm9tICcuLi8uLi9jb250ZXh0a2V5L2NvbW1vbi9jb250ZXh0a2V5LmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgY29uc3QgSUNvbnRleHRWaWV3U2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJQ29udGV4dFZpZXdTZXJ2aWNlPignY29udGV4dFZpZXdTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNvbnRleHRWaWV3U2VydmljZSBleHRlbmRzIElDb250ZXh0Vmlld1Byb3ZpZGVyIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0c2hvd0NvbnRleHRWaWV3KGRlbGVnYXRlOiBJQ29udGV4dFZpZXdEZWxlZ2F0ZSwgY29udGFpbmVyPzogSFRNTEVsZW1lbnQsIHNoYWRvd1Jvb3Q/OiBib29sZWFuKTogSU9wZW5Db250ZXh0Vmlldztcblx0aGlkZUNvbnRleHRWaWV3KGRhdGE/OiBhbnkpOiB2b2lkO1xuXHRnZXRDb250ZXh0Vmlld0VsZW1lbnQoKTogSFRNTEVsZW1lbnQ7XG5cdGxheW91dCgpOiB2b2lkO1xuXHRhbmNob3JBbGlnbm1lbnQ/OiBBbmNob3JBbGlnbm1lbnQ7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNvbnRleHRWaWV3RGVsZWdhdGUge1xuXG5cdGNhblJlbGF5b3V0PzogYm9vbGVhbjsgLy8gRGVmYXVsdDogdHJ1ZVxuXG5cdC8qKlxuXHQgKiBUaGUgYW5jaG9yIHdoZXJlIHRvIHBvc2l0aW9uIHRoZSBjb250ZXh0IHZpZXcuXG5cdCAqIFVzZSBhIGBIVE1MRWxlbWVudGAgdG8gcG9zaXRpb24gdGhlIHZpZXcgYXQgdGhlIGVsZW1lbnQsXG5cdCAqIGEgYFN0YW5kYXJkTW91c2VFdmVudGAgdG8gcG9zaXRpb24gaXQgYXQgdGhlIG1vdXNlIHBvc2l0aW9uXG5cdCAqIG9yIGFuIGBJQW5jaG9yYCB0byBwb3NpdGlvbiBpdCBhdCBhIHNwZWNpZmljIGxvY2F0aW9uLlxuXHQgKi9cblx0Z2V0QW5jaG9yKCk6IEhUTUxFbGVtZW50IHwgU3RhbmRhcmRNb3VzZUV2ZW50IHwgSUFuY2hvcjtcblx0cmVuZGVyKGNvbnRhaW5lcjogSFRNTEVsZW1lbnQpOiBJRGlzcG9zYWJsZTtcblx0b25ET01FdmVudD8oZTogYW55LCBhY3RpdmVFbGVtZW50OiBIVE1MRWxlbWVudCk6IHZvaWQ7XG5cdG9uSGlkZT8oZGF0YT86IGFueSk6IHZvaWQ7XG5cdGZvY3VzPygpOiB2b2lkO1xuXHRhbmNob3JBbGlnbm1lbnQ/OiBBbmNob3JBbGlnbm1lbnQ7XG5cdGFuY2hvckF4aXNBbGlnbm1lbnQ/OiBBbmNob3JBeGlzQWxpZ25tZW50O1xuXG5cdC8vIGNvbnRleHQgdmlld3Mgd2l0aCBoaWdoZXIgbGF5ZXJzIGFyZSByZW5kZXJlZCBvdmVyIGNvbnRldCB2aWV3cyB3aXRoIGxvd2VyIGxheWVyc1xuXHRsYXllcj86IG51bWJlcjsgLy8gRGVmYXVsdDogMFxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElPcGVuQ29udGV4dFZpZXcge1xuXHRjbG9zZTogKCkgPT4gdm9pZDtcbn1cblxuZXhwb3J0IGNvbnN0IElDb250ZXh0TWVudVNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUNvbnRleHRNZW51U2VydmljZT4oJ2NvbnRleHRNZW51U2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElDb250ZXh0TWVudVNlcnZpY2Uge1xuXG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRyZWFkb25seSBvbkRpZFNob3dDb250ZXh0TWVudTogRXZlbnQ8dm9pZD47XG5cdHJlYWRvbmx5IG9uRGlkSGlkZUNvbnRleHRNZW51OiBFdmVudDx2b2lkPjtcblxuXHRzaG93Q29udGV4dE1lbnUoZGVsZWdhdGU6IElDb250ZXh0TWVudURlbGVnYXRlIHwgSUNvbnRleHRNZW51TWVudURlbGVnYXRlKTogdm9pZDtcbn1cblxuZXhwb3J0IHR5cGUgSUNvbnRleHRNZW51TWVudURlbGVnYXRlID0ge1xuXHQvKipcblx0ICogVGhlIE1lbnVJZCB0aGF0IHNob3VsZCBiZSB1c2VkIHRvIHBvcHVsYXRlIHRoZSBjb250ZXh0IG1lbnUuXG5cdCAqL1xuXHRtZW51SWQ/OiBNZW51SWQ7XG5cdC8qKlxuXHQgKiBPcHRpb25hbCBvcHRpb25zIGhvdyBtZW51IGFjdGlvbnMgYXJlIGludm9rZWRcblx0ICovXG5cdG1lbnVBY3Rpb25PcHRpb25zPzogSU1lbnVBY3Rpb25PcHRpb25zO1xuXHQvKipcblx0ICogT3B0aW9uYWwgY29udGV4dCBrZXkgc2VydmljZSB3aGljaCBkcml2ZXMgdGhlIGdpdmVuIG1lbnVcblx0ICovXG5cdGNvbnRleHRLZXlTZXJ2aWNlPzogSUNvbnRleHRLZXlTZXJ2aWNlO1xuXG5cdC8qKlxuXHQgKiBPcHRpb25hbCBnZXR0ZXIgZm9yIGV4dHJhIGFjdGlvbnMuIFRoZXkgd2lsbCBiZSBwcmVwZW5kZWQgdG8gdGhlIG1lbnUgYWN0aW9ucy5cblx0ICovXG5cdGdldEFjdGlvbnM/KCk6IElBY3Rpb25bXTtcbn0gJiBPbWl0PElDb250ZXh0TWVudURlbGVnYXRlLCAnZ2V0QWN0aW9ucyc+O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQWFBLFNBQVNBLGVBQWUsUUFBUSw2Q0FBNkM7QUFFN0UsT0FBTyxNQUFNQyxtQkFBbUI7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQXNCLG9CQUFvQixDQUFDO0FBdUM3RixPQUFPLE1BQU1JLG1CQUFtQjtBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBc0Isb0JBQW9CLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

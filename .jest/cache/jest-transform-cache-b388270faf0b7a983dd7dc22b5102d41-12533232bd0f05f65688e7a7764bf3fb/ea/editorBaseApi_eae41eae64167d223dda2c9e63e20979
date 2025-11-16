@@ -1,0 +1,217 @@
+c9fb0f1960362605a4d8509ea6f41584
+/* istanbul ignore next */
+function cov_jj1wee1q2() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/editorBaseApi.ts";
+  var hash = "861b45751b8c475654c1d878b78b0cfaeaeab705";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/editorBaseApi.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 15,
+          column: 21
+        },
+        end: {
+          line: 15,
+          column: 25
+        }
+      },
+      "1": {
+        start: {
+          line: 16,
+          column: 19
+        },
+        end: {
+          line: 16,
+          column: 23
+        }
+      },
+      "2": {
+        start: {
+          line: 17,
+          column: 17
+        },
+        end: {
+          line: 17,
+          column: 20
+        }
+      },
+      "3": {
+        start: {
+          line: 18,
+          column: 21
+        },
+        end: {
+          line: 18,
+          column: 24
+        }
+      },
+      "4": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 47
+        }
+      },
+      "5": {
+        start: {
+          line: 24,
+          column: 4
+        },
+        end: {
+          line: 39,
+          column: 6
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 19,
+            column: 4
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 40
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 19
+      },
+      "1": {
+        name: "createMonacoBaseAPI",
+        decl: {
+          start: {
+            line: 23,
+            column: 16
+          },
+          end: {
+            line: 23,
+            column: 35
+          }
+        },
+        loc: {
+          start: {
+            line: 23,
+            column: 38
+          },
+          end: {
+            line: 40,
+            column: 1
+          }
+        },
+        line: 23
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/editorBaseApi.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,uBAAuB,EAAE,MAAM,sCAAsC,CAAC;AAC/E,OAAO,EAAE,OAAO,EAAE,MAAM,+BAA+B,CAAC;AACxD,OAAO,EAAE,QAAQ,EAAyB,MAAM,kCAAkC,CAAC;AACnF,OAAO,EAAE,GAAG,EAAE,MAAM,6BAA6B,CAAC;AAClD,OAAO,EAAE,QAAQ,EAAE,MAAM,qBAAqB,CAAC;AAC/C,OAAO,EAAE,KAAK,EAAE,MAAM,kBAAkB,CAAC;AACzC,OAAO,EAAE,SAAS,EAAE,MAAM,sBAAsB,CAAC;AACjD,OAAO,EAAE,KAAK,EAAE,MAAM,iBAAiB,CAAC;AACxC,OAAO,KAAK,eAAe,MAAM,kCAAkC,CAAC;AAEpE,MAAM,OAAO,MAAM;IACX,MAAM,CAAU,OAAO,kCAA+B;IACtD,MAAM,CAAU,KAAK,gCAA6B;IAClD,MAAM,CAAU,GAAG,6BAA2B;IAC9C,MAAM,CAAU,OAAO,iCAA+B;IAEtD,MAAM,CAAC,KAAK,CAAC,SAAiB,EAAE,UAAkB;QACxD,OAAO,QAAQ,CAAC,SAAS,EAAE,UAAU,CAAC,CAAC;IACxC,CAAC;;AAGF,MAAM,UAAU,mBAAmB;IAClC,OAAO;QACN,MAAM,EAAE,SAAU,EAAE,mCAAmC;QACvD,SAAS,EAAE,SAAU,EAAE,mCAAmC;QAC1D,uBAAuB,EAAE,uBAAuB;QAChD,OAAO,EAAE,OAAO;QAChB,OAAO,EAAE,eAAe,CAAC,OAAO;QAChC,MAAM,EAAE,MAAM;QACd,QAAQ,EAAE,QAAQ;QAClB,KAAK,EAAE,KAAK;QACZ,SAAS,EAAE,SAA+C;QAC1D,kBAAkB,EAAE,eAAe,CAAC,kBAAkB;QACtD,cAAc,EAAE,eAAe,CAAC,cAAc;QAC9C,SAAS,EAAE,eAAe,CAAC,SAAS;QACpC,GAAG,EAAE,GAAmC;QACxC,KAAK,EAAE,KAAK;KACZ,CAAC;AACH,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/editorBaseApi.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationTokenSource } from '../../../base/common/cancellation.js';\nimport { Emitter } from '../../../base/common/event.js';\nimport { KeyChord, KeyMod as ConstKeyMod } from '../../../base/common/keyCodes.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { Position } from '../core/position.js';\nimport { Range } from '../core/range.js';\nimport { Selection } from '../core/selection.js';\nimport { Token } from '../languages.js';\nimport * as standaloneEnums from '../standalone/standaloneEnums.js';\n\nexport class KeyMod {\n\tpublic static readonly CtrlCmd: number = ConstKeyMod.CtrlCmd;\n\tpublic static readonly Shift: number = ConstKeyMod.Shift;\n\tpublic static readonly Alt: number = ConstKeyMod.Alt;\n\tpublic static readonly WinCtrl: number = ConstKeyMod.WinCtrl;\n\n\tpublic static chord(firstPart: number, secondPart: number): number {\n\t\treturn KeyChord(firstPart, secondPart);\n\t}\n}\n\nexport function createMonacoBaseAPI(): typeof monaco {\n\treturn {\n\t\teditor: undefined!, // undefined override expected here\n\t\tlanguages: undefined!, // undefined override expected here\n\t\tCancellationTokenSource: CancellationTokenSource,\n\t\tEmitter: Emitter,\n\t\tKeyCode: standaloneEnums.KeyCode,\n\t\tKeyMod: KeyMod,\n\t\tPosition: Position,\n\t\tRange: Range,\n\t\tSelection: Selection as unknown as typeof monaco.Selection,\n\t\tSelectionDirection: standaloneEnums.SelectionDirection,\n\t\tMarkerSeverity: standaloneEnums.MarkerSeverity,\n\t\tMarkerTag: standaloneEnums.MarkerTag,\n\t\tUri: URI as unknown as typeof monaco.Uri,\n\t\tToken: Token\n\t};\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "861b45751b8c475654c1d878b78b0cfaeaeab705"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_jj1wee1q2 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_jj1wee1q2();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { CancellationTokenSource } from '../../../base/common/cancellation.js';
+import { Emitter } from '../../../base/common/event.js';
+import { KeyChord } from '../../../base/common/keyCodes.js';
+import { URI } from '../../../base/common/uri.js';
+import { Position } from '../core/position.js';
+import { Range } from '../core/range.js';
+import { Selection } from '../core/selection.js';
+import { Token } from '../languages.js';
+import * as standaloneEnums from '../standalone/standaloneEnums.js';
+export class KeyMod {
+  static CtrlCmd =
+  /* istanbul ignore next */
+  (cov_jj1wee1q2().s[0]++, 2048 /* ConstKeyMod.CtrlCmd */);
+  static Shift =
+  /* istanbul ignore next */
+  (cov_jj1wee1q2().s[1]++, 1024 /* ConstKeyMod.Shift */);
+  static Alt =
+  /* istanbul ignore next */
+  (cov_jj1wee1q2().s[2]++, 512 /* ConstKeyMod.Alt */);
+  static WinCtrl =
+  /* istanbul ignore next */
+  (cov_jj1wee1q2().s[3]++, 256 /* ConstKeyMod.WinCtrl */);
+  static chord(firstPart, secondPart) {
+    /* istanbul ignore next */
+    cov_jj1wee1q2().f[0]++;
+    cov_jj1wee1q2().s[4]++;
+    return KeyChord(firstPart, secondPart);
+  }
+}
+export function createMonacoBaseAPI() {
+  /* istanbul ignore next */
+  cov_jj1wee1q2().f[1]++;
+  cov_jj1wee1q2().s[5]++;
+  return {
+    editor: undefined,
+    // undefined override expected here
+    languages: undefined,
+    // undefined override expected here
+    CancellationTokenSource: CancellationTokenSource,
+    Emitter: Emitter,
+    KeyCode: standaloneEnums.KeyCode,
+    KeyMod: KeyMod,
+    Position: Position,
+    Range: Range,
+    Selection: Selection,
+    SelectionDirection: standaloneEnums.SelectionDirection,
+    MarkerSeverity: standaloneEnums.MarkerSeverity,
+    MarkerTag: standaloneEnums.MarkerTag,
+    Uri: URI,
+    Token: Token
+  };
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3Zfamoxd2VlMXEyIiwiYWN0dWFsQ292ZXJhZ2UiLCJDYW5jZWxsYXRpb25Ub2tlblNvdXJjZSIsIkVtaXR0ZXIiLCJLZXlDaG9yZCIsIlVSSSIsIlBvc2l0aW9uIiwiUmFuZ2UiLCJTZWxlY3Rpb24iLCJUb2tlbiIsInN0YW5kYWxvbmVFbnVtcyIsIktleU1vZCIsIkN0cmxDbWQiLCJzIiwiU2hpZnQiLCJBbHQiLCJXaW5DdHJsIiwiY2hvcmQiLCJmaXJzdFBhcnQiLCJzZWNvbmRQYXJ0IiwiZiIsImNyZWF0ZU1vbmFjb0Jhc2VBUEkiLCJlZGl0b3IiLCJ1bmRlZmluZWQiLCJsYW5ndWFnZXMiLCJLZXlDb2RlIiwiU2VsZWN0aW9uRGlyZWN0aW9uIiwiTWFya2VyU2V2ZXJpdHkiLCJNYXJrZXJUYWciLCJVcmkiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9jb21tb24vc2VydmljZXMvZWRpdG9yQmFzZUFwaS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgQ2FuY2VsbGF0aW9uVG9rZW5Tb3VyY2UgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9jYW5jZWxsYXRpb24uanMnO1xuaW1wb3J0IHsgRW1pdHRlciB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IEtleUNob3JkLCBLZXlNb2QgYXMgQ29uc3RLZXlNb2QgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9rZXlDb2Rlcy5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgUG9zaXRpb24gfSBmcm9tICcuLi9jb3JlL3Bvc2l0aW9uLmpzJztcbmltcG9ydCB7IFJhbmdlIH0gZnJvbSAnLi4vY29yZS9yYW5nZS5qcyc7XG5pbXBvcnQgeyBTZWxlY3Rpb24gfSBmcm9tICcuLi9jb3JlL3NlbGVjdGlvbi5qcyc7XG5pbXBvcnQgeyBUb2tlbiB9IGZyb20gJy4uL2xhbmd1YWdlcy5qcyc7XG5pbXBvcnQgKiBhcyBzdGFuZGFsb25lRW51bXMgZnJvbSAnLi4vc3RhbmRhbG9uZS9zdGFuZGFsb25lRW51bXMuanMnO1xuXG5leHBvcnQgY2xhc3MgS2V5TW9kIHtcblx0cHVibGljIHN0YXRpYyByZWFkb25seSBDdHJsQ21kOiBudW1iZXIgPSBDb25zdEtleU1vZC5DdHJsQ21kO1xuXHRwdWJsaWMgc3RhdGljIHJlYWRvbmx5IFNoaWZ0OiBudW1iZXIgPSBDb25zdEtleU1vZC5TaGlmdDtcblx0cHVibGljIHN0YXRpYyByZWFkb25seSBBbHQ6IG51bWJlciA9IENvbnN0S2V5TW9kLkFsdDtcblx0cHVibGljIHN0YXRpYyByZWFkb25seSBXaW5DdHJsOiBudW1iZXIgPSBDb25zdEtleU1vZC5XaW5DdHJsO1xuXG5cdHB1YmxpYyBzdGF0aWMgY2hvcmQoZmlyc3RQYXJ0OiBudW1iZXIsIHNlY29uZFBhcnQ6IG51bWJlcik6IG51bWJlciB7XG5cdFx0cmV0dXJuIEtleUNob3JkKGZpcnN0UGFydCwgc2Vjb25kUGFydCk7XG5cdH1cbn1cblxuZXhwb3J0IGZ1bmN0aW9uIGNyZWF0ZU1vbmFjb0Jhc2VBUEkoKTogdHlwZW9mIG1vbmFjbyB7XG5cdHJldHVybiB7XG5cdFx0ZWRpdG9yOiB1bmRlZmluZWQhLCAvLyB1bmRlZmluZWQgb3ZlcnJpZGUgZXhwZWN0ZWQgaGVyZVxuXHRcdGxhbmd1YWdlczogdW5kZWZpbmVkISwgLy8gdW5kZWZpbmVkIG92ZXJyaWRlIGV4cGVjdGVkIGhlcmVcblx0XHRDYW5jZWxsYXRpb25Ub2tlblNvdXJjZTogQ2FuY2VsbGF0aW9uVG9rZW5Tb3VyY2UsXG5cdFx0RW1pdHRlcjogRW1pdHRlcixcblx0XHRLZXlDb2RlOiBzdGFuZGFsb25lRW51bXMuS2V5Q29kZSxcblx0XHRLZXlNb2Q6IEtleU1vZCxcblx0XHRQb3NpdGlvbjogUG9zaXRpb24sXG5cdFx0UmFuZ2U6IFJhbmdlLFxuXHRcdFNlbGVjdGlvbjogU2VsZWN0aW9uIGFzIHVua25vd24gYXMgdHlwZW9mIG1vbmFjby5TZWxlY3Rpb24sXG5cdFx0U2VsZWN0aW9uRGlyZWN0aW9uOiBzdGFuZGFsb25lRW51bXMuU2VsZWN0aW9uRGlyZWN0aW9uLFxuXHRcdE1hcmtlclNldmVyaXR5OiBzdGFuZGFsb25lRW51bXMuTWFya2VyU2V2ZXJpdHksXG5cdFx0TWFya2VyVGFnOiBzdGFuZGFsb25lRW51bXMuTWFya2VyVGFnLFxuXHRcdFVyaTogVVJJIGFzIHVua25vd24gYXMgdHlwZW9mIG1vbmFjby5VcmksXG5cdFx0VG9rZW46IFRva2VuXG5cdH07XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFpQndCO0lBQUFBLGFBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGFBQUE7QUFqQnhCOzs7O0FBS0EsU0FBU0UsdUJBQXVCLFFBQVEsc0NBQXNDO0FBQzlFLFNBQVNDLE9BQU8sUUFBUSwrQkFBK0I7QUFDdkQsU0FBU0MsUUFBUSxRQUErQixrQ0FBa0M7QUFDbEYsU0FBU0MsR0FBRyxRQUFRLDZCQUE2QjtBQUNqRCxTQUFTQyxRQUFRLFFBQVEscUJBQXFCO0FBQzlDLFNBQVNDLEtBQUssUUFBUSxrQkFBa0I7QUFDeEMsU0FBU0MsU0FBUyxRQUFRLHNCQUFzQjtBQUNoRCxTQUFTQyxLQUFLLFFBQVEsaUJBQWlCO0FBQ3ZDLE9BQU8sS0FBS0MsZUFBZSxNQUFNLGtDQUFrQztBQUVuRSxPQUFNLE1BQU9DLE1BQU07RUFDWCxPQUFnQkMsT0FBTztFQUFBO0VBQUEsQ0FBQVosYUFBQSxHQUFBYSxDQUFBO0VBQ3ZCLE9BQWdCQyxLQUFLO0VBQUE7RUFBQSxDQUFBZCxhQUFBLEdBQUFhLENBQUE7RUFDckIsT0FBZ0JFLEdBQUc7RUFBQTtFQUFBLENBQUFmLGFBQUEsR0FBQWEsQ0FBQTtFQUNuQixPQUFnQkcsT0FBTztFQUFBO0VBQUEsQ0FBQWhCLGFBQUEsR0FBQWEsQ0FBQTtFQUV2QixPQUFPSSxLQUFLQSxDQUFDQyxTQUFpQixFQUFFQyxVQUFrQjtJQUFBO0lBQUFuQixhQUFBLEdBQUFvQixDQUFBO0lBQUFwQixhQUFBLEdBQUFhLENBQUE7SUFDeEQsT0FBT1QsUUFBUSxDQUFDYyxTQUFTLEVBQUVDLFVBQVUsQ0FBQztFQUN2Qzs7QUFHRCxPQUFNLFNBQVVFLG1CQUFtQkEsQ0FBQTtFQUFBO0VBQUFyQixhQUFBLEdBQUFvQixDQUFBO0VBQUFwQixhQUFBLEdBQUFhLENBQUE7RUFDbEMsT0FBTztJQUNOUyxNQUFNLEVBQUVDLFNBQVU7SUFBRTtJQUNwQkMsU0FBUyxFQUFFRCxTQUFVO0lBQUU7SUFDdkJyQix1QkFBdUIsRUFBRUEsdUJBQXVCO0lBQ2hEQyxPQUFPLEVBQUVBLE9BQU87SUFDaEJzQixPQUFPLEVBQUVmLGVBQWUsQ0FBQ2UsT0FBTztJQUNoQ2QsTUFBTSxFQUFFQSxNQUFNO0lBQ2RMLFFBQVEsRUFBRUEsUUFBUTtJQUNsQkMsS0FBSyxFQUFFQSxLQUFLO0lBQ1pDLFNBQVMsRUFBRUEsU0FBK0M7SUFDMURrQixrQkFBa0IsRUFBRWhCLGVBQWUsQ0FBQ2dCLGtCQUFrQjtJQUN0REMsY0FBYyxFQUFFakIsZUFBZSxDQUFDaUIsY0FBYztJQUM5Q0MsU0FBUyxFQUFFbEIsZUFBZSxDQUFDa0IsU0FBUztJQUNwQ0MsR0FBRyxFQUFFeEIsR0FBbUM7SUFDeENJLEtBQUssRUFBRUE7R0FDUDtBQUNGIiwiaWdub3JlTGlzdCI6W119

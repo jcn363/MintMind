@@ -1,0 +1,229 @@
+b11f639b7ee61c9c744c833e2a3b529b
+/* istanbul ignore next */
+function cov_nfco771ti() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/types.ts";
+  var hash = "eeeb8dfab7bc51dfa7abbe673b6a6a3f3a5daaa2";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/types.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 52
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 4
+        },
+        end: {
+          line: 7,
+          column: 46
+        }
+      },
+      "2": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 40
+        }
+      },
+      "3": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 9,
+          column: 60
+        }
+      },
+      "4": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 50
+        }
+      },
+      "5": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 46
+        }
+      },
+      "6": {
+        start: {
+          line: 12,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 44
+        }
+      },
+      "7": {
+        start: {
+          line: 13,
+          column: 4
+        },
+        end: {
+          line: 13,
+          column: 50
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 6,
+            column: 1
+          },
+          end: {
+            line: 6,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 31
+          },
+          end: {
+            line: 14,
+            column: 1
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 14,
+            column: 3
+          },
+          end: {
+            line: 14,
+            column: 50
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 14,
+            column: 3
+          },
+          end: {
+            line: 14,
+            column: 21
+          }
+        }, {
+          start: {
+            line: 14,
+            column: 26
+          },
+          end: {
+            line: 14,
+            column: 49
+          }
+        }],
+        line: 14
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/types.ts",
+      mappings: "AAAA;;;gGAGgG;AA8BhG,MAAM,CAAN,IAAY,kBAQX;AARD,WAAY,kBAAkB;IAC7B,yCAAmB,CAAA;IACnB,mCAAa,CAAA;IACb,uDAAiC,CAAA;IACjC,6CAAuB,CAAA;IACvB,yCAAmB,CAAA;IACnB,uCAAiB,CAAA;IACjB,6CAAuB,CAAA;AACxB,CAAC,EARW,kBAAkB,KAAlB,kBAAkB,QAQ7B",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/chatAgentTools/browser/tools/monitoring/types.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { Task } from '../../../../../tasks/common/taskService.js';\nimport type { ITerminalInstance } from '../../../../../terminal/browser/terminal.js';\nimport type { ILinkLocation } from '../../taskHelpers.js';\nimport type { IMarker as XtermMarker } from '@xterm/xterm';\n\nexport interface IConfirmationPrompt {\n\tprompt: string;\n\toptions: string[];\n\tdescriptions?: string[];\n\tdetectedRequestForFreeFormInput: boolean;\n}\n\nexport interface IExecution {\n\tgetOutput: (marker?: XtermMarker) => string;\n\tisActive?: () => Promise<boolean>;\n\ttask?: Task | Pick<Task, 'configurationProperties'>;\n\tdependencyTasks?: Task[];\n\tinstance: Pick<ITerminalInstance, 'sendText' | 'instanceId' | 'onDidInputData' | 'onData' | 'focus' | 'registerMarker'>;\n\tsessionId: string | undefined;\n}\n\nexport interface IPollingResult {\n\toutput: string;\n\tresources?: ILinkLocation[];\n\tmodelOutputEvalResponse?: string;\n\tstate: OutputMonitorState;\n}\n\nexport enum OutputMonitorState {\n\tInitial = 'Initial',\n\tIdle = 'Idle',\n\tPollingForIdle = 'PollingForIdle',\n\tPrompting = 'Prompting',\n\tTimeout = 'Timeout',\n\tActive = 'Active',\n\tCancelled = 'Cancelled',\n}\n\nexport interface IRacePollingOrPromptResult {\n\toutput: string;\n\tpollDurationMs?: number;\n\tmodelOutputEvalResponse?: string;\n\tstate: OutputMonitorState;\n}\n\nexport const enum PollingConsts {\n\tMinIdleEvents = 2, // Minimum number of idle checks before considering the terminal idle\n\tMinPollingDuration = 500,\n\tFirstPollingMaxDuration = 20000, // 20 seconds\n\tExtendedPollingMaxDuration = 120000, // 2 minutes\n\tMaxPollingIntervalDuration = 2000, // 2 seconds\n\tMaxRecursionCount = 5\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "eeeb8dfab7bc51dfa7abbe673b6a6a3f3a5daaa2"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_nfco771ti = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_nfco771ti();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export var OutputMonitorState;
+/* istanbul ignore next */
+cov_nfco771ti().s[0]++;
+(function (OutputMonitorState) {
+  /* istanbul ignore next */
+  cov_nfco771ti().f[0]++;
+  cov_nfco771ti().s[1]++;
+  OutputMonitorState["Initial"] = "Initial";
+  /* istanbul ignore next */
+  cov_nfco771ti().s[2]++;
+  OutputMonitorState["Idle"] = "Idle";
+  /* istanbul ignore next */
+  cov_nfco771ti().s[3]++;
+  OutputMonitorState["PollingForIdle"] = "PollingForIdle";
+  /* istanbul ignore next */
+  cov_nfco771ti().s[4]++;
+  OutputMonitorState["Prompting"] = "Prompting";
+  /* istanbul ignore next */
+  cov_nfco771ti().s[5]++;
+  OutputMonitorState["Timeout"] = "Timeout";
+  /* istanbul ignore next */
+  cov_nfco771ti().s[6]++;
+  OutputMonitorState["Active"] = "Active";
+  /* istanbul ignore next */
+  cov_nfco771ti().s[7]++;
+  OutputMonitorState["Cancelled"] = "Cancelled";
+})(
+/* istanbul ignore next */
+(cov_nfco771ti().b[0][0]++, OutputMonitorState) ||
+/* istanbul ignore next */
+(cov_nfco771ti().b[0][1]++, OutputMonitorState = {}));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJPdXRwdXRNb25pdG9yU3RhdGUiLCJjb3ZfbmZjbzc3MXRpIiwicyIsImYiLCJiIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvY2hhdEFnZW50VG9vbHMvYnJvd3Nlci90b29scy9tb25pdG9yaW5nL3R5cGVzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgdHlwZSB7IFRhc2sgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi90YXNrcy9jb21tb24vdGFza1NlcnZpY2UuanMnO1xuaW1wb3J0IHR5cGUgeyBJVGVybWluYWxJbnN0YW5jZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3Rlcm1pbmFsL2Jyb3dzZXIvdGVybWluYWwuanMnO1xuaW1wb3J0IHR5cGUgeyBJTGlua0xvY2F0aW9uIH0gZnJvbSAnLi4vLi4vdGFza0hlbHBlcnMuanMnO1xuaW1wb3J0IHR5cGUgeyBJTWFya2VyIGFzIFh0ZXJtTWFya2VyIH0gZnJvbSAnQHh0ZXJtL3h0ZXJtJztcblxuZXhwb3J0IGludGVyZmFjZSBJQ29uZmlybWF0aW9uUHJvbXB0IHtcblx0cHJvbXB0OiBzdHJpbmc7XG5cdG9wdGlvbnM6IHN0cmluZ1tdO1xuXHRkZXNjcmlwdGlvbnM/OiBzdHJpbmdbXTtcblx0ZGV0ZWN0ZWRSZXF1ZXN0Rm9yRnJlZUZvcm1JbnB1dDogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRXhlY3V0aW9uIHtcblx0Z2V0T3V0cHV0OiAobWFya2VyPzogWHRlcm1NYXJrZXIpID0+IHN0cmluZztcblx0aXNBY3RpdmU/OiAoKSA9PiBQcm9taXNlPGJvb2xlYW4+O1xuXHR0YXNrPzogVGFzayB8IFBpY2s8VGFzaywgJ2NvbmZpZ3VyYXRpb25Qcm9wZXJ0aWVzJz47XG5cdGRlcGVuZGVuY3lUYXNrcz86IFRhc2tbXTtcblx0aW5zdGFuY2U6IFBpY2s8SVRlcm1pbmFsSW5zdGFuY2UsICdzZW5kVGV4dCcgfCAnaW5zdGFuY2VJZCcgfCAnb25EaWRJbnB1dERhdGEnIHwgJ29uRGF0YScgfCAnZm9jdXMnIHwgJ3JlZ2lzdGVyTWFya2VyJz47XG5cdHNlc3Npb25JZDogc3RyaW5nIHwgdW5kZWZpbmVkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElQb2xsaW5nUmVzdWx0IHtcblx0b3V0cHV0OiBzdHJpbmc7XG5cdHJlc291cmNlcz86IElMaW5rTG9jYXRpb25bXTtcblx0bW9kZWxPdXRwdXRFdmFsUmVzcG9uc2U/OiBzdHJpbmc7XG5cdHN0YXRlOiBPdXRwdXRNb25pdG9yU3RhdGU7XG59XG5cbmV4cG9ydCBlbnVtIE91dHB1dE1vbml0b3JTdGF0ZSB7XG5cdEluaXRpYWwgPSAnSW5pdGlhbCcsXG5cdElkbGUgPSAnSWRsZScsXG5cdFBvbGxpbmdGb3JJZGxlID0gJ1BvbGxpbmdGb3JJZGxlJyxcblx0UHJvbXB0aW5nID0gJ1Byb21wdGluZycsXG5cdFRpbWVvdXQgPSAnVGltZW91dCcsXG5cdEFjdGl2ZSA9ICdBY3RpdmUnLFxuXHRDYW5jZWxsZWQgPSAnQ2FuY2VsbGVkJyxcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJUmFjZVBvbGxpbmdPclByb21wdFJlc3VsdCB7XG5cdG91dHB1dDogc3RyaW5nO1xuXHRwb2xsRHVyYXRpb25Ncz86IG51bWJlcjtcblx0bW9kZWxPdXRwdXRFdmFsUmVzcG9uc2U/OiBzdHJpbmc7XG5cdHN0YXRlOiBPdXRwdXRNb25pdG9yU3RhdGU7XG59XG5cbmV4cG9ydCBjb25zdCBlbnVtIFBvbGxpbmdDb25zdHMge1xuXHRNaW5JZGxlRXZlbnRzID0gMiwgLy8gTWluaW11bSBudW1iZXIgb2YgaWRsZSBjaGVja3MgYmVmb3JlIGNvbnNpZGVyaW5nIHRoZSB0ZXJtaW5hbCBpZGxlXG5cdE1pblBvbGxpbmdEdXJhdGlvbiA9IDUwMCxcblx0Rmlyc3RQb2xsaW5nTWF4RHVyYXRpb24gPSAyMDAwMCwgLy8gMjAgc2Vjb25kc1xuXHRFeHRlbmRlZFBvbGxpbmdNYXhEdXJhdGlvbiA9IDEyMDAwMCwgLy8gMiBtaW51dGVzXG5cdE1heFBvbGxpbmdJbnRlcnZhbER1cmF0aW9uID0gMjAwMCwgLy8gMiBzZWNvbmRzXG5cdE1heFJlY3Vyc2lvbkNvdW50ID0gNVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQWlDQSxXQUFZQSxrQkFRWDtBQUFBO0FBQUFDLGFBQUEsR0FBQUMsQ0FBQTtBQVJELFdBQVlGLGtCQUFrQjtFQUFBO0VBQUFDLGFBQUEsR0FBQUUsQ0FBQTtFQUFBRixhQUFBLEdBQUFDLENBQUE7RUFDN0JGLGtCQUFBLHVCQUFtQjtFQUFBO0VBQUFDLGFBQUEsR0FBQUMsQ0FBQTtFQUNuQkYsa0JBQUEsaUJBQWE7RUFBQTtFQUFBQyxhQUFBLEdBQUFDLENBQUE7RUFDYkYsa0JBQUEscUNBQWlDO0VBQUE7RUFBQUMsYUFBQSxHQUFBQyxDQUFBO0VBQ2pDRixrQkFBQSwyQkFBdUI7RUFBQTtFQUFBQyxhQUFBLEdBQUFDLENBQUE7RUFDdkJGLGtCQUFBLHVCQUFtQjtFQUFBO0VBQUFDLGFBQUEsR0FBQUMsQ0FBQTtFQUNuQkYsa0JBQUEscUJBQWlCO0VBQUE7RUFBQUMsYUFBQSxHQUFBQyxDQUFBO0VBQ2pCRixrQkFBQSwyQkFBdUI7QUFDeEIsQ0FBQztBQVJXO0FBQUEsQ0FBQUMsYUFBQSxHQUFBRyxDQUFBLFVBQUFKLGtCQUFrQjtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBRyxDQUFBLFVBQWxCSixrQkFBa0IiLCJpZ25vcmVMaXN0IjpbXX0=

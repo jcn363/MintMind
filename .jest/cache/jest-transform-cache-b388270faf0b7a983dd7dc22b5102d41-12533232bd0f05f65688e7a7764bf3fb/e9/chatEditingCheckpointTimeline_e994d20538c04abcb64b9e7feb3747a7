@@ -1,0 +1,46 @@
+99f891c6962bb0ff9ac1006364d382a2
+/* istanbul ignore next */
+function cov_1a7yjf0ey0() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCheckpointTimeline.ts";
+  var hash = "7148a31e52934ebc1f6918588785cb8a8c187c1e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCheckpointTimeline.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCheckpointTimeline.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/chatEditing/chatEditingCheckpointTimeline.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { VSBuffer } from '../../../../../base/common/buffer.js';\nimport { IDisposable } from '../../../../../base/common/lifecycle.js';\nimport { IObservable, ITransaction } from '../../../../../base/common/observable.js';\nimport { URI } from '../../../../../base/common/uri.js';\nimport { IEditSessionEntryDiff } from '../../common/chatEditingService.js';\nimport { IChatRequestDisablement } from '../../common/chatModel.js';\nimport { FileOperation, IChatEditingTimelineState, IFileBaseline } from './chatEditingOperations.js';\n\n/**\n * Interface for the new checkpoint-based timeline system\n */\nexport interface IChatEditingCheckpointTimeline {\n\treadonly requestDisablement: IObservable<IChatRequestDisablement[]>;\n\treadonly canUndo: IObservable<boolean>;\n\treadonly canRedo: IObservable<boolean>;\n\n\t// Checkpoint management\n\tcreateCheckpoint(requestId: string | undefined, undoStopId: string | undefined, label: string, description?: string): void;\n\tnavigateToCheckpoint(checkpointId: string): Promise<void>;\n\tundoToLastCheckpoint(): Promise<void>;\n\tredoToNextCheckpoint(): Promise<void>;\n\tgetCheckpointIdForRequest(requestId: string, undoStopId?: string): string | undefined;\n\n\t// Operation tracking\n\trecordFileOperation(operation: FileOperation): void;\n\tincrementEpoch(): number;\n\n\t// File baselines\n\trecordFileBaseline(baseline: IFileBaseline): void;\n\thasFileBaseline(uri: URI, requestId: string): boolean;\n\n\t// State reconstruction\n\tgetContentURIAtStop(requestId: string, fileURI: URI, stopId: string | undefined): URI;\n\tgetContentAtStop(requestId: string, contentURI: URI, stopId: string | undefined): Promise<string | VSBuffer | undefined>;\n\tonDidChangeContentsAtStop(requestId: string, contentURI: URI, stopId: string | undefined, callback: (data: string) => void): IDisposable;\n\n\t// Persistence\n\tgetStateForPersistence(): IChatEditingTimelineState;\n\trestoreFromState(state: IChatEditingTimelineState, tx: ITransaction): void;\n\n\t// Diffing\n\tgetEntryDiffBetweenStops(uri: URI, requestId: string | undefined, stopId: string | undefined): IObservable<IEditSessionEntryDiff | undefined> | undefined;\n\tgetEntryDiffBetweenRequests(uri: URI, startRequestId: string, stopRequestId: string): IObservable<IEditSessionEntryDiff | undefined>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7148a31e52934ebc1f6918588785cb8a8c187c1e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1a7yjf0ey0 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1a7yjf0ey0();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9jaGF0L2Jyb3dzZXIvY2hhdEVkaXRpbmcvY2hhdEVkaXRpbmdDaGVja3BvaW50VGltZWxpbmUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFZTQnVmZmVyIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vYnVmZmVyLmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IElPYnNlcnZhYmxlLCBJVHJhbnNhY3Rpb24gfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9vYnNlcnZhYmxlLmpzJztcbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBJRWRpdFNlc3Npb25FbnRyeURpZmYgfSBmcm9tICcuLi8uLi9jb21tb24vY2hhdEVkaXRpbmdTZXJ2aWNlLmpzJztcbmltcG9ydCB7IElDaGF0UmVxdWVzdERpc2FibGVtZW50IH0gZnJvbSAnLi4vLi4vY29tbW9uL2NoYXRNb2RlbC5qcyc7XG5pbXBvcnQgeyBGaWxlT3BlcmF0aW9uLCBJQ2hhdEVkaXRpbmdUaW1lbGluZVN0YXRlLCBJRmlsZUJhc2VsaW5lIH0gZnJvbSAnLi9jaGF0RWRpdGluZ09wZXJhdGlvbnMuanMnO1xuXG4vKipcbiAqIEludGVyZmFjZSBmb3IgdGhlIG5ldyBjaGVja3BvaW50LWJhc2VkIHRpbWVsaW5lIHN5c3RlbVxuICovXG5leHBvcnQgaW50ZXJmYWNlIElDaGF0RWRpdGluZ0NoZWNrcG9pbnRUaW1lbGluZSB7XG5cdHJlYWRvbmx5IHJlcXVlc3REaXNhYmxlbWVudDogSU9ic2VydmFibGU8SUNoYXRSZXF1ZXN0RGlzYWJsZW1lbnRbXT47XG5cdHJlYWRvbmx5IGNhblVuZG86IElPYnNlcnZhYmxlPGJvb2xlYW4+O1xuXHRyZWFkb25seSBjYW5SZWRvOiBJT2JzZXJ2YWJsZTxib29sZWFuPjtcblxuXHQvLyBDaGVja3BvaW50IG1hbmFnZW1lbnRcblx0Y3JlYXRlQ2hlY2twb2ludChyZXF1ZXN0SWQ6IHN0cmluZyB8IHVuZGVmaW5lZCwgdW5kb1N0b3BJZDogc3RyaW5nIHwgdW5kZWZpbmVkLCBsYWJlbDogc3RyaW5nLCBkZXNjcmlwdGlvbj86IHN0cmluZyk6IHZvaWQ7XG5cdG5hdmlnYXRlVG9DaGVja3BvaW50KGNoZWNrcG9pbnRJZDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPjtcblx0dW5kb1RvTGFzdENoZWNrcG9pbnQoKTogUHJvbWlzZTx2b2lkPjtcblx0cmVkb1RvTmV4dENoZWNrcG9pbnQoKTogUHJvbWlzZTx2b2lkPjtcblx0Z2V0Q2hlY2twb2ludElkRm9yUmVxdWVzdChyZXF1ZXN0SWQ6IHN0cmluZywgdW5kb1N0b3BJZD86IHN0cmluZyk6IHN0cmluZyB8IHVuZGVmaW5lZDtcblxuXHQvLyBPcGVyYXRpb24gdHJhY2tpbmdcblx0cmVjb3JkRmlsZU9wZXJhdGlvbihvcGVyYXRpb246IEZpbGVPcGVyYXRpb24pOiB2b2lkO1xuXHRpbmNyZW1lbnRFcG9jaCgpOiBudW1iZXI7XG5cblx0Ly8gRmlsZSBiYXNlbGluZXNcblx0cmVjb3JkRmlsZUJhc2VsaW5lKGJhc2VsaW5lOiBJRmlsZUJhc2VsaW5lKTogdm9pZDtcblx0aGFzRmlsZUJhc2VsaW5lKHVyaTogVVJJLCByZXF1ZXN0SWQ6IHN0cmluZyk6IGJvb2xlYW47XG5cblx0Ly8gU3RhdGUgcmVjb25zdHJ1Y3Rpb25cblx0Z2V0Q29udGVudFVSSUF0U3RvcChyZXF1ZXN0SWQ6IHN0cmluZywgZmlsZVVSSTogVVJJLCBzdG9wSWQ6IHN0cmluZyB8IHVuZGVmaW5lZCk6IFVSSTtcblx0Z2V0Q29udGVudEF0U3RvcChyZXF1ZXN0SWQ6IHN0cmluZywgY29udGVudFVSSTogVVJJLCBzdG9wSWQ6IHN0cmluZyB8IHVuZGVmaW5lZCk6IFByb21pc2U8c3RyaW5nIHwgVlNCdWZmZXIgfCB1bmRlZmluZWQ+O1xuXHRvbkRpZENoYW5nZUNvbnRlbnRzQXRTdG9wKHJlcXVlc3RJZDogc3RyaW5nLCBjb250ZW50VVJJOiBVUkksIHN0b3BJZDogc3RyaW5nIHwgdW5kZWZpbmVkLCBjYWxsYmFjazogKGRhdGE6IHN0cmluZykgPT4gdm9pZCk6IElEaXNwb3NhYmxlO1xuXG5cdC8vIFBlcnNpc3RlbmNlXG5cdGdldFN0YXRlRm9yUGVyc2lzdGVuY2UoKTogSUNoYXRFZGl0aW5nVGltZWxpbmVTdGF0ZTtcblx0cmVzdG9yZUZyb21TdGF0ZShzdGF0ZTogSUNoYXRFZGl0aW5nVGltZWxpbmVTdGF0ZSwgdHg6IElUcmFuc2FjdGlvbik6IHZvaWQ7XG5cblx0Ly8gRGlmZmluZ1xuXHRnZXRFbnRyeURpZmZCZXR3ZWVuU3RvcHModXJpOiBVUkksIHJlcXVlc3RJZDogc3RyaW5nIHwgdW5kZWZpbmVkLCBzdG9wSWQ6IHN0cmluZyB8IHVuZGVmaW5lZCk6IElPYnNlcnZhYmxlPElFZGl0U2Vzc2lvbkVudHJ5RGlmZiB8IHVuZGVmaW5lZD4gfCB1bmRlZmluZWQ7XG5cdGdldEVudHJ5RGlmZkJldHdlZW5SZXF1ZXN0cyh1cmk6IFVSSSwgc3RhcnRSZXF1ZXN0SWQ6IHN0cmluZywgc3RvcFJlcXVlc3RJZDogc3RyaW5nKTogSU9ic2VydmFibGU8SUVkaXRTZXNzaW9uRW50cnlEaWZmIHwgdW5kZWZpbmVkPjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

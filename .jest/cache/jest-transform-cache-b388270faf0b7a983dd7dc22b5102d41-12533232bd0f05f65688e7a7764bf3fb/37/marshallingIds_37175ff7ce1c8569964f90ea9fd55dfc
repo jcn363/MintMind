@@ -1,0 +1,46 @@
+094c5fed88ea5065abac45ad4911f724
+/* istanbul ignore next */
+function cov_50jz0gntn() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/marshallingIds.ts";
+  var hash = "74fb8ccbd60a94689e2cfda92aabfde6508f61e6";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/marshallingIds.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/marshallingIds.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/marshallingIds.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum MarshalledId {\n\tUri = 1,\n\tRegexp,\n\tScmResource,\n\tScmResourceGroup,\n\tScmProvider,\n\tCommentController,\n\tCommentThread,\n\tCommentThreadInstance,\n\tCommentThreadReply,\n\tCommentNode,\n\tCommentThreadNode,\n\tTimelineActionContext,\n\tNotebookCellActionContext,\n\tNotebookActionContext,\n\tTerminalContext,\n\tTestItemContext,\n\tDate,\n\tTestMessageMenuArgs,\n\tChatViewContext,\n\tLanguageModelToolResult,\n\tLanguageModelTextPart,\n\tLanguageModelThinkingPart,\n\tLanguageModelPromptTsxPart,\n\tLanguageModelDataPart,\n\tChatSessionContext,\n\tChatResponsePullRequestPart,\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "74fb8ccbd60a94689e2cfda92aabfde6508f61e6"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_50jz0gntn = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_50jz0gntn();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2NvbW1vbi9tYXJzaGFsbGluZ0lkcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGNvbnN0IGVudW0gTWFyc2hhbGxlZElkIHtcblx0VXJpID0gMSxcblx0UmVnZXhwLFxuXHRTY21SZXNvdXJjZSxcblx0U2NtUmVzb3VyY2VHcm91cCxcblx0U2NtUHJvdmlkZXIsXG5cdENvbW1lbnRDb250cm9sbGVyLFxuXHRDb21tZW50VGhyZWFkLFxuXHRDb21tZW50VGhyZWFkSW5zdGFuY2UsXG5cdENvbW1lbnRUaHJlYWRSZXBseSxcblx0Q29tbWVudE5vZGUsXG5cdENvbW1lbnRUaHJlYWROb2RlLFxuXHRUaW1lbGluZUFjdGlvbkNvbnRleHQsXG5cdE5vdGVib29rQ2VsbEFjdGlvbkNvbnRleHQsXG5cdE5vdGVib29rQWN0aW9uQ29udGV4dCxcblx0VGVybWluYWxDb250ZXh0LFxuXHRUZXN0SXRlbUNvbnRleHQsXG5cdERhdGUsXG5cdFRlc3RNZXNzYWdlTWVudUFyZ3MsXG5cdENoYXRWaWV3Q29udGV4dCxcblx0TGFuZ3VhZ2VNb2RlbFRvb2xSZXN1bHQsXG5cdExhbmd1YWdlTW9kZWxUZXh0UGFydCxcblx0TGFuZ3VhZ2VNb2RlbFRoaW5raW5nUGFydCxcblx0TGFuZ3VhZ2VNb2RlbFByb21wdFRzeFBhcnQsXG5cdExhbmd1YWdlTW9kZWxEYXRhUGFydCxcblx0Q2hhdFNlc3Npb25Db250ZXh0LFxuXHRDaGF0UmVzcG9uc2VQdWxsUmVxdWVzdFBhcnQsXG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

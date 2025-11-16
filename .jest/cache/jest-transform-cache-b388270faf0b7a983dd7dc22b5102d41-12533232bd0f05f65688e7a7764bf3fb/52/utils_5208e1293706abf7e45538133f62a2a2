@@ -1,0 +1,104 @@
+980905f25103729f4580ddb9939854f2
+/* istanbul ignore next */
+function cov_yr9hjmps7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/test/common/utils.ts";
+  var hash = "4452e181e92b0957b1c6fd6b3c0cb138a8b9fd07";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/test/common/utils.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 19,
+          column: 4
+        },
+        end: {
+          line: 19,
+          column: 116
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "assertCleanState",
+        decl: {
+          start: {
+            line: 15,
+            column: 16
+          },
+          end: {
+            line: 15,
+            column: 32
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 35
+          },
+          end: {
+            line: 20,
+            column: 1
+          }
+        },
+        line: 15
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/test/common/utils.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,MAAM,MAAM,QAAQ,CAAC;AAC5B,OAAO,EAAE,iBAAiB,EAAE,MAAM,sDAAsD,CAAC;AAEzF;;;;;;;GAOG;AACH,MAAM,UAAU,gBAAgB;IAC/B,oDAAoD;IACpD,wEAAwE;IACxE,uFAAuF;IACvF,MAAM,CAAC,WAAW,CAAC,iBAAiB,CAAC,aAAa,EAAE,CAAC,EAAE,uDAAuD,CAAC,CAAC;AACjH,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/test/common/utils.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport assert from 'assert';\nimport { LanguagesRegistry } from '../../../editor/common/services/languagesRegistry.js';\n\n/**\n * This function is called before test running and also again at the end of test running\n * and can be used to add assertions. e.g. that registries are empty, etc.\n *\n * !! This is called directly by the testing framework.\n *\n * @skipMangle\n */\nexport function assertCleanState(): void {\n\t// If this test fails, it is a clear indication that\n\t// your test or suite is leaking services (e.g. via leaking text models)\n\t// assert.strictEqual(LanguageService.instanceCount, 0, 'No leaking ILanguageService');\n\tassert.strictEqual(LanguagesRegistry.instanceCount, 0, 'Error: Test run should not leak in LanguagesRegistry.');\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4452e181e92b0957b1c6fd6b3c0cb138a8b9fd07"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_yr9hjmps7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_yr9hjmps7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import assert from 'assert';
+import { LanguagesRegistry } from '../../../editor/common/services/languagesRegistry.js';
+/**
+ * This function is called before test running and also again at the end of test running
+ * and can be used to add assertions. e.g. that registries are empty, etc.
+ *
+ * !! This is called directly by the testing framework.
+ *
+ * @skipMangle
+ */
+export function assertCleanState() {
+  /* istanbul ignore next */
+  cov_yr9hjmps7().f[0]++;
+  cov_yr9hjmps7().s[0]++;
+  // If this test fails, it is a clear indication that
+  // your test or suite is leaking services (e.g. via leaking text models)
+  // assert.strictEqual(LanguageService.instanceCount, 0, 'No leaking ILanguageService');
+  assert.strictEqual(LanguagesRegistry.instanceCount, 0, 'Error: Test run should not leak in LanguagesRegistry.');
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfeXI5aGptcHM3IiwiYWN0dWFsQ292ZXJhZ2UiLCJhc3NlcnQiLCJMYW5ndWFnZXNSZWdpc3RyeSIsImFzc2VydENsZWFuU3RhdGUiLCJmIiwicyIsInN0cmljdEVxdWFsIiwiaW5zdGFuY2VDb3VudCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3Rlc3QvY29tbW9uL3V0aWxzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgYXNzZXJ0IGZyb20gJ2Fzc2VydCc7XG5pbXBvcnQgeyBMYW5ndWFnZXNSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uL2VkaXRvci9jb21tb24vc2VydmljZXMvbGFuZ3VhZ2VzUmVnaXN0cnkuanMnO1xuXG4vKipcbiAqIFRoaXMgZnVuY3Rpb24gaXMgY2FsbGVkIGJlZm9yZSB0ZXN0IHJ1bm5pbmcgYW5kIGFsc28gYWdhaW4gYXQgdGhlIGVuZCBvZiB0ZXN0IHJ1bm5pbmdcbiAqIGFuZCBjYW4gYmUgdXNlZCB0byBhZGQgYXNzZXJ0aW9ucy4gZS5nLiB0aGF0IHJlZ2lzdHJpZXMgYXJlIGVtcHR5LCBldGMuXG4gKlxuICogISEgVGhpcyBpcyBjYWxsZWQgZGlyZWN0bHkgYnkgdGhlIHRlc3RpbmcgZnJhbWV3b3JrLlxuICpcbiAqIEBza2lwTWFuZ2xlXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBhc3NlcnRDbGVhblN0YXRlKCk6IHZvaWQge1xuXHQvLyBJZiB0aGlzIHRlc3QgZmFpbHMsIGl0IGlzIGEgY2xlYXIgaW5kaWNhdGlvbiB0aGF0XG5cdC8vIHlvdXIgdGVzdCBvciBzdWl0ZSBpcyBsZWFraW5nIHNlcnZpY2VzIChlLmcuIHZpYSBsZWFraW5nIHRleHQgbW9kZWxzKVxuXHQvLyBhc3NlcnQuc3RyaWN0RXF1YWwoTGFuZ3VhZ2VTZXJ2aWNlLmluc3RhbmNlQ291bnQsIDAsICdObyBsZWFraW5nIElMYW5ndWFnZVNlcnZpY2UnKTtcblx0YXNzZXJ0LnN0cmljdEVxdWFsKExhbmd1YWdlc1JlZ2lzdHJ5Lmluc3RhbmNlQ291bnQsIDAsICdFcnJvcjogVGVzdCBydW4gc2hvdWxkIG5vdCBsZWFrIGluIExhbmd1YWdlc1JlZ2lzdHJ5LicpO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWlCQztJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBakJEOzs7O0FBS0EsT0FBT0UsTUFBTSxNQUFNLFFBQVE7QUFDM0IsU0FBU0MsaUJBQWlCLFFBQVEsc0RBQXNEO0FBRXhGOzs7Ozs7OztBQVFBLE9BQU0sU0FBVUMsZ0JBQWdCQSxDQUFBO0VBQUE7RUFBQUosYUFBQSxHQUFBSyxDQUFBO0VBQUFMLGFBQUEsR0FBQU0sQ0FBQTtFQUMvQjtFQUNBO0VBQ0E7RUFDQUosTUFBTSxDQUFDSyxXQUFXLENBQUNKLGlCQUFpQixDQUFDSyxhQUFhLEVBQUUsQ0FBQyxFQUFFLHVEQUF1RCxDQUFDO0FBQ2hIIiwiaWdub3JlTGlzdCI6W119

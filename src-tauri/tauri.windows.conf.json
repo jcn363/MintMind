@@ -1,0 +1,25 @@
+{
+  "bundle": {
+    "targets": ["nsis", "msi"],
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": "http://timestamp.digicert.com",
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper",
+        "silent": true
+      },
+      "webviewFixedRuntimePath": null,
+      "allowDowngrades": false,
+      "wix": {
+        "language": "en-US"
+      },
+      "nsis": {
+        "installerIcon": "../resources/win32/code.ico",
+        "headerImage": "../resources/win32/inno-big-150.bmp",
+        "sidebarImage": "../resources/win32/inno-small-150.bmp",
+        "installMode": "perUser"
+      }
+    }
+  }
+}

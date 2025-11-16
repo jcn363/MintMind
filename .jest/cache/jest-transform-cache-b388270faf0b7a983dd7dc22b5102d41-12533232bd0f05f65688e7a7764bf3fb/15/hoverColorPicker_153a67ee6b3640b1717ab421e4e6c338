@@ -1,0 +1,156 @@
+9dca0bb8d73ce95e8e3808aca953ee56
+/* istanbul ignore next */
+function cov_1coneazyx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/contrib/colorPicker/browser/hoverColorPicker/hoverColorPicker.ts";
+  var hash = "6367c5d5d0df76185b160082a46a9f79ef3710e8";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/contrib/colorPicker/browser/hoverColorPicker/hoverColorPicker.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 19
+        },
+        end: {
+          line: 7,
+          column: 36
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 10,
+          column: 98
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isOnColorDecorator",
+        decl: {
+          start: {
+            line: 6,
+            column: 16
+          },
+          end: {
+            line: 6,
+            column: 34
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 47
+          },
+          end: {
+            line: 11,
+            column: 1
+          }
+        },
+        line: 6
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 8,
+            column: 11
+          },
+          end: {
+            line: 10,
+            column: 97
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 8,
+            column: 11
+          },
+          end: {
+            line: 8,
+            column: 19
+          }
+        }, {
+          start: {
+            line: 9,
+            column: 11
+          },
+          end: {
+            line: 9,
+            column: 28
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 11
+          },
+          end: {
+            line: 10,
+            column: 97
+          }
+        }],
+        line: 8
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/contrib/colorPicker/browser/hoverColorPicker/hoverColorPicker.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,iCAAiC,EAAE,MAAM,qBAAqB,CAAC;AAGxE,MAAM,UAAU,kBAAkB,CAAC,UAAoC;IACtE,MAAM,MAAM,GAAG,UAAU,CAAC,MAAM,CAAC;IACjC,OAAO,CAAC,CAAC,MAAM;WACX,MAAM,CAAC,IAAI,yCAAiC;WAC5C,MAAM,CAAC,MAAM,CAAC,YAAY,EAAE,OAAO,CAAC,YAAY,KAAK,iCAAiC,CAAC;AAC5F,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/contrib/colorPicker/browser/hoverColorPicker/hoverColorPicker.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IPartialEditorMouseEvent, MouseTargetType } from '../../../../browser/editorBrowser.js';\nimport { ColorDecorationInjectedTextMarker } from '../colorDetector.js';\n\n\nexport function isOnColorDecorator(mouseEvent: IPartialEditorMouseEvent): boolean {\n\tconst target = mouseEvent.target;\n\treturn !!target\n\t\t&& target.type === MouseTargetType.CONTENT_TEXT\n\t\t&& target.detail.injectedText?.options.attachedData === ColorDecorationInjectedTextMarker;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6367c5d5d0df76185b160082a46a9f79ef3710e8"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1coneazyx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1coneazyx();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { ColorDecorationInjectedTextMarker } from '../colorDetector.js';
+export function isOnColorDecorator(mouseEvent) {
+  /* istanbul ignore next */
+  cov_1coneazyx().f[0]++;
+  const target =
+  /* istanbul ignore next */
+  (cov_1coneazyx().s[0]++, mouseEvent.target);
+  /* istanbul ignore next */
+  cov_1coneazyx().s[1]++;
+  return /* istanbul ignore next */(cov_1coneazyx().b[0][0]++, !!target) &&
+  /* istanbul ignore next */
+  (cov_1coneazyx().b[0][1]++, target.type === 6) /* MouseTargetType.CONTENT_TEXT */ &&
+  /* istanbul ignore next */
+  (cov_1coneazyx().b[0][2]++, target.detail.injectedText?.options.attachedData === ColorDecorationInjectedTextMarker);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJDb2xvckRlY29yYXRpb25JbmplY3RlZFRleHRNYXJrZXIiLCJpc09uQ29sb3JEZWNvcmF0b3IiLCJtb3VzZUV2ZW50IiwiY292XzFjb25lYXp5eCIsImYiLCJ0YXJnZXQiLCJzIiwiYiIsInR5cGUiLCJkZXRhaWwiLCJpbmplY3RlZFRleHQiLCJvcHRpb25zIiwiYXR0YWNoZWREYXRhIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29udHJpYi9jb2xvclBpY2tlci9icm93c2VyL2hvdmVyQ29sb3JQaWNrZXIvaG92ZXJDb2xvclBpY2tlci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSVBhcnRpYWxFZGl0b3JNb3VzZUV2ZW50LCBNb3VzZVRhcmdldFR5cGUgfSBmcm9tICcuLi8uLi8uLi8uLi9icm93c2VyL2VkaXRvckJyb3dzZXIuanMnO1xuaW1wb3J0IHsgQ29sb3JEZWNvcmF0aW9uSW5qZWN0ZWRUZXh0TWFya2VyIH0gZnJvbSAnLi4vY29sb3JEZXRlY3Rvci5qcyc7XG5cblxuZXhwb3J0IGZ1bmN0aW9uIGlzT25Db2xvckRlY29yYXRvcihtb3VzZUV2ZW50OiBJUGFydGlhbEVkaXRvck1vdXNlRXZlbnQpOiBib29sZWFuIHtcblx0Y29uc3QgdGFyZ2V0ID0gbW91c2VFdmVudC50YXJnZXQ7XG5cdHJldHVybiAhIXRhcmdldFxuXHRcdCYmIHRhcmdldC50eXBlID09PSBNb3VzZVRhcmdldFR5cGUuQ09OVEVOVF9URVhUXG5cdFx0JiYgdGFyZ2V0LmRldGFpbC5pbmplY3RlZFRleHQ/Lm9wdGlvbnMuYXR0YWNoZWREYXRhID09PSBDb2xvckRlY29yYXRpb25JbmplY3RlZFRleHRNYXJrZXI7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsaUNBQWlDLFFBQVEscUJBQXFCO0FBR3ZFLE9BQU0sU0FBVUMsa0JBQWtCQSxDQUFDQyxVQUFvQztFQUFBO0VBQUFDLGFBQUEsR0FBQUMsQ0FBQTtFQUN0RSxNQUFNQyxNQUFNO0VBQUE7RUFBQSxDQUFBRixhQUFBLEdBQUFHLENBQUEsT0FBR0osVUFBVSxDQUFDRyxNQUFNO0VBQUM7RUFBQUYsYUFBQSxHQUFBRyxDQUFBO0VBQ2pDLE9BQU8sMkJBQUFILGFBQUEsR0FBQUksQ0FBQSxXQUFDLENBQUNGLE1BQU07RUFBQTtFQUFBLENBQUFGLGFBQUEsR0FBQUksQ0FBQSxVQUNYRixNQUFNLENBQUNHLElBQUk7RUFBQTtFQUFBLENBQUFMLGFBQUEsR0FBQUksQ0FBQSxVQUNYRixNQUFNLENBQUNJLE1BQU0sQ0FBQ0MsWUFBWSxFQUFFQyxPQUFPLENBQUNDLFlBQVksS0FBS1osaUNBQWlDO0FBQzNGIiwiaWdub3JlTGlzdCI6W119

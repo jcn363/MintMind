@@ -1,0 +1,61 @@
+af24fa1ed5afbec4f909d8cd721482fb
+/* istanbul ignore next */
+function cov_1n6gfehjzl() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminal.accessibility.ts";
+  var hash = "3d87700ac3a724f2fc4040cee2a70626a9bc2d96";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminal.accessibility.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 63
+        },
+        end: {
+          line: 7,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminal.accessibility.ts",
+      mappings: "AAAA;;;gGAGgG;AAUhG,MAAM,CAAC,MAAM,+CAA+C,GAAG;;CAE9D,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminal.accessibility.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum TerminalAccessibilityCommandId {\n\tFocusAccessibleBuffer = 'workbench.action.terminal.focusAccessibleBuffer',\n\tAccessibleBufferGoToNextCommand = 'workbench.action.terminal.accessibleBufferGoToNextCommand',\n\tAccessibleBufferGoToPreviousCommand = 'workbench.action.terminal.accessibleBufferGoToPreviousCommand',\n\tScrollToBottomAccessibleView = 'workbench.action.terminal.scrollToBottomAccessibleView',\n\tScrollToTopAccessibleView = 'workbench.action.terminal.scrollToTopAccessibleView',\n}\n\nexport const defaultTerminalAccessibilityCommandsToSkipShell = [\n\tTerminalAccessibilityCommandId.FocusAccessibleBuffer\n];\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3d87700ac3a724f2fc4040cee2a70626a9bc2d96"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1n6gfehjzl = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1n6gfehjzl();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const defaultTerminalAccessibilityCommandsToSkipShell =
+/* istanbul ignore next */
+(cov_1n6gfehjzl().s[0]++, ["workbench.action.terminal.focusAccessibleBuffer" /* TerminalAccessibilityCommandId.FocusAccessibleBuffer */]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJkZWZhdWx0VGVybWluYWxBY2Nlc3NpYmlsaXR5Q29tbWFuZHNUb1NraXBTaGVsbCIsImNvdl8xbjZnZmVoanpsIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWxDb250cmliL2FjY2Vzc2liaWxpdHkvY29tbW9uL3Rlcm1pbmFsLmFjY2Vzc2liaWxpdHkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmV4cG9ydCBjb25zdCBlbnVtIFRlcm1pbmFsQWNjZXNzaWJpbGl0eUNvbW1hbmRJZCB7XG5cdEZvY3VzQWNjZXNzaWJsZUJ1ZmZlciA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmZvY3VzQWNjZXNzaWJsZUJ1ZmZlcicsXG5cdEFjY2Vzc2libGVCdWZmZXJHb1RvTmV4dENvbW1hbmQgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5hY2Nlc3NpYmxlQnVmZmVyR29Ub05leHRDb21tYW5kJyxcblx0QWNjZXNzaWJsZUJ1ZmZlckdvVG9QcmV2aW91c0NvbW1hbmQgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5hY2Nlc3NpYmxlQnVmZmVyR29Ub1ByZXZpb3VzQ29tbWFuZCcsXG5cdFNjcm9sbFRvQm90dG9tQWNjZXNzaWJsZVZpZXcgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5zY3JvbGxUb0JvdHRvbUFjY2Vzc2libGVWaWV3Jyxcblx0U2Nyb2xsVG9Ub3BBY2Nlc3NpYmxlVmlldyA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnNjcm9sbFRvVG9wQWNjZXNzaWJsZVZpZXcnLFxufVxuXG5leHBvcnQgY29uc3QgZGVmYXVsdFRlcm1pbmFsQWNjZXNzaWJpbGl0eUNvbW1hbmRzVG9Ta2lwU2hlbGwgPSBbXG5cdFRlcm1pbmFsQWNjZXNzaWJpbGl0eUNvbW1hbmRJZC5Gb2N1c0FjY2Vzc2libGVCdWZmZXJcbl07XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQWFBLE9BQU8sTUFBTUEsK0NBQStDO0FBQUE7QUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBRyxDLDZHQUU5RCIsImlnbm9yZUxpc3QiOltdfQ==

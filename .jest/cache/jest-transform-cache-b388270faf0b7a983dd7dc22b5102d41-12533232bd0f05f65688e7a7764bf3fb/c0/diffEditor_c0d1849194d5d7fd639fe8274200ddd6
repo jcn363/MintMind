@@ -1,0 +1,93 @@
+4f9f690054bed9ecee93795573413c6d
+/* istanbul ignore next */
+function cov_22bb6sw3vx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/config/diffEditor.ts";
+  var hash = "7cec5d62d7ddef85ccdd4bfe34e34f46189addf0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/config/diffEditor.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 40
+        },
+        end: {
+          line: 37,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/config/diffEditor.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,CAAC,MAAM,wBAAwB,GAAG;IACvC,uBAAuB,EAAE,IAAI;IAC7B,qBAAqB,EAAE,GAAG;IAC1B,gBAAgB,EAAE,IAAI;IACtB,sBAAsB,EAAE,IAAI;IAC5B,gBAAgB,EAAE,IAAI;IACtB,kBAAkB,EAAE,IAAI;IACxB,WAAW,EAAE,EAAE;IACf,oBAAoB,EAAE,IAAI;IAC1B,gBAAgB,EAAE,IAAI;IACtB,gBAAgB,EAAE,KAAK;IACvB,YAAY,EAAE,KAAK;IACnB,mBAAmB,EAAE,IAAI;IACzB,YAAY,EAAE,SAAS;IACvB,aAAa,EAAE,UAAU;IACzB,oBAAoB,EAAE,KAAK;IAC3B,YAAY,EAAE;QACb,SAAS,EAAE,KAAK;QAChB,oBAAoB,EAAE,IAAI;QAC1B,iBAAiB,EAAE,KAAK;KACxB;IACD,oBAAoB,EAAE;QACrB,OAAO,EAAE,KAAK;QACd,gBAAgB,EAAE,CAAC;QACnB,gBAAgB,EAAE,CAAC;QACnB,eAAe,EAAE,EAAE;KACnB;IACD,kBAAkB,EAAE,KAAK;IACzB,4BAA4B,EAAE,KAAK;IACnC,gCAAgC,EAAE,GAAG;IACrC,+BAA+B,EAAE,IAAI;IACrC,WAAW,EAAE,KAAK;CACmB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/config/diffEditor.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ValidDiffEditorBaseOptions } from './editorOptions.js';\n\nexport const diffEditorDefaultOptions = {\n\tenableSplitViewResizing: true,\n\tsplitViewDefaultRatio: 0.5,\n\trenderSideBySide: true,\n\trenderMarginRevertIcon: true,\n\trenderGutterMenu: true,\n\tmaxComputationTime: 5000,\n\tmaxFileSize: 50,\n\tignoreTrimWhitespace: true,\n\trenderIndicators: true,\n\toriginalEditable: false,\n\tdiffCodeLens: false,\n\trenderOverviewRuler: true,\n\tdiffWordWrap: 'inherit',\n\tdiffAlgorithm: 'advanced',\n\taccessibilityVerbose: false,\n\texperimental: {\n\t\tshowMoves: false,\n\t\tshowEmptyDecorations: true,\n\t\tuseTrueInlineView: false,\n\t},\n\thideUnchangedRegions: {\n\t\tenabled: false,\n\t\tcontextLineCount: 3,\n\t\tminimumLineCount: 3,\n\t\trevealLineCount: 20,\n\t},\n\tisInEmbeddedEditor: false,\n\tonlyShowAccessibleDiffViewer: false,\n\trenderSideBySideInlineBreakpoint: 900,\n\tuseInlineViewWhenSpaceIsLimited: true,\n\tcompactMode: false,\n} satisfies ValidDiffEditorBaseOptions;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7cec5d62d7ddef85ccdd4bfe34e34f46189addf0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_22bb6sw3vx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_22bb6sw3vx();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const diffEditorDefaultOptions =
+/* istanbul ignore next */
+(cov_22bb6sw3vx().s[0]++, {
+  enableSplitViewResizing: true,
+  splitViewDefaultRatio: 0.5,
+  renderSideBySide: true,
+  renderMarginRevertIcon: true,
+  renderGutterMenu: true,
+  maxComputationTime: 5000,
+  maxFileSize: 50,
+  ignoreTrimWhitespace: true,
+  renderIndicators: true,
+  originalEditable: false,
+  diffCodeLens: false,
+  renderOverviewRuler: true,
+  diffWordWrap: 'inherit',
+  diffAlgorithm: 'advanced',
+  accessibilityVerbose: false,
+  experimental: {
+    showMoves: false,
+    showEmptyDecorations: true,
+    useTrueInlineView: false
+  },
+  hideUnchangedRegions: {
+    enabled: false,
+    contextLineCount: 3,
+    minimumLineCount: 3,
+    revealLineCount: 20
+  },
+  isInEmbeddedEditor: false,
+  onlyShowAccessibleDiffViewer: false,
+  renderSideBySideInlineBreakpoint: 900,
+  useInlineViewWhenSpaceIsLimited: true,
+  compactMode: false
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjJiYjZzdzN2eCIsImFjdHVhbENvdmVyYWdlIiwiZGlmZkVkaXRvckRlZmF1bHRPcHRpb25zIiwicyIsImVuYWJsZVNwbGl0Vmlld1Jlc2l6aW5nIiwic3BsaXRWaWV3RGVmYXVsdFJhdGlvIiwicmVuZGVyU2lkZUJ5U2lkZSIsInJlbmRlck1hcmdpblJldmVydEljb24iLCJyZW5kZXJHdXR0ZXJNZW51IiwibWF4Q29tcHV0YXRpb25UaW1lIiwibWF4RmlsZVNpemUiLCJpZ25vcmVUcmltV2hpdGVzcGFjZSIsInJlbmRlckluZGljYXRvcnMiLCJvcmlnaW5hbEVkaXRhYmxlIiwiZGlmZkNvZGVMZW5zIiwicmVuZGVyT3ZlcnZpZXdSdWxlciIsImRpZmZXb3JkV3JhcCIsImRpZmZBbGdvcml0aG0iLCJhY2Nlc3NpYmlsaXR5VmVyYm9zZSIsImV4cGVyaW1lbnRhbCIsInNob3dNb3ZlcyIsInNob3dFbXB0eURlY29yYXRpb25zIiwidXNlVHJ1ZUlubGluZVZpZXciLCJoaWRlVW5jaGFuZ2VkUmVnaW9ucyIsImVuYWJsZWQiLCJjb250ZXh0TGluZUNvdW50IiwibWluaW11bUxpbmVDb3VudCIsInJldmVhbExpbmVDb3VudCIsImlzSW5FbWJlZGRlZEVkaXRvciIsIm9ubHlTaG93QWNjZXNzaWJsZURpZmZWaWV3ZXIiLCJyZW5kZXJTaWRlQnlTaWRlSW5saW5lQnJlYWtwb2ludCIsInVzZUlubGluZVZpZXdXaGVuU3BhY2VJc0xpbWl0ZWQiLCJjb21wYWN0TW9kZSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbW1vbi9jb25maWcvZGlmZkVkaXRvci50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVmFsaWREaWZmRWRpdG9yQmFzZU9wdGlvbnMgfSBmcm9tICcuL2VkaXRvck9wdGlvbnMuanMnO1xuXG5leHBvcnQgY29uc3QgZGlmZkVkaXRvckRlZmF1bHRPcHRpb25zID0ge1xuXHRlbmFibGVTcGxpdFZpZXdSZXNpemluZzogdHJ1ZSxcblx0c3BsaXRWaWV3RGVmYXVsdFJhdGlvOiAwLjUsXG5cdHJlbmRlclNpZGVCeVNpZGU6IHRydWUsXG5cdHJlbmRlck1hcmdpblJldmVydEljb246IHRydWUsXG5cdHJlbmRlckd1dHRlck1lbnU6IHRydWUsXG5cdG1heENvbXB1dGF0aW9uVGltZTogNTAwMCxcblx0bWF4RmlsZVNpemU6IDUwLFxuXHRpZ25vcmVUcmltV2hpdGVzcGFjZTogdHJ1ZSxcblx0cmVuZGVySW5kaWNhdG9yczogdHJ1ZSxcblx0b3JpZ2luYWxFZGl0YWJsZTogZmFsc2UsXG5cdGRpZmZDb2RlTGVuczogZmFsc2UsXG5cdHJlbmRlck92ZXJ2aWV3UnVsZXI6IHRydWUsXG5cdGRpZmZXb3JkV3JhcDogJ2luaGVyaXQnLFxuXHRkaWZmQWxnb3JpdGhtOiAnYWR2YW5jZWQnLFxuXHRhY2Nlc3NpYmlsaXR5VmVyYm9zZTogZmFsc2UsXG5cdGV4cGVyaW1lbnRhbDoge1xuXHRcdHNob3dNb3ZlczogZmFsc2UsXG5cdFx0c2hvd0VtcHR5RGVjb3JhdGlvbnM6IHRydWUsXG5cdFx0dXNlVHJ1ZUlubGluZVZpZXc6IGZhbHNlLFxuXHR9LFxuXHRoaWRlVW5jaGFuZ2VkUmVnaW9uczoge1xuXHRcdGVuYWJsZWQ6IGZhbHNlLFxuXHRcdGNvbnRleHRMaW5lQ291bnQ6IDMsXG5cdFx0bWluaW11bUxpbmVDb3VudDogMyxcblx0XHRyZXZlYWxMaW5lQ291bnQ6IDIwLFxuXHR9LFxuXHRpc0luRW1iZWRkZWRFZGl0b3I6IGZhbHNlLFxuXHRvbmx5U2hvd0FjY2Vzc2libGVEaWZmVmlld2VyOiBmYWxzZSxcblx0cmVuZGVyU2lkZUJ5U2lkZUlubGluZUJyZWFrcG9pbnQ6IDkwMCxcblx0dXNlSW5saW5lVmlld1doZW5TcGFjZUlzTGltaXRlZDogdHJ1ZSxcblx0Y29tcGFjdE1vZGU6IGZhbHNlLFxufSBzYXRpc2ZpZXMgVmFsaWREaWZmRWRpdG9yQmFzZU9wdGlvbnM7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBa0JDO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFsQkQ7Ozs7QUFPQSxPQUFPLE1BQU1FLHdCQUF3QjtBQUFBO0FBQUEsQ0FBQUYsY0FBQSxHQUFBRyxDQUFBLE9BQUc7RUFDdkNDLHVCQUF1QixFQUFFLElBQUk7RUFDN0JDLHFCQUFxQixFQUFFLEdBQUc7RUFDMUJDLGdCQUFnQixFQUFFLElBQUk7RUFDdEJDLHNCQUFzQixFQUFFLElBQUk7RUFDNUJDLGdCQUFnQixFQUFFLElBQUk7RUFDdEJDLGtCQUFrQixFQUFFLElBQUk7RUFDeEJDLFdBQVcsRUFBRSxFQUFFO0VBQ2ZDLG9CQUFvQixFQUFFLElBQUk7RUFDMUJDLGdCQUFnQixFQUFFLElBQUk7RUFDdEJDLGdCQUFnQixFQUFFLEtBQUs7RUFDdkJDLFlBQVksRUFBRSxLQUFLO0VBQ25CQyxtQkFBbUIsRUFBRSxJQUFJO0VBQ3pCQyxZQUFZLEVBQUUsU0FBUztFQUN2QkMsYUFBYSxFQUFFLFVBQVU7RUFDekJDLG9CQUFvQixFQUFFLEtBQUs7RUFDM0JDLFlBQVksRUFBRTtJQUNiQyxTQUFTLEVBQUUsS0FBSztJQUNoQkMsb0JBQW9CLEVBQUUsSUFBSTtJQUMxQkMsaUJBQWlCLEVBQUU7R0FDbkI7RUFDREMsb0JBQW9CLEVBQUU7SUFDckJDLE9BQU8sRUFBRSxLQUFLO0lBQ2RDLGdCQUFnQixFQUFFLENBQUM7SUFDbkJDLGdCQUFnQixFQUFFLENBQUM7SUFDbkJDLGVBQWUsRUFBRTtHQUNqQjtFQUNEQyxrQkFBa0IsRUFBRSxLQUFLO0VBQ3pCQyw0QkFBNEIsRUFBRSxLQUFLO0VBQ25DQyxnQ0FBZ0MsRUFBRSxHQUFHO0VBQ3JDQywrQkFBK0IsRUFBRSxJQUFJO0VBQ3JDQyxXQUFXLEVBQUU7Q0FDd0IiLCJpZ25vcmVMaXN0IjpbXX0=

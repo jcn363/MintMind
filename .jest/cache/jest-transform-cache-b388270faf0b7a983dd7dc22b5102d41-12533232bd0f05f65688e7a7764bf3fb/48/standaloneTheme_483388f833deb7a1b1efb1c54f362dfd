@@ -1,0 +1,62 @@
+92fcb1642ad9fa74c552d2664fe5823d
+/* istanbul ignore next */
+function cov_jrzwqkpxe() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/standalone/common/standaloneTheme.ts";
+  var hash = "c02504c361d51b7e210c9c35b35e306fc3cbad4d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/standalone/common/standaloneTheme.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 39
+        },
+        end: {
+          line: 6,
+          column: 70
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/standalone/common/standaloneTheme.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,yDAAyD,CAAC;AAG1F,MAAM,CAAC,MAAM,uBAAuB,GAAG,eAAe,CAA0B,cAAc,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/standalone/common/standaloneTheme.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Color } from '../../../base/common/color.js';\nimport { ITokenThemeRule, TokenTheme } from '../../common/languages/supports/tokenization.js';\nimport { createDecorator } from '../../../platform/instantiation/common/instantiation.js';\nimport { IColorTheme, IThemeService } from '../../../platform/theme/common/themeService.js';\n\nexport const IStandaloneThemeService = createDecorator<IStandaloneThemeService>('themeService');\n\nexport type BuiltinTheme = 'vs' | 'vs-dark' | 'hc-black' | 'hc-light';\nexport type IColors = { [colorId: string]: string };\n\nexport interface IStandaloneThemeData {\n\tbase: BuiltinTheme;\n\tinherit: boolean;\n\trules: ITokenThemeRule[];\n\tencodedTokensColors?: string[];\n\tcolors: IColors;\n}\n\nexport interface IStandaloneTheme extends IColorTheme {\n\ttokenTheme: TokenTheme;\n\tthemeName: string;\n}\n\nexport interface IStandaloneThemeService extends IThemeService {\n\treadonly _serviceBrand: undefined;\n\n\tsetTheme(themeName: string): void;\n\n\tsetAutoDetectHighContrast(autoDetectHighContrast: boolean): void;\n\n\tdefineTheme(themeName: string, themeData: IStandaloneThemeData): void;\n\n\tgetColorTheme(): IStandaloneTheme;\n\n\tsetColorMapOverride(colorMapOverride: Color[] | null): void;\n\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c02504c361d51b7e210c9c35b35e306fc3cbad4d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_jrzwqkpxe = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_jrzwqkpxe();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+export const IStandaloneThemeService =
+/* istanbul ignore next */
+(cov_jrzwqkpxe().s[0]++, createDecorator('themeService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJU3RhbmRhbG9uZVRoZW1lU2VydmljZSIsImNvdl9qcnp3cWtweGUiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3Ivc3RhbmRhbG9uZS9jb21tb24vc3RhbmRhbG9uZVRoZW1lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDb2xvciB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NvbG9yLmpzJztcbmltcG9ydCB7IElUb2tlblRoZW1lUnVsZSwgVG9rZW5UaGVtZSB9IGZyb20gJy4uLy4uL2NvbW1vbi9sYW5ndWFnZXMvc3VwcG9ydHMvdG9rZW5pemF0aW9uLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUNvbG9yVGhlbWUsIElUaGVtZVNlcnZpY2UgfSBmcm9tICcuLi8uLi8uLi9wbGF0Zm9ybS90aGVtZS9jb21tb24vdGhlbWVTZXJ2aWNlLmpzJztcblxuZXhwb3J0IGNvbnN0IElTdGFuZGFsb25lVGhlbWVTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElTdGFuZGFsb25lVGhlbWVTZXJ2aWNlPigndGhlbWVTZXJ2aWNlJyk7XG5cbmV4cG9ydCB0eXBlIEJ1aWx0aW5UaGVtZSA9ICd2cycgfCAndnMtZGFyaycgfCAnaGMtYmxhY2snIHwgJ2hjLWxpZ2h0JztcbmV4cG9ydCB0eXBlIElDb2xvcnMgPSB7IFtjb2xvcklkOiBzdHJpbmddOiBzdHJpbmcgfTtcblxuZXhwb3J0IGludGVyZmFjZSBJU3RhbmRhbG9uZVRoZW1lRGF0YSB7XG5cdGJhc2U6IEJ1aWx0aW5UaGVtZTtcblx0aW5oZXJpdDogYm9vbGVhbjtcblx0cnVsZXM6IElUb2tlblRoZW1lUnVsZVtdO1xuXHRlbmNvZGVkVG9rZW5zQ29sb3JzPzogc3RyaW5nW107XG5cdGNvbG9yczogSUNvbG9ycztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJU3RhbmRhbG9uZVRoZW1lIGV4dGVuZHMgSUNvbG9yVGhlbWUge1xuXHR0b2tlblRoZW1lOiBUb2tlblRoZW1lO1xuXHR0aGVtZU5hbWU6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJU3RhbmRhbG9uZVRoZW1lU2VydmljZSBleHRlbmRzIElUaGVtZVNlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0c2V0VGhlbWUodGhlbWVOYW1lOiBzdHJpbmcpOiB2b2lkO1xuXG5cdHNldEF1dG9EZXRlY3RIaWdoQ29udHJhc3QoYXV0b0RldGVjdEhpZ2hDb250cmFzdDogYm9vbGVhbik6IHZvaWQ7XG5cblx0ZGVmaW5lVGhlbWUodGhlbWVOYW1lOiBzdHJpbmcsIHRoZW1lRGF0YTogSVN0YW5kYWxvbmVUaGVtZURhdGEpOiB2b2lkO1xuXG5cdGdldENvbG9yVGhlbWUoKTogSVN0YW5kYWxvbmVUaGVtZTtcblxuXHRzZXRDb2xvck1hcE92ZXJyaWRlKGNvbG9yTWFwT3ZlcnJpZGU6IENvbG9yW10gfCBudWxsKTogdm9pZDtcblxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFPQSxTQUFTQSxlQUFlLFFBQVEseURBQXlEO0FBR3pGLE9BQU8sTUFBTUMsdUJBQXVCO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUEwQixjQUFjLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

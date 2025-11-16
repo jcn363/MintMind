@@ -1,0 +1,46 @@
+b78144b0ed129e9ae9aae6b9449321ad
+/* istanbul ignore next */
+function cov_1ovg5as9qb() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStorageKeys.ts";
+  var hash = "73872f041a520f0038be9ae2d0eaedcaa9009cd6";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStorageKeys.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStorageKeys.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/common/terminalStorageKeys.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum TerminalStorageKeys {\n\tSuggestedRendererType = 'terminal.integrated.suggestedRendererType',\n\tTabsListWidthHorizontal = 'tabs-list-width-horizontal',\n\tTabsListWidthVertical = 'tabs-list-width-vertical',\n\tTabsShowDetailed = 'terminal.integrated.tabs.showDetailed',\n\tDeprecatedEnvironmentVariableCollections = 'terminal.integrated.environmentVariableCollections',\n\tEnvironmentVariableCollections = 'terminal.integrated.environmentVariableCollectionsV2',\n\tTerminalBufferState = 'terminal.integrated.bufferState',\n\tTerminalLayoutInfo = 'terminal.integrated.layoutInfo',\n\tPinnedRecentCommandsPrefix = 'terminal.pinnedRecentCommands',\n\tTerminalSuggestSize = 'terminal.integrated.suggestSize',\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "73872f041a520f0038be9ae2d0eaedcaa9009cd6"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ovg5as9qb = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ovg5as9qb();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbC9jb21tb24vdGVybWluYWxTdG9yYWdlS2V5cy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuZXhwb3J0IGNvbnN0IGVudW0gVGVybWluYWxTdG9yYWdlS2V5cyB7XG5cdFN1Z2dlc3RlZFJlbmRlcmVyVHlwZSA9ICd0ZXJtaW5hbC5pbnRlZ3JhdGVkLnN1Z2dlc3RlZFJlbmRlcmVyVHlwZScsXG5cdFRhYnNMaXN0V2lkdGhIb3Jpem9udGFsID0gJ3RhYnMtbGlzdC13aWR0aC1ob3Jpem9udGFsJyxcblx0VGFic0xpc3RXaWR0aFZlcnRpY2FsID0gJ3RhYnMtbGlzdC13aWR0aC12ZXJ0aWNhbCcsXG5cdFRhYnNTaG93RGV0YWlsZWQgPSAndGVybWluYWwuaW50ZWdyYXRlZC50YWJzLnNob3dEZXRhaWxlZCcsXG5cdERlcHJlY2F0ZWRFbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbnMgPSAndGVybWluYWwuaW50ZWdyYXRlZC5lbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbnMnLFxuXHRFbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbnMgPSAndGVybWluYWwuaW50ZWdyYXRlZC5lbnZpcm9ubWVudFZhcmlhYmxlQ29sbGVjdGlvbnNWMicsXG5cdFRlcm1pbmFsQnVmZmVyU3RhdGUgPSAndGVybWluYWwuaW50ZWdyYXRlZC5idWZmZXJTdGF0ZScsXG5cdFRlcm1pbmFsTGF5b3V0SW5mbyA9ICd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmxheW91dEluZm8nLFxuXHRQaW5uZWRSZWNlbnRDb21tYW5kc1ByZWZpeCA9ICd0ZXJtaW5hbC5waW5uZWRSZWNlbnRDb21tYW5kcycsXG5cdFRlcm1pbmFsU3VnZ2VzdFNpemUgPSAndGVybWluYWwuaW50ZWdyYXRlZC5zdWdnZXN0U2l6ZScsXG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

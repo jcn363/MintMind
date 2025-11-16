@@ -1,0 +1,184 @@
+4fb18bb5600a69c0951acd30e572b10c
+/* istanbul ignore next */
+function cov_2gpv01py5m() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/promptSyntax/promptFileActions.ts";
+  var hash = "c242d4aaf2379fc5c3bacd82bb5c725453634962";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/promptSyntax/promptFileActions.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 15,
+          column: 4
+        },
+        end: {
+          line: 15,
+          column: 31
+        }
+      },
+      "1": {
+        start: {
+          line: 16,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 34
+        }
+      },
+      "2": {
+        start: {
+          line: 17,
+          column: 4
+        },
+        end: {
+          line: 17,
+          column: 44
+        }
+      },
+      "3": {
+        start: {
+          line: 18,
+          column: 4
+        },
+        end: {
+          line: 18,
+          column: 50
+        }
+      },
+      "4": {
+        start: {
+          line: 19,
+          column: 4
+        },
+        end: {
+          line: 19,
+          column: 43
+        }
+      },
+      "5": {
+        start: {
+          line: 20,
+          column: 4
+        },
+        end: {
+          line: 20,
+          column: 27
+        }
+      },
+      "6": {
+        start: {
+          line: 21,
+          column: 4
+        },
+        end: {
+          line: 21,
+          column: 35
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "registerPromptActions",
+        decl: {
+          start: {
+            line: 14,
+            column: 16
+          },
+          end: {
+            line: 14,
+            column: 37
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 40
+          },
+          end: {
+            line: 22,
+            column: 1
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/promptSyntax/promptFileActions.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,2BAA2B,EAAE,MAAM,+BAA+B,CAAC;AAC5E,OAAO,EAAE,oBAAoB,EAAE,MAAM,sBAAsB,CAAC;AAC5D,OAAO,EAAE,wBAAwB,EAAE,MAAM,sBAAsB,CAAC;AAChE,OAAO,EAAE,4BAA4B,EAAE,MAAM,2BAA2B,CAAC;AACzE,OAAO,EAAE,eAAe,EAAE,MAAM,mDAAmD,CAAC;AACpF,OAAO,EAAE,qBAAqB,EAAE,4BAA4B,EAAE,sBAAsB,EAAE,MAAM,8BAA8B,CAAC;AAG3H;;GAEG;AACH,MAAM,UAAU,qBAAqB;IACpC,wBAAwB,EAAE,CAAC;IAC3B,2BAA2B,EAAE,CAAC;IAC9B,eAAe,CAAC,sBAAsB,CAAC,CAAC;IACxC,eAAe,CAAC,4BAA4B,CAAC,CAAC;IAC9C,eAAe,CAAC,qBAAqB,CAAC,CAAC;IACvC,oBAAoB,EAAE,CAAC;IACvB,4BAA4B,EAAE,CAAC;AAChC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/browser/promptSyntax/promptFileActions.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { registerAttachPromptActions } from './attachInstructionsAction.js';\nimport { registerAgentActions } from './chatModeActions.js';\nimport { registerRunPromptActions } from './runPromptAction.js';\nimport { registerNewPromptFileActions } from './newPromptFileActions.js';\nimport { registerAction2 } from '../../../../../platform/actions/common/actions.js';\nimport { SaveAsAgentFileAction, SaveAsInstructionsFileAction, SaveAsPromptFileAction } from './saveAsPromptFileActions.js';\n\n\n/**\n * Helper to register all actions related to reusable prompt files.\n */\nexport function registerPromptActions(): void {\n\tregisterRunPromptActions();\n\tregisterAttachPromptActions();\n\tregisterAction2(SaveAsPromptFileAction);\n\tregisterAction2(SaveAsInstructionsFileAction);\n\tregisterAction2(SaveAsAgentFileAction);\n\tregisterAgentActions();\n\tregisterNewPromptFileActions();\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "c242d4aaf2379fc5c3bacd82bb5c725453634962"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2gpv01py5m = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2gpv01py5m();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { registerAttachPromptActions } from './attachInstructionsAction.js';
+import { registerAgentActions } from './chatModeActions.js';
+import { registerRunPromptActions } from './runPromptAction.js';
+import { registerNewPromptFileActions } from './newPromptFileActions.js';
+import { registerAction2 } from '../../../../../platform/actions/common/actions.js';
+import { SaveAsAgentFileAction, SaveAsInstructionsFileAction, SaveAsPromptFileAction } from './saveAsPromptFileActions.js';
+/**
+ * Helper to register all actions related to reusable prompt files.
+ */
+export function registerPromptActions() {
+  /* istanbul ignore next */
+  cov_2gpv01py5m().f[0]++;
+  cov_2gpv01py5m().s[0]++;
+  registerRunPromptActions();
+  /* istanbul ignore next */
+  cov_2gpv01py5m().s[1]++;
+  registerAttachPromptActions();
+  /* istanbul ignore next */
+  cov_2gpv01py5m().s[2]++;
+  registerAction2(SaveAsPromptFileAction);
+  /* istanbul ignore next */
+  cov_2gpv01py5m().s[3]++;
+  registerAction2(SaveAsInstructionsFileAction);
+  /* istanbul ignore next */
+  cov_2gpv01py5m().s[4]++;
+  registerAction2(SaveAsAgentFileAction);
+  /* istanbul ignore next */
+  cov_2gpv01py5m().s[5]++;
+  registerAgentActions();
+  /* istanbul ignore next */
+  cov_2gpv01py5m().s[6]++;
+  registerNewPromptFileActions();
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMmdwdjAxcHk1bSIsImFjdHVhbENvdmVyYWdlIiwicmVnaXN0ZXJBdHRhY2hQcm9tcHRBY3Rpb25zIiwicmVnaXN0ZXJBZ2VudEFjdGlvbnMiLCJyZWdpc3RlclJ1blByb21wdEFjdGlvbnMiLCJyZWdpc3Rlck5ld1Byb21wdEZpbGVBY3Rpb25zIiwicmVnaXN0ZXJBY3Rpb24yIiwiU2F2ZUFzQWdlbnRGaWxlQWN0aW9uIiwiU2F2ZUFzSW5zdHJ1Y3Rpb25zRmlsZUFjdGlvbiIsIlNhdmVBc1Byb21wdEZpbGVBY3Rpb24iLCJyZWdpc3RlclByb21wdEFjdGlvbnMiLCJmIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvY2hhdC9icm93c2VyL3Byb21wdFN5bnRheC9wcm9tcHRGaWxlQWN0aW9ucy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgcmVnaXN0ZXJBdHRhY2hQcm9tcHRBY3Rpb25zIH0gZnJvbSAnLi9hdHRhY2hJbnN0cnVjdGlvbnNBY3Rpb24uanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJBZ2VudEFjdGlvbnMgfSBmcm9tICcuL2NoYXRNb2RlQWN0aW9ucy5qcyc7XG5pbXBvcnQgeyByZWdpc3RlclJ1blByb21wdEFjdGlvbnMgfSBmcm9tICcuL3J1blByb21wdEFjdGlvbi5qcyc7XG5pbXBvcnQgeyByZWdpc3Rlck5ld1Byb21wdEZpbGVBY3Rpb25zIH0gZnJvbSAnLi9uZXdQcm9tcHRGaWxlQWN0aW9ucy5qcyc7XG5pbXBvcnQgeyByZWdpc3RlckFjdGlvbjIgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9hY3Rpb25zL2NvbW1vbi9hY3Rpb25zLmpzJztcbmltcG9ydCB7IFNhdmVBc0FnZW50RmlsZUFjdGlvbiwgU2F2ZUFzSW5zdHJ1Y3Rpb25zRmlsZUFjdGlvbiwgU2F2ZUFzUHJvbXB0RmlsZUFjdGlvbiB9IGZyb20gJy4vc2F2ZUFzUHJvbXB0RmlsZUFjdGlvbnMuanMnO1xuXG5cbi8qKlxuICogSGVscGVyIHRvIHJlZ2lzdGVyIGFsbCBhY3Rpb25zIHJlbGF0ZWQgdG8gcmV1c2FibGUgcHJvbXB0IGZpbGVzLlxuICovXG5leHBvcnQgZnVuY3Rpb24gcmVnaXN0ZXJQcm9tcHRBY3Rpb25zKCk6IHZvaWQge1xuXHRyZWdpc3RlclJ1blByb21wdEFjdGlvbnMoKTtcblx0cmVnaXN0ZXJBdHRhY2hQcm9tcHRBY3Rpb25zKCk7XG5cdHJlZ2lzdGVyQWN0aW9uMihTYXZlQXNQcm9tcHRGaWxlQWN0aW9uKTtcblx0cmVnaXN0ZXJBY3Rpb24yKFNhdmVBc0luc3RydWN0aW9uc0ZpbGVBY3Rpb24pO1xuXHRyZWdpc3RlckFjdGlvbjIoU2F2ZUFzQWdlbnRGaWxlQWN0aW9uKTtcblx0cmVnaXN0ZXJBZ2VudEFjdGlvbnMoKTtcblx0cmVnaXN0ZXJOZXdQcm9tcHRGaWxlQWN0aW9ucygpO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCQztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbEJEOzs7O0FBS0EsU0FBU0UsMkJBQTJCLFFBQVEsK0JBQStCO0FBQzNFLFNBQVNDLG9CQUFvQixRQUFRLHNCQUFzQjtBQUMzRCxTQUFTQyx3QkFBd0IsUUFBUSxzQkFBc0I7QUFDL0QsU0FBU0MsNEJBQTRCLFFBQVEsMkJBQTJCO0FBQ3hFLFNBQVNDLGVBQWUsUUFBUSxtREFBbUQ7QUFDbkYsU0FBU0MscUJBQXFCLEVBQUVDLDRCQUE0QixFQUFFQyxzQkFBc0IsUUFBUSw4QkFBOEI7QUFHMUg7OztBQUdBLE9BQU0sU0FBVUMscUJBQXFCQSxDQUFBO0VBQUE7RUFBQVYsY0FBQSxHQUFBVyxDQUFBO0VBQUFYLGNBQUEsR0FBQVksQ0FBQTtFQUNwQ1Isd0JBQXdCLEVBQUU7RUFBQztFQUFBSixjQUFBLEdBQUFZLENBQUE7RUFDM0JWLDJCQUEyQixFQUFFO0VBQUM7RUFBQUYsY0FBQSxHQUFBWSxDQUFBO0VBQzlCTixlQUFlLENBQUNHLHNCQUFzQixDQUFDO0VBQUM7RUFBQVQsY0FBQSxHQUFBWSxDQUFBO0VBQ3hDTixlQUFlLENBQUNFLDRCQUE0QixDQUFDO0VBQUM7RUFBQVIsY0FBQSxHQUFBWSxDQUFBO0VBQzlDTixlQUFlLENBQUNDLHFCQUFxQixDQUFDO0VBQUM7RUFBQVAsY0FBQSxHQUFBWSxDQUFBO0VBQ3ZDVCxvQkFBb0IsRUFBRTtFQUFDO0VBQUFILGNBQUEsR0FBQVksQ0FBQTtFQUN2QlAsNEJBQTRCLEVBQUU7QUFDL0IiLCJpZ25vcmVMaXN0IjpbXX0=

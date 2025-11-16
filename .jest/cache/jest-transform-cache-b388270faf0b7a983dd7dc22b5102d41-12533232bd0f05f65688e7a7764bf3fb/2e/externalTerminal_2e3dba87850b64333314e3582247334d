@@ -1,0 +1,62 @@
+f7bebe3ae6e69c9dd388d4f1a349753c
+/* istanbul ignore next */
+function cov_2ezuxxekzj() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-main/externalTerminal.ts";
+  var hash = "d7f6dab9547856f7fd89eb5d539f85f5bdeebd95";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-main/externalTerminal.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 44
+        },
+        end: {
+          line: 6,
+          column: 79
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-main/externalTerminal.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,4BAA4B,GAAG,eAAe,CAA+B,kBAAkB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/externalTerminal/electron-main/externalTerminal.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IExternalTerminalService } from '../common/externalTerminal.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IExternalTerminalMainService = createDecorator<IExternalTerminalMainService>('externalTerminal');\n\nexport interface IExternalTerminalMainService extends IExternalTerminalService {\n\treadonly _serviceBrand: undefined;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d7f6dab9547856f7fd89eb5d539f85f5bdeebd95"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2ezuxxekzj = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2ezuxxekzj();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IExternalTerminalMainService =
+/* istanbul ignore next */
+(cov_2ezuxxekzj().s[0]++, createDecorator('externalTerminal'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJRXh0ZXJuYWxUZXJtaW5hbE1haW5TZXJ2aWNlIiwiY292XzJlenV4eGVremoiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9leHRlcm5hbFRlcm1pbmFsL2VsZWN0cm9uLW1haW4vZXh0ZXJuYWxUZXJtaW5hbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUV4dGVybmFsVGVybWluYWxTZXJ2aWNlIH0gZnJvbSAnLi4vY29tbW9uL2V4dGVybmFsVGVybWluYWwuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5cbmV4cG9ydCBjb25zdCBJRXh0ZXJuYWxUZXJtaW5hbE1haW5TZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElFeHRlcm5hbFRlcm1pbmFsTWFpblNlcnZpY2U+KCdleHRlcm5hbFRlcm1pbmFsJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUV4dGVybmFsVGVybWluYWxNYWluU2VydmljZSBleHRlbmRzIElFeHRlcm5hbFRlcm1pbmFsU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQUU3RSxPQUFPLE1BQU1DLDRCQUE0QjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBK0Isa0JBQWtCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

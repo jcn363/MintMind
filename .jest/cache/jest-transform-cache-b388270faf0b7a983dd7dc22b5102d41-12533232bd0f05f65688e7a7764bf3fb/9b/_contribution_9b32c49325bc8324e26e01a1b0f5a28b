@@ -1,0 +1,192 @@
+94f292b923341989a66b55616719dad4
+/* istanbul ignore next */
+function cov_2elatpkkw0() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/keyboardLayouts/_.contribution.ts";
+  var hash = "f7680d10ca8e5a0dc6c32e51873f988982eec210";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/keyboardLayouts/_.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 22
+        },
+        end: {
+          line: 6,
+          column: 54
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 19
+        },
+        end: {
+          line: 7,
+          column: 21
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 8
+        },
+        end: {
+          line: 9,
+          column: 33
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 39
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 4
+          },
+          end: {
+            line: 8,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 22
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 18
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 35
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/keyboardLayouts/_.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,OAAO,0BAA0B;IAC/B,MAAM,CAAU,QAAQ,GAA+B,IAAI,0BAA0B,EAAE,CAAC;IAEvF,YAAY,GAAkB,EAAE,CAAC;IAEzC,IAAI,WAAW;QACd,OAAO,IAAI,CAAC,YAAY,CAAC;IAC1B,CAAC;IAED;IACA,CAAC;IAED,sBAAsB,CAAC,MAAmB;QACzC,IAAI,CAAC,YAAY,CAAC,IAAI,CAAC,MAAM,CAAC,CAAC;IAChC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/keybinding/browser/keyboardLayouts/_.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IKeymapInfo } from '../../common/keymapInfo.js';\n\nexport class KeyboardLayoutContribution {\n\tpublic static readonly INSTANCE: KeyboardLayoutContribution = new KeyboardLayoutContribution();\n\n\tprivate _layoutInfos: IKeymapInfo[] = [];\n\n\tget layoutInfos() {\n\t\treturn this._layoutInfos;\n\t}\n\n\tprivate constructor() {\n\t}\n\n\tregisterKeyboardLayout(layout: IKeymapInfo) {\n\t\tthis._layoutInfos.push(layout);\n\t}\n}"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "f7680d10ca8e5a0dc6c32e51873f988982eec210"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2elatpkkw0 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2elatpkkw0();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class KeyboardLayoutContribution {
+  static INSTANCE =
+  /* istanbul ignore next */
+  (cov_2elatpkkw0().s[0]++, new KeyboardLayoutContribution());
+  _layoutInfos =
+  /* istanbul ignore next */
+  (cov_2elatpkkw0().s[1]++, []);
+  get layoutInfos() {
+    /* istanbul ignore next */
+    cov_2elatpkkw0().f[0]++;
+    cov_2elatpkkw0().s[2]++;
+    return this._layoutInfos;
+  }
+  constructor() {
+    /* istanbul ignore next */
+    cov_2elatpkkw0().f[1]++;
+  }
+  registerKeyboardLayout(layout) {
+    /* istanbul ignore next */
+    cov_2elatpkkw0().f[2]++;
+    cov_2elatpkkw0().s[3]++;
+    this._layoutInfos.push(layout);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJLZXlib2FyZExheW91dENvbnRyaWJ1dGlvbiIsIklOU1RBTkNFIiwiY292XzJlbGF0cGtrdzAiLCJzIiwiX2xheW91dEluZm9zIiwibGF5b3V0SW5mb3MiLCJmIiwiY29uc3RydWN0b3IiLCJyZWdpc3RlcktleWJvYXJkTGF5b3V0IiwibGF5b3V0IiwicHVzaCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL2tleWJpbmRpbmcvYnJvd3Nlci9rZXlib2FyZExheW91dHMvXy5jb250cmlidXRpb24udHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElLZXltYXBJbmZvIH0gZnJvbSAnLi4vLi4vY29tbW9uL2tleW1hcEluZm8uanMnO1xuXG5leHBvcnQgY2xhc3MgS2V5Ym9hcmRMYXlvdXRDb250cmlidXRpb24ge1xuXHRwdWJsaWMgc3RhdGljIHJlYWRvbmx5IElOU1RBTkNFOiBLZXlib2FyZExheW91dENvbnRyaWJ1dGlvbiA9IG5ldyBLZXlib2FyZExheW91dENvbnRyaWJ1dGlvbigpO1xuXG5cdHByaXZhdGUgX2xheW91dEluZm9zOiBJS2V5bWFwSW5mb1tdID0gW107XG5cblx0Z2V0IGxheW91dEluZm9zKCkge1xuXHRcdHJldHVybiB0aGlzLl9sYXlvdXRJbmZvcztcblx0fVxuXG5cdHByaXZhdGUgY29uc3RydWN0b3IoKSB7XG5cdH1cblxuXHRyZWdpc3RlcktleWJvYXJkTGF5b3V0KGxheW91dDogSUtleW1hcEluZm8pIHtcblx0XHR0aGlzLl9sYXlvdXRJbmZvcy5wdXNoKGxheW91dCk7XG5cdH1cbn0iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBT0EsT0FBTSxNQUFPQSwwQkFBMEI7RUFDL0IsT0FBZ0JDLFFBQVE7RUFBQTtFQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUErQixJQUFJSCwwQkFBMEIsRUFBRTtFQUV0RkksWUFBWTtFQUFBO0VBQUEsQ0FBQUYsY0FBQSxHQUFBQyxDQUFBLE9BQWtCLEVBQUU7RUFFeEMsSUFBSUUsV0FBV0EsQ0FBQTtJQUFBO0lBQUFILGNBQUEsR0FBQUksQ0FBQTtJQUFBSixjQUFBLEdBQUFDLENBQUE7SUFDZCxPQUFPLElBQUksQ0FBQ0MsWUFBWTtFQUN6QjtFQUVBRyxZQUFBO0lBQUE7SUFBQUwsY0FBQSxHQUFBSSxDQUFBO0VBQ0E7RUFFQUUsc0JBQXNCQSxDQUFDQyxNQUFtQjtJQUFBO0lBQUFQLGNBQUEsR0FBQUksQ0FBQTtJQUFBSixjQUFBLEdBQUFDLENBQUE7SUFDekMsSUFBSSxDQUFDQyxZQUFZLENBQUNNLElBQUksQ0FBQ0QsTUFBTSxDQUFDO0VBQy9CIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,522 @@
+b7900dcd6cfd60af791b8c60ceea5cca
+/* istanbul ignore next */
+function cov_f6a9uwr0u() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/core/misc/indentation.ts";
+  var hash = "97b9a1e6a039a434cfe09204cee5696b10d4886c";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/core/misc/indentation.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 20
+        },
+        end: {
+          line: 8,
+          column: 21
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 17
+        },
+        end: {
+          line: 9,
+          column: 18
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 9
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 12
+        },
+        end: {
+          line: 11,
+          column: 79
+        }
+      },
+      "5": {
+        start: {
+          line: 14,
+          column: 12
+        },
+        end: {
+          line: 14,
+          column: 24
+        }
+      },
+      "6": {
+        start: {
+          line: 17,
+          column: 17
+        },
+        end: {
+          line: 17,
+          column: 19
+        }
+      },
+      "7": {
+        start: {
+          line: 18,
+          column: 4
+        },
+        end: {
+          line: 24,
+          column: 5
+        }
+      },
+      "8": {
+        start: {
+          line: 19,
+          column: 24
+        },
+        end: {
+          line: 19,
+          column: 58
+        }
+      },
+      "9": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 43
+        }
+      },
+      "10": {
+        start: {
+          line: 21,
+          column: 8
+        },
+        end: {
+          line: 23,
+          column: 9
+        }
+      },
+      "11": {
+        start: {
+          line: 21,
+          column: 21
+        },
+        end: {
+          line: 21,
+          column: 22
+        }
+      },
+      "12": {
+        start: {
+          line: 22,
+          column: 12
+        },
+        end: {
+          line: 22,
+          column: 27
+        }
+      },
+      "13": {
+        start: {
+          line: 25,
+          column: 4
+        },
+        end: {
+          line: 27,
+          column: 5
+        }
+      },
+      "14": {
+        start: {
+          line: 25,
+          column: 17
+        },
+        end: {
+          line: 25,
+          column: 18
+        }
+      },
+      "15": {
+        start: {
+          line: 26,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 22
+        }
+      },
+      "16": {
+        start: {
+          line: 28,
+          column: 4
+        },
+        end: {
+          line: 28,
+          column: 18
+        }
+      },
+      "17": {
+        start: {
+          line: 31,
+          column: 34
+        },
+        end: {
+          line: 31,
+          column: 70
+        }
+      },
+      "18": {
+        start: {
+          line: 32,
+          column: 4
+        },
+        end: {
+          line: 34,
+          column: 5
+        }
+      },
+      "19": {
+        start: {
+          line: 33,
+          column: 8
+        },
+        end: {
+          line: 33,
+          column: 45
+        }
+      },
+      "20": {
+        start: {
+          line: 35,
+          column: 4
+        },
+        end: {
+          line: 35,
+          column: 157
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "_normalizeIndentationFromWhitespace",
+        decl: {
+          start: {
+            line: 7,
+            column: 9
+          },
+          end: {
+            line: 7,
+            column: 44
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 76
+          },
+          end: {
+            line: 29,
+            column: 1
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "normalizeIndentation",
+        decl: {
+          start: {
+            line: 30,
+            column: 16
+          },
+          end: {
+            line: 30,
+            column: 36
+          }
+        },
+        loc: {
+          start: {
+            line: 30,
+            column: 68
+          },
+          end: {
+            line: 36,
+            column: 1
+          }
+        },
+        line: 30
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 15,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 15,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 13,
+            column: 13
+          },
+          end: {
+            line: 15,
+            column: 9
+          }
+        }],
+        line: 10
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 18,
+            column: 4
+          },
+          end: {
+            line: 24,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 18,
+            column: 4
+          },
+          end: {
+            line: 24,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 18
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 32,
+            column: 4
+          },
+          end: {
+            line: 34,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 32,
+            column: 4
+          },
+          end: {
+            line: 34,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 32
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/core/misc/indentation.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,KAAK,OAAO,MAAM,oCAAoC,CAAC;AAC9D,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAC;AAEpD,SAAS,mCAAmC,CAAC,GAAW,EAAE,UAAkB,EAAE,YAAqB;IAClG,IAAI,SAAS,GAAG,CAAC,CAAC;IAClB,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,GAAG,CAAC,MAAM,EAAE,CAAC,EAAE,EAAE,CAAC;QACrC,IAAI,GAAG,CAAC,MAAM,CAAC,CAAC,CAAC,KAAK,IAAI,EAAE,CAAC;YAC5B,SAAS,GAAG,aAAa,CAAC,iBAAiB,CAAC,SAAS,EAAE,UAAU,CAAC,CAAC;QACpE,CAAC;aAAM,CAAC;YACP,SAAS,EAAE,CAAC;QACb,CAAC;IACF,CAAC;IAED,IAAI,MAAM,GAAG,EAAE,CAAC;IAChB,IAAI,CAAC,YAAY,EAAE,CAAC;QACnB,MAAM,OAAO,GAAG,IAAI,CAAC,KAAK,CAAC,SAAS,GAAG,UAAU,CAAC,CAAC;QACnD,SAAS,GAAG,SAAS,GAAG,UAAU,CAAC;QACnC,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,OAAO,EAAE,CAAC,EAAE,EAAE,CAAC;YAClC,MAAM,IAAI,IAAI,CAAC;QAChB,CAAC;IACF,CAAC;IAED,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,SAAS,EAAE,CAAC,EAAE,EAAE,CAAC;QACpC,MAAM,IAAI,GAAG,CAAC;IACf,CAAC;IAED,OAAO,MAAM,CAAC;AACf,CAAC;AAED,MAAM,UAAU,oBAAoB,CAAC,GAAW,EAAE,UAAkB,EAAE,YAAqB;IAC1F,IAAI,uBAAuB,GAAG,OAAO,CAAC,uBAAuB,CAAC,GAAG,CAAC,CAAC;IACnE,IAAI,uBAAuB,KAAK,CAAC,CAAC,EAAE,CAAC;QACpC,uBAAuB,GAAG,GAAG,CAAC,MAAM,CAAC;IACtC,CAAC;IACD,OAAO,mCAAmC,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC,EAAE,uBAAuB,CAAC,EAAE,UAAU,EAAE,YAAY,CAAC,GAAG,GAAG,CAAC,SAAS,CAAC,uBAAuB,CAAC,CAAC;AAC1J,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/core/misc/indentation.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport * as strings from '../../../../base/common/strings.js';\nimport { CursorColumns } from '../cursorColumns.js';\n\nfunction _normalizeIndentationFromWhitespace(str: string, indentSize: number, insertSpaces: boolean): string {\n\tlet spacesCnt = 0;\n\tfor (let i = 0; i < str.length; i++) {\n\t\tif (str.charAt(i) === '\\t') {\n\t\t\tspacesCnt = CursorColumns.nextIndentTabStop(spacesCnt, indentSize);\n\t\t} else {\n\t\t\tspacesCnt++;\n\t\t}\n\t}\n\n\tlet result = '';\n\tif (!insertSpaces) {\n\t\tconst tabsCnt = Math.floor(spacesCnt / indentSize);\n\t\tspacesCnt = spacesCnt % indentSize;\n\t\tfor (let i = 0; i < tabsCnt; i++) {\n\t\t\tresult += '\\t';\n\t\t}\n\t}\n\n\tfor (let i = 0; i < spacesCnt; i++) {\n\t\tresult += ' ';\n\t}\n\n\treturn result;\n}\n\nexport function normalizeIndentation(str: string, indentSize: number, insertSpaces: boolean): string {\n\tlet firstNonWhitespaceIndex = strings.firstNonWhitespaceIndex(str);\n\tif (firstNonWhitespaceIndex === -1) {\n\t\tfirstNonWhitespaceIndex = str.length;\n\t}\n\treturn _normalizeIndentationFromWhitespace(str.substring(0, firstNonWhitespaceIndex), indentSize, insertSpaces) + str.substring(firstNonWhitespaceIndex);\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "97b9a1e6a039a434cfe09204cee5696b10d4886c"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_f6a9uwr0u = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_f6a9uwr0u();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as strings from '../../../../base/common/strings.js';
+import { CursorColumns } from '../cursorColumns.js';
+function _normalizeIndentationFromWhitespace(str, indentSize, insertSpaces) {
+  /* istanbul ignore next */
+  cov_f6a9uwr0u().f[0]++;
+  let spacesCnt =
+  /* istanbul ignore next */
+  (cov_f6a9uwr0u().s[0]++, 0);
+  /* istanbul ignore next */
+  cov_f6a9uwr0u().s[1]++;
+  for (let i =
+  /* istanbul ignore next */
+  (cov_f6a9uwr0u().s[2]++, 0); i < str.length; i++) {
+    /* istanbul ignore next */
+    cov_f6a9uwr0u().s[3]++;
+    if (str.charAt(i) === '\t') {
+      /* istanbul ignore next */
+      cov_f6a9uwr0u().b[0][0]++;
+      cov_f6a9uwr0u().s[4]++;
+      spacesCnt = CursorColumns.nextIndentTabStop(spacesCnt, indentSize);
+    } else {
+      /* istanbul ignore next */
+      cov_f6a9uwr0u().b[0][1]++;
+      cov_f6a9uwr0u().s[5]++;
+      spacesCnt++;
+    }
+  }
+  let result =
+  /* istanbul ignore next */
+  (cov_f6a9uwr0u().s[6]++, '');
+  /* istanbul ignore next */
+  cov_f6a9uwr0u().s[7]++;
+  if (!insertSpaces) {
+    /* istanbul ignore next */
+    cov_f6a9uwr0u().b[1][0]++;
+    const tabsCnt =
+    /* istanbul ignore next */
+    (cov_f6a9uwr0u().s[8]++, Math.floor(spacesCnt / indentSize));
+    /* istanbul ignore next */
+    cov_f6a9uwr0u().s[9]++;
+    spacesCnt = spacesCnt % indentSize;
+    /* istanbul ignore next */
+    cov_f6a9uwr0u().s[10]++;
+    for (let i =
+    /* istanbul ignore next */
+    (cov_f6a9uwr0u().s[11]++, 0); i < tabsCnt; i++) {
+      /* istanbul ignore next */
+      cov_f6a9uwr0u().s[12]++;
+      result += '\t';
+    }
+  } else
+  /* istanbul ignore next */
+  {
+    cov_f6a9uwr0u().b[1][1]++;
+  }
+  cov_f6a9uwr0u().s[13]++;
+  for (let i =
+  /* istanbul ignore next */
+  (cov_f6a9uwr0u().s[14]++, 0); i < spacesCnt; i++) {
+    /* istanbul ignore next */
+    cov_f6a9uwr0u().s[15]++;
+    result += ' ';
+  }
+  /* istanbul ignore next */
+  cov_f6a9uwr0u().s[16]++;
+  return result;
+}
+export function normalizeIndentation(str, indentSize, insertSpaces) {
+  /* istanbul ignore next */
+  cov_f6a9uwr0u().f[1]++;
+  let firstNonWhitespaceIndex =
+  /* istanbul ignore next */
+  (cov_f6a9uwr0u().s[17]++, strings.firstNonWhitespaceIndex(str));
+  /* istanbul ignore next */
+  cov_f6a9uwr0u().s[18]++;
+  if (firstNonWhitespaceIndex === -1) {
+    /* istanbul ignore next */
+    cov_f6a9uwr0u().b[2][0]++;
+    cov_f6a9uwr0u().s[19]++;
+    firstNonWhitespaceIndex = str.length;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_f6a9uwr0u().b[2][1]++;
+  }
+  cov_f6a9uwr0u().s[20]++;
+  return _normalizeIndentationFromWhitespace(str.substring(0, firstNonWhitespaceIndex), indentSize, insertSpaces) + str.substring(firstNonWhitespaceIndex);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfZjZhOXV3cjB1IiwiYWN0dWFsQ292ZXJhZ2UiLCJzdHJpbmdzIiwiQ3Vyc29yQ29sdW1ucyIsIl9ub3JtYWxpemVJbmRlbnRhdGlvbkZyb21XaGl0ZXNwYWNlIiwic3RyIiwiaW5kZW50U2l6ZSIsImluc2VydFNwYWNlcyIsImYiLCJzcGFjZXNDbnQiLCJzIiwiaSIsImxlbmd0aCIsImNoYXJBdCIsImIiLCJuZXh0SW5kZW50VGFiU3RvcCIsInJlc3VsdCIsInRhYnNDbnQiLCJNYXRoIiwiZmxvb3IiLCJub3JtYWxpemVJbmRlbnRhdGlvbiIsImZpcnN0Tm9uV2hpdGVzcGFjZUluZGV4Iiwic3Vic3RyaW5nIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2NvcmUvbWlzYy9pbmRlbnRhdGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0ICogYXMgc3RyaW5ncyBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9zdHJpbmdzLmpzJztcbmltcG9ydCB7IEN1cnNvckNvbHVtbnMgfSBmcm9tICcuLi9jdXJzb3JDb2x1bW5zLmpzJztcblxuZnVuY3Rpb24gX25vcm1hbGl6ZUluZGVudGF0aW9uRnJvbVdoaXRlc3BhY2Uoc3RyOiBzdHJpbmcsIGluZGVudFNpemU6IG51bWJlciwgaW5zZXJ0U3BhY2VzOiBib29sZWFuKTogc3RyaW5nIHtcblx0bGV0IHNwYWNlc0NudCA9IDA7XG5cdGZvciAobGV0IGkgPSAwOyBpIDwgc3RyLmxlbmd0aDsgaSsrKSB7XG5cdFx0aWYgKHN0ci5jaGFyQXQoaSkgPT09ICdcXHQnKSB7XG5cdFx0XHRzcGFjZXNDbnQgPSBDdXJzb3JDb2x1bW5zLm5leHRJbmRlbnRUYWJTdG9wKHNwYWNlc0NudCwgaW5kZW50U2l6ZSk7XG5cdFx0fSBlbHNlIHtcblx0XHRcdHNwYWNlc0NudCsrO1xuXHRcdH1cblx0fVxuXG5cdGxldCByZXN1bHQgPSAnJztcblx0aWYgKCFpbnNlcnRTcGFjZXMpIHtcblx0XHRjb25zdCB0YWJzQ250ID0gTWF0aC5mbG9vcihzcGFjZXNDbnQgLyBpbmRlbnRTaXplKTtcblx0XHRzcGFjZXNDbnQgPSBzcGFjZXNDbnQgJSBpbmRlbnRTaXplO1xuXHRcdGZvciAobGV0IGkgPSAwOyBpIDwgdGFic0NudDsgaSsrKSB7XG5cdFx0XHRyZXN1bHQgKz0gJ1xcdCc7XG5cdFx0fVxuXHR9XG5cblx0Zm9yIChsZXQgaSA9IDA7IGkgPCBzcGFjZXNDbnQ7IGkrKykge1xuXHRcdHJlc3VsdCArPSAnICc7XG5cdH1cblxuXHRyZXR1cm4gcmVzdWx0O1xufVxuXG5leHBvcnQgZnVuY3Rpb24gbm9ybWFsaXplSW5kZW50YXRpb24oc3RyOiBzdHJpbmcsIGluZGVudFNpemU6IG51bWJlciwgaW5zZXJ0U3BhY2VzOiBib29sZWFuKTogc3RyaW5nIHtcblx0bGV0IGZpcnN0Tm9uV2hpdGVzcGFjZUluZGV4ID0gc3RyaW5ncy5maXJzdE5vbldoaXRlc3BhY2VJbmRleChzdHIpO1xuXHRpZiAoZmlyc3ROb25XaGl0ZXNwYWNlSW5kZXggPT09IC0xKSB7XG5cdFx0Zmlyc3ROb25XaGl0ZXNwYWNlSW5kZXggPSBzdHIubGVuZ3RoO1xuXHR9XG5cdHJldHVybiBfbm9ybWFsaXplSW5kZW50YXRpb25Gcm9tV2hpdGVzcGFjZShzdHIuc3Vic3RyaW5nKDAsIGZpcnN0Tm9uV2hpdGVzcGFjZUluZGV4KSwgaW5kZW50U2l6ZSwgaW5zZXJ0U3BhY2VzKSArIHN0ci5zdWJzdHJpbmcoZmlyc3ROb25XaGl0ZXNwYWNlSW5kZXgpO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFnQkU7SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQWhCRjs7OztBQUtBLE9BQU8sS0FBS0UsT0FBTyxNQUFNLG9DQUFvQztBQUM3RCxTQUFTQyxhQUFhLFFBQVEscUJBQXFCO0FBRW5ELFNBQVNDLG1DQUFtQ0EsQ0FBQ0MsR0FBVyxFQUFFQyxVQUFrQixFQUFFQyxZQUFxQjtFQUFBO0VBQUFQLGFBQUEsR0FBQVEsQ0FBQTtFQUNsRyxJQUFJQyxTQUFTO0VBQUE7RUFBQSxDQUFBVCxhQUFBLEdBQUFVLENBQUEsT0FBRyxD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

@@ -1,0 +1,153 @@
+b09f44338e860b87a7109d6a5b68cbff
+/* istanbul ignore next */
+function cov_1octai4ejd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/cursor/cursorContext.ts";
+  var hash = "8bf527e655a6b74f2fbbec974a12121e2bfc12b4";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/cursor/cursorContext.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 26
+        },
+        end: {
+          line: 6,
+          column: 35
+        }
+      },
+      "1": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 27
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 35
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 57
+        }
+      },
+      "4": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 41
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 70
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 11
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/cursor/cursorContext.ts",
+      mappings: "AAAA;;;gGAGgG;AAMhG,MAAM,OAAO,aAAa;IACzB,mBAAmB,GAAS,SAAS,CAAC;IAEtB,KAAK,CAAa;IAClB,SAAS,CAAqB;IAC9B,oBAAoB,CAAwB;IAC5C,YAAY,CAAsB;IAElD,YAAY,KAAiB,EAAE,SAA6B,EAAE,oBAA2C,EAAE,YAAiC;QAC3I,IAAI,CAAC,KAAK,GAAG,KAAK,CAAC;QACnB,IAAI,CAAC,SAAS,GAAG,SAAS,CAAC;QAC3B,IAAI,CAAC,oBAAoB,GAAG,oBAAoB,CAAC;QACjD,IAAI,CAAC,YAAY,GAAG,YAAY,CAAC;IAClC,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/cursor/cursorContext.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { ITextModel } from '../model.js';\nimport { CursorConfiguration, ICursorSimpleModel } from '../cursorCommon.js';\nimport { ICoordinatesConverter } from '../coordinatesConverter.js';\n\nexport class CursorContext {\n\t_cursorContextBrand: void = undefined;\n\n\tpublic readonly model: ITextModel;\n\tpublic readonly viewModel: ICursorSimpleModel;\n\tpublic readonly coordinatesConverter: ICoordinatesConverter;\n\tpublic readonly cursorConfig: CursorConfiguration;\n\n\tconstructor(model: ITextModel, viewModel: ICursorSimpleModel, coordinatesConverter: ICoordinatesConverter, cursorConfig: CursorConfiguration) {\n\t\tthis.model = model;\n\t\tthis.viewModel = viewModel;\n\t\tthis.coordinatesConverter = coordinatesConverter;\n\t\tthis.cursorConfig = cursorConfig;\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "8bf527e655a6b74f2fbbec974a12121e2bfc12b4"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1octai4ejd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1octai4ejd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class CursorContext {
+  _cursorContextBrand =
+  /* istanbul ignore next */
+  (cov_1octai4ejd().s[0]++, undefined);
+  model;
+  viewModel;
+  coordinatesConverter;
+  cursorConfig;
+  constructor(model, viewModel, coordinatesConverter, cursorConfig) {
+    /* istanbul ignore next */
+    cov_1octai4ejd().f[0]++;
+    cov_1octai4ejd().s[1]++;
+    this.model = model;
+    /* istanbul ignore next */
+    cov_1octai4ejd().s[2]++;
+    this.viewModel = viewModel;
+    /* istanbul ignore next */
+    cov_1octai4ejd().s[3]++;
+    this.coordinatesConverter = coordinatesConverter;
+    /* istanbul ignore next */
+    cov_1octai4ejd().s[4]++;
+    this.cursorConfig = cursorConfig;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMW9jdGFpNGVqZCIsImFjdHVhbENvdmVyYWdlIiwiQ3Vyc29yQ29udGV4dCIsIl9jdXJzb3JDb250ZXh0QnJhbmQiLCJzIiwidW5kZWZpbmVkIiwibW9kZWwiLCJ2aWV3TW9kZWwiLCJjb29yZGluYXRlc0NvbnZlcnRlciIsImN1cnNvckNvbmZpZyIsImNvbnN0cnVjdG9yIiwiZiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2NvbW1vbi9jdXJzb3IvY3Vyc29yQ29udGV4dC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSVRleHRNb2RlbCB9IGZyb20gJy4uL21vZGVsLmpzJztcbmltcG9ydCB7IEN1cnNvckNvbmZpZ3VyYXRpb24sIElDdXJzb3JTaW1wbGVNb2RlbCB9IGZyb20gJy4uL2N1cnNvckNvbW1vbi5qcyc7XG5pbXBvcnQgeyBJQ29vcmRpbmF0ZXNDb252ZXJ0ZXIgfSBmcm9tICcuLi9jb29yZGluYXRlc0NvbnZlcnRlci5qcyc7XG5cbmV4cG9ydCBjbGFzcyBDdXJzb3JDb250ZXh0IHtcblx0X2N1cnNvckNvbnRleHRCcmFuZDogdm9pZCA9IHVuZGVmaW5lZDtcblxuXHRwdWJsaWMgcmVhZG9ubHkgbW9kZWw6IElUZXh0TW9kZWw7XG5cdHB1YmxpYyByZWFkb25seSB2aWV3TW9kZWw6IElDdXJzb3JTaW1wbGVNb2RlbDtcblx0cHVibGljIHJlYWRvbmx5IGNvb3JkaW5hdGVzQ29udmVydGVyOiBJQ29vcmRpbmF0ZXNDb252ZXJ0ZXI7XG5cdHB1YmxpYyByZWFkb25seSBjdXJzb3JDb25maWc6IEN1cnNvckNvbmZpZ3VyYXRpb247XG5cblx0Y29uc3RydWN0b3IobW9kZWw6IElUZXh0TW9kZWwsIHZpZXdNb2RlbDogSUN1cnNvclNpbXBsZU1vZGVsLCBjb29yZGluYXRlc0NvbnZlcnRlcjogSUNvb3JkaW5hdGVzQ29udmVydGVyLCBjdXJzb3JDb25maWc6IEN1cnNvckNvbmZpZ3VyYXRpb24pIHtcblx0XHR0aGlzLm1vZGVsID0gbW9kZWw7XG5cdFx0dGhpcy52aWV3TW9kZWwgPSB2aWV3TW9kZWw7XG5cdFx0dGhpcy5jb29yZGluYXRlc0NvbnZlcnRlciA9IGNvb3JkaW5hdGVzQ29udmVydGVyO1xuXHRcdHRoaXMuY3Vyc29yQ29uZmlnID0gY3Vyc29yQ29uZmlnO1xuXHR9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFzQkU7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXRCRjs7OztBQVNBLE9BQU0sTUFBT0UsYUFBYTtFQUN6QkMsbUJBQW1CO0VBQUE7RUFBQSxDQUFBSCxjQUFBLEdBQUFJLENBQUEsT0FBU0MsU0FBUztFQUVyQkMsS0FBSztFQUNMQyxTQUFTO0VBQ1RDLG9CQUFvQjtFQUNwQkMsWUFBWTtFQUU1QkMsWUFBWUosS0FBaUIsRUFBRUMsU0FBNkIsRUFBRUMsb0JBQTJDLEVBQUVDLFlBQWlDO0lBQUE7SUFBQVQsY0FBQSxHQUFBVyxDQUFBO0lBQUFYLGNBQUEsR0FBQUksQ0FBQTtJQUMzSSxJQUFJLENBQUNFLEtBQUssR0FBR0EsS0FBSztJQUFDO0lBQUFOLGNBQUEsR0FBQUksQ0FBQTtJQUNuQixJQUFJLENBQUNHLFNBQVMsR0FBR0EsU0FBUztJQUFDO0lBQUFQLGNBQUEsR0FBQUksQ0FBQTtJQUMzQixJQUFJLENBQUNJLG9CQUFvQixHQUFHQSxvQkFBb0I7SUFBQztJQUFBUixjQUFBLEdBQUFJLENBQUE7SUFDakQsSUFBSSxDQUFDSyxZQUFZLEdBQUdBLFlBQVk7RUFDakMiLCJpZ25vcmVMaXN0IjpbXX0=

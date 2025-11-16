@@ -1,0 +1,46 @@
+2ed3fe59b6d807dc43a0895248ff0c49
+/* istanbul ignore next */
+function cov_10typv7c31() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/workbenchUIElementFactory.ts";
+  var hash = "4a79c48c7b8fb87592d7c36cc4e8fe0daac1c76b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/workbenchUIElementFactory.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/workbenchUIElementFactory.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/workbenchUIElementFactory.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { URI } from '../../../../base/common/uri.js';\n\n/**\n * This solves the problem that the editor layer cannot depend on the workbench layer.\n *\n * Maybe the multi diff editor widget should be moved to the workbench layer?\n * This would make monaco-editor consumption much more difficult though.\n */\nexport interface IWorkbenchUIElementFactory {\n\tcreateResourceLabel?(element: HTMLElement): IResourceLabel;\n}\n\nexport interface IResourceLabel extends IDisposable {\n\tsetUri(uri: URI | undefined, options?: IResourceLabelOptions): void;\n}\n\nexport interface IResourceLabelOptions {\n\tstrikethrough?: boolean;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4a79c48c7b8fb87592d7c36cc4e8fe0daac1c76b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_10typv7c31 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_10typv7c31();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci93aWRnZXQvbXVsdGlEaWZmRWRpdG9yL3dvcmtiZW5jaFVJRWxlbWVudEZhY3RvcnkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5cbi8qKlxuICogVGhpcyBzb2x2ZXMgdGhlIHByb2JsZW0gdGhhdCB0aGUgZWRpdG9yIGxheWVyIGNhbm5vdCBkZXBlbmQgb24gdGhlIHdvcmtiZW5jaCBsYXllci5cbiAqXG4gKiBNYXliZSB0aGUgbXVsdGkgZGlmZiBlZGl0b3Igd2lkZ2V0IHNob3VsZCBiZSBtb3ZlZCB0byB0aGUgd29ya2JlbmNoIGxheWVyP1xuICogVGhpcyB3b3VsZCBtYWtlIG1vbmFjby1lZGl0b3IgY29uc3VtcHRpb24gbXVjaCBtb3JlIGRpZmZpY3VsdCB0aG91Z2guXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSVdvcmtiZW5jaFVJRWxlbWVudEZhY3Rvcnkge1xuXHRjcmVhdGVSZXNvdXJjZUxhYmVsPyhlbGVtZW50OiBIVE1MRWxlbWVudCk6IElSZXNvdXJjZUxhYmVsO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElSZXNvdXJjZUxhYmVsIGV4dGVuZHMgSURpc3Bvc2FibGUge1xuXHRzZXRVcmkodXJpOiBVUkkgfCB1bmRlZmluZWQsIG9wdGlvbnM/OiBJUmVzb3VyY2VMYWJlbE9wdGlvbnMpOiB2b2lkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElSZXNvdXJjZUxhYmVsT3B0aW9ucyB7XG5cdHN0cmlrZXRocm91Z2g/OiBib29sZWFuO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,46 @@
+6d2b575b2b5d9296ed0bf72b18ad6826
+/* istanbul ignore next */
+function cov_1v4ws2xqp3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/scm/common/artifact.ts";
+  var hash = "d48fc94deadc1b23e420d17d154b212215a81330";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/scm/common/artifact.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/scm/common/artifact.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/scm/common/artifact.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../base/common/uri.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { ThemeIcon } from '../../../../base/common/themables.js';\nimport { ISCMRepository } from './scm.js';\n\nexport interface ISCMArtifactProvider {\n\treadonly onDidChangeArtifacts: Event<string[]>;\n\tprovideArtifactGroups(): Promise<ISCMArtifactGroup[] | undefined>;\n\tprovideArtifacts(group: string): Promise<ISCMArtifact[] | undefined>;\n}\n\nexport interface ISCMArtifactGroup {\n\treadonly id: string;\n\treadonly name: string;\n\treadonly icon?: URI | { light: URI; dark: URI } | ThemeIcon;\n}\n\nexport interface ISCMArtifact {\n\treadonly id: string;\n\treadonly name: string;\n\treadonly description?: string;\n\treadonly icon?: URI | { light: URI; dark: URI } | ThemeIcon;\n}\n\nexport interface SCMArtifactGroupTreeElement {\n\treadonly repository: ISCMRepository;\n\treadonly artifactGroup: ISCMArtifactGroup;\n\treadonly type: 'artifactGroup';\n}\n\nexport interface SCMArtifactTreeElement {\n\treadonly repository: ISCMRepository;\n\treadonly group: ISCMArtifactGroup;\n\treadonly artifact: ISCMArtifact;\n\treadonly type: 'artifact';\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d48fc94deadc1b23e420d17d154b212215a81330"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1v4ws2xqp3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1v4ws2xqp3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9zY20vY29tbW9uL2FydGlmYWN0LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBUaGVtZUljb24gfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi90aGVtYWJsZXMuanMnO1xuaW1wb3J0IHsgSVNDTVJlcG9zaXRvcnkgfSBmcm9tICcuL3NjbS5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVNDTUFydGlmYWN0UHJvdmlkZXIge1xuXHRyZWFkb25seSBvbkRpZENoYW5nZUFydGlmYWN0czogRXZlbnQ8c3RyaW5nW10+O1xuXHRwcm92aWRlQXJ0aWZhY3RHcm91cHMoKTogUHJvbWlzZTxJU0NNQXJ0aWZhY3RHcm91cFtdIHwgdW5kZWZpbmVkPjtcblx0cHJvdmlkZUFydGlmYWN0cyhncm91cDogc3RyaW5nKTogUHJvbWlzZTxJU0NNQXJ0aWZhY3RbXSB8IHVuZGVmaW5lZD47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVNDTUFydGlmYWN0R3JvdXAge1xuXHRyZWFkb25seSBpZDogc3RyaW5nO1xuXHRyZWFkb25seSBuYW1lOiBzdHJpbmc7XG5cdHJlYWRvbmx5IGljb24/OiBVUkkgfCB7IGxpZ2h0OiBVUkk7IGRhcms6IFVSSSB9IHwgVGhlbWVJY29uO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElTQ01BcnRpZmFjdCB7XG5cdHJlYWRvbmx5IGlkOiBzdHJpbmc7XG5cdHJlYWRvbmx5IG5hbWU6IHN0cmluZztcblx0cmVhZG9ubHkgZGVzY3JpcHRpb24/OiBzdHJpbmc7XG5cdHJlYWRvbmx5IGljb24/OiBVUkkgfCB7IGxpZ2h0OiBVUkk7IGRhcms6IFVSSSB9IHwgVGhlbWVJY29uO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFNDTUFydGlmYWN0R3JvdXBUcmVlRWxlbWVudCB7XG5cdHJlYWRvbmx5IHJlcG9zaXRvcnk6IElTQ01SZXBvc2l0b3J5O1xuXHRyZWFkb25seSBhcnRpZmFjdEdyb3VwOiBJU0NNQXJ0aWZhY3RHcm91cDtcblx0cmVhZG9ubHkgdHlwZTogJ2FydGlmYWN0R3JvdXAnO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIFNDTUFydGlmYWN0VHJlZUVsZW1lbnQge1xuXHRyZWFkb25seSByZXBvc2l0b3J5OiBJU0NNUmVwb3NpdG9yeTtcblx0cmVhZG9ubHkgZ3JvdXA6IElTQ01BcnRpZmFjdEdyb3VwO1xuXHRyZWFkb25seSBhcnRpZmFjdDogSVNDTUFydGlmYWN0O1xuXHRyZWFkb25seSB0eXBlOiAnYXJ0aWZhY3QnO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

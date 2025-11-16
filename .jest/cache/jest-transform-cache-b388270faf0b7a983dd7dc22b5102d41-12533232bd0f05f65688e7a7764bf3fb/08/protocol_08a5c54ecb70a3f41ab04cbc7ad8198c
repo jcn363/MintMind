@@ -1,0 +1,62 @@
+34c98ec816cb2c0bef6b2eb7b1de4ade
+/* istanbul ignore next */
+function cov_2dwnubmi45() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/protocol/electron-main/protocol.ts";
+  var hash = "970363bcf17f62643f547782acff1805fe589e11";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/protocol/electron-main/protocol.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 36
+        },
+        end: {
+          line: 6,
+          column: 74
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/protocol/electron-main/protocol.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,oBAAoB,GAAG,eAAe,CAAuB,qBAAqB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/protocol/electron-main/protocol.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IDisposable } from '../../../base/common/lifecycle.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IProtocolMainService = createDecorator<IProtocolMainService>('protocolMainService');\n\nexport interface IIPCObjectUrl<T> extends IDisposable {\n\n\t/**\n\t * A `URI` that a renderer can use to retrieve the\n\t * object via `ipcRenderer.invoke(resource.toString())`\n\t */\n\tresource: URI;\n\n\t/**\n\t * Allows to update the value of the object after it\n\t * has been created.\n\t *\n\t * @param obj the object to make accessible to the\n\t * renderer.\n\t */\n\tupdate(obj: T): void;\n}\n\nexport interface IProtocolMainService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Allows to make an object accessible to a renderer\n\t * via `ipcRenderer.invoke(resource.toString())`.\n\t */\n\tcreateIPCObjectUrl<T>(): IIPCObjectUrl<T>;\n\n\t/**\n\t * Adds a path as root to the list of allowed\n\t * resources for file access.\n\t *\n\t * @param root the path to allow for file access\n\t */\n\taddValidFileRoot(root: string): IDisposable;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "970363bcf17f62643f547782acff1805fe589e11"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2dwnubmi45 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2dwnubmi45();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IProtocolMainService =
+/* istanbul ignore next */
+(cov_2dwnubmi45().s[0]++, createDecorator('protocolMainService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJUHJvdG9jb2xNYWluU2VydmljZSIsImNvdl8yZHdudWJtaTQ1IiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vcHJvdG9jb2wvZWxlY3Ryb24tbWFpbi9wcm90b2NvbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgY29uc3QgSVByb3RvY29sTWFpblNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SVByb3RvY29sTWFpblNlcnZpY2U+KCdwcm90b2NvbE1haW5TZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUlQQ09iamVjdFVybDxUPiBleHRlbmRzIElEaXNwb3NhYmxlIHtcblxuXHQvKipcblx0ICogQSBgVVJJYCB0aGF0IGEgcmVuZGVyZXIgY2FuIHVzZSB0byByZXRyaWV2ZSB0aGVcblx0ICogb2JqZWN0IHZpYSBgaXBjUmVuZGVyZXIuaW52b2tlKHJlc291cmNlLnRvU3RyaW5nKCkpYFxuXHQgKi9cblx0cmVzb3VyY2U6IFVSSTtcblxuXHQvKipcblx0ICogQWxsb3dzIHRvIHVwZGF0ZSB0aGUgdmFsdWUgb2YgdGhlIG9iamVjdCBhZnRlciBpdFxuXHQgKiBoYXMgYmVlbiBjcmVhdGVkLlxuXHQgKlxuXHQgKiBAcGFyYW0gb2JqIHRoZSBvYmplY3QgdG8gbWFrZSBhY2Nlc3NpYmxlIHRvIHRoZVxuXHQgKiByZW5kZXJlci5cblx0ICovXG5cdHVwZGF0ZShvYmo6IFQpOiB2b2lkO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElQcm90b2NvbE1haW5TZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIEFsbG93cyB0byBtYWtlIGFuIG9iamVjdCBhY2Nlc3NpYmxlIHRvIGEgcmVuZGVyZXJcblx0ICogdmlhIGBpcGNSZW5kZXJlci5pbnZva2UocmVzb3VyY2UudG9TdHJpbmcoKSlgLlxuXHQgKi9cblx0Y3JlYXRlSVBDT2JqZWN0VXJsPFQ+KCk6IElJUENPYmplY3RVcmw8VD47XG5cblx0LyoqXG5cdCAqIEFkZHMgYSBwYXRoIGFzIHJvb3QgdG8gdGhlIGxpc3Qgb2YgYWxsb3dlZFxuXHQgKiByZXNvdXJjZXMgZm9yIGZpbGUgYWNjZXNzLlxuXHQgKlxuXHQgKiBAcGFyYW0gcm9vdCB0aGUgcGF0aCB0byBhbGxvdyBmb3IgZmlsZSBhY2Nlc3Ncblx0ICovXG5cdGFkZFZhbGlkRmlsZVJvb3Qocm9vdDogc3RyaW5nKTogSURpc3Bvc2FibGU7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLFNBQVNBLGVBQWUsUUFBUSw2Q0FBNkM7QUFFN0UsT0FBTyxNQUFNQyxvQkFBb0I7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQXVCLHFCQUFxQixDQUFDIiwiaWdub3JlTGlzdCI6W119

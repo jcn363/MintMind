@@ -1,0 +1,253 @@
+77e40ac1d4f888bada5ddcb3ad999e5f
+/* istanbul ignore next */
+function cov_hormd234o() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/notebookLogger.ts";
+  var hash = "cc0c4eacfbc79707f73d2a4cc9738ff61063754b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/notebookLogger.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 28
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 15
+        },
+        end: {
+          line: 10,
+          column: 16
+        }
+      },
+      "2": {
+        start: {
+          line: 18,
+          column: 21
+        },
+        end: {
+          line: 18,
+          column: 31
+        }
+      },
+      "3": {
+        start: {
+          line: 19,
+          column: 8
+        },
+        end: {
+          line: 19,
+          column: 136
+        }
+      },
+      "4": {
+        start: {
+          line: 22,
+          column: 17
+        },
+        end: {
+          line: 22,
+          column: 37
+        }
+      },
+      "5": {
+        start: {
+          line: 24,
+          column: 4
+        },
+        end: {
+          line: 24,
+          column: 28
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 18
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 11,
+            column: 4
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 19
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 11
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 17,
+            column: 4
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 17,
+            column: 19
+          },
+          end: {
+            line: 20,
+            column: 5
+          }
+        },
+        line: 17
+      },
+      "3": {
+        name: "notebookDebug",
+        decl: {
+          start: {
+            line: 23,
+            column: 16
+          },
+          end: {
+            line: 23,
+            column: 29
+          }
+        },
+        loc: {
+          start: {
+            line: 23,
+            column: 39
+          },
+          end: {
+            line: 25,
+            column: 1
+          }
+        },
+        line: 23
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/notebookLogger.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,8CAA8C;AAE9C,MAAM,cAAc;IACnB;QACC,IAAI,CAAC,YAAY,EAAE,CAAC;IACrB,CAAC;IACO,QAAQ,GAAG,CAAC,CAAC;IACb,YAAY;QACnB,2CAA2C;QAC3C,oBAAoB;QAEpB,wBAAwB;QACxB,eAAe;IAChB,CAAC;IAED,KAAK,CAAC,GAAG,IAAe;QACvB,MAAM,IAAI,GAAG,IAAI,IAAI,EAAE,CAAC;QACxB,OAAO,CAAC,GAAG,CAAC,GAAG,IAAI,CAAC,UAAU,EAAE,IAAI,IAAI,CAAC,eAAe,EAAE,CAAC,QAAQ,EAAE,CAAC,QAAQ,CAAC,CAAC,EAAE,GAAG,CAAC,EAAE,EAAE,UAAU,IAAI,CAAC,QAAQ,IAAI,EAAE,GAAG,IAAI,CAAC,CAAC;IACjI,CAAC;CACD;AAED,MAAM,QAAQ,GAAG,IAAI,cAAc,EAAE,CAAC;AACtC,MAAM,UAAU,aAAa,CAAC,GAAG,IAAe;IAC/C,QAAQ,CAAC,KAAK,CAAC,GAAG,IAAI,CAAC,CAAC;AACzB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/notebook/browser/notebookLogger.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n// import * as DOM from 'vs/base/browser/dom';\n\nclass NotebookLogger {\n\tconstructor() {\n\t\tthis._domFrameLog();\n\t}\n\tprivate _frameId = 0;\n\tprivate _domFrameLog() {\n\t\t// DOM.scheduleAtNextAnimationFrame(() => {\n\t\t// \tthis._frameId++;\n\n\t\t// \tthis._domFrameLog();\n\t\t// }, 1000000);\n\t}\n\n\tdebug(...args: unknown[]) {\n\t\tconst date = new Date();\n\t\tconsole.log(`${date.getSeconds()}:${date.getMilliseconds().toString().padStart(3, '0')}`, `frame #${this._frameId}: `, ...args);\n\t}\n}\n\nconst instance = new NotebookLogger();\nexport function notebookDebug(...args: unknown[]) {\n\tinstance.debug(...args);\n}\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "cc0c4eacfbc79707f73d2a4cc9738ff61063754b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_hormd234o = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_hormd234o();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+// import * as DOM from 'vs/base/browser/dom';
+class NotebookLogger {
+  constructor() {
+    /* istanbul ignore next */
+    cov_hormd234o().f[0]++;
+    cov_hormd234o().s[0]++;
+    this._domFrameLog();
+  }
+  _frameId =
+  /* istanbul ignore next */
+  (cov_hormd234o().s[1]++, 0);
+  _domFrameLog() {
+    /* istanbul ignore next */
+    cov_hormd234o().f[1]++;
+  } // DOM.scheduleAtNextAnimationFrame(() => {
+  // 	this._frameId++;
+  // 	this._domFrameLog();
+  // }, 1000000);
+  debug(...args) {
+    /* istanbul ignore next */
+    cov_hormd234o().f[2]++;
+    const date =
+    /* istanbul ignore next */
+    (cov_hormd234o().s[2]++, new Date());
+    /* istanbul ignore next */
+    cov_hormd234o().s[3]++;
+    console.log(`${date.getSeconds()}:${date.getMilliseconds().toString().padStart(3, '0')}`, `frame #${this._frameId}: `, ...args);
+  }
+}
+const instance =
+/* istanbul ignore next */
+(cov_hormd234o().s[4]++, new NotebookLogger());
+export function notebookDebug(...args) {
+  /* istanbul ignore next */
+  cov_hormd234o().f[3]++;
+  cov_hormd234o().s[5]++;
+  instance.debug(...args);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfaG9ybWQyMzRvIiwiYWN0dWFsQ292ZXJhZ2UiLCJOb3RlYm9va0xvZ2dlciIsImNvbnN0cnVjdG9yIiwiZiIsInMiLCJfZG9tRnJhbWVMb2ciLCJfZnJhbWVJZCIsImRlYnVnIiwiYXJncyIsImRhdGUiLCJEYXRlIiwiY29uc29sZSIsImxvZyIsImdldFNlY29uZHMiLCJnZXRNaWxsaXNlY29uZHMiLCJ0b1N0cmluZyIsInBhZFN0YXJ0IiwiaW5zdGFuY2UiLCJub3RlYm9va0RlYnVnIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9ub3RlYm9vay9icm93c2VyL25vdGVib29rTG9nZ2VyLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG4vLyBpbXBvcnQgKiBhcyBET00gZnJvbSAndnMvYmFzZS9icm93c2VyL2RvbSc7XG5cbmNsYXNzIE5vdGVib29rTG9nZ2VyIHtcblx0Y29uc3RydWN0b3IoKSB7XG5cdFx0dGhpcy5fZG9tRnJhbWVMb2coKTtcblx0fVxuXHRwcml2YXRlIF9mcmFtZUlkID0gMDtcblx0cHJpdmF0ZSBfZG9tRnJhbWVMb2coKSB7XG5cdFx0Ly8gRE9NLnNjaGVkdWxlQXROZXh0QW5pbWF0aW9uRnJhbWUoKCkgPT4ge1xuXHRcdC8vIFx0dGhpcy5fZnJhbWVJZCsrO1xuXG5cdFx0Ly8gXHR0aGlzLl9kb21GcmFtZUxvZygpO1xuXHRcdC8vIH0sIDEwMDAwMDApO1xuXHR9XG5cblx0ZGVidWcoLi4uYXJnczogdW5rbm93bltdKSB7XG5cdFx0Y29uc3QgZGF0ZSA9IG5ldyBEYXRlKCk7XG5cdFx0Y29uc29sZS5sb2coYCR7ZGF0ZS5nZXRTZWNvbmRzKCl9OiR7ZGF0ZS5nZXRNaWxsaXNlY29uZHMoKS50b1N0cmluZygpLnBhZFN0YXJ0KDMsICcwJyl9YCwgYGZyYW1lICMke3RoaXMuX2ZyYW1lSWR9OiBgLCAuLi5hcmdzKTtcblx0fVxufVxuXG5jb25zdCBpbnN0YW5jZSA9IG5ldyBOb3RlYm9va0xvZ2dlcigpO1xuZXhwb3J0IGZ1bmN0aW9uIG5vdGVib29rRGVidWcoLi4uYXJnczogdW5rbm93bltdKSB7XG5cdGluc3RhbmNlLmRlYnVnKC4uLmFyZ3MpO1xufVxuXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQWtCRTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBbEJGOzs7O0FBS0E7QUFFQSxNQUFNRSxjQUFjO0VBQ25CQyxZQUFBO0lBQUE7SUFBQUgsYUFBQSxHQUFBSSxDQUFBO0lBQUFKLGFBQUEsR0FBQUssQ0FBQTtJQUNDLElBQUksQ0FBQ0MsWUFBWSxFQUFFO0VBQ3BCO0VBQ1FDLFFBQVE7RUFBQTtFQUFBLENBQUFQLGFBQUEsR0FBQUssQ0FBQSxPQUFHLENBQUM7RUFDWkMsWUFBWUEsQ0FBQTtJQUFBO0lBQUFOLGFBQUEsR0FBQUksQ0FBQTtFQU1wQixDQUFDLENBTEE7RUFDQTtFQUVBO0VBQ0E7RUFHREksS0FBS0EsQ0FBQyxHQUFHQyxJQUFlO0lBQUE7SUFBQVQsYUFBQSxHQUFBSSxDQUFBO0lBQ3ZCLE1BQU1NLElBQUk7SUFBQTtJQUFBLENBQUFWLGFBQUEsR0FBQUssQ0FBQSxPQUFHLElBQUlNLElBQUksRUFBRTtJQUFDO0lBQUFYLGFBQUEsR0FBQUssQ0FBQTtJQUN4Qk8sT0FBTyxDQUFDQyxHQUFHLENBQUMsR0FBR0gsSUFBSSxDQUFDSSxVQUFVLEVBQUUsSUFBSUosSUFBSSxDQUFDSyxlQUFlLEVBQUUsQ0FBQ0MsUUFBUSxFQUFFLENBQUNDLFFBQVEsQ0FBQyxDQUFDLEVBQUUsR0FBRyxDQUFDLEVBQUUsRUFBRSxVQUFVLElBQUksQ0FBQ1YsUUFBUSxJQUFJLEVBQUUsR0FBR0UsSUFBSSxDQUFDO0VBQ2hJOztBQUdELE1BQU1TLFFBQVE7QUFBQTtBQUFBLENBQUFsQixhQUFBLEdBQUFLLENBQUEsT0FBRyxJQUFJSCxjQUFjLEVBQUU7QUFDckMsT0FBTSxTQUFVaUIsYUFBYUEsQ0FBQyxHQUFHVixJQUFlO0VBQUE7RUFBQVQsYUFBQSxHQUFBSSxDQUFBO0VBQUFKLGFBQUEsR0FBQUssQ0FBQTtFQUMvQ2EsUUFBUSxDQUFDVixLQUFLLENBQUMsR0FBR0MsSUFBSSxDQUFDO0FBQ3hCIiwiaWdub3JlTGlzdCI6W119

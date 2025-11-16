@@ -1,0 +1,217 @@
+63d93ace88e62a33f410abeeb9f136d5
+/* istanbul ignore next */
+function cov_x87q727k() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/outline/browser/outline.ts";
+  var hash = "2297964dfd8e23c42e8a37907adece6b85533176";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/outline/browser/outline.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 40
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 32
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 32
+        },
+        end: {
+          line: 11,
+          column: 80
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 31
+        },
+        end: {
+          line: 12,
+          column: 79
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 27
+        },
+        end: {
+          line: 13,
+          column: 100
+        }
+      },
+      "5": {
+        start: {
+          line: 14,
+          column: 31
+        },
+        end: {
+          line: 14,
+          column: 78
+        }
+      },
+      "6": {
+        start: {
+          line: 15,
+          column: 26
+        },
+        end: {
+          line: 15,
+          column: 67
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 1
+          },
+          end: {
+            line: 7,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 25
+          },
+          end: {
+            line: 9,
+            column: 1
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 9,
+            column: 3
+          },
+          end: {
+            line: 9,
+            column: 38
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 9,
+            column: 3
+          },
+          end: {
+            line: 9,
+            column: 15
+          }
+        }, {
+          start: {
+            line: 9,
+            column: 20
+          },
+          end: {
+            line: 9,
+            column: 37
+          }
+        }],
+        line: 9
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/outline/browser/outline.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,aAAa,EAAE,MAAM,sDAAsD,CAAC;AAerF,MAAM,KAAW,YAAY,CAE5B;AAFD,WAAiB,YAAY;IACf,eAAE,GAAG,SAAS,CAAC;AAC7B,CAAC,EAFgB,YAAY,KAAZ,YAAY,QAE5B;AAQD,mBAAmB;AAEnB,MAAM,CAAC,MAAM,gBAAgB,GAAG,IAAI,aAAa,CAAU,sBAAsB,EAAE,KAAK,CAAC,CAAC;AAC1F,MAAM,CAAC,MAAM,eAAe,GAAG,IAAI,aAAa,CAAU,sBAAsB,EAAE,KAAK,CAAC,CAAC;AACzF,MAAM,CAAC,MAAM,WAAW,GAAG,IAAI,aAAa,CAAmB,iBAAiB,sCAA8B,CAAC;AAC/G,MAAM,CAAC,MAAM,eAAe,GAAG,IAAI,aAAa,CAAU,qBAAqB,EAAE,KAAK,CAAC,CAAC;AACxF,MAAM,CAAC,MAAM,UAAU,GAAG,IAAI,aAAa,CAAU,gBAAgB,EAAE,IAAI,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/outline/browser/outline.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';\nimport type { IView } from '../../../common/views.js';\n\nexport const enum OutlineSortOrder {\n\tByPosition,\n\tByName,\n\tByKind\n}\n\nexport interface IOutlineViewState {\n\tfollowCursor: boolean;\n\tfilterOnType: boolean;\n\tsortBy: OutlineSortOrder;\n}\n\nexport namespace IOutlinePane {\n\texport const Id = 'outline';\n}\n\nexport interface IOutlinePane extends IView {\n\toutlineViewState: IOutlineViewState;\n\tcollapseAll(): void;\n\texpandAll(): void;\n}\n\n// --- context keys\n\nexport const ctxFollowsCursor = new RawContextKey<boolean>('outlineFollowsCursor', false);\nexport const ctxFilterOnType = new RawContextKey<boolean>('outlineFiltersOnType', false);\nexport const ctxSortMode = new RawContextKey<OutlineSortOrder>('outlineSortMode', OutlineSortOrder.ByPosition);\nexport const ctxAllCollapsed = new RawContextKey<boolean>('outlineAllCollapsed', false);\nexport const ctxFocused = new RawContextKey<boolean>('outlineFocused', true);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2297964dfd8e23c42e8a37907adece6b85533176"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_x87q727k = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_x87q727k();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { RawContextKey } from '../../../../platform/contextkey/common/contextkey.js';
+export var IOutlinePane;
+/* istanbul ignore next */
+cov_x87q727k().s[0]++;
+(function (IOutlinePane) {
+  /* istanbul ignore next */
+  cov_x87q727k().f[0]++;
+  cov_x87q727k().s[1]++;
+  IOutlinePane.Id = 'outline';
+})(
+/* istanbul ignore next */
+(cov_x87q727k().b[0][0]++, IOutlinePane) ||
+/* istanbul ignore next */
+(cov_x87q727k().b[0][1]++, IOutlinePane = {}));
+// --- context keys
+export const ctxFollowsCursor =
+/* istanbul ignore next */
+(cov_x87q727k().s[2]++, new RawContextKey('outlineFollowsCursor', false));
+export const ctxFilterOnType =
+/* istanbul ignore next */
+(cov_x87q727k().s[3]++, new RawContextKey('outlineFiltersOnType', false));
+export const ctxSortMode =
+/* istanbul ignore next */
+(cov_x87q727k().s[4]++, new RawContextKey('outlineSortMode', 0 /* OutlineSortOrder.ByPosition */));
+export const ctxAllCollapsed =
+/* istanbul ignore next */
+(cov_x87q727k().s[5]++, new RawContextKey('outlineAllCollapsed', false));
+export const ctxFocused =
+/* istanbul ignore next */
+(cov_x87q727k().s[6]++, new RawContextKey('outlineFocused', true));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJSYXdDb250ZXh0S2V5IiwiSU91dGxpbmVQYW5lIiwiY292X3g4N3E3MjdrIiwicyIsImYiLCJJZCIsImIiLCJjdHhGb2xsb3dzQ3Vyc29yIiwiY3R4RmlsdGVyT25UeXBlIiwiY3R4U29ydE1vZGUiLCJjdHhBbGxDb2xsYXBzZWQiLCJjdHhGb2N1c2VkIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9vdXRsaW5lL2Jyb3dzZXIvb3V0bGluZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgUmF3Q29udGV4dEtleSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbnRleHRrZXkvY29tbW9uL2NvbnRleHRrZXkuanMnO1xuaW1wb3J0IHR5cGUgeyBJVmlldyB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi92aWV3cy5qcyc7XG5cbmV4cG9ydCBjb25zdCBlbnVtIE91dGxpbmVTb3J0T3JkZXIge1xuXHRCeVBvc2l0aW9uLFxuXHRCeU5hbWUsXG5cdEJ5S2luZFxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElPdXRsaW5lVmlld1N0YXRlIHtcblx0Zm9sbG93Q3Vyc29yOiBib29sZWFuO1xuXHRmaWx0ZXJPblR5cGU6IGJvb2xlYW47XG5cdHNvcnRCeTogT3V0bGluZVNvcnRPcmRlcjtcbn1cblxuZXhwb3J0IG5hbWVzcGFjZSBJT3V0bGluZVBhbmUge1xuXHRleHBvcnQgY29uc3QgSWQgPSAnb3V0bGluZSc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU91dGxpbmVQYW5lIGV4dGVuZHMgSVZpZXcge1xuXHRvdXRsaW5lVmlld1N0YXRlOiBJT3V0bGluZVZpZXdTdGF0ZTtcblx0Y29sbGFwc2VBbGwoKTogdm9pZDtcblx0ZXhwYW5kQWxsKCk6IHZvaWQ7XG59XG5cbi8vIC0tLSBjb250ZXh0IGtleXNcblxuZXhwb3J0IGNvbnN0IGN0eEZvbGxvd3NDdXJzb3IgPSBuZXcgUmF3Q29udGV4dEtleTxib29sZWFuPignb3V0bGluZUZvbGxvd3NDdXJzb3InLCBmYWxzZSk7XG5leHBvcnQgY29uc3QgY3R4RmlsdGVyT25UeXBlID0gbmV3IFJhd0NvbnRleHRLZXk8Ym9vbGVhbj4oJ291dGxpbmVGaWx0ZXJzT25UeXBlJywgZmFsc2UpO1xuZXhwb3J0IGNvbnN0IGN0eFNvcnRNb2RlID0gbmV3IFJhd0NvbnRleHRLZXk8T3V0bGluZVNvcnRPcmRlcj4oJ291dGxpbmVTb3J0TW9kZScsIE91dGxpbmVTb3J0T3JkZXIuQnlQb3NpdGlvbik7XG5leHBvcnQgY29uc3QgY3R4QWxsQ29sbGFwc2VkID0gbmV3IFJhd0NvbnRleHRLZXk8Ym9vbGVhbj4oJ291dGxpbmVBbGxDb2xsYXBzZWQnLCBmYWxzZSk7XG5leHBvcnQgY29uc3QgY3R4Rm9jdXNlZCA9IG5ldyBSYXdDb250ZXh0S2V5PGJvb2xlYW4+KCdvdXRsaW5lRm9jdXNlZCcsIHRydWUpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxhQUFhLFFBQVEsc0RBQXNEO0FBZXBGLE9BQU0sSUFBV0MsWUFBWTtBQUU1QjtBQUFBQyxZQUFBLEdBQUFDLENBQUE7QUFGRCxXQUFpQkYsWUFBWTtFQUFBO0VBQUFDLFlBQUEsR0FBQUUsQ0FBQTtFQUFBRixZQUFBLEdBQUFDLENBQUE7RUFDZkYsWUFBQSxDQUFBSSxFQUFFLEdBQUcsU0FBUztBQUM1QixDQUFDO0FBRmdCO0FBQUEsQ0FBQUgsWUFBQSxHQUFBSSxDQUFBLFVBQUFMLFlBQVk7QUFBQTtBQUFBLENBQUFDLFlBQUEsR0FBQUksQ0FBQSxVQUFaTCxZQUFZO0FBVTdCO0FBRUEsT0FBTyxNQUFNTSxnQkFBZ0I7QUFBQTtBQUFBLENBQUFMLFlBQUEsR0FBQUMsQ0FBQSxPQUFHLElBQUlILGFBQWEsQ0FBVSxzQkFBc0IsRUFBRSxLQUFLLENBQUM7QUFDekYsT0FBTyxNQUFNUSxlQUFlO0FBQUE7QUFBQSxDQUFBTixZQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSCxhQUFhLENBQVUsc0JBQXNCLEVBQUUsS0FBSyxDQUFDO0FBQ3hGLE9BQU8sTUFBTVMsV0FBVztBQUFBO0FBQUEsQ0FBQVAsWUFBQSxHQUFBQyxDQUFBLE9BQUcsSUFBSUgsYUFBYSxDQUFtQixpQkFBaUIsc0NBQThCO0FBQzlHLE9BQU8sTUFBTVUsZUFBZTtBQUFBO0FBQUEsQ0FBQVIsWUFBQSxHQUFBQyxDQUFBLE9BQUcsSUFBSUgsYUFBYSxDQUFVLHFCQUFxQixFQUFFLEtBQUssQ0FBQztBQUN2RixPQUFPLE1BQU1XLFVBQVU7QUFBQTtBQUFBLENBQUFULFlBQUEsR0FBQUMsQ0FBQSxPQUFHLElBQUlILGFBQWEsQ0FBVSxnQkFBZ0IsRUFBRSxJQUFJLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

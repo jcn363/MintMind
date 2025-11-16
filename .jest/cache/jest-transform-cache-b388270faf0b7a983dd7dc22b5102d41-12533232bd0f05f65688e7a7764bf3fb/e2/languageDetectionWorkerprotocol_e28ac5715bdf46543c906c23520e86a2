@@ -1,0 +1,149 @@
+c4ac1ab38999721f66190343b661850b
+/* istanbul ignore next */
+function cov_11gmzc6xvm() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/browser/languageDetectionWorker.protocol.ts";
+  var hash = "712adb3fa35c8fd4a01f2dc57cfafd032eacf5c9";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/browser/languageDetectionWorker.protocol.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 26
+        },
+        end: {
+          line: 6,
+          column: 55
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 81
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 79
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 36
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 41
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/browser/languageDetectionWorker.protocol.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,MAAM,OAAgB,2BAA2B;IACzC,MAAM,CAAC,YAAY,GAAG,6BAA6B,CAAC;IACpD,MAAM,CAAC,UAAU,CAAC,YAA8B;QACtD,OAAO,YAAY,CAAC,UAAU,CAA8B,2BAA2B,CAAC,YAAY,CAAC,CAAC;IACvG,CAAC;IACM,MAAM,CAAC,UAAU,CAAC,YAAuC,EAAE,GAAgC;QACjG,YAAY,CAAC,UAAU,CAA8B,2BAA2B,CAAC,YAAY,EAAE,GAAG,CAAC,CAAC;IACrG,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/languageDetection/browser/languageDetectionWorker.protocol.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IWebWorkerClient, IWebWorkerServer } from '../../../../base/common/worker/webWorker.js';\n\nexport abstract class LanguageDetectionWorkerHost {\n\tpublic static CHANNEL_NAME = 'languageDetectionWorkerHost';\n\tpublic static getChannel(workerServer: IWebWorkerServer): LanguageDetectionWorkerHost {\n\t\treturn workerServer.getChannel<LanguageDetectionWorkerHost>(LanguageDetectionWorkerHost.CHANNEL_NAME);\n\t}\n\tpublic static setChannel(workerClient: IWebWorkerClient<unknown>, obj: LanguageDetectionWorkerHost): void {\n\t\tworkerClient.setChannel<LanguageDetectionWorkerHost>(LanguageDetectionWorkerHost.CHANNEL_NAME, obj);\n\t}\n\n\tabstract $getIndexJsUri(): Promise<string>;\n\tabstract $getLanguageId(languageIdOrExt: string | undefined): Promise<string | undefined>;\n\tabstract $sendTelemetryEvent(languages: string[], confidences: number[], timeSpent: number): Promise<void>;\n\tabstract $getRegexpModelUri(): Promise<string>;\n\tabstract $getModelJsonUri(): Promise<string>;\n\tabstract $getWeightsUri(): Promise<string>;\n}\n\nexport interface ILanguageDetectionWorker {\n\t$detectLanguage(uri: string, langBiases: Record<string, number> | undefined, preferHistory: boolean, supportedLangs?: string[]): Promise<string | undefined>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "712adb3fa35c8fd4a01f2dc57cfafd032eacf5c9"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_11gmzc6xvm = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_11gmzc6xvm();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class LanguageDetectionWorkerHost {
+  static CHANNEL_NAME =
+  /* istanbul ignore next */
+  (cov_11gmzc6xvm().s[0]++, 'languageDetectionWorkerHost');
+  static getChannel(workerServer) {
+    /* istanbul ignore next */
+    cov_11gmzc6xvm().f[0]++;
+    cov_11gmzc6xvm().s[1]++;
+    return workerServer.getChannel(LanguageDetectionWorkerHost.CHANNEL_NAME);
+  }
+  static setChannel(workerClient, obj) {
+    /* istanbul ignore next */
+    cov_11gmzc6xvm().f[1]++;
+    cov_11gmzc6xvm().s[2]++;
+    workerClient.setChannel(LanguageDetectionWorkerHost.CHANNEL_NAME, obj);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJMYW5ndWFnZURldGVjdGlvbldvcmtlckhvc3QiLCJDSEFOTkVMX05BTUUiLCJjb3ZfMTFnbXpjNnh2bSIsInMiLCJnZXRDaGFubmVsIiwid29ya2VyU2VydmVyIiwiZiIsInNldENoYW5uZWwiLCJ3b3JrZXJDbGllbnQiLCJvYmoiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9sYW5ndWFnZURldGVjdGlvbi9icm93c2VyL2xhbmd1YWdlRGV0ZWN0aW9uV29ya2VyLnByb3RvY29sLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBJV2ViV29ya2VyQ2xpZW50LCBJV2ViV29ya2VyU2VydmVyIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vd29ya2VyL3dlYldvcmtlci5qcyc7XG5cbmV4cG9ydCBhYnN0cmFjdCBjbGFzcyBMYW5ndWFnZURldGVjdGlvbldvcmtlckhvc3Qge1xuXHRwdWJsaWMgc3RhdGljIENIQU5ORUxfTkFNRSA9ICdsYW5ndWFnZURldGVjdGlvbldvcmtlckhvc3QnO1xuXHRwdWJsaWMgc3RhdGljIGdldENoYW5uZWwod29ya2VyU2VydmVyOiBJV2ViV29ya2VyU2VydmVyKTogTGFuZ3VhZ2VEZXRlY3Rpb25Xb3JrZXJIb3N0IHtcblx0XHRyZXR1cm4gd29ya2VyU2VydmVyLmdldENoYW5uZWw8TGFuZ3VhZ2VEZXRlY3Rpb25Xb3JrZXJIb3N0PihMYW5ndWFnZURldGVjdGlvbldvcmtlckhvc3QuQ0hBTk5FTF9OQU1FKTtcblx0fVxuXHRwdWJsaWMgc3RhdGljIHNldENoYW5uZWwod29ya2VyQ2xpZW50OiBJV2ViV29ya2VyQ2xpZW50PHVua25vd24+LCBvYmo6IExhbmd1YWdlRGV0ZWN0aW9uV29ya2VySG9zdCk6IHZvaWQge1xuXHRcdHdvcmtlckNsaWVudC5zZXRDaGFubmVsPExhbmd1YWdlRGV0ZWN0aW9uV29ya2VySG9zdD4oTGFuZ3VhZ2VEZXRlY3Rpb25Xb3JrZXJIb3N0LkNIQU5ORUxfTkFNRSwgb2JqKTtcblx0fVxuXG5cdGFic3RyYWN0ICRnZXRJbmRleEpzVXJpKCk6IFByb21pc2U8c3RyaW5nPjtcblx0YWJzdHJhY3QgJGdldExhbmd1YWdlSWQobGFuZ3VhZ2VJZE9yRXh0OiBzdHJpbmcgfCB1bmRlZmluZWQpOiBQcm9taXNlPHN0cmluZyB8IHVuZGVmaW5lZD47XG5cdGFic3RyYWN0ICRzZW5kVGVsZW1ldHJ5RXZlbnQobGFuZ3VhZ2VzOiBzdHJpbmdbXSwgY29uZmlkZW5jZXM6IG51bWJlcltdLCB0aW1lU3BlbnQ6IG51bWJlcik6IFByb21pc2U8dm9pZD47XG5cdGFic3RyYWN0ICRnZXRSZWdleHBNb2RlbFVyaSgpOiBQcm9taXNlPHN0cmluZz47XG5cdGFic3RyYWN0ICRnZXRNb2RlbEpzb25VcmkoKTogUHJvbWlzZTxzdHJpbmc+O1xuXHRhYnN0cmFjdCAkZ2V0V2VpZ2h0c1VyaSgpOiBQcm9taXNlPHN0cmluZz47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUxhbmd1YWdlRGV0ZWN0aW9uV29ya2VyIHtcblx0JGRldGVjdExhbmd1YWdlKHVyaTogc3RyaW5nLCBsYW5nQmlhc2VzOiBSZWNvcmQ8c3RyaW5nLCBudW1iZXI+IHwgdW5kZWZpbmVkLCBwcmVmZXJIaXN0b3J5OiBib29sZWFuLCBzdXBwb3J0ZWRMYW5ncz86IHN0cmluZ1tdKTogUHJvbWlzZTxzdHJpbmcgfCB1bmRlZmluZWQ+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU9BLE9BQU0sTUFBZ0JBLDJCQUEyQjtFQUN6QyxPQUFPQyxZQUFZO0VBQUE7RUFBQSxDQUFBQyxjQUFBLEdBQUFDLENBQUEsT0FBRyw2QkFBNkI7RUFDbkQsT0FBT0MsVUFBVUEsQ0FBQ0MsWUFBOEI7SUFBQTtJQUFBSCxjQUFBLEdBQUFJLENBQUE7SUFBQUosY0FBQSxHQUFBQyxDQUFBO0lBQ3RELE9BQU9FLFlBQVksQ0FBQ0QsVUFBVSxDQUE4QkosMkJBQTJCLENBQUNDLFlBQVksQ0FBQztFQUN0RztFQUNPLE9BQU9NLFVBQVVBLENBQUNDLFlBQXVDLEVBQUVDLEdBQWdDO0lBQUE7SUFBQVAsY0FBQSxHQUFBSSxDQUFBO0lBQUFKLGNBQUEsR0FBQUMsQ0FBQTtJQUNqR0ssWUFBWSxDQUFDRCxVQUFVLENBQThCUCwyQkFBMkIsQ0FBQ0MsWUFBWSxFQUFFUSxHQUFHLENBQUM7RUFDcEciLCJpZ25vcmVMaXN0IjpbXX0=

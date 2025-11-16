@@ -1,0 +1,62 @@
+2ea38c091697890a4f87cbd1f11a4aab
+/* istanbul ignore next */
+function cov_inztuc620() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/services/codeEditorService.ts";
+  var hash = "737efbe9acb42bb94e8d593ab5352be695f77775";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/services/codeEditorService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 34
+        },
+        end: {
+          line: 6,
+          column: 70
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/services/codeEditorService.ts",
+      mappings: "AAAA;;;gGAGgG;AAOhG,OAAO,EAAE,eAAe,EAAE,MAAM,yDAAyD,CAAC;AAI1F,MAAM,CAAC,MAAM,kBAAkB,GAAG,eAAe,CAAqB,mBAAmB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/services/codeEditorService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { ICodeEditor, IDiffEditor } from '../editorBrowser.js';\nimport { IDecorationRenderOptions } from '../../common/editorCommon.js';\nimport { IModelDecorationOptions, ITextModel } from '../../common/model.js';\nimport { ITextResourceEditorInput } from '../../../platform/editor/common/editor.js';\nimport { createDecorator } from '../../../platform/instantiation/common/instantiation.js';\nimport { URI } from '../../../base/common/uri.js';\nimport { IDisposable } from '../../../base/common/lifecycle.js';\n\nexport const ICodeEditorService = createDecorator<ICodeEditorService>('codeEditorService');\n\nexport interface ICodeEditorService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onWillCreateCodeEditor: Event<void>;\n\treadonly onCodeEditorAdd: Event<ICodeEditor>;\n\treadonly onCodeEditorRemove: Event<ICodeEditor>;\n\n\treadonly onWillCreateDiffEditor: Event<void>;\n\treadonly onDiffEditorAdd: Event<IDiffEditor>;\n\treadonly onDiffEditorRemove: Event<IDiffEditor>;\n\n\treadonly onDidChangeTransientModelProperty: Event<ITextModel>;\n\treadonly onDecorationTypeRegistered: Event<string>;\n\n\twillCreateCodeEditor(): void;\n\taddCodeEditor(editor: ICodeEditor): void;\n\tremoveCodeEditor(editor: ICodeEditor): void;\n\tlistCodeEditors(): readonly ICodeEditor[];\n\n\twillCreateDiffEditor(): void;\n\taddDiffEditor(editor: IDiffEditor): void;\n\tremoveDiffEditor(editor: IDiffEditor): void;\n\tlistDiffEditors(): readonly IDiffEditor[];\n\n\t/**\n\t * Returns the current focused code editor (if the focus is in the editor or in an editor widget) or null.\n\t */\n\tgetFocusedCodeEditor(): ICodeEditor | null;\n\n\tregisterDecorationType(description: string, key: string, options: IDecorationRenderOptions, parentTypeKey?: string, editor?: ICodeEditor): void;\n\tlistDecorationTypes(): string[];\n\tremoveDecorationType(key: string): void;\n\tresolveDecorationOptions(typeKey: string, writable: boolean): IModelDecorationOptions;\n\tresolveDecorationCSSRules(decorationTypeKey: string): CSSRuleList | null;\n\n\tsetModelProperty(resource: URI, key: string, value: unknown): void;\n\tgetModelProperty(resource: URI, key: string): unknown;\n\n\tsetTransientModelProperty(model: ITextModel, key: string, value: unknown): void;\n\tgetTransientModelProperty(model: ITextModel, key: string): unknown;\n\tgetTransientModelProperties(model: ITextModel): [string, unknown][] | undefined;\n\n\tgetActiveCodeEditor(): ICodeEditor | null;\n\topenCodeEditor(input: ITextResourceEditorInput, source: ICodeEditor | null, sideBySide?: boolean): Promise<ICodeEditor | null>;\n\tregisterCodeEditorOpenHandler(handler: ICodeEditorOpenHandler): IDisposable;\n}\n\nexport interface ICodeEditorOpenHandler {\n\t(input: ITextResourceEditorInput, source: ICodeEditor | null, sideBySide?: boolean): Promise<ICodeEditor | null>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "737efbe9acb42bb94e8d593ab5352be695f77775"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_inztuc620 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_inztuc620();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../platform/instantiation/common/instantiation.js';
+export const ICodeEditorService =
+/* istanbul ignore next */
+(cov_inztuc620().s[0]++, createDecorator('codeEditorService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQ29kZUVkaXRvclNlcnZpY2UiLCJjb3ZfaW56dHVjNjIwIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvZWRpdG9yL2Jyb3dzZXIvc2VydmljZXMvY29kZUVkaXRvclNlcnZpY2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgSUNvZGVFZGl0b3IsIElEaWZmRWRpdG9yIH0gZnJvbSAnLi4vZWRpdG9yQnJvd3Nlci5qcyc7XG5pbXBvcnQgeyBJRGVjb3JhdGlvblJlbmRlck9wdGlvbnMgfSBmcm9tICcuLi8uLi9jb21tb24vZWRpdG9yQ29tbW9uLmpzJztcbmltcG9ydCB7IElNb2RlbERlY29yYXRpb25PcHRpb25zLCBJVGV4dE1vZGVsIH0gZnJvbSAnLi4vLi4vY29tbW9uL21vZGVsLmpzJztcbmltcG9ydCB7IElUZXh0UmVzb3VyY2VFZGl0b3JJbnB1dCB9IGZyb20gJy4uLy4uLy4uL3BsYXRmb3JtL2VkaXRvci9jb21tb24vZWRpdG9yLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IElEaXNwb3NhYmxlIH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vbGlmZWN5Y2xlLmpzJztcblxuZXhwb3J0IGNvbnN0IElDb2RlRWRpdG9yU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJQ29kZUVkaXRvclNlcnZpY2U+KCdjb2RlRWRpdG9yU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElDb2RlRWRpdG9yU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRyZWFkb25seSBvbldpbGxDcmVhdGVDb2RlRWRpdG9yOiBFdmVudDx2b2lkPjtcblx0cmVhZG9ubHkgb25Db2RlRWRpdG9yQWRkOiBFdmVudDxJQ29kZUVkaXRvcj47XG5cdHJlYWRvbmx5IG9uQ29kZUVkaXRvclJlbW92ZTogRXZlbnQ8SUNvZGVFZGl0b3I+O1xuXG5cdHJlYWRvbmx5IG9uV2lsbENyZWF0ZURpZmZFZGl0b3I6IEV2ZW50PHZvaWQ+O1xuXHRyZWFkb25seSBvbkRpZmZFZGl0b3JBZGQ6IEV2ZW50PElEaWZmRWRpdG9yPjtcblx0cmVhZG9ubHkgb25EaWZmRWRpdG9yUmVtb3ZlOiBFdmVudDxJRGlmZkVkaXRvcj47XG5cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VUcmFuc2llbnRNb2RlbFByb3BlcnR5OiBFdmVudDxJVGV4dE1vZGVsPjtcblx0cmVhZG9ubHkgb25EZWNvcmF0aW9uVHlwZVJlZ2lzdGVyZWQ6IEV2ZW50PHN0cmluZz47XG5cblx0d2lsbENyZWF0ZUNvZGVFZGl0b3IoKTogdm9pZDtcblx0YWRkQ29kZUVkaXRvcihlZGl0b3I6IElDb2RlRWRpdG9yKTogdm9pZDtcblx0cmVtb3ZlQ29kZUVkaXRvcihlZGl0b3I6IElDb2RlRWRpdG9yKTogdm9pZDtcblx0bGlzdENvZGVFZGl0b3JzKCk6IHJlYWRvbmx5IElDb2RlRWRpdG9yW107XG5cblx0d2lsbENyZWF0ZURpZmZFZGl0b3IoKTogdm9pZDtcblx0YWRkRGlmZkVkaXRvcihlZGl0b3I6IElEaWZmRWRpdG9yKTogdm9pZDtcblx0cmVtb3ZlRGlmZkVkaXRvcihlZGl0b3I6IElEaWZmRWRpdG9yKTogdm9pZDtcblx0bGlzdERpZmZFZGl0b3JzKCk6IHJlYWRvbmx5IElEaWZmRWRpdG9yW107XG5cblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIGN1cnJlbnQgZm9jdXNlZCBjb2RlIGVkaXRvciAoaWYgdGhlIGZvY3VzIGlzIGluIHRoZSBlZGl0b3Igb3IgaW4gYW4gZWRpdG9yIHdpZGdldCkgb3IgbnVsbC5cblx0ICovXG5cdGdldEZvY3VzZWRDb2RlRWRpdG9yKCk6IElDb2RlRWRpdG9yIHwgbnVsbDtcblxuXHRyZWdpc3RlckRlY29yYXRpb25UeXBlKGRlc2NyaXB0aW9uOiBzdHJpbmcsIGtleTogc3RyaW5nLCBvcHRpb25zOiBJRGVjb3JhdGlvblJlbmRlck9wdGlvbnMsIHBhcmVudFR5cGVLZXk/OiBzdHJpbmcsIGVkaXRvcj86IElDb2RlRWRpdG9yKTogdm9pZDtcblx0bGlzdERlY29yYXRpb25UeXBlcygpOiBzdHJpbmdbXTtcblx0cmVtb3ZlRGVjb3JhdGlvblR5cGUoa2V5OiBzdHJpbmcpOiB2b2lkO1xuXHRyZXNvbHZlRGVjb3JhdGlvbk9wdGlvbnModHlwZUtleTogc3RyaW5nLCB3cml0YWJsZTogYm9vbGVhbik6IElNb2RlbERlY29yYXRpb25PcHRpb25zO1xuXHRyZXNvbHZlRGVjb3JhdGlvbkNTU1J1bGVzKGRlY29yYXRpb25UeXBlS2V5OiBzdHJpbmcpOiBDU1NSdWxlTGlzdCB8IG51bGw7XG5cblx0c2V0TW9kZWxQcm9wZXJ0eShyZXNvdXJjZTogVVJJLCBrZXk6IHN0cmluZywgdmFsdWU6IHVua25vd24pOiB2b2lkO1xuXHRnZXRNb2RlbFByb3BlcnR5KHJlc291cmNlOiBVUkksIGtleTogc3RyaW5nKTogdW5rbm93bjtcblxuXHRzZXRUcmFuc2llbnRNb2RlbFByb3BlcnR5KG1vZGVsOiBJVGV4dE1vZGVsLCBrZXk6IHN0cmluZywgdmFsdWU6IHVua25vd24pOiB2b2lkO1xuXHRnZXRUcmFuc2llbnRNb2RlbFByb3BlcnR5KG1vZGVsOiBJVGV4dE1vZGVsLCBrZXk6IHN0cmluZyk6IHVua25vd247XG5cdGdldFRyYW5zaWVudE1vZGVsUHJvcGVydGllcyhtb2RlbDogSVRleHRNb2RlbCk6IFtzdHJpbmcsIHVua25vd25dW10gfCB1bmRlZmluZWQ7XG5cblx0Z2V0QWN0aXZlQ29kZUVkaXRvcigpOiBJQ29kZUVkaXRvciB8IG51bGw7XG5cdG9wZW5Db2RlRWRpdG9yKGlucHV0OiBJVGV4dFJlc291cmNlRWRpdG9ySW5wdXQsIHNvdXJjZTogSUNvZGVFZGl0b3IgfCBudWxsLCBzaWRlQnlTaWRlPzogYm9vbGVhbik6IFByb21pc2U8SUNvZGVFZGl0b3IgfCBudWxsPjtcblx0cmVnaXN0ZXJDb2RlRWRpdG9yT3BlbkhhbmRsZXIoaGFuZGxlcjogSUNvZGVFZGl0b3JPcGVuSGFuZGxlcik6IElEaXNwb3NhYmxlO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb2RlRWRpdG9yT3BlbkhhbmRsZXIge1xuXHQoaW5wdXQ6IElUZXh0UmVzb3VyY2VFZGl0b3JJbnB1dCwgc291cmNlOiBJQ29kZUVkaXRvciB8IG51bGwsIHNpZGVCeVNpZGU/OiBib29sZWFuKTogUHJvbWlzZTxJQ29kZUVkaXRvciB8IG51bGw+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFVQSxTQUFTQSxlQUFlLFFBQVEseURBQXlEO0FBSXpGLE9BQU8sTUFBTUMsa0JBQWtCO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFxQixtQkFBbUIsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

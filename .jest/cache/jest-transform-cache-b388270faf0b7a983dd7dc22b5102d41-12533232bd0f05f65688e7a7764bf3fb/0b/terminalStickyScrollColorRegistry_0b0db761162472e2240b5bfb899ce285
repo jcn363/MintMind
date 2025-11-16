@@ -1,0 +1,101 @@
+7717e92b43f010e2ce4e12961d26ecd6
+/* istanbul ignore next */
+function cov_2333no34i5() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminalStickyScrollColorRegistry.ts";
+  var hash = "b0c8a910f0a64db97bbf90009c5f87c0ba878f36";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminalStickyScrollColorRegistry.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 46
+        },
+        end: {
+          line: 7,
+          column: 215
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 51
+        },
+        end: {
+          line: 13,
+          column: 135
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 19,
+          column: 104
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminalStickyScrollColorRegistry.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AACjD,OAAO,EAAE,aAAa,EAAE,MAAM,oDAAoD,CAAC;AAEnF,MAAM,CAAC,MAAM,8BAA8B,GAAG,aAAa,CAAC,iCAAiC,EAAE,IAAI,EAAE,QAAQ,CAAC,iCAAiC,EAAE,oEAAoE,CAAC,CAAC,CAAC;AAExN,MAAM,CAAC,MAAM,mCAAmC,GAAG,aAAa,CAAC,sCAAsC,EAAE;IACxG,IAAI,EAAE,SAAS;IACf,KAAK,EAAE,SAAS;IAChB,MAAM,EAAE,SAAS;IACjB,OAAO,EAAE,SAAS;CAClB,EAAE,QAAQ,CAAC,sCAAsC,EAAE,iFAAiF,CAAC,CAAC,CAAC;AAExI,aAAa,CAAC,6BAA6B,EAAE;IAC5C,IAAI,EAAE,IAAI;IACV,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,SAAS;IACjB,OAAO,EAAE,SAAS;CAClB,EAAE,QAAQ,CAAC,6BAA6B,EAAE,0DAA0D,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminalStickyScrollColorRegistry.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize } from '../../../../../nls.js';\nimport { registerColor } from '../../../../../platform/theme/common/colorUtils.js';\n\nexport const terminalStickyScrollBackground = registerColor('terminalStickyScroll.background', null, localize('terminalStickyScroll.background', 'The background color of the sticky scroll overlay in the terminal.'));\n\nexport const terminalStickyScrollHoverBackground = registerColor('terminalStickyScrollHover.background', {\n\tdark: '#2A2D2E',\n\tlight: '#F0F0F0',\n\thcDark: '#E48B39',\n\thcLight: '#0f4a85'\n}, localize('terminalStickyScrollHover.background', 'The background color of the sticky scroll overlay in the terminal when hovered.'));\n\nregisterColor('terminalStickyScroll.border', {\n\tdark: null,\n\tlight: null,\n\thcDark: '#6fc3df',\n\thcLight: '#0f4a85'\n}, localize('terminalStickyScroll.border', 'The border of the sticky scroll overlay in the terminal.'));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b0c8a910f0a64db97bbf90009c5f87c0ba878f36"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2333no34i5 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2333no34i5();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../../nls.js';
+import { registerColor } from '../../../../../platform/theme/common/colorUtils.js';
+export const terminalStickyScrollBackground =
+/* istanbul ignore next */
+(cov_2333no34i5().s[0]++, registerColor('terminalStickyScroll.background', null, localize('terminalStickyScroll.background', 'The background color of the sticky scroll overlay in the terminal.')));
+export const terminalStickyScrollHoverBackground =
+/* istanbul ignore next */
+(cov_2333no34i5().s[1]++, registerColor('terminalStickyScrollHover.background', {
+  dark: '#2A2D2E',
+  light: '#F0F0F0',
+  hcDark: '#E48B39',
+  hcLight: '#0f4a85'
+}, localize('terminalStickyScrollHover.background', 'The background color of the sticky scroll overlay in the terminal when hovered.')));
+/* istanbul ignore next */
+cov_2333no34i5().s[2]++;
+registerColor('terminalStickyScroll.border', {
+  dark: null,
+  light: null,
+  hcDark: '#6fc3df',
+  hcLight: '#0f4a85'
+}, localize('terminalStickyScroll.border', 'The border of the sticky scroll overlay in the terminal.'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjMzM25vMzRpNSIsImFjdHVhbENvdmVyYWdlIiwibG9jYWxpemUiLCJyZWdpc3RlckNvbG9yIiwidGVybWluYWxTdGlja3lTY3JvbGxCYWNrZ3JvdW5kIiwicyIsInRlcm1pbmFsU3RpY2t5U2Nyb2xsSG92ZXJCYWNrZ3JvdW5kIiwiZGFyayIsImxpZ2h0IiwiaGNEYXJrIiwiaGNMaWdodCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWxDb250cmliL3N0aWNreVNjcm9sbC9icm93c2VyL3Rlcm1pbmFsU3RpY2t5U2Nyb2xsQ29sb3JSZWdpc3RyeS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJDb2xvciB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL3RoZW1lL2NvbW1vbi9jb2xvclV0aWxzLmpzJztcblxuZXhwb3J0IGNvbnN0IHRlcm1pbmFsU3RpY2t5U2Nyb2xsQmFja2dyb3VuZCA9IHJlZ2lzdGVyQ29sb3IoJ3Rlcm1pbmFsU3RpY2t5U2Nyb2xsLmJhY2tncm91bmQnLCBudWxsLCBsb2NhbGl6ZSgndGVybWluYWxTdGlja3lTY3JvbGwuYmFja2dyb3VuZCcsICdUaGUgYmFja2dyb3VuZCBjb2xvciBvZiB0aGUgc3RpY2t5IHNjcm9sbCBvdmVybGF5IGluIHRoZSB0ZXJtaW5hbC4nKSk7XG5cbmV4cG9ydCBjb25zdCB0ZXJtaW5hbFN0aWNreVNjcm9sbEhvdmVyQmFja2dyb3VuZCA9IHJlZ2lzdGVyQ29sb3IoJ3Rlcm1pbmFsU3RpY2t5U2Nyb2xsSG92ZXIuYmFja2dyb3VuZCcsIHtcblx0ZGFyazogJyMyQTJEMkUnLFxuXHRsaWdodDogJyNGMEYwRjAnLFxuXHRoY0Rhcms6ICcjRTQ4QjM5Jyxcblx0aGNMaWdodDogJyMwZjRhODUnXG59LCBsb2NhbGl6ZSgndGVybWluYWxTdGlja3lTY3JvbGxIb3Zlci5iYWNrZ3JvdW5kJywgJ1RoZSBiYWNrZ3JvdW5kIGNvbG9yIG9mIHRoZSBzdGlja3kgc2Nyb2xsIG92ZXJsYXkgaW4gdGhlIHRlcm1pbmFsIHdoZW4gaG92ZXJlZC4nKSk7XG5cbnJlZ2lzdGVyQ29sb3IoJ3Rlcm1pbmFsU3RpY2t5U2Nyb2xsLmJvcmRlcicsIHtcblx0ZGFyazogbnVsbCxcblx0bGlnaHQ6IG51bGwsXG5cdGhjRGFyazogJyM2ZmMzZGYnLFxuXHRoY0xpZ2h0OiAnIzBmNGE4NSdcbn0sIGxvY2FsaXplKCd0ZXJtaW5hbFN0aWNreVNjcm9sbC5ib3JkZXInLCAnVGhlIGJvcmRlciBvZiB0aGUgc3RpY2t5IHNjcm9sbCBvdmVybGF5IGluIHRoZSB0ZXJtaW5hbC4nKSk7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CUTtJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbkJSOzs7O0FBS0EsU0FBU0UsUUFBUSxRQUFRLHVCQUF1QjtBQUNoRCxTQUFTQyxhQUFhLFFBQVEsb0RBQW9EO0FBRWxGLE9BQU8sTUFBTUMsOEJBQThCO0FBQUE7QUFBQSxDQUFBSixjQUFBLEdBQUFLLENBQUEsT0FBR0YsYUFBYSxDQUFDLGlDQUFpQyxFQUFFLElBQUksRUFBRUQsUUFBUSxDQUFDLGlDQUFpQyxFQUFFLG9FQUFvRSxDQUFDLENBQUM7QUFFdk4sT0FBTyxNQUFNSSxtQ0FBbUM7QUFBQTtBQUFBLENBQUFOLGNBQUEsR0FBQUssQ0FBQSxPQUFHRixhQUFhLENBQUMsc0NBQXNDLEVBQUU7RUFDeEdJLElBQUksRUFBRSxTQUFTO0VBQ2ZDLEtBQUssRUFBRSxTQUFTO0VBQ2hCQyxNQUFNLEVBQUUsU0FBUztFQUNqQkMsT0FBTyxFQUFFO0NBQ1QsRUFBRVIsUUFBUSxDQUFDLHNDQUFzQyxFQUFFLGlGQUFpRixDQUFDLENBQUM7QUFBQztBQUFBRixjQUFBLEdBQUFLLENBQUE7QUFFeElGLGFBQWEsQ0FBQyw2QkFBNkIsRUFBRTtFQUM1Q0ksSUFBSSxFQUFFLElBQUk7RUFDVkMsS0FBSyxFQUFFLElBQUk7RUFDWEMsTUFBTSxFQUFFLFNBQVM7RUFDakJDLE9BQU8sRUFBRTtDQUNULEVBQUVSLFFBQVEsQ0FBQyw2QkFBNkIsRUFBRSwwREFBMEQsQ0FBQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

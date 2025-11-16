@@ -1,0 +1,73 @@
+dd76f7849d65b8d89ed30beca4ce8f88
+/* istanbul ignore next */
+function cov_loo6zpl24() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration.ts";
+  var hash = "2ad6b454dc270683a5456c11aa07e3040aca0800";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 50
+        },
+        end: {
+          line: 17,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AAajD,MAAM,CAAC,MAAM,kCAAkC,GAAoD;IAClG,sIAAqE,EAAE;QACtE,mBAAmB,EAAE,QAAQ,CAAC,0DAA0D,EAAE,8HAA8H,CAAC;QACzN,IAAI,EAAE,SAAS;QACf,OAAO,EAAE,KAAK;KACd;IACD,wIAAsE,EAAE;QACvE,mBAAmB,EAAE,QAAQ,CAAC,2DAA2D,EAAE,gEAAgE,CAAC;QAC5J,IAAI,EAAE,SAAS;QACf,OAAO,EAAE,KAAK;KACd;CACD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/accessibility/common/terminalAccessibilityConfiguration.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IStringDictionary } from '../../../../../base/common/collections.js';\nimport { localize } from '../../../../../nls.js';\nimport type { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.js';\n\nexport const enum TerminalAccessibilitySettingId {\n\tAccessibleViewPreserveCursorPosition = 'terminal.integrated.accessibleViewPreserveCursorPosition',\n\tAccessibleViewFocusOnCommandExecution = 'terminal.integrated.accessibleViewFocusOnCommandExecution',\n}\n\nexport interface ITerminalAccessibilityConfiguration {\n\taccessibleViewPreserveCursorPosition: boolean;\n\taccessibleViewFocusOnCommandExecution: number;\n}\n\nexport const terminalAccessibilityConfiguration: IStringDictionary<IConfigurationPropertySchema> = {\n\t[TerminalAccessibilitySettingId.AccessibleViewPreserveCursorPosition]: {\n\t\tmarkdownDescription: localize('terminal.integrated.accessibleViewPreserveCursorPosition', \"Preserve the cursor position on reopen of the terminal's accessible view rather than setting it to the bottom of the buffer.\"),\n\t\ttype: 'boolean',\n\t\tdefault: false\n\t},\n\t[TerminalAccessibilitySettingId.AccessibleViewFocusOnCommandExecution]: {\n\t\tmarkdownDescription: localize('terminal.integrated.accessibleViewFocusOnCommandExecution', \"Focus the terminal accessible view when a command is executed.\"),\n\t\ttype: 'boolean',\n\t\tdefault: false\n\t},\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2ad6b454dc270683a5456c11aa07e3040aca0800"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_loo6zpl24 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_loo6zpl24();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../../nls.js';
+export const terminalAccessibilityConfiguration =
+/* istanbul ignore next */
+(cov_loo6zpl24().s[0]++, {
+  ["terminal.integrated.accessibleViewPreserveCursorPosition" /* TerminalAccessibilitySettingId.AccessibleViewPreserveCursorPosition */]: {
+    markdownDescription: localize('terminal.integrated.accessibleViewPreserveCursorPosition', "Preserve the cursor position on reopen of the terminal's accessible view rather than setting it to the bottom of the buffer."),
+    type: 'boolean',
+    default: false
+  },
+  ["terminal.integrated.accessibleViewFocusOnCommandExecution" /* TerminalAccessibilitySettingId.AccessibleViewFocusOnCommandExecution */]: {
+    markdownDescription: localize('terminal.integrated.accessibleViewFocusOnCommandExecution', "Focus the terminal accessible view when a command is executed."),
+    type: 'boolean',
+    default: false
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfbG9vNnpwbDI0IiwiYWN0dWFsQ292ZXJhZ2UiLCJsb2NhbGl6ZSIsInRlcm1pbmFsQWNjZXNzaWJpbGl0eUNvbmZpZ3VyYXRpb24iLCJzIiwibWFya2Rvd25EZXNjcmlwdGlvbiIsInR5cGUiLCJkZWZhdWx0Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvYWNjZXNzaWJpbGl0eS9jb21tb24vdGVybWluYWxBY2Nlc3NpYmlsaXR5Q29uZmlndXJhdGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHR5cGUgeyBJU3RyaW5nRGljdGlvbmFyeSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NvbGxlY3Rpb25zLmpzJztcbmltcG9ydCB7IGxvY2FsaXplIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vbmxzLmpzJztcbmltcG9ydCB0eXBlIHsgSUNvbmZpZ3VyYXRpb25Qcm9wZXJ0eVNjaGVtYSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbmZpZ3VyYXRpb24vY29tbW9uL2NvbmZpZ3VyYXRpb25SZWdpc3RyeS5qcyc7XG5cbmV4cG9ydCBjb25zdCBlbnVtIFRlcm1pbmFsQWNjZXNzaWJpbGl0eVNldHRpbmdJZCB7XG5cdEFjY2Vzc2libGVWaWV3UHJlc2VydmVDdXJzb3JQb3NpdGlvbiA9ICd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmFjY2Vzc2libGVWaWV3UHJlc2VydmVDdXJzb3JQb3NpdGlvbicsXG5cdEFjY2Vzc2libGVWaWV3Rm9jdXNPbkNvbW1hbmRFeGVjdXRpb24gPSAndGVybWluYWwuaW50ZWdyYXRlZC5hY2Nlc3NpYmxlVmlld0ZvY3VzT25Db21tYW5kRXhlY3V0aW9uJyxcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVGVybWluYWxBY2Nlc3NpYmlsaXR5Q29uZmlndXJhdGlvbiB7XG5cdGFjY2Vzc2libGVWaWV3UHJlc2VydmVDdXJzb3JQb3NpdGlvbjogYm9vbGVhbjtcblx0YWNjZXNzaWJsZVZpZXdGb2N1c09uQ29tbWFuZEV4ZWN1dGlvbjogbnVtYmVyO1xufVxuXG5leHBvcnQgY29uc3QgdGVybWluYWxBY2Nlc3NpYmlsaXR5Q29uZmlndXJhdGlvbjogSVN0cmluZ0RpY3Rpb25hcnk8SUNvbmZpZ3VyYXRpb25Qcm9wZXJ0eVNjaGVtYT4gPSB7XG5cdFtUZXJtaW5hbEFjY2Vzc2liaWxpdHlTZXR0aW5nSWQuQWNjZXNzaWJsZVZpZXdQcmVzZXJ2ZUN1cnNvclBvc2l0aW9uXToge1xuXHRcdG1hcmtkb3duRGVzY3JpcHRpb246IGxvY2FsaXplKCd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmFjY2Vzc2libGVWaWV3UHJlc2VydmVDdXJzb3JQb3NpdGlvbicsIFwiUHJlc2VydmUgdGhlIGN1cnNvciBwb3NpdGlvbiBvbiByZW9wZW4gb2YgdGhlIHRlcm1pbmFsJ3MgYWNjZXNzaWJsZSB2aWV3IHJhdGhlciB0aGFuIHNldHRpbmcgaXQgdG8gdGhlIGJvdHRvbSBvZiB0aGUgYnVmZmVyLlwiKSxcblx0XHR0eXBlOiAnYm9vbGVhbicsXG5cdFx0ZGVmYXVsdDogZmFsc2Vcblx0fSxcblx0W1Rlcm1pbmFsQWNjZXNzaWJpbGl0eVNldHRpbmdJZC5BY2Nlc3NpYmxlVmlld0ZvY3VzT25Db21tYW5kRXhlY3V0aW9uXToge1xuXHRcdG1hcmtkb3duRGVzY3JpcHRpb246IGxvY2FsaXplKCd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmFjY2Vzc2libGVWaWV3Rm9jdXNPbkNvbW1hbmRFeGVjdXRpb24nLCBcIkZvY3VzIHRoZSB0ZXJtaW5hbCBhY2Nlc3NpYmxlIHZpZXcgd2hlbiBhIGNvbW1hbmQgaXMgZXhlY3V0ZWQuXCIpLFxuXHRcdHR5cGU6ICdib29sZWFuJyxcblx0XHRkZWZhdWx0OiBmYWxzZVxuXHR9LFxufTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUE2QkU7SUFBQUEsYUFBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsYUFBQTtBQTdCRjs7OztBQU1BLFNBQVNFLFFBQVEsUUFBUSx1QkFBdUI7QUFhaEQsT0FBTyxNQUFNQyxrQ0FBa0M7QUFBQTtBQUFBLENBQUFILGFBQUEsR0FBQUksQ0FBQSxPQUFvRDtFQUNsRyx3SUFBdUU7SUFDdEVDLG1CQUFtQixFQUFFSCxRQUFRLENBQUMsMERBQTBELEVBQUUsOEhBQThILENBQUM7SUFDek5JLElBQUksRUFBRSxTQUFTO0lBQ2ZDLE9BQU8sRUFBRTtHQUNUO0VBQ0QsMElBQXdFO0lBQ3ZFRixtQkFBbUIsRUFBRUgsUUFBUSxDQUFDLDJEQUEyRCxFQUFFLGdFQUFnRSxDQUFDO0lBQzVKSSxJQUFJLEVBQUUsU0FBUztJQUNmQyxPQUFPLEVBQUU7O0NBRVYiLCJpZ25vcmVMaXN0IjpbXX0=

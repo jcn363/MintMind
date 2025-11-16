@@ -1,0 +1,268 @@
+1cbbda7be8565aacbb350fcce99036d1
+/* istanbul ignore next */
+function cov_14jr2oenql() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/common/ime.ts";
+  var hash = "75e8e26b049c76ac85ca70f7143a0e0f00038efe";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/common/ime.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 19
+        },
+        end: {
+          line: 7,
+          column: 32
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 18
+        },
+        end: {
+          line: 8,
+          column: 41
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 15
+        },
+        end: {
+          line: 9,
+          column: 19
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 29
+        }
+      },
+      "4": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 29
+        }
+      },
+      "5": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 33
+        }
+      },
+      "6": {
+        start: {
+          line: 24,
+          column: 8
+        },
+        end: {
+          line: 24,
+          column: 30
+        }
+      },
+      "7": {
+        start: {
+          line: 25,
+          column: 8
+        },
+        end: {
+          line: 25,
+          column: 33
+        }
+      },
+      "8": {
+        start: {
+          line: 28,
+          column: 19
+        },
+        end: {
+          line: 28,
+          column: 32
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 18
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 13
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        line: 16
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 23,
+            column: 4
+          },
+          end: {
+            line: 23,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 23,
+            column: 14
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        },
+        line: 23
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/common/ime.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAE,MAAM,YAAY,CAAC;AAErC,MAAM,OAAO,OAAO;IAEF,YAAY,GAAG,IAAI,OAAO,EAAQ,CAAC;IACpC,WAAW,GAAG,IAAI,CAAC,YAAY,CAAC,KAAK,CAAC;IAE9C,QAAQ,GAAG,IAAI,CAAC;IAExB,IAAW,OAAO;QACjB,OAAO,IAAI,CAAC,QAAQ,CAAC;IACtB,CAAC;IAED;;OAEG;IACI,MAAM;QACZ,IAAI,CAAC,QAAQ,GAAG,IAAI,CAAC;QACrB,IAAI,CAAC,YAAY,CAAC,IAAI,EAAE,CAAC;IAC1B,CAAC;IAED;;OAEG;IACI,OAAO;QACb,IAAI,CAAC,QAAQ,GAAG,KAAK,CAAC;QACtB,IAAI,CAAC,YAAY,CAAC,IAAI,EAAE,CAAC;IAC1B,CAAC;CACD;AAED,MAAM,CAAC,MAAM,GAAG,GAAG,IAAI,OAAO,EAAE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/common/ime.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Emitter } from './event.js';\n\nexport class IMEImpl {\n\n\tprivate readonly _onDidChange = new Emitter<void>();\n\tpublic readonly onDidChange = this._onDidChange.event;\n\n\tprivate _enabled = true;\n\n\tpublic get enabled() {\n\t\treturn this._enabled;\n\t}\n\n\t/**\n\t * Enable IME\n\t */\n\tpublic enable(): void {\n\t\tthis._enabled = true;\n\t\tthis._onDidChange.fire();\n\t}\n\n\t/**\n\t * Disable IME\n\t */\n\tpublic disable(): void {\n\t\tthis._enabled = false;\n\t\tthis._onDidChange.fire();\n\t}\n}\n\nexport const IME = new IMEImpl();\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "75e8e26b049c76ac85ca70f7143a0e0f00038efe"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_14jr2oenql = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_14jr2oenql();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Emitter } from './event.js';
+export class IMEImpl {
+  _onDidChange =
+  /* istanbul ignore next */
+  (cov_14jr2oenql().s[0]++, new Emitter());
+  onDidChange =
+  /* istanbul ignore next */
+  (cov_14jr2oenql().s[1]++, this._onDidChange.event);
+  _enabled =
+  /* istanbul ignore next */
+  (cov_14jr2oenql().s[2]++, true);
+  get enabled() {
+    /* istanbul ignore next */
+    cov_14jr2oenql().f[0]++;
+    cov_14jr2oenql().s[3]++;
+    return this._enabled;
+  }
+  /**
+   * Enable IME
+   */
+  enable() {
+    /* istanbul ignore next */
+    cov_14jr2oenql().f[1]++;
+    cov_14jr2oenql().s[4]++;
+    this._enabled = true;
+    /* istanbul ignore next */
+    cov_14jr2oenql().s[5]++;
+    this._onDidChange.fire();
+  }
+  /**
+   * Disable IME
+   */
+  disable() {
+    /* istanbul ignore next */
+    cov_14jr2oenql().f[2]++;
+    cov_14jr2oenql().s[6]++;
+    this._enabled = false;
+    /* istanbul ignore next */
+    cov_14jr2oenql().s[7]++;
+    this._onDidChange.fire();
+  }
+}
+export const IME =
+/* istanbul ignore next */
+(cov_14jr2oenql().s[8]++, new IMEImpl());
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTRqcjJvZW5xbCIsImFjdHVhbENvdmVyYWdlIiwiRW1pdHRlciIsIklNRUltcGwiLCJfb25EaWRDaGFuZ2UiLCJzIiwib25EaWRDaGFuZ2UiLCJldmVudCIsIl9lbmFibGVkIiwiZW5hYmxlZCIsImYiLCJlbmFibGUiLCJmaXJlIiwiZGlzYWJsZSIsIklNRSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvYmFzZS9jb21tb24vaW1lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFbWl0dGVyIH0gZnJvbSAnLi9ldmVudC5qcyc7XG5cbmV4cG9ydCBjbGFzcyBJTUVJbXBsIHtcblxuXHRwcml2YXRlIHJlYWRvbmx5IF9vbkRpZENoYW5nZSA9IG5ldyBFbWl0dGVyPHZvaWQ+KCk7XG5cdHB1YmxpYyByZWFkb25seSBvbkRpZENoYW5nZSA9IHRoaXMuX29uRGlkQ2hhbmdlLmV2ZW50O1xuXG5cdHByaXZhdGUgX2VuYWJsZWQgPSB0cnVlO1xuXG5cdHB1YmxpYyBnZXQgZW5hYmxlZCgpIHtcblx0XHRyZXR1cm4gdGhpcy5fZW5hYmxlZDtcblx0fVxuXG5cdC8qKlxuXHQgKiBFbmFibGUgSU1FXG5cdCAqL1xuXHRwdWJsaWMgZW5hYmxlKCk6IHZvaWQge1xuXHRcdHRoaXMuX2VuYWJsZWQgPSB0cnVlO1xuXHRcdHRoaXMuX29uRGlkQ2hhbmdlLmZpcmUoKTtcblx0fVxuXG5cdC8qKlxuXHQgKiBEaXNhYmxlIElNRVxuXHQgKi9cblx0cHVibGljIGRpc2FibGUoKTogdm9pZCB7XG5cdFx0dGhpcy5fZW5hYmxlZCA9IGZhbHNlO1xuXHRcdHRoaXMuX29uRGlkQ2hhbmdlLmZpcmUoKTtcblx0fVxufVxuXG5leHBvcnQgY29uc3QgSU1FID0gbmV3IElNRUltcGwoKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFxQmM7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXJCZDs7OztBQUtBLFNBQVNFLE9BQU8sUUFBUSxZQUFZO0FBRXBDLE9BQU0sTUFBT0MsT0FBTztFQUVGQyxZQUFZO0VBQUE7RUFBQSxDQUFBSixjQUFBLEdBQUFLLENBQUEsT0FBRyxJQUFJSCxPQUFPLEVBQVE7RUFDbkNJLFdBQVc7RUFBQTtFQUFBLENBQUFOLGNBQUEsR0FBQUssQ0FBQSxPQUFHLElBQUksQ0FBQ0QsWUFBWSxDQUFDRyxLQUFLO0VBRTdDQyxRQUFRO0VBQUE7RUFBQSxDQUFBUixjQUFBLEdBQUFLLENBQUEsT0FBRyxJQUFJO0VBRXZCLElBQVdJLE9BQU9BLENBQUE7SUFBQTtJQUFBVCxjQUFBLEdBQUFVLENBQUE7SUFBQVYsY0FBQSxHQUFBSyxDQUFBO0lBQ2pCLE9BQU8sSUFBSSxDQUFDRyxRQUFRO0VBQ3JCO0VBRUE7OztFQUdPRyxNQUFNQSxDQUFBO0lBQUE7SUFBQVgsY0FBQSxHQUFBVSxDQUFBO0lBQUFWLGNBQUEsR0FBQUssQ0FBQTtJQUNaLElBQUksQ0FBQ0csUUFBUSxHQUFHLElBQUk7SUFBQztJQUFBUixjQUFBLEdBQUFLLENBQUE7SUFDckIsSUFBSSxDQUFDRCxZQUFZLENBQUNRLElBQUksRUFBRTtFQUN6QjtFQUVBOzs7RUFHT0MsT0FBT0EsQ0FBQTtJQUFBO0lBQUFiLGNBQUEsR0FBQVUsQ0FBQTtJQUFBVixjQUFBLEdBQUFLLENBQUE7SUFDYixJQUFJLENBQUNHLFFBQVEsR0FBRyxLQUFLO0lBQUM7SUFBQVIsY0FBQSxHQUFBSyxDQUFBO0lBQ3RCLElBQUksQ0FBQ0QsWUFBWSxDQUFDUSxJQUFJLEVBQUU7RUFDekI7O0FBR0QsT0FBTyxNQUFNRSxHQUFHO0FBQUE7QUFBQSxDQUFBZCxjQUFBLEdBQUFLLENBQUEsT0FBRyxJQUFJRixPQUFPLEVBQUUiLCJpZ25vcmVMaXN0IjpbXX0=

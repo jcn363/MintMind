@@ -1,0 +1,79 @@
+9dcd78751c1556a17a49916f3abd2b9c
+/* istanbul ignore next */
+function cov_1hp7uxf9tt() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/test/common/testServices.ts";
+  var hash = "017c86c37ff20813177f68497d237a8b6473d6b6";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/test/common/testServices.ts",
+    statementMap: {},
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 40
+          },
+          end: {
+            line: 7,
+            column: 43
+          }
+        },
+        line: 7
+      }
+    },
+    branchMap: {},
+    s: {},
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/test/common/testServices.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,MAAM,OAAO,sBAAsB;IAClC,aAAa,CAAY;IAEzB,KAAK,CAAC,KAAK,CAAC,QAAa,EAAE,MAAoB,EAAE,IAAa,IAAmB,CAAC;CAClF",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/test/common/testServices.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../../base/common/uri.js';\nimport { IJSONEditingService, IJSONValue } from '../../common/jsonEditing.js';\n\nexport class TestJSONEditingService implements IJSONEditingService {\n\t_serviceBrand: undefined;\n\n\tasync write(resource: URI, values: IJSONValue[], save: boolean): Promise<void> { }\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "017c86c37ff20813177f68497d237a8b6473d6b6"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1hp7uxf9tt = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1hp7uxf9tt();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class TestJSONEditingService {
+  _serviceBrand;
+  async write(resource, values, save) {
+    /* istanbul ignore next */
+    cov_1hp7uxf9tt().f[0]++;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJUZXN0SlNPTkVkaXRpbmdTZXJ2aWNlIiwiX3NlcnZpY2VCcmFuZCIsIndyaXRlIiwicmVzb3VyY2UiLCJ2YWx1ZXMiLCJzYXZlIiwiY292XzFocDd1eGY5dHQiLCJmIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvY29uZmlndXJhdGlvbi90ZXN0L2NvbW1vbi90ZXN0U2VydmljZXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBJSlNPTkVkaXRpbmdTZXJ2aWNlLCBJSlNPTlZhbHVlIH0gZnJvbSAnLi4vLi4vY29tbW9uL2pzb25FZGl0aW5nLmpzJztcblxuZXhwb3J0IGNsYXNzIFRlc3RKU09ORWRpdGluZ1NlcnZpY2UgaW1wbGVtZW50cyBJSlNPTkVkaXRpbmdTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdGFzeW5jIHdyaXRlKHJlc291cmNlOiBVUkksIHZhbHVlczogSUpTT05WYWx1ZVtdLCBzYXZlOiBib29sZWFuKTogUHJvbWlzZTx2b2lkPiB7IH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFRQSxPQUFNLE1BQU9BLHNCQUFzQjtFQUNsQ0MsYUFBYTtFQUViLE1BQU1DLEtBQUtBLENBQUNDLFFBQWEsRUFBRUMsTUFBb0IsRUFBRUMsSUFBYTtJQUFBO0lBQUFDLGNBQUEsR0FBQUMsQ0FBQTtFQUFtQiIsImlnbm9yZUxpc3QiOltdfQ==

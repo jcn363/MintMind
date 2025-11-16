@@ -1,0 +1,120 @@
+d28d02e6c2a5866040a8499e1cb5a3ba
+/* istanbul ignore next */
+function cov_8lp323nor() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/browser/mcpServerIcons.ts";
+  var hash = "ae2c077517576e41a322f82b5755688bb198c896";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/browser/mcpServerIcons.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 29
+        },
+        end: {
+          line: 8,
+          column: 124
+        }
+      },
+      "1": {
+        start: {
+          line: 9,
+          column: 35
+        },
+        end: {
+          line: 9,
+          column: 186
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 38
+        },
+        end: {
+          line: 10,
+          column: 197
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 30
+        },
+        end: {
+          line: 11,
+          column: 152
+        }
+      },
+      "4": {
+        start: {
+          line: 12,
+          column: 30
+        },
+        end: {
+          line: 12,
+          column: 147
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/browser/mcpServerIcons.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,OAAO,EAAE,MAAM,qCAAqC,CAAC;AAC9D,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,YAAY,EAAE,MAAM,mDAAmD,CAAC;AAEjF,MAAM,CAAC,MAAM,aAAa,GAAG,YAAY,CAAC,YAAY,EAAE,OAAO,CAAC,GAAG,EAAE,QAAQ,CAAC,WAAW,EAAE,+BAA+B,CAAC,CAAC,CAAC;AAC7H,MAAM,CAAC,MAAM,mBAAmB,GAAG,YAAY,CAAC,mBAAmB,EAAE,OAAO,CAAC,MAAM,EAAE,QAAQ,CAAC,qBAAqB,EAAE,mEAAmE,CAAC,CAAC,CAAC;AAC3L,MAAM,CAAC,MAAM,sBAAsB,GAAG,YAAY,CAAC,sBAAsB,EAAE,OAAO,CAAC,UAAU,EAAE,QAAQ,CAAC,wBAAwB,EAAE,iEAAiE,CAAC,CAAC,CAAC;AACtM,MAAM,CAAC,MAAM,cAAc,GAAG,YAAY,CAAC,oBAAoB,EAAE,OAAO,CAAC,QAAQ,EAAE,QAAQ,CAAC,aAAa,EAAE,2CAA2C,CAAC,CAAC,CAAC;AACzJ,MAAM,CAAC,MAAM,cAAc,GAAG,YAAY,CAAC,oBAAoB,EAAE,OAAO,CAAC,GAAG,EAAE,QAAQ,CAAC,aAAa,EAAE,2CAA2C,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/mcp/browser/mcpServerIcons.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Codicon } from '../../../../base/common/codicons.js';\nimport { localize } from '../../../../nls.js';\nimport { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';\n\nexport const mcpServerIcon = registerIcon('mcp-server', Codicon.mcp, localize('mcpServer', 'Icon used for the MCP server.'));\nexport const mcpServerRemoteIcon = registerIcon('mcp-server-remote', Codicon.remote, localize('mcpServerRemoteIcon', 'Icon to indicate that an MCP server is for the remote user scope.'));\nexport const mcpServerWorkspaceIcon = registerIcon('mcp-server-workspace', Codicon.rootFolder, localize('mcpServerWorkspaceIcon', 'Icon to indicate that an MCP server is for the workspace scope.'));\nexport const mcpStarredIcon = registerIcon('mcp-server-starred', Codicon.starFull, localize('starredIcon', 'Icon shown along with the starred status.'));\nexport const mcpLicenseIcon = registerIcon('mcp-server-license', Codicon.law, localize('licenseIcon', 'Icon shown along with the license status.'));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ae2c077517576e41a322f82b5755688bb198c896"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_8lp323nor = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_8lp323nor();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Codicon } from '../../../../base/common/codicons.js';
+import { localize } from '../../../../nls.js';
+import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js';
+export const mcpServerIcon =
+/* istanbul ignore next */
+(cov_8lp323nor().s[0]++, registerIcon('mcp-server', Codicon.mcp, localize('mcpServer', 'Icon used for the MCP server.')));
+export const mcpServerRemoteIcon =
+/* istanbul ignore next */
+(cov_8lp323nor().s[1]++, registerIcon('mcp-server-remote', Codicon.remote, localize('mcpServerRemoteIcon', 'Icon to indicate that an MCP server is for the remote user scope.')));
+export const mcpServerWorkspaceIcon =
+/* istanbul ignore next */
+(cov_8lp323nor().s[2]++, registerIcon('mcp-server-workspace', Codicon.rootFolder, localize('mcpServerWorkspaceIcon', 'Icon to indicate that an MCP server is for the workspace scope.')));
+export const mcpStarredIcon =
+/* istanbul ignore next */
+(cov_8lp323nor().s[3]++, registerIcon('mcp-server-starred', Codicon.starFull, localize('starredIcon', 'Icon shown along with the starred status.')));
+export const mcpLicenseIcon =
+/* istanbul ignore next */
+(cov_8lp323nor().s[4]++, registerIcon('mcp-server-license', Codicon.law, localize('licenseIcon', 'Icon shown along with the license status.')));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJDb2RpY29uIiwibG9jYWxpemUiLCJyZWdpc3Rlckljb24iLCJtY3BTZXJ2ZXJJY29uIiwiY292XzhscDMyM25vciIsInMiLCJtY3AiLCJtY3BTZXJ2ZXJSZW1vdGVJY29uIiwicmVtb3RlIiwibWNwU2VydmVyV29ya3NwYWNlSWNvbiIsInJvb3RGb2xkZXIiLCJtY3BTdGFycmVkSWNvbiIsInN0YXJGdWxsIiwibWNwTGljZW5zZUljb24iLCJsYXciXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL21jcC9icm93c2VyL21jcFNlcnZlckljb25zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBDb2RpY29uIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vY29kaWNvbnMuanMnO1xuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgcmVnaXN0ZXJJY29uIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vdGhlbWUvY29tbW9uL2ljb25SZWdpc3RyeS5qcyc7XG5cbmV4cG9ydCBjb25zdCBtY3BTZXJ2ZXJJY29uID0gcmVnaXN0ZXJJY29uKCdtY3Atc2VydmVyJywgQ29kaWNvbi5tY3AsIGxvY2FsaXplKCdtY3BTZXJ2ZXInLCAnSWNvbiB1c2VkIGZvciB0aGUgTUNQIHNlcnZlci4nKSk7XG5leHBvcnQgY29uc3QgbWNwU2VydmVyUmVtb3RlSWNvbiA9IHJlZ2lzdGVySWNvbignbWNwLXNlcnZlci1yZW1vdGUnLCBDb2RpY29uLnJlbW90ZSwgbG9jYWxpemUoJ21jcFNlcnZlclJlbW90ZUljb24nLCAnSWNvbiB0byBpbmRpY2F0ZSB0aGF0IGFuIE1DUCBzZXJ2ZXIgaXMgZm9yIHRoZSByZW1vdGUgdXNlciBzY29wZS4nKSk7XG5leHBvcnQgY29uc3QgbWNwU2VydmVyV29ya3NwYWNlSWNvbiA9IHJlZ2lzdGVySWNvbignbWNwLXNlcnZlci13b3Jrc3BhY2UnLCBDb2RpY29uLnJvb3RGb2xkZXIsIGxvY2FsaXplKCdtY3BTZXJ2ZXJXb3Jrc3BhY2VJY29uJywgJ0ljb24gdG8gaW5kaWNhdGUgdGhhdCBhbiBNQ1Agc2VydmVyIGlzIGZvciB0aGUgd29ya3NwYWNlIHNjb3BlLicpKTtcbmV4cG9ydCBjb25zdCBtY3BTdGFycmVkSWNvbiA9IHJlZ2lzdGVySWNvbignbWNwLXNlcnZlci1zdGFycmVkJywgQ29kaWNvbi5zdGFyRnVsbCwgbG9jYWxpemUoJ3N0YXJyZWRJY29uJywgJ0ljb24gc2hvd24gYWxvbmcgd2l0aCB0aGUgc3RhcnJlZCBzdGF0dXMuJykpO1xuZXhwb3J0IGNvbnN0IG1jcExpY2Vuc2VJY29uID0gcmVnaXN0ZXJJY29uKCdtY3Atc2VydmVyLWxpY2Vuc2UnLCBDb2RpY29uLmxhdywgbG9jYWxpemUoJ2xpY2Vuc2VJY29uJywgJ0ljb24gc2hvd24gYWxvbmcgd2l0aCB0aGUgbGljZW5zZSBzdGF0dXMuJykpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLE9BQU8sUUFBUSxxQ0FBcUM7QUFDN0QsU0FBU0MsUUFBUSxRQUFRLG9CQUFvQjtBQUM3QyxTQUFTQyxZQUFZLFFBQVEsbURBQW1EO0FBRWhGLE9BQU8sTUFBTUMsYUFBYTtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILFlBQVksQ0FBQyxZQUFZLEVBQUVGLE9BQU8sQ0FBQ00sR0FBRyxFQUFFTCxRQUFRLENBQUMsV0FBVyxFQUFFLCtCQUErQixDQUFDLENBQUM7QUFDNUgsT0FBTyxNQUFNTSxtQkFBbUI7QUFBQTtBQUFBLENBQUFILGFBQUEsR0FBQUMsQ0FBQSxPQUFHSCxZQUFZLENBQUMsbUJBQW1CLEVBQUVGLE9BQU8sQ0FBQ1EsTUFBTSxFQUFFUCxRQUFRLENBQUMscUJBQXFCLEVBQUUsbUVBQW1FLENBQUMsQ0FBQztBQUMxTCxPQUFPLE1BQU1RLHNCQUFzQjtBQUFBO0FBQUEsQ0FBQUwsYUFBQSxHQUFBQyxDQUFBLE9BQUdILFlBQVksQ0FBQyxzQkFBc0IsRUFBRUYsT0FBTyxDQUFDVSxVQUFVLEVBQUVULFFBQVEsQ0FBQyx3QkFBd0IsRUFBRSxpRUFBaUUsQ0FBQyxDQUFDO0FBQ3JNLE9BQU8sTUFBTVUsY0FBYztBQUFBO0FBQUEsQ0FBQVAsYUFBQSxHQUFBQyxDQUFBLE9BQUdILFlBQVksQ0FBQyxvQkFBb0IsRUFBRUYsT0FBTyxDQUFDWSxRQUFRLEVBQUVYLFFBQVEsQ0FBQyxhQUFhLEVBQUUsMkNBQTJDLENBQUMsQ0FBQztBQUN4SixPQUFPLE1BQU1ZLGNBQWM7QUFBQTtBQUFBLENBQUFULGFBQUEsR0FBQUMsQ0FBQSxPQUFHSCxZQUFZLENBQUMsb0JBQW9CLEVBQUVGLE9BQU8sQ0FBQ2MsR0FBRyxFQUFFYixRQUFRLENBQUMsYUFBYSxFQUFFLDJDQUEyQyxDQUFDLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

@@ -1,0 +1,281 @@
+ecda5f8797e0e09a18604294d93b98b3
+/* istanbul ignore next */
+function cov_h5ev6u9i7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/test/browser/mockChatWidget.ts";
+  var hash = "41238c56794570337b3f5966572ae64bd56b7ad1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/test/browser/mockChatWidget.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 21
+        },
+        end: {
+          line: 7,
+          column: 31
+        }
+      },
+      "1": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 25
+        }
+      },
+      "2": {
+        start: {
+          line: 17,
+          column: 8
+        },
+        end: {
+          line: 17,
+          column: 25
+        }
+      },
+      "3": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 25
+        }
+      },
+      "4": {
+        start: {
+          line: 23,
+          column: 8
+        },
+        end: {
+          line: 23,
+          column: 18
+        }
+      },
+      "5": {
+        start: {
+          line: 26,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 51
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 29
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 16,
+            column: 4
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 16,
+            column: 36
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        line: 16
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 19,
+            column: 4
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 48
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 19
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 22,
+            column: 4
+          },
+          end: {
+            line: 22,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 22,
+            column: 36
+          },
+          end: {
+            line: 24,
+            column: 5
+          }
+        },
+        line: 22
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 25,
+            column: 4
+          },
+          end: {
+            line: 25,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 25,
+            column: 20
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        line: 25
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/test/browser/mockChatWidget.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,KAAK,EAAE,MAAM,qCAAqC,CAAC;AAK5D,MAAM,OAAO,qBAAqB;IACxB,cAAc,GAAuB,KAAK,CAAC,IAAI,CAAC;IAEhD,aAAa,CAAY;IAElC;;OAEG;IACM,iBAAiB,CAA0B;IAEpD,mBAAmB,CAAC,GAAQ;QAC3B,OAAO,SAAS,CAAC;IAClB,CAAC;IAED,oBAAoB,CAAC,SAAiB;QACrC,OAAO,SAAS,CAAC;IAClB,CAAC;IAED,0BAA0B,CAAC,eAAoB;QAC9C,OAAO,SAAS,CAAC;IAClB,CAAC;IAED,qBAAqB,CAAC,QAA2B;QAChD,OAAO,EAAE,CAAC;IACX,CAAC;IAED,aAAa;QACZ,MAAM,IAAI,KAAK,CAAC,yBAAyB,CAAC,CAAC;IAC5C,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/chat/test/browser/mockChatWidget.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../../../base/common/event.js';\nimport { URI } from '../../../../../base/common/uri.js';\nimport { IChatWidget, IChatWidgetService } from '../../browser/chat.js';\nimport { ChatAgentLocation } from '../../common/constants.js';\n\nexport class MockChatWidgetService implements IChatWidgetService {\n\treadonly onDidAddWidget: Event<IChatWidget> = Event.None;\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Returns the most recently focused widget if any.\n\t */\n\treadonly lastFocusedWidget: IChatWidget | undefined;\n\n\tgetWidgetByInputUri(uri: URI): IChatWidget | undefined {\n\t\treturn undefined;\n\t}\n\n\tgetWidgetBySessionId(sessionId: string): IChatWidget | undefined {\n\t\treturn undefined;\n\t}\n\n\tgetWidgetBySessionResource(sessionResource: URI): IChatWidget | undefined {\n\t\treturn undefined;\n\t}\n\n\tgetWidgetsByLocations(location: ChatAgentLocation): ReadonlyArray<IChatWidget> {\n\t\treturn [];\n\t}\n\n\tgetAllWidgets(): ReadonlyArray<IChatWidget> {\n\t\tthrow new Error('Method not implemented.');\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "41238c56794570337b3f5966572ae64bd56b7ad1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_h5ev6u9i7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_h5ev6u9i7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Event } from '../../../../../base/common/event.js';
+export class MockChatWidgetService {
+  onDidAddWidget =
+  /* istanbul ignore next */
+  (cov_h5ev6u9i7().s[0]++, Event.None);
+  _serviceBrand;
+  /**
+   * Returns the most recently focused widget if any.
+   */
+  lastFocusedWidget;
+  getWidgetByInputUri(uri) {
+    /* istanbul ignore next */
+    cov_h5ev6u9i7().f[0]++;
+    cov_h5ev6u9i7().s[1]++;
+    return undefined;
+  }
+  getWidgetBySessionId(sessionId) {
+    /* istanbul ignore next */
+    cov_h5ev6u9i7().f[1]++;
+    cov_h5ev6u9i7().s[2]++;
+    return undefined;
+  }
+  getWidgetBySessionResource(sessionResource) {
+    /* istanbul ignore next */
+    cov_h5ev6u9i7().f[2]++;
+    cov_h5ev6u9i7().s[3]++;
+    return undefined;
+  }
+  getWidgetsByLocations(location) {
+    /* istanbul ignore next */
+    cov_h5ev6u9i7().f[3]++;
+    cov_h5ev6u9i7().s[4]++;
+    return [];
+  }
+  getAllWidgets() {
+    /* istanbul ignore next */
+    cov_h5ev6u9i7().f[4]++;
+    cov_h5ev6u9i7().s[5]++;
+    throw new Error('Method not implemented.');
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfaDVldjZ1OWk3IiwiYWN0dWFsQ292ZXJhZ2UiLCJFdmVudCIsIk1vY2tDaGF0V2lkZ2V0U2VydmljZSIsIm9uRGlkQWRkV2lkZ2V0IiwicyIsIk5vbmUiLCJfc2VydmljZUJyYW5kIiwibGFzdEZvY3VzZWRXaWRnZXQiLCJnZXRXaWRnZXRCeUlucHV0VXJpIiwidXJpIiwiZiIsInVuZGVmaW5lZCIsImdldFdpZGdldEJ5U2Vzc2lvbklkIiwic2Vzc2lvbklkIiwiZ2V0V2lkZ2V0QnlTZXNzaW9uUmVzb3VyY2UiLCJzZXNzaW9uUmVzb3VyY2UiLCJnZXRXaWRnZXRzQnlMb2NhdGlvbnMiLCJsb2NhdGlvbiIsImdldEFsbFdpZGdldHMiLCJFcnJvciJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvY2hhdC90ZXN0L2Jyb3dzZXIvbW9ja0NoYXRXaWRnZXQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcbmltcG9ydCB7IElDaGF0V2lkZ2V0LCBJQ2hhdFdpZGdldFNlcnZpY2UgfSBmcm9tICcuLi8uLi9icm93c2VyL2NoYXQuanMnO1xuaW1wb3J0IHsgQ2hhdEFnZW50TG9jYXRpb24gfSBmcm9tICcuLi8uLi9jb21tb24vY29uc3RhbnRzLmpzJztcblxuZXhwb3J0IGNsYXNzIE1vY2tDaGF0V2lkZ2V0U2VydmljZSBpbXBsZW1lbnRzIElDaGF0V2lkZ2V0U2VydmljZSB7XG5cdHJlYWRvbmx5IG9uRGlkQWRkV2lkZ2V0OiBFdmVudDxJQ2hhdFdpZGdldD4gPSBFdmVudC5Ob25lO1xuXG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgbW9zdCByZWNlbnRseSBmb2N1c2VkIHdpZGdldCBpZiBhbnkuXG5cdCAqL1xuXHRyZWFkb25seSBsYXN0Rm9jdXNlZFdpZGdldDogSUNoYXRXaWRnZXQgfCB1bmRlZmluZWQ7XG5cblx0Z2V0V2lkZ2V0QnlJbnB1dFVyaSh1cmk6IFVSSSk6IElDaGF0V2lkZ2V0IHwgdW5kZWZpbmVkIHtcblx0XHRyZXR1cm4gdW5kZWZpbmVkO1xuXHR9XG5cblx0Z2V0V2lkZ2V0QnlTZXNzaW9uSWQoc2Vzc2lvbklkOiBzdHJpbmcpOiBJQ2hhdFdpZGdldCB8IHVuZGVmaW5lZCB7XG5cdFx0cmV0dXJuIHVuZGVmaW5lZDtcblx0fVxuXG5cdGdldFdpZGdldEJ5U2Vzc2lvblJlc291cmNlKHNlc3Npb25SZXNvdXJjZTogVVJJKTogSUNoYXRXaWRnZXQgfCB1bmRlZmluZWQge1xuXHRcdHJldHVybiB1bmRlZmluZWQ7XG5cdH1cblxuXHRnZXRXaWRnZXRzQnlMb2NhdGlvbnMobG9jYXRpb246IENoYXRBZ2VudExvY2F0aW9uKTogUmVhZG9ubHlBcnJheTxJQ2hhdFdpZGdldD4ge1xuXHRcdHJldHVybiBbXTtcblx0fVxuXG5cdGdldEFsbFdpZGdldHMoKTogUmVhZG9ubHlBcnJheTxJQ2hhdFdpZGdldD4ge1xuXHRcdHRocm93IG5ldyBFcnJvcignTWV0aG9kIG5vdCBpbXBsZW1lbnRlZC4nKTtcblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBd0JDO0lBQUFBLGFBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGFBQUE7QUF4QkQ7Ozs7QUFLQSxTQUFTRSxLQUFLLFFBQVEscUNBQXFDO0FBSzNELE9BQU0sTUFBT0MscUJBQXFCO0VBQ3hCQyxjQUFjO0VBQUE7RUFBQSxDQUFBSixhQUFBLEdBQUFLLENBQUEsT0FBdUJILEtBQUssQ0FBQ0ksSUFBSTtFQUUvQ0MsYUFBYTtFQUV0Qjs7O0VBR1NDLGlCQUFpQjtFQUUxQkMsbUJBQW1CQSxDQUFDQyxHQUFRO0lBQUE7SUFBQVYsYUFBQSxHQUFBVyxDQUFBO0lBQUFYLGFBQUEsR0FBQUssQ0FBQTtJQUMzQixPQUFPTyxTQUFTO0VBQ2pCO0VBRUFDLG9CQUFvQkEsQ0FBQ0MsU0FBaUI7SUFBQTtJQUFBZCxhQUFBLEdBQUFXLENBQUE7SUFBQVgsYUFBQSxHQUFBSyxDQUFBO0lBQ3JDLE9BQU9PLFNBQVM7RUFDakI7RUFFQUcsMEJBQTBCQSxDQUFDQyxlQUFvQjtJQUFBO0lBQUFoQixhQUFBLEdBQUFXLENBQUE7SUFBQVgsYUFBQSxHQUFBSyxDQUFBO0lBQzlDLE9BQU9PLFNBQVM7RUFDakI7RUFFQUsscUJBQXFCQSxDQUFDQyxRQUEyQjtJQUFBO0lBQUFsQixhQUFBLEdBQUFXLENBQUE7SUFBQVgsYUFBQSxHQUFBSyxDQUFBO0lBQ2hELE9BQU8sRUFBRTtFQUNWO0VBRUFjLGFBQWFBLENBQUE7SUFBQTtJQUFBbkIsYUFBQSxHQUFBVyxDQUFBO0lBQUFYLGFBQUEsR0FBQUssQ0FBQTtJQUNaLE1BQU0sSUFBSWUsS0FBSyxDQUFDLHlCQUF5QixDQUFDO0VBQzNDIiwiaWdub3JlTGlzdCI6W119

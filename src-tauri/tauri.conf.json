@@ -1,0 +1,46 @@
+{
+  "productName": "MintMind",
+  "version": "0.1.0",
+  "identifier": "com.mintmind.app",
+  "plugins": {
+    "fs": {
+      "scope": ["$APPDATA", "$DESKTOP", "$DOCUMENT", "$DOWNLOAD", "$HOME", "$PICTURE", "$VIDEO", "$AUDIO", "$PUBLIC", "$RESOURCE"]
+    }
+  },
+  "bundle": {
+    "targets": ["nsis", "msi", "app", "dmg", "deb", "rpm", "appimage"],
+    "category": "DeveloperTool",
+    "icon": [
+      "../resources/win32/code.ico",
+      "../resources/darwin/code.icns",
+      "../resources/linux/code_rgba.png"
+    ],
+    "resources": [],
+    "windows": {
+      "webviewInstallMode": {
+        "type": "downloadBootstrapper",
+        "silent": true
+      },
+      "wix": {
+        "language": "en-US"
+      }
+    },
+    "macOS": {
+      "minimumSystemVersion": "12.0",
+      "frameworks": []
+    },
+    "linux": {
+      "deb": {
+        "files": {}
+      },
+      "rpm": {
+        "release": "1"
+      }
+    }
+  },
+  "build": {
+    "frontendDist": "../out",
+    "beforeDevCommand": "bun run watch-client",
+    "beforeBuildCommand": "bun run compile-build"
+  }
+}

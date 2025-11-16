@@ -1,0 +1,46 @@
+d41dcfe0d740cb7a002949819300ec9b
+/* istanbul ignore next */
+function cov_3yphveab7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/services/textModelSync/textModelSync.protocol.ts";
+  var hash = "48d73f77749680f17b72ac54bb740aefdd43eef4";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/services/textModelSync/textModelSync.protocol.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/services/textModelSync/textModelSync.protocol.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/services/textModelSync/textModelSync.protocol.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IModelChangedEvent } from '../../model/mirrorTextModel.js';\n\nexport interface IWorkerTextModelSyncChannelServer {\n\t$acceptNewModel(data: IRawModelData): void;\n\n\t$acceptModelChanged(strURL: string, e: IModelChangedEvent): void;\n\n\t$acceptRemovedModel(strURL: string): void;\n}\n\nexport interface IRawModelData {\n\turl: string;\n\tversionId: number;\n\tlines: string[];\n\tEOL: string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "48d73f77749680f17b72ac54bb740aefdd43eef4"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_3yphveab7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_3yphveab7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL3NlcnZpY2VzL3RleHRNb2RlbFN5bmMvdGV4dE1vZGVsU3luYy5wcm90b2NvbC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSU1vZGVsQ2hhbmdlZEV2ZW50IH0gZnJvbSAnLi4vLi4vbW9kZWwvbWlycm9yVGV4dE1vZGVsLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJV29ya2VyVGV4dE1vZGVsU3luY0NoYW5uZWxTZXJ2ZXIge1xuXHQkYWNjZXB0TmV3TW9kZWwoZGF0YTogSVJhd01vZGVsRGF0YSk6IHZvaWQ7XG5cblx0JGFjY2VwdE1vZGVsQ2hhbmdlZChzdHJVUkw6IHN0cmluZywgZTogSU1vZGVsQ2hhbmdlZEV2ZW50KTogdm9pZDtcblxuXHQkYWNjZXB0UmVtb3ZlZE1vZGVsKHN0clVSTDogc3RyaW5nKTogdm9pZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJUmF3TW9kZWxEYXRhIHtcblx0dXJsOiBzdHJpbmc7XG5cdHZlcnNpb25JZDogbnVtYmVyO1xuXHRsaW5lczogc3RyaW5nW107XG5cdEVPTDogc3RyaW5nO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,151 @@
+4aba6a0093a905b27e36afd4d13f69e7
+/* istanbul ignore next */
+function cov_2kan04yujw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/editorFeatures.ts";
+  var hash = "3d7031a20fcf96b7db961ce10aa3e21930060eb0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/editorFeatures.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 23
+        },
+        end: {
+          line: 5,
+          column: 25
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 11,
+          column: 30
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 4
+        },
+        end: {
+          line: 14,
+          column: 35
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "registerEditorFeature",
+        decl: {
+          start: {
+            line: 10,
+            column: 16
+          },
+          end: {
+            line: 10,
+            column: 37
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 44
+          },
+          end: {
+            line: 12,
+            column: 1
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "getEditorFeatures",
+        decl: {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 13,
+            column: 33
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 36
+          },
+          end: {
+            line: 15,
+            column: 1
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/editorFeatures.ts",
+      mappings: "AAAA;;;gGAGgG;AAahG,MAAM,cAAc,GAAwB,EAAE,CAAC;AAE/C;;;GAGG;AACH,MAAM,UAAU,qBAAqB,CAAoC,IAAoD;IAC5H,cAAc,CAAC,IAAI,CAAC,IAAyB,CAAC,CAAC;AAChD,CAAC;AAED,MAAM,UAAU,iBAAiB;IAChC,OAAO,cAAc,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC;AAChC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/editorFeatures.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { BrandedService, IConstructorSignature } from '../../platform/instantiation/common/instantiation.js';\n\n/**\n * A feature that will be loaded when the first code editor is constructed and disposed when the system shuts down.\n */\nexport interface IEditorFeature {\n\t// Marker Interface\n}\n\nexport type EditorFeatureCtor = IConstructorSignature<IEditorFeature>;\n\nconst editorFeatures: EditorFeatureCtor[] = [];\n\n/**\n * Registers an editor feature. Editor features will be instantiated only once, as soon as\n * the first code editor is instantiated.\n */\nexport function registerEditorFeature<Services extends BrandedService[]>(ctor: { new(...services: Services): IEditorFeature }): void {\n\teditorFeatures.push(ctor as EditorFeatureCtor);\n}\n\nexport function getEditorFeatures(): Iterable<EditorFeatureCtor> {\n\treturn editorFeatures.slice(0);\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3d7031a20fcf96b7db961ce10aa3e21930060eb0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2kan04yujw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2kan04yujw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+const editorFeatures =
+/* istanbul ignore next */
+(cov_2kan04yujw().s[0]++, []);
+/**
+ * Registers an editor feature. Editor features will be instantiated only once, as soon as
+ * the first code editor is instantiated.
+ */
+export function registerEditorFeature(ctor) {
+  /* istanbul ignore next */
+  cov_2kan04yujw().f[0]++;
+  cov_2kan04yujw().s[1]++;
+  editorFeatures.push(ctor);
+}
+export function getEditorFeatures() {
+  /* istanbul ignore next */
+  cov_2kan04yujw().f[1]++;
+  cov_2kan04yujw().s[2]++;
+  return editorFeatures.slice(0);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJlZGl0b3JGZWF0dXJlcyIsImNvdl8ya2FuMDR5dWp3IiwicyIsInJlZ2lzdGVyRWRpdG9yRmVhdHVyZSIsImN0b3IiLCJmIiwicHVzaCIsImdldEVkaXRvckZlYXR1cmVzIiwic2xpY2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9jb21tb24vZWRpdG9yRmVhdHVyZXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IEJyYW5kZWRTZXJ2aWNlLCBJQ29uc3RydWN0b3JTaWduYXR1cmUgfSBmcm9tICcuLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuLyoqXG4gKiBBIGZlYXR1cmUgdGhhdCB3aWxsIGJlIGxvYWRlZCB3aGVuIHRoZSBmaXJzdCBjb2RlIGVkaXRvciBpcyBjb25zdHJ1Y3RlZCBhbmQgZGlzcG9zZWQgd2hlbiB0aGUgc3lzdGVtIHNodXRzIGRvd24uXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUVkaXRvckZlYXR1cmUge1xuXHQvLyBNYXJrZXIgSW50ZXJmYWNlXG59XG5cbmV4cG9ydCB0eXBlIEVkaXRvckZlYXR1cmVDdG9yID0gSUNvbnN0cnVjdG9yU2lnbmF0dXJlPElFZGl0b3JGZWF0dXJlPjtcblxuY29uc3QgZWRpdG9yRmVhdHVyZXM6IEVkaXRvckZlYXR1cmVDdG9yW10gPSBbXTtcblxuLyoqXG4gKiBSZWdpc3RlcnMgYW4gZWRpdG9yIGZlYXR1cmUuIEVkaXRvciBmZWF0dXJlcyB3aWxsIGJlIGluc3RhbnRpYXRlZCBvbmx5IG9uY2UsIGFzIHNvb24gYXNcbiAqIHRoZSBmaXJzdCBjb2RlIGVkaXRvciBpcyBpbnN0YW50aWF0ZWQuXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiByZWdpc3RlckVkaXRvckZlYXR1cmU8U2VydmljZXMgZXh0ZW5kcyBCcmFuZGVkU2VydmljZVtdPihjdG9yOiB7IG5ldyguLi5zZXJ2aWNlczogU2VydmljZXMpOiBJRWRpdG9yRmVhdHVyZSB9KTogdm9pZCB7XG5cdGVkaXRvckZlYXR1cmVzLnB1c2goY3RvciBhcyBFZGl0b3JGZWF0dXJlQ3Rvcik7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBnZXRFZGl0b3JGZWF0dXJlcygpOiBJdGVyYWJsZTxFZGl0b3JGZWF0dXJlQ3Rvcj4ge1xuXHRyZXR1cm4gZWRpdG9yRmVhdHVyZXMuc2xpY2UoMCk7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBZ0JBLE1BQU1BLGNBQWM7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUF3QixFQUFFO0FBRTlDOzs7O0FBSUEsT0FBTSxTQUFVQyxxQkFBcUJBLENBQW9DQyxJQUFvRDtFQUFBO0VBQUFILGNBQUEsR0FBQUksQ0FBQTtFQUFBSixjQUFBLEdBQUFDLENBQUE7RUFDNUhGLGNBQWMsQ0FBQ00sSUFBSSxDQUFDRixJQUF5QixDQUFDO0FBQy9DO0FBRUEsT0FBTSxTQUFVRyxpQkFBaUJBLENBQUE7RUFBQTtFQUFBTixjQUFBLEdBQUFJLENBQUE7RUFBQUosY0FBQSxHQUFBQyxDQUFBO0VBQ2hDLE9BQU9GLGNBQWMsQ0FBQ1EsS0FBSyxDQUFDLENBQUMsQ0FBQztBQUMvQiIsImlnbm9yZUxpc3QiOltdfQ==

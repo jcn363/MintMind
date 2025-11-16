@@ -1,0 +1,215 @@
+1d63494991b6e3677d3e53cff21ae01e
+/* istanbul ignore next */
+function cov_14xnenu3wd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/common/ipc.electron.ts";
+  var hash = "2adb11433dbdf37066bf4679c36eb639b2720d2e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/common/ipc.electron.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 29
+        }
+      },
+      "1": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 15,
+          column: 35
+        }
+      },
+      "2": {
+        start: {
+          line: 18,
+          column: 8
+        },
+        end: {
+          line: 23,
+          column: 9
+        }
+      },
+      "3": {
+        start: {
+          line: 19,
+          column: 12
+        },
+        end: {
+          line: 19,
+          column: 63
+        }
+      },
+      "4": {
+        start: {
+          line: 26,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 52
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 35
+          },
+          end: {
+            line: 16,
+            column: 5
+          }
+        },
+        line: 13
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 17,
+            column: 4
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 17,
+            column: 18
+          },
+          end: {
+            line: 24,
+            column: 5
+          }
+        },
+        line: 17
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 25,
+            column: 4
+          },
+          end: {
+            line: 25,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 25,
+            column: 17
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        line: 25
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/common/ipc.electron.ts",
+      mappings: "AAAA;;;gGAGgG;AAUhG;;;;GAIG;AACH,MAAM,OAAO,QAAQ;IAEA;IAAyB;IAA7C,YAAoB,MAAc,EAAW,SAA0B;QAAnD,WAAM,GAAN,MAAM,CAAQ;QAAW,cAAS,GAAT,SAAS,CAAiB;IAAI,CAAC;IAE5E,IAAI,CAAC,OAAiB;QACrB,IAAI,CAAC;YACJ,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC,gBAAgB,EAAE,OAAO,CAAC,MAAM,CAAC,CAAC;QACpD,CAAC;QAAC,OAAO,CAAC,EAAE,CAAC;YACZ,yBAAyB;QAC1B,CAAC;IACF,CAAC;IAED,UAAU;QACT,IAAI,CAAC,MAAM,CAAC,IAAI,CAAC,mBAAmB,EAAE,IAAI,CAAC,CAAC;IAC7C,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/ipc/common/ipc.electron.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { VSBuffer } from '../../../common/buffer.js';\nimport { Event } from '../../../common/event.js';\nimport { IMessagePassingProtocol } from './ipc.js';\n\nexport interface Sender {\n\tsend(channel: string, msg: unknown): void;\n}\n\n/**\n * The Electron `Protocol` leverages Electron style IPC communication (`ipcRenderer`, `ipcMain`)\n * for the implementation of the `IMessagePassingProtocol`. That style of API requires a channel\n * name for sending data.\n */\nexport class Protocol implements IMessagePassingProtocol {\n\n\tconstructor(private sender: Sender, readonly onMessage: Event<VSBuffer>) { }\n\n\tsend(message: VSBuffer): void {\n\t\ttry {\n\t\t\tthis.sender.send('vscode:message', message.buffer);\n\t\t} catch (e) {\n\t\t\t// systems are going down\n\t\t}\n\t}\n\n\tdisconnect(): void {\n\t\tthis.sender.send('vscode:disconnect', null);\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "2adb11433dbdf37066bf4679c36eb639b2720d2e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_14xnenu3wd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_14xnenu3wd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+/**
+ * The Electron `Protocol` leverages Electron style IPC communication (`ipcRenderer`, `ipcMain`)
+ * for the implementation of the `IMessagePassingProtocol`. That style of API requires a channel
+ * name for sending data.
+ */
+export class Protocol {
+  sender;
+  onMessage;
+  constructor(sender, onMessage) {
+    /* istanbul ignore next */
+    cov_14xnenu3wd().f[0]++;
+    cov_14xnenu3wd().s[0]++;
+    this.sender = sender;
+    /* istanbul ignore next */
+    cov_14xnenu3wd().s[1]++;
+    this.onMessage = onMessage;
+  }
+  send(message) {
+    /* istanbul ignore next */
+    cov_14xnenu3wd().f[1]++;
+    cov_14xnenu3wd().s[2]++;
+    try {
+      /* istanbul ignore next */
+      cov_14xnenu3wd().s[3]++;
+      this.sender.send('vscode:message', message.buffer);
+    } catch (e) {
+      // systems are going down
+    }
+  }
+  disconnect() {
+    /* istanbul ignore next */
+    cov_14xnenu3wd().f[2]++;
+    cov_14xnenu3wd().s[4]++;
+    this.sender.send('vscode:disconnect', null);
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTR4bmVudTN3ZCIsImFjdHVhbENvdmVyYWdlIiwiUHJvdG9jb2wiLCJzZW5kZXIiLCJvbk1lc3NhZ2UiLCJjb25zdHJ1Y3RvciIsImYiLCJzIiwic2VuZCIsIm1lc3NhZ2UiLCJidWZmZXIiLCJlIiwiZGlzY29ubmVjdCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvYmFzZS9wYXJ0cy9pcGMvY29tbW9uL2lwYy5lbGVjdHJvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgVlNCdWZmZXIgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vYnVmZmVyLmpzJztcbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IElNZXNzYWdlUGFzc2luZ1Byb3RvY29sIH0gZnJvbSAnLi9pcGMuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIFNlbmRlciB7XG5cdHNlbmQoY2hhbm5lbDogc3RyaW5nLCBtc2c6IHVua25vd24pOiB2b2lkO1xufVxuXG4vKipcbiAqIFRoZSBFbGVjdHJvbiBgUHJvdG9jb2xgIGxldmVyYWdlcyBFbGVjdHJvbiBzdHlsZSBJUEMgY29tbXVuaWNhdGlvbiAoYGlwY1JlbmRlcmVyYCwgYGlwY01haW5gKVxuICogZm9yIHRoZSBpbXBsZW1lbnRhdGlvbiBvZiB0aGUgYElNZXNzYWdlUGFzc2luZ1Byb3RvY29sYC4gVGhhdCBzdHlsZSBvZiBBUEkgcmVxdWlyZXMgYSBjaGFubmVsXG4gKiBuYW1lIGZvciBzZW5kaW5nIGRhdGEuXG4gKi9cbmV4cG9ydCBjbGFzcyBQcm90b2NvbCBpbXBsZW1lbnRzIElNZXNzYWdlUGFzc2luZ1Byb3RvY29sIHtcblxuXHRjb25zdHJ1Y3Rvcihwcml2YXRlIHNlbmRlcjogU2VuZGVyLCByZWFkb25seSBvbk1lc3NhZ2U6IEV2ZW50PFZTQnVmZmVyPikgeyB9XG5cblx0c2VuZChtZXNzYWdlOiBWU0J1ZmZlcik6IHZvaWQge1xuXHRcdHRyeSB7XG5cdFx0XHR0aGlzLnNlbmRlci5zZW5kKCd2c2NvZGU6bWVzc2FnZScsIG1lc3NhZ2UuYnVmZmVyKTtcblx0XHR9IGNhdGNoIChlKSB7XG5cdFx0XHQvLyBzeXN0ZW1zIGFyZSBnb2luZyBkb3duXG5cdFx0fVxuXHR9XG5cblx0ZGlzY29ubmVjdCgpOiB2b2lkIHtcblx0XHR0aGlzLnNlbmRlci5zZW5kKCd2c2NvZGU6ZGlzY29ubmVjdCcsIG51bGwpO1xuXHR9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW9CNkU7SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXBCN0U7Ozs7QUFhQTs7Ozs7QUFLQSxPQUFNLE1BQU9FLFFBQVE7RUFFQUMsTUFBQTtFQUF5QkMsU0FBQTtFQUE3Q0MsWUFBb0JGLE1BQWMsRUFBV0MsU0FBMEI7SUFBQTtJQUFBSixjQUFBLEdBQUFNLENBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQW5ELEtBQUFKLE1BQU0sR0FBTkEsTUFBTTtJQUFRO0lBQUFILGNBQUEsR0FBQU8sQ0FBQTtJQUFXLEtBQUFILFNBQVMsR0FBVEEsU0FBUztFQUFxQjtFQUUzRUksSUFBSUEsQ0FBQ0MsT0FBaUI7SUFBQTtJQUFBVCxjQUFBLEdBQUFNLENBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQ3JCLElBQUk7TUFBQTtNQUFBUCxjQUFBLEdBQUFPLENBQUE7TUFDSCxJQUFJLENBQUNKLE1BQU0sQ0FBQ0ssSUFBSSxDQUFDLGdCQUFnQixFQUFFQyxPQUFPLENBQUNDLE1BQU0sQ0FBQztJQUNuRCxDQUFDLENBQUMsT0FBT0MsQ0FBQyxFQUFFO01BQ1g7SUFBQTtFQUVGO0VBRUFDLFVBQVVBLENBQUE7SUFBQTtJQUFBWixjQUFBLEdBQUFNLENBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQ1QsSUFBSSxDQUFDSixNQUFNLENBQUNLLElBQUksQ0FBQyxtQkFBbUIsRUFBRSxJQUFJLENBQUM7RUFDNUMiLCJpZ25vcmVMaXN0IjpbXX0=

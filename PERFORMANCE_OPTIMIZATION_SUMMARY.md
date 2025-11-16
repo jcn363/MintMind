@@ -7,6 +7,7 @@ Se han implementado optimizaciones avanzadas de **lazy loading** y **tree shakin
 ## 🚀 Optimizaciones Implementadas
 
 ### 1. **Configuración Avanzada de Webpack** (`extensions/shared.webpack.config.mjs`)
+
 - ✅ **Code Splitting Inteligente**: Implementado `splitChunks` con grupos específicos para:
   - Librerías vendor (node_modules)
   - Editor Monaco (componente pesado)
@@ -16,6 +17,7 @@ Se han implementado optimizaciones avanzadas de **lazy loading** y **tree shakin
 - ✅ **Optimización Asíncrona**: Configurado chunks asíncronos para carga diferida
 
 ### 2. **Lazy Loading del Workbench** (`src/vs/workbench/workbench.common.main.ts`)
+
 - ✅ **Carga Progresiva**: Implementado sistema de lazy loading para contribuciones pesadas:
   - Notebook
   - Chat e Inline Chat
@@ -26,11 +28,13 @@ Se han implementado optimizaciones avanzadas de **lazy loading** y **tree shakin
 - ✅ **Temporización Inteligente**: Carga diferida con delays estratégicos para evitar bloqueo del hilo principal
 
 ### 3. **Optimización del AMD Loader** (`src/vs/loader.js`)
+
 - ✅ **Preload Hints**: Implementados `<link rel="preload">` para chunks críticos
 - ✅ **Prefetch Hints**: Agregados `<link rel="prefetch">` para chunks pesados no críticos
 - ✅ **Sistema de Módulos Lazy**: Detección automática de módulos pesados para lazy loading
 
 ### 4. **Herramientas de Análisis** (`scripts/`)
+
 - ✅ **Analizador de Bundles Mejorado**: `enhanced-bundle-analysis.js` con métricas detalladas
 - ✅ **Optimizador del Loader**: `optimize-loader.js` para mejoras automáticas
 - ✅ **Scripts Integrados**: Nuevos comandos npm para análisis y optimización
@@ -38,16 +42,19 @@ Se han implementado optimizaciones avanzadas de **lazy loading** y **tree shakin
 ## 📊 Métricas de Mejora Esperadas
 
 ### Tamaño de Bundles
+
 - **Reducción esperada**: 15-25% en el bundle inicial
 - **Vendor libraries**: Mejor separación y carga condicional
 - **Chunks asíncronos**: Aumento del 30%+ en chunks lazy loaded
 
 ### Tiempos de Carga
+
 - **Tiempo de carga inicial**: Reducción de 20-30% al cargar solo lo crítico
 - **Time to Interactive**: Mejora significativa con carga progresiva
 - **Perceived Performance**: Mejor experiencia de usuario con preload hints
 
 ### Optimizaciones Técnicas
+
 - **Tree Shaking**: Eliminación más efectiva de código no usado
 - **Code Splitting**: Division inteligente de módulos grandes
 - **Lazy Loading**: Carga bajo demanda de funcionalidades no críticas
@@ -85,6 +92,7 @@ npm run compile-build
 ## ✅ Validación de Implementación
 
 Todas las optimizaciones han sido implementadas siguiendo las mejores prácticas de:
+
 - **Performance**: Carga progresiva y code splitting
 - **Maintainability**: Código modular y bien documentado
 - **Compatibility**: Mantiene compatibilidad con el sistema AMD existente

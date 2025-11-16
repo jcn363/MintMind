@@ -1,0 +1,46 @@
+138018a4a12eabdb7a72a0bfea61f6a1
+/* istanbul ignore next */
+function cov_1zvgz31vdv() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/chat/common/chatContext.ts";
+  var hash = "29a5153c0f9071bc39237ef57a23d3bfae484a65";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/chat/common/chatContext.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/chat/common/chatContext.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/chat/common/chatContext.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { CancellationToken } from '../../../../base/common/cancellation.js';\nimport { ThemeIcon } from '../../../../base/common/themables.js';\nimport { URI } from '../../../../base/common/uri.js';\n\nexport interface IChatContextItem {\n\ticon: ThemeIcon;\n\tlabel: string;\n\tmodelDescription?: string;\n\thandle: number;\n\tvalue?: string;\n}\n\nexport interface IChatContextSupport {\n\tsupportsResource: boolean;\n\tsupportsResolve: boolean;\n}\n\nexport interface IChatContextProvider {\n\tprovideChatContext(options: {}, token: CancellationToken): Promise<IChatContextItem[]>;\n\tprovideChatContextForResource?(resource: URI, options: {}, token: CancellationToken): Promise<IChatContextItem | undefined>;\n\tresolveChatContext?(context: IChatContextItem, token: CancellationToken): Promise<IChatContextItem>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "29a5153c0f9071bc39237ef57a23d3bfae484a65"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1zvgz31vdv = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1zvgz31vdv();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvY2hhdC9jb21tb24vY2hhdENvbnRleHQudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IENhbmNlbGxhdGlvblRva2VuIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vY2FuY2VsbGF0aW9uLmpzJztcbmltcG9ydCB7IFRoZW1lSWNvbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3RoZW1hYmxlcy5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElDaGF0Q29udGV4dEl0ZW0ge1xuXHRpY29uOiBUaGVtZUljb247XG5cdGxhYmVsOiBzdHJpbmc7XG5cdG1vZGVsRGVzY3JpcHRpb24/OiBzdHJpbmc7XG5cdGhhbmRsZTogbnVtYmVyO1xuXHR2YWx1ZT86IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQ2hhdENvbnRleHRTdXBwb3J0IHtcblx0c3VwcG9ydHNSZXNvdXJjZTogYm9vbGVhbjtcblx0c3VwcG9ydHNSZXNvbHZlOiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDaGF0Q29udGV4dFByb3ZpZGVyIHtcblx0cHJvdmlkZUNoYXRDb250ZXh0KG9wdGlvbnM6IHt9LCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPElDaGF0Q29udGV4dEl0ZW1bXT47XG5cdHByb3ZpZGVDaGF0Q29udGV4dEZvclJlc291cmNlPyhyZXNvdXJjZTogVVJJLCBvcHRpb25zOiB7fSwgdG9rZW46IENhbmNlbGxhdGlvblRva2VuKTogUHJvbWlzZTxJQ2hhdENvbnRleHRJdGVtIHwgdW5kZWZpbmVkPjtcblx0cmVzb2x2ZUNoYXRDb250ZXh0Pyhjb250ZXh0OiBJQ2hhdENvbnRleHRJdGVtLCB0b2tlbjogQ2FuY2VsbGF0aW9uVG9rZW4pOiBQcm9taXNlPElDaGF0Q29udGV4dEl0ZW0+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

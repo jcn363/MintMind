@@ -1,0 +1,206 @@
+632ed0f3db7201a12031267dc6bdf90f
+/* istanbul ignore next */
+function cov_j67yf5n5() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/accessibility/common/accessibility.ts";
+  var hash = "1f06e48b203451e1791977764cdbd1a9e99b7e76";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/accessibility/common/accessibility.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 37
+        },
+        end: {
+          line: 7,
+          column: 76
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 50
+        },
+        end: {
+          line: 8,
+          column: 102
+        }
+      },
+      "2": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 12,
+          column: 77
+        }
+      },
+      "3": {
+        start: {
+          line: 14,
+          column: 52
+        },
+        end: {
+          line: 14,
+          column: 76
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isAccessibilityInformation",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 42
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 48
+          },
+          end: {
+            line: 13,
+            column: 1
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 11
+          },
+          end: {
+            line: 12,
+            column: 76
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 10,
+            column: 11
+          },
+          end: {
+            line: 10,
+            column: 14
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 18
+          },
+          end: {
+            line: 10,
+            column: 41
+          }
+        }, {
+          start: {
+            line: 11,
+            column: 11
+          },
+          end: {
+            line: 11,
+            column: 40
+          }
+        }, {
+          start: {
+            line: 12,
+            column: 12
+          },
+          end: {
+            line: 12,
+            column: 43
+          }
+        }, {
+          start: {
+            line: 12,
+            column: 47
+          },
+          end: {
+            line: 12,
+            column: 75
+          }
+        }],
+        line: 10
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0, 0, 0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/accessibility/common/accessibility.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,aAAa,EAAE,MAAM,uCAAuC,CAAC;AACtE,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,qBAAqB,GAAG,eAAe,CAAwB,sBAAsB,CAAC,CAAC;AA4BpG,MAAM,CAAC,MAAM,kCAAkC,GAAG,IAAI,aAAa,CAAU,0BAA0B,EAAE,KAAK,CAAC,CAAC;AAOhH,MAAM,UAAU,0BAA0B,CAAC,GAAQ;IAClD,OAAO,GAAG,IAAI,OAAO,GAAG,KAAK,QAAQ;WACjC,OAAO,GAAG,CAAC,KAAK,KAAK,QAAQ;WAC7B,CAAC,OAAO,GAAG,CAAC,IAAI,KAAK,WAAW,IAAI,OAAO,GAAG,CAAC,IAAI,KAAK,QAAQ,CAAC,CAAC;AACvE,CAAC;AAED,MAAM,CAAC,MAAM,oCAAoC,GAAG,wBAAwB,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/accessibility/common/accessibility.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { RawContextKey } from '../../contextkey/common/contextkey.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IAccessibilityService = createDecorator<IAccessibilityService>('accessibilityService');\n\nexport interface IAccessibilityService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidChangeScreenReaderOptimized: Event<void>;\n\treadonly onDidChangeReducedMotion: Event<void>;\n\n\talwaysUnderlineAccessKeys(): Promise<boolean>;\n\tisScreenReaderOptimized(): boolean;\n\tisMotionReduced(): boolean;\n\tgetAccessibilitySupport(): AccessibilitySupport;\n\tsetAccessibilitySupport(accessibilitySupport: AccessibilitySupport): void;\n\talert(message: string): void;\n\tstatus(message: string): void;\n}\n\nexport const enum AccessibilitySupport {\n\t/**\n\t * This should be the browser case where it is not known if a screen reader is attached or no.\n\t */\n\tUnknown = 0,\n\n\tDisabled = 1,\n\n\tEnabled = 2\n}\n\nexport const CONTEXT_ACCESSIBILITY_MODE_ENABLED = new RawContextKey<boolean>('accessibilityModeEnabled', false);\n\nexport interface IAccessibilityInformation {\n\tlabel: string;\n\trole?: string;\n}\n\nexport function isAccessibilityInformation(obj: any): obj is IAccessibilityInformation {\n\treturn obj && typeof obj === 'object'\n\t\t&& typeof obj.label === 'string'\n\t\t&& (typeof obj.role === 'undefined' || typeof obj.role === 'string');\n}\n\nexport const ACCESSIBLE_VIEW_SHOWN_STORAGE_PREFIX = 'ACCESSIBLE_VIEW_SHOWN_';\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "1f06e48b203451e1791977764cdbd1a9e99b7e76"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_j67yf5n5 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_j67yf5n5();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { RawContextKey } from '../../contextkey/common/contextkey.js';
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IAccessibilityService =
+/* istanbul ignore next */
+(cov_j67yf5n5().s[0]++, createDecorator('accessibilityService'));
+export const CONTEXT_ACCESSIBILITY_MODE_ENABLED =
+/* istanbul ignore next */
+(cov_j67yf5n5().s[1]++, new RawContextKey('accessibilityModeEnabled', false));
+export function isAccessibilityInformation(obj) {
+  /* istanbul ignore next */
+  cov_j67yf5n5().f[0]++;
+  cov_j67yf5n5().s[2]++;
+  return /* istanbul ignore next */(cov_j67yf5n5().b[0][0]++, obj) &&
+  /* istanbul ignore next */
+  (cov_j67yf5n5().b[0][1]++, typeof obj === 'object') &&
+  /* istanbul ignore next */
+  (cov_j67yf5n5().b[0][2]++, typeof obj.label === 'string') && (
+  /* istanbul ignore next */
+  (cov_j67yf5n5().b[0][3]++, typeof obj.role === 'undefined') ||
+  /* istanbul ignore next */
+  (cov_j67yf5n5().b[0][4]++, typeof obj.role === 'string'));
+}
+export const ACCESSIBLE_VIEW_SHOWN_STORAGE_PREFIX =
+/* istanbul ignore next */
+(cov_j67yf5n5().s[3]++, 'ACCESSIBLE_VIEW_SHOWN_');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJSYXdDb250ZXh0S2V5IiwiY3JlYXRlRGVjb3JhdG9yIiwiSUFjY2Vzc2liaWxpdHlTZXJ2aWNlIiwiY292X2o2N3lmNW41IiwicyIsIkNPTlRFWFRfQUNDRVNTSUJJTElUWV9NT0RFX0VOQUJMRUQiLCJpc0FjY2Vzc2liaWxpdHlJbmZvcm1hdGlvbiIsIm9iaiIsImYiLCJiIiwibGFiZWwiLCJyb2xlIiwiQUNDRVNTSUJMRV9WSUVXX1NIT1dOX1NUT1JBR0VfUFJFRklYIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9hY2Nlc3NpYmlsaXR5L2NvbW1vbi9hY2Nlc3NpYmlsaXR5LnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IFJhd0NvbnRleHRLZXkgfSBmcm9tICcuLi8uLi9jb250ZXh0a2V5L2NvbW1vbi9jb250ZXh0a2V5LmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgY29uc3QgSUFjY2Vzc2liaWxpdHlTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElBY2Nlc3NpYmlsaXR5U2VydmljZT4oJ2FjY2Vzc2liaWxpdHlTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUFjY2Vzc2liaWxpdHlTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlU2NyZWVuUmVhZGVyT3B0aW1pemVkOiBFdmVudDx2b2lkPjtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VSZWR1Y2VkTW90aW9uOiBFdmVudDx2b2lkPjtcblxuXHRhbHdheXNVbmRlcmxpbmVBY2Nlc3NLZXlzKCk6IFByb21pc2U8Ym9vbGVhbj47XG5cdGlzU2NyZWVuUmVhZGVyT3B0aW1pemVkKCk6IGJvb2xlYW47XG5cdGlzTW90aW9uUmVkdWNlZCgpOiBib29sZWFuO1xuXHRnZXRBY2Nlc3NpYmlsaXR5U3VwcG9ydCgpOiBBY2Nlc3NpYmlsaXR5U3VwcG9ydDtcblx0c2V0QWNjZXNzaWJpbGl0eVN1cHBvcnQoYWNjZXNzaWJpbGl0eVN1cHBvcnQ6IEFjY2Vzc2liaWxpdHlTdXBwb3J0KTogdm9pZDtcblx0YWxlcnQobWVzc2FnZTogc3RyaW5nKTogdm9pZDtcblx0c3RhdHVzKG1lc3NhZ2U6IHN0cmluZyk6IHZvaWQ7XG59XG5cbmV4cG9ydCBjb25zdCBlbnVtIEFjY2Vzc2liaWxpdHlTdXBwb3J0IHtcblx0LyoqXG5cdCAqIFRoaXMgc2hvdWxkIGJlIHRoZSBicm93c2VyIGNhc2Ugd2hlcmUgaXQgaXMgbm90IGtub3duIGlmIGEgc2NyZWVuIHJlYWRlciBpcyBhdHRhY2hlZCBvciBuby5cblx0ICovXG5cdFVua25vd24gPSAwLFxuXG5cdERpc2FibGVkID0gMSxcblxuXHRFbmFibGVkID0gMlxufVxuXG5leHBvcnQgY29uc3QgQ09OVEVYVF9BQ0NFU1NJQklMSVRZX01PREVfRU5BQkxFRCA9IG5ldyBSYXdDb250ZXh0S2V5PGJvb2xlYW4+KCdhY2Nlc3NpYmlsaXR5TW9kZUVuYWJsZWQnLCBmYWxzZSk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUFjY2Vzc2liaWxpdHlJbmZvcm1hdGlvbiB7XG5cdGxhYmVsOiBzdHJpbmc7XG5cdHJvbGU/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBpc0FjY2Vzc2liaWxpdHlJbmZvcm1hdGlvbihvYmo6IGFueSk6IG9iaiBpcyBJQWNjZXNzaWJpbGl0eUluZm9ybWF0aW9uIHtcblx0cmV0dXJuIG9iaiAmJiB0eXBlb2Ygb2JqID09PSAnb2JqZWN0J1xuXHRcdCYmIHR5cGVvZiBvYmoubGFiZWwgPT09ICdzdHJpbmcnXG5cdFx0JiYgKHR5cGVvZiBvYmoucm9sZSA9PT0gJ3VuZGVmaW5lZCcgfHwgdHlwZW9mIG9iai5yb2xlID09PSAnc3RyaW5nJyk7XG59XG5cbmV4cG9ydCBjb25zdCBBQ0NFU1NJQkxFX1ZJRVdfU0hPV05fU1RPUkFHRV9QUkVGSVggPSAnQUNDRVNTSUJMRV9WSUVXX1NIT1dOXyc7XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQU1BLFNBQVNBLGFBQWEsUUFBUSx1Q0FBdUM7QUFDckUsU0FBU0MsZUFBZSxRQUFRLDZDQUE2QztBQUU3RSxPQUFPLE1BQU1DLHFCQUFxQjtBQUFBO0FBQUEsQ0FBQUMsWUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBd0Isc0JBQXNCLENBQUM7QUE0Qm5HLE9BQU8sTUFBTUksa0NBQWtDO0FBQUE7QUFBQSxDQUFBRixZQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSixhQUFhLENBQVUsMEJBQTBCLEVBQUUsS0FBSyxDQUFDO0FBTy9HLE9BQU0sU0FBVU0sMEJBQTBCQSxDQUFDQyxHQUFRO0VBQUE7RUFBQUosWUFBQSxHQUFBSyxDQUFBO0VBQUFMLFlBQUEsR0FBQUMsQ0FBQTtFQUNsRCxPQUFPLDJCQUFBRCxZQUFBLEdBQUFNLENBQUEsVUFBQUYsR0FBRztFQUFBO0VBQUEsQ0FBQUosWUFBQSxHQUFBTSxDQUFBLFVBQUksT0FBT0YsR0FBRyxLQUFLLFFBQVE7RUFBQTtFQUFBLENBQUFKLFlBQUEsR0FBQU0sQ0FBQSxVQUNqQyxPQUFPRixHQUFHLENBQUNHLEtBQUssS0FBSyxRQUFRO0VBQzVCO0VBQUEsQ0FBQVAsWUFBQSxHQUFBTSxDQUFBLGlCQUFPRixHQUFHLENBQUNJLElBQUksS0FBSyxXQUFXO0VBQUE7RUFBQSxDQUFBUixZQUFBLEdBQUFNLENBQUEsVUFBSSxPQUFPRixHQUFHLENBQUNJLElBQUksS0FBSyxRQUFRLEVBQUM7QUFDdEU7QUFFQSxPQUFPLE1BQU1DLG9DQUFvQztBQUFBO0FBQUEsQ0FBQVQsWUFBQSxHQUFBQyxDQUFBLE9BQUcsd0JBQXdCIiwiaWdub3JlTGlzdCI6W119

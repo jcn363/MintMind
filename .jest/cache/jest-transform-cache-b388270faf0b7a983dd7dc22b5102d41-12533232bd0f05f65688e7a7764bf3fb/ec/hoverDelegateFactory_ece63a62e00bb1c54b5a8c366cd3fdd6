@@ -1,0 +1,544 @@
+67f6fb554a472b121bc5c1a4b83f6da4
+/* istanbul ignore next */
+function cov_8wlji784e() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hoverDelegateFactory.ts";
+  var hash = "4ff496a389374aed1a51c4dad5562cfd14049c49";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hoverDelegateFactory.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 33
+        },
+        end: {
+          line: 10,
+          column: 2
+        }
+      },
+      "1": {
+        start: {
+          line: 6,
+          column: 40
+        },
+        end: {
+          line: 10,
+          column: 1
+        }
+      },
+      "2": {
+        start: {
+          line: 7,
+          column: 18
+        },
+        end: {
+          line: 7,
+          column: 28
+        }
+      },
+      "3": {
+        start: {
+          line: 9,
+          column: 23
+        },
+        end: {
+          line: 9,
+          column: 40
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 27
+        },
+        end: {
+          line: 11,
+          column: 51
+        }
+      },
+      "5": {
+        start: {
+          line: 12,
+          column: 34
+        },
+        end: {
+          line: 12,
+          column: 86
+        }
+      },
+      "6": {
+        start: {
+          line: 12,
+          column: 49
+        },
+        end: {
+          line: 12,
+          column: 85
+        }
+      },
+      "7": {
+        start: {
+          line: 13,
+          column: 36
+        },
+        end: {
+          line: 13,
+          column: 90
+        }
+      },
+      "8": {
+        start: {
+          line: 13,
+          column: 51
+        },
+        end: {
+          line: 13,
+          column: 89
+        }
+      },
+      "9": {
+        start: {
+          line: 16,
+          column: 4
+        },
+        end: {
+          line: 16,
+          column: 49
+        }
+      },
+      "10": {
+        start: {
+          line: 20,
+          column: 4
+        },
+        end: {
+          line: 22,
+          column: 5
+        }
+      },
+      "11": {
+        start: {
+          line: 21,
+          column: 8
+        },
+        end: {
+          line: 21,
+          column: 49
+        }
+      },
+      "12": {
+        start: {
+          line: 23,
+          column: 4
+        },
+        end: {
+          line: 23,
+          column: 43
+        }
+      },
+      "13": {
+        start: {
+          line: 30,
+          column: 4
+        },
+        end: {
+          line: 30,
+          column: 49
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 6,
+            column: 33
+          },
+          end: {
+            line: 6,
+            column: 34
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 40
+          },
+          end: {
+            line: 10,
+            column: 1
+          }
+        },
+        line: 6
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 30
+          }
+        },
+        line: 7
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 8,
+            column: 13
+          },
+          end: {
+            line: 8,
+            column: 14
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 19
+          },
+          end: {
+            line: 8,
+            column: 22
+          }
+        },
+        line: 8
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 9,
+            column: 15
+          },
+          end: {
+            line: 9,
+            column: 16
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 21
+          },
+          end: {
+            line: 9,
+            column: 42
+          }
+        },
+        line: 9
+      },
+      "4": {
+        name: "(anonymous_4)",
+        decl: {
+          start: {
+            line: 12,
+            column: 43
+          },
+          end: {
+            line: 12,
+            column: 44
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 49
+          },
+          end: {
+            line: 12,
+            column: 85
+          }
+        },
+        line: 12
+      },
+      "5": {
+        name: "(anonymous_5)",
+        decl: {
+          start: {
+            line: 13,
+            column: 45
+          },
+          end: {
+            line: 13,
+            column: 46
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 51
+          },
+          end: {
+            line: 13,
+            column: 89
+          }
+        },
+        line: 13
+      },
+      "6": {
+        name: "setHoverDelegateFactory",
+        decl: {
+          start: {
+            line: 15,
+            column: 16
+          },
+          end: {
+            line: 15,
+            column: 39
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 63
+          },
+          end: {
+            line: 17,
+            column: 1
+          }
+        },
+        line: 15
+      },
+      "7": {
+        name: "getDefaultHoverDelegate",
+        decl: {
+          start: {
+            line: 19,
+            column: 16
+          },
+          end: {
+            line: 19,
+            column: 39
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 51
+          },
+          end: {
+            line: 24,
+            column: 1
+          }
+        },
+        line: 19
+      },
+      "8": {
+        name: "createInstantHoverDelegate",
+        decl: {
+          start: {
+            line: 26,
+            column: 16
+          },
+          end: {
+            line: 26,
+            column: 42
+          }
+        },
+        loc: {
+          start: {
+            line: 26,
+            column: 45
+          },
+          end: {
+            line: 31,
+            column: 1
+          }
+        },
+        line: 26
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 20,
+            column: 4
+          },
+          end: {
+            line: 22,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 20,
+            column: 4
+          },
+          end: {
+            line: 22,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 20
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hoverDelegateFactory.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,IAAI,EAAE,MAAM,yBAAyB,CAAC;AAE/C,MAAM,wBAAwB,GAAG,GAAG,EAAE,CAAC,CAAC;IACvC,IAAI,KAAK,KAAa,OAAO,CAAC,CAAC,CAAC,CAAC,CAAC;IAClC,OAAO,EAAE,GAAG,EAAE,GAAG,CAAC;IAClB,SAAS,EAAE,GAAG,EAAE,GAAG,OAAO,SAAS,CAAC,CAAC,CAAC;CACtC,CAAC,CAAC;AAEH,IAAI,oBAAoB,GAA0F,wBAAwB,CAAC;AAC3I,MAAM,yBAAyB,GAAG,IAAI,IAAI,CAAiB,GAAG,EAAE,CAAC,oBAAoB,CAAC,OAAO,EAAE,KAAK,CAAC,CAAC,CAAC;AACvG,MAAM,2BAA2B,GAAG,IAAI,IAAI,CAAiB,GAAG,EAAE,CAAC,oBAAoB,CAAC,SAAS,EAAE,KAAK,CAAC,CAAC,CAAC;AAE3G,8DAA8D;AAC9D,MAAM,UAAU,uBAAuB,CAAC,qBAA8G;IACrJ,oBAAoB,GAAG,qBAAqB,CAAC;AAC9C,CAAC;AAED,2DAA2D;AAC3D,MAAM,UAAU,uBAAuB,CAAC,SAA8B;IACrE,IAAI,SAAS,KAAK,SAAS,EAAE,CAAC;QAC7B,OAAO,2BAA2B,CAAC,KAAK,CAAC;IAC1C,CAAC;IACD,OAAO,yBAAyB,CAAC,KAAK,CAAC;AACxC,CAAC;AAED,2CAA2C;AAC3C,MAAM,UAAU,0BAA0B;IACzC,uDAAuD;IACvD,0EAA0E;IAC1E,0DAA0D;IAC1D,OAAO,oBAAoB,CAAC,SAAS,EAAE,IAAI,CAAC,CAAC;AAC9C,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/browser/ui/hover/hoverDelegateFactory.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IHoverDelegate, IScopedHoverDelegate } from './hoverDelegate.js';\nimport { Lazy } from '../../../common/lazy.js';\n\nconst nullHoverDelegateFactory = () => ({\n\tget delay(): number { return -1; },\n\tdispose: () => { },\n\tshowHover: () => { return undefined; },\n});\n\nlet hoverDelegateFactory: (placement: 'mouse' | 'element', enableInstantHover: boolean) => IScopedHoverDelegate = nullHoverDelegateFactory;\nconst defaultHoverDelegateMouse = new Lazy<IHoverDelegate>(() => hoverDelegateFactory('mouse', false));\nconst defaultHoverDelegateElement = new Lazy<IHoverDelegate>(() => hoverDelegateFactory('element', false));\n\n// TODO: Remove when getDefaultHoverDelegate is no longer used\nexport function setHoverDelegateFactory(hoverDelegateProvider: ((placement: 'mouse' | 'element', enableInstantHover: boolean) => IScopedHoverDelegate)): void {\n\thoverDelegateFactory = hoverDelegateProvider;\n}\n\n// TODO: Refine type for use in new IHoverService interface\nexport function getDefaultHoverDelegate(placement: 'mouse' | 'element'): IHoverDelegate {\n\tif (placement === 'element') {\n\t\treturn defaultHoverDelegateElement.value;\n\t}\n\treturn defaultHoverDelegateMouse.value;\n}\n\n// TODO: Create equivalent in IHoverService\nexport function createInstantHoverDelegate(): IScopedHoverDelegate {\n\t// Creates a hover delegate with instant hover enabled.\n\t// This hover belongs to the consumer and requires the them to dispose it.\n\t// Instant hover only makes sense for 'element' placement.\n\treturn hoverDelegateFactory('element', true);\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4ff496a389374aed1a51c4dad5562cfd14049c49"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_8wlji784e = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_8wlji784e();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Lazy } from '../../../common/lazy.js';
+/* istanbul ignore next */
+cov_8wlji784e().s[0]++;
+const nullHoverDelegateFactory = () => {
+  /* istanbul ignore next */
+  cov_8wlji784e().f[0]++;
+  cov_8wlji784e().s[1]++;
+  return {
+    get delay() {
+      /* istanbul ignore next */
+      cov_8wlji784e().f[1]++;
+      cov_8wlji784e().s[2]++;
+      return -1;
+    },
+    dispose: () => {
+      /* istanbul ignore next */
+      cov_8wlji784e().f[2]++;
+    },
+    showHover: () => {
+      /* istanbul ignore next */
+      cov_8wlji784e().f[3]++;
+      cov_8wlji784e().s[3]++;
+      return undefined;
+    }
+  };
+};
+let hoverDelegateFactory =
+/* istanbul ignore next */
+(cov_8wlji784e().s[4]++, nullHoverDelegateFactory);
+const defaultHoverDelegateMouse =
+/* istanbul ignore next */
+(cov_8wlji784e().s[5]++, new Lazy(() => {
+  /* istanbul ignore next */
+  cov_8wlji784e().f[4]++;
+  cov_8wlji784e().s[6]++;
+  return hoverDelegateFactory('mouse', false);
+}));
+const defaultHoverDelegateElement =
+/* istanbul ignore next */
+(cov_8wlji784e().s[7]++, new Lazy(() => {
+  /* istanbul ignore next */
+  cov_8wlji784e().f[5]++;
+  cov_8wlji784e().s[8]++;
+  return hoverDelegateFactory('element', false);
+}));
+// TODO: Remove when getDefaultHoverDelegate is no longer used
+export function setHoverDelegateFactory(hoverDelegateProvider) {
+  /* istanbul ignore next */
+  cov_8wlji784e().f[6]++;
+  cov_8wlji784e().s[9]++;
+  hoverDelegateFactory = hoverDelegateProvider;
+}
+// TODO: Refine type for use in new IHoverService interface
+export function getDefaultHoverDelegate(placement) {
+  /* istanbul ignore next */
+  cov_8wlji784e().f[7]++;
+  cov_8wlji784e().s[10]++;
+  if (placement === 'element') {
+    /* istanbul ignore next */
+    cov_8wlji784e().b[0][0]++;
+    cov_8wlji784e().s[11]++;
+    return defaultHoverDelegateElement.value;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_8wlji784e().b[0][1]++;
+  }
+  cov_8wlji784e().s[12]++;
+  return defaultHoverDelegateMouse.value;
+}
+// TODO: Create equivalent in IHoverService
+export function createInstantHoverDelegate() {
+  /* istanbul ignore next */
+  cov_8wlji784e().f[8]++;
+  cov_8wlji784e().s[13]++;
+  // Creates a hover delegate with instant hover enabled.
+  // This hover belongs to the consumer and requires the them to dispose it.
+  // Instant hover only makes sense for 'element' placement.
+  return hoverDelegateFactory('element', true);
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfOHdsamk3ODRlIiwiYWN0dWFsQ292ZXJhZ2UiLCJMYXp5IiwicyIsIm51bGxIb3ZlckRlbGVnYXRlRmFjdG9yeSIsImYiLCJkZWxheSIsImRpc3Bvc2UiLCJzaG93SG92ZXIiLCJ1bmRlZmluZWQiLCJob3ZlckRlbGVnYXRlRmFjdG9yeSIsImRlZmF1bHRIb3ZlckRlbGVnYXRlTW91c2UiLCJkZWZhdWx0SG92ZXJEZWxlZ2F0ZUVsZW1lbnQiLCJzZXRIb3ZlckRlbGVnYXRlRmFjdG9yeSIsImhvdmVyRGVsZWdhdGVQcm92aWRlciIsImdldERlZmF1bHRIb3ZlckRlbGVnYXRlIiwicGxhY2VtZW50IiwiYiIsInZhbHVlIiwiY3JlYXRlSW5zdGFudEhvdmVyRGVsZWdhdGUiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2Jhc2UvYnJvd3Nlci91aS9ob3Zlci9ob3ZlckRlbGVnYXRlRmFjdG9yeS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUhvdmVyRGVsZWdhdGUsIElTY29wZWRIb3ZlckRlbGVnYXRlIH0gZnJvbSAnLi9ob3ZlckRlbGVnYXRlLmpzJztcbmltcG9ydCB7IExhenkgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vbGF6eS5qcyc7XG5cbmNvbnN0IG51bGxIb3ZlckRlbGVnYXRlRmFjdG9yeSA9ICgpID0+ICh7XG5cdGdldCBkZWxheSgpOiBudW1iZXIgeyByZXR1cm4gLTE7IH0sXG5cdGRpc3Bvc2U6ICgpID0+IHsgfSxcblx0c2hvd0hvdmVyOiAoKSA9PiB7IHJldHVybiB1bmRlZmluZWQ7IH0sXG59KTtcblxubGV0IGhvdmVyRGVsZWdhdGVGYWN0b3J5OiAocGxhY2VtZW50OiAnbW91c2UnIHwgJ2VsZW1lbnQnLCBlbmFibGVJbnN0YW50SG92ZXI6IGJvb2xlYW4pID0+IElTY29wZWRIb3ZlckRlbGVnYXRlID0gbnVsbEhvdmVyRGVsZWdhdGVGYWN0b3J5O1xuY29uc3QgZGVmYXVsdEhvdmVyRGVsZWdhdGVNb3VzZSA9IG5ldyBMYXp5PElIb3ZlckRlbGVnYXRlPigoKSA9PiBob3ZlckRlbGVnYXRlRmFjdG9yeSgnbW91c2UnLCBmYWxzZSkpO1xuY29uc3QgZGVmYXVsdEhvdmVyRGVsZWdhdGVFbGVtZW50ID0gbmV3IExhenk8SUhvdmVyRGVsZWdhdGU+KCgpID0+IGhvdmVyRGVsZWdhdGVGYWN0b3J5KCdlbGVtZW50JywgZmFsc2UpKTtcblxuLy8gVE9ETzogUmVtb3ZlIHdoZW4gZ2V0RGVmYXVsdEhvdmVyRGVsZWdhdGUgaXMgbm8gbG9uZ2VyIHVzZWRcbmV4cG9ydCBmdW5jdGlvbiBzZXRIb3ZlckRlbGVnYXRlRmFjdG9yeShob3ZlckRlbGVnYXRlUHJvdmlkZXI6ICgocGxhY2VtZW50OiAnbW91c2UnIHwgJ2VsZW1lbnQnLCBlbmFibGVJbnN0YW50SG92ZXI6IGJvb2xlYW4pID0+IElTY29wZWRIb3ZlckRlbGVnYXRlKSk6IHZvaWQge1xuXHRob3ZlckRlbGVnYXRlRmFjdG9yeSA9IGhvdmVyRGVsZWdhdGVQcm92aWRlcjtcbn1cblxuLy8gVE9ETzogUmVmaW5lIHR5cGUgZm9yIHVzZSBpbiBuZXcgSUhvdmVyU2VydmljZSBpbnRlcmZhY2VcbmV4cG9ydCBmdW5jdGlvbiBnZXREZWZhdWx0SG92ZXJEZWxlZ2F0ZShwbGFjZW1lbnQ6ICdtb3VzZScgfCAnZWxlbWVudCcpOiBJSG92ZXJEZWxlZ2F0ZSB7XG5cdGlmIChwbGFjZW1lbnQgPT09ICdlbGVtZW50Jykge1xuXHRcdHJldHVybiBkZWZhdWx0SG92ZXJEZWxlZ2F0ZUVsZW1lbnQudmFsdWU7XG5cdH1cblx0cmV0dXJuIGRlZmF1bHRIb3ZlckRlbGVnYXRlTW91c2UudmFsdWU7XG59XG5cbi8vIFRPRE86IENyZWF0ZSBlcXVpdmFsZW50IGluIElIb3ZlclNlcnZpY2VcbmV4cG9ydCBmdW5jdGlvbiBjcmVhdGVJbnN0YW50SG92ZXJEZWxlZ2F0ZSgpOiBJU2NvcGVkSG92ZXJEZWxlZ2F0ZSB7XG5cdC8vIENyZWF0ZXMgYSBob3ZlciBkZWxlZ2F0ZSB3aXRoIGluc3RhbnQgaG92ZXIgZW5hYmxlZC5cblx0Ly8gVGhpcyBob3ZlciBiZWxvbmdzIHRvIHRoZSBjb25zdW1lciBhbmQgcmVxdWlyZXMgdGhlIHRoZW0gdG8gZGlzcG9zZSBpdC5cblx0Ly8gSW5zdGFudCBob3ZlciBvbmx5IG1ha2VzIHNlbnNlIGZvciAnZWxlbWVudCcgcGxhY2VtZW50LlxuXHRyZXR1cm4gaG92ZXJEZWxlZ2F0ZUZhY3RvcnkoJ2VsZW1lbnQnLCB0cnVlKTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7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

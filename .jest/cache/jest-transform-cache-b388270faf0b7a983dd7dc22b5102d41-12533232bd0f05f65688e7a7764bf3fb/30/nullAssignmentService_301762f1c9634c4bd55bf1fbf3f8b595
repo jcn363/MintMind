@@ -1,0 +1,180 @@
+13fae5da29004fb65706e7374f46d3c5
+/* istanbul ignore next */
+function cov_16hd531ry2() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/assignment/test/common/nullAssignmentService.ts";
+  var hash = "ecfd6ba1166b664c017ea64ab097f85e5f810654";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/assignment/test/common/nullAssignmentService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 30
+        },
+        end: {
+          line: 8,
+          column: 40
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 18
+        }
+      },
+      "2": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 25
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 34
+          },
+          end: {
+            line: 11,
+            column: 5
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 12,
+            column: 4
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 29
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 12
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 15,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 15,
+            column: 41
+          },
+          end: {
+            line: 15,
+            column: 44
+          }
+        },
+        line: 15
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/assignment/test/common/nullAssignmentService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,KAAK,EAAE,MAAM,qCAAqC,CAAC;AAG5D,MAAM,OAAO,8BAA8B;IAC1C,aAAa,CAAY;IAEhB,uBAAuB,GAAgB,KAAK,CAAC,IAAI,CAAC;IAE3D,KAAK,CAAC,qBAAqB;QAC1B,OAAO,EAAE,CAAC;IACX,CAAC;IAED,KAAK,CAAC,YAAY,CAAsC,IAAY;QACnE,OAAO,SAAS,CAAC;IAClB,CAAC;IAED,4BAA4B,CAAC,MAAyB,IAAU,CAAC;CACjE",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/assignment/test/common/nullAssignmentService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../../../base/common/event.js';\nimport { IAssignmentFilter, IWorkbenchAssignmentService } from '../../common/assignmentService.js';\n\nexport class NullWorkbenchAssignmentService implements IWorkbenchAssignmentService {\n\t_serviceBrand: undefined;\n\n\treadonly onDidRefetchAssignments: Event<void> = Event.None;\n\n\tasync getCurrentExperiments(): Promise<string[] | undefined> {\n\t\treturn [];\n\t}\n\n\tasync getTreatment<T extends string | number | boolean>(name: string): Promise<T | undefined> {\n\t\treturn undefined;\n\t}\n\n\taddTelemetryAssignmentFilter(filter: IAssignmentFilter): void { }\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "ecfd6ba1166b664c017ea64ab097f85e5f810654"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_16hd531ry2 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_16hd531ry2();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Event } from '../../../../../base/common/event.js';
+export class NullWorkbenchAssignmentService {
+  _serviceBrand;
+  onDidRefetchAssignments =
+  /* istanbul ignore next */
+  (cov_16hd531ry2().s[0]++, Event.None);
+  async getCurrentExperiments() {
+    /* istanbul ignore next */
+    cov_16hd531ry2().f[0]++;
+    cov_16hd531ry2().s[1]++;
+    return [];
+  }
+  async getTreatment(name) {
+    /* istanbul ignore next */
+    cov_16hd531ry2().f[1]++;
+    cov_16hd531ry2().s[2]++;
+    return undefined;
+  }
+  addTelemetryAssignmentFilter(filter) {
+    /* istanbul ignore next */
+    cov_16hd531ry2().f[2]++;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTZoZDUzMXJ5MiIsImFjdHVhbENvdmVyYWdlIiwiRXZlbnQiLCJOdWxsV29ya2JlbmNoQXNzaWdubWVudFNlcnZpY2UiLCJfc2VydmljZUJyYW5kIiwib25EaWRSZWZldGNoQXNzaWdubWVudHMiLCJzIiwiTm9uZSIsImdldEN1cnJlbnRFeHBlcmltZW50cyIsImYiLCJnZXRUcmVhdG1lbnQiLCJuYW1lIiwidW5kZWZpbmVkIiwiYWRkVGVsZW1ldHJ5QXNzaWdubWVudEZpbHRlciIsImZpbHRlciJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL2Fzc2lnbm1lbnQvdGVzdC9jb21tb24vbnVsbEFzc2lnbm1lbnRTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IElBc3NpZ25tZW50RmlsdGVyLCBJV29ya2JlbmNoQXNzaWdubWVudFNlcnZpY2UgfSBmcm9tICcuLi8uLi9jb21tb24vYXNzaWdubWVudFNlcnZpY2UuanMnO1xuXG5leHBvcnQgY2xhc3MgTnVsbFdvcmtiZW5jaEFzc2lnbm1lbnRTZXJ2aWNlIGltcGxlbWVudHMgSVdvcmtiZW5jaEFzc2lnbm1lbnRTZXJ2aWNlIHtcblx0X3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdHJlYWRvbmx5IG9uRGlkUmVmZXRjaEFzc2lnbm1lbnRzOiBFdmVudDx2b2lkPiA9IEV2ZW50Lk5vbmU7XG5cblx0YXN5bmMgZ2V0Q3VycmVudEV4cGVyaW1lbnRzKCk6IFByb21pc2U8c3RyaW5nW10gfCB1bmRlZmluZWQ+IHtcblx0XHRyZXR1cm4gW107XG5cdH1cblxuXHRhc3luYyBnZXRUcmVhdG1lbnQ8VCBleHRlbmRzIHN0cmluZyB8IG51bWJlciB8IGJvb2xlYW4+KG5hbWU6IHN0cmluZyk6IFByb21pc2U8VCB8IHVuZGVmaW5lZD4ge1xuXHRcdHJldHVybiB1bmRlZmluZWQ7XG5cdH1cblxuXHRhZGRUZWxlbWV0cnlBc3NpZ25tZW50RmlsdGVyKGZpbHRlcjogSUFzc2lnbm1lbnRGaWx0ZXIpOiB2b2lkIHsgfVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQXNCQztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBdEJEOzs7O0FBS0EsU0FBU0UsS0FBSyxRQUFRLHFDQUFxQztBQUczRCxPQUFNLE1BQU9DLDhCQUE4QjtFQUMxQ0MsYUFBYTtFQUVKQyx1QkFBdUI7RUFBQTtFQUFBLENBQUFMLGNBQUEsR0FBQU0sQ0FBQSxPQUFnQkosS0FBSyxDQUFDSyxJQUFJO0VBRTFELE1BQU1DLHFCQUFxQkEsQ0FBQTtJQUFBO0lBQUFSLGNBQUEsR0FBQVMsQ0FBQTtJQUFBVCxjQUFBLEdBQUFNLENBQUE7SUFDMUIsT0FBTyxFQUFFO0VBQ1Y7RUFFQSxNQUFNSSxZQUFZQSxDQUFzQ0MsSUFBWTtJQUFBO0lBQUFYLGNBQUEsR0FBQVMsQ0FBQTtJQUFBVCxjQUFBLEdBQUFNLENBQUE7SUFDbkUsT0FBT00sU0FBUztFQUNqQjtFQUVBQyw0QkFBNEJBLENBQUNDLE1BQXlCO0lBQUE7SUFBQWQsY0FBQSxHQUFBUyxDQUFBO0VBQVUiLCJpZ25vcmVMaXN0IjpbXX0=

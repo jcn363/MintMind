@@ -1,0 +1,111 @@
+e8de51ab50c3ca2e98c9d14779e46c21
+/* istanbul ignore next */
+function cov_27v49otp7q() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/theme/common/colors/searchColors.ts";
+  var hash = "034f77122164f9f1abe1236145d8edc246e34076";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/theme/common/colors/searchColors.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 43
+        },
+        end: {
+          line: 11,
+          column: 300
+        }
+      },
+      "1": {
+        start: {
+          line: 13,
+          column: 37
+        },
+        end: {
+          line: 13,
+          column: 348
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 43
+        },
+        end: {
+          line: 14,
+          column: 392
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/theme/common/colors/searchColors.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,KAAK,GAAG,MAAM,oBAAoB,CAAC;AAE1C,6BAA6B;AAC7B,OAAO,EAAE,aAAa,EAAE,WAAW,EAAE,MAAM,kBAAkB,CAAC;AAE9D,4BAA4B;AAC5B,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAC7C,OAAO,EAAE,wBAAwB,EAAE,8BAA8B,EAAE,MAAM,mBAAmB,CAAC;AAG7F,MAAM,CAAC,MAAM,2BAA2B,GAAG,aAAa,CAAC,8BAA8B,EACtF,EAAE,KAAK,EAAE,UAAU,EAAE,IAAI,EAAE,WAAW,CAAC,UAAU,EAAE,IAAI,CAAC,EAAE,MAAM,EAAE,UAAU,EAAE,OAAO,EAAE,UAAU,EAAE,EACnG,GAAG,CAAC,QAAQ,CAAC,8BAA8B,EAAE,+DAA+D,CAAC,CAAC,CAAC;AAGhH,mGAAmG;AAEnG,MAAM,CAAC,MAAM,qBAAqB,GAAG,aAAa,CAAC,kCAAkC,EACpF,EAAE,KAAK,EAAE,WAAW,CAAC,wBAAwB,EAAE,IAAI,CAAC,EAAE,IAAI,EAAE,WAAW,CAAC,wBAAwB,EAAE,IAAI,CAAC,EAAE,MAAM,EAAE,wBAAwB,EAAE,OAAO,EAAE,wBAAwB,EAAE,EAC9K,GAAG,CAAC,QAAQ,CAAC,yBAAyB,EAAE,2CAA2C,CAAC,CAAC,CAAC;AAEvF,MAAM,CAAC,MAAM,2BAA2B,GAAG,aAAa,CAAC,8BAA8B,EACtF,EAAE,KAAK,EAAE,WAAW,CAAC,8BAA8B,EAAE,IAAI,CAAC,EAAE,IAAI,EAAE,WAAW,CAAC,8BAA8B,EAAE,IAAI,CAAC,EAAE,MAAM,EAAE,8BAA8B,EAAE,OAAO,EAAE,8BAA8B,EAAE,EACtM,GAAG,CAAC,QAAQ,CAAC,oCAAoC,EAAE,kDAAkD,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/theme/common/colors/searchColors.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport * as nls from '../../../../nls.js';\n\n// Import the effects we need\nimport { registerColor, transparent } from '../colorUtils.js';\n\n// Import the colors we need\nimport { foreground } from './baseColors.js';\nimport { editorFindMatchHighlight, editorFindMatchHighlightBorder } from './editorColors.js';\n\n\nexport const searchResultsInfoForeground = registerColor('search.resultsInfoForeground',\n\t{ light: foreground, dark: transparent(foreground, 0.65), hcDark: foreground, hcLight: foreground },\n\tnls.localize('search.resultsInfoForeground', \"Color of the text in the search viewlet's completion message.\"));\n\n\n// ----- search editor (Distinct from normal editor find match to allow for better differentiation)\n\nexport const searchEditorFindMatch = registerColor('searchEditor.findMatchBackground',\n\t{ light: transparent(editorFindMatchHighlight, 0.66), dark: transparent(editorFindMatchHighlight, 0.66), hcDark: editorFindMatchHighlight, hcLight: editorFindMatchHighlight },\n\tnls.localize('searchEditor.queryMatch', \"Color of the Search Editor query matches.\"));\n\nexport const searchEditorFindMatchBorder = registerColor('searchEditor.findMatchBorder',\n\t{ light: transparent(editorFindMatchHighlightBorder, 0.66), dark: transparent(editorFindMatchHighlightBorder, 0.66), hcDark: editorFindMatchHighlightBorder, hcLight: editorFindMatchHighlightBorder },\n\tnls.localize('searchEditor.editorFindMatchBorder', \"Border color of the Search Editor query matches.\"));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "034f77122164f9f1abe1236145d8edc246e34076"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_27v49otp7q = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_27v49otp7q();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as nls from '../../../../nls.js';
+// Import the effects we need
+import { registerColor, transparent } from '../colorUtils.js';
+// Import the colors we need
+import { foreground } from './baseColors.js';
+import { editorFindMatchHighlight, editorFindMatchHighlightBorder } from './editorColors.js';
+export const searchResultsInfoForeground =
+/* istanbul ignore next */
+(cov_27v49otp7q().s[0]++, registerColor('search.resultsInfoForeground', {
+  light: foreground,
+  dark: transparent(foreground, 0.65),
+  hcDark: foreground,
+  hcLight: foreground
+}, nls.localize('search.resultsInfoForeground', "Color of the text in the search viewlet's completion message.")));
+// ----- search editor (Distinct from normal editor find match to allow for better differentiation)
+export const searchEditorFindMatch =
+/* istanbul ignore next */
+(cov_27v49otp7q().s[1]++, registerColor('searchEditor.findMatchBackground', {
+  light: transparent(editorFindMatchHighlight, 0.66),
+  dark: transparent(editorFindMatchHighlight, 0.66),
+  hcDark: editorFindMatchHighlight,
+  hcLight: editorFindMatchHighlight
+}, nls.localize('searchEditor.queryMatch', "Color of the Search Editor query matches.")));
+export const searchEditorFindMatchBorder =
+/* istanbul ignore next */
+(cov_27v49otp7q().s[2]++, registerColor('searchEditor.findMatchBorder', {
+  light: transparent(editorFindMatchHighlightBorder, 0.66),
+  dark: transparent(editorFindMatchHighlightBorder, 0.66),
+  hcDark: editorFindMatchHighlightBorder,
+  hcLight: editorFindMatchHighlightBorder
+}, nls.localize('searchEditor.editorFindMatchBorder', "Border color of the Search Editor query matches.")));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJubHMiLCJyZWdpc3RlckNvbG9yIiwidHJhbnNwYXJlbnQiLCJmb3JlZ3JvdW5kIiwiZWRpdG9yRmluZE1hdGNoSGlnaGxpZ2h0IiwiZWRpdG9yRmluZE1hdGNoSGlnaGxpZ2h0Qm9yZGVyIiwic2VhcmNoUmVzdWx0c0luZm9Gb3JlZ3JvdW5kIiwiY292XzI3djQ5b3RwN3EiLCJzIiwibGlnaHQiLCJkYXJrIiwiaGNEYXJrIiwiaGNMaWdodCIsImxvY2FsaXplIiwic2VhcmNoRWRpdG9yRmluZE1hdGNoIiwic2VhcmNoRWRpdG9yRmluZE1hdGNoQm9yZGVyIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS90aGVtZS9jb21tb24vY29sb3JzL3NlYXJjaENvbG9ycy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0ICogYXMgbmxzIGZyb20gJy4uLy4uLy4uLy4uL25scy5qcyc7XG5cbi8vIEltcG9ydCB0aGUgZWZmZWN0cyB3ZSBuZWVkXG5pbXBvcnQgeyByZWdpc3RlckNvbG9yLCB0cmFuc3BhcmVudCB9IGZyb20gJy4uL2NvbG9yVXRpbHMuanMnO1xuXG4vLyBJbXBvcnQgdGhlIGNvbG9ycyB3ZSBuZWVkXG5pbXBvcnQgeyBmb3JlZ3JvdW5kIH0gZnJvbSAnLi9iYXNlQ29sb3JzLmpzJztcbmltcG9ydCB7IGVkaXRvckZpbmRNYXRjaEhpZ2hsaWdodCwgZWRpdG9yRmluZE1hdGNoSGlnaGxpZ2h0Qm9yZGVyIH0gZnJvbSAnLi9lZGl0b3JDb2xvcnMuanMnO1xuXG5cbmV4cG9ydCBjb25zdCBzZWFyY2hSZXN1bHRzSW5mb0ZvcmVncm91bmQgPSByZWdpc3RlckNvbG9yKCdzZWFyY2gucmVzdWx0c0luZm9Gb3JlZ3JvdW5kJyxcblx0eyBsaWdodDogZm9yZWdyb3VuZCwgZGFyazogdHJhbnNwYXJlbnQoZm9yZWdyb3VuZCwgMC42NSksIGhjRGFyazogZm9yZWdyb3VuZCwgaGNMaWdodDogZm9yZWdyb3VuZCB9LFxuXHRubHMubG9jYWxpemUoJ3NlYXJjaC5yZXN1bHRzSW5mb0ZvcmVncm91bmQnLCBcIkNvbG9yIG9mIHRoZSB0ZXh0IGluIHRoZSBzZWFyY2ggdmlld2xldCdzIGNvbXBsZXRpb24gbWVzc2FnZS5cIikpO1xuXG5cbi8vIC0tLS0tIHNlYXJjaCBlZGl0b3IgKERpc3RpbmN0IGZyb20gbm9ybWFsIGVkaXRvciBmaW5kIG1hdGNoIHRvIGFsbG93IGZvciBiZXR0ZXIgZGlmZmVyZW50aWF0aW9uKVxuXG5leHBvcnQgY29uc3Qgc2VhcmNoRWRpdG9yRmluZE1hdGNoID0gcmVnaXN0ZXJDb2xvcignc2VhcmNoRWRpdG9yLmZpbmRNYXRjaEJhY2tncm91bmQnLFxuXHR7IGxpZ2h0OiB0cmFuc3BhcmVudChlZGl0b3JGaW5kTWF0Y2hIaWdobGlnaHQsIDAuNjYpLCBkYXJrOiB0cmFuc3BhcmVudChlZGl0b3JGaW5kTWF0Y2hIaWdobGlnaHQsIDAuNjYpLCBoY0Rhcms6IGVkaXRvckZpbmRNYXRjaEhpZ2hsaWdodCwgaGNMaWdodDogZWRpdG9yRmluZE1hdGNoSGlnaGxpZ2h0IH0sXG5cdG5scy5sb2NhbGl6ZSgnc2VhcmNoRWRpdG9yLnF1ZXJ5TWF0Y2gnLCBcIkNvbG9yIG9mIHRoZSBTZWFyY2ggRWRpdG9yIHF1ZXJ5IG1hdGNoZXMuXCIpKTtcblxuZXhwb3J0IGNvbnN0IHNlYXJjaEVkaXRvckZpbmRNYXRjaEJvcmRlciA9IHJlZ2lzdGVyQ29sb3IoJ3NlYXJjaEVkaXRvci5maW5kTWF0Y2hCb3JkZXInLFxuXHR7IGxpZ2h0OiB0cmFuc3BhcmVudChlZGl0b3JGaW5kTWF0Y2hIaWdobGlnaHRCb3JkZXIsIDAuNjYpLCBkYXJrOiB0cmFuc3BhcmVudChlZGl0b3JGaW5kTWF0Y2hIaWdobGlnaHRCb3JkZXIsIDAuNjYpLCBoY0Rhcms6IGVkaXRvckZpbmRNYXRjaEhpZ2hsaWdodEJvcmRlciwgaGNMaWdodDogZWRpdG9yRmluZE1hdGNoSGlnaGxpZ2h0Qm9yZGVyIH0sXG5cdG5scy5sb2NhbGl6ZSgnc2VhcmNoRWRpdG9yLmVkaXRvckZpbmRNYXRjaEJvcmRlcicsIFwiQm9yZGVyIGNvbG9yIG9mIHRoZSBTZWFyY2ggRWRpdG9yIHF1ZXJ5IG1hdGNoZXMuXCIpKTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLE9BQU8sS0FBS0EsR0FBRyxNQUFNLG9CQUFvQjtBQUV6QztBQUNBLFNBQVNDLGFBQWEsRUFBRUMsV0FBVyxRQUFRLGtCQUFrQjtBQUU3RDtBQUNBLFNBQVNDLFVBQVUsUUFBUSxpQkFBaUI7QUFDNUMsU0FBU0Msd0JBQXdCLEVBQUVDLDhCQUE4QixRQUFRLG1CQUFtQjtBQUc1RixPQUFPLE1BQU1DLDJCQUEyQjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdQLGFBQWEsQ0FBQyw4QkFBOEIsRUFDdEY7RUFBRVEsS0FBSyxFQUFFTixVQUFVO0VBQUVPLElBQUksRUFBRVIsV0FBVyxDQUFDQyxVQUFVLEVBQUUsSUFBSSxDQUFDO0VBQUVRLE1BQU0sRUFBRVIsVUFBVTtFQUFFUyxPQUFPLEVBQUVUO0FBQVUsQ0FBRSxFQUNuR0gsR0FBRyxDQUFDYSxRQUFRLENBQUMsOEJBQThCLEVBQUUsK0RBQStELENBQUMsQ0FBQztBQUcvRztBQUVBLE9BQU8sTUFBTUMscUJBQXFCO0FBQUE7QUFBQSxDQUFBUCxjQUFBLEdBQUFDLENBQUEsT0FBR1AsYUFBYSxDQUFDLGtDQUFrQyxFQUNwRjtFQUFFUSxLQUFLLEVBQUVQLFdBQVcsQ0FBQ0Usd0JBQXdCLEVBQUUsSUFBSSxDQUFDO0VBQUVNLElBQUksRUFBRVIsV0FBVyxDQUFDRSx3QkFBd0IsRUFBRSxJQUFJLENBQUM7RUFBRU8sTUFBTSxFQUFFUCx3QkFBd0I7RUFBRVEsT0FBTyxFQUFFUjtBQUF3QixDQUFFLEVBQzlLSixHQUFHLENBQUNhLFFBQVEsQ0FBQyx5QkFBeUIsRUFBRSwyQ0FBMkMsQ0FBQyxDQUFDO0FBRXRGLE9BQU8sTUFBTUUsMkJBQTJCO0FBQUE7QUFBQSxDQUFBUixjQUFBLEdBQUFDLENBQUEsT0FBR1AsYUFBYSxDQUFDLDhCQUE4QixFQUN0RjtFQUFFUSxLQUFLLEVBQUVQLFdBQVcsQ0FBQ0csOEJBQThCLEVBQUUsSUFBSSxDQUFDO0VBQUVLLElBQUksRUFBRVIsV0FBVyxDQUFDRyw4QkFBOEIsRUFBRSxJQUFJLENBQUM7RUFBRU0sTUFBTSxFQUFFTiw4QkFBOEI7RUFBRU8sT0FBTyxFQUFFUDtBQUE4QixDQUFFLEVBQ3RNTCxHQUFHLENBQUNhLFFBQVEsQ0FBQyxvQ0FBb0MsRUFBRSxrREFBa0QsQ0FBQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

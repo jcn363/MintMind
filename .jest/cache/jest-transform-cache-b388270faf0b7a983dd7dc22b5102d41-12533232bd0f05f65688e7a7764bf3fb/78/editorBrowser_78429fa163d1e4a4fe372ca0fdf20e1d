@@ -1,0 +1,876 @@
+9ecc18d89ec86a923d8861de830776d0
+/* istanbul ignore next */
+function cov_24wsf4ey8d() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/editorBrowser.ts";
+  var hash = "5d06e666f1de2a3b5a06a65842f5ef1186178ba1";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/editorBrowser.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 4
+        },
+        end: {
+          line: 15,
+          column: 5
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 77
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 21
+        }
+      },
+      "3": {
+        start: {
+          line: 21,
+          column: 4
+        },
+        end: {
+          line: 26,
+          column: 5
+        }
+      },
+      "4": {
+        start: {
+          line: 22,
+          column: 8
+        },
+        end: {
+          line: 22,
+          column: 77
+        }
+      },
+      "5": {
+        start: {
+          line: 25,
+          column: 8
+        },
+        end: {
+          line: 25,
+          column: 21
+        }
+      },
+      "6": {
+        start: {
+          line: 32,
+          column: 4
+        },
+        end: {
+          line: 34,
+          column: 63
+        }
+      },
+      "7": {
+        start: {
+          line: 40,
+          column: 4
+        },
+        end: {
+          line: 42,
+          column: 5
+        }
+      },
+      "8": {
+        start: {
+          line: 41,
+          column: 8
+        },
+        end: {
+          line: 41,
+          column: 21
+        }
+      },
+      "9": {
+        start: {
+          line: 43,
+          column: 4
+        },
+        end: {
+          line: 45,
+          column: 5
+        }
+      },
+      "10": {
+        start: {
+          line: 44,
+          column: 8
+        },
+        end: {
+          line: 44,
+          column: 41
+        }
+      },
+      "11": {
+        start: {
+          line: 46,
+          column: 4
+        },
+        end: {
+          line: 48,
+          column: 5
+        }
+      },
+      "12": {
+        start: {
+          line: 47,
+          column: 8
+        },
+        end: {
+          line: 47,
+          column: 38
+        }
+      },
+      "13": {
+        start: {
+          line: 49,
+          column: 4
+        },
+        end: {
+          line: 49,
+          column: 16
+        }
+      },
+      "14": {
+        start: {
+          line: 55,
+          column: 4
+        },
+        end: {
+          line: 57,
+          column: 5
+        }
+      },
+      "15": {
+        start: {
+          line: 56,
+          column: 8
+        },
+        end: {
+          line: 56,
+          column: 21
+        }
+      },
+      "16": {
+        start: {
+          line: 58,
+          column: 4
+        },
+        end: {
+          line: 58,
+          column: 16
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isCodeEditor",
+        decl: {
+          start: {
+            line: 9,
+            column: 16
+          },
+          end: {
+            line: 9,
+            column: 28
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 36
+          },
+          end: {
+            line: 16,
+            column: 1
+          }
+        },
+        line: 9
+      },
+      "1": {
+        name: "isDiffEditor",
+        decl: {
+          start: {
+            line: 20,
+            column: 16
+          },
+          end: {
+            line: 20,
+            column: 28
+          }
+        },
+        loc: {
+          start: {
+            line: 20,
+            column: 36
+          },
+          end: {
+            line: 27,
+            column: 1
+          }
+        },
+        line: 20
+      },
+      "2": {
+        name: "isCompositeEditor",
+        decl: {
+          start: {
+            line: 31,
+            column: 16
+          },
+          end: {
+            line: 31,
+            column: 33
+          }
+        },
+        loc: {
+          start: {
+            line: 31,
+            column: 41
+          },
+          end: {
+            line: 35,
+            column: 1
+          }
+        },
+        line: 31
+      },
+      "3": {
+        name: "getCodeEditor",
+        decl: {
+          start: {
+            line: 39,
+            column: 16
+          },
+          end: {
+            line: 39,
+            column: 29
+          }
+        },
+        loc: {
+          start: {
+            line: 39,
+            column: 37
+          },
+          end: {
+            line: 50,
+            column: 1
+          }
+        },
+        line: 39
+      },
+      "4": {
+        name: "getIEditor",
+        decl: {
+          start: {
+            line: 54,
+            column: 16
+          },
+          end: {
+            line: 54,
+            column: 26
+          }
+        },
+        loc: {
+          start: {
+            line: 54,
+            column: 34
+          },
+          end: {
+            line: 59,
+            column: 1
+          }
+        },
+        line: 54
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        }, {
+          start: {
+            line: 13,
+            column: 9
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        }],
+        line: 10
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 10,
+            column: 58
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 10,
+            column: 8
+          },
+          end: {
+            line: 10,
+            column: 13
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 17
+          },
+          end: {
+            line: 10,
+            column: 58
+          }
+        }],
+        line: 10
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 21,
+            column: 4
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 21,
+            column: 4
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        }, {
+          start: {
+            line: 24,
+            column: 9
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        }],
+        line: 21
+      },
+      "3": {
+        loc: {
+          start: {
+            line: 21,
+            column: 8
+          },
+          end: {
+            line: 21,
+            column: 58
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 21,
+            column: 8
+          },
+          end: {
+            line: 21,
+            column: 13
+          }
+        }, {
+          start: {
+            line: 21,
+            column: 17
+          },
+          end: {
+            line: 21,
+            column: 58
+          }
+        }],
+        line: 21
+      },
+      "4": {
+        loc: {
+          start: {
+            line: 32,
+            column: 11
+          },
+          end: {
+            line: 34,
+            column: 62
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 32,
+            column: 11
+          },
+          end: {
+            line: 32,
+            column: 18
+          }
+        }, {
+          start: {
+            line: 33,
+            column: 11
+          },
+          end: {
+            line: 33,
+            column: 36
+          }
+        }, {
+          start: {
+            line: 34,
+            column: 11
+          },
+          end: {
+            line: 34,
+            column: 62
+          }
+        }],
+        line: 32
+      },
+      "5": {
+        loc: {
+          start: {
+            line: 40,
+            column: 4
+          },
+          end: {
+            line: 42,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 40,
+            column: 4
+          },
+          end: {
+            line: 42,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 40
+      },
+      "6": {
+        loc: {
+          start: {
+            line: 43,
+            column: 4
+          },
+          end: {
+            line: 45,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 43,
+            column: 4
+          },
+          end: {
+            line: 45,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 43
+      },
+      "7": {
+        loc: {
+          start: {
+            line: 46,
+            column: 4
+          },
+          end: {
+            line: 48,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 46,
+            column: 4
+          },
+          end: {
+            line: 48,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 46
+      },
+      "8": {
+        loc: {
+          start: {
+            line: 46,
+            column: 8
+          },
+          end: {
+            line: 46,
+            column: 72
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 46,
+            column: 8
+          },
+          end: {
+            line: 46,
+            column: 32
+          }
+        }, {
+          start: {
+            line: 46,
+            column: 36
+          },
+          end: {
+            line: 46,
+            column: 72
+          }
+        }],
+        line: 46
+      },
+      "9": {
+        loc: {
+          start: {
+            line: 55,
+            column: 4
+          },
+          end: {
+            line: 57,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 55,
+            column: 4
+          },
+          end: {
+            line: 57,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 55
+      },
+      "10": {
+        loc: {
+          start: {
+            line: 55,
+            column: 8
+          },
+          end: {
+            line: 55,
+            column: 50
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 55,
+            column: 8
+          },
+          end: {
+            line: 55,
+            column: 27
+          }
+        }, {
+          start: {
+            line: 55,
+            column: 31
+          },
+          end: {
+            line: 55,
+            column: 50
+          }
+        }],
+        line: 55
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0],
+      "3": [0, 0],
+      "4": [0, 0, 0],
+      "5": [0, 0],
+      "6": [0, 0],
+      "7": [0, 0],
+      "8": [0, 0],
+      "9": [0, 0],
+      "10": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/editorBrowser.ts",
+      mappings: "AAAA;;;gGAGgG;AAkBhG,OAAO,KAAK,YAAY,MAAM,2BAA2B,CAAC;AAs3C1D;;GAEG;AACH,MAAM,UAAU,YAAY,CAAC,KAAc;IAC1C,IAAI,KAAK,IAAI,OAAqB,KAAM,CAAC,aAAa,KAAK,UAAU,EAAE,CAAC;QACvE,OAAqB,KAAM,CAAC,aAAa,EAAE,KAAK,YAAY,CAAC,UAAU,CAAC,WAAW,CAAC;IACrF,CAAC;SAAM,CAAC;QACP,OAAO,KAAK,CAAC;IACd,CAAC;AACF,CAAC;AAED;;GAEG;AACH,MAAM,UAAU,YAAY,CAAC,KAAc;IAC1C,IAAI,KAAK,IAAI,OAAqB,KAAM,CAAC,aAAa,KAAK,UAAU,EAAE,CAAC;QACvE,OAAqB,KAAM,CAAC,aAAa,EAAE,KAAK,YAAY,CAAC,UAAU,CAAC,WAAW,CAAC;IACrF,CAAC;SAAM,CAAC;QACP,OAAO,KAAK,CAAC;IACd,CAAC;AACF,CAAC;AAED;;GAEG;AACH,MAAM,UAAU,iBAAiB,CAAC,KAAc;IAC/C,OAAO,CAAC,CAAC,KAAK;WACV,OAAO,KAAK,KAAK,QAAQ;WACzB,OAA2C,KAAM,CAAC,uBAAuB,KAAK,UAAU,CAAC;AAE9F,CAAC;AAED;;GAEG;AACH,MAAM,UAAU,aAAa,CAAC,KAAc;IAC3C,IAAI,YAAY,CAAC,KAAK,CAAC,EAAE,CAAC;QACzB,OAAO,KAAK,CAAC;IACd,CAAC;IAED,IAAI,YAAY,CAAC,KAAK,CAAC,EAAE,CAAC;QACzB,OAAO,KAAK,CAAC,iBAAiB,EAAE,CAAC;IAClC,CAAC;IAED,IAAI,iBAAiB,CAAC,KAAK,CAAC,IAAI,YAAY,CAAC,KAAK,CAAC,gBAAgB,CAAC,EAAE,CAAC;QACtE,OAAO,KAAK,CAAC,gBAAgB,CAAC;IAC/B,CAAC;IAED,OAAO,IAAI,CAAC;AACb,CAAC;AAED;;GAEG;AACH,MAAM,UAAU,UAAU,CAAC,KAAc;IACxC,IAAI,YAAY,CAAC,KAAK,CAAC,IAAI,YAAY,CAAC,KAAK,CAAC,EAAE,CAAC;QAChD,OAAO,KAAK,CAAC;IACd,CAAC;IAED,OAAO,IAAI,CAAC;AACb,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/editorBrowser.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IKeyboardEvent } from '../../base/browser/keyboardEvent.js';\nimport { IMouseEvent, IMouseWheelEvent } from '../../base/browser/mouseEvent.js';\nimport { IBoundarySashes } from '../../base/browser/ui/sash/sash.js';\nimport { Event } from '../../base/common/event.js';\nimport { MenuId } from '../../platform/actions/common/actions.js';\nimport { IContextKeyService } from '../../platform/contextkey/common/contextkey.js';\nimport { ServicesAccessor } from '../../platform/instantiation/common/instantiation.js';\nimport { ConfigurationChangedEvent, EditorLayoutInfo, EditorOption, FindComputedEditorOptionValueById, IComputedEditorOptions, IDiffEditorOptions, IEditorOptions, OverviewRulerPosition } from '../common/config/editorOptions.js';\nimport { IDimension } from '../common/core/2d/dimension.js';\nimport { TextEdit } from '../common/core/edits/textEdit.js';\nimport { IPosition, Position } from '../common/core/position.js';\nimport { IRange, Range } from '../common/core/range.js';\nimport { Selection } from '../common/core/selection.js';\nimport { IWordAtPosition } from '../common/core/wordHelper.js';\nimport { ICursorPositionChangedEvent, ICursorSelectionChangedEvent } from '../common/cursorEvents.js';\nimport { IDiffComputationResult, ILineChange } from '../common/diff/legacyLinesDiffComputer.js';\nimport * as editorCommon from '../common/editorCommon.js';\nimport { GlyphMarginLane, ICursorStateComputer, IIdentifiedSingleEditOperation, IModelDecoration, IModelDecorationsChangeAccessor, IModelDeltaDecoration, ITextModel, PositionAffinity } from '../common/model.js';\nimport { InjectedText } from '../common/modelLineProjectionData.js';\nimport { TextModelEditSource } from '../common/textModelEditSource.js';\nimport { IModelContentChangedEvent, IModelDecorationsChangedEvent, IModelLanguageChangedEvent, IModelLanguageConfigurationChangedEvent, IModelOptionsChangedEvent, IModelTokensChangedEvent, ModelFontChangedEvent, ModelLineHeightChangedEvent } from '../common/textModelEvents.js';\nimport { IEditorWhitespace, IViewModel } from '../common/viewModel.js';\nimport { OverviewRulerZone } from '../common/viewModel/overviewZoneManager.js';\nimport { IEditorConstructionOptions } from './config/editorConfiguration.js';\n\n/**\n * A view zone is a full horizontal rectangle that 'pushes' text down.\n * The editor reserves space for view zones when rendering.\n */\nexport interface IViewZone {\n\t/**\n\t * The line number after which this zone should appear.\n\t * Use 0 to place a view zone before the first line number.\n\t */\n\tafterLineNumber: number;\n\t/**\n\t * The column after which this zone should appear.\n\t * If not set, the maxLineColumn of `afterLineNumber` will be used.\n\t * This is relevant for wrapped lines.\n\t */\n\tafterColumn?: number;\n\t/**\n\t * If the `afterColumn` has multiple view columns, the affinity specifies which one to use. Defaults to `none`.\n\t*/\n\tafterColumnAffinity?: PositionAffinity;\n\t/**\n\t * Render the zone even when its line is hidden.\n\t */\n\tshowInHiddenAreas?: boolean;\n\t/**\n\t * Tiebreaker that is used when multiple view zones want to be after the same line.\n\t * Defaults to `afterColumn` otherwise 10000;\n\t */\n\tordinal?: number;\n\t/**\n\t * Suppress mouse down events.\n\t * If set, the editor will attach a mouse down listener to the view zone and .preventDefault on it.\n\t * Defaults to false\n\t */\n\tsuppressMouseDown?: boolean;\n\t/**\n\t * The height in lines of the view zone.\n\t * If specified, `heightInPx` will be used instead of this.\n\t * If neither `heightInPx` nor `heightInLines` is specified, a default of `heightInLines` = 1 will be chosen.\n\t */\n\theightInLines?: number;\n\t/**\n\t * The height in px of the view zone.\n\t * If this is set, the editor will give preference to it rather than `heightInLines` above.\n\t * If neither `heightInPx` nor `heightInLines` is specified, a default of `heightInLines` = 1 will be chosen.\n\t */\n\theightInPx?: number;\n\t/**\n\t * The minimum width in px of the view zone.\n\t * If this is set, the editor will ensure that the scroll width is >= than this value.\n\t */\n\tminWidthInPx?: number;\n\t/**\n\t * The dom node of the view zone\n\t */\n\tdomNode: HTMLElement;\n\t/**\n\t * An optional dom node for the view zone that will be placed in the margin area.\n\t */\n\tmarginDomNode?: HTMLElement | null;\n\t/**\n\t * Callback which gives the relative top of the view zone as it appears (taking scrolling into account).\n\t */\n\tonDomNodeTop?: (top: number) => void;\n\t/**\n\t * Callback which gives the height in pixels of the view zone.\n\t */\n\tonComputedHeight?: (height: number) => void;\n}\n/**\n * An accessor that allows for zones to be added or removed.\n */\nexport interface IViewZoneChangeAccessor {\n\t/**\n\t * Create a new view zone.\n\t * @param zone Zone to create\n\t * @return A unique identifier to the view zone.\n\t */\n\taddZone(zone: IViewZone): string;\n\t/**\n\t * Remove a zone\n\t * @param id A unique identifier to the view zone, as returned by the `addZone` call.\n\t */\n\tremoveZone(id: string): void;\n\t/**\n\t * Change a zone's position.\n\t * The editor will rescan the `afterLineNumber` and `afterColumn` properties of a view zone.\n\t */\n\tlayoutZone(id: string): void;\n}\n\n/**\n * A positioning preference for rendering content widgets.\n */\nexport const enum ContentWidgetPositionPreference {\n\t/**\n\t * Place the content widget exactly at a position\n\t */\n\tEXACT,\n\t/**\n\t * Place the content widget above a position\n\t */\n\tABOVE,\n\t/**\n\t * Place the content widget below a position\n\t */\n\tBELOW\n}\n/**\n * A position for rendering content widgets.\n */\nexport interface IContentWidgetPosition {\n\t/**\n\t * Desired position which serves as an anchor for placing the content widget.\n\t * The widget will be placed above, at, or below the specified position, based on the\n\t * provided preference. The widget will always touch this position.\n\t *\n\t * Given sufficient horizontal space, the widget will be placed to the right of the\n\t * passed in position. This can be tweaked by providing a `secondaryPosition`.\n\t *\n\t * @see preference\n\t * @see secondaryPosition\n\t */\n\tposition: IPosition | null;\n\t/**\n\t * Optionally, a secondary position can be provided to further define the placing of\n\t * the content widget. The secondary position must have the same line number as the\n\t * primary position. If possible, the widget will be placed such that it also touches\n\t * the secondary position.\n\t */\n\tsecondaryPosition?: IPosition | null;\n\t/**\n\t * Placement preference for position, in order of preference.\n\t */\n\tpreference: ContentWidgetPositionPreference[];\n\n\t/**\n\t * Placement preference when multiple view positions refer to the same (model) position.\n\t * This plays a role when injected text is involved.\n\t*/\n\tpositionAffinity?: PositionAffinity;\n}\n/**\n * A content widget renders inline with the text and can be easily placed 'near' an editor position.\n */\nexport interface IContentWidget {\n\t/**\n\t * Render this content widget in a location where it could overflow the editor's view dom node.\n\t */\n\tallowEditorOverflow?: boolean;\n\t/**\n\t * Call preventDefault() on mousedown events that target the content widget.\n\t */\n\tsuppressMouseDown?: boolean;\n\t/**\n\t * Get a unique identifier of the content widget.\n\t */\n\tgetId(): string;\n\t/**\n\t * Get the dom node of the content widget.\n\t */\n\tgetDomNode(): HTMLElement;\n\t/**\n\t * Get the placement of the content widget.\n\t * If null is returned, the content widget will be placed off screen.\n\t */\n\tgetPosition(): IContentWidgetPosition | null;\n\t/**\n\t * Optional function that is invoked before rendering\n\t * the content widget. If a dimension is returned the editor will\n\t * attempt to use it.\n\t */\n\tbeforeRender?(): IDimension | null;\n\t/**\n\t * Optional function that is invoked after rendering the content\n\t * widget. Is being invoked with the selected position preference\n\t * or `null` if not rendered.\n\t */\n\tafterRender?(position: ContentWidgetPositionPreference | null, coordinate: IContentWidgetRenderedCoordinate | null): void;\n}\n\n/**\n * Coordinatees passed in {@link IContentWidget.afterRender}\n */\nexport interface IContentWidgetRenderedCoordinate {\n\t/**\n\t * Top position relative to the editor content.\n\t */\n\treadonly top: number;\n\n\t/**\n\t * Left position relative to the editor content.\n\t */\n\treadonly left: number;\n}\n\n/**\n * A positioning preference for rendering overlay widgets.\n */\nexport const enum OverlayWidgetPositionPreference {\n\t/**\n\t * Position the overlay widget in the top right corner\n\t */\n\tTOP_RIGHT_CORNER,\n\n\t/**\n\t * Position the overlay widget in the bottom right corner\n\t */\n\tBOTTOM_RIGHT_CORNER,\n\n\t/**\n\t * Position the overlay widget in the top center\n\t */\n\tTOP_CENTER\n}\n\n\n/**\n * Represents editor-relative coordinates of an overlay widget.\n */\nexport interface IOverlayWidgetPositionCoordinates {\n\t/**\n\t * The top position for the overlay widget, relative to the editor.\n\t */\n\ttop: number;\n\t/**\n\t * The left position for the overlay widget, relative to the editor.\n\t */\n\tleft: number;\n}\n\n/**\n * A position for rendering overlay widgets.\n */\nexport interface IOverlayWidgetPosition {\n\t/**\n\t * The position preference for the overlay widget.\n\t */\n\tpreference: OverlayWidgetPositionPreference | IOverlayWidgetPositionCoordinates | null;\n\n\t/**\n\t * When set, stacks with other overlay widgets with the same preference,\n\t * in an order determined by the ordinal value.\n\t */\n\tstackOrdinal?: number;\n}\n/**\n * An overlay widgets renders on top of the text.\n */\nexport interface IOverlayWidget {\n\t/**\n\t * Event fired when the widget layout changes.\n\t */\n\treadonly onDidLayout?: Event<void>;\n\t/**\n\t * Render this overlay widget in a location where it could overflow the editor's view dom node.\n\t */\n\tallowEditorOverflow?: boolean;\n\t/**\n\t * Get a unique identifier of the overlay widget.\n\t */\n\tgetId(): string;\n\t/**\n\t * Get the dom node of the overlay widget.\n\t */\n\tgetDomNode(): HTMLElement;\n\t/**\n\t * Get the placement of the overlay widget.\n\t * If null is returned, the overlay widget is responsible to place itself.\n\t */\n\tgetPosition(): IOverlayWidgetPosition | null;\n\t/**\n\t * The editor will ensure that the scroll width is >= than this value.\n\t */\n\tgetMinContentWidthInPx?(): number;\n}\n\n/**\n * A glyph margin widget renders in the editor glyph margin.\n */\nexport interface IGlyphMarginWidget {\n\t/**\n\t * Get a unique identifier of the glyph widget.\n\t */\n\tgetId(): string;\n\t/**\n\t * Get the dom node of the glyph widget.\n\t */\n\tgetDomNode(): HTMLElement;\n\t/**\n\t * Get the placement of the glyph widget.\n\t */\n\tgetPosition(): IGlyphMarginWidgetPosition;\n}\n\n/**\n * A position for rendering glyph margin widgets.\n */\nexport interface IGlyphMarginWidgetPosition {\n\t/**\n\t * The glyph margin lane where the widget should be shown.\n\t */\n\tlane: GlyphMarginLane;\n\t/**\n\t * The priority order of the widget, used for determining which widget\n\t * to render when there are multiple.\n\t */\n\tzIndex: number;\n\t/**\n\t * The editor range that this widget applies to.\n\t */\n\trange: IRange;\n}\n\n/**\n * Type of hit element with the mouse in the editor.\n */\nexport const enum MouseTargetType {\n\t/**\n\t * Mouse is on top of an unknown element.\n\t */\n\tUNKNOWN,\n\t/**\n\t * Mouse is on top of the textarea used for input.\n\t */\n\tTEXTAREA,\n\t/**\n\t * Mouse is on top of the glyph margin\n\t */\n\tGUTTER_GLYPH_MARGIN,\n\t/**\n\t * Mouse is on top of the line numbers\n\t */\n\tGUTTER_LINE_NUMBERS,\n\t/**\n\t * Mouse is on top of the line decorations\n\t */\n\tGUTTER_LINE_DECORATIONS,\n\t/**\n\t * Mouse is on top of the whitespace left in the gutter by a view zone.\n\t */\n\tGUTTER_VIEW_ZONE,\n\t/**\n\t * Mouse is on top of text in the content.\n\t */\n\tCONTENT_TEXT,\n\t/**\n\t * Mouse is on top of empty space in the content (e.g. after line text or below last line)\n\t */\n\tCONTENT_EMPTY,\n\t/**\n\t * Mouse is on top of a view zone in the content.\n\t */\n\tCONTENT_VIEW_ZONE,\n\t/**\n\t * Mouse is on top of a content widget.\n\t */\n\tCONTENT_WIDGET,\n\t/**\n\t * Mouse is on top of the decorations overview ruler.\n\t */\n\tOVERVIEW_RULER,\n\t/**\n\t * Mouse is on top of a scrollbar.\n\t */\n\tSCROLLBAR,\n\t/**\n\t * Mouse is on top of an overlay widget.\n\t */\n\tOVERLAY_WIDGET,\n\t/**\n\t * Mouse is outside of the editor.\n\t */\n\tOUTSIDE_EDITOR,\n}\nexport interface IBaseMouseTarget {\n\t/**\n\t * The target element\n\t */\n\treadonly element: HTMLElement | null;\n\t/**\n\t * The 'approximate' editor position\n\t */\n\treadonly position: Position | null;\n\t/**\n\t * Desired mouse column (e.g. when position.column gets clamped to text length -- clicking after text on a line).\n\t */\n\treadonly mouseColumn: number;\n\t/**\n\t * The 'approximate' editor range\n\t */\n\treadonly range: Range | null;\n}\nexport interface IMouseTargetUnknown extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.UNKNOWN;\n}\nexport interface IMouseTargetTextarea extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.TEXTAREA;\n\treadonly position: null;\n\treadonly range: null;\n}\nexport interface IMouseTargetMarginData {\n\treadonly isAfterLines: boolean;\n\treadonly glyphMarginLeft: number;\n\treadonly glyphMarginWidth: number;\n\treadonly glyphMarginLane?: GlyphMarginLane;\n\treadonly lineNumbersWidth: number;\n\treadonly offsetX: number;\n}\nexport interface IMouseTargetMargin extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.GUTTER_GLYPH_MARGIN | MouseTargetType.GUTTER_LINE_NUMBERS | MouseTargetType.GUTTER_LINE_DECORATIONS;\n\treadonly position: Position;\n\treadonly range: Range;\n\treadonly detail: IMouseTargetMarginData;\n}\nexport interface IMouseTargetViewZoneData {\n\treadonly viewZoneId: string;\n\treadonly positionBefore: Position | null;\n\treadonly positionAfter: Position | null;\n\treadonly position: Position;\n\treadonly afterLineNumber: number;\n}\nexport interface IMouseTargetViewZone extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.GUTTER_VIEW_ZONE | MouseTargetType.CONTENT_VIEW_ZONE;\n\treadonly position: Position;\n\treadonly range: Range;\n\treadonly detail: IMouseTargetViewZoneData;\n}\nexport interface IMouseTargetContentTextData {\n\treadonly mightBeForeignElement: boolean;\n\t/**\n\t * @internal\n\t */\n\treadonly injectedText: InjectedText | null;\n}\nexport interface IMouseTargetContentText extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.CONTENT_TEXT;\n\treadonly position: Position;\n\treadonly range: Range;\n\treadonly detail: IMouseTargetContentTextData;\n}\nexport interface IMouseTargetContentEmptyData {\n\treadonly isAfterLines: boolean;\n\treadonly horizontalDistanceToText?: number;\n}\nexport interface IMouseTargetContentEmpty extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.CONTENT_EMPTY;\n\treadonly position: Position;\n\treadonly range: Range;\n\treadonly detail: IMouseTargetContentEmptyData;\n}\nexport interface IMouseTargetContentWidget extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.CONTENT_WIDGET;\n\treadonly position: null;\n\treadonly range: null;\n\treadonly detail: string;\n}\nexport interface IMouseTargetOverlayWidget extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.OVERLAY_WIDGET;\n\treadonly position: null;\n\treadonly range: null;\n\treadonly detail: string;\n}\nexport interface IMouseTargetScrollbar extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.SCROLLBAR;\n\treadonly position: Position;\n\treadonly range: Range;\n}\nexport interface IMouseTargetOverviewRuler extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.OVERVIEW_RULER;\n}\nexport interface IMouseTargetOutsideEditor extends IBaseMouseTarget {\n\treadonly type: MouseTargetType.OUTSIDE_EDITOR;\n\treadonly outsidePosition: 'above' | 'below' | 'left' | 'right';\n\treadonly outsideDistance: number;\n}\n/**\n * Target hit with the mouse in the editor.\n */\nexport type IMouseTarget = (\n\tIMouseTargetUnknown\n\t| IMouseTargetTextarea\n\t| IMouseTargetMargin\n\t| IMouseTargetViewZone\n\t| IMouseTargetContentText\n\t| IMouseTargetContentEmpty\n\t| IMouseTargetContentWidget\n\t| IMouseTargetOverlayWidget\n\t| IMouseTargetScrollbar\n\t| IMouseTargetOverviewRuler\n\t| IMouseTargetOutsideEditor\n);\n/**\n * A mouse event originating from the editor.\n */\nexport interface IEditorMouseEvent {\n\treadonly event: IMouseEvent;\n\treadonly target: IMouseTarget;\n}\nexport interface IPartialEditorMouseEvent {\n\treadonly event: IMouseEvent;\n\treadonly target: IMouseTarget | null;\n}\n\n/**\n * A paste event originating from the editor.\n */\nexport interface IPasteEvent {\n\treadonly range: Range;\n\treadonly languageId: string | null;\n\treadonly clipboardEvent?: ClipboardEvent;\n}\n\n/**\n * @internal\n */\nexport interface PastePayload {\n\ttext: string;\n\tpasteOnNewLine: boolean;\n\tmulticursorText: string[] | null;\n\tmode: string | null;\n\tclipboardEvent?: ClipboardEvent;\n}\n\n/**\n * An overview ruler\n * @internal\n */\nexport interface IOverviewRuler {\n\tgetDomNode(): HTMLElement;\n\tdispose(): void;\n\tsetZones(zones: OverviewRulerZone[]): void;\n\tsetLayout(position: OverviewRulerPosition): void;\n}\n\n/**\n * Editor aria options.\n * @internal\n */\nexport interface IEditorAriaOptions {\n\tactiveDescendant: string | undefined;\n\trole?: string;\n}\n\nexport interface IDiffEditorConstructionOptions extends IDiffEditorOptions, IEditorConstructionOptions {\n\t/**\n\t * Place overflow widgets inside an external DOM node.\n\t * Defaults to an internal DOM node.\n\t */\n\toverflowWidgetsDomNode?: HTMLElement;\n\n\t/**\n\t * Aria label for original editor.\n\t */\n\toriginalAriaLabel?: string;\n\n\t/**\n\t * Aria label for modified editor.\n\t */\n\tmodifiedAriaLabel?: string;\n}\n\n/**\n * A rich code editor.\n */\nexport interface ICodeEditor extends editorCommon.IEditor {\n\t/**\n\t * This editor is used as an alternative to an <input> box, i.e. as a simple widget.\n\t * @internal\n\t */\n\treadonly isSimpleWidget: boolean;\n\t/**\n\t * The context menu ID that should be used to lookup context menu actions.\n\t * @internal\n\t */\n\treadonly contextMenuId: MenuId;\n\t/**\n\t * The editor's scoped context key service.\n\t * @internal\n\t */\n\treadonly contextKeyService: IContextKeyService;\n\t/**\n\t * An event emitted when the content of the current model has changed.\n\t * @event\n\t */\n\treadonly onDidChangeModelContent: Event<IModelContentChangedEvent>;\n\t/**\n\t * An event emitted when the language of the current model has changed.\n\t * @event\n\t */\n\treadonly onDidChangeModelLanguage: Event<IModelLanguageChangedEvent>;\n\t/**\n\t * An event emitted when the language configuration of the current model has changed.\n\t * @event\n\t */\n\treadonly onDidChangeModelLanguageConfiguration: Event<IModelLanguageConfigurationChangedEvent>;\n\t/**\n\t * An event emitted when the options of the current model has changed.\n\t * @event\n\t */\n\treadonly onDidChangeModelOptions: Event<IModelOptionsChangedEvent>;\n\t/**\n\t * An event emitted when the configuration of the editor has changed. (e.g. `editor.updateOptions()`)\n\t * @event\n\t */\n\treadonly onDidChangeConfiguration: Event<ConfigurationChangedEvent>;\n\t/**\n\t * An event emitted when the cursor position has changed.\n\t * @event\n\t */\n\treadonly onDidChangeCursorPosition: Event<ICursorPositionChangedEvent>;\n\t/**\n\t * An event emitted when the cursor selection has changed.\n\t * @event\n\t */\n\treadonly onDidChangeCursorSelection: Event<ICursorSelectionChangedEvent>;\n\t/**\n\t * An event emitted when the model of this editor is about to change (e.g. from `editor.setModel()`).\n\t * @event\n\t */\n\treadonly onWillChangeModel: Event<editorCommon.IModelChangedEvent>;\n\t/**\n\t * An event emitted when the model of this editor has changed (e.g. `editor.setModel()`).\n\t * @event\n\t */\n\treadonly onDidChangeModel: Event<editorCommon.IModelChangedEvent>;\n\t/**\n\t * An event emitted when the decorations of the current model have changed.\n\t * @event\n\t */\n\treadonly onDidChangeModelDecorations: Event<IModelDecorationsChangedEvent>;\n\t/**\n\t * An event emitted when the tokens of the current model have changed.\n\t * @internal\n\t */\n\treadonly onDidChangeModelTokens: Event<IModelTokensChangedEvent>;\n\t/**\n\t * An event emitted when the text inside this editor gained focus (i.e. cursor starts blinking).\n\t * @event\n\t */\n\treadonly onDidFocusEditorText: Event<void>;\n\t/**\n\t * An event emitted when the text inside this editor lost focus (i.e. cursor stops blinking).\n\t * @event\n\t */\n\treadonly onDidBlurEditorText: Event<void>;\n\t/**\n\t * An event emitted when the text inside this editor or an editor widget gained focus.\n\t * @event\n\t */\n\treadonly onDidFocusEditorWidget: Event<void>;\n\t/**\n\t * An event emitted when the text inside this editor or an editor widget lost focus.\n\t * @event\n\t */\n\treadonly onDidBlurEditorWidget: Event<void>;\n\t/**\n\t * An event emitted before interpreting typed characters (on the keyboard).\n\t * @event\n\t * @internal\n\t */\n\treadonly onWillType: Event<string>;\n\t/**\n\t * An event emitted after interpreting typed characters (on the keyboard).\n\t * @event\n\t * @internal\n\t */\n\treadonly onDidType: Event<string>;\n\t/**\n\t * Boolean indicating whether input is in composition\n\t */\n\treadonly inComposition: boolean;\n\t/**\n\t * An event emitted after composition has started.\n\t */\n\treadonly onDidCompositionStart: Event<void>;\n\t/**\n\t * An event emitted after composition has ended.\n\t */\n\treadonly onDidCompositionEnd: Event<void>;\n\t/**\n\t * An event emitted when editing failed because the editor is read-only.\n\t * @event\n\t */\n\treadonly onDidAttemptReadOnlyEdit: Event<void>;\n\t/**\n\t * An event emitted when users paste text in the editor.\n\t * @event\n\t */\n\treadonly onDidPaste: Event<IPasteEvent>;\n\t/**\n\t * An event emitted on a \"mouseup\".\n\t * @event\n\t */\n\treadonly onMouseUp: Event<IEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mousedown\".\n\t * @event\n\t */\n\treadonly onMouseDown: Event<IEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mousedrag\".\n\t * @internal\n\t * @event\n\t */\n\treadonly onMouseDrag: Event<IEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mousedrop\".\n\t * @internal\n\t * @event\n\t */\n\treadonly onMouseDrop: Event<IPartialEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mousedropcanceled\".\n\t * @internal\n\t * @event\n\t */\n\treadonly onMouseDropCanceled: Event<void>;\n\t/**\n\t * An event emitted when content is dropped into the editor.\n\t * @internal\n\t * @event\n\t */\n\treadonly onDropIntoEditor: Event<{ readonly position: IPosition; readonly event: DragEvent }>;\n\t/**\n\t * An event emitted on a \"contextmenu\".\n\t * @event\n\t */\n\treadonly onContextMenu: Event<IEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mousemove\".\n\t * @event\n\t */\n\treadonly onMouseMove: Event<IEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mouseleave\".\n\t * @event\n\t */\n\treadonly onMouseLeave: Event<IPartialEditorMouseEvent>;\n\t/**\n\t * An event emitted on a \"mousewheel\"\n\t * @event\n\t * @internal\n\t */\n\treadonly onMouseWheel: Event<IMouseWheelEvent>;\n\t/**\n\t * An event emitted on a \"keyup\".\n\t * @event\n\t */\n\treadonly onKeyUp: Event<IKeyboardEvent>;\n\t/**\n\t * An event emitted on a \"keydown\".\n\t * @event\n\t */\n\treadonly onKeyDown: Event<IKeyboardEvent>;\n\t/**\n\t * An event emitted when the layout of the editor has changed.\n\t * @event\n\t */\n\treadonly onDidLayoutChange: Event<EditorLayoutInfo>;\n\t/**\n\t * An event emitted when the content width or content height in the editor has changed.\n\t * @event\n\t */\n\treadonly onDidContentSizeChange: Event<editorCommon.IContentSizeChangedEvent>;\n\t/**\n\t * An event emitted when the scroll in the editor has changed.\n\t * @event\n\t */\n\treadonly onDidScrollChange: Event<editorCommon.IScrollEvent>;\n\n\t/**\n\t * An event emitted when hidden areas change in the editor (e.g. due to folding).\n\t * @event\n\t */\n\treadonly onDidChangeHiddenAreas: Event<void>;\n\n\t/**\n\t * An event emitted before an editor\n\t * @internal\n\t */\n\treadonly onWillTriggerEditorOperationEvent: Event<editorCommon.ITriggerEditorOperationEvent>;\n\n\t/**\n\t * Some editor operations fire multiple events at once.\n\t * To allow users to react to multiple events fired by a single operation,\n\t * the editor fires a begin update before the operation and an end update after the operation.\n\t * Whenever the editor fires `onBeginUpdate`, it will also fire `onEndUpdate` once the operation finishes.\n\t * Note that not all operations are bracketed by `onBeginUpdate` and `onEndUpdate`.\n\t*/\n\treadonly onBeginUpdate: Event<void>;\n\n\t/**\n\t * Fires after the editor completes the operation it fired `onBeginUpdate` for.\n\t*/\n\treadonly onEndUpdate: Event<void>;\n\n\t/**\n\t * Saves current view state of the editor in a serializable object.\n\t */\n\tsaveViewState(): editorCommon.ICodeEditorViewState | null;\n\n\t/**\n\t * Restores the view state of the editor from a serializable object generated by `saveViewState`.\n\t */\n\trestoreViewState(state: editorCommon.ICodeEditorViewState | null): void;\n\n\t/**\n\t * Returns true if the text inside this editor or an editor widget has focus.\n\t */\n\thasWidgetFocus(): boolean;\n\n\t/**\n\t * Get a contribution of this editor.\n\t * @id Unique identifier of the contribution.\n\t * @return The contribution or null if contribution not found.\n\t */\n\tgetContribution<T extends editorCommon.IEditorContribution>(id: string): T | null;\n\n\t/**\n\t * Execute `fn` with the editor's services.\n\t * @internal\n\t */\n\tinvokeWithinContext<T>(fn: (accessor: ServicesAccessor) => T): T;\n\n\t/**\n\t * Type the getModel() of IEditor.\n\t */\n\tgetModel(): ITextModel | null;\n\n\t/**\n\t * Sets the current model attached to this editor.\n\t * If the previous model was created by the editor via the value key in the options\n\t * literal object, it will be destroyed. Otherwise, if the previous model was set\n\t * via setModel, or the model key in the options literal object, the previous model\n\t * will not be destroyed.\n\t * It is safe to call setModel(null) to simply detach the current model from the editor.\n\t */\n\tsetModel(model: ITextModel | null): void;\n\n\t/**\n\t * Gets all the editor computed options.\n\t */\n\tgetOptions(): IComputedEditorOptions;\n\n\t/**\n\t * Gets a specific editor option.\n\t */\n\tgetOption<T extends EditorOption>(id: T): FindComputedEditorOptionValueById<T>;\n\n\t/**\n\t * Returns the editor's configuration (without any validation or defaults).\n\t */\n\tgetRawOptions(): IEditorOptions;\n\n\t/**\n\t * @internal\n\t */\n\tgetOverflowWidgetsDomNode(): HTMLElement | undefined;\n\n\t/**\n\t * @internal\n\t */\n\tgetConfiguredWordAtPosition(position: Position): IWordAtPosition | null;\n\n\t/**\n\t * An event emitted when line heights from decorations change\n\t * @internal\n\t * @event\n\t */\n\treadonly onDidChangeLineHeight: Event<ModelLineHeightChangedEvent>;\n\n\t/**\n\t * An event emitted when the font of the editor has changed.\n\t * @internal\n\t * @event\n\t */\n\treadonly onDidChangeFont: Event<ModelFontChangedEvent>;\n\n\t/**\n\t * Get value of the current model attached to this editor.\n\t * @see {@link ITextModel.getValue}\n\t */\n\tgetValue(options?: { preserveBOM: boolean; lineEnding: string }): string;\n\n\t/**\n\t * Set the value of the current model attached to this editor.\n\t * @see {@link ITextModel.setValue}\n\t */\n\tsetValue(newValue: string): void;\n\n\t/**\n\t * Get the width of the editor's content.\n\t * This is information that is \"erased\" when computing `scrollWidth = Math.max(contentWidth, width)`\n\t */\n\tgetContentWidth(): number;\n\t/**\n\t * Get the scrollWidth of the editor's viewport.\n\t */\n\tgetScrollWidth(): number;\n\t/**\n\t * Get the scrollLeft of the editor's viewport.\n\t */\n\tgetScrollLeft(): number;\n\n\t/**\n\t * Get the height of the editor's content.\n\t * This is information that is \"erased\" when computing `scrollHeight = Math.max(contentHeight, height)`\n\t */\n\tgetContentHeight(): number;\n\t/**\n\t * Get the scrollHeight of the editor's viewport.\n\t */\n\tgetScrollHeight(): number;\n\t/**\n\t * Get the scrollTop of the editor's viewport.\n\t */\n\tgetScrollTop(): number;\n\n\t/**\n\t * Change the scrollLeft of the editor's viewport.\n\t */\n\tsetScrollLeft(newScrollLeft: number, scrollType?: editorCommon.ScrollType): void;\n\t/**\n\t * Change the scrollTop of the editor's viewport.\n\t */\n\tsetScrollTop(newScrollTop: number, scrollType?: editorCommon.ScrollType): void;\n\t/**\n\t * Change the scroll position of the editor's viewport.\n\t */\n\tsetScrollPosition(position: editorCommon.INewScrollPosition, scrollType?: editorCommon.ScrollType): void;\n\t/**\n\t * Check if the editor is currently scrolling towards a different scroll position.\n\t */\n\thasPendingScrollAnimation(): boolean;\n\n\t/**\n\t * Get an action that is a contribution to this editor.\n\t * @id Unique identifier of the contribution.\n\t * @return The action or null if action not found.\n\t */\n\tgetAction(id: string): editorCommon.IEditorAction | null;\n\n\t/**\n\t * Execute a command on the editor.\n\t * The edits will land on the undo-redo stack, but no \"undo stop\" will be pushed.\n\t * @param source The source of the call.\n\t * @param command The command to execute\n\t */\n\texecuteCommand(source: string | null | undefined, command: editorCommon.ICommand): void;\n\n\t/**\n\t * Create an \"undo stop\" in the undo-redo stack.\n\t */\n\tpushUndoStop(): boolean;\n\n\t/**\n\t * Remove the \"undo stop\" in the undo-redo stack.\n\t */\n\tpopUndoStop(): boolean;\n\n\t/**\n\t * Execute edits on the editor.\n\t * The edits will land on the undo-redo stack, but no \"undo stop\" will be pushed.\n\t * @param source The source of the call.\n\t * @param edits The edits to execute.\n\t * @param endCursorState Cursor state after the edits were applied.\n\t */\n\texecuteEdits(source: string | null | undefined, edits: IIdentifiedSingleEditOperation[], endCursorState?: ICursorStateComputer | Selection[]): boolean;\n\t/** @internal */\n\texecuteEdits(source: TextModelEditSource | undefined, edits: IIdentifiedSingleEditOperation[], endCursorState?: ICursorStateComputer | Selection[]): boolean;\n\n\t/**\n\t * @internal\n\t*/\n\tedit(edit: TextEdit, reason: TextModelEditSource): void;\n\n\t/**\n\t * Execute multiple (concomitant) commands on the editor.\n\t * @param source The source of the call.\n\t * @param command The commands to execute\n\t */\n\texecuteCommands(source: string | null | undefined, commands: (editorCommon.ICommand | null)[]): void;\n\n\t/**\n\t * @internal\n\t */\n\t_getViewModel(): IViewModel | null;\n\n\t/**\n\t * Get all the decorations on a line (filtering out decorations from other editors).\n\t */\n\tgetLineDecorations(lineNumber: number): IModelDecoration[] | null;\n\n\t/**\n\t * Get all the decorations for a range (filtering out decorations from other editors).\n\t */\n\tgetDecorationsInRange(range: Range): IModelDecoration[] | null;\n\n\t/**\n\t * Get the font size at a given position\n\t * @param position the position for which to fetch the font size\n\t */\n\tgetFontSizeAtPosition(position: IPosition): string | null;\n\n\t/**\n\t * All decorations added through this call will get the ownerId of this editor.\n\t * @deprecated Use `createDecorationsCollection`\n\t * @see createDecorationsCollection\n\t */\n\tdeltaDecorations(oldDecorations: string[], newDecorations: IModelDeltaDecoration[]): string[];\n\n\t/**\n\t * Remove previously added decorations.\n\t */\n\tremoveDecorations(decorationIds: string[]): void;\n\n\t/**\n\t * @internal\n\t */\n\tsetDecorationsByType(description: string, decorationTypeKey: string, ranges: editorCommon.IDecorationOptions[]): readonly string[];\n\n\t/**\n\t * @internal\n\t */\n\tsetDecorationsByTypeFast(decorationTypeKey: string, ranges: IRange[]): void;\n\n\t/**\n\t * @internal\n\t */\n\tremoveDecorationsByType(decorationTypeKey: string): void;\n\n\t/**\n\t * Get the layout info for the editor.\n\t */\n\tgetLayoutInfo(): EditorLayoutInfo;\n\n\t/**\n\t * Returns the ranges that are currently visible.\n\t * Does not account for horizontal scrolling.\n\t */\n\tgetVisibleRanges(): Range[];\n\n\t/**\n\t * @internal\n\t */\n\tgetVisibleRangesPlusViewportAboveBelow(): Range[];\n\n\t/**\n\t * Get the view zones.\n\t * @internal\n\t */\n\tgetWhitespaces(): IEditorWhitespace[];\n\n\t/**\n\t * Get the vertical position (top offset) for the line's top w.r.t. to the first line.\n\t */\n\tgetTopForLineNumber(lineNumber: number, includeViewZones?: boolean): number;\n\n\t/**\n\t * Get the vertical position (top offset) for the line's bottom w.r.t. to the first line.\n\t */\n\tgetBottomForLineNumber(lineNumber: number): number;\n\n\t/**\n\t * Get the vertical position (top offset) for the position w.r.t. to the first line.\n\t */\n\tgetTopForPosition(lineNumber: number, column: number): number;\n\n\t/**\n\t * Get the line height for a model position.\n\t */\n\tgetLineHeightForPosition(position: IPosition): number;\n\n\t/**\n\t * Set the model ranges that will be hidden in the view.\n\t * Hidden areas are stored per source.\n\t * @internal\n\t */\n\tsetHiddenAreas(ranges: IRange[], source?: unknown): void;\n\n\t/**\n\t * Sets the editor aria options, primarily the active descendent.\n\t * @internal\n\t */\n\tsetAriaOptions(options: IEditorAriaOptions): void;\n\n\t/**\n\t * Write the screen reader content to be the current selection\n\t */\n\twriteScreenReaderContent(reason: string): void;\n\n\t/**\n\t * @internal\n\t */\n\tgetTelemetryData(): object | undefined;\n\n\t/**\n\t * Returns the editor's container dom node\n\t */\n\tgetContainerDomNode(): HTMLElement;\n\n\t/**\n\t * Returns the editor's dom node\n\t */\n\tgetDomNode(): HTMLElement | null;\n\n\t/**\n\t * Add a content widget. Widgets must have unique ids, otherwise they will be overwritten.\n\t */\n\taddContentWidget(widget: IContentWidget): void;\n\t/**\n\t * Layout/Reposition a content widget. This is a ping to the editor to call widget.getPosition()\n\t * and update appropriately.\n\t */\n\tlayoutContentWidget(widget: IContentWidget): void;\n\t/**\n\t * Remove a content widget.\n\t */\n\tremoveContentWidget(widget: IContentWidget): void;\n\n\t/**\n\t * Add an overlay widget. Widgets must have unique ids, otherwise they will be overwritten.\n\t */\n\taddOverlayWidget(widget: IOverlayWidget): void;\n\t/**\n\t * Layout/Reposition an overlay widget. This is a ping to the editor to call widget.getPosition()\n\t * and update appropriately.\n\t */\n\tlayoutOverlayWidget(widget: IOverlayWidget): void;\n\t/**\n\t * Remove an overlay widget.\n\t */\n\tremoveOverlayWidget(widget: IOverlayWidget): void;\n\n\t/**\n\t * Add a glyph margin widget. Widgets must have unique ids, otherwise they will be overwritten.\n\t */\n\taddGlyphMarginWidget(widget: IGlyphMarginWidget): void;\n\t/**\n\t * Layout/Reposition a glyph margin widget. This is a ping to the editor to call widget.getPosition()\n\t * and update appropriately.\n\t */\n\tlayoutGlyphMarginWidget(widget: IGlyphMarginWidget): void;\n\t/**\n\t * Remove a glyph margin widget.\n\t */\n\tremoveGlyphMarginWidget(widget: IGlyphMarginWidget): void;\n\n\t/**\n\t * Change the view zones. View zones are lost when a new model is attached to the editor.\n\t */\n\tchangeViewZones(callback: (accessor: IViewZoneChangeAccessor) => void): void;\n\n\t/**\n\t * Get the horizontal position (left offset) for the column w.r.t to the beginning of the line.\n\t * This method works only if the line `lineNumber` is currently rendered (in the editor's viewport).\n\t * Use this method with caution.\n\t */\n\tgetOffsetForColumn(lineNumber: number, column: number): number;\n\n\t/**\n\t * Force an editor render now.\n\t */\n\trender(forceRedraw?: boolean): void;\n\n\t/**\n\t * Get the hit test target at coordinates `clientX` and `clientY`.\n\t * The coordinates are relative to the top-left of the viewport.\n\t *\n\t * @returns Hit test target or null if the coordinates fall outside the editor or the editor has no model.\n\t */\n\tgetTargetAtClientPoint(clientX: number, clientY: number): IMouseTarget | null;\n\n\t/**\n\t * Get the visible position for `position`.\n\t * The result position takes scrolling into account and is relative to the top left corner of the editor.\n\t * Explanation 1: the results of this method will change for the same `position` if the user scrolls the editor.\n\t * Explanation 2: the results of this method will not change if the container of the editor gets repositioned.\n\t * Warning: the results of this method are inaccurate for positions that are outside the current editor viewport.\n\t */\n\tgetScrolledVisiblePosition(position: IPosition): { top: number; left: number; height: number } | null;\n\n\t/**\n\t * Apply the same font settings as the editor to `target`.\n\t */\n\tapplyFontInfo(target: HTMLElement): void;\n\n\t/**\n\t * Check if the current instance has a model attached.\n\t * @internal\n\t */\n\thasModel(): this is IActiveCodeEditor;\n\n\tsetBanner(bannerDomNode: HTMLElement | null, height: number): void;\n\n\t/**\n\t * Is called when the model has been set, view state was restored and options are updated.\n\t * This is the best place to compute data for the viewport (such as tokens).\n\t */\n\thandleInitialized?(): void;\n}\n\n/**\n * @internal\n */\nexport interface IActiveCodeEditor extends ICodeEditor {\n\t/**\n\t * Returns the primary position of the cursor.\n\t */\n\tgetPosition(): Position;\n\n\t/**\n\t * Returns the primary selection of the editor.\n\t */\n\tgetSelection(): Selection;\n\n\t/**\n\t * Returns all the selections of the editor.\n\t */\n\tgetSelections(): Selection[];\n\n\t/**\n\t * Saves current view state of the editor in a serializable object.\n\t */\n\tsaveViewState(): editorCommon.ICodeEditorViewState;\n\n\t/**\n\t * Type the getModel() of IEditor.\n\t */\n\tgetModel(): ITextModel;\n\n\t/**\n\t * @internal\n\t */\n\t_getViewModel(): IViewModel;\n\n\t/**\n\t * Get all the decorations on a line (filtering out decorations from other editors).\n\t */\n\tgetLineDecorations(lineNumber: number): IModelDecoration[];\n\n\t/**\n\t * Returns the editor's dom node\n\t */\n\tgetDomNode(): HTMLElement;\n\n\t/**\n\t * Get the visible position for `position`.\n\t * The result position takes scrolling into account and is relative to the top left corner of the editor.\n\t * Explanation 1: the results of this method will change for the same `position` if the user scrolls the editor.\n\t * Explanation 2: the results of this method will not change if the container of the editor gets repositioned.\n\t * Warning: the results of this method are inaccurate for positions that are outside the current editor viewport.\n\t */\n\tgetScrolledVisiblePosition(position: IPosition): { top: number; left: number; height: number };\n\n\t/**\n\t * Change the decorations. All decorations added through this changeAccessor\n\t * will get the ownerId of the editor (meaning they will not show up in other\n\t * editors).\n\t * @see {@link ITextModel.changeDecorations}\n\t * @internal\n\t */\n\tchangeDecorations<T>(callback: (changeAccessor: IModelDecorationsChangeAccessor) => T): T;\n}\n\n/**\n * @internal\n */\nexport const enum DiffEditorState {\n\tIdle,\n\tComputingDiff,\n\tDiffComputed\n}\n\n/**\n * A rich diff editor.\n */\nexport interface IDiffEditor extends editorCommon.IEditor {\n\n\t/**\n\t * Returns whether the diff editor is ignoring trim whitespace or not.\n\t * @internal\n\t */\n\treadonly ignoreTrimWhitespace: boolean;\n\t/**\n\t * Returns whether the diff editor is rendering side by side or inline.\n\t * @internal\n\t */\n\treadonly renderSideBySide: boolean;\n\t/**\n\t * Timeout in milliseconds after which diff computation is cancelled.\n\t * @internal\n\t */\n\treadonly maxComputationTime: number;\n\n\t/**\n\t * @see {@link ICodeEditor.getContainerDomNode}\n\t */\n\tgetContainerDomNode(): HTMLElement;\n\n\t/**\n\t * An event emitted when the diff information computed by this diff editor has been updated.\n\t * @event\n\t */\n\treadonly onDidUpdateDiff: Event<void>;\n\n\t/**\n\t * An event emitted when the diff model is changed (i.e. the diff editor shows new content).\n\t * @event\n\t */\n\treadonly onDidChangeModel: Event<void>;\n\n\t/**\n\t * Saves current view state of the editor in a serializable object.\n\t */\n\tsaveViewState(): editorCommon.IDiffEditorViewState | null;\n\n\t/**\n\t * Restores the view state of the editor from a serializable object generated by `saveViewState`.\n\t */\n\trestoreViewState(state: editorCommon.IDiffEditorViewState | null): void;\n\n\t/**\n\t * Type the getModel() of IEditor.\n\t */\n\tgetModel(): editorCommon.IDiffEditorModel | null;\n\n\tcreateViewModel(model: editorCommon.IDiffEditorModel): editorCommon.IDiffEditorViewModel;\n\n\t/**\n\t * Sets the current model attached to this editor.\n\t * If the previous model was created by the editor via the value key in the options\n\t * literal object, it will be destroyed. Otherwise, if the previous model was set\n\t * via setModel, or the model key in the options literal object, the previous model\n\t * will not be destroyed.\n\t * It is safe to call setModel(null) to simply detach the current model from the editor.\n\t */\n\tsetModel(model: editorCommon.IDiffEditorModel | editorCommon.IDiffEditorViewModel | null): void;\n\n\t/**\n\t * Get the `original` editor.\n\t */\n\tgetOriginalEditor(): ICodeEditor;\n\n\t/**\n\t * Get the `modified` editor.\n\t */\n\tgetModifiedEditor(): ICodeEditor;\n\n\t/**\n\t * Get the computed diff information.\n\t */\n\tgetLineChanges(): ILineChange[] | null;\n\n\t/**\n\t * Get the computed diff information.\n\t * @internal\n\t */\n\tgetDiffComputationResult(): IDiffComputationResult | null;\n\n\t/**\n\t * Update the editor's options after the editor has been created.\n\t */\n\tupdateOptions(newOptions: IDiffEditorOptions): void;\n\n\t/**\n\t * @internal\n\t */\n\tsetBoundarySashes(sashes: IBoundarySashes): void;\n\n\t/**\n\t * Jumps to the next or previous diff.\n\t */\n\tgoToDiff(target: 'next' | 'previous'): void;\n\n\t/**\n\t * Scrolls to the first diff.\n\t * (Waits until the diff computation finished.)\n\t */\n\trevealFirstDiff(): unknown;\n\n\taccessibleDiffViewerNext(): void;\n\n\taccessibleDiffViewerPrev(): void;\n\n\thandleInitialized(): void;\n}\n\n/**\n *@internal\n */\nexport function isCodeEditor(thing: unknown): thing is ICodeEditor {\n\tif (thing && typeof (<ICodeEditor>thing).getEditorType === 'function') {\n\t\treturn (<ICodeEditor>thing).getEditorType() === editorCommon.EditorType.ICodeEditor;\n\t} else {\n\t\treturn false;\n\t}\n}\n\n/**\n *@internal\n */\nexport function isDiffEditor(thing: unknown): thing is IDiffEditor {\n\tif (thing && typeof (<IDiffEditor>thing).getEditorType === 'function') {\n\t\treturn (<IDiffEditor>thing).getEditorType() === editorCommon.EditorType.IDiffEditor;\n\t} else {\n\t\treturn false;\n\t}\n}\n\n/**\n *@internal\n */\nexport function isCompositeEditor(thing: unknown): thing is editorCommon.ICompositeCodeEditor {\n\treturn !!thing\n\t\t&& typeof thing === 'object'\n\t\t&& typeof (<editorCommon.ICompositeCodeEditor>thing).onDidChangeActiveEditor === 'function';\n\n}\n\n/**\n *@internal\n */\nexport function getCodeEditor(thing: unknown): ICodeEditor | null {\n\tif (isCodeEditor(thing)) {\n\t\treturn thing;\n\t}\n\n\tif (isDiffEditor(thing)) {\n\t\treturn thing.getModifiedEditor();\n\t}\n\n\tif (isCompositeEditor(thing) && isCodeEditor(thing.activeCodeEditor)) {\n\t\treturn thing.activeCodeEditor;\n\t}\n\n\treturn null;\n}\n\n/**\n *@internal\n */\nexport function getIEditor(thing: unknown): editorCommon.IEditor | null {\n\tif (isCodeEditor(thing) || isDiffEditor(thing)) {\n\t\treturn thing;\n\t}\n\n\treturn null;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "5d06e666f1de2a3b5a06a65842f5ef1186178ba1"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_24wsf4ey8d = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_24wsf4ey8d();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as editorCommon from '../common/editorCommon.js';
+/**
+ *@internal
+ */
+export function isCodeEditor(thing) {
+  /* istanbul ignore next */
+  cov_24wsf4ey8d().f[0]++;
+  cov_24wsf4ey8d().s[0]++;
+  if (
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[1][0]++, thing) &&
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[1][1]++, typeof thing.getEditorType === 'function')) {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[0][0]++;
+    cov_24wsf4ey8d().s[1]++;
+    return thing.getEditorType() === editorCommon.EditorType.ICodeEditor;
+  } else {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[0][1]++;
+    cov_24wsf4ey8d().s[2]++;
+    return false;
+  }
+}
+/**
+ *@internal
+ */
+export function isDiffEditor(thing) {
+  /* istanbul ignore next */
+  cov_24wsf4ey8d().f[1]++;
+  cov_24wsf4ey8d().s[3]++;
+  if (
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[3][0]++, thing) &&
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[3][1]++, typeof thing.getEditorType === 'function')) {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[2][0]++;
+    cov_24wsf4ey8d().s[4]++;
+    return thing.getEditorType() === editorCommon.EditorType.IDiffEditor;
+  } else {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[2][1]++;
+    cov_24wsf4ey8d().s[5]++;
+    return false;
+  }
+}
+/**
+ *@internal
+ */
+export function isCompositeEditor(thing) {
+  /* istanbul ignore next */
+  cov_24wsf4ey8d().f[2]++;
+  cov_24wsf4ey8d().s[6]++;
+  return /* istanbul ignore next */(cov_24wsf4ey8d().b[4][0]++, !!thing) &&
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[4][1]++, typeof thing === 'object') &&
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[4][2]++, typeof thing.onDidChangeActiveEditor === 'function');
+}
+/**
+ *@internal
+ */
+export function getCodeEditor(thing) {
+  /* istanbul ignore next */
+  cov_24wsf4ey8d().f[3]++;
+  cov_24wsf4ey8d().s[7]++;
+  if (isCodeEditor(thing)) {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[5][0]++;
+    cov_24wsf4ey8d().s[8]++;
+    return thing;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_24wsf4ey8d().b[5][1]++;
+  }
+  cov_24wsf4ey8d().s[9]++;
+  if (isDiffEditor(thing)) {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[6][0]++;
+    cov_24wsf4ey8d().s[10]++;
+    return thing.getModifiedEditor();
+  } else
+  /* istanbul ignore next */
+  {
+    cov_24wsf4ey8d().b[6][1]++;
+  }
+  cov_24wsf4ey8d().s[11]++;
+  if (
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[8][0]++, isCompositeEditor(thing)) &&
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[8][1]++, isCodeEditor(thing.activeCodeEditor))) {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[7][0]++;
+    cov_24wsf4ey8d().s[12]++;
+    return thing.activeCodeEditor;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_24wsf4ey8d().b[7][1]++;
+  }
+  cov_24wsf4ey8d().s[13]++;
+  return null;
+}
+/**
+ *@internal
+ */
+export function getIEditor(thing) {
+  /* istanbul ignore next */
+  cov_24wsf4ey8d().f[4]++;
+  cov_24wsf4ey8d().s[14]++;
+  if (
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[10][0]++, isCodeEditor(thing)) ||
+  /* istanbul ignore next */
+  (cov_24wsf4ey8d().b[10][1]++, isDiffEditor(thing))) {
+    /* istanbul ignore next */
+    cov_24wsf4ey8d().b[9][0]++;
+    cov_24wsf4ey8d().s[15]++;
+    return thing;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_24wsf4ey8d().b[9][1]++;
+  }
+  cov_24wsf4ey8d().s[16]++;
+  return null;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjR3c2Y0ZXk4ZCIsImFjdHVhbENvdmVyYWdlIiwiZWRpdG9yQ29tbW9uIiwiaXNDb2RlRWRpdG9yIiwidGhpbmciLCJmIiwicyIsImIiLCJnZXRFZGl0b3JUeXBlIiwiRWRpdG9yVHlwZSIsIklDb2RlRWRpdG9yIiwiaXNEaWZmRWRpdG9yIiwiSURpZmZFZGl0b3IiLCJpc0NvbXBvc2l0ZUVkaXRvciIsIm9uRGlkQ2hhbmdlQWN0aXZlRWRpdG9yIiwiZ2V0Q29kZUVkaXRvciIsImdldE1vZGlmaWVkRWRpdG9yIiwiYWN0aXZlQ29kZUVkaXRvciIsImdldElFZGl0b3IiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL2VkaXRvci9icm93c2VyL2VkaXRvckJyb3dzZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElLZXlib2FyZEV2ZW50IH0gZnJvbSAnLi4vLi4vYmFzZS9icm93c2VyL2tleWJvYXJkRXZlbnQuanMnO1xuaW1wb3J0IHsgSU1vdXNlRXZlbnQsIElNb3VzZVdoZWVsRXZlbnQgfSBmcm9tICcuLi8uLi9iYXNlL2Jyb3dzZXIvbW91c2VFdmVudC5qcyc7XG5pbXBvcnQgeyBJQm91bmRhcnlTYXNoZXMgfSBmcm9tICcuLi8uLi9iYXNlL2Jyb3dzZXIvdWkvc2FzaC9zYXNoLmpzJztcbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgTWVudUlkIH0gZnJvbSAnLi4vLi4vcGxhdGZvcm0vYWN0aW9ucy9jb21tb24vYWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBJQ29udGV4dEtleVNlcnZpY2UgfSBmcm9tICcuLi8uLi9wbGF0Zm9ybS9jb250ZXh0a2V5L2NvbW1vbi9jb250ZXh0a2V5LmpzJztcbmltcG9ydCB7IFNlcnZpY2VzQWNjZXNzb3IgfSBmcm9tICcuLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IENvbmZpZ3VyYXRpb25DaGFuZ2VkRXZlbnQsIEVkaXRvckxheW91dEluZm8sIEVkaXRvck9wdGlvbiwgRmluZENvbXB1dGVkRWRpdG9yT3B0aW9uVmFsdWVCeUlkLCBJQ29tcHV0ZWRFZGl0b3JPcHRpb25zLCBJRGlmZkVkaXRvck9wdGlvbnMsIElFZGl0b3JPcHRpb25zLCBPdmVydmlld1J1bGVyUG9zaXRpb24gfSBmcm9tICcuLi9jb21tb24vY29uZmlnL2VkaXRvck9wdGlvbnMuanMnO1xuaW1wb3J0IHsgSURpbWVuc2lvbiB9IGZyb20gJy4uL2NvbW1vbi9jb3JlLzJkL2RpbWVuc2lvbi5qcyc7XG5pbXBvcnQgeyBUZXh0RWRpdCB9IGZyb20gJy4uL2NvbW1vbi9jb3JlL2VkaXRzL3RleHRFZGl0LmpzJztcbmltcG9ydCB7IElQb3NpdGlvbiwgUG9zaXRpb24gfSBmcm9tICcuLi9jb21tb24vY29yZS9wb3NpdGlvbi5qcyc7XG5pbXBvcnQgeyBJUmFuZ2UsIFJhbmdlIH0gZnJvbSAnLi4vY29tbW9uL2NvcmUvcmFuZ2UuanMnO1xuaW1wb3J0IHsgU2VsZWN0aW9uIH0gZnJvbSAnLi4vY29tbW9uL2NvcmUvc2VsZWN0aW9uLmpzJztcbmltcG9ydCB7IElXb3JkQXRQb3NpdGlvbiB9IGZyb20gJy4uL2NvbW1vbi9jb3JlL3dvcmRIZWxwZXIuanMnO1xuaW1wb3J0IHsgSUN1cnNvclBvc2l0aW9uQ2hhbmdlZEV2ZW50LCBJQ3Vyc29yU2VsZWN0aW9uQ2hhbmdlZEV2ZW50IH0gZnJvbSAnLi4vY29tbW9uL2N1cnNvckV2ZW50cy5qcyc7XG5pbXBvcnQgeyBJRGlmZkNvbXB1dGF0aW9uUmVzdWx0LCBJTGluZUNoYW5nZSB9IGZyb20gJy4uL2NvbW1vbi9kaWZmL2xlZ2FjeUxpbmVzRGlmZkNvbXB1dGVyLmpzJztcbmltcG9ydCAqIGFzIGVkaXRvckNvbW1vbiBmcm9tICcuLi9jb21tb24vZWRpdG9yQ29tbW9uLmpzJztcbmltcG9ydCB7IEdseXBoTWFyZ2luTGFuZSwgSUN1cnNvclN0YXRlQ29tcHV0ZXIsIElJZGVudGlmaWVkU2luZ2xlRWRpdE9wZXJhdGlvbiwgSU1vZGVsRGVjb3JhdGlvbiwgSU1vZGVsRGVjb3JhdGlvbnNDaGFuZ2VBY2Nlc3NvciwgSU1vZGVsRGVsdGFEZWNvcmF0aW9uLCBJVGV4dE1vZGVsLCBQb3NpdGlvbkFmZmluaXR5IH0gZnJvbSAnLi4vY29tbW9uL21vZGVsLmpzJztcbmltcG9ydCB7IEluamVjdGVkVGV4dCB9IGZyb20gJy4uL2NvbW1vbi9tb2RlbExpbmVQcm9qZWN0aW9uRGF0YS5qcyc7XG5pbXBvcnQgeyBUZXh0TW9kZWxFZGl0U291cmNlIH0gZnJvbSAnLi4vY29tbW9uL3RleHRNb2RlbEVkaXRTb3VyY2UuanMnO1xuaW1wb3J0IHsgSU1vZGVsQ29udGVudENoYW5nZWRFdmVudCwgSU1vZGVsRGVjb3JhdGlvbnNDaGFuZ2VkRXZlbnQsIElNb2RlbExhbmd1YWdlQ2hhbmdlZEV2ZW50LCBJTW9kZWxMYW5ndWFnZUNvbmZpZ3VyYXRpb25DaGFuZ2VkRXZlbnQsIElNb2RlbE9wdGlvbnNDaGFuZ2VkRXZlbnQsIElNb2RlbFRva2Vuc0NoYW5nZWRFdmVudCwgTW9kZWxGb250Q2hhbmdlZEV2ZW50LCBNb2RlbExpbmVIZWlnaHRDaGFuZ2VkRXZlbnQgfSBmcm9tICcuLi9jb21tb24vdGV4dE1vZGVsRXZlbnRzLmpzJztcbmltcG9ydCB7IElFZGl0b3JXaGl0ZXNwYWNlLCBJVmlld01vZGVsIH0gZnJvbSAnLi4vY29tbW9uL3ZpZXdNb2RlbC5qcyc7XG5pbXBvcnQgeyBPdmVydmlld1J1bGVyWm9uZSB9IGZyb20gJy4uL2NvbW1vbi92aWV3TW9kZWwvb3ZlcnZpZXdab25lTWFuYWdlci5qcyc7XG5pbXBvcnQgeyBJRWRpdG9yQ29uc3RydWN0aW9uT3B0aW9ucyB9IGZyb20gJy4vY29uZmlnL2VkaXRvckNvbmZpZ3VyYXRpb24uanMnO1xuXG4vKipcbiAqIEEgdmlldyB6b25lIGlzIGEgZnVsbCBob3Jpem9udGFsIHJlY3RhbmdsZSB0aGF0ICdwdXNoZXMnIHRleHQgZG93bi5cbiAqIFRoZSBlZGl0b3IgcmVzZXJ2ZXMgc3BhY2UgZm9yIHZpZXcgem9uZXMgd2hlbiByZW5kZXJpbmcuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSVZpZXdab25lIHtcblx0LyoqXG5cdCAqIFRoZSBsaW5lIG51bWJlciBhZnRlciB3aGljaCB0aGlzIHpvbmUgc2hvdWxkIGFwcGVhci5cblx0ICogVXNlIDAgdG8gcGxhY2UgYSB2aWV3IHpvbmUgYmVmb3JlIHRoZSBmaXJzdCBsaW5lIG51bWJlci5cblx0ICovXG5cdGFmdGVyTGluZU51bWJlcjogbnVtYmVyO1xuXHQvKipcblx0ICogVGhlIGNvbHVtbiBhZnRlciB3aGljaCB0aGlzIHpvbmUgc2hvdWxkIGFwcGVhci5cblx0ICogSWYgbm90IHNldCwgdGhlIG1heExpbmVDb2x1bW4gb2YgYGFmdGVyTGluZU51bWJlcmAgd2lsbCBiZSB1c2VkLlxuXHQgKiBUaGlzIGlzIHJlbGV2YW50IGZvciB3cmFwcGVkIGxpbmVzLlxuXHQgKi9cblx0YWZ0ZXJDb2x1bW4/OiBudW1iZXI7XG5cdC8qKlxuXHQgKiBJZiB0aGUgYGFmdGVyQ29sdW1uYCBoYXMgbXVsdGlwbGUgdmlldyBjb2x1bW5zLCB0aGUgYWZmaW5pdHkgc3BlY2lmaWVzIHdoaWNoIG9uZSB0byB1c2UuIERlZmF1bHRzIHRvIGBub25lYC5cblx0Ki9cblx0YWZ0ZXJDb2x1bW5BZmZpbml0eT86IFBvc2l0aW9uQWZmaW5pdHk7XG5cdC8qKlxuXHQgKiBSZW5kZXIgdGhlIHpvbmUgZXZlbiB3aGVuIGl0cyBsaW5lIGlzIGhpZGRlbi5cblx0ICovXG5cdHNob3dJbkhpZGRlbkFyZWFzPzogYm9vbGVhbjtcblx0LyoqXG5cdCAqIFRpZWJyZWFrZXIgdGhhdCBpcyB1c2VkIHdoZW4gbXVsdGlwbGUgdmlldyB6b25lcyB3YW50IHRvIGJlIGFmdGVyIHRoZSBzYW1lIGxpbmUuXG5cdCAqIERlZmF1bHRzIHRvIGBhZnRlckNvbHVtbmAgb3RoZXJ3aXNlIDEwMDAwO1xuXHQgKi9cblx0b3JkaW5hbD86IG51bWJlcjtcblx0LyoqXG5cdCAqIFN1cHByZXNzIG1vdXNlIGRvd24gZXZlbnRzLlxuXHQgKiBJZiBzZXQsIHRoZSBlZGl0b3Igd2lsbCBhdHRhY2ggYSBtb3VzZSBkb3duIGxpc3RlbmVyIHRvIHRoZSB2aWV3IHpvbmUgYW5kIC5wcmV2ZW50RGVmYXVsdCBvbiBpdC5cblx0ICogRGVmYXVsdHMgdG8gZmFsc2Vcblx0ICovXG5cdHN1cHByZXNzTW91c2VEb3duPzogYm9vbGVhbjtcblx0LyoqXG5cdCAqIFRoZSBoZWlnaHQgaW4gbGluZXMgb2YgdGhlIHZpZXcgem9uZS5cblx0ICogSWYgc3BlY2lmaWVkLCBgaGVpZ2h0SW5QeGAgd2lsbCBiZSB1c2VkIGluc3RlYWQgb2YgdGhpcy5cblx0ICogSWYgbmVpdGhlciBgaGVpZ2h0SW5QeGAgbm9yIGBoZWlnaHRJbkxpbmVzYCBpcyBzcGVjaWZpZWQsIGEgZGVmYXVsdCBvZiBgaGVpZ2h0SW5MaW5lc2AgPSAxIHdpbGwgYmUgY2hvc2VuLlxuXHQgKi9cblx0aGVpZ2h0SW5MaW5lcz86IG51bWJlcjtcblx0LyoqXG5cdCAqIFRoZSBoZWlnaHQgaW4gcHggb2YgdGhlIHZpZXcgem9uZS5cblx0ICogSWYgdGhpcyBpcyBzZXQsIHRoZSBlZGl0b3Igd2lsbCBnaXZlIHByZWZlcmVuY2UgdG8gaXQgcmF0aGVyIHRoYW4gYGhlaWdodEluTGluZXNgIGFib3ZlLlxuXHQgKiBJZiBuZWl0aGVyIGBoZWlnaHRJblB4YCBub3IgYGhlaWdodEluTGluZXNgIGlzIHNwZWNpZmllZCwgYSBkZWZhdWx0IG9mIGBoZWlnaHRJbkxpbmVzYCA9IDEgd2lsbCBiZSBjaG9zZW4uXG5cdCAqL1xuXHRoZWlnaHRJblB4PzogbnVtYmVyO1xuXHQvKipcblx0ICogVGhlIG1pbmltdW0gd2lkdGggaW4gcHggb2YgdGhlIHZpZXcgem9uZS5cblx0ICogSWYgdGhpcyBpcyBzZXQsIHRoZSBlZGl0b3Igd2lsbCBlbnN1cmUgdGhhdCB0aGUgc2Nyb2xsIHdpZHRoIGlzID49IHRoYW4gdGhpcyB2YWx1ZS5cblx0ICovXG5cdG1pbldpZHRoSW5QeD86IG51bWJlcjtcblx0LyoqXG5cdCAqIFRoZSBkb20gbm9kZSBvZiB0aGUgdmlldyB6b25lXG5cdCAqL1xuXHRkb21Ob2RlOiBIVE1MRWxlbWVudDtcblx0LyoqXG5cdCAqIEFuIG9wdGlvbmFsIGRvbSBub2RlIGZvciB0aGUgdmlldyB6b25lIHRoYXQgd2lsbCBiZSBwbGFjZWQgaW4gdGhlIG1hcmdpbiBhcmVhLlxuXHQgKi9cblx0bWFyZ2luRG9tTm9kZT86IEhUTUxFbGVtZW50IHwgbnVsbDtcblx0LyoqXG5cdCAqIENhbGxiYWNrIHdoaWNoIGdpdmVzIHRoZSByZWxhdGl2ZSB0b3Agb2YgdGhlIHZpZXcgem9uZSBhcyBpdCBhcHBlYXJzICh0YWtpbmcgc2Nyb2xsaW5nIGludG8gYWNjb3VudCkuXG5cdCAqL1xuXHRvbkRvbU5vZGVUb3A/OiAodG9wOiBudW1iZXIpID0+IHZvaWQ7XG5cdC8qKlxuXHQgKiBDYWxsYmFjayB3aGljaCBnaXZlcyB0aGUgaGVpZ2h0IGluIHBpeGVscyBvZiB0aGUgdmlldyB6b25lLlxuXHQgKi9cblx0b25Db21wdXRlZEhlaWdodD86IChoZWlnaHQ6IG51bWJlcikgPT4gdm9pZDtcbn1cbi8qKlxuICogQW4gYWNjZXNzb3IgdGhhdCBhbGxvd3MgZm9yIHpvbmVzIHRvIGJlIGFkZGVkIG9yIHJlbW92ZWQuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSVZpZXdab25lQ2hhbmdlQWNjZXNzb3Ige1xuXHQvKipcblx0ICogQ3JlYXRlIGEgbmV3IHZpZXcgem9uZS5cblx0ICogQHBhcmFtIHpvbmUgWm9uZSB0byBjcmVhdGVcblx0ICogQHJldHVybiBBIHVuaXF1ZSBpZGVudGlmaWVyIHRvIHRoZSB2aWV3IHpvbmUuXG5cdCAqL1xuXHRhZGRab25lKHpvbmU6IElWaWV3Wm9uZSk6IHN0cmluZztcblx0LyoqXG5cdCAqIFJlbW92ZSBhIHpvbmVcblx0ICogQHBhcmFtIGlkIEEgdW5pcXVlIGlkZW50aWZpZXIgdG8gdGhlIHZpZXcgem9uZSwgYXMgcmV0dXJuZWQgYnkgdGhlIGBhZGRab25lYCBjYWxsLlxuXHQgKi9cblx0cmVtb3ZlWm9uZShpZDogc3RyaW5nKTogdm9pZDtcblx0LyoqXG5cdCAqIENoYW5nZSBhIHpvbmUncyBwb3NpdGlvbi5cblx0ICogVGhlIGVkaXRvciB3aWxsIHJlc2NhbiB0aGUgYGFmdGVyTGluZU51bWJlcmAgYW5kIGBhZnRlckNvbHVtbmAgcHJvcGVydGllcyBvZiBhIHZpZXcgem9uZS5cblx0ICovXG5cdGxheW91dFpvbmUoaWQ6IHN0cmluZyk6IHZvaWQ7XG59XG5cbi8qKlxuICogQSBwb3NpdGlvbmluZyBwcmVmZXJlbmNlIGZvciByZW5kZXJpbmcgY29udGVudCB3aWRnZXRzLlxuICovXG5leHBvcnQgY29uc3QgZW51bSBDb250ZW50V2lkZ2V0UG9zaXRpb25QcmVmZXJlbmNlIHtcblx0LyoqXG5cdCAqIFBsYWNlIHRoZSBjb250ZW50IHdpZGdldCBleGFjdGx5IGF0IGEgcG9zaXRpb25cblx0ICovXG5cdEVYQUNULFxuXHQvKipcblx0ICogUGxhY2UgdGhlIGNvbnRlbnQgd2lkZ2V0IGFib3ZlIGEgcG9zaXRpb25cblx0ICovXG5cdEFCT1ZFLFxuXHQvKipcblx0ICogUGxhY2UgdGhlIGNvbnRlbnQgd2lkZ2V0IGJlbG93IGEgcG9zaXRpb25cblx0ICovXG5cdEJFTE9XXG59XG4vKipcbiAqIEEgcG9zaXRpb24gZm9yIHJlbmRlcmluZyBjb250ZW50IHdpZGdldHMuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUNvbnRlbnRXaWRnZXRQb3NpdGlvbiB7XG5cdC8qKlxuXHQgKiBEZXNpcmVkIHBvc2l0aW9uIHdoaWNoIHNlcnZlcyBhcyBhbiBhbmNob3IgZm9yIHBsYWNpbmcgdGhlIGNvbnRlbnQgd2lkZ2V0LlxuXHQgKiBUaGUgd2lkZ2V0IHdpbGwgYmUgcGxhY2VkIGFib3ZlLCBhdCwgb3IgYmVsb3cgdGhlIHNwZWNpZmllZCBwb3NpdGlvbiwgYmFzZWQgb24gdGhlXG5cdCAqIHByb3ZpZGVkIHByZWZlcmVuY2UuIFRoZSB3aWRnZXQgd2lsbCBhbHdheXMgdG91Y2ggdGhpcyBwb3NpdGlvbi5cblx0ICpcblx0ICogR2l2ZW4gc3VmZmljaWVudCBob3Jpem9udGFsIHNwYWNlLCB0aGUgd2lkZ2V0IHdpbGwgYmUgcGxhY2VkIHRvIHRoZSByaWdodCBvZiB0aGVcblx0ICogcGFzc2VkIGluIHBvc2l0aW9uLiBUaGlzIGNhbiBiZSB0d2Vha2VkIGJ5IHByb3ZpZGluZyBhIGBzZWNvbmRhcnlQb3NpdGlvbmAuXG5cdCAqXG5cdCAqIEBzZWUgcHJlZmVyZW5jZVxuXHQgKiBAc2VlIHNlY29uZGFyeVBvc2l0aW9uXG5cdCAqL1xuXHRwb3NpdGlvbjogSVBvc2l0aW9uIHwgbnVsbDtcblx0LyoqXG5cdCAqIE9wdGlvbmFsbHksIGEgc2Vjb25kYXJ5IHBvc2l0aW9uIGNhbiBiZSBwcm92aWRlZCB0byBmdXJ0aGVyIGRlZmluZSB0aGUgcGxhY2luZyBvZlxuXHQgKiB0aGUgY29udGVudCB3aWRnZXQuIFRoZSBzZWNvbmRhcnkgcG9zaXRpb24gbXVzdCBoYXZlIHRoZSBzYW1lIGxpbmUgbnVtYmVyIGFzIHRoZVxuXHQgKiBwcmltYXJ5IHBvc2l0aW9uLiBJZiBwb3NzaWJsZSwgdGhlIHdpZGdldCB3aWxsIGJlIHBsYWNlZCBzdWNoIHRoYXQgaXQgYWxzbyB0b3VjaGVzXG5cdCAqIHRoZSBzZWNvbmRhcnkgcG9zaXRpb24uXG5cdCAqL1xuXHRzZWNvbmRhcnlQb3NpdGlvbj86IElQb3NpdGlvbiB8IG51bGw7XG5cdC8qKlxuXHQgKiBQbGFjZW1lbnQgcHJlZmVyZW5jZSBmb3IgcG9zaXRpb24sIGluIG9yZGVyIG9mIHByZWZlcmVuY2UuXG5cdCAqL1xuXHRwcmVmZXJlbmNlOiBDb250ZW50V2lkZ2V0UG9zaXRpb25QcmVmZXJlbmNlW107XG5cblx0LyoqXG5cdCAqIFBsYWNlbWVudCBwcmVmZXJlbmNlIHdoZW4gbXVsdGlwbGUgdmlldyBwb3NpdGlvbnMgcmVmZXIgdG8gdGhlIHNhbWUgKG1vZGVsKSBwb3NpdGlvbi5cblx0ICogVGhpcyBwbGF5cyBhIHJvbGUgd2hlbiBpbmplY3RlZCB0ZXh0IGlzIGludm9sdmVkLlxuXHQqL1xuXHRwb3NpdGlvbkFmZmluaXR5PzogUG9zaXRpb25BZmZpbml0eTtcbn1cbi8qKlxuICogQSBjb250ZW50IHdpZGdldCByZW5kZXJzIGlubGluZSB3aXRoIHRoZSB0ZXh0IGFuZCBjYW4gYmUgZWFzaWx5IHBsYWNlZCAnbmVhcicgYW4gZWRpdG9yIHBvc2l0aW9uLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElDb250ZW50V2lkZ2V0IHtcblx0LyoqXG5cdCAqIFJlbmRlciB0aGlzIGNvbnRlbnQgd2lkZ2V0IGluIGEgbG9jYXRpb24gd2hlcmUgaXQgY291bGQgb3ZlcmZsb3cgdGhlIGVkaXRvcidzIHZpZXcgZG9tIG5vZGUuXG5cdCAqL1xuXHRhbGxvd0VkaXRvck92ZXJmbG93PzogYm9vbGVhbjtcblx0LyoqXG5cdCAqIENhbGwgcHJldmVudERlZmF1bHQoKSBvbiBtb3VzZWRvd24gZXZlbnRzIHRoYXQgdGFyZ2V0IHRoZSBjb250ZW50IHdpZGdldC5cblx0ICovXG5cdHN1cHByZXNzTW91c2VEb3duPzogYm9vbGVhbjtcblx0LyoqXG5cdCAqIEdldCBhIHVuaXF1ZSBpZGVudGlmaWVyIG9mIHRoZSBjb250ZW50IHdpZGdldC5cblx0ICovXG5cdGdldElkKCk6IHN0cmluZztcblx0LyoqXG5cdCAqIEdldCB0aGUgZG9tIG5vZGUgb2YgdGhlIGNvbnRlbnQgd2lkZ2V0LlxuXHQgKi9cblx0Z2V0RG9tTm9kZSgpOiBIVE1MRWxlbWVudDtcblx0LyoqXG5cdCAqIEdldCB0aGUgcGxhY2VtZW50IG9mIHRoZSBjb250ZW50IHdpZGdldC5cblx0ICogSWYgbnVsbCBpcyByZXR1cm5lZCwgdGhlIGNvbnRlbnQgd2lkZ2V0IHdpbGwgYmUgcGxhY2VkIG9mZiBzY3JlZW4uXG5cdCAqL1xuXHRnZXRQb3NpdGlvbigpOiBJQ29udGVudFdpZGdldFBvc2l0aW9uIHwgbnVsbDtcblx0LyoqXG5cdCAqIE9wdGlvbmFsIGZ1bmN0aW9uIHRoYXQgaXMgaW52b2tlZCBiZWZvcmUgcmVuZGVyaW5nXG5cdCAqIHRoZSBjb250ZW50IHdpZGdldC4gSWYgYSBkaW1lbnNpb24gaXMgcmV0dXJuZWQgdGhlIGVkaXRvciB3aWxsXG5cdCAqIGF0dGVtcHQgdG8gdXNlIGl0LlxuXHQgKi9cblx0YmVmb3JlUmVuZGVyPygpOiBJRGltZW5zaW9uIHwgbnVsbDtcblx0LyoqXG5cdCAqIE9wdGlvbmFsIGZ1bmN0aW9uIHRoYXQgaXMgaW52b2tlZCBhZnRlciByZW5kZXJpbmcgdGhlIGNvbnRlbnRcblx0ICogd2lkZ2V0LiBJcyBiZWluZyBpbnZva2VkIHdpdGggdGhlIHNlbGVjdGVkIHBvc2l0aW9uIHByZWZlcmVuY2Vcblx0ICogb3IgYG51bGxgIGlmIG5vdCByZW5kZXJlZC5cblx0ICovXG5cdGFmdGVyUmVuZGVyPyhwb3NpdGlvbjogQ29udGVudFdpZGdldFBvc2l0aW9uUHJlZmVyZW5jZSB8IG51bGwsIGNvb3JkaW5hdGU6IElDb250ZW50V2lkZ2V0UmVuZGVyZWRDb29yZGluYXRlIHwgbnVsbCk6IHZvaWQ7XG59XG5cbi8qKlxuICogQ29vcmRpbmF0ZWVzIHBhc3NlZCBpbiB7QGxpbmsgSUNvbnRlbnRXaWRnZXQuYWZ0ZXJSZW5kZXJ9XG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUNvbnRlbnRXaWRnZXRSZW5kZXJlZENvb3JkaW5hdGUge1xuXHQvKipcblx0ICogVG9wIHBvc2l0aW9uIHJlbGF0aXZlIHRvIHRoZSBlZGl0b3IgY29udGVudC5cblx0ICovXG5cdHJlYWRvbmx5IHRvcDogbnVtYmVyO1xuXG5cdC8qKlxuXHQgKiBMZWZ0IHBvc2l0aW9uIHJlbGF0aXZlIHRvIHRoZSBlZGl0b3IgY29udGVudC5cblx0ICovXG5cdHJlYWRvbmx5IGxlZnQ6IG51bWJlcjtcbn1cblxuLyoqXG4gKiBBIHBvc2l0aW9uaW5nIHByZWZlcmVuY2UgZm9yIHJlbmRlcmluZyBvdmVybGF5IHdpZGdldHMuXG4gKi9cbmV4cG9ydCBjb25zdCBlbnVtIE92ZXJsYXlXaWRnZXRQb3NpdGlvblByZWZlcmVuY2Uge1xuXHQvKipcblx0ICogUG9zaXRpb24gdGhlIG92ZXJsYXkgd2lkZ2V0IGluIHRoZSB0b3AgcmlnaHQgY29ybmVyXG5cdCAqL1xuXHRUT1BfUklHSFRfQ09STkVSLFxuXG5cdC8qKlxuXHQgKiBQb3NpdGlvbiB0aGUgb3ZlcmxheSB3aWRnZXQgaW4gdGhlIGJvdHRvbSByaWdodCBjb3JuZXJcblx0ICovXG5cdEJPVFRPTV9SSUdIVF9DT1JORVIsXG5cblx0LyoqXG5cdCAqIFBvc2l0aW9uIHRoZSBvdmVybGF5IHdpZGdldCBpbiB0aGUgdG9wIGNlbnRlclxuXHQgKi9cblx0VE9QX0NFTlRFUlxufVxuXG5cbi8qKlxuICogUmVwcmVzZW50cyBlZGl0b3ItcmVsYXRpdmUgY29vcmRpbmF0ZXMgb2YgYW4gb3ZlcmxheSB3aWRnZXQuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSU92ZXJsYXlXaWRnZXRQb3NpdGlvbkNvb3JkaW5hdGVzIHtcblx0LyoqXG5cdCAqIFRoZSB0b3AgcG9zaXRpb24gZm9yIHRoZSBvdmVybGF5IHdpZGdldCwgcmVsYXRpdmUgdG8gdGhlIGVkaXRvci5cblx0ICovXG5cdHRvcDogbnVtYmVyO1xuXHQvKipcblx0ICogVGhlIGxlZnQgcG9zaXRpb24gZm9yIHRoZSBvdmVybGF5IHdpZGdldCwgcmVsYXRpdmUgdG8gdGhlIGVkaXRvci5cblx0ICovXG5cdGxlZnQ6IG51bWJlcjtcbn1cblxuLyoqXG4gKiBBIHBvc2l0aW9uIGZvciByZW5kZXJpbmcgb3ZlcmxheSB3aWRnZXRzLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElPdmVybGF5V2lkZ2V0UG9zaXRpb24ge1xuXHQvKipcblx0ICogVGhlIHBvc2l0aW9uIHByZWZlcmVuY2UgZm9yIHRoZSBvdmVybGF5IHdpZGdldC5cblx0ICovXG5cdHByZWZlcmVuY2U6IE92ZXJsYXlXaWRnZXRQb3NpdGlvblByZWZlcmVuY2UgfCBJT3ZlcmxheVdpZGdldFBvc2l0aW9uQ29vcmRpbmF0ZXMgfCBudWxsO1xuXG5cdC8qKlxuXHQgKiBXaGVuIHNldCwgc3RhY2tzIHdpdGggb3RoZXIgb3ZlcmxheSB3aWRnZXRzIHdpdGggdGhlIHNhbWUgcHJlZmVyZW5jZSxcblx0ICogaW4gYW4gb3JkZXIgZGV0ZXJtaW5lZCBieSB0aGUgb3JkaW5hbCB2YWx1ZS5cblx0ICovXG5cdHN0YWNrT3JkaW5hbD86IG51bWJlcjtcbn1cbi8qKlxuICogQW4gb3ZlcmxheSB3aWRnZXRzIHJlbmRlcnMgb24gdG9wIG9mIHRoZSB0ZXh0LlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElPdmVybGF5V2lkZ2V0IHtcblx0LyoqXG5cdCAqIEV2ZW50IGZpcmVkIHdoZW4gdGhlIHdpZGdldCBsYXlvdXQgY2hhbmdlcy5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkTGF5b3V0PzogRXZlbnQ8dm9pZD47XG5cdC8qKlxuXHQgKiBSZW5kZXIgdGhpcyBvdmVybGF5IHdpZGdldCBpbiBhIGxvY2F0aW9uIHdoZXJlIGl0IGNvdWxkIG92ZXJmbG93IHRoZSBlZGl0b3IncyB2aWV3IGRvbSBub2RlLlxuXHQgKi9cblx0YWxsb3dFZGl0b3JPdmVyZmxvdz86IGJvb2xlYW47XG5cdC8qKlxuXHQgKiBHZXQgYSB1bmlxdWUgaWRlbnRpZmllciBvZiB0aGUgb3ZlcmxheSB3aWRnZXQuXG5cdCAqL1xuXHRnZXRJZCgpOiBzdHJpbmc7XG5cdC8qKlxuXHQgKiBHZXQgdGhlIGRvbSBub2RlIG9mIHRoZSBvdmVybGF5IHdpZGdldC5cblx0ICovXG5cdGdldERvbU5vZGUoKTogSFRNTEVsZW1lbnQ7XG5cdC8qKlxuXHQgKiBHZXQgdGhlIHBsYWNlbWVudCBvZiB0aGUgb3ZlcmxheSB3aWRnZXQuXG5cdCAqIElmIG51bGwgaXMgcmV0dXJuZWQsIHRoZSBvdmVybGF5IHdpZGdldCBpcyByZXNwb25zaWJsZSB0byBwbGFjZSBpdHNlbGYuXG5cdCAqL1xuXHRnZXRQb3NpdGlvbigpOiBJT3ZlcmxheVdpZGdldFBvc2l0aW9uIHwgbnVsbDtcblx0LyoqXG5cdCAqIFRoZSBlZGl0b3Igd2lsbCBlbnN1cmUgdGhhdCB0aGUgc2Nyb2xsIHdpZHRoIGlzID49IHRoYW4gdGhpcyB2YWx1ZS5cblx0ICovXG5cdGdldE1pbkNvbnRlbnRXaWR0aEluUHg/KCk6IG51bWJlcjtcbn1cblxuLyoqXG4gKiBBIGdseXBoIG1hcmdpbiB3aWRnZXQgcmVuZGVycyBpbiB0aGUgZWRpdG9yIGdseXBoIG1hcmdpbi5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJR2x5cGhNYXJnaW5XaWRnZXQge1xuXHQvKipcblx0ICogR2V0IGEgdW5pcXVlIGlkZW50aWZpZXIgb2YgdGhlIGdseXBoIHdpZGdldC5cblx0ICovXG5cdGdldElkKCk6IHN0cmluZztcblx0LyoqXG5cdCAqIEdldCB0aGUgZG9tIG5vZGUgb2YgdGhlIGdseXBoIHdpZGdldC5cblx0ICovXG5cdGdldERvbU5vZGUoKTogSFRNTEVsZW1lbnQ7XG5cdC8qKlxuXHQgKiBHZXQgdGhlIHBsYWNlbWVudCBvZiB0aGUgZ2x5cGggd2lkZ2V0LlxuXHQgKi9cblx0Z2V0UG9zaXRpb24oKTogSUdseXBoTWFyZ2luV2lkZ2V0UG9zaXRpb247XG59XG5cbi8qKlxuICogQSBwb3NpdGlvbiBmb3IgcmVuZGVyaW5nIGdseXBoIG1hcmdpbiB3aWRnZXRzLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElHbHlwaE1hcmdpbldpZGdldFBvc2l0aW9uIHtcblx0LyoqXG5cdCAqIFRoZSBnbHlwaCBtYXJnaW4gbGFuZSB3aGVyZSB0aGUgd2lkZ2V0IHNob3VsZCBiZSBzaG93bi5cblx0ICovXG5cdGxhbmU6IEdseXBoTWFyZ2luTGFuZTtcblx0LyoqXG5cdCAqIFRoZSBwcmlvcml0eSBvcmRlciBvZiB0aGUgd2lkZ2V0LCB1c2VkIGZvciBkZXRlcm1pbmluZyB3aGljaCB3aWRnZXRcblx0ICogdG8gcmVuZGVyIHdoZW4gdGhlcmUgYXJlIG11bHRpcGxlLlxuXHQgKi9cblx0ekluZGV4OiBudW1iZXI7XG5cdC8qKlxuXHQgKiBUaGUgZWRpdG9yIHJhbmdlIHRoYXQgdGhpcyB3aWRnZXQgYXBwbGllcyB0by5cblx0ICovXG5cdHJhbmdlOiBJUmFuZ2U7XG59XG5cbi8qKlxuICogVHlwZSBvZiBoaXQgZWxlbWVudCB3aXRoIHRoZSBtb3VzZSBpbiB0aGUgZWRpdG9yLlxuICovXG5leHBvcnQgY29uc3QgZW51bSBNb3VzZVRhcmdldFR5cGUge1xuXHQvKipcblx0ICogTW91c2UgaXMgb24gdG9wIG9mIGFuIHVua25vd24gZWxlbWVudC5cblx0ICovXG5cdFVOS05PV04sXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgdGhlIHRleHRhcmVhIHVzZWQgZm9yIGlucHV0LlxuXHQgKi9cblx0VEVYVEFSRUEsXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgdGhlIGdseXBoIG1hcmdpblxuXHQgKi9cblx0R1VUVEVSX0dMWVBIX01BUkdJTixcblx0LyoqXG5cdCAqIE1vdXNlIGlzIG9uIHRvcCBvZiB0aGUgbGluZSBudW1iZXJzXG5cdCAqL1xuXHRHVVRURVJfTElORV9OVU1CRVJTLFxuXHQvKipcblx0ICogTW91c2UgaXMgb24gdG9wIG9mIHRoZSBsaW5lIGRlY29yYXRpb25zXG5cdCAqL1xuXHRHVVRURVJfTElORV9ERUNPUkFUSU9OUyxcblx0LyoqXG5cdCAqIE1vdXNlIGlzIG9uIHRvcCBvZiB0aGUgd2hpdGVzcGFjZSBsZWZ0IGluIHRoZSBndXR0ZXIgYnkgYSB2aWV3IHpvbmUuXG5cdCAqL1xuXHRHVVRURVJfVklFV19aT05FLFxuXHQvKipcblx0ICogTW91c2UgaXMgb24gdG9wIG9mIHRleHQgaW4gdGhlIGNvbnRlbnQuXG5cdCAqL1xuXHRDT05URU5UX1RFWFQsXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgZW1wdHkgc3BhY2UgaW4gdGhlIGNvbnRlbnQgKGUuZy4gYWZ0ZXIgbGluZSB0ZXh0IG9yIGJlbG93IGxhc3QgbGluZSlcblx0ICovXG5cdENPTlRFTlRfRU1QVFksXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgYSB2aWV3IHpvbmUgaW4gdGhlIGNvbnRlbnQuXG5cdCAqL1xuXHRDT05URU5UX1ZJRVdfWk9ORSxcblx0LyoqXG5cdCAqIE1vdXNlIGlzIG9uIHRvcCBvZiBhIGNvbnRlbnQgd2lkZ2V0LlxuXHQgKi9cblx0Q09OVEVOVF9XSURHRVQsXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgdGhlIGRlY29yYXRpb25zIG92ZXJ2aWV3IHJ1bGVyLlxuXHQgKi9cblx0T1ZFUlZJRVdfUlVMRVIsXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgYSBzY3JvbGxiYXIuXG5cdCAqL1xuXHRTQ1JPTExCQVIsXG5cdC8qKlxuXHQgKiBNb3VzZSBpcyBvbiB0b3Agb2YgYW4gb3ZlcmxheSB3aWRnZXQuXG5cdCAqL1xuXHRPVkVSTEFZX1dJREdFVCxcblx0LyoqXG5cdCAqIE1vdXNlIGlzIG91dHNpZGUgb2YgdGhlIGVkaXRvci5cblx0ICovXG5cdE9VVFNJREVfRURJVE9SLFxufVxuZXhwb3J0IGludGVyZmFjZSBJQmFzZU1vdXNlVGFyZ2V0IHtcblx0LyoqXG5cdCAqIFRoZSB0YXJnZXQgZWxlbWVudFxuXHQgKi9cblx0cmVhZG9ubHkgZWxlbWVudDogSFRNTEVsZW1lbnQgfCBudWxsO1xuXHQvKipcblx0ICogVGhlICdhcHByb3hpbWF0ZScgZWRpdG9yIHBvc2l0aW9uXG5cdCAqL1xuXHRyZWFkb25seSBwb3NpdGlvbjogUG9zaXRpb24gfCBudWxsO1xuXHQvKipcblx0ICogRGVzaXJlZCBtb3VzZSBjb2x1bW4gKGUuZy4gd2hlbiBwb3NpdGlvbi5jb2x1bW4gZ2V0cyBjbGFtcGVkIHRvIHRleHQgbGVuZ3RoIC0tIGNsaWNraW5nIGFmdGVyIHRleHQgb24gYSBsaW5lKS5cblx0ICovXG5cdHJlYWRvbmx5IG1vdXNlQ29sdW1uOiBudW1iZXI7XG5cdC8qKlxuXHQgKiBUaGUgJ2FwcHJveGltYXRlJyBlZGl0b3IgcmFuZ2Vcblx0ICovXG5cdHJlYWRvbmx5IHJhbmdlOiBSYW5nZSB8IG51bGw7XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldFVua25vd24gZXh0ZW5kcyBJQmFzZU1vdXNlVGFyZ2V0IHtcblx0cmVhZG9ubHkgdHlwZTogTW91c2VUYXJnZXRUeXBlLlVOS05PV047XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldFRleHRhcmVhIGV4dGVuZHMgSUJhc2VNb3VzZVRhcmdldCB7XG5cdHJlYWRvbmx5IHR5cGU6IE1vdXNlVGFyZ2V0VHlwZS5URVhUQVJFQTtcblx0cmVhZG9ubHkgcG9zaXRpb246IG51bGw7XG5cdHJlYWRvbmx5IHJhbmdlOiBudWxsO1xufVxuZXhwb3J0IGludGVyZmFjZSBJTW91c2VUYXJnZXRNYXJnaW5EYXRhIHtcblx0cmVhZG9ubHkgaXNBZnRlckxpbmVzOiBib29sZWFuO1xuXHRyZWFkb25seSBnbHlwaE1hcmdpbkxlZnQ6IG51bWJlcjtcblx0cmVhZG9ubHkgZ2x5cGhNYXJnaW5XaWR0aDogbnVtYmVyO1xuXHRyZWFkb25seSBnbHlwaE1hcmdpbkxhbmU/OiBHbHlwaE1hcmdpbkxhbmU7XG5cdHJlYWRvbmx5IGxpbmVOdW1iZXJzV2lkdGg6IG51bWJlcjtcblx0cmVhZG9ubHkgb2Zmc2V0WDogbnVtYmVyO1xufVxuZXhwb3J0IGludGVyZmFjZSBJTW91c2VUYXJnZXRNYXJnaW4gZXh0ZW5kcyBJQmFzZU1vdXNlVGFyZ2V0IHtcblx0cmVhZG9ubHkgdHlwZTogTW91c2VUYXJnZXRUeXBlLkdVVFRFUl9HTFlQSF9NQVJHSU4gfCBNb3VzZVRhcmdldFR5cGUuR1VUVEVSX0xJTkVfTlVNQkVSUyB8IE1vdXNlVGFyZ2V0VHlwZS5HVVRURVJfTElORV9ERUNPUkFUSU9OUztcblx0cmVhZG9ubHkgcG9zaXRpb246IFBvc2l0aW9uO1xuXHRyZWFkb25seSByYW5nZTogUmFuZ2U7XG5cdHJlYWRvbmx5IGRldGFpbDogSU1vdXNlVGFyZ2V0TWFyZ2luRGF0YTtcbn1cbmV4cG9ydCBpbnRlcmZhY2UgSU1vdXNlVGFyZ2V0Vmlld1pvbmVEYXRhIHtcblx0cmVhZG9ubHkgdmlld1pvbmVJZDogc3RyaW5nO1xuXHRyZWFkb25seSBwb3NpdGlvbkJlZm9yZTogUG9zaXRpb24gfCBudWxsO1xuXHRyZWFkb25seSBwb3NpdGlvbkFmdGVyOiBQb3NpdGlvbiB8IG51bGw7XG5cdHJlYWRvbmx5IHBvc2l0aW9uOiBQb3NpdGlvbjtcblx0cmVhZG9ubHkgYWZ0ZXJMaW5lTnVtYmVyOiBudW1iZXI7XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldFZpZXdab25lIGV4dGVuZHMgSUJhc2VNb3VzZVRhcmdldCB7XG5cdHJlYWRvbmx5IHR5cGU6IE1vdXNlVGFyZ2V0VHlwZS5HVVRURVJfVklFV19aT05FIHwgTW91c2VUYXJnZXRUeXBlLkNPTlRFTlRfVklFV19aT05FO1xuXHRyZWFkb25seSBwb3NpdGlvbjogUG9zaXRpb247XG5cdHJlYWRvbmx5IHJhbmdlOiBSYW5nZTtcblx0cmVhZG9ubHkgZGV0YWlsOiBJTW91c2VUYXJnZXRWaWV3Wm9uZURhdGE7XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldENvbnRlbnRUZXh0RGF0YSB7XG5cdHJlYWRvbmx5IG1pZ2h0QmVGb3JlaWduRWxlbWVudDogYm9vbGVhbjtcblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0cmVhZG9ubHkgaW5qZWN0ZWRUZXh0OiBJbmplY3RlZFRleHQgfCBudWxsO1xufVxuZXhwb3J0IGludGVyZmFjZSBJTW91c2VUYXJnZXRDb250ZW50VGV4dCBleHRlbmRzIElCYXNlTW91c2VUYXJnZXQge1xuXHRyZWFkb25seSB0eXBlOiBNb3VzZVRhcmdldFR5cGUuQ09OVEVOVF9URVhUO1xuXHRyZWFkb25seSBwb3NpdGlvbjogUG9zaXRpb247XG5cdHJlYWRvbmx5IHJhbmdlOiBSYW5nZTtcblx0cmVhZG9ubHkgZGV0YWlsOiBJTW91c2VUYXJnZXRDb250ZW50VGV4dERhdGE7XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldENvbnRlbnRFbXB0eURhdGEge1xuXHRyZWFkb25seSBpc0FmdGVyTGluZXM6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGhvcml6b250YWxEaXN0YW5jZVRvVGV4dD86IG51bWJlcjtcbn1cbmV4cG9ydCBpbnRlcmZhY2UgSU1vdXNlVGFyZ2V0Q29udGVudEVtcHR5IGV4dGVuZHMgSUJhc2VNb3VzZVRhcmdldCB7XG5cdHJlYWRvbmx5IHR5cGU6IE1vdXNlVGFyZ2V0VHlwZS5DT05URU5UX0VNUFRZO1xuXHRyZWFkb25seSBwb3NpdGlvbjogUG9zaXRpb247XG5cdHJlYWRvbmx5IHJhbmdlOiBSYW5nZTtcblx0cmVhZG9ubHkgZGV0YWlsOiBJTW91c2VUYXJnZXRDb250ZW50RW1wdHlEYXRhO1xufVxuZXhwb3J0IGludGVyZmFjZSBJTW91c2VUYXJnZXRDb250ZW50V2lkZ2V0IGV4dGVuZHMgSUJhc2VNb3VzZVRhcmdldCB7XG5cdHJlYWRvbmx5IHR5cGU6IE1vdXNlVGFyZ2V0VHlwZS5DT05URU5UX1dJREdFVDtcblx0cmVhZG9ubHkgcG9zaXRpb246IG51bGw7XG5cdHJlYWRvbmx5IHJhbmdlOiBudWxsO1xuXHRyZWFkb25seSBkZXRhaWw6IHN0cmluZztcbn1cbmV4cG9ydCBpbnRlcmZhY2UgSU1vdXNlVGFyZ2V0T3ZlcmxheVdpZGdldCBleHRlbmRzIElCYXNlTW91c2VUYXJnZXQge1xuXHRyZWFkb25seSB0eXBlOiBNb3VzZVRhcmdldFR5cGUuT1ZFUkxBWV9XSURHRVQ7XG5cdHJlYWRvbmx5IHBvc2l0aW9uOiBudWxsO1xuXHRyZWFkb25seSByYW5nZTogbnVsbDtcblx0cmVhZG9ubHkgZGV0YWlsOiBzdHJpbmc7XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldFNjcm9sbGJhciBleHRlbmRzIElCYXNlTW91c2VUYXJnZXQge1xuXHRyZWFkb25seSB0eXBlOiBNb3VzZVRhcmdldFR5cGUuU0NST0xMQkFSO1xuXHRyZWFkb25seSBwb3NpdGlvbjogUG9zaXRpb247XG5cdHJlYWRvbmx5IHJhbmdlOiBSYW5nZTtcbn1cbmV4cG9ydCBpbnRlcmZhY2UgSU1vdXNlVGFyZ2V0T3ZlcnZpZXdSdWxlciBleHRlbmRzIElCYXNlTW91c2VUYXJnZXQge1xuXHRyZWFkb25seSB0eXBlOiBNb3VzZVRhcmdldFR5cGUuT1ZFUlZJRVdfUlVMRVI7XG59XG5leHBvcnQgaW50ZXJmYWNlIElNb3VzZVRhcmdldE91dHNpZGVFZGl0b3IgZXh0ZW5kcyBJQmFzZU1vdXNlVGFyZ2V0IHtcblx0cmVhZG9ubHkgdHlwZTogTW91c2VUYXJnZXRUeXBlLk9VVFNJREVfRURJVE9SO1xuXHRyZWFkb25seSBvdXRzaWRlUG9zaXRpb246ICdhYm92ZScgfCAnYmVsb3cnIHwgJ2xlZnQnIHwgJ3JpZ2h0Jztcblx0cmVhZG9ubHkgb3V0c2lkZURpc3RhbmNlOiBudW1iZXI7XG59XG4vKipcbiAqIFRhcmdldCBoaXQgd2l0aCB0aGUgbW91c2UgaW4gdGhlIGVkaXRvci5cbiAqL1xuZXhwb3J0IHR5cGUgSU1vdXNlVGFyZ2V0ID0gKFxuXHRJTW91c2VUYXJnZXRVbmtub3duXG5cdHwgSU1vdXNlVGFyZ2V0VGV4dGFyZWFcblx0fCBJTW91c2VUYXJnZXRNYXJnaW5cblx0fCBJTW91c2VUYXJnZXRWaWV3Wm9uZVxuXHR8IElNb3VzZVRhcmdldENvbnRlbnRUZXh0XG5cdHwgSU1vdXNlVGFyZ2V0Q29udGVudEVtcHR5XG5cdHwgSU1vdXNlVGFyZ2V0Q29udGVudFdpZGdldFxuXHR8IElNb3VzZVRhcmdldE92ZXJsYXlXaWRnZXRcblx0fCBJTW91c2VUYXJnZXRTY3JvbGxiYXJcblx0fCBJTW91c2VUYXJnZXRPdmVydmlld1J1bGVyXG5cdHwgSU1vdXNlVGFyZ2V0T3V0c2lkZUVkaXRvclxuKTtcbi8qKlxuICogQSBtb3VzZSBldmVudCBvcmlnaW5hdGluZyBmcm9tIHRoZSBlZGl0b3IuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUVkaXRvck1vdXNlRXZlbnQge1xuXHRyZWFkb25seSBldmVudDogSU1vdXNlRXZlbnQ7XG5cdHJlYWRvbmx5IHRhcmdldDogSU1vdXNlVGFyZ2V0O1xufVxuZXhwb3J0IGludGVyZmFjZSBJUGFydGlhbEVkaXRvck1vdXNlRXZlbnQge1xuXHRyZWFkb25seSBldmVudDogSU1vdXNlRXZlbnQ7XG5cdHJlYWRvbmx5IHRhcmdldDogSU1vdXNlVGFyZ2V0IHwgbnVsbDtcbn1cblxuLyoqXG4gKiBBIHBhc3RlIGV2ZW50IG9yaWdpbmF0aW5nIGZyb20gdGhlIGVkaXRvci5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJUGFzdGVFdmVudCB7XG5cdHJlYWRvbmx5IHJhbmdlOiBSYW5nZTtcblx0cmVhZG9ubHkgbGFuZ3VhZ2VJZDogc3RyaW5nIHwgbnVsbDtcblx0cmVhZG9ubHkgY2xpcGJvYXJkRXZlbnQ/OiBDbGlwYm9hcmRFdmVudDtcbn1cblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBQYXN0ZVBheWxvYWQge1xuXHR0ZXh0OiBzdHJpbmc7XG5cdHBhc3RlT25OZXdMaW5lOiBib29sZWFuO1xuXHRtdWx0aWN1cnNvclRleHQ6IHN0cmluZ1tdIHwgbnVsbDtcblx0bW9kZTogc3RyaW5nIHwgbnVsbDtcblx0Y2xpcGJvYXJkRXZlbnQ/OiBDbGlwYm9hcmRFdmVudDtcbn1cblxuLyoqXG4gKiBBbiBvdmVydmlldyBydWxlclxuICogQGludGVybmFsXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSU92ZXJ2aWV3UnVsZXIge1xuXHRnZXREb21Ob2RlKCk6IEhUTUxFbGVtZW50O1xuXHRkaXNwb3NlKCk6IHZvaWQ7XG5cdHNldFpvbmVzKHpvbmVzOiBPdmVydmlld1J1bGVyWm9uZVtdKTogdm9pZDtcblx0c2V0TGF5b3V0KHBvc2l0aW9uOiBPdmVydmlld1J1bGVyUG9zaXRpb24pOiB2b2lkO1xufVxuXG4vKipcbiAqIEVkaXRvciBhcmlhIG9wdGlvbnMuXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJRWRpdG9yQXJpYU9wdGlvbnMge1xuXHRhY3RpdmVEZXNjZW5kYW50OiBzdHJpbmcgfCB1bmRlZmluZWQ7XG5cdHJvbGU/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSURpZmZFZGl0b3JDb25zdHJ1Y3Rpb25PcHRpb25zIGV4dGVuZHMgSURpZmZFZGl0b3JPcHRpb25zLCBJRWRpdG9yQ29uc3RydWN0aW9uT3B0aW9ucyB7XG5cdC8qKlxuXHQgKiBQbGFjZSBvdmVyZmxvdyB3aWRnZXRzIGluc2lkZSBhbiBleHRlcm5hbCBET00gbm9kZS5cblx0ICogRGVmYXVsdHMgdG8gYW4gaW50ZXJuYWwgRE9NIG5vZGUuXG5cdCAqL1xuXHRvdmVyZmxvd1dpZGdldHNEb21Ob2RlPzogSFRNTEVsZW1lbnQ7XG5cblx0LyoqXG5cdCAqIEFyaWEgbGFiZWwgZm9yIG9yaWdpbmFsIGVkaXRvci5cblx0ICovXG5cdG9yaWdpbmFsQXJpYUxhYmVsPzogc3RyaW5nO1xuXG5cdC8qKlxuXHQgKiBBcmlhIGxhYmVsIGZvciBtb2RpZmllZCBlZGl0b3IuXG5cdCAqL1xuXHRtb2RpZmllZEFyaWFMYWJlbD86IHN0cmluZztcbn1cblxuLyoqXG4gKiBBIHJpY2ggY29kZSBlZGl0b3IuXG4gKi9cbmV4cG9ydCBpbnRlcmZhY2UgSUNvZGVFZGl0b3IgZXh0ZW5kcyBlZGl0b3JDb21tb24uSUVkaXRvciB7XG5cdC8qKlxuXHQgKiBUaGlzIGVkaXRvciBpcyB1c2VkIGFzIGFuIGFsdGVybmF0aXZlIHRvIGFuIDxpbnB1dD4gYm94LCBpLmUuIGFzIGEgc2ltcGxlIHdpZGdldC5cblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRyZWFkb25seSBpc1NpbXBsZVdpZGdldDogYm9vbGVhbjtcblx0LyoqXG5cdCAqIFRoZSBjb250ZXh0IG1lbnUgSUQgdGhhdCBzaG91bGQgYmUgdXNlZCB0byBsb29rdXAgY29udGV4dCBtZW51IGFjdGlvbnMuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0cmVhZG9ubHkgY29udGV4dE1lbnVJZDogTWVudUlkO1xuXHQvKipcblx0ICogVGhlIGVkaXRvcidzIHNjb3BlZCBjb250ZXh0IGtleSBzZXJ2aWNlLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdHJlYWRvbmx5IGNvbnRleHRLZXlTZXJ2aWNlOiBJQ29udGV4dEtleVNlcnZpY2U7XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIHdoZW4gdGhlIGNvbnRlbnQgb2YgdGhlIGN1cnJlbnQgbW9kZWwgaGFzIGNoYW5nZWQuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VNb2RlbENvbnRlbnQ6IEV2ZW50PElNb2RlbENvbnRlbnRDaGFuZ2VkRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSBsYW5ndWFnZSBvZiB0aGUgY3VycmVudCBtb2RlbCBoYXMgY2hhbmdlZC5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZU1vZGVsTGFuZ3VhZ2U6IEV2ZW50PElNb2RlbExhbmd1YWdlQ2hhbmdlZEV2ZW50Pjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgbGFuZ3VhZ2UgY29uZmlndXJhdGlvbiBvZiB0aGUgY3VycmVudCBtb2RlbCBoYXMgY2hhbmdlZC5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZU1vZGVsTGFuZ3VhZ2VDb25maWd1cmF0aW9uOiBFdmVudDxJTW9kZWxMYW5ndWFnZUNvbmZpZ3VyYXRpb25DaGFuZ2VkRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSBvcHRpb25zIG9mIHRoZSBjdXJyZW50IG1vZGVsIGhhcyBjaGFuZ2VkLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlTW9kZWxPcHRpb25zOiBFdmVudDxJTW9kZWxPcHRpb25zQ2hhbmdlZEV2ZW50Pjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgY29uZmlndXJhdGlvbiBvZiB0aGUgZWRpdG9yIGhhcyBjaGFuZ2VkLiAoZS5nLiBgZWRpdG9yLnVwZGF0ZU9wdGlvbnMoKWApXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VDb25maWd1cmF0aW9uOiBFdmVudDxDb25maWd1cmF0aW9uQ2hhbmdlZEV2ZW50Pjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgY3Vyc29yIHBvc2l0aW9uIGhhcyBjaGFuZ2VkLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlQ3Vyc29yUG9zaXRpb246IEV2ZW50PElDdXJzb3JQb3NpdGlvbkNoYW5nZWRFdmVudD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIHdoZW4gdGhlIGN1cnNvciBzZWxlY3Rpb24gaGFzIGNoYW5nZWQuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VDdXJzb3JTZWxlY3Rpb246IEV2ZW50PElDdXJzb3JTZWxlY3Rpb25DaGFuZ2VkRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSBtb2RlbCBvZiB0aGlzIGVkaXRvciBpcyBhYm91dCB0byBjaGFuZ2UgKGUuZy4gZnJvbSBgZWRpdG9yLnNldE1vZGVsKClgKS5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbldpbGxDaGFuZ2VNb2RlbDogRXZlbnQ8ZWRpdG9yQ29tbW9uLklNb2RlbENoYW5nZWRFdmVudD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIHdoZW4gdGhlIG1vZGVsIG9mIHRoaXMgZWRpdG9yIGhhcyBjaGFuZ2VkIChlLmcuIGBlZGl0b3Iuc2V0TW9kZWwoKWApLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlTW9kZWw6IEV2ZW50PGVkaXRvckNvbW1vbi5JTW9kZWxDaGFuZ2VkRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSBkZWNvcmF0aW9ucyBvZiB0aGUgY3VycmVudCBtb2RlbCBoYXZlIGNoYW5nZWQuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VNb2RlbERlY29yYXRpb25zOiBFdmVudDxJTW9kZWxEZWNvcmF0aW9uc0NoYW5nZWRFdmVudD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIHdoZW4gdGhlIHRva2VucyBvZiB0aGUgY3VycmVudCBtb2RlbCBoYXZlIGNoYW5nZWQuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VNb2RlbFRva2VuczogRXZlbnQ8SU1vZGVsVG9rZW5zQ2hhbmdlZEV2ZW50Pjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgdGV4dCBpbnNpZGUgdGhpcyBlZGl0b3IgZ2FpbmVkIGZvY3VzIChpLmUuIGN1cnNvciBzdGFydHMgYmxpbmtpbmcpLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkRm9jdXNFZGl0b3JUZXh0OiBFdmVudDx2b2lkPjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgdGV4dCBpbnNpZGUgdGhpcyBlZGl0b3IgbG9zdCBmb2N1cyAoaS5lLiBjdXJzb3Igc3RvcHMgYmxpbmtpbmcpLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQmx1ckVkaXRvclRleHQ6IEV2ZW50PHZvaWQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSB0ZXh0IGluc2lkZSB0aGlzIGVkaXRvciBvciBhbiBlZGl0b3Igd2lkZ2V0IGdhaW5lZCBmb2N1cy5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZEZvY3VzRWRpdG9yV2lkZ2V0OiBFdmVudDx2b2lkPjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgdGV4dCBpbnNpZGUgdGhpcyBlZGl0b3Igb3IgYW4gZWRpdG9yIHdpZGdldCBsb3N0IGZvY3VzLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQmx1ckVkaXRvcldpZGdldDogRXZlbnQ8dm9pZD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIGJlZm9yZSBpbnRlcnByZXRpbmcgdHlwZWQgY2hhcmFjdGVycyAob24gdGhlIGtleWJvYXJkKS5cblx0ICogQGV2ZW50XG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0cmVhZG9ubHkgb25XaWxsVHlwZTogRXZlbnQ8c3RyaW5nPjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgYWZ0ZXIgaW50ZXJwcmV0aW5nIHR5cGVkIGNoYXJhY3RlcnMgKG9uIHRoZSBrZXlib2FyZCkuXG5cdCAqIEBldmVudFxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkVHlwZTogRXZlbnQ8c3RyaW5nPjtcblx0LyoqXG5cdCAqIEJvb2xlYW4gaW5kaWNhdGluZyB3aGV0aGVyIGlucHV0IGlzIGluIGNvbXBvc2l0aW9uXG5cdCAqL1xuXHRyZWFkb25seSBpbkNvbXBvc2l0aW9uOiBib29sZWFuO1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBhZnRlciBjb21wb3NpdGlvbiBoYXMgc3RhcnRlZC5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ29tcG9zaXRpb25TdGFydDogRXZlbnQ8dm9pZD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIGFmdGVyIGNvbXBvc2l0aW9uIGhhcyBlbmRlZC5cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ29tcG9zaXRpb25FbmQ6IEV2ZW50PHZvaWQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIGVkaXRpbmcgZmFpbGVkIGJlY2F1c2UgdGhlIGVkaXRvciBpcyByZWFkLW9ubHkuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRBdHRlbXB0UmVhZE9ubHlFZGl0OiBFdmVudDx2b2lkPjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB1c2VycyBwYXN0ZSB0ZXh0IGluIHRoZSBlZGl0b3IuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRQYXN0ZTogRXZlbnQ8SVBhc3RlRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwibW91c2V1cFwiLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uTW91c2VVcDogRXZlbnQ8SUVkaXRvck1vdXNlRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwibW91c2Vkb3duXCIuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25Nb3VzZURvd246IEV2ZW50PElFZGl0b3JNb3VzZUV2ZW50Pjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgb24gYSBcIm1vdXNlZHJhZ1wiLlxuXHQgKiBAaW50ZXJuYWxcblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbk1vdXNlRHJhZzogRXZlbnQ8SUVkaXRvck1vdXNlRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwibW91c2Vkcm9wXCIuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uTW91c2VEcm9wOiBFdmVudDxJUGFydGlhbEVkaXRvck1vdXNlRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwibW91c2Vkcm9wY2FuY2VsZWRcIi5cblx0ICogQGludGVybmFsXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25Nb3VzZURyb3BDYW5jZWxlZDogRXZlbnQ8dm9pZD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIHdoZW4gY29udGVudCBpcyBkcm9wcGVkIGludG8gdGhlIGVkaXRvci5cblx0ICogQGludGVybmFsXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25Ecm9wSW50b0VkaXRvcjogRXZlbnQ8eyByZWFkb25seSBwb3NpdGlvbjogSVBvc2l0aW9uOyByZWFkb25seSBldmVudDogRHJhZ0V2ZW50IH0+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwiY29udGV4dG1lbnVcIi5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkNvbnRleHRNZW51OiBFdmVudDxJRWRpdG9yTW91c2VFdmVudD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIG9uIGEgXCJtb3VzZW1vdmVcIi5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbk1vdXNlTW92ZTogRXZlbnQ8SUVkaXRvck1vdXNlRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwibW91c2VsZWF2ZVwiLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uTW91c2VMZWF2ZTogRXZlbnQ8SVBhcnRpYWxFZGl0b3JNb3VzZUV2ZW50Pjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgb24gYSBcIm1vdXNld2hlZWxcIlxuXHQgKiBAZXZlbnRcblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRyZWFkb25seSBvbk1vdXNlV2hlZWw6IEV2ZW50PElNb3VzZVdoZWVsRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCBvbiBhIFwia2V5dXBcIi5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbktleVVwOiBFdmVudDxJS2V5Ym9hcmRFdmVudD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIG9uIGEgXCJrZXlkb3duXCIuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25LZXlEb3duOiBFdmVudDxJS2V5Ym9hcmRFdmVudD47XG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIHdoZW4gdGhlIGxheW91dCBvZiB0aGUgZWRpdG9yIGhhcyBjaGFuZ2VkLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkTGF5b3V0Q2hhbmdlOiBFdmVudDxFZGl0b3JMYXlvdXRJbmZvPjtcblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgY29udGVudCB3aWR0aCBvciBjb250ZW50IGhlaWdodCBpbiB0aGUgZWRpdG9yIGhhcyBjaGFuZ2VkLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ29udGVudFNpemVDaGFuZ2U6IEV2ZW50PGVkaXRvckNvbW1vbi5JQ29udGVudFNpemVDaGFuZ2VkRXZlbnQ+O1xuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSBzY3JvbGwgaW4gdGhlIGVkaXRvciBoYXMgY2hhbmdlZC5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZFNjcm9sbENoYW5nZTogRXZlbnQ8ZWRpdG9yQ29tbW9uLklTY3JvbGxFdmVudD47XG5cblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiBoaWRkZW4gYXJlYXMgY2hhbmdlIGluIHRoZSBlZGl0b3IgKGUuZy4gZHVlIHRvIGZvbGRpbmcpLlxuXHQgKiBAZXZlbnRcblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkQ2hhbmdlSGlkZGVuQXJlYXM6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBBbiBldmVudCBlbWl0dGVkIGJlZm9yZSBhbiBlZGl0b3Jcblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRyZWFkb25seSBvbldpbGxUcmlnZ2VyRWRpdG9yT3BlcmF0aW9uRXZlbnQ6IEV2ZW50PGVkaXRvckNvbW1vbi5JVHJpZ2dlckVkaXRvck9wZXJhdGlvbkV2ZW50PjtcblxuXHQvKipcblx0ICogU29tZSBlZGl0b3Igb3BlcmF0aW9ucyBmaXJlIG11bHRpcGxlIGV2ZW50cyBhdCBvbmNlLlxuXHQgKiBUbyBhbGxvdyB1c2VycyB0byByZWFjdCB0byBtdWx0aXBsZSBldmVudHMgZmlyZWQgYnkgYSBzaW5nbGUgb3BlcmF0aW9uLFxuXHQgKiB0aGUgZWRpdG9yIGZpcmVzIGEgYmVnaW4gdXBkYXRlIGJlZm9yZSB0aGUgb3BlcmF0aW9uIGFuZCBhbiBlbmQgdXBkYXRlIGFmdGVyIHRoZSBvcGVyYXRpb24uXG5cdCAqIFdoZW5ldmVyIHRoZSBlZGl0b3IgZmlyZXMgYG9uQmVnaW5VcGRhdGVgLCBpdCB3aWxsIGFsc28gZmlyZSBgb25FbmRVcGRhdGVgIG9uY2UgdGhlIG9wZXJhdGlvbiBmaW5pc2hlcy5cblx0ICogTm90ZSB0aGF0IG5vdCBhbGwgb3BlcmF0aW9ucyBhcmUgYnJhY2tldGVkIGJ5IGBvbkJlZ2luVXBkYXRlYCBhbmQgYG9uRW5kVXBkYXRlYC5cblx0Ki9cblx0cmVhZG9ubHkgb25CZWdpblVwZGF0ZTogRXZlbnQ8dm9pZD47XG5cblx0LyoqXG5cdCAqIEZpcmVzIGFmdGVyIHRoZSBlZGl0b3IgY29tcGxldGVzIHRoZSBvcGVyYXRpb24gaXQgZmlyZWQgYG9uQmVnaW5VcGRhdGVgIGZvci5cblx0Ki9cblx0cmVhZG9ubHkgb25FbmRVcGRhdGU6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBTYXZlcyBjdXJyZW50IHZpZXcgc3RhdGUgb2YgdGhlIGVkaXRvciBpbiBhIHNlcmlhbGl6YWJsZSBvYmplY3QuXG5cdCAqL1xuXHRzYXZlVmlld1N0YXRlKCk6IGVkaXRvckNvbW1vbi5JQ29kZUVkaXRvclZpZXdTdGF0ZSB8IG51bGw7XG5cblx0LyoqXG5cdCAqIFJlc3RvcmVzIHRoZSB2aWV3IHN0YXRlIG9mIHRoZSBlZGl0b3IgZnJvbSBhIHNlcmlhbGl6YWJsZSBvYmplY3QgZ2VuZXJhdGVkIGJ5IGBzYXZlVmlld1N0YXRlYC5cblx0ICovXG5cdHJlc3RvcmVWaWV3U3RhdGUoc3RhdGU6IGVkaXRvckNvbW1vbi5JQ29kZUVkaXRvclZpZXdTdGF0ZSB8IG51bGwpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRydWUgaWYgdGhlIHRleHQgaW5zaWRlIHRoaXMgZWRpdG9yIG9yIGFuIGVkaXRvciB3aWRnZXQgaGFzIGZvY3VzLlxuXHQgKi9cblx0aGFzV2lkZ2V0Rm9jdXMoKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogR2V0IGEgY29udHJpYnV0aW9uIG9mIHRoaXMgZWRpdG9yLlxuXHQgKiBAaWQgVW5pcXVlIGlkZW50aWZpZXIgb2YgdGhlIGNvbnRyaWJ1dGlvbi5cblx0ICogQHJldHVybiBUaGUgY29udHJpYnV0aW9uIG9yIG51bGwgaWYgY29udHJpYnV0aW9uIG5vdCBmb3VuZC5cblx0ICovXG5cdGdldENvbnRyaWJ1dGlvbjxUIGV4dGVuZHMgZWRpdG9yQ29tbW9uLklFZGl0b3JDb250cmlidXRpb24+KGlkOiBzdHJpbmcpOiBUIHwgbnVsbDtcblxuXHQvKipcblx0ICogRXhlY3V0ZSBgZm5gIHdpdGggdGhlIGVkaXRvcidzIHNlcnZpY2VzLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdGludm9rZVdpdGhpbkNvbnRleHQ8VD4oZm46IChhY2Nlc3NvcjogU2VydmljZXNBY2Nlc3NvcikgPT4gVCk6IFQ7XG5cblx0LyoqXG5cdCAqIFR5cGUgdGhlIGdldE1vZGVsKCkgb2YgSUVkaXRvci5cblx0ICovXG5cdGdldE1vZGVsKCk6IElUZXh0TW9kZWwgfCBudWxsO1xuXG5cdC8qKlxuXHQgKiBTZXRzIHRoZSBjdXJyZW50IG1vZGVsIGF0dGFjaGVkIHRvIHRoaXMgZWRpdG9yLlxuXHQgKiBJZiB0aGUgcHJldmlvdXMgbW9kZWwgd2FzIGNyZWF0ZWQgYnkgdGhlIGVkaXRvciB2aWEgdGhlIHZhbHVlIGtleSBpbiB0aGUgb3B0aW9uc1xuXHQgKiBsaXRlcmFsIG9iamVjdCwgaXQgd2lsbCBiZSBkZXN0cm95ZWQuIE90aGVyd2lzZSwgaWYgdGhlIHByZXZpb3VzIG1vZGVsIHdhcyBzZXRcblx0ICogdmlhIHNldE1vZGVsLCBvciB0aGUgbW9kZWwga2V5IGluIHRoZSBvcHRpb25zIGxpdGVyYWwgb2JqZWN0LCB0aGUgcHJldmlvdXMgbW9kZWxcblx0ICogd2lsbCBub3QgYmUgZGVzdHJveWVkLlxuXHQgKiBJdCBpcyBzYWZlIHRvIGNhbGwgc2V0TW9kZWwobnVsbCkgdG8gc2ltcGx5IGRldGFjaCB0aGUgY3VycmVudCBtb2RlbCBmcm9tIHRoZSBlZGl0b3IuXG5cdCAqL1xuXHRzZXRNb2RlbChtb2RlbDogSVRleHRNb2RlbCB8IG51bGwpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBHZXRzIGFsbCB0aGUgZWRpdG9yIGNvbXB1dGVkIG9wdGlvbnMuXG5cdCAqL1xuXHRnZXRPcHRpb25zKCk6IElDb21wdXRlZEVkaXRvck9wdGlvbnM7XG5cblx0LyoqXG5cdCAqIEdldHMgYSBzcGVjaWZpYyBlZGl0b3Igb3B0aW9uLlxuXHQgKi9cblx0Z2V0T3B0aW9uPFQgZXh0ZW5kcyBFZGl0b3JPcHRpb24+KGlkOiBUKTogRmluZENvbXB1dGVkRWRpdG9yT3B0aW9uVmFsdWVCeUlkPFQ+O1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRoZSBlZGl0b3IncyBjb25maWd1cmF0aW9uICh3aXRob3V0IGFueSB2YWxpZGF0aW9uIG9yIGRlZmF1bHRzKS5cblx0ICovXG5cdGdldFJhd09wdGlvbnMoKTogSUVkaXRvck9wdGlvbnM7XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0Z2V0T3ZlcmZsb3dXaWRnZXRzRG9tTm9kZSgpOiBIVE1MRWxlbWVudCB8IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRnZXRDb25maWd1cmVkV29yZEF0UG9zaXRpb24ocG9zaXRpb246IFBvc2l0aW9uKTogSVdvcmRBdFBvc2l0aW9uIHwgbnVsbDtcblxuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIGxpbmUgaGVpZ2h0cyBmcm9tIGRlY29yYXRpb25zIGNoYW5nZVxuXHQgKiBAaW50ZXJuYWxcblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZUxpbmVIZWlnaHQ6IEV2ZW50PE1vZGVsTGluZUhlaWdodENoYW5nZWRFdmVudD47XG5cblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgZm9udCBvZiB0aGUgZWRpdG9yIGhhcyBjaGFuZ2VkLlxuXHQgKiBAaW50ZXJuYWxcblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZUZvbnQ6IEV2ZW50PE1vZGVsRm9udENoYW5nZWRFdmVudD47XG5cblx0LyoqXG5cdCAqIEdldCB2YWx1ZSBvZiB0aGUgY3VycmVudCBtb2RlbCBhdHRhY2hlZCB0byB0aGlzIGVkaXRvci5cblx0ICogQHNlZSB7QGxpbmsgSVRleHRNb2RlbC5nZXRWYWx1ZX1cblx0ICovXG5cdGdldFZhbHVlKG9wdGlvbnM/OiB7IHByZXNlcnZlQk9NOiBib29sZWFuOyBsaW5lRW5kaW5nOiBzdHJpbmcgfSk6IHN0cmluZztcblxuXHQvKipcblx0ICogU2V0IHRoZSB2YWx1ZSBvZiB0aGUgY3VycmVudCBtb2RlbCBhdHRhY2hlZCB0byB0aGlzIGVkaXRvci5cblx0ICogQHNlZSB7QGxpbmsgSVRleHRNb2RlbC5zZXRWYWx1ZX1cblx0ICovXG5cdHNldFZhbHVlKG5ld1ZhbHVlOiBzdHJpbmcpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBHZXQgdGhlIHdpZHRoIG9mIHRoZSBlZGl0b3IncyBjb250ZW50LlxuXHQgKiBUaGlzIGlzIGluZm9ybWF0aW9uIHRoYXQgaXMgXCJlcmFzZWRcIiB3aGVuIGNvbXB1dGluZyBgc2Nyb2xsV2lkdGggPSBNYXRoLm1heChjb250ZW50V2lkdGgsIHdpZHRoKWBcblx0ICovXG5cdGdldENvbnRlbnRXaWR0aCgpOiBudW1iZXI7XG5cdC8qKlxuXHQgKiBHZXQgdGhlIHNjcm9sbFdpZHRoIG9mIHRoZSBlZGl0b3IncyB2aWV3cG9ydC5cblx0ICovXG5cdGdldFNjcm9sbFdpZHRoKCk6IG51bWJlcjtcblx0LyoqXG5cdCAqIEdldCB0aGUgc2Nyb2xsTGVmdCBvZiB0aGUgZWRpdG9yJ3Mgdmlld3BvcnQuXG5cdCAqL1xuXHRnZXRTY3JvbGxMZWZ0KCk6IG51bWJlcjtcblxuXHQvKipcblx0ICogR2V0IHRoZSBoZWlnaHQgb2YgdGhlIGVkaXRvcidzIGNvbnRlbnQuXG5cdCAqIFRoaXMgaXMgaW5mb3JtYXRpb24gdGhhdCBpcyBcImVyYXNlZFwiIHdoZW4gY29tcHV0aW5nIGBzY3JvbGxIZWlnaHQgPSBNYXRoLm1heChjb250ZW50SGVpZ2h0LCBoZWlnaHQpYFxuXHQgKi9cblx0Z2V0Q29udGVudEhlaWdodCgpOiBudW1iZXI7XG5cdC8qKlxuXHQgKiBHZXQgdGhlIHNjcm9sbEhlaWdodCBvZiB0aGUgZWRpdG9yJ3Mgdmlld3BvcnQuXG5cdCAqL1xuXHRnZXRTY3JvbGxIZWlnaHQoKTogbnVtYmVyO1xuXHQvKipcblx0ICogR2V0IHRoZSBzY3JvbGxUb3Agb2YgdGhlIGVkaXRvcidzIHZpZXdwb3J0LlxuXHQgKi9cblx0Z2V0U2Nyb2xsVG9wKCk6IG51bWJlcjtcblxuXHQvKipcblx0ICogQ2hhbmdlIHRoZSBzY3JvbGxMZWZ0IG9mIHRoZSBlZGl0b3IncyB2aWV3cG9ydC5cblx0ICovXG5cdHNldFNjcm9sbExlZnQobmV3U2Nyb2xsTGVmdDogbnVtYmVyLCBzY3JvbGxUeXBlPzogZWRpdG9yQ29tbW9uLlNjcm9sbFR5cGUpOiB2b2lkO1xuXHQvKipcblx0ICogQ2hhbmdlIHRoZSBzY3JvbGxUb3Agb2YgdGhlIGVkaXRvcidzIHZpZXdwb3J0LlxuXHQgKi9cblx0c2V0U2Nyb2xsVG9wKG5ld1Njcm9sbFRvcDogbnVtYmVyLCBzY3JvbGxUeXBlPzogZWRpdG9yQ29tbW9uLlNjcm9sbFR5cGUpOiB2b2lkO1xuXHQvKipcblx0ICogQ2hhbmdlIHRoZSBzY3JvbGwgcG9zaXRpb24gb2YgdGhlIGVkaXRvcidzIHZpZXdwb3J0LlxuXHQgKi9cblx0c2V0U2Nyb2xsUG9zaXRpb24ocG9zaXRpb246IGVkaXRvckNvbW1vbi5JTmV3U2Nyb2xsUG9zaXRpb24sIHNjcm9sbFR5cGU/OiBlZGl0b3JDb21tb24uU2Nyb2xsVHlwZSk6IHZvaWQ7XG5cdC8qKlxuXHQgKiBDaGVjayBpZiB0aGUgZWRpdG9yIGlzIGN1cnJlbnRseSBzY3JvbGxpbmcgdG93YXJkcyBhIGRpZmZlcmVudCBzY3JvbGwgcG9zaXRpb24uXG5cdCAqL1xuXHRoYXNQZW5kaW5nU2Nyb2xsQW5pbWF0aW9uKCk6IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIEdldCBhbiBhY3Rpb24gdGhhdCBpcyBhIGNvbnRyaWJ1dGlvbiB0byB0aGlzIGVkaXRvci5cblx0ICogQGlkIFVuaXF1ZSBpZGVudGlmaWVyIG9mIHRoZSBjb250cmlidXRpb24uXG5cdCAqIEByZXR1cm4gVGhlIGFjdGlvbiBvciBudWxsIGlmIGFjdGlvbiBub3QgZm91bmQuXG5cdCAqL1xuXHRnZXRBY3Rpb24oaWQ6IHN0cmluZyk6IGVkaXRvckNvbW1vbi5JRWRpdG9yQWN0aW9uIHwgbnVsbDtcblxuXHQvKipcblx0ICogRXhlY3V0ZSBhIGNvbW1hbmQgb24gdGhlIGVkaXRvci5cblx0ICogVGhlIGVkaXRzIHdpbGwgbGFuZCBvbiB0aGUgdW5kby1yZWRvIHN0YWNrLCBidXQgbm8gXCJ1bmRvIHN0b3BcIiB3aWxsIGJlIHB1c2hlZC5cblx0ICogQHBhcmFtIHNvdXJjZSBUaGUgc291cmNlIG9mIHRoZSBjYWxsLlxuXHQgKiBAcGFyYW0gY29tbWFuZCBUaGUgY29tbWFuZCB0byBleGVjdXRlXG5cdCAqL1xuXHRleGVjdXRlQ29tbWFuZChzb3VyY2U6IHN0cmluZyB8IG51bGwgfCB1bmRlZmluZWQsIGNvbW1hbmQ6IGVkaXRvckNvbW1vbi5JQ29tbWFuZCk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIENyZWF0ZSBhbiBcInVuZG8gc3RvcFwiIGluIHRoZSB1bmRvLXJlZG8gc3RhY2suXG5cdCAqL1xuXHRwdXNoVW5kb1N0b3AoKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogUmVtb3ZlIHRoZSBcInVuZG8gc3RvcFwiIGluIHRoZSB1bmRvLXJlZG8gc3RhY2suXG5cdCAqL1xuXHRwb3BVbmRvU3RvcCgpOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBFeGVjdXRlIGVkaXRzIG9uIHRoZSBlZGl0b3IuXG5cdCAqIFRoZSBlZGl0cyB3aWxsIGxhbmQgb24gdGhlIHVuZG8tcmVkbyBzdGFjaywgYnV0IG5vIFwidW5kbyBzdG9wXCIgd2lsbCBiZSBwdXNoZWQuXG5cdCAqIEBwYXJhbSBzb3VyY2UgVGhlIHNvdXJjZSBvZiB0aGUgY2FsbC5cblx0ICogQHBhcmFtIGVkaXRzIFRoZSBlZGl0cyB0byBleGVjdXRlLlxuXHQgKiBAcGFyYW0gZW5kQ3Vyc29yU3RhdGUgQ3Vyc29yIHN0YXRlIGFmdGVyIHRoZSBlZGl0cyB3ZXJlIGFwcGxpZWQuXG5cdCAqL1xuXHRleGVjdXRlRWRpdHMoc291cmNlOiBzdHJpbmcgfCBudWxsIHwgdW5kZWZpbmVkLCBlZGl0czogSUlkZW50aWZpZWRTaW5nbGVFZGl0T3BlcmF0aW9uW10sIGVuZEN1cnNvclN0YXRlPzogSUN1cnNvclN0YXRlQ29tcHV0ZXIgfCBTZWxlY3Rpb25bXSk6IGJvb2xlYW47XG5cdC8qKiBAaW50ZXJuYWwgKi9cblx0ZXhlY3V0ZUVkaXRzKHNvdXJjZTogVGV4dE1vZGVsRWRpdFNvdXJjZSB8IHVuZGVmaW5lZCwgZWRpdHM6IElJZGVudGlmaWVkU2luZ2xlRWRpdE9wZXJhdGlvbltdLCBlbmRDdXJzb3JTdGF0ZT86IElDdXJzb3JTdGF0ZUNvbXB1dGVyIHwgU2VsZWN0aW9uW10pOiBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBAaW50ZXJuYWxcblx0Ki9cblx0ZWRpdChlZGl0OiBUZXh0RWRpdCwgcmVhc29uOiBUZXh0TW9kZWxFZGl0U291cmNlKTogdm9pZDtcblxuXHQvKipcblx0ICogRXhlY3V0ZSBtdWx0aXBsZSAoY29uY29taXRhbnQpIGNvbW1hbmRzIG9uIHRoZSBlZGl0b3IuXG5cdCAqIEBwYXJhbSBzb3VyY2UgVGhlIHNvdXJjZSBvZiB0aGUgY2FsbC5cblx0ICogQHBhcmFtIGNvbW1hbmQgVGhlIGNvbW1hbmRzIHRvIGV4ZWN1dGVcblx0ICovXG5cdGV4ZWN1dGVDb21tYW5kcyhzb3VyY2U6IHN0cmluZyB8IG51bGwgfCB1bmRlZmluZWQsIGNvbW1hbmRzOiAoZWRpdG9yQ29tbW9uLklDb21tYW5kIHwgbnVsbClbXSk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0X2dldFZpZXdNb2RlbCgpOiBJVmlld01vZGVsIHwgbnVsbDtcblxuXHQvKipcblx0ICogR2V0IGFsbCB0aGUgZGVjb3JhdGlvbnMgb24gYSBsaW5lIChmaWx0ZXJpbmcgb3V0IGRlY29yYXRpb25zIGZyb20gb3RoZXIgZWRpdG9ycykuXG5cdCAqL1xuXHRnZXRMaW5lRGVjb3JhdGlvbnMobGluZU51bWJlcjogbnVtYmVyKTogSU1vZGVsRGVjb3JhdGlvbltdIHwgbnVsbDtcblxuXHQvKipcblx0ICogR2V0IGFsbCB0aGUgZGVjb3JhdGlvbnMgZm9yIGEgcmFuZ2UgKGZpbHRlcmluZyBvdXQgZGVjb3JhdGlvbnMgZnJvbSBvdGhlciBlZGl0b3JzKS5cblx0ICovXG5cdGdldERlY29yYXRpb25zSW5SYW5nZShyYW5nZTogUmFuZ2UpOiBJTW9kZWxEZWNvcmF0aW9uW10gfCBudWxsO1xuXG5cdC8qKlxuXHQgKiBHZXQgdGhlIGZvbnQgc2l6ZSBhdCBhIGdpdmVuIHBvc2l0aW9uXG5cdCAqIEBwYXJhbSBwb3NpdGlvbiB0aGUgcG9zaXRpb24gZm9yIHdoaWNoIHRvIGZldGNoIHRoZSBmb250IHNpemVcblx0ICovXG5cdGdldEZvbnRTaXplQXRQb3NpdGlvbihwb3NpdGlvbjogSVBvc2l0aW9uKTogc3RyaW5nIHwgbnVsbDtcblxuXHQvKipcblx0ICogQWxsIGRlY29yYXRpb25zIGFkZGVkIHRocm91Z2ggdGhpcyBjYWxsIHdpbGwgZ2V0IHRoZSBvd25lcklkIG9mIHRoaXMgZWRpdG9yLlxuXHQgKiBAZGVwcmVjYXRlZCBVc2UgYGNyZWF0ZURlY29yYXRpb25zQ29sbGVjdGlvbmBcblx0ICogQHNlZSBjcmVhdGVEZWNvcmF0aW9uc0NvbGxlY3Rpb25cblx0ICovXG5cdGRlbHRhRGVjb3JhdGlvbnMob2xkRGVjb3JhdGlvbnM6IHN0cmluZ1tdLCBuZXdEZWNvcmF0aW9uczogSU1vZGVsRGVsdGFEZWNvcmF0aW9uW10pOiBzdHJpbmdbXTtcblxuXHQvKipcblx0ICogUmVtb3ZlIHByZXZpb3VzbHkgYWRkZWQgZGVjb3JhdGlvbnMuXG5cdCAqL1xuXHRyZW1vdmVEZWNvcmF0aW9ucyhkZWNvcmF0aW9uSWRzOiBzdHJpbmdbXSk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0c2V0RGVjb3JhdGlvbnNCeVR5cGUoZGVzY3JpcHRpb246IHN0cmluZywgZGVjb3JhdGlvblR5cGVLZXk6IHN0cmluZywgcmFuZ2VzOiBlZGl0b3JDb21tb24uSURlY29yYXRpb25PcHRpb25zW10pOiByZWFkb25seSBzdHJpbmdbXTtcblxuXHQvKipcblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRzZXREZWNvcmF0aW9uc0J5VHlwZUZhc3QoZGVjb3JhdGlvblR5cGVLZXk6IHN0cmluZywgcmFuZ2VzOiBJUmFuZ2VbXSk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0cmVtb3ZlRGVjb3JhdGlvbnNCeVR5cGUoZGVjb3JhdGlvblR5cGVLZXk6IHN0cmluZyk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgbGF5b3V0IGluZm8gZm9yIHRoZSBlZGl0b3IuXG5cdCAqL1xuXHRnZXRMYXlvdXRJbmZvKCk6IEVkaXRvckxheW91dEluZm87XG5cblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIHJhbmdlcyB0aGF0IGFyZSBjdXJyZW50bHkgdmlzaWJsZS5cblx0ICogRG9lcyBub3QgYWNjb3VudCBmb3IgaG9yaXpvbnRhbCBzY3JvbGxpbmcuXG5cdCAqL1xuXHRnZXRWaXNpYmxlUmFuZ2VzKCk6IFJhbmdlW107XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0Z2V0VmlzaWJsZVJhbmdlc1BsdXNWaWV3cG9ydEFib3ZlQmVsb3coKTogUmFuZ2VbXTtcblxuXHQvKipcblx0ICogR2V0IHRoZSB2aWV3IHpvbmVzLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdGdldFdoaXRlc3BhY2VzKCk6IElFZGl0b3JXaGl0ZXNwYWNlW107XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgdmVydGljYWwgcG9zaXRpb24gKHRvcCBvZmZzZXQpIGZvciB0aGUgbGluZSdzIHRvcCB3LnIudC4gdG8gdGhlIGZpcnN0IGxpbmUuXG5cdCAqL1xuXHRnZXRUb3BGb3JMaW5lTnVtYmVyKGxpbmVOdW1iZXI6IG51bWJlciwgaW5jbHVkZVZpZXdab25lcz86IGJvb2xlYW4pOiBudW1iZXI7XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgdmVydGljYWwgcG9zaXRpb24gKHRvcCBvZmZzZXQpIGZvciB0aGUgbGluZSdzIGJvdHRvbSB3LnIudC4gdG8gdGhlIGZpcnN0IGxpbmUuXG5cdCAqL1xuXHRnZXRCb3R0b21Gb3JMaW5lTnVtYmVyKGxpbmVOdW1iZXI6IG51bWJlcik6IG51bWJlcjtcblxuXHQvKipcblx0ICogR2V0IHRoZSB2ZXJ0aWNhbCBwb3NpdGlvbiAodG9wIG9mZnNldCkgZm9yIHRoZSBwb3NpdGlvbiB3LnIudC4gdG8gdGhlIGZpcnN0IGxpbmUuXG5cdCAqL1xuXHRnZXRUb3BGb3JQb3NpdGlvbihsaW5lTnVtYmVyOiBudW1iZXIsIGNvbHVtbjogbnVtYmVyKTogbnVtYmVyO1xuXG5cdC8qKlxuXHQgKiBHZXQgdGhlIGxpbmUgaGVpZ2h0IGZvciBhIG1vZGVsIHBvc2l0aW9uLlxuXHQgKi9cblx0Z2V0TGluZUhlaWdodEZvclBvc2l0aW9uKHBvc2l0aW9uOiBJUG9zaXRpb24pOiBudW1iZXI7XG5cblx0LyoqXG5cdCAqIFNldCB0aGUgbW9kZWwgcmFuZ2VzIHRoYXQgd2lsbCBiZSBoaWRkZW4gaW4gdGhlIHZpZXcuXG5cdCAqIEhpZGRlbiBhcmVhcyBhcmUgc3RvcmVkIHBlciBzb3VyY2UuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0c2V0SGlkZGVuQXJlYXMocmFuZ2VzOiBJUmFuZ2VbXSwgc291cmNlPzogdW5rbm93bik6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIFNldHMgdGhlIGVkaXRvciBhcmlhIG9wdGlvbnMsIHByaW1hcmlseSB0aGUgYWN0aXZlIGRlc2NlbmRlbnQuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0c2V0QXJpYU9wdGlvbnMob3B0aW9uczogSUVkaXRvckFyaWFPcHRpb25zKTogdm9pZDtcblxuXHQvKipcblx0ICogV3JpdGUgdGhlIHNjcmVlbiByZWFkZXIgY29udGVudCB0byBiZSB0aGUgY3VycmVudCBzZWxlY3Rpb25cblx0ICovXG5cdHdyaXRlU2NyZWVuUmVhZGVyQ29udGVudChyZWFzb246IHN0cmluZyk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0Z2V0VGVsZW1ldHJ5RGF0YSgpOiBvYmplY3QgfCB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIGVkaXRvcidzIGNvbnRhaW5lciBkb20gbm9kZVxuXHQgKi9cblx0Z2V0Q29udGFpbmVyRG9tTm9kZSgpOiBIVE1MRWxlbWVudDtcblxuXHQvKipcblx0ICogUmV0dXJucyB0aGUgZWRpdG9yJ3MgZG9tIG5vZGVcblx0ICovXG5cdGdldERvbU5vZGUoKTogSFRNTEVsZW1lbnQgfCBudWxsO1xuXG5cdC8qKlxuXHQgKiBBZGQgYSBjb250ZW50IHdpZGdldC4gV2lkZ2V0cyBtdXN0IGhhdmUgdW5pcXVlIGlkcywgb3RoZXJ3aXNlIHRoZXkgd2lsbCBiZSBvdmVyd3JpdHRlbi5cblx0ICovXG5cdGFkZENvbnRlbnRXaWRnZXQod2lkZ2V0OiBJQ29udGVudFdpZGdldCk6IHZvaWQ7XG5cdC8qKlxuXHQgKiBMYXlvdXQvUmVwb3NpdGlvbiBhIGNvbnRlbnQgd2lkZ2V0LiBUaGlzIGlzIGEgcGluZyB0byB0aGUgZWRpdG9yIHRvIGNhbGwgd2lkZ2V0LmdldFBvc2l0aW9uKClcblx0ICogYW5kIHVwZGF0ZSBhcHByb3ByaWF0ZWx5LlxuXHQgKi9cblx0bGF5b3V0Q29udGVudFdpZGdldCh3aWRnZXQ6IElDb250ZW50V2lkZ2V0KTogdm9pZDtcblx0LyoqXG5cdCAqIFJlbW92ZSBhIGNvbnRlbnQgd2lkZ2V0LlxuXHQgKi9cblx0cmVtb3ZlQ29udGVudFdpZGdldCh3aWRnZXQ6IElDb250ZW50V2lkZ2V0KTogdm9pZDtcblxuXHQvKipcblx0ICogQWRkIGFuIG92ZXJsYXkgd2lkZ2V0LiBXaWRnZXRzIG11c3QgaGF2ZSB1bmlxdWUgaWRzLCBvdGhlcndpc2UgdGhleSB3aWxsIGJlIG92ZXJ3cml0dGVuLlxuXHQgKi9cblx0YWRkT3ZlcmxheVdpZGdldCh3aWRnZXQ6IElPdmVybGF5V2lkZ2V0KTogdm9pZDtcblx0LyoqXG5cdCAqIExheW91dC9SZXBvc2l0aW9uIGFuIG92ZXJsYXkgd2lkZ2V0LiBUaGlzIGlzIGEgcGluZyB0byB0aGUgZWRpdG9yIHRvIGNhbGwgd2lkZ2V0LmdldFBvc2l0aW9uKClcblx0ICogYW5kIHVwZGF0ZSBhcHByb3ByaWF0ZWx5LlxuXHQgKi9cblx0bGF5b3V0T3ZlcmxheVdpZGdldCh3aWRnZXQ6IElPdmVybGF5V2lkZ2V0KTogdm9pZDtcblx0LyoqXG5cdCAqIFJlbW92ZSBhbiBvdmVybGF5IHdpZGdldC5cblx0ICovXG5cdHJlbW92ZU92ZXJsYXlXaWRnZXQod2lkZ2V0OiBJT3ZlcmxheVdpZGdldCk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEFkZCBhIGdseXBoIG1hcmdpbiB3aWRnZXQuIFdpZGdldHMgbXVzdCBoYXZlIHVuaXF1ZSBpZHMsIG90aGVyd2lzZSB0aGV5IHdpbGwgYmUgb3ZlcndyaXR0ZW4uXG5cdCAqL1xuXHRhZGRHbHlwaE1hcmdpbldpZGdldCh3aWRnZXQ6IElHbHlwaE1hcmdpbldpZGdldCk6IHZvaWQ7XG5cdC8qKlxuXHQgKiBMYXlvdXQvUmVwb3NpdGlvbiBhIGdseXBoIG1hcmdpbiB3aWRnZXQuIFRoaXMgaXMgYSBwaW5nIHRvIHRoZSBlZGl0b3IgdG8gY2FsbCB3aWRnZXQuZ2V0UG9zaXRpb24oKVxuXHQgKiBhbmQgdXBkYXRlIGFwcHJvcHJpYXRlbHkuXG5cdCAqL1xuXHRsYXlvdXRHbHlwaE1hcmdpbldpZGdldCh3aWRnZXQ6IElHbHlwaE1hcmdpbldpZGdldCk6IHZvaWQ7XG5cdC8qKlxuXHQgKiBSZW1vdmUgYSBnbHlwaCBtYXJnaW4gd2lkZ2V0LlxuXHQgKi9cblx0cmVtb3ZlR2x5cGhNYXJnaW5XaWRnZXQod2lkZ2V0OiBJR2x5cGhNYXJnaW5XaWRnZXQpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBDaGFuZ2UgdGhlIHZpZXcgem9uZXMuIFZpZXcgem9uZXMgYXJlIGxvc3Qgd2hlbiBhIG5ldyBtb2RlbCBpcyBhdHRhY2hlZCB0byB0aGUgZWRpdG9yLlxuXHQgKi9cblx0Y2hhbmdlVmlld1pvbmVzKGNhbGxiYWNrOiAoYWNjZXNzb3I6IElWaWV3Wm9uZUNoYW5nZUFjY2Vzc29yKSA9PiB2b2lkKTogdm9pZDtcblxuXHQvKipcblx0ICogR2V0IHRoZSBob3Jpem9udGFsIHBvc2l0aW9uIChsZWZ0IG9mZnNldCkgZm9yIHRoZSBjb2x1bW4gdy5yLnQgdG8gdGhlIGJlZ2lubmluZyBvZiB0aGUgbGluZS5cblx0ICogVGhpcyBtZXRob2Qgd29ya3Mgb25seSBpZiB0aGUgbGluZSBgbGluZU51bWJlcmAgaXMgY3VycmVudGx5IHJlbmRlcmVkIChpbiB0aGUgZWRpdG9yJ3Mgdmlld3BvcnQpLlxuXHQgKiBVc2UgdGhpcyBtZXRob2Qgd2l0aCBjYXV0aW9uLlxuXHQgKi9cblx0Z2V0T2Zmc2V0Rm9yQ29sdW1uKGxpbmVOdW1iZXI6IG51bWJlciwgY29sdW1uOiBudW1iZXIpOiBudW1iZXI7XG5cblx0LyoqXG5cdCAqIEZvcmNlIGFuIGVkaXRvciByZW5kZXIgbm93LlxuXHQgKi9cblx0cmVuZGVyKGZvcmNlUmVkcmF3PzogYm9vbGVhbik6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgaGl0IHRlc3QgdGFyZ2V0IGF0IGNvb3JkaW5hdGVzIGBjbGllbnRYYCBhbmQgYGNsaWVudFlgLlxuXHQgKiBUaGUgY29vcmRpbmF0ZXMgYXJlIHJlbGF0aXZlIHRvIHRoZSB0b3AtbGVmdCBvZiB0aGUgdmlld3BvcnQuXG5cdCAqXG5cdCAqIEByZXR1cm5zIEhpdCB0ZXN0IHRhcmdldCBvciBudWxsIGlmIHRoZSBjb29yZGluYXRlcyBmYWxsIG91dHNpZGUgdGhlIGVkaXRvciBvciB0aGUgZWRpdG9yIGhhcyBubyBtb2RlbC5cblx0ICovXG5cdGdldFRhcmdldEF0Q2xpZW50UG9pbnQoY2xpZW50WDogbnVtYmVyLCBjbGllbnRZOiBudW1iZXIpOiBJTW91c2VUYXJnZXQgfCBudWxsO1xuXG5cdC8qKlxuXHQgKiBHZXQgdGhlIHZpc2libGUgcG9zaXRpb24gZm9yIGBwb3NpdGlvbmAuXG5cdCAqIFRoZSByZXN1bHQgcG9zaXRpb24gdGFrZXMgc2Nyb2xsaW5nIGludG8gYWNjb3VudCBhbmQgaXMgcmVsYXRpdmUgdG8gdGhlIHRvcCBsZWZ0IGNvcm5lciBvZiB0aGUgZWRpdG9yLlxuXHQgKiBFeHBsYW5hdGlvbiAxOiB0aGUgcmVzdWx0cyBvZiB0aGlzIG1ldGhvZCB3aWxsIGNoYW5nZSBmb3IgdGhlIHNhbWUgYHBvc2l0aW9uYCBpZiB0aGUgdXNlciBzY3JvbGxzIHRoZSBlZGl0b3IuXG5cdCAqIEV4cGxhbmF0aW9uIDI6IHRoZSByZXN1bHRzIG9mIHRoaXMgbWV0aG9kIHdpbGwgbm90IGNoYW5nZSBpZiB0aGUgY29udGFpbmVyIG9mIHRoZSBlZGl0b3IgZ2V0cyByZXBvc2l0aW9uZWQuXG5cdCAqIFdhcm5pbmc6IHRoZSByZXN1bHRzIG9mIHRoaXMgbWV0aG9kIGFyZSBpbmFjY3VyYXRlIGZvciBwb3NpdGlvbnMgdGhhdCBhcmUgb3V0c2lkZSB0aGUgY3VycmVudCBlZGl0b3Igdmlld3BvcnQuXG5cdCAqL1xuXHRnZXRTY3JvbGxlZFZpc2libGVQb3NpdGlvbihwb3NpdGlvbjogSVBvc2l0aW9uKTogeyB0b3A6IG51bWJlcjsgbGVmdDogbnVtYmVyOyBoZWlnaHQ6IG51bWJlciB9IHwgbnVsbDtcblxuXHQvKipcblx0ICogQXBwbHkgdGhlIHNhbWUgZm9udCBzZXR0aW5ncyBhcyB0aGUgZWRpdG9yIHRvIGB0YXJnZXRgLlxuXHQgKi9cblx0YXBwbHlGb250SW5mbyh0YXJnZXQ6IEhUTUxFbGVtZW50KTogdm9pZDtcblxuXHQvKipcblx0ICogQ2hlY2sgaWYgdGhlIGN1cnJlbnQgaW5zdGFuY2UgaGFzIGEgbW9kZWwgYXR0YWNoZWQuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0aGFzTW9kZWwoKTogdGhpcyBpcyBJQWN0aXZlQ29kZUVkaXRvcjtcblxuXHRzZXRCYW5uZXIoYmFubmVyRG9tTm9kZTogSFRNTEVsZW1lbnQgfCBudWxsLCBoZWlnaHQ6IG51bWJlcik6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIElzIGNhbGxlZCB3aGVuIHRoZSBtb2RlbCBoYXMgYmVlbiBzZXQsIHZpZXcgc3RhdGUgd2FzIHJlc3RvcmVkIGFuZCBvcHRpb25zIGFyZSB1cGRhdGVkLlxuXHQgKiBUaGlzIGlzIHRoZSBiZXN0IHBsYWNlIHRvIGNvbXB1dGUgZGF0YSBmb3IgdGhlIHZpZXdwb3J0IChzdWNoIGFzIHRva2VucykuXG5cdCAqL1xuXHRoYW5kbGVJbml0aWFsaXplZD8oKTogdm9pZDtcbn1cblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJQWN0aXZlQ29kZUVkaXRvciBleHRlbmRzIElDb2RlRWRpdG9yIHtcblx0LyoqXG5cdCAqIFJldHVybnMgdGhlIHByaW1hcnkgcG9zaXRpb24gb2YgdGhlIGN1cnNvci5cblx0ICovXG5cdGdldFBvc2l0aW9uKCk6IFBvc2l0aW9uO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRoZSBwcmltYXJ5IHNlbGVjdGlvbiBvZiB0aGUgZWRpdG9yLlxuXHQgKi9cblx0Z2V0U2VsZWN0aW9uKCk6IFNlbGVjdGlvbjtcblxuXHQvKipcblx0ICogUmV0dXJucyBhbGwgdGhlIHNlbGVjdGlvbnMgb2YgdGhlIGVkaXRvci5cblx0ICovXG5cdGdldFNlbGVjdGlvbnMoKTogU2VsZWN0aW9uW107XG5cblx0LyoqXG5cdCAqIFNhdmVzIGN1cnJlbnQgdmlldyBzdGF0ZSBvZiB0aGUgZWRpdG9yIGluIGEgc2VyaWFsaXphYmxlIG9iamVjdC5cblx0ICovXG5cdHNhdmVWaWV3U3RhdGUoKTogZWRpdG9yQ29tbW9uLklDb2RlRWRpdG9yVmlld1N0YXRlO1xuXG5cdC8qKlxuXHQgKiBUeXBlIHRoZSBnZXRNb2RlbCgpIG9mIElFZGl0b3IuXG5cdCAqL1xuXHRnZXRNb2RlbCgpOiBJVGV4dE1vZGVsO1xuXG5cdC8qKlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdF9nZXRWaWV3TW9kZWwoKTogSVZpZXdNb2RlbDtcblxuXHQvKipcblx0ICogR2V0IGFsbCB0aGUgZGVjb3JhdGlvbnMgb24gYSBsaW5lIChmaWx0ZXJpbmcgb3V0IGRlY29yYXRpb25zIGZyb20gb3RoZXIgZWRpdG9ycykuXG5cdCAqL1xuXHRnZXRMaW5lRGVjb3JhdGlvbnMobGluZU51bWJlcjogbnVtYmVyKTogSU1vZGVsRGVjb3JhdGlvbltdO1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHRoZSBlZGl0b3IncyBkb20gbm9kZVxuXHQgKi9cblx0Z2V0RG9tTm9kZSgpOiBIVE1MRWxlbWVudDtcblxuXHQvKipcblx0ICogR2V0IHRoZSB2aXNpYmxlIHBvc2l0aW9uIGZvciBgcG9zaXRpb25gLlxuXHQgKiBUaGUgcmVzdWx0IHBvc2l0aW9uIHRha2VzIHNjcm9sbGluZyBpbnRvIGFjY291bnQgYW5kIGlzIHJlbGF0aXZlIHRvIHRoZSB0b3AgbGVmdCBjb3JuZXIgb2YgdGhlIGVkaXRvci5cblx0ICogRXhwbGFuYXRpb24gMTogdGhlIHJlc3VsdHMgb2YgdGhpcyBtZXRob2Qgd2lsbCBjaGFuZ2UgZm9yIHRoZSBzYW1lIGBwb3NpdGlvbmAgaWYgdGhlIHVzZXIgc2Nyb2xscyB0aGUgZWRpdG9yLlxuXHQgKiBFeHBsYW5hdGlvbiAyOiB0aGUgcmVzdWx0cyBvZiB0aGlzIG1ldGhvZCB3aWxsIG5vdCBjaGFuZ2UgaWYgdGhlIGNvbnRhaW5lciBvZiB0aGUgZWRpdG9yIGdldHMgcmVwb3NpdGlvbmVkLlxuXHQgKiBXYXJuaW5nOiB0aGUgcmVzdWx0cyBvZiB0aGlzIG1ldGhvZCBhcmUgaW5hY2N1cmF0ZSBmb3IgcG9zaXRpb25zIHRoYXQgYXJlIG91dHNpZGUgdGhlIGN1cnJlbnQgZWRpdG9yIHZpZXdwb3J0LlxuXHQgKi9cblx0Z2V0U2Nyb2xsZWRWaXNpYmxlUG9zaXRpb24ocG9zaXRpb246IElQb3NpdGlvbik6IHsgdG9wOiBudW1iZXI7IGxlZnQ6IG51bWJlcjsgaGVpZ2h0OiBudW1iZXIgfTtcblxuXHQvKipcblx0ICogQ2hhbmdlIHRoZSBkZWNvcmF0aW9ucy4gQWxsIGRlY29yYXRpb25zIGFkZGVkIHRocm91Z2ggdGhpcyBjaGFuZ2VBY2Nlc3NvclxuXHQgKiB3aWxsIGdldCB0aGUgb3duZXJJZCBvZiB0aGUgZWRpdG9yIChtZWFuaW5nIHRoZXkgd2lsbCBub3Qgc2hvdyB1cCBpbiBvdGhlclxuXHQgKiBlZGl0b3JzKS5cblx0ICogQHNlZSB7QGxpbmsgSVRleHRNb2RlbC5jaGFuZ2VEZWNvcmF0aW9uc31cblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRjaGFuZ2VEZWNvcmF0aW9uczxUPihjYWxsYmFjazogKGNoYW5nZUFjY2Vzc29yOiBJTW9kZWxEZWNvcmF0aW9uc0NoYW5nZUFjY2Vzc29yKSA9PiBUKTogVDtcbn1cblxuLyoqXG4gKiBAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGNvbnN0IGVudW0gRGlmZkVkaXRvclN0YXRlIHtcblx0SWRsZSxcblx0Q29tcHV0aW5nRGlmZixcblx0RGlmZkNvbXB1dGVkXG59XG5cbi8qKlxuICogQSByaWNoIGRpZmYgZWRpdG9yLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElEaWZmRWRpdG9yIGV4dGVuZHMgZWRpdG9yQ29tbW9uLklFZGl0b3Ige1xuXG5cdC8qKlxuXHQgKiBSZXR1cm5zIHdoZXRoZXIgdGhlIGRpZmYgZWRpdG9yIGlzIGlnbm9yaW5nIHRyaW0gd2hpdGVzcGFjZSBvciBub3QuXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0cmVhZG9ubHkgaWdub3JlVHJpbVdoaXRlc3BhY2U6IGJvb2xlYW47XG5cdC8qKlxuXHQgKiBSZXR1cm5zIHdoZXRoZXIgdGhlIGRpZmYgZWRpdG9yIGlzIHJlbmRlcmluZyBzaWRlIGJ5IHNpZGUgb3IgaW5saW5lLlxuXHQgKiBAaW50ZXJuYWxcblx0ICovXG5cdHJlYWRvbmx5IHJlbmRlclNpZGVCeVNpZGU6IGJvb2xlYW47XG5cdC8qKlxuXHQgKiBUaW1lb3V0IGluIG1pbGxpc2Vjb25kcyBhZnRlciB3aGljaCBkaWZmIGNvbXB1dGF0aW9uIGlzIGNhbmNlbGxlZC5cblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRyZWFkb25seSBtYXhDb21wdXRhdGlvblRpbWU6IG51bWJlcjtcblxuXHQvKipcblx0ICogQHNlZSB7QGxpbmsgSUNvZGVFZGl0b3IuZ2V0Q29udGFpbmVyRG9tTm9kZX1cblx0ICovXG5cdGdldENvbnRhaW5lckRvbU5vZGUoKTogSFRNTEVsZW1lbnQ7XG5cblx0LyoqXG5cdCAqIEFuIGV2ZW50IGVtaXR0ZWQgd2hlbiB0aGUgZGlmZiBpbmZvcm1hdGlvbiBjb21wdXRlZCBieSB0aGlzIGRpZmYgZWRpdG9yIGhhcyBiZWVuIHVwZGF0ZWQuXG5cdCAqIEBldmVudFxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRVcGRhdGVEaWZmOiBFdmVudDx2b2lkPjtcblxuXHQvKipcblx0ICogQW4gZXZlbnQgZW1pdHRlZCB3aGVuIHRoZSBkaWZmIG1vZGVsIGlzIGNoYW5nZWQgKGkuZS4gdGhlIGRpZmYgZWRpdG9yIHNob3dzIG5ldyBjb250ZW50KS5cblx0ICogQGV2ZW50XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZU1vZGVsOiBFdmVudDx2b2lkPjtcblxuXHQvKipcblx0ICogU2F2ZXMgY3VycmVudCB2aWV3IHN0YXRlIG9mIHRoZSBlZGl0b3IgaW4gYSBzZXJpYWxpemFibGUgb2JqZWN0LlxuXHQgKi9cblx0c2F2ZVZpZXdTdGF0ZSgpOiBlZGl0b3JDb21tb24uSURpZmZFZGl0b3JWaWV3U3RhdGUgfCBudWxsO1xuXG5cdC8qKlxuXHQgKiBSZXN0b3JlcyB0aGUgdmlldyBzdGF0ZSBvZiB0aGUgZWRpdG9yIGZyb20gYSBzZXJpYWxpemFibGUgb2JqZWN0IGdlbmVyYXRlZCBieSBgc2F2ZVZpZXdTdGF0ZWAuXG5cdCAqL1xuXHRyZXN0b3JlVmlld1N0YXRlKHN0YXRlOiBlZGl0b3JDb21tb24uSURpZmZFZGl0b3JWaWV3U3RhdGUgfCBudWxsKTogdm9pZDtcblxuXHQvKipcblx0ICogVHlwZSB0aGUgZ2V0TW9kZWwoKSBvZiBJRWRpdG9yLlxuXHQgKi9cblx0Z2V0TW9kZWwoKTogZWRpdG9yQ29tbW9uLklEaWZmRWRpdG9yTW9kZWwgfCBudWxsO1xuXG5cdGNyZWF0ZVZpZXdNb2RlbChtb2RlbDogZWRpdG9yQ29tbW9uLklEaWZmRWRpdG9yTW9kZWwpOiBlZGl0b3JDb21tb24uSURpZmZFZGl0b3JWaWV3TW9kZWw7XG5cblx0LyoqXG5cdCAqIFNldHMgdGhlIGN1cnJlbnQgbW9kZWwgYXR0YWNoZWQgdG8gdGhpcyBlZGl0b3IuXG5cdCAqIElmIHRoZSBwcmV2aW91cyBtb2RlbCB3YXMgY3JlYXRlZCBieSB0aGUgZWRpdG9yIHZpYSB0aGUgdmFsdWUga2V5IGluIHRoZSBvcHRpb25zXG5cdCAqIGxpdGVyYWwgb2JqZWN0LCBpdCB3aWxsIGJlIGRlc3Ryb3llZC4gT3RoZXJ3aXNlLCBpZiB0aGUgcHJldmlvdXMgbW9kZWwgd2FzIHNldFxuXHQgKiB2aWEgc2V0TW9kZWwsIG9yIHRoZSBtb2RlbCBrZXkgaW4gdGhlIG9wdGlvbnMgbGl0ZXJhbCBvYmplY3QsIHRoZSBwcmV2aW91cyBtb2RlbFxuXHQgKiB3aWxsIG5vdCBiZSBkZXN0cm95ZWQuXG5cdCAqIEl0IGlzIHNhZmUgdG8gY2FsbCBzZXRNb2RlbChudWxsKSB0byBzaW1wbHkgZGV0YWNoIHRoZSBjdXJyZW50IG1vZGVsIGZyb20gdGhlIGVkaXRvci5cblx0ICovXG5cdHNldE1vZGVsKG1vZGVsOiBlZGl0b3JDb21tb24uSURpZmZFZGl0b3JNb2RlbCB8IGVkaXRvckNvbW1vbi5JRGlmZkVkaXRvclZpZXdNb2RlbCB8IG51bGwpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBHZXQgdGhlIGBvcmlnaW5hbGAgZWRpdG9yLlxuXHQgKi9cblx0Z2V0T3JpZ2luYWxFZGl0b3IoKTogSUNvZGVFZGl0b3I7XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgYG1vZGlmaWVkYCBlZGl0b3IuXG5cdCAqL1xuXHRnZXRNb2RpZmllZEVkaXRvcigpOiBJQ29kZUVkaXRvcjtcblxuXHQvKipcblx0ICogR2V0IHRoZSBjb21wdXRlZCBkaWZmIGluZm9ybWF0aW9uLlxuXHQgKi9cblx0Z2V0TGluZUNoYW5nZXMoKTogSUxpbmVDaGFuZ2VbXSB8IG51bGw7XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgY29tcHV0ZWQgZGlmZiBpbmZvcm1hdGlvbi5cblx0ICogQGludGVybmFsXG5cdCAqL1xuXHRnZXREaWZmQ29tcHV0YXRpb25SZXN1bHQoKTogSURpZmZDb21wdXRhdGlvblJlc3VsdCB8IG51bGw7XG5cblx0LyoqXG5cdCAqIFVwZGF0ZSB0aGUgZWRpdG9yJ3Mgb3B0aW9ucyBhZnRlciB0aGUgZWRpdG9yIGhhcyBiZWVuIGNyZWF0ZWQuXG5cdCAqL1xuXHR1cGRhdGVPcHRpb25zKG5ld09wdGlvbnM6IElEaWZmRWRpdG9yT3B0aW9ucyk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEBpbnRlcm5hbFxuXHQgKi9cblx0c2V0Qm91bmRhcnlTYXNoZXMoc2FzaGVzOiBJQm91bmRhcnlTYXNoZXMpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBKdW1wcyB0byB0aGUgbmV4dCBvciBwcmV2aW91cyBkaWZmLlxuXHQgKi9cblx0Z29Ub0RpZmYodGFyZ2V0OiAnbmV4dCcgfCAncHJldmlvdXMnKTogdm9pZDtcblxuXHQvKipcblx0ICogU2Nyb2xscyB0byB0aGUgZmlyc3QgZGlmZi5cblx0ICogKFdhaXRzIHVudGlsIHRoZSBkaWZmIGNvbXB1dGF0aW9uIGZpbmlzaGVkLilcblx0ICovXG5cdHJldmVhbEZpcnN0RGlmZigpOiB1bmtub3duO1xuXG5cdGFjY2Vzc2libGVEaWZmVmlld2VyTmV4dCgpOiB2b2lkO1xuXG5cdGFjY2Vzc2libGVEaWZmVmlld2VyUHJldigpOiB2b2lkO1xuXG5cdGhhbmRsZUluaXRpYWxpemVkKCk6IHZvaWQ7XG59XG5cbi8qKlxuICpAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGlzQ29kZUVkaXRvcih0aGluZzogdW5rbm93bik6IHRoaW5nIGlzIElDb2RlRWRpdG9yIHtcblx0aWYgKHRoaW5nICYmIHR5cGVvZiAoPElDb2RlRWRpdG9yPnRoaW5nKS5nZXRFZGl0b3JUeXBlID09PSAnZnVuY3Rpb24nKSB7XG5cdFx0cmV0dXJuICg8SUNvZGVFZGl0b3I+dGhpbmcpLmdldEVkaXRvclR5cGUoKSA9PT0gZWRpdG9yQ29tbW9uLkVkaXRvclR5cGUuSUNvZGVFZGl0b3I7XG5cdH0gZWxzZSB7XG5cdFx0cmV0dXJuIGZhbHNlO1xuXHR9XG59XG5cbi8qKlxuICpAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGlzRGlmZkVkaXRvcih0aGluZzogdW5rbm93bik6IHRoaW5nIGlzIElEaWZmRWRpdG9yIHtcblx0aWYgKHRoaW5nICYmIHR5cGVvZiAoPElEaWZmRWRpdG9yPnRoaW5nKS5nZXRFZGl0b3JUeXBlID09PSAnZnVuY3Rpb24nKSB7XG5cdFx0cmV0dXJuICg8SURpZmZFZGl0b3I+dGhpbmcpLmdldEVkaXRvclR5cGUoKSA9PT0gZWRpdG9yQ29tbW9uLkVkaXRvclR5cGUuSURpZmZFZGl0b3I7XG5cdH0gZWxzZSB7XG5cdFx0cmV0dXJuIGZhbHNlO1xuXHR9XG59XG5cbi8qKlxuICpAaW50ZXJuYWxcbiAqL1xuZXhwb3J0IGZ1bmN0aW9uIGlzQ29tcG9zaXRlRWRpdG9yKHRoaW5nOiB1bmtub3duKTogdGhpbmcgaXMgZWRpdG9yQ29tbW9uLklDb21wb3NpdGVDb2RlRWRpdG9yIHtcblx0cmV0dXJuICEhdGhpbmdcblx0XHQmJiB0eXBlb2YgdGhpbmcgPT09ICdvYmplY3QnXG5cdFx0JiYgdHlwZW9mICg8ZWRpdG9yQ29tbW9uLklDb21wb3NpdGVDb2RlRWRpdG9yPnRoaW5nKS5vbkRpZENoYW5nZUFjdGl2ZUVkaXRvciA9PT0gJ2Z1bmN0aW9uJztcblxufVxuXG4vKipcbiAqQGludGVybmFsXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBnZXRDb2RlRWRpdG9yKHRoaW5nOiB1bmtub3duKTogSUNvZGVFZGl0b3IgfCBudWxsIHtcblx0aWYgKGlzQ29kZUVkaXRvcih0aGluZykpIHtcblx0XHRyZXR1cm4gdGhpbmc7XG5cdH1cblxuXHRpZiAoaXNEaWZmRWRpdG9yKHRoaW5nKSkge1xuXHRcdHJldHVybiB0aGluZy5nZXRNb2RpZmllZEVkaXRvcigpO1xuXHR9XG5cblx0aWYgKGlzQ29tcG9zaXRlRWRpdG9yKHRoaW5nKSAmJiBpc0NvZGVFZGl0b3IodGhpbmcuYWN0aXZlQ29kZUVkaXRvcikpIHtcblx0XHRyZXR1cm4gdGhpbmcuYWN0aXZlQ29kZUVkaXRvcjtcblx0fVxuXG5cdHJldHVybiBudWxsO1xufVxuXG4vKipcbiAqQGludGVybmFsXG4gKi9cbmV4cG9ydCBmdW5jdGlvbiBnZXRJRWRpdG9yKHRoaW5nOiB1bmtub3duKTogZWRpdG9yQ29tbW9uLklFZGl0b3IgfCBudWxsIHtcblx0aWYgKGlzQ29kZUVkaXRvcih0aGluZykgfHwgaXNEaWZmRWRpdG9yKHRoaW5nKSkge1xuXHRcdHJldHVybiB0aGluZztcblx0fVxuXG5cdHJldHVybiBudWxsO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFvNUNDO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFwNUNEOzs7O0FBcUJBLE9BQU8sS0FBS0UsWUFBWSxNQUFNLDJCQUEyQjtBQXMzQ3pEOzs7QUFHQSxPQUFNLFNBQVVDLFlBQVlBLENBQUNDLEtBQWM7RUFBQTtFQUFBSixjQUFBLEdBQUFLLENBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQzFDO0VBQUk7RUFBQSxDQUFBTixjQUFBLEdBQUFPLENBQUEsVUFBQUgsS0FBSztFQUFBO0VBQUEsQ0FBQUosY0FBQSxHQUFBTyxDQUFBLFVBQUksT0FBcUJILEtBQU0sQ0FBQ0ksYUFBYSxLQUFLLFVBQVUsR0FBRTtJQUFBO0lBQUFSLGNBQUEsR0FBQU8sQ0FBQTtJQUFBUCxjQUFBLEdBQUFNLENBQUE7SUFDdEUsT0FBcUJGLEtBQU0sQ0FBQ0ksYUFBYSxFQUFFLEtBQUtOLFlBQVksQ0FBQ08sVUFBVSxDQUFDQyxXQUFXO0VBQ3BGLENBQUMsTUFBTTtJQUFBO0lBQUFWLGNBQUEsR0FBQU8sQ0FBQTtJQUFBUCxjQUFBLEdBQUFNLENBQUE7SUFDTixPQUFPLEtBQUs7RUFDYjtBQUNEO0FBRUE7OztBQUdBLE9BQU0sU0FBVUssWUFBWUEsQ0FBQ1AsS0FBYztFQUFBO0VBQUFKLGNBQUEsR0FBQUssQ0FBQTtFQUFBTCxjQUFBLEdBQUFNLENBQUE7RUFDMUM7RUFBSTtFQUFBLENBQUFOLGNBQUEsR0FBQU8sQ0FBQSxVQUFBSCxLQUFLO0VBQUE7RUFBQSxDQUFBSixjQUFBLEdBQUFPLENBQUEsVUFBSSxPQUFxQkgsS0FBTSxDQUFDSSxhQUFhLEtBQUssVUFBVSxHQUFFO0lBQUE7SUFBQVIsY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQU0sQ0FBQTtJQUN0RSxPQUFxQkYsS0FBTSxDQUFDSSxhQUFhLEVBQUUsS0FBS04sWUFBWSxDQUFDTyxVQUFVLENBQUNHLFdBQVc7RUFDcEYsQ0FBQyxNQUFNO0lBQUE7SUFBQVosY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQU0sQ0FBQTtJQUNOLE9BQU8sS0FBSztFQUNiO0FBQ0Q7QUFFQTs7O0FBR0EsT0FBTSxTQUFVTyxpQkFBaUJBLENBQUNULEtBQWM7RUFBQTtFQUFBSixjQUFBLEdBQUFLLENBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQy9DLE9BQU8sMkJBQUFOLGNBQUEsR0FBQU8sQ0FBQSxXQUFDLENBQUNILEtBQUs7RUFBQTtFQUFBLENBQUFKLGNBQUEsR0FBQU8sQ0FBQSxVQUNWLE9BQU9ILEtBQUssS0FBSyxRQUFRO0VBQUE7RUFBQSxDQUFBSixjQUFBLEdBQUFPLENBQUEsVUFDekIsT0FBMkNILEtBQU0sQ0FBQ1UsdUJBQXVCLEtBQUssVUFBVTtBQUU3RjtBQUVBOzs7QUFHQSxPQUFNLFNBQVVDLGFBQWFBLENBQUNYLEtBQWM7RUFBQTtFQUFBSixjQUFBLEdBQUFLLENBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQzNDLElBQUlILFlBQVksQ0FBQ0MsS0FBSyxDQUFDLEVBQUU7SUFBQTtJQUFBSixjQUFBLEdBQUFPLENBQUE7SUFBQVAsY0FBQSxHQUFBTSxDQUFBO0lBQ3hCLE9BQU9GLEtBQUs7RUFDYixDQUFDO0VBQUE7RUFBQTtJQUFBSixjQUFBLEdBQUFPLENBQUE7RUFBQTtFQUFBUCxjQUFBLEdBQUFNLENBQUE7RUFFRCxJQUFJSyxZQUFZLENBQUNQLEtBQUssQ0FBQyxFQUFFO0lBQUE7SUFBQUosY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQU0sQ0FBQTtJQUN4QixPQUFPRixLQUFLLENBQUNZLGlCQUFpQixFQUFFO0VBQ2pDLENBQUM7RUFBQTtFQUFBO0lBQUFoQixjQUFBLEdBQUFPLENBQUE7RUFBQTtFQUFBUCxjQUFBLEdBQUFNLENBQUE7RUFFRDtFQUFJO0VBQUEsQ0FBQU4sY0FBQSxHQUFBTyxDQUFBLFVBQUFNLGlCQUFpQixDQUFDVCxLQUFLLENBQUM7RUFBQTtFQUFBLENBQUFKLGNBQUEsR0FBQU8sQ0FBQSxVQUFJSixZQUFZLENBQUNDLEtBQUssQ0FBQ2EsZ0JBQWdCLENBQUMsR0FBRTtJQUFBO0lBQUFqQixjQUFBLEdBQUFPLENBQUE7SUFBQVAsY0FBQSxHQUFBTSxDQUFBO0lBQ3JFLE9BQU9GLEtBQUssQ0FBQ2EsZ0JBQWdCO0VBQzlCLENBQUM7RUFBQTtFQUFBO0lBQUFqQixjQUFBLEdBQUFPLENBQUE7RUFBQTtFQUFBUCxjQUFBLEdBQUFNLENBQUE7RUFFRCxPQUFPLElBQUk7QUFDWjtBQUVBOzs7QUFHQSxPQUFNLFNBQVVZLFVBQVVBLENBQUNkLEtBQWM7RUFBQTtFQUFBSixjQUFBLEdBQUFLLENBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQ3hDO0VBQUk7RUFBQSxDQUFBTixjQUFBLEdBQUFPLENBQUEsV0FBQUosWUFBWSxDQUFDQyxLQUFLLENBQUM7RUFBQTtFQUFBLENBQUFKLGNBQUEsR0FBQU8sQ0FBQSxXQUFJSSxZQUFZLENBQUNQLEtBQUssQ0FBQyxHQUFFO0lBQUE7SUFBQUosY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQU0sQ0FBQTtJQUMvQyxPQUFPRixLQUFLO0VBQ2IsQ0FBQztFQUFBO0VBQUE7SUFBQUosY0FBQSxHQUFBTyxDQUFBO0VBQUE7RUFBQVAsY0FBQSxHQUFBTSxDQUFBO0VBRUQsT0FBTyxJQUFJO0FBQ1oiLCJpZ25vcmVMaXN0IjpbXX0=

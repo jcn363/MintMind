@@ -1,0 +1,61 @@
+ca63b6157e1d7afcc9420e935ddf836f
+/* istanbul ignore next */
+function cov_4f5tg3dh3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/find/common/terminal.find.ts";
+  var hash = "41aa98d27b04683e3174f0b46993eb72d49d1ded";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/find/common/terminal.find.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 5,
+          column: 53
+        },
+        end: {
+          line: 14,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/find/common/terminal.find.ts",
+      mappings: "AAAA;;;gGAGgG;AAahG,MAAM,CAAC,MAAM,qCAAqC,GAAG;;;;;;;;;CASpD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/find/common/terminal.find.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const enum TerminalFindCommandId {\n\tFindFocus = 'workbench.action.terminal.focusFind',\n\tFindHide = 'workbench.action.terminal.hideFind',\n\tFindNext = 'workbench.action.terminal.findNext',\n\tFindPrevious = 'workbench.action.terminal.findPrevious',\n\tToggleFindRegex = 'workbench.action.terminal.toggleFindRegex',\n\tToggleFindWholeWord = 'workbench.action.terminal.toggleFindWholeWord',\n\tToggleFindCaseSensitive = 'workbench.action.terminal.toggleFindCaseSensitive',\n\tSearchWorkspace = 'workbench.action.terminal.searchWorkspace',\n}\n\nexport const defaultTerminalFindCommandToSkipShell = [\n\tTerminalFindCommandId.FindFocus,\n\tTerminalFindCommandId.FindHide,\n\tTerminalFindCommandId.FindNext,\n\tTerminalFindCommandId.FindPrevious,\n\tTerminalFindCommandId.ToggleFindRegex,\n\tTerminalFindCommandId.ToggleFindWholeWord,\n\tTerminalFindCommandId.ToggleFindCaseSensitive,\n\tTerminalFindCommandId.SearchWorkspace,\n];\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "41aa98d27b04683e3174f0b46993eb72d49d1ded"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_4f5tg3dh3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_4f5tg3dh3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export const defaultTerminalFindCommandToSkipShell =
+/* istanbul ignore next */
+(cov_4f5tg3dh3().s[0]++, ["workbench.action.terminal.focusFind" /* TerminalFindCommandId.FindFocus */, "workbench.action.terminal.hideFind" /* TerminalFindCommandId.FindHide */, "workbench.action.terminal.findNext" /* TerminalFindCommandId.FindNext */, "workbench.action.terminal.findPrevious" /* TerminalFindCommandId.FindPrevious */, "workbench.action.terminal.toggleFindRegex" /* TerminalFindCommandId.ToggleFindRegex */, "workbench.action.terminal.toggleFindWholeWord" /* TerminalFindCommandId.ToggleFindWholeWord */, "workbench.action.terminal.toggleFindCaseSensitive" /* TerminalFindCommandId.ToggleFindCaseSensitive */, "workbench.action.terminal.searchWorkspace" /* TerminalFindCommandId.SearchWorkspace */]);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJkZWZhdWx0VGVybWluYWxGaW5kQ29tbWFuZFRvU2tpcFNoZWxsIiwiY292XzRmNXRnM2RoMyIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3Rlcm1pbmFsQ29udHJpYi9maW5kL2NvbW1vbi90ZXJtaW5hbC5maW5kLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5leHBvcnQgY29uc3QgZW51bSBUZXJtaW5hbEZpbmRDb21tYW5kSWQge1xuXHRGaW5kRm9jdXMgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5mb2N1c0ZpbmQnLFxuXHRGaW5kSGlkZSA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmhpZGVGaW5kJyxcblx0RmluZE5leHQgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5maW5kTmV4dCcsXG5cdEZpbmRQcmV2aW91cyA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLmZpbmRQcmV2aW91cycsXG5cdFRvZ2dsZUZpbmRSZWdleCA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnRvZ2dsZUZpbmRSZWdleCcsXG5cdFRvZ2dsZUZpbmRXaG9sZVdvcmQgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC50b2dnbGVGaW5kV2hvbGVXb3JkJyxcblx0VG9nZ2xlRmluZENhc2VTZW5zaXRpdmUgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC50b2dnbGVGaW5kQ2FzZVNlbnNpdGl2ZScsXG5cdFNlYXJjaFdvcmtzcGFjZSA9ICd3b3JrYmVuY2guYWN0aW9uLnRlcm1pbmFsLnNlYXJjaFdvcmtzcGFjZScsXG59XG5cbmV4cG9ydCBjb25zdCBkZWZhdWx0VGVybWluYWxGaW5kQ29tbWFuZFRvU2tpcFNoZWxsID0gW1xuXHRUZXJtaW5hbEZpbmRDb21tYW5kSWQuRmluZEZvY3VzLFxuXHRUZXJtaW5hbEZpbmRDb21tYW5kSWQuRmluZEhpZGUsXG5cdFRlcm1pbmFsRmluZENvbW1hbmRJZC5GaW5kTmV4dCxcblx0VGVybWluYWxGaW5kQ29tbWFuZElkLkZpbmRQcmV2aW91cyxcblx0VGVybWluYWxGaW5kQ29tbWFuZElkLlRvZ2dsZUZpbmRSZWdleCxcblx0VGVybWluYWxGaW5kQ29tbWFuZElkLlRvZ2dsZUZpbmRXaG9sZVdvcmQsXG5cdFRlcm1pbmFsRmluZENvbW1hbmRJZC5Ub2dnbGVGaW5kQ2FzZVNlbnNpdGl2ZSxcblx0VGVybWluYWxGaW5kQ29tbWFuZElkLlNlYXJjaFdvcmtzcGFjZSxcbl07XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQWdCQSxPQUFPLE1BQU1BLHFDQUFxQztBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUcsQyxpckJBU3BEIiwiaWdub3JlTGlzdCI6W119

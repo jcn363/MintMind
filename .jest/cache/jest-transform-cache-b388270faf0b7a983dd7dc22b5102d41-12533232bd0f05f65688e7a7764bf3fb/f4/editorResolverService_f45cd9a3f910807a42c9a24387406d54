@@ -1,0 +1,686 @@
+07446490e5294f9c37c1d0eba47d1de3
+/* istanbul ignore next */
+function cov_1kr60t49gw() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorResolverService.ts";
+  var hash = "a120fa480fd5f1eedc4e77aea3f89c0124926af7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorResolverService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 14,
+          column: 38
+        },
+        end: {
+          line: 14,
+          column: 78
+        }
+      },
+      "1": {
+        start: {
+          line: 15,
+          column: 44
+        },
+        end: {
+          line: 15,
+          column: 74
+        }
+      },
+      "2": {
+        start: {
+          line: 16,
+          column: 30
+        },
+        end: {
+          line: 16,
+          column: 80
+        }
+      },
+      "3": {
+        start: {
+          line: 17,
+          column: 44
+        },
+        end: {
+          line: 28,
+          column: 1
+        }
+      },
+      "4": {
+        start: {
+          line: 29,
+          column: 0
+        },
+        end: {
+          line: 29,
+          column: 81
+        }
+      },
+      "5": {
+        start: {
+          line: 33,
+          column: 0
+        },
+        end: {
+          line: 38,
+          column: 64
+        }
+      },
+      "6": {
+        start: {
+          line: 34,
+          column: 4
+        },
+        end: {
+          line: 34,
+          column: 52
+        }
+      },
+      "7": {
+        start: {
+          line: 35,
+          column: 4
+        },
+        end: {
+          line: 35,
+          column: 50
+        }
+      },
+      "8": {
+        start: {
+          line: 36,
+          column: 4
+        },
+        end: {
+          line: 36,
+          column: 56
+        }
+      },
+      "9": {
+        start: {
+          line: 37,
+          column: 4
+        },
+        end: {
+          line: 37,
+          column: 52
+        }
+      },
+      "10": {
+        start: {
+          line: 42,
+          column: 4
+        },
+        end: {
+          line: 53,
+          column: 5
+        }
+      },
+      "11": {
+        start: {
+          line: 44,
+          column: 12
+        },
+        end: {
+          line: 44,
+          column: 21
+        }
+      },
+      "12": {
+        start: {
+          line: 46,
+          column: 12
+        },
+        end: {
+          line: 46,
+          column: 21
+        }
+      },
+      "13": {
+        start: {
+          line: 48,
+          column: 12
+        },
+        end: {
+          line: 48,
+          column: 21
+        }
+      },
+      "14": {
+        start: {
+          line: 52,
+          column: 12
+        },
+        end: {
+          line: 52,
+          column: 21
+        }
+      },
+      "15": {
+        start: {
+          line: 56,
+          column: 28
+        },
+        end: {
+          line: 61,
+          column: 6
+        }
+      },
+      "16": {
+        start: {
+          line: 63,
+          column: 4
+        },
+        end: {
+          line: 65,
+          column: 5
+        }
+      },
+      "17": {
+        start: {
+          line: 64,
+          column: 8
+        },
+        end: {
+          line: 64,
+          column: 21
+        }
+      },
+      "18": {
+        start: {
+          line: 66,
+          column: 24
+        },
+        end: {
+          line: 66,
+          column: 94
+        }
+      },
+      "19": {
+        start: {
+          line: 67,
+          column: 19
+        },
+        end: {
+          line: 67,
+          column: 91
+        }
+      },
+      "20": {
+        start: {
+          line: 68,
+          column: 4
+        },
+        end: {
+          line: 68,
+          column: 65
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 33,
+            column: 1
+          },
+          end: {
+            line: 33,
+            column: 2
+          }
+        },
+        loc: {
+          start: {
+            line: 33,
+            column: 37
+          },
+          end: {
+            line: 38,
+            column: 1
+          }
+        },
+        line: 33
+      },
+      "1": {
+        name: "priorityToRank",
+        decl: {
+          start: {
+            line: 41,
+            column: 16
+          },
+          end: {
+            line: 41,
+            column: 30
+          }
+        },
+        loc: {
+          start: {
+            line: 41,
+            column: 41
+          },
+          end: {
+            line: 54,
+            column: 1
+          }
+        },
+        line: 41
+      },
+      "2": {
+        name: "globMatchesResource",
+        decl: {
+          start: {
+            line: 55,
+            column: 16
+          },
+          end: {
+            line: 55,
+            column: 35
+          }
+        },
+        loc: {
+          start: {
+            line: 55,
+            column: 59
+          },
+          end: {
+            line: 69,
+            column: 1
+          }
+        },
+        line: 55
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 38,
+            column: 3
+          },
+          end: {
+            line: 38,
+            column: 62
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 38,
+            column: 3
+          },
+          end: {
+            line: 38,
+            column: 27
+          }
+        }, {
+          start: {
+            line: 38,
+            column: 32
+          },
+          end: {
+            line: 38,
+            column: 61
+          }
+        }],
+        line: 38
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 42,
+            column: 4
+          },
+          end: {
+            line: 53,
+            column: 5
+          }
+        },
+        type: "switch",
+        locations: [{
+          start: {
+            line: 43,
+            column: 8
+          },
+          end: {
+            line: 44,
+            column: 21
+          }
+        }, {
+          start: {
+            line: 45,
+            column: 8
+          },
+          end: {
+            line: 46,
+            column: 21
+          }
+        }, {
+          start: {
+            line: 47,
+            column: 8
+          },
+          end: {
+            line: 48,
+            column: 21
+          }
+        }, {
+          start: {
+            line: 50,
+            column: 8
+          },
+          end: {
+            line: 50,
+            column: 45
+          }
+        }, {
+          start: {
+            line: 51,
+            column: 8
+          },
+          end: {
+            line: 52,
+            column: 21
+          }
+        }],
+        line: 42
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 63,
+            column: 4
+          },
+          end: {
+            line: 65,
+            column: 5
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 63,
+            column: 4
+          },
+          end: {
+            line: 65,
+            column: 5
+          }
+        }, {
+          start: {
+            line: undefined,
+            column: undefined
+          },
+          end: {
+            line: undefined,
+            column: undefined
+          }
+        }],
+        line: 63
+      },
+      "3": {
+        loc: {
+          start: {
+            line: 66,
+            column: 24
+          },
+          end: {
+            line: 66,
+            column: 94
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 66,
+            column: 24
+          },
+          end: {
+            line: 66,
+            column: 55
+          }
+        }, {
+          start: {
+            line: 66,
+            column: 59
+          },
+          end: {
+            line: 66,
+            column: 94
+          }
+        }],
+        line: 66
+      },
+      "4": {
+        loc: {
+          start: {
+            line: 67,
+            column: 19
+          },
+          end: {
+            line: 67,
+            column: 91
+          }
+        },
+        type: "cond-expr",
+        locations: [{
+          start: {
+            line: 67,
+            column: 33
+          },
+          end: {
+            line: 67,
+            column: 70
+          }
+        }, {
+          start: {
+            line: 67,
+            column: 73
+          },
+          end: {
+            line: 67,
+            column: 91
+          }
+        }],
+        line: 67
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0, 0, 0, 0],
+      "2": [0, 0],
+      "3": [0, 0],
+      "4": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorResolverService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,KAAK,IAAI,MAAM,iCAAiC,CAAC;AAGxD,OAAO,EAAE,OAAO,EAAE,MAAM,oCAAoC,CAAC;AAC7D,OAAO,EAAE,KAAK,EAAE,MAAM,iCAAiC,CAAC;AACxD,OAAO,EAAE,QAAQ,EAAE,MAAM,sCAAsC,CAAC;AAEhE,OAAO,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAC9C,OAAO,EAAE,8BAA8B,EAAE,MAAM,kCAAkC,CAAC;AAClF,OAAO,EAAE,UAAU,IAAI,uBAAuB,EAA8C,MAAM,oEAAoE,CAAC;AAEvK,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAC7F,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAM5E,MAAM,CAAC,MAAM,sBAAsB,GAAG,eAAe,CAAyB,uBAAuB,CAAC,CAAC;AAavG,MAAM,CAAC,MAAM,4BAA4B,GAAG,8BAA8B,CAAC;AAE3E,MAAM,qBAAqB,GAAG,QAAQ,CAAC,EAAE,CAAyB,uBAAuB,CAAC,aAAa,CAAC,CAAC;AAEzG,MAAM,mCAAmC,GAAuB;IAC/D,GAAG,8BAA8B;IACjC,UAAU,EAAE;QACX,8BAA8B,EAAE;YAC/B,IAAI,EAAE,QAAQ;YACd,mBAAmB,EAAE,QAAQ,CAAC,2BAA2B,EAAE,8KAA8K,CAAC;YAC1O,oBAAoB,EAAE;gBACrB,IAAI,EAAE,QAAQ;aACd;SACD;KACD;CACD,CAAC;AAQF,qBAAqB,CAAC,qBAAqB,CAAC,mCAAmC,CAAC,CAAC;AACjF,YAAY;AAEZ,qCAAqC;AACrC,MAAM,CAAN,IAAY,wBAKX;AALD,WAAY,wBAAwB;IACnC,+CAAmB,CAAA;IACnB,6CAAiB,CAAA;IACjB,mDAAuB,CAAA;IACvB,+CAAmB,CAAA;AACpB,CAAC,EALW,wBAAwB,KAAxB,wBAAwB,QAKnC;AA2HD,YAAY;AAEZ,wBAAwB;AACxB,MAAM,UAAU,cAAc,CAAC,QAAkC;IAChE,QAAQ,QAAQ,EAAE,CAAC;QAClB,KAAK,wBAAwB,CAAC,SAAS;YACtC,OAAO,CAAC,CAAC;QACV,KAAK,wBAAwB,CAAC,OAAO;YACpC,OAAO,CAAC,CAAC;QACV,KAAK,wBAAwB,CAAC,OAAO;YACpC,OAAO,CAAC,CAAC;QACV,4BAA4B;QAC5B,KAAK,wBAAwB,CAAC,MAAM,CAAC;QACrC;YACC,OAAO,CAAC,CAAC;IACX,CAAC;AACF,CAAC;AAED,MAAM,UAAU,mBAAmB,CAAC,WAA2C,EAAE,QAAa;IAC7F,MAAM,eAAe,GAAG,IAAI,GAAG,CAAC;QAC/B,OAAO,CAAC,SAAS;QACjB,OAAO,CAAC,YAAY;QACpB,OAAO,CAAC,oBAAoB;QAC5B,OAAO,CAAC,cAAc;KACtB,CAAC,CAAC;IACH,+DAA+D;IAC/D,IAAI,eAAe,CAAC,GAAG,CAAC,QAAQ,CAAC,MAAM,CAAC,EAAE,CAAC;QAC1C,OAAO,KAAK,CAAC;IACd,CAAC;IACD,MAAM,WAAW,GAAG,OAAO,WAAW,KAAK,QAAQ,IAAI,WAAW,CAAC,OAAO,CAAC,KAAK,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC;IAC3F,MAAM,MAAM,GAAG,WAAW,CAAC,CAAC,CAAC,GAAG,QAAQ,CAAC,MAAM,IAAI,QAAQ,CAAC,IAAI,EAAE,CAAC,CAAC,CAAC,QAAQ,CAAC,QAAQ,CAAC,CAAC;IACxF,OAAO,IAAI,CAAC,KAAK,CAAC,WAAW,EAAE,MAAM,EAAE,EAAE,UAAU,EAAE,IAAI,EAAE,CAAC,CAAC;AAC9D,CAAC;AACD,YAAY",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorResolverService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport * as glob from '../../../../base/common/glob.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { IDisposable } from '../../../../base/common/lifecycle.js';\nimport { Schemas } from '../../../../base/common/network.js';\nimport { posix } from '../../../../base/common/path.js';\nimport { basename } from '../../../../base/common/resources.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { localize } from '../../../../nls.js';\nimport { workbenchConfigurationNodeBase } from '../../../common/configuration.js';\nimport { Extensions as ConfigurationExtensions, IConfigurationNode, IConfigurationRegistry } from '../../../../platform/configuration/common/configurationRegistry.js';\nimport { IResourceEditorInput, ITextResourceEditorInput } from '../../../../platform/editor/common/editor.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { EditorInputWithOptions, EditorInputWithOptionsAndGroup, IResourceDiffEditorInput, IResourceMultiDiffEditorInput, IResourceMergeEditorInput, IUntitledTextResourceEditorInput, IUntypedEditorInput } from '../../../common/editor.js';\nimport { IEditorGroup } from './editorGroupsService.js';\nimport { PreferredGroup } from './editorService.js';\nimport { AtLeastOne } from '../../../../base/common/types.js';\n\nexport const IEditorResolverService = createDecorator<IEditorResolverService>('editorResolverService');\n\n//#region Editor Associations\n\n// Static values for registered editors\n\nexport type EditorAssociation = {\n\treadonly viewType: string;\n\treadonly filenamePattern?: string;\n};\n\nexport type EditorAssociations = readonly EditorAssociation[];\n\nexport const editorsAssociationsSettingId = 'workbench.editorAssociations';\n\nconst configurationRegistry = Registry.as<IConfigurationRegistry>(ConfigurationExtensions.Configuration);\n\nconst editorAssociationsConfigurationNode: IConfigurationNode = {\n\t...workbenchConfigurationNodeBase,\n\tproperties: {\n\t\t'workbench.editorAssociations': {\n\t\t\ttype: 'object',\n\t\t\tmarkdownDescription: localize('editor.editorAssociations', \"Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors (for example `\\\"*.hex\\\": \\\"hexEditor.hexedit\\\"`). These have precedence over the default behavior.\"),\n\t\t\tadditionalProperties: {\n\t\t\t\ttype: 'string'\n\t\t\t}\n\t\t}\n\t}\n};\n\nexport interface IEditorType {\n\treadonly id: string;\n\treadonly displayName: string;\n\treadonly providerDisplayName: string;\n}\n\nconfigurationRegistry.registerConfiguration(editorAssociationsConfigurationNode);\n//#endregion\n\n//#region EditorResolverService types\nexport enum RegisteredEditorPriority {\n\tbuiltin = 'builtin',\n\toption = 'option',\n\texclusive = 'exclusive',\n\tdefault = 'default'\n}\n\n/**\n * If we didn't resolve an editor dictates what to do with the opening state\n * ABORT = Do not continue with opening the editor\n * NONE = Continue as if the resolution has been disabled as the service could not resolve one\n */\nexport const enum ResolvedStatus {\n\tABORT = 1,\n\tNONE = 2,\n}\n\nexport type ResolvedEditor = EditorInputWithOptionsAndGroup | ResolvedStatus;\n\nexport type RegisteredEditorOptions = {\n\t/**\n\t * If your editor cannot be opened in multiple groups for the same resource\n\t */\n\tsinglePerResource?: boolean | (() => boolean);\n\n\t/**\n\t * Whether or not you can support opening the given resource.\n\t * If omitted we assume you can open everything\n\t */\n\tcanSupportResource?: (resource: URI) => boolean;\n};\n\nexport type RegisteredEditorInfo = {\n\tid: string;\n\tlabel: string;\n\tdetail?: string;\n\tpriority: RegisteredEditorPriority;\n};\n\ntype EditorInputFactoryResult = EditorInputWithOptions | Promise<EditorInputWithOptions>;\n\nexport type EditorInputFactoryFunction = (editorInput: IResourceEditorInput | ITextResourceEditorInput, group: IEditorGroup) => EditorInputFactoryResult;\n\nexport type UntitledEditorInputFactoryFunction = (untitledEditorInput: IUntitledTextResourceEditorInput, group: IEditorGroup) => EditorInputFactoryResult;\n\nexport type DiffEditorInputFactoryFunction = (diffEditorInput: IResourceDiffEditorInput, group: IEditorGroup) => EditorInputFactoryResult;\n\nexport type MultiDiffEditorInputFactoryFunction = (multiDiffEditorInput: IResourceMultiDiffEditorInput, group: IEditorGroup) => EditorInputFactoryResult;\n\nexport type MergeEditorInputFactoryFunction = (mergeEditorInput: IResourceMergeEditorInput, group: IEditorGroup) => EditorInputFactoryResult;\n\ntype EditorInputFactories = {\n\tcreateEditorInput?: EditorInputFactoryFunction;\n\tcreateUntitledEditorInput?: UntitledEditorInputFactoryFunction;\n\tcreateDiffEditorInput?: DiffEditorInputFactoryFunction;\n\tcreateMultiDiffEditorInput?: MultiDiffEditorInputFactoryFunction;\n\tcreateMergeEditorInput?: MergeEditorInputFactoryFunction;\n};\n\nexport type EditorInputFactoryObject = AtLeastOne<EditorInputFactories>;\n\nexport interface IEditorResolverService {\n\treadonly _serviceBrand: undefined;\n\t/**\n\t * Given a resource finds the editor associations that match it from the user's settings\n\t * @param resource The resource to match\n\t * @return The matching associations\n\t */\n\tgetAssociationsForResource(resource: URI): EditorAssociations;\n\n\t/**\n\t * Updates the user's association to include a specific editor ID as a default for the given glob pattern\n\t * @param globPattern The glob pattern (must be a string as settings don't support relative glob)\n\t * @param editorID The ID of the editor to make a user default\n\t */\n\tupdateUserAssociations(globPattern: string, editorID: string): void;\n\n\t/**\n\t * Emitted when an editor is registered or unregistered.\n\t */\n\treadonly onDidChangeEditorRegistrations: Event<void>;\n\n\t/**\n\t * Given a callback, run the callback pausing the registration emitter\n\t */\n\tbufferChangeEvents(callback: Function): void;\n\n\t/**\n\t * Registers a specific editor. Editors with the same glob pattern and ID will be grouped together by the resolver.\n\t * This allows for registration of the factories in different locations\n\t * @param globPattern The glob pattern for this registration\n\t * @param editorInfo Information about the registration\n\t * @param options Specific options which apply to this registration\n\t * @param editorFactoryObject The editor input factory functions\n\t */\n\tregisterEditor(\n\t\tglobPattern: string | glob.IRelativePattern,\n\t\teditorInfo: RegisteredEditorInfo,\n\t\toptions: RegisteredEditorOptions,\n\t\teditorFactoryObject: EditorInputFactoryObject\n\t): IDisposable;\n\n\t/**\n\t * Given an editor resolves it to the suitable ResolvedEditor based on user extensions, settings, and built-in editors\n\t * @param editor The editor to resolve\n\t * @param preferredGroup The group you want to open the editor in\n\t * @returns An EditorInputWithOptionsAndGroup if there is an available editor or a status of how to proceed\n\t */\n\tresolveEditor(editor: IUntypedEditorInput, preferredGroup: PreferredGroup | undefined): Promise<ResolvedEditor>;\n\n\t/**\n\t * Given a resource returns all the editor ids that match that resource. If there is exclusive editor we return an empty array\n\t * @param resource The resource\n\t * @returns A list of editor ids\n\t */\n\tgetEditors(resource: URI): RegisteredEditorInfo[];\n\n\t/**\n\t * A set of all the editors that are registered to the editor resolver.\n\t */\n\tgetEditors(): RegisteredEditorInfo[];\n\n\t/**\n\t * Get a complete list of editor associations.\n\t */\n\tgetAllUserAssociations(): EditorAssociations;\n}\n\n//#endregion\n\n//#region Util functions\nexport function priorityToRank(priority: RegisteredEditorPriority): number {\n\tswitch (priority) {\n\t\tcase RegisteredEditorPriority.exclusive:\n\t\t\treturn 5;\n\t\tcase RegisteredEditorPriority.default:\n\t\t\treturn 4;\n\t\tcase RegisteredEditorPriority.builtin:\n\t\t\treturn 3;\n\t\t// Text editor is priority 2\n\t\tcase RegisteredEditorPriority.option:\n\t\tdefault:\n\t\t\treturn 1;\n\t}\n}\n\nexport function globMatchesResource(globPattern: string | glob.IRelativePattern, resource: URI): boolean {\n\tconst excludedSchemes = new Set([\n\t\tSchemas.extension,\n\t\tSchemas.webviewPanel,\n\t\tSchemas.vscodeWorkspaceTrust,\n\t\tSchemas.vscodeSettings\n\t]);\n\t// We want to say that the above schemes match no glob patterns\n\tif (excludedSchemes.has(resource.scheme)) {\n\t\treturn false;\n\t}\n\tconst matchOnPath = typeof globPattern === 'string' && globPattern.indexOf(posix.sep) >= 0;\n\tconst target = matchOnPath ? `${resource.scheme}:${resource.path}` : basename(resource);\n\treturn glob.match(globPattern, target, { ignoreCase: true });\n}\n//#endregion\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a120fa480fd5f1eedc4e77aea3f89c0124926af7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1kr60t49gw = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1kr60t49gw();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import * as glob from '../../../../base/common/glob.js';
+import { Schemas } from '../../../../base/common/network.js';
+import { posix } from '../../../../base/common/path.js';
+import { basename } from '../../../../base/common/resources.js';
+import { localize } from '../../../../nls.js';
+import { workbenchConfigurationNodeBase } from '../../../common/configuration.js';
+import { Extensions as ConfigurationExtensions } from '../../../../platform/configuration/common/configurationRegistry.js';
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { Registry } from '../../../../platform/registry/common/platform.js';
+export const IEditorResolverService =
+/* istanbul ignore next */
+(cov_1kr60t49gw().s[0]++, createDecorator('editorResolverService'));
+export const editorsAssociationsSettingId =
+/* istanbul ignore next */
+(cov_1kr60t49gw().s[1]++, 'workbench.editorAssociations');
+const configurationRegistry =
+/* istanbul ignore next */
+(cov_1kr60t49gw().s[2]++, Registry.as(ConfigurationExtensions.Configuration));
+const editorAssociationsConfigurationNode =
+/* istanbul ignore next */
+(cov_1kr60t49gw().s[3]++, {
+  ...workbenchConfigurationNodeBase,
+  properties: {
+    'workbench.editorAssociations': {
+      type: 'object',
+      markdownDescription: localize('editor.editorAssociations', "Configure [glob patterns](https://aka.ms/vscode-glob-patterns) to editors (for example `\"*.hex\": \"hexEditor.hexedit\"`). These have precedence over the default behavior."),
+      additionalProperties: {
+        type: 'string'
+      }
+    }
+  }
+});
+/* istanbul ignore next */
+cov_1kr60t49gw().s[4]++;
+configurationRegistry.registerConfiguration(editorAssociationsConfigurationNode);
+//#endregion
+//#region EditorResolverService types
+export var RegisteredEditorPriority;
+/* istanbul ignore next */
+cov_1kr60t49gw().s[5]++;
+(function (RegisteredEditorPriority) {
+  /* istanbul ignore next */
+  cov_1kr60t49gw().f[0]++;
+  cov_1kr60t49gw().s[6]++;
+  RegisteredEditorPriority["builtin"] = "builtin";
+  /* istanbul ignore next */
+  cov_1kr60t49gw().s[7]++;
+  RegisteredEditorPriority["option"] = "option";
+  /* istanbul ignore next */
+  cov_1kr60t49gw().s[8]++;
+  RegisteredEditorPriority["exclusive"] = "exclusive";
+  /* istanbul ignore next */
+  cov_1kr60t49gw().s[9]++;
+  RegisteredEditorPriority["default"] = "default";
+})(
+/* istanbul ignore next */
+(cov_1kr60t49gw().b[0][0]++, RegisteredEditorPriority) ||
+/* istanbul ignore next */
+(cov_1kr60t49gw().b[0][1]++, RegisteredEditorPriority = {}));
+//#endregion
+//#region Util functions
+export function priorityToRank(priority) {
+  /* istanbul ignore next */
+  cov_1kr60t49gw().f[1]++;
+  cov_1kr60t49gw().s[10]++;
+  switch (priority) {
+    case RegisteredEditorPriority.exclusive:
+      /* istanbul ignore next */
+      cov_1kr60t49gw().b[1][0]++;
+      cov_1kr60t49gw().s[11]++;
+      return 5;
+    case RegisteredEditorPriority.default:
+      /* istanbul ignore next */
+      cov_1kr60t49gw().b[1][1]++;
+      cov_1kr60t49gw().s[12]++;
+      return 4;
+    case RegisteredEditorPriority.builtin:
+      /* istanbul ignore next */
+      cov_1kr60t49gw().b[1][2]++;
+      cov_1kr60t49gw().s[13]++;
+      return 3;
+    // Text editor is priority 2
+    case RegisteredEditorPriority.option:
+      /* istanbul ignore next */
+      cov_1kr60t49gw().b[1][3]++;
+    default:
+      /* istanbul ignore next */
+      cov_1kr60t49gw().b[1][4]++;
+      cov_1kr60t49gw().s[14]++;
+      return 1;
+  }
+}
+export function globMatchesResource(globPattern, resource) {
+  /* istanbul ignore next */
+  cov_1kr60t49gw().f[2]++;
+  const excludedSchemes =
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().s[15]++, new Set([Schemas.extension, Schemas.webviewPanel, Schemas.vscodeWorkspaceTrust, Schemas.vscodeSettings]));
+  // We want to say that the above schemes match no glob patterns
+  /* istanbul ignore next */
+  cov_1kr60t49gw().s[16]++;
+  if (excludedSchemes.has(resource.scheme)) {
+    /* istanbul ignore next */
+    cov_1kr60t49gw().b[2][0]++;
+    cov_1kr60t49gw().s[17]++;
+    return false;
+  } else
+  /* istanbul ignore next */
+  {
+    cov_1kr60t49gw().b[2][1]++;
+  }
+  const matchOnPath =
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().s[18]++,
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().b[3][0]++, typeof globPattern === 'string') &&
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().b[3][1]++, globPattern.indexOf(posix.sep) >= 0));
+  const target =
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().s[19]++, matchOnPath ?
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().b[4][0]++, `${resource.scheme}:${resource.path}`) :
+  /* istanbul ignore next */
+  (cov_1kr60t49gw().b[4][1]++, basename(resource)));
+  /* istanbul ignore next */
+  cov_1kr60t49gw().s[20]++;
+  return glob.match(globPattern, target, {
+    ignoreCase: true
+  });
+}
+//#endregion
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMWtyNjB0NDlndyIsImFjdHVhbENvdmVyYWdlIiwiZ2xvYiIsIlNjaGVtYXMiLCJwb3NpeCIsImJhc2VuYW1lIiwibG9jYWxpemUiLCJ3b3JrYmVuY2hDb25maWd1cmF0aW9uTm9kZUJhc2UiLCJFeHRlbnNpb25zIiwiQ29uZmlndXJhdGlvbkV4dGVuc2lvbnMiLCJjcmVhdGVEZWNvcmF0b3IiLCJSZWdpc3RyeSIsIklFZGl0b3JSZXNvbHZlclNlcnZpY2UiLCJzIiwiZWRpdG9yc0Fzc29jaWF0aW9uc1NldHRpbmdJZCIsImNvbmZpZ3VyYXRpb25SZWdpc3RyeSIsImFzIiwiQ29uZmlndXJhdGlvbiIsImVkaXRvckFzc29jaWF0aW9uc0NvbmZpZ3VyYXRpb25Ob2RlIiwicHJvcGVydGllcyIsInR5cGUiLCJtYXJrZG93bkRlc2NyaXB0aW9uIiwiYWRkaXRpb25hbFByb3BlcnRpZXMiLCJyZWdpc3RlckNvbmZpZ3VyYXRpb24iLCJSZWdpc3RlcmVkRWRpdG9yUHJpb3JpdHkiLCJmIiwiYiIsInByaW9yaXR5VG9SYW5rIiwicHJpb3JpdHkiLCJleGNsdXNpdmUiLCJkZWZhdWx0IiwiYnVpbHRpbiIsIm9wdGlvbiIsImdsb2JNYXRjaGVzUmVzb3VyY2UiLCJnbG9iUGF0dGVybiIsInJlc291cmNlIiwiZXhjbHVkZWRTY2hlbWVzIiwiU2V0IiwiZXh0ZW5zaW9uIiwid2Vidmlld1BhbmVsIiwidnNjb2RlV29ya3NwYWNlVHJ1c3QiLCJ2c2NvZGVTZXR0aW5ncyIsImhhcyIsInNjaGVtZSIsIm1hdGNoT25QYXRoIiwiaW5kZXhPZiIsInNlcCIsInRhcmdldCIsInBhdGgiLCJtYXRjaCIsImlnbm9yZUNhc2UiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9lZGl0b3IvY29tbW9uL2VkaXRvclJlc29sdmVyU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0ICogYXMgZ2xvYiBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9nbG9iLmpzJztcbmltcG9ydCB7IEV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgSURpc3Bvc2FibGUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgU2NoZW1hcyB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL25ldHdvcmsuanMnO1xuaW1wb3J0IHsgcG9zaXggfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9wYXRoLmpzJztcbmltcG9ydCB7IGJhc2VuYW1lIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vcmVzb3VyY2VzLmpzJztcbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBsb2NhbGl6ZSB9IGZyb20gJy4uLy4uLy4uLy4uL25scy5qcyc7XG5pbXBvcnQgeyB3b3JrYmVuY2hDb25maWd1cmF0aW9uTm9kZUJhc2UgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vY29uZmlndXJhdGlvbi5qcyc7XG5pbXBvcnQgeyBFeHRlbnNpb25zIGFzIENvbmZpZ3VyYXRpb25FeHRlbnNpb25zLCBJQ29uZmlndXJhdGlvbk5vZGUsIElDb25maWd1cmF0aW9uUmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9jb25maWd1cmF0aW9uL2NvbW1vbi9jb25maWd1cmF0aW9uUmVnaXN0cnkuanMnO1xuaW1wb3J0IHsgSVJlc291cmNlRWRpdG9ySW5wdXQsIElUZXh0UmVzb3VyY2VFZGl0b3JJbnB1dCB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2VkaXRvci9jb21tb24vZWRpdG9yLmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgUmVnaXN0cnkgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9yZWdpc3RyeS9jb21tb24vcGxhdGZvcm0uanMnO1xuaW1wb3J0IHsgRWRpdG9ySW5wdXRXaXRoT3B0aW9ucywgRWRpdG9ySW5wdXRXaXRoT3B0aW9uc0FuZEdyb3VwLCBJUmVzb3VyY2VEaWZmRWRpdG9ySW5wdXQsIElSZXNvdXJjZU11bHRpRGlmZkVkaXRvcklucHV0LCBJUmVzb3VyY2VNZXJnZUVkaXRvcklucHV0LCBJVW50aXRsZWRUZXh0UmVzb3VyY2VFZGl0b3JJbnB1dCwgSVVudHlwZWRFZGl0b3JJbnB1dCB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9lZGl0b3IuanMnO1xuaW1wb3J0IHsgSUVkaXRvckdyb3VwIH0gZnJvbSAnLi9lZGl0b3JHcm91cHNTZXJ2aWNlLmpzJztcbmltcG9ydCB7IFByZWZlcnJlZEdyb3VwIH0gZnJvbSAnLi9lZGl0b3JTZXJ2aWNlLmpzJztcbmltcG9ydCB7IEF0TGVhc3RPbmUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi90eXBlcy5qcyc7XG5cbmV4cG9ydCBjb25zdCBJRWRpdG9yUmVzb2x2ZXJTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElFZGl0b3JSZXNvbHZlclNlcnZpY2U+KCdlZGl0b3JSZXNvbHZlclNlcnZpY2UnKTtcblxuLy8jcmVnaW9uIEVkaXRvciBBc3NvY2lhdGlvbnNcblxuLy8gU3RhdGljIHZhbHVlcyBmb3IgcmVnaXN0ZXJlZCBlZGl0b3JzXG5cbmV4cG9ydCB0eXBlIEVkaXRvckFzc29jaWF0aW9uID0ge1xuXHRyZWFkb25seSB2aWV3VHlwZTogc3RyaW5nO1xuXHRyZWFkb25seSBmaWxlbmFtZVBhdHRlcm4/OiBzdHJpbmc7XG59O1xuXG5leHBvcnQgdHlwZSBFZGl0b3JBc3NvY2lhdGlvbnMgPSByZWFkb25seSBFZGl0b3JBc3NvY2lhdGlvbltdO1xuXG5leHBvcnQgY29uc3QgZWRpdG9yc0Fzc29jaWF0aW9uc1NldHRpbmdJZCA9ICd3b3JrYmVuY2guZWRpdG9yQXNzb2NpYXRpb25zJztcblxuY29uc3QgY29uZmlndXJhdGlvblJlZ2lzdHJ5ID0gUmVnaXN0cnkuYXM8SUNvbmZpZ3VyYXRpb25SZWdpc3RyeT4oQ29uZmlndXJhdGlvbkV4dGVuc2lvbnMuQ29uZmlndXJhdGlvbik7XG5cbmNvbnN0IGVkaXRvckFzc29jaWF0aW9uc0NvbmZpZ3VyYXRpb25Ob2RlOiBJQ29uZmlndXJhdGlvbk5vZGUgPSB7XG5cdC4uLndvcmtiZW5jaENvbmZpZ3VyYXRpb25Ob2RlQmFzZSxcblx0cHJvcGVydGllczoge1xuXHRcdCd3b3JrYmVuY2guZWRpdG9yQXNzb2NpYXRpb25zJzoge1xuXHRcdFx0dHlwZTogJ29iamVjdCcsXG5cdFx0XHRtYXJrZG93bkRlc2NyaXB0aW9uOiBsb2NhbGl6ZSgnZWRpdG9yLmVkaXRvckFzc29jaWF0aW9ucycsIFwiQ29uZmlndXJlIFtnbG9iIHBhdHRlcm5zXShodHRwczovL2FrYS5tcy92c2NvZGUtZ2xvYi1wYXR0ZXJucykgdG8gZWRpdG9ycyAoZm9yIGV4YW1wbGUgYFxcXCIqLmhleFxcXCI6IFxcXCJoZXhFZGl0b3IuaGV4ZWRpdFxcXCJgKS4gVGhlc2UgaGF2ZSBwcmVjZWRlbmNlIG92ZXIgdGhlIGRlZmF1bHQgYmVoYXZpb3IuXCIpLFxuXHRcdFx0YWRkaXRpb25hbFByb3BlcnRpZXM6IHtcblx0XHRcdFx0dHlwZTogJ3N0cmluZydcblx0XHRcdH1cblx0XHR9XG5cdH1cbn07XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUVkaXRvclR5cGUge1xuXHRyZWFkb25seSBpZDogc3RyaW5nO1xuXHRyZWFkb25seSBkaXNwbGF5TmFtZTogc3RyaW5nO1xuXHRyZWFkb25seSBwcm92aWRlckRpc3BsYXlOYW1lOiBzdHJpbmc7XG59XG5cbmNvbmZpZ3VyYXRpb25SZWdpc3RyeS5yZWdpc3RlckNvbmZpZ3VyYXRpb24oZWRpdG9yQXNzb2NpYXRpb25zQ29uZmlndXJhdGlvbk5vZGUpO1xuLy8jZW5kcmVnaW9uXG5cbi8vI3JlZ2lvbiBFZGl0b3JSZXNvbHZlclNlcnZpY2UgdHlwZXNcbmV4cG9ydCBlbnVtIFJlZ2lzdGVyZWRFZGl0b3JQcmlvcml0eSB7XG5cdGJ1aWx0aW4gPSAnYnVpbHRpbicsXG5cdG9wdGlvbiA9ICdvcHRpb24nLFxuXHRleGNsdXNpdmUgPSAnZXhjbHVzaXZlJyxcblx0ZGVmYXVsdCA9ICdkZWZhdWx0J1xufVxuXG4vKipcbiAqIElmIHdlIGRpZG4ndCByZXNvbHZlIGFuIGVkaXRvciBkaWN0YXRlcyB3aGF0IHRvIGRvIHdpdGggdGhlIG9wZW5pbmcgc3RhdGVcbiAqIEFCT1JUID0gRG8gbm90IGNvbnRpbnVlIHdpdGggb3BlbmluZyB0aGUgZWRpdG9yXG4gKiBOT05FID0gQ29udGludWUgYXMgaWYgdGhlIHJlc29sdXRpb24gaGFzIGJlZW4gZGlzYWJsZWQgYXMgdGhlIHNlcnZpY2UgY291bGQgbm90IHJlc29sdmUgb25lXG4gKi9cbmV4cG9ydCBjb25zdCBlbnVtIFJlc29sdmVkU3RhdHVzIHtcblx0QUJPUlQgPSAxLFxuXHROT05FID0gMixcbn1cblxuZXhwb3J0IHR5cGUgUmVzb2x2ZWRFZGl0b3IgPSBFZGl0b3JJbnB1dFdpdGhPcHRpb25zQW5kR3JvdXAgfCBSZXNvbHZlZFN0YXR1cztcblxuZXhwb3J0IHR5cGUgUmVnaXN0ZXJlZEVkaXRvck9wdGlvbnMgPSB7XG5cdC8qKlxuXHQgKiBJZiB5b3VyIGVkaXRvciBjYW5ub3QgYmUgb3BlbmVkIGluIG11bHRpcGxlIGdyb3VwcyBmb3IgdGhlIHNhbWUgcmVzb3VyY2Vcblx0ICovXG5cdHNpbmdsZVBlclJlc291cmNlPzogYm9vbGVhbiB8ICgoKSA9PiBib29sZWFuKTtcblxuXHQvKipcblx0ICogV2hldGhlciBvciBub3QgeW91IGNhbiBzdXBwb3J0IG9wZW5pbmcgdGhlIGdpdmVuIHJlc291cmNlLlxuXHQgKiBJZiBvbWl0dGVkIHdlIGFzc3VtZSB5b3UgY2FuIG9wZW4gZXZlcnl0aGluZ1xuXHQgKi9cblx0Y2FuU3VwcG9ydFJlc291cmNlPzogKHJlc291cmNlOiBVUkkpID0+IGJvb2xlYW47XG59O1xuXG5leHBvcnQgdHlwZSBSZWdpc3RlcmVkRWRpdG9ySW5mbyA9IHtcblx0aWQ6IHN0cmluZztcblx0bGFiZWw6IHN0cmluZztcblx0ZGV0YWlsPzogc3RyaW5nO1xuXHRwcmlvcml0eTogUmVnaXN0ZXJlZEVkaXRvclByaW9yaXR5O1xufTtcblxudHlwZSBFZGl0b3JJbnB1dEZhY3RvcnlSZXN1bHQgPSBFZGl0b3JJbnB1dFdpdGhPcHRpb25zIHwgUHJvbWlzZTxFZGl0b3JJbnB1dFdpdGhPcHRpb25zPjtcblxuZXhwb3J0IHR5cGUgRWRpdG9ySW5wdXRGYWN0b3J5RnVuY3Rpb24gPSAoZWRpdG9ySW5wdXQ6IElSZXNvdXJjZUVkaXRvcklucHV0IHwgSVRleHRSZXNvdXJjZUVkaXRvcklucHV0LCBncm91cDogSUVkaXRvckdyb3VwKSA9PiBFZGl0b3JJbnB1dEZhY3RvcnlSZXN1bHQ7XG5cbmV4cG9ydCB0eXBlIFVudGl0bGVkRWRpdG9ySW5wdXRGYWN0b3J5RnVuY3Rpb24gPSAodW50aXRsZWRFZGl0b3JJbnB1dDogSVVudGl0bGVkVGV4dFJlc291cmNlRWRpdG9ySW5wdXQsIGdyb3VwOiBJRWRpdG9yR3JvdXApID0+IEVkaXRvcklucHV0RmFjdG9yeVJlc3VsdDtcblxuZXhwb3J0IHR5cGUgRGlmZkVkaXRvcklucHV0RmFjdG9yeUZ1bmN0aW9uID0gKGRpZmZFZGl0b3JJbnB1dDogSVJlc291cmNlRGlmZkVkaXRvcklucHV0LCBncm91cDogSUVkaXRvckdyb3VwKSA9PiBFZGl0b3JJbnB1dEZhY3RvcnlSZXN1bHQ7XG5cbmV4cG9ydCB0eXBlIE11bHRpRGlmZkVkaXRvcklucHV0RmFjdG9yeUZ1bmN0aW9uID0gKG11bHRpRGlmZkVkaXRvcklucHV0OiBJUmVzb3VyY2VNdWx0aURpZmZFZGl0b3JJbnB1dCwgZ3JvdXA6IElFZGl0b3JHcm91cCkgPT4gRWRpdG9ySW5wdXRGYWN0b3J5UmVzdWx0O1xuXG5leHBvcnQgdHlwZSBNZXJnZUVkaXRvcklucHV0RmFjdG9yeUZ1bmN0aW9uID0gKG1lcmdlRWRpdG9ySW5wdXQ6IElSZXNvdXJjZU1lcmdlRWRpdG9ySW5wdXQsIGdyb3VwOiBJRWRpdG9yR3JvdXApID0+IEVkaXRvcklucHV0RmFjdG9yeVJlc3VsdDtcblxudHlwZSBFZGl0b3JJbnB1dEZhY3RvcmllcyA9IHtcblx0Y3JlYXRlRWRpdG9ySW5wdXQ/OiBFZGl0b3JJbnB1dEZhY3RvcnlGdW5jdGlvbjtcblx0Y3JlYXRlVW50aXRsZWRFZGl0b3JJbnB1dD86IFVudGl0bGVkRWRpdG9ySW5wdXRGYWN0b3J5RnVuY3Rpb247XG5cdGNyZWF0ZURpZmZFZGl0b3JJbnB1dD86IERpZmZFZGl0b3JJbnB1dEZhY3RvcnlGdW5jdGlvbjtcblx0Y3JlYXRlTXVsdGlEaWZmRWRpdG9ySW5wdXQ/OiBNdWx0aURpZmZFZGl0b3JJbnB1dEZhY3RvcnlGdW5jdGlvbjtcblx0Y3JlYXRlTWVyZ2VFZGl0b3JJbnB1dD86IE1lcmdlRWRpdG9ySW5wdXRGYWN0b3J5RnVuY3Rpb247XG59O1xuXG5leHBvcnQgdHlwZSBFZGl0b3JJbnB1dEZhY3RvcnlPYmplY3QgPSBBdExlYXN0T25lPEVkaXRvcklucHV0RmFjdG9yaWVzPjtcblxuZXhwb3J0IGludGVyZmFjZSBJRWRpdG9yUmVzb2x2ZXJTZXJ2aWNlIHtcblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXHQvKipcblx0ICogR2l2ZW4gYSByZXNvdXJjZSBmaW5kcyB0aGUgZWRpdG9yIGFzc29jaWF0aW9ucyB0aGF0IG1hdGNoIGl0IGZyb20gdGhlIHVzZXIncyBzZXR0aW5nc1xuXHQgKiBAcGFyYW0gcmVzb3VyY2UgVGhlIHJlc291cmNlIHRvIG1hdGNoXG5cdCAqIEByZXR1cm4gVGhlIG1hdGNoaW5nIGFzc29jaWF0aW9uc1xuXHQgKi9cblx0Z2V0QXNzb2NpYXRpb25zRm9yUmVzb3VyY2UocmVzb3VyY2U6IFVSSSk6IEVkaXRvckFzc29jaWF0aW9ucztcblxuXHQvKipcblx0ICogVXBkYXRlcyB0aGUgdXNlcidzIGFzc29jaWF0aW9uIHRvIGluY2x1ZGUgYSBzcGVjaWZpYyBlZGl0b3IgSUQgYXMgYSBkZWZhdWx0IGZvciB0aGUgZ2l2ZW4gZ2xvYiBwYXR0ZXJuXG5cdCAqIEBwYXJhbSBnbG9iUGF0dGVybiBUaGUgZ2xvYiBwYXR0ZXJuIChtdXN0IGJlIGEgc3RyaW5nIGFzIHNldHRpbmdzIGRvbid0IHN1cHBvcnQgcmVsYXRpdmUgZ2xvYilcblx0ICogQHBhcmFtIGVkaXRvcklEIFRoZSBJRCBvZiB0aGUgZWRpdG9yIHRvIG1ha2UgYSB1c2VyIGRlZmF1bHRcblx0ICovXG5cdHVwZGF0ZVVzZXJBc3NvY2lhdGlvbnMoZ2xvYlBhdHRlcm46IHN0cmluZywgZWRpdG9ySUQ6IHN0cmluZyk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEVtaXR0ZWQgd2hlbiBhbiBlZGl0b3IgaXMgcmVnaXN0ZXJlZCBvciB1bnJlZ2lzdGVyZWQuXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZUVkaXRvclJlZ2lzdHJhdGlvbnM6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBHaXZlbiBhIGNhbGxiYWNrLCBydW4gdGhlIGNhbGxiYWNrIHBhdXNpbmcgdGhlIHJlZ2lzdHJhdGlvbiBlbWl0dGVyXG5cdCAqL1xuXHRidWZmZXJDaGFuZ2VFdmVudHMoY2FsbGJhY2s6IEZ1bmN0aW9uKTogdm9pZDtcblxuXHQvKipcblx0ICogUmVnaXN0ZXJzIGEgc3BlY2lmaWMgZWRpdG9yLiBFZGl0b3JzIHdpdGggdGhlIHNhbWUgZ2xvYiBwYXR0ZXJuIGFuZCBJRCB3aWxsIGJlIGdyb3VwZWQgdG9nZXRoZXIgYnkgdGhlIHJlc29sdmVyLlxuXHQgKiBUaGlzIGFsbG93cyBmb3IgcmVnaXN0cmF0aW9uIG9mIHRoZSBmYWN0b3JpZXMgaW4gZGlmZmVyZW50IGxvY2F0aW9uc1xuXHQgKiBAcGFyYW0gZ2xvYlBhdHRlcm4gVGhlIGdsb2IgcGF0dGVybiBmb3IgdGhpcyByZWdpc3RyYXRpb25cblx0ICogQHBhcmFtIGVkaXRvckluZm8gSW5mb3JtYXRpb24gYWJvdXQgdGhlIHJlZ2lzdHJhdGlvblxuXHQgKiBAcGFyYW0gb3B0aW9ucyBTcGVjaWZpYyBvcHRpb25zIHdoaWNoIGFwcGx5IHRvIHRoaXMgcmVnaXN0cmF0aW9uXG5cdCAqIEBwYXJhbSBlZGl0b3JGYWN0b3J5T2JqZWN0IFRoZSBlZGl0b3IgaW5wdXQgZmFjdG9yeSBmdW5jdGlvbnNcblx0ICovXG5cdHJlZ2lzdGVyRWRpdG9yKFxuXHRcdGdsb2JQYXR0ZXJuOiBzdHJpbmcgfCBnbG9iLklSZWxhdGl2ZVBhdHRlcm4sXG5cdFx0ZWRpdG9ySW5mbzogUmVnaXN0ZXJlZEVkaXRvckluZm8sXG5cdFx0b3B0aW9uczogUmVnaXN0ZXJlZEVkaXRvck9wdGlvbnMsXG5cdFx0ZWRpdG9yRmFjdG9yeU9iamVjdDogRWRpdG9ySW5wdXRGYWN0b3J5T2JqZWN0XG5cdCk6IElEaXNwb3NhYmxlO1xuXG5cdC8qKlxuXHQgKiBHaXZlbiBhbiBlZGl0b3IgcmVzb2x2ZXMgaXQgdG8gdGhlIHN1aXRhYmxlIFJlc29sdmVkRWRpdG9yIGJhc2VkIG9uIHVzZXIgZXh0ZW5zaW9ucywgc2V0dGluZ3MsIGFuZCBidWlsdC1pbiBlZGl0b3JzXG5cdCAqIEBwYXJhbSBlZGl0b3IgVGhlIGVkaXRvciB0byByZXNvbHZlXG5cdCAqIEBwYXJhbSBwcmVmZXJyZWRHcm91cCBUaGUgZ3JvdXAgeW91IHdhbnQgdG8gb3BlbiB0aGUgZWRpdG9yIGluXG5cdCAqIEByZXR1cm5zIEFuIEVkaXRvcklucHV0V2l0aE9wdGlvbnNBbmRHcm91cCBpZiB0aGVyZSBpcyBhbiBhdmFpbGFibGUgZWRpdG9yIG9yIGEgc3RhdHVzIG9mIGhvdyB0byBwcm9jZWVkXG5cdCAqL1xuXHRyZXNvbHZlRWRpdG9yKGVkaXRvcjogSVVudHlwZWRFZGl0b3JJbnB1dCwgcHJlZmVycmVkR3JvdXA6IFByZWZlcnJlZEdyb3VwIHwgdW5kZWZpbmVkKTogUHJvbWlzZTxSZXNvbHZlZEVkaXRvcj47XG5cblx0LyoqXG5cdCAqIEdpdmVuIGEgcmVzb3VyY2UgcmV0dXJucyBhbGwgdGhlIGVkaXRvciBpZHMgdGhhdCBtYXRjaCB0aGF0IHJlc291cmNlLiBJZiB0aGVyZSBpcyBleGNsdXNpdmUgZWRpdG9yIHdlIHJldHVybiBhbiBlbXB0eSBhcnJheVxuXHQgKiBAcGFyYW0gcmVzb3VyY2UgVGhlIHJlc291cmNlXG5cdCAqIEByZXR1cm5zIEEgbGlzdCBvZiBlZGl0b3IgaWRzXG5cdCAqL1xuXHRnZXRFZGl0b3JzKHJlc291cmNlOiBVUkkpOiBSZWdpc3RlcmVkRWRpdG9ySW5mb1tdO1xuXG5cdC8qKlxuXHQgKiBBIHNldCBvZiBhbGwgdGhlIGVkaXRvcnMgdGhhdCBhcmUgcmVnaXN0ZXJlZCB0byB0aGUgZWRpdG9yIHJlc29sdmVyLlxuXHQgKi9cblx0Z2V0RWRpdG9ycygpOiBSZWdpc3RlcmVkRWRpdG9ySW5mb1tdO1xuXG5cdC8qKlxuXHQgKiBHZXQgYSBjb21wbGV0ZSBsaXN0IG9mIGVkaXRvciBhc3NvY2lhdGlvbnMuXG5cdCAqL1xuXHRnZXRBbGxVc2VyQXNzb2NpYXRpb25zKCk6IEVkaXRvckFzc29jaWF0aW9ucztcbn1cblxuLy8jZW5kcmVnaW9uXG5cbi8vI3JlZ2lvbiBVdGlsIGZ1bmN0aW9uc1xuZXhwb3J0IGZ1bmN0aW9uIHByaW9yaXR5VG9SYW5rKHByaW9yaXR5OiBSZWdpc3RlcmVkRWRpdG9yUHJpb3JpdHkpOiBudW1iZXIge1xuXHRzd2l0Y2ggKHByaW9yaXR5KSB7XG5cdFx0Y2FzZSBSZWdpc3RlcmVkRWRpdG9yUHJpb3JpdHkuZXhjbHVzaXZlOlxuXHRcdFx0cmV0dXJuIDU7XG5cdFx0Y2FzZSBSZWdpc3RlcmVkRWRpdG9yUHJpb3JpdHkuZGVmYXVsdDpcblx0XHRcdHJldHVybiA0O1xuXHRcdGNhc2UgUmVnaXN0ZXJlZEVkaXRvclByaW9yaXR5LmJ1aWx0aW46XG5cdFx0XHRyZXR1cm4gMztcblx0XHQvLyBUZXh0IGVkaXRvciBpcyBwcmlvcml0eSAyXG5cdFx0Y2FzZSBSZWdpc3RlcmVkRWRpdG9yUHJpb3JpdHkub3B0aW9uOlxuXHRcdGRlZmF1bHQ6XG5cdFx0XHRyZXR1cm4gMTtcblx0fVxufVxuXG5leHBvcnQgZnVuY3Rpb24gZ2xvYk1hdGNoZXNSZXNvdXJjZShnbG9iUGF0dGVybjogc3RyaW5nIHwgZ2xvYi5JUmVsYXRpdmVQYXR0ZXJuLCByZXNvdXJjZTogVVJJKTogYm9vbGVhbiB7XG5cdGNvbnN0IGV4Y2x1ZGVkU2NoZW1lcyA9IG5ldyBTZXQoW1xuXHRcdFNjaGVtYXMuZXh0ZW5zaW9uLFxuXHRcdFNjaGVtYXMud2Vidmlld1BhbmVsLFxuXHRcdFNjaGVtYXMudnNjb2RlV29ya3NwYWNlVHJ1c3QsXG5cdFx0U2NoZW1hcy52c2NvZGVTZXR0aW5nc1xuXHRdKTtcblx0Ly8gV2Ugd2FudCB0byBzYXkgdGhhdCB0aGUgYWJvdmUgc2NoZW1lcyBtYXRjaCBubyBnbG9iIHBhdHRlcm5zXG5cdGlmIChleGNsdWRlZFNjaGVtZXMuaGFzKHJlc291cmNlLnNjaGVtZSkpIHtcblx0XHRyZXR1cm4gZmFsc2U7XG5cdH1cblx0Y29uc3QgbWF0Y2hPblBhdGggPSB0eXBlb2YgZ2xvYlBhdHRlcm4gPT09ICdzdHJpbmcnICYmIGdsb2JQYXR0ZXJuLmluZGV4T2YocG9zaXguc2VwKSA+PSAwO1xuXHRjb25zdCB0YXJnZXQgPSBtYXRjaE9uUGF0aCA/IGAke3Jlc291cmNlLnNjaGVtZX06JHtyZXNvdXJjZS5wYXRofWAgOiBiYXNlbmFtZShyZXNvdXJjZSk7XG5cdHJldHVybiBnbG9iLm1hdGNoKGdsb2JQYXR0ZXJuLCB0YXJnZXQsIHsgaWdub3JlQ2FzZTogdHJ1ZSB9KTtcbn1cbi8vI2VuZHJlZ2lvblxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFzQ007SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXRDTjs7OztBQUtBLE9BQU8sS0FBS0UsSUFBSSxNQUFNLGlDQUFpQztBQUd2RCxTQUFTQyxP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

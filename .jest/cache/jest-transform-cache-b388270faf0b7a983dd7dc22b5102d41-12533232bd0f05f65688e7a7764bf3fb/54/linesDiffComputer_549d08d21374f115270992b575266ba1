@@ -1,0 +1,282 @@
+b7f98cf679745ef00ebe115f3fa38a4a
+/* istanbul ignore next */
+function cov_244e2koymp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputer.ts";
+  var hash = "a6632b536a37460b7188b6c33755183c4cc6770f";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputer.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 31
+        }
+      },
+      "1": {
+        start: {
+          line: 21,
+          column: 8
+        },
+        end: {
+          line: 21,
+          column: 27
+        }
+      },
+      "2": {
+        start: {
+          line: 22,
+          column: 8
+        },
+        end: {
+          line: 22,
+          column: 37
+        }
+      },
+      "3": {
+        start: {
+          line: 34,
+          column: 8
+        },
+        end: {
+          line: 34,
+          column: 49
+        }
+      },
+      "4": {
+        start: {
+          line: 35,
+          column: 8
+        },
+        end: {
+          line: 35,
+          column: 31
+        }
+      },
+      "5": {
+        start: {
+          line: 38,
+          column: 8
+        },
+        end: {
+          line: 38,
+          column: 92
+        }
+      },
+      "6": {
+        start: {
+          line: 38,
+          column: 81
+        },
+        end: {
+          line: 38,
+          column: 89
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 16
+          },
+          end: {
+            line: 23,
+            column: 5
+          }
+        },
+        line: 19
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 33,
+            column: 4
+          },
+          end: {
+            line: 33,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 33,
+            column: 43
+          },
+          end: {
+            line: 36,
+            column: 5
+          }
+        },
+        line: 33
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 37,
+            column: 4
+          },
+          end: {
+            line: 37,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 37,
+            column: 11
+          },
+          end: {
+            line: 39,
+            column: 5
+          }
+        },
+        line: 37
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 38,
+            column: 76
+          },
+          end: {
+            line: 38,
+            column: 77
+          }
+        },
+        loc: {
+          start: {
+            line: 38,
+            column: 81
+          },
+          end: {
+            line: 38,
+            column: 89
+          }
+        },
+        line: 38
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputer.ts",
+      mappings: "AAAA;;;gGAGgG;AAehG,MAAM,OAAO,SAAS;IAEX;IAMA;IAMA;IAbV,YACU,OAA4C;IAErD;;;OAGG;IACM,KAA2B;IAEpC;;;OAGG;IACM,UAAmB;QAZnB,YAAO,GAAP,OAAO,CAAqC;QAM5C,UAAK,GAAL,KAAK,CAAsB;QAM3B,eAAU,GAAV,UAAU,CAAS;IAE7B,CAAC;CACD;AAED,MAAM,OAAO,SAAS;IACL,gBAAgB,CAAmB;IAEnD;;;;OAIG;IACa,OAAO,CAAsC;IAE7D,YACC,gBAAkC,EAClC,OAA4C;QAE5C,IAAI,CAAC,gBAAgB,GAAG,gBAAgB,CAAC;QACzC,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;IACxB,CAAC;IAEM,IAAI;QACV,OAAO,IAAI,SAAS,CAAC,IAAI,CAAC,gBAAgB,CAAC,IAAI,EAAE,EAAE,IAAI,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,CAAC,EAAE,CAAC,CAAC,CAAC,IAAI,EAAE,CAAC,CAAC,CAAC;IACrF,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/diff/linesDiffComputer.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { DetailedLineRangeMapping, LineRangeMapping } from './rangeMapping.js';\n\nexport interface ILinesDiffComputer {\n\tcomputeDiff(originalLines: string[], modifiedLines: string[], options: ILinesDiffComputerOptions): LinesDiff;\n}\n\nexport interface ILinesDiffComputerOptions {\n\treadonly ignoreTrimWhitespace: boolean;\n\treadonly maxComputationTimeMs: number;\n\treadonly computeMoves: boolean;\n\treadonly extendToSubwords?: boolean;\n}\n\nexport class LinesDiff {\n\tconstructor(\n\t\treadonly changes: readonly DetailedLineRangeMapping[],\n\n\t\t/**\n\t\t * Sorted by original line ranges.\n\t\t * The original line ranges and the modified line ranges must be disjoint (but can be touching).\n\t\t */\n\t\treadonly moves: readonly MovedText[],\n\n\t\t/**\n\t\t * Indicates if the time out was reached.\n\t\t * In that case, the diffs might be an approximation and the user should be asked to rerun the diff with more time.\n\t\t */\n\t\treadonly hitTimeout: boolean,\n\t) {\n\t}\n}\n\nexport class MovedText {\n\tpublic readonly lineRangeMapping: LineRangeMapping;\n\n\t/**\n\t * The diff from the original text to the moved text.\n\t * Must be contained in the original/modified line range.\n\t * Can be empty if the text didn't change (only moved).\n\t */\n\tpublic readonly changes: readonly DetailedLineRangeMapping[];\n\n\tconstructor(\n\t\tlineRangeMapping: LineRangeMapping,\n\t\tchanges: readonly DetailedLineRangeMapping[],\n\t) {\n\t\tthis.lineRangeMapping = lineRangeMapping;\n\t\tthis.changes = changes;\n\t}\n\n\tpublic flip(): MovedText {\n\t\treturn new MovedText(this.lineRangeMapping.flip(), this.changes.map(c => c.flip()));\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a6632b536a37460b7188b6c33755183c4cc6770f"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_244e2koymp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_244e2koymp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export class LinesDiff {
+  changes;
+  moves;
+  hitTimeout;
+  constructor(changes,
+  /**
+   * Sorted by original line ranges.
+   * The original line ranges and the modified line ranges must be disjoint (but can be touching).
+   */
+  moves,
+  /**
+   * Indicates if the time out was reached.
+   * In that case, the diffs might be an approximation and the user should be asked to rerun the diff with more time.
+   */
+  hitTimeout) {
+    /* istanbul ignore next */
+    cov_244e2koymp().f[0]++;
+    cov_244e2koymp().s[0]++;
+    this.changes = changes;
+    /* istanbul ignore next */
+    cov_244e2koymp().s[1]++;
+    this.moves = moves;
+    /* istanbul ignore next */
+    cov_244e2koymp().s[2]++;
+    this.hitTimeout = hitTimeout;
+  }
+}
+export class MovedText {
+  lineRangeMapping;
+  /**
+   * The diff from the original text to the moved text.
+   * Must be contained in the original/modified line range.
+   * Can be empty if the text didn't change (only moved).
+   */
+  changes;
+  constructor(lineRangeMapping, changes) {
+    /* istanbul ignore next */
+    cov_244e2koymp().f[1]++;
+    cov_244e2koymp().s[3]++;
+    this.lineRangeMapping = lineRangeMapping;
+    /* istanbul ignore next */
+    cov_244e2koymp().s[4]++;
+    this.changes = changes;
+  }
+  flip() {
+    /* istanbul ignore next */
+    cov_244e2koymp().f[2]++;
+    cov_244e2koymp().s[5]++;
+    return new MovedText(this.lineRangeMapping.flip(), this.changes.map(c => {
+      /* istanbul ignore next */
+      cov_244e2koymp().f[3]++;
+      cov_244e2koymp().s[6]++;
+      return c.flip();
+    }));
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJMaW5lc0RpZmYiLCJjaGFuZ2VzIiwibW92ZXMiLCJoaXRUaW1lb3V0IiwiY29uc3RydWN0b3IiLCJjb3ZfMjQ0ZTJrb3ltcCIsImYiLCJzIiwiTW92ZWRUZXh0IiwibGluZVJhbmdlTWFwcGluZyIsImZsaXAiLCJtYXAiLCJjIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2RpZmYvbGluZXNEaWZmQ29tcHV0ZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IERldGFpbGVkTGluZVJhbmdlTWFwcGluZywgTGluZVJhbmdlTWFwcGluZyB9IGZyb20gJy4vcmFuZ2VNYXBwaW5nLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJTGluZXNEaWZmQ29tcHV0ZXIge1xuXHRjb21wdXRlRGlmZihvcmlnaW5hbExpbmVzOiBzdHJpbmdbXSwgbW9kaWZpZWRMaW5lczogc3RyaW5nW10sIG9wdGlvbnM6IElMaW5lc0RpZmZDb21wdXRlck9wdGlvbnMpOiBMaW5lc0RpZmY7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUxpbmVzRGlmZkNvbXB1dGVyT3B0aW9ucyB7XG5cdHJlYWRvbmx5IGlnbm9yZVRyaW1XaGl0ZXNwYWNlOiBib29sZWFuO1xuXHRyZWFkb25seSBtYXhDb21wdXRhdGlvblRpbWVNczogbnVtYmVyO1xuXHRyZWFkb25seSBjb21wdXRlTW92ZXM6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGV4dGVuZFRvU3Vid29yZHM/OiBib29sZWFuO1xufVxuXG5leHBvcnQgY2xhc3MgTGluZXNEaWZmIHtcblx0Y29uc3RydWN0b3IoXG5cdFx0cmVhZG9ubHkgY2hhbmdlczogcmVhZG9ubHkgRGV0YWlsZWRMaW5lUmFuZ2VNYXBwaW5nW10sXG5cblx0XHQvKipcblx0XHQgKiBTb3J0ZWQgYnkgb3JpZ2luYWwgbGluZSByYW5nZXMuXG5cdFx0ICogVGhlIG9yaWdpbmFsIGxpbmUgcmFuZ2VzIGFuZCB0aGUgbW9kaWZpZWQgbGluZSByYW5nZXMgbXVzdCBiZSBkaXNqb2ludCAoYnV0IGNhbiBiZSB0b3VjaGluZykuXG5cdFx0ICovXG5cdFx0cmVhZG9ubHkgbW92ZXM6IHJlYWRvbmx5IE1vdmVkVGV4dFtdLFxuXG5cdFx0LyoqXG5cdFx0ICogSW5kaWNhdGVzIGlmIHRoZSB0aW1lIG91dCB3YXMgcmVhY2hlZC5cblx0XHQgKiBJbiB0aGF0IGNhc2UsIHRoZSBkaWZmcyBtaWdodCBiZSBhbiBhcHByb3hpbWF0aW9uIGFuZCB0aGUgdXNlciBzaG91bGQgYmUgYXNrZWQgdG8gcmVydW4gdGhlIGRpZmYgd2l0aCBtb3JlIHRpbWUuXG5cdFx0ICovXG5cdFx0cmVhZG9ubHkgaGl0VGltZW91dDogYm9vbGVhbixcblx0KSB7XG5cdH1cbn1cblxuZXhwb3J0IGNsYXNzIE1vdmVkVGV4dCB7XG5cdHB1YmxpYyByZWFkb25seSBsaW5lUmFuZ2VNYXBwaW5nOiBMaW5lUmFuZ2VNYXBwaW5nO1xuXG5cdC8qKlxuXHQgKiBUaGUgZGlmZiBmcm9tIHRoZSBvcmlnaW5hbCB0ZXh0IHRvIHRoZSBtb3ZlZCB0ZXh0LlxuXHQgKiBNdXN0IGJlIGNvbnRhaW5lZCBpbiB0aGUgb3JpZ2luYWwvbW9kaWZpZWQgbGluZSByYW5nZS5cblx0ICogQ2FuIGJlIGVtcHR5IGlmIHRoZSB0ZXh0IGRpZG4ndCBjaGFuZ2UgKG9ubHkgbW92ZWQpLlxuXHQgKi9cblx0cHVibGljIHJlYWRvbmx5IGNoYW5nZXM6IHJlYWRvbmx5IERldGFpbGVkTGluZVJhbmdlTWFwcGluZ1tdO1xuXG5cdGNvbnN0cnVjdG9yKFxuXHRcdGxpbmVSYW5nZU1hcHBpbmc6IExpbmVSYW5nZU1hcHBpbmcsXG5cdFx0Y2hhbmdlczogcmVhZG9ubHkgRGV0YWlsZWRMaW5lUmFuZ2VNYXBwaW5nW10sXG5cdCkge1xuXHRcdHRoaXMubGluZVJhbmdlTWFwcGluZyA9IGxpbmVSYW5nZU1hcHBpbmc7XG5cdFx0dGhpcy5jaGFuZ2VzID0gY2hhbmdlcztcblx0fVxuXG5cdHB1YmxpYyBmbGlwKCk6IE1vdmVkVGV4dCB7XG5cdFx0cmV0dXJuIG5ldyBNb3ZlZFRleHQodGhpcy5saW5lUmFuZ2VNYXBwaW5nLmZsaXAoKSwgdGhpcy5jaGFuZ2VzLm1hcChjID0+IGMuZmxpcCgpKSk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBa0JBLE9BQU0sTUFBT0EsU0FBUztFQUVYQyxPQUFBO0VBTUFDLEtBQUE7RUFNQUMsVUFBQTtFQWJWQyxZQUNVSCxPQUE0QztFQUVyRDs7OztFQUlTQyxLQUEyQjtFQUVwQzs7OztFQUlTQyxVQUFtQjtJQUFBO0lBQUFFLGNBQUEsR0FBQUMsQ0FBQTtJQUFBRCxjQUFBLEdBQUFFLENBQUE7SUFabkIsS0FBQU4sT0FBTyxHQUFQQSxPQUFPO0lBQXFDO0lBQUFJLGNBQUEsR0FBQUUsQ0FBQTtJQU01QyxLQUFBTCxLQUFLLEdBQUxBLEtBQUs7SUFBc0I7SUFBQUcsY0FBQSxHQUFBRSxDQUFBO0lBTTNCLEtBQUFKLFVBQVUsR0FBVkEsVUFBVTtFQUVwQjs7QUFHRCxPQUFNLE1BQU9LLFNBQVM7RUFDTEMsZ0JBQWdCO0VBRWhDOzs7OztFQUtnQlIsT0FBTztFQUV2QkcsWUFDQ0ssZ0JBQWtDLEVBQ2xDUixPQUE0QztJQUFBO0lBQUFJLGNBQUEsR0FBQUMsQ0FBQTtJQUFBRCxjQUFBLEdBQUFFLENBQUE7SUFFNUMsSUFBSSxDQUFDRSxnQkFBZ0IsR0FBR0EsZ0JBQWdCO0lBQUM7SUFBQUosY0FBQSxHQUFBRSxDQUFBO0lBQ3pDLElBQUksQ0FBQ04sT0FBTyxHQUFHQSxPQUFPO0VBQ3ZCO0VBRU9TLElBQUlBLENBQUE7SUFBQTtJQUFBTCxjQUFBLEdBQUFDLENBQUE7SUFBQUQsY0FBQSxHQUFBRSxDQUFBO0lBQ1YsT0FBTyxJQUFJQyxTQUFTLENBQUMsSUFBSSxDQUFDQyxnQkFBZ0IsQ0FBQ0MsSUFBSSxFQUFFLEVBQUUsSUFBSSxDQUFDVCxPQUFPLENBQUNVLEdBQUcsQ0FBQ0MsQ0FBQyxJQUFJO01BQUE7TUFBQVAsY0FBQSxHQUFBQyxDQUFBO01BQUFELGNBQUEsR0FBQUUsQ0FBQTtNQUFBLE9BQUFLLENBQUMsQ0FBQ0YsSUFBSSxFQUFFO0lBQUYsQ0FBRSxDQUFDLENBQUM7RUFDcEYiLCJpZ25vcmVMaXN0IjpbXX0=

@@ -1,0 +1,46 @@
+440a49a310f5b9203be6da52f79f46be
+/* istanbul ignore next */
+function cov_1mc2tj43e3() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/polyfillNestedWorker.protocol.ts";
+  var hash = "7c0b2f2f7b780d2c59994a099a207bb631acaba7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/polyfillNestedWorker.protocol.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/polyfillNestedWorker.protocol.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/extensions/common/polyfillNestedWorker.protocol.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n\nexport interface NewWorkerMessage {\n\ttype: '_newWorker';\n\tid: string;\n\tport: any /* MessagePort */;\n\turl: string;\n\toptions: any /* WorkerOptions */ | undefined;\n}\n\nexport interface TerminateWorkerMessage {\n\ttype: '_terminateWorker';\n\tid: string;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7c0b2f2f7b780d2c59994a099a207bb631acaba7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1mc2tj43e3 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1mc2tj43e3();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvZXh0ZW5zaW9ucy9jb21tb24vcG9seWZpbGxOZXN0ZWRXb3JrZXIucHJvdG9jb2wudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cblxuZXhwb3J0IGludGVyZmFjZSBOZXdXb3JrZXJNZXNzYWdlIHtcblx0dHlwZTogJ19uZXdXb3JrZXInO1xuXHRpZDogc3RyaW5nO1xuXHRwb3J0OiBhbnkgLyogTWVzc2FnZVBvcnQgKi87XG5cdHVybDogc3RyaW5nO1xuXHRvcHRpb25zOiBhbnkgLyogV29ya2VyT3B0aW9ucyAqLyB8IHVuZGVmaW5lZDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBUZXJtaW5hdGVXb3JrZXJNZXNzYWdlIHtcblx0dHlwZTogJ190ZXJtaW5hdGVXb3JrZXInO1xuXHRpZDogc3RyaW5nO1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

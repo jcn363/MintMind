@@ -1,0 +1,46 @@
+98b542a9662a76a07b7b889fcabb8fde
+/* istanbul ignore next */
+function cov_25eyvo8ruk() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/mcp/common/mcpPlatformTypes.ts";
+  var hash = "b259caabfa78a7db5e195480acb1b77a9f967298";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/mcp/common/mcpPlatformTypes.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/mcp/common/mcpPlatformTypes.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/mcp/common/mcpPlatformTypes.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IStringDictionary } from '../../../base/common/collections.js';\n\nexport interface IMcpDevModeConfig {\n\t/** Pattern or list of glob patterns to watch relative to the workspace folder. */\n\twatch?: string | string[];\n\t/** Whether to debug the MCP server when it's started. */\n\tdebug?: { type: 'node' } | { type: 'debugpy'; debugpyPath?: string };\n}\n\nexport const enum McpServerVariableType {\n\tPROMPT = 'promptString',\n\tPICK = 'pickString',\n}\n\nexport interface IMcpServerVariable {\n\treadonly id: string;\n\treadonly type: McpServerVariableType;\n\treadonly description: string;\n\treadonly password: boolean;\n\treadonly default?: string;\n\treadonly options?: readonly string[];\n\treadonly serverName?: string;\n}\n\nexport const enum McpServerType {\n\tLOCAL = 'stdio',\n\tREMOTE = 'http',\n}\n\nexport interface ICommonMcpServerConfiguration {\n\treadonly type: McpServerType;\n\treadonly version?: string;\n\treadonly gallery?: boolean | string;\n}\n\nexport interface IMcpStdioServerConfiguration extends ICommonMcpServerConfiguration {\n\treadonly type: McpServerType.LOCAL;\n\treadonly command: string;\n\treadonly args?: readonly string[];\n\treadonly env?: Record<string, string | number | null>;\n\treadonly envFile?: string;\n\treadonly cwd?: string;\n\treadonly dev?: IMcpDevModeConfig;\n}\n\nexport interface IMcpRemoteServerConfiguration extends ICommonMcpServerConfiguration {\n\treadonly type: McpServerType.REMOTE;\n\treadonly url: string;\n\treadonly headers?: Record<string, string>;\n\treadonly dev?: IMcpDevModeConfig;\n}\n\nexport type IMcpServerConfiguration = IMcpStdioServerConfiguration | IMcpRemoteServerConfiguration;\n\nexport interface IMcpServersConfiguration {\n\tservers?: IStringDictionary<IMcpServerConfiguration>;\n\tinputs?: IMcpServerVariable[];\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "b259caabfa78a7db5e195480acb1b77a9f967298"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_25eyvo8ruk = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_25eyvo8ruk();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9tY3AvY29tbW9uL21jcFBsYXRmb3JtVHlwZXMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IElTdHJpbmdEaWN0aW9uYXJ5IH0gZnJvbSAnLi4vLi4vLi4vYmFzZS9jb21tb24vY29sbGVjdGlvbnMuanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElNY3BEZXZNb2RlQ29uZmlnIHtcblx0LyoqIFBhdHRlcm4gb3IgbGlzdCBvZiBnbG9iIHBhdHRlcm5zIHRvIHdhdGNoIHJlbGF0aXZlIHRvIHRoZSB3b3Jrc3BhY2UgZm9sZGVyLiAqL1xuXHR3YXRjaD86IHN0cmluZyB8IHN0cmluZ1tdO1xuXHQvKiogV2hldGhlciB0byBkZWJ1ZyB0aGUgTUNQIHNlcnZlciB3aGVuIGl0J3Mgc3RhcnRlZC4gKi9cblx0ZGVidWc/OiB7IHR5cGU6ICdub2RlJyB9IHwgeyB0eXBlOiAnZGVidWdweSc7IGRlYnVncHlQYXRoPzogc3RyaW5nIH07XG59XG5cbmV4cG9ydCBjb25zdCBlbnVtIE1jcFNlcnZlclZhcmlhYmxlVHlwZSB7XG5cdFBST01QVCA9ICdwcm9tcHRTdHJpbmcnLFxuXHRQSUNLID0gJ3BpY2tTdHJpbmcnLFxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElNY3BTZXJ2ZXJWYXJpYWJsZSB7XG5cdHJlYWRvbmx5IGlkOiBzdHJpbmc7XG5cdHJlYWRvbmx5IHR5cGU6IE1jcFNlcnZlclZhcmlhYmxlVHlwZTtcblx0cmVhZG9ubHkgZGVzY3JpcHRpb246IHN0cmluZztcblx0cmVhZG9ubHkgcGFzc3dvcmQ6IGJvb2xlYW47XG5cdHJlYWRvbmx5IGRlZmF1bHQ/OiBzdHJpbmc7XG5cdHJlYWRvbmx5IG9wdGlvbnM/OiByZWFkb25seSBzdHJpbmdbXTtcblx0cmVhZG9ubHkgc2VydmVyTmFtZT86IHN0cmluZztcbn1cblxuZXhwb3J0IGNvbnN0IGVudW0gTWNwU2VydmVyVHlwZSB7XG5cdExPQ0FMID0gJ3N0ZGlvJyxcblx0UkVNT1RFID0gJ2h0dHAnLFxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDb21tb25NY3BTZXJ2ZXJDb25maWd1cmF0aW9uIHtcblx0cmVhZG9ubHkgdHlwZTogTWNwU2VydmVyVHlwZTtcblx0cmVhZG9ubHkgdmVyc2lvbj86IHN0cmluZztcblx0cmVhZG9ubHkgZ2FsbGVyeT86IGJvb2xlYW4gfCBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU1jcFN0ZGlvU2VydmVyQ29uZmlndXJhdGlvbiBleHRlbmRzIElDb21tb25NY3BTZXJ2ZXJDb25maWd1cmF0aW9uIHtcblx0cmVhZG9ubHkgdHlwZTogTWNwU2VydmVyVHlwZS5MT0NBTDtcblx0cmVhZG9ubHkgY29tbWFuZDogc3RyaW5nO1xuXHRyZWFkb25seSBhcmdzPzogcmVhZG9ubHkgc3RyaW5nW107XG5cdHJlYWRvbmx5IGVudj86IFJlY29yZDxzdHJpbmcsIHN0cmluZyB8IG51bWJlciB8IG51bGw+O1xuXHRyZWFkb25seSBlbnZGaWxlPzogc3RyaW5nO1xuXHRyZWFkb25seSBjd2Q/OiBzdHJpbmc7XG5cdHJlYWRvbmx5IGRldj86IElNY3BEZXZNb2RlQ29uZmlnO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElNY3BSZW1vdGVTZXJ2ZXJDb25maWd1cmF0aW9uIGV4dGVuZHMgSUNvbW1vbk1jcFNlcnZlckNvbmZpZ3VyYXRpb24ge1xuXHRyZWFkb25seSB0eXBlOiBNY3BTZXJ2ZXJUeXBlLlJFTU9URTtcblx0cmVhZG9ubHkgdXJsOiBzdHJpbmc7XG5cdHJlYWRvbmx5IGhlYWRlcnM/OiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+O1xuXHRyZWFkb25seSBkZXY/OiBJTWNwRGV2TW9kZUNvbmZpZztcbn1cblxuZXhwb3J0IHR5cGUgSU1jcFNlcnZlckNvbmZpZ3VyYXRpb24gPSBJTWNwU3RkaW9TZXJ2ZXJDb25maWd1cmF0aW9uIHwgSU1jcFJlbW90ZVNlcnZlckNvbmZpZ3VyYXRpb247XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU1jcFNlcnZlcnNDb25maWd1cmF0aW9uIHtcblx0c2VydmVycz86IElTdHJpbmdEaWN0aW9uYXJ5PElNY3BTZXJ2ZXJDb25maWd1cmF0aW9uPjtcblx0aW5wdXRzPzogSU1jcFNlcnZlclZhcmlhYmxlW107XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,46 @@
+2a64d1cb2b0c7273dde2304f6bb54b7c
+/* istanbul ignore next */
+function cov_17bjfy8yzn() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/model.ts";
+  var hash = "eb6c7e5dc6caaf9eefbd9077fa94304f00b622db";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/model.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/model.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/widget/multiDiffEditor/model.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event, IValueWithChangeEvent } from '../../../../base/common/event.js';\nimport { RefCounted } from '../diffEditor/utils.js';\nimport { IDiffEditorOptions } from '../../../common/config/editorOptions.js';\nimport { ITextModel } from '../../../common/model.js';\nimport { ContextKeyValue } from '../../../../platform/contextkey/common/contextkey.js';\n\nexport interface IMultiDiffEditorModel {\n\treadonly documents: IValueWithChangeEvent<readonly RefCounted<IDocumentDiffItem>[] | 'loading'>;\n\treadonly contextKeys?: Record<string, ContextKeyValue>;\n}\n\nexport interface IDocumentDiffItem {\n\t/**\n\t * undefined if the file was created.\n\t */\n\treadonly original: ITextModel | undefined;\n\n\t/**\n\t * undefined if the file was deleted.\n\t */\n\treadonly modified: ITextModel | undefined;\n\treadonly options?: IDiffEditorOptions;\n\treadonly onOptionsDidChange?: Event<void>;\n\treadonly contextKeys?: Record<string, ContextKeyValue>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "eb6c7e5dc6caaf9eefbd9077fa94304f00b622db"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_17bjfy8yzn = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_17bjfy8yzn();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci93aWRnZXQvbXVsdGlEaWZmRWRpdG9yL21vZGVsLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFdmVudCwgSVZhbHVlV2l0aENoYW5nZUV2ZW50IH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vZXZlbnQuanMnO1xuaW1wb3J0IHsgUmVmQ291bnRlZCB9IGZyb20gJy4uL2RpZmZFZGl0b3IvdXRpbHMuanMnO1xuaW1wb3J0IHsgSURpZmZFZGl0b3JPcHRpb25zIH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2NvbmZpZy9lZGl0b3JPcHRpb25zLmpzJztcbmltcG9ydCB7IElUZXh0TW9kZWwgfSBmcm9tICcuLi8uLi8uLi9jb21tb24vbW9kZWwuanMnO1xuaW1wb3J0IHsgQ29udGV4dEtleVZhbHVlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29udGV4dGtleS9jb21tb24vY29udGV4dGtleS5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU11bHRpRGlmZkVkaXRvck1vZGVsIHtcblx0cmVhZG9ubHkgZG9jdW1lbnRzOiBJVmFsdWVXaXRoQ2hhbmdlRXZlbnQ8cmVhZG9ubHkgUmVmQ291bnRlZDxJRG9jdW1lbnREaWZmSXRlbT5bXSB8ICdsb2FkaW5nJz47XG5cdHJlYWRvbmx5IGNvbnRleHRLZXlzPzogUmVjb3JkPHN0cmluZywgQ29udGV4dEtleVZhbHVlPjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRG9jdW1lbnREaWZmSXRlbSB7XG5cdC8qKlxuXHQgKiB1bmRlZmluZWQgaWYgdGhlIGZpbGUgd2FzIGNyZWF0ZWQuXG5cdCAqL1xuXHRyZWFkb25seSBvcmlnaW5hbDogSVRleHRNb2RlbCB8IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogdW5kZWZpbmVkIGlmIHRoZSBmaWxlIHdhcyBkZWxldGVkLlxuXHQgKi9cblx0cmVhZG9ubHkgbW9kaWZpZWQ6IElUZXh0TW9kZWwgfCB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IG9wdGlvbnM/OiBJRGlmZkVkaXRvck9wdGlvbnM7XG5cdHJlYWRvbmx5IG9uT3B0aW9uc0RpZENoYW5nZT86IEV2ZW50PHZvaWQ+O1xuXHRyZWFkb25seSBjb250ZXh0S2V5cz86IFJlY29yZDxzdHJpbmcsIENvbnRleHRLZXlWYWx1ZT47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

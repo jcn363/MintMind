@@ -1,0 +1,64 @@
+7886324caf383285bf31c46f95a84c5f
+/* istanbul ignore next */
+function cov_kh4jwg69v() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/remote/browser/remoteStartEntry.contribution.ts";
+  var hash = "4934c813d3545f56ef870ecc27f4e6b8633ae505";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/remote/browser/remoteStartEntry.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 86
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/remote/browser/remoteStartEntry.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,QAAQ,EAAE,MAAM,kDAAkD,CAAC;AAC5E,OAAO,EAAE,UAAU,IAAI,mBAAmB,EAAmC,MAAM,kCAAkC,CAAC;AAEtH,OAAO,EAAE,gBAAgB,EAAE,MAAM,uBAAuB,CAAC;AAEzD,QAAQ,CAAC,EAAE,CAAkC,mBAAmB,CAAC,SAAS,CAAC;KACzE,6BAA6B,CAAC,gBAAgB,kCAA0B,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/remote/browser/remoteStartEntry.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Registry } from '../../../../platform/registry/common/platform.js';\nimport { Extensions as WorkbenchExtensions, IWorkbenchContributionsRegistry } from '../../../common/contributions.js';\nimport { LifecyclePhase } from '../../../services/lifecycle/common/lifecycle.js';\nimport { RemoteStartEntry } from './remoteStartEntry.js';\n\nRegistry.as<IWorkbenchContributionsRegistry>(WorkbenchExtensions.Workbench)\n\t.registerWorkbenchContribution(RemoteStartEntry, LifecyclePhase.Restored);\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4934c813d3545f56ef870ecc27f4e6b8633ae505"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_kh4jwg69v = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_kh4jwg69v();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Registry } from '../../../../platform/registry/common/platform.js';
+import { Extensions as WorkbenchExtensions } from '../../../common/contributions.js';
+import { RemoteStartEntry } from './remoteStartEntry.js';
+/* istanbul ignore next */
+cov_kh4jwg69v().s[0]++;
+Registry.as(WorkbenchExtensions.Workbench).registerWorkbenchContribution(RemoteStartEntry, 3 /* LifecyclePhase.Restored */);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJSZWdpc3RyeSIsIkV4dGVuc2lvbnMiLCJXb3JrYmVuY2hFeHRlbnNpb25zIiwiUmVtb3RlU3RhcnRFbnRyeSIsImNvdl9raDRqd2c2OXYiLCJzIiwiYXMiLCJXb3JrYmVuY2giLCJyZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvcmVtb3RlL2Jyb3dzZXIvcmVtb3RlU3RhcnRFbnRyeS5jb250cmlidXRpb24udHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFJlZ2lzdHJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vcmVnaXN0cnkvY29tbW9uL3BsYXRmb3JtLmpzJztcbmltcG9ydCB7IEV4dGVuc2lvbnMgYXMgV29ya2JlbmNoRXh0ZW5zaW9ucywgSVdvcmtiZW5jaENvbnRyaWJ1dGlvbnNSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9jb250cmlidXRpb25zLmpzJztcbmltcG9ydCB7IExpZmVjeWNsZVBoYXNlIH0gZnJvbSAnLi4vLi4vLi4vc2VydmljZXMvbGlmZWN5Y2xlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuaW1wb3J0IHsgUmVtb3RlU3RhcnRFbnRyeSB9IGZyb20gJy4vcmVtb3RlU3RhcnRFbnRyeS5qcyc7XG5cblJlZ2lzdHJ5LmFzPElXb3JrYmVuY2hDb250cmlidXRpb25zUmVnaXN0cnk+KFdvcmtiZW5jaEV4dGVuc2lvbnMuV29ya2JlbmNoKVxuXHQucmVnaXN0ZXJXb3JrYmVuY2hDb250cmlidXRpb24oUmVtb3RlU3RhcnRFbnRyeSwgTGlmZWN5Y2xlUGhhc2UuUmVzdG9yZWQpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFLQSxTQUFTQSxRQUFRLFFBQVEsa0RBQWtEO0FBQzNFLFNBQVNDLFVBQVUsSUFBSUMsbUJBQW1CLFFBQXlDLGtDQUFrQztBQUVySCxTQUFTQyxnQkFBZ0IsUUFBUSx1QkFBdUI7QUFBQztBQUFBQyxhQUFBLEdBQUFDLENBQUE7QUFFekRMLFFBQVEsQ0FBQ00sRUFBRSxDQUFrQ0osbUJBQW1CLENBQUNLLFNBQVMsQ0FBQyxDQUN6RUMsNkJBQTZCLENBQUNMLGdCQUFnQixrQ0FBMEIiLCJpZ25vcmVMaXN0IjpbXX0=

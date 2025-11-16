@@ -1,0 +1,245 @@
+66d47d0b17dc2e784e43d5e0c32e1295
+/* istanbul ignore next */
+function cov_16fsac06xz() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/common/userActivityRegistry.ts";
+  var hash = "13174ad87fbd719d5dd8e60579e20878c0359fc3";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/common/userActivityRegistry.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 11
+        },
+        end: {
+          line: 6,
+          column: 13
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 10
+        },
+        end: {
+          line: 9,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 8,
+          column: 29
+        }
+      },
+      "3": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 83
+        }
+      },
+      "4": {
+        start: {
+          line: 11,
+          column: 27
+        },
+        end: {
+          line: 11,
+          column: 82
+        }
+      },
+      "5": {
+        start: {
+          line: 12,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 36
+        }
+      },
+      "6": {
+        start: {
+          line: 13,
+          column: 8
+        },
+        end: {
+          line: 13,
+          column: 23
+        }
+      },
+      "7": {
+        start: {
+          line: 16,
+          column: 36
+        },
+        end: {
+          line: 16,
+          column: 62
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 10
+          },
+          end: {
+            line: 7,
+            column: 11
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 20
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 45
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 11,
+            column: 19
+          },
+          end: {
+            line: 11,
+            column: 20
+          }
+        },
+        loc: {
+          start: {
+            line: 11,
+            column: 27
+          },
+          end: {
+            line: 11,
+            column: 82
+          }
+        },
+        line: 11
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/common/userActivityRegistry.ts",
+      mappings: "AAAA;;;gGAGgG;AAKhG,MAAM,oBAAoB;IACjB,IAAI,GAAoE,EAAE,CAAC;IAE5E,GAAG,GAAG,CAAC,IAAmE,EAAE,EAAE;QACpF,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,IAAI,CAAC,CAAC;IACtB,CAAC,CAAC;IAEK,IAAI,CAAC,mBAAyC,EAAE,aAAoC;QAC1F,IAAI,CAAC,GAAG,GAAG,IAAI,CAAC,EAAE,CAAC,aAAa,CAAC,cAAc,CAAC,IAAI,EAAE,mBAAmB,CAAC,CAAC;QAC3E,IAAI,CAAC,IAAI,CAAC,OAAO,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;QAC5B,IAAI,CAAC,IAAI,GAAG,EAAE,CAAC;IAChB,CAAC;CACD;AAED,MAAM,CAAC,MAAM,oBAAoB,GAAG,IAAI,oBAAoB,EAAE,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/userActivity/common/userActivityRegistry.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IInstantiationService } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IUserActivityService } from './userActivityService.js';\n\nclass UserActivityRegistry {\n\tprivate todo: { new(s: IUserActivityService, ...args: unknown[]): unknown }[] = [];\n\n\tpublic add = (ctor: { new(s: IUserActivityService, ...args: unknown[]): unknown }) => {\n\t\tthis.todo.push(ctor);\n\t};\n\n\tpublic take(userActivityService: IUserActivityService, instantiation: IInstantiationService) {\n\t\tthis.add = ctor => instantiation.createInstance(ctor, userActivityService);\n\t\tthis.todo.forEach(this.add);\n\t\tthis.todo = [];\n\t}\n}\n\nexport const userActivityRegistry = new UserActivityRegistry();\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "13174ad87fbd719d5dd8e60579e20878c0359fc3"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_16fsac06xz = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_16fsac06xz();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+class UserActivityRegistry {
+  todo =
+  /* istanbul ignore next */
+  (cov_16fsac06xz().s[0]++, []);
+  add =
+  /* istanbul ignore next */
+  (cov_16fsac06xz().s[1]++, ctor => {
+    /* istanbul ignore next */
+    cov_16fsac06xz().f[0]++;
+    cov_16fsac06xz().s[2]++;
+    this.todo.push(ctor);
+  });
+  take(userActivityService, instantiation) {
+    /* istanbul ignore next */
+    cov_16fsac06xz().f[1]++;
+    cov_16fsac06xz().s[3]++;
+    this.add = ctor => {
+      /* istanbul ignore next */
+      cov_16fsac06xz().f[2]++;
+      cov_16fsac06xz().s[4]++;
+      return instantiation.createInstance(ctor, userActivityService);
+    };
+    /* istanbul ignore next */
+    cov_16fsac06xz().s[5]++;
+    this.todo.forEach(this.add);
+    /* istanbul ignore next */
+    cov_16fsac06xz().s[6]++;
+    this.todo = [];
+  }
+}
+export const userActivityRegistry =
+/* istanbul ignore next */
+(cov_16fsac06xz().s[7]++, new UserActivityRegistry());
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTZmc2FjMDZ4eiIsImFjdHVhbENvdmVyYWdlIiwiVXNlckFjdGl2aXR5UmVnaXN0cnkiLCJ0b2RvIiwicyIsImFkZCIsImN0b3IiLCJmIiwicHVzaCIsInRha2UiLCJ1c2VyQWN0aXZpdHlTZXJ2aWNlIiwiaW5zdGFudGlhdGlvbiIsImNyZWF0ZUluc3RhbmNlIiwiZm9yRWFjaCIsInVzZXJBY3Rpdml0eVJlZ2lzdHJ5Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvdXNlckFjdGl2aXR5L2NvbW1vbi91c2VyQWN0aXZpdHlSZWdpc3RyeS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUluc3RhbnRpYXRpb25TZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBJVXNlckFjdGl2aXR5U2VydmljZSB9IGZyb20gJy4vdXNlckFjdGl2aXR5U2VydmljZS5qcyc7XG5cbmNsYXNzIFVzZXJBY3Rpdml0eVJlZ2lzdHJ5IHtcblx0cHJpdmF0ZSB0b2RvOiB7IG5ldyhzOiBJVXNlckFjdGl2aXR5U2VydmljZSwgLi4uYXJnczogdW5rbm93bltdKTogdW5rbm93biB9W10gPSBbXTtcblxuXHRwdWJsaWMgYWRkID0gKGN0b3I6IHsgbmV3KHM6IElVc2VyQWN0aXZpdHlTZXJ2aWNlLCAuLi5hcmdzOiB1bmtub3duW10pOiB1bmtub3duIH0pID0+IHtcblx0XHR0aGlzLnRvZG8ucHVzaChjdG9yKTtcblx0fTtcblxuXHRwdWJsaWMgdGFrZSh1c2VyQWN0aXZpdHlTZXJ2aWNlOiBJVXNlckFjdGl2aXR5U2VydmljZSwgaW5zdGFudGlhdGlvbjogSUluc3RhbnRpYXRpb25TZXJ2aWNlKSB7XG5cdFx0dGhpcy5hZGQgPSBjdG9yID0+IGluc3RhbnRpYXRpb24uY3JlYXRlSW5zdGFuY2UoY3RvciwgdXNlckFjdGl2aXR5U2VydmljZSk7XG5cdFx0dGhpcy50b2RvLmZvckVhY2godGhpcy5hZGQpO1xuXHRcdHRoaXMudG9kbyA9IFtdO1xuXHR9XG59XG5cbmV4cG9ydCBjb25zdCB1c2VyQWN0aXZpdHlSZWdpc3RyeSA9IG5ldyBVc2VyQWN0aXZpdHlSZWdpc3RyeSgpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUFzQk87SUFBQUEsY0FBQSxZQUFBQSxDQUFBO01BQUEsT0FBQUMsY0FBQTtJQUFBO0VBQUE7RUFBQSxPQUFBQSxjQUFBO0FBQUE7QUFBQUQsY0FBQTtBQXRCUDs7OztBQVFBLE1BQU1FLG9CQUFvQjtFQUNqQkMsSUFBSTtFQUFBO0VBQUEsQ0FBQUgsY0FBQSxHQUFBSSxDQUFBLE9BQW9FLEVBQUU7RUFFM0VDLEdBQUc7RUFBQTtFQUFBLENBQUFMLGNBQUEsR0FBQUksQ0FBQSxPQUFJRSxJQUFtRSxJQUFJO0lBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQUksQ0FBQTtJQUNwRixJQUFJLENBQUNELElBQUksQ0FBQ0ssSUFBSSxDQUFDRixJQUFJLENBQUM7RUFDckIsQ0FBQztFQUVNRyxJQUFJQSxDQUFDQyxtQkFBeUMsRUFBRUMsYUFBb0M7SUFBQTtJQUFBWCxjQUFBLEdBQUFPLENBQUE7SUFBQVAsY0FBQSxHQUFBSSxDQUFBO0lBQzFGLElBQUksQ0FBQ0MsR0FBRyxHQUFHQyxJQUFJLElBQUk7TUFBQTtNQUFBTixjQUFBLEdBQUFPLENBQUE7TUFBQVAsY0FBQSxHQUFBSSxDQUFBO01BQUEsT0FBQU8sYUFBYSxDQUFDQyxjQUFjLENBQUNOLElBQUksRUFBRUksbUJBQW1CLENBQUM7SUFBRCxDQUFDO0lBQUM7SUFBQVYsY0FBQSxHQUFBSSxDQUFBO0lBQzNFLElBQUksQ0FBQ0QsSUFBSSxDQUFDVSxPQUFPLENBQUMsSUFBSSxDQUFDUixHQUFHLENBQUM7SUFBQztJQUFBTCxjQUFBLEdBQUFJLENBQUE7SUFDNUIsSUFBSSxDQUFDRCxJQUFJLEdBQUcsRUFBRTtFQUNmOztBQUdELE9BQU8sTUFBTVcsb0JBQW9CO0FBQUE7QUFBQSxDQUFBZCxjQUFBLEdBQUFJLENBQUEsT0FBRyxJQUFJRixvQkFBb0IsRUFBRSIsImlnbm9yZUxpc3QiOltdfQ==

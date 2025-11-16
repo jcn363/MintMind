@@ -1,0 +1,158 @@
+71f7e00a7fb4d0dd73f3c18fea755c44
+/* istanbul ignore next */
+function cov_26xyupjq1b() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/actions/common/menuResetAction.ts";
+  var hash = "92394110e22cc80f55f45bfade255c19c361762b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/actions/common/menuResetAction.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 16,
+          column: 11
+        }
+      },
+      "1": {
+        start: {
+          line: 19,
+          column: 8
+        },
+        end: {
+          line: 19,
+          column: 55
+        }
+      },
+      "2": {
+        start: {
+          line: 20,
+          column: 8
+        },
+        end: {
+          line: 20,
+          column: 75
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 18
+          },
+          end: {
+            line: 17,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 18,
+            column: 4
+          },
+          end: {
+            line: 18,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 18,
+            column: 18
+          },
+          end: {
+            line: 21,
+            column: 5
+          }
+        },
+        line: 18
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/actions/common/menuResetAction.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,SAAS,EAAE,MAAM,iBAAiB,CAAC;AAC5C,OAAO,EAAE,UAAU,EAAE,MAAM,+CAA+C,CAAC;AAC3E,OAAO,EAAE,OAAO,EAAE,YAAY,EAAE,MAAM,cAAc,CAAC;AAErD,OAAO,EAAE,WAAW,EAAE,MAAM,yBAAyB,CAAC;AAEtD,MAAM,OAAO,qBAAsB,SAAQ,OAAO;IAEjD;QACC,KAAK,CAAC;YACL,EAAE,EAAE,wBAAwB;YAC5B,KAAK,EAAE,SAAS,CAAC,OAAO,EAAE,iBAAiB,CAAC;YAC5C,QAAQ,EAAE,UAAU,CAAC,IAAI;YACzB,EAAE,EAAE,IAAI;SACR,CAAC,CAAC;IACJ,CAAC;IAED,GAAG,CAAC,QAA0B;QAC7B,QAAQ,CAAC,GAAG,CAAC,YAAY,CAAC,CAAC,iBAAiB,EAAE,CAAC;QAC/C,QAAQ,CAAC,GAAG,CAAC,WAAW,CAAC,CAAC,IAAI,CAAC,kCAAkC,CAAC,CAAC;IACpE,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/actions/common/menuResetAction.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { localize2 } from '../../../nls.js';\nimport { Categories } from '../../action/common/actionCommonCategories.js';\nimport { Action2, IMenuService } from './actions.js';\nimport { ServicesAccessor } from '../../instantiation/common/instantiation.js';\nimport { ILogService } from '../../log/common/log.js';\n\nexport class MenuHiddenStatesReset extends Action2 {\n\n\tconstructor() {\n\t\tsuper({\n\t\t\tid: 'menu.resetHiddenStates',\n\t\t\ttitle: localize2('title', \"Reset All Menus\"),\n\t\t\tcategory: Categories.View,\n\t\t\tf1: true\n\t\t});\n\t}\n\n\trun(accessor: ServicesAccessor): void {\n\t\taccessor.get(IMenuService).resetHiddenStates();\n\t\taccessor.get(ILogService).info('did RESET all menu hidden states');\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "92394110e22cc80f55f45bfade255c19c361762b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_26xyupjq1b = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_26xyupjq1b();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize2 } from '../../../nls.js';
+import { Categories } from '../../action/common/actionCommonCategories.js';
+import { Action2, IMenuService } from './actions.js';
+import { ILogService } from '../../log/common/log.js';
+export class MenuHiddenStatesReset extends Action2 {
+  constructor() {
+    /* istanbul ignore next */
+    cov_26xyupjq1b().f[0]++;
+    cov_26xyupjq1b().s[0]++;
+    super({
+      id: 'menu.resetHiddenStates',
+      title: localize2('title', "Reset All Menus"),
+      category: Categories.View,
+      f1: true
+    });
+  }
+  run(accessor) {
+    /* istanbul ignore next */
+    cov_26xyupjq1b().f[1]++;
+    cov_26xyupjq1b().s[1]++;
+    accessor.get(IMenuService).resetHiddenStates();
+    /* istanbul ignore next */
+    cov_26xyupjq1b().s[2]++;
+    accessor.get(ILogService).info('did RESET all menu hidden states');
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjZ4eXVwanExYiIsImFjdHVhbENvdmVyYWdlIiwibG9jYWxpemUyIiwiQ2F0ZWdvcmllcyIsIkFjdGlvbjIiLCJJTWVudVNlcnZpY2UiLCJJTG9nU2VydmljZSIsIk1lbnVIaWRkZW5TdGF0ZXNSZXNldCIsImNvbnN0cnVjdG9yIiwiZiIsInMiLCJpZCIsInRpdGxlIiwiY2F0ZWdvcnkiLCJWaWV3IiwiZjEiLCJydW4iLCJhY2Nlc3NvciIsImdldCIsInJlc2V0SGlkZGVuU3RhdGVzIiwiaW5mbyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvcGxhdGZvcm0vYWN0aW9ucy9jb21tb24vbWVudVJlc2V0QWN0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBsb2NhbGl6ZTIgfSBmcm9tICcuLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHsgQ2F0ZWdvcmllcyB9IGZyb20gJy4uLy4uL2FjdGlvbi9jb21tb24vYWN0aW9uQ29tbW9uQ2F0ZWdvcmllcy5qcyc7XG5pbXBvcnQgeyBBY3Rpb24yLCBJTWVudVNlcnZpY2UgfSBmcm9tICcuL2FjdGlvbnMuanMnO1xuaW1wb3J0IHsgU2VydmljZXNBY2Nlc3NvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUxvZ1NlcnZpY2UgfSBmcm9tICcuLi8uLi9sb2cvY29tbW9uL2xvZy5qcyc7XG5cbmV4cG9ydCBjbGFzcyBNZW51SGlkZGVuU3RhdGVzUmVzZXQgZXh0ZW5kcyBBY3Rpb24yIHtcblxuXHRjb25zdHJ1Y3RvcigpIHtcblx0XHRzdXBlcih7XG5cdFx0XHRpZDogJ21lbnUucmVzZXRIaWRkZW5TdGF0ZXMnLFxuXHRcdFx0dGl0bGU6IGxvY2FsaXplMigndGl0bGUnLCBcIlJlc2V0IEFsbCBNZW51c1wiKSxcblx0XHRcdGNhdGVnb3J5OiBDYXRlZ29yaWVzLlZpZXcsXG5cdFx0XHRmMTogdHJ1ZVxuXHRcdH0pO1xuXHR9XG5cblx0cnVuKGFjY2Vzc29yOiBTZXJ2aWNlc0FjY2Vzc29yKTogdm9pZCB7XG5cdFx0YWNjZXNzb3IuZ2V0KElNZW51U2VydmljZSkucmVzZXRIaWRkZW5TdGF0ZXMoKTtcblx0XHRhY2Nlc3Nvci5nZXQoSUxvZ1NlcnZpY2UpLmluZm8oJ2RpZCBSRVNFVCBhbGwgbWVudSBoaWRkZW4gc3RhdGVzJyk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CSztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbkJMOzs7O0FBS0EsU0FBU0UsU0FBUyxRQUFRLGlCQUFpQjtBQUMzQyxTQUFTQyxVQUFVLFFBQVEsK0NBQStDO0FBQzFFLFNBQVNDLE9BQU8sRUFBRUMsWUFBWSxRQUFRLGNBQWM7QUFFcEQsU0FBU0MsV0FBVyxRQUFRLHlCQUF5QjtBQUVyRCxPQUFNLE1BQU9DLHFCQUFzQixTQUFRSCxPQUFPO0VBRWpESSxZQUFBO0lBQUE7SUFBQVIsY0FBQSxHQUFBUyxDQUFBO0lBQUFULGNBQUEsR0FBQVUsQ0FBQTtJQUNDLEtBQUssQ0FBQztNQUNMQyxFQUFFLEVBQUUsd0JBQXdCO01BQzVCQyxLQUFLLEVBQUVWLFNBQVMsQ0FBQyxPQUFPLEVBQUUsaUJBQWlCLENBQUM7TUFDNUNXLFFBQVEsRUFBRVYsVUFBVSxDQUFDVyxJQUFJO01BQ3pCQyxFQUFFLEVBQUU7S0FDSixDQUFDO0VBQ0g7RUFFQUMsR0FBR0EsQ0FBQ0MsUUFBMEI7SUFBQTtJQUFBakIsY0FBQSxHQUFBUyxDQUFBO0lBQUFULGNBQUEsR0FBQVUsQ0FBQTtJQUM3Qk8sUUFBUSxDQUFDQyxHQUFHLENBQUNiLFlBQVksQ0FBQyxDQUFDYyxpQkFBaUIsRUFBRTtJQUFDO0lBQUFuQixjQUFBLEdBQUFVLENBQUE7SUFDL0NPLFFBQVEsQ0FBQ0MsR0FBRyxDQUFDWixXQUFXLENBQUMsQ0FBQ2MsSUFBSSxDQUFDLGtDQUFrQyxDQUFDO0VBQ25FIiwiaWdub3JlTGlzdCI6W119

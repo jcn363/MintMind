@@ -1,0 +1,113 @@
+3ac16821f9b63cd97668b49043ff0790
+/* istanbul ignore next */
+function cov_14g30o1ajf() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/typeAhead/common/terminalTypeAheadConfiguration.ts";
+  var hash = "efe894db79fbafdc3bd88db1ab069f4ee177fa9b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/typeAhead/common/terminalTypeAheadConfiguration.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 42
+        },
+        end: {
+          line: 6,
+          column: 71
+        }
+      },
+      "1": {
+        start: {
+          line: 7,
+          column: 46
+        },
+        end: {
+          line: 51,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/typeAhead/common/terminalTypeAheadConfiguration.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AAGjD,MAAM,CAAC,MAAM,0BAA0B,GAA0B,CAAC,KAAK,EAAE,IAAI,EAAE,MAAM,EAAE,MAAM,CAAC,CAAC;AAgB/F,MAAM,CAAC,MAAM,8BAA8B,GAAoD;IAC9F,4GAAsD,EAAE;QACvD,WAAW,EAAE,QAAQ,CAAC,+CAA+C,EAAE,+MAA+M,CAAC;QACvR,IAAI,EAAE,SAAS;QACf,OAAO,EAAE,CAAC,CAAC;QACX,OAAO,EAAE,EAAE;QACX,IAAI,EAAE,CAAC,SAAS,CAAC;KACjB;IACD,0FAA6C,EAAE;QAC9C,mBAAmB,EAAE,QAAQ,CAAC,sCAAsC,EAAE,2DAA2D,EAAE,mDAAmD,CAAC;QACvL,IAAI,EAAE,QAAQ;QACd,IAAI,EAAE,CAAC,IAAI,EAAE,KAAK,EAAE,MAAM,CAAC;QAC3B,gBAAgB,EAAE;YACjB,QAAQ,CAAC,yCAAyC,EAAE,gBAAgB,CAAC;YACrE,QAAQ,CAAC,0CAA0C,EAAE,iBAAiB,CAAC;YACvE,QAAQ,CAAC,2CAA2C,EAAE,oCAAoC,CAAC;SAC3F;QACD,OAAO,EAAE,KAAK;QACd,IAAI,EAAE,CAAC,SAAS,CAAC;KACjB;IACD,0GAAqD,EAAE;QACtD,WAAW,EAAE,QAAQ,CAAC,8CAA8C,EAAE,8FAA8F,CAAC;QACrK,IAAI,EAAE,OAAO;QACb,KAAK,EAAE;YACN,IAAI,EAAE,QAAQ;YACd,WAAW,EAAE,IAAI;SACjB;QACD,OAAO,EAAE,0BAA0B;QACnC,IAAI,EAAE,CAAC,SAAS,CAAC;KACjB;IACD,sFAA2C,EAAE;QAC5C,WAAW,EAAE,QAAQ,CAAC,oCAAoC,EAAE,6EAA6E,CAAC;QAC1I,OAAO,EAAE,KAAK;QACd,KAAK,EAAE;YACN;gBACC,IAAI,EAAE,CAAC,MAAM,EAAE,KAAK,EAAE,QAAQ,EAAE,YAAY,EAAE,UAAU,EAAE,SAAS,CAAC;aACpE;YACD;gBACC,IAAI,EAAE,QAAQ;gBACd,MAAM,EAAE,WAAW;aACnB;SACD;QACD,IAAI,EAAE,CAAC,SAAS,CAAC;KACjB;CACD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/typeAhead/common/terminalTypeAheadConfiguration.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IStringDictionary } from '../../../../../base/common/collections.js';\nimport { localize } from '../../../../../nls.js';\nimport type { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.js';\n\nexport const DEFAULT_LOCAL_ECHO_EXCLUDE: ReadonlyArray<string> = ['vim', 'vi', 'nano', 'tmux'];\n\nexport const enum TerminalTypeAheadSettingId {\n\tLocalEchoLatencyThreshold = 'terminal.integrated.localEchoLatencyThreshold',\n\tLocalEchoEnabled = 'terminal.integrated.localEchoEnabled',\n\tLocalEchoExcludePrograms = 'terminal.integrated.localEchoExcludePrograms',\n\tLocalEchoStyle = 'terminal.integrated.localEchoStyle',\n}\n\nexport interface ITerminalTypeAheadConfiguration {\n\tlocalEchoLatencyThreshold: number;\n\tlocalEchoExcludePrograms: ReadonlyArray<string>;\n\tlocalEchoEnabled: 'auto' | 'on' | 'off';\n\tlocalEchoStyle: 'bold' | 'dim' | 'italic' | 'underlined' | 'inverted' | string;\n}\n\nexport const terminalTypeAheadConfiguration: IStringDictionary<IConfigurationPropertySchema> = {\n\t[TerminalTypeAheadSettingId.LocalEchoLatencyThreshold]: {\n\t\tdescription: localize('terminal.integrated.localEchoLatencyThreshold', \"Length of network delay, in milliseconds, where local edits will be echoed on the terminal without waiting for server acknowledgement. If '0', local echo will always be on, and if '-1' it will be disabled.\"),\n\t\ttype: 'integer',\n\t\tminimum: -1,\n\t\tdefault: 30,\n\t\ttags: ['preview'],\n\t},\n\t[TerminalTypeAheadSettingId.LocalEchoEnabled]: {\n\t\tmarkdownDescription: localize('terminal.integrated.localEchoEnabled', \"When local echo should be enabled. This will override {0}\", '`#terminal.integrated.localEchoLatencyThreshold#`'),\n\t\ttype: 'string',\n\t\tenum: ['on', 'off', 'auto'],\n\t\tenumDescriptions: [\n\t\t\tlocalize('terminal.integrated.localEchoEnabled.on', \"Always enabled\"),\n\t\t\tlocalize('terminal.integrated.localEchoEnabled.off', \"Always disabled\"),\n\t\t\tlocalize('terminal.integrated.localEchoEnabled.auto', \"Enabled only for remote workspaces\")\n\t\t],\n\t\tdefault: 'off',\n\t\ttags: ['preview'],\n\t},\n\t[TerminalTypeAheadSettingId.LocalEchoExcludePrograms]: {\n\t\tdescription: localize('terminal.integrated.localEchoExcludePrograms', \"Local echo will be disabled when any of these program names are found in the terminal title.\"),\n\t\ttype: 'array',\n\t\titems: {\n\t\t\ttype: 'string',\n\t\t\tuniqueItems: true\n\t\t},\n\t\tdefault: DEFAULT_LOCAL_ECHO_EXCLUDE,\n\t\ttags: ['preview'],\n\t},\n\t[TerminalTypeAheadSettingId.LocalEchoStyle]: {\n\t\tdescription: localize('terminal.integrated.localEchoStyle', \"Terminal style of locally echoed text; either a font style or an RGB color.\"),\n\t\tdefault: 'dim',\n\t\tanyOf: [\n\t\t\t{\n\t\t\t\tenum: ['bold', 'dim', 'italic', 'underlined', 'inverted', '#ff0000'],\n\t\t\t},\n\t\t\t{\n\t\t\t\ttype: 'string',\n\t\t\t\tformat: 'color-hex',\n\t\t\t}\n\t\t],\n\t\ttags: ['preview'],\n\t},\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "efe894db79fbafdc3bd88db1ab069f4ee177fa9b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_14g30o1ajf = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_14g30o1ajf();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../../nls.js';
+export const DEFAULT_LOCAL_ECHO_EXCLUDE =
+/* istanbul ignore next */
+(cov_14g30o1ajf().s[0]++, ['vim', 'vi', 'nano', 'tmux']);
+export const terminalTypeAheadConfiguration =
+/* istanbul ignore next */
+(cov_14g30o1ajf().s[1]++, {
+  ["terminal.integrated.localEchoLatencyThreshold" /* TerminalTypeAheadSettingId.LocalEchoLatencyThreshold */]: {
+    description: localize('terminal.integrated.localEchoLatencyThreshold', "Length of network delay, in milliseconds, where local edits will be echoed on the terminal without waiting for server acknowledgement. If '0', local echo will always be on, and if '-1' it will be disabled."),
+    type: 'integer',
+    minimum: -1,
+    default: 30,
+    tags: ['preview']
+  },
+  ["terminal.integrated.localEchoEnabled" /* TerminalTypeAheadSettingId.LocalEchoEnabled */]: {
+    markdownDescription: localize('terminal.integrated.localEchoEnabled', "When local echo should be enabled. This will override {0}", '`#terminal.integrated.localEchoLatencyThreshold#`'),
+    type: 'string',
+    enum: ['on', 'off', 'auto'],
+    enumDescriptions: [localize('terminal.integrated.localEchoEnabled.on', "Always enabled"), localize('terminal.integrated.localEchoEnabled.off', "Always disabled"), localize('terminal.integrated.localEchoEnabled.auto', "Enabled only for remote workspaces")],
+    default: 'off',
+    tags: ['preview']
+  },
+  ["terminal.integrated.localEchoExcludePrograms" /* TerminalTypeAheadSettingId.LocalEchoExcludePrograms */]: {
+    description: localize('terminal.integrated.localEchoExcludePrograms', "Local echo will be disabled when any of these program names are found in the terminal title."),
+    type: 'array',
+    items: {
+      type: 'string',
+      uniqueItems: true
+    },
+    default: DEFAULT_LOCAL_ECHO_EXCLUDE,
+    tags: ['preview']
+  },
+  ["terminal.integrated.localEchoStyle" /* TerminalTypeAheadSettingId.LocalEchoStyle */]: {
+    description: localize('terminal.integrated.localEchoStyle', "Terminal style of locally echoed text; either a font style or an RGB color."),
+    default: 'dim',
+    anyOf: [{
+      enum: ['bold', 'dim', 'italic', 'underlined', 'inverted', '#ff0000']
+    }, {
+      type: 'string',
+      format: 'color-hex'
+    }],
+    tags: ['preview']
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMTRnMzBvMWFqZiIsImFjdHVhbENvdmVyYWdlIiwibG9jYWxpemUiLCJERUZBVUxUX0xPQ0FMX0VDSE9fRVhDTFVERSIsInMiLCJ0ZXJtaW5hbFR5cGVBaGVhZENvbmZpZ3VyYXRpb24iLCJkZXNjcmlwdGlvbiIsInR5cGUiLCJtaW5pbXVtIiwiZGVmYXVsdCIsInRhZ3MiLCJtYXJrZG93bkRlc2NyaXB0aW9uIiwiZW51bSIsImVudW1EZXNjcmlwdGlvbnMiLCJpdGVtcyIsInVuaXF1ZUl0ZW1zIiwiYW55T2YiLCJmb3JtYXQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3Rlcm1pbmFsQ29udHJpYi90eXBlQWhlYWQvY29tbW9uL3Rlcm1pbmFsVHlwZUFoZWFkQ29uZmlndXJhdGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHR5cGUgeyBJU3RyaW5nRGljdGlvbmFyeSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2NvbGxlY3Rpb25zLmpzJztcbmltcG9ydCB7IGxvY2FsaXplIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vbmxzLmpzJztcbmltcG9ydCB0eXBlIHsgSUNvbmZpZ3VyYXRpb25Qcm9wZXJ0eVNjaGVtYSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbmZpZ3VyYXRpb24vY29tbW9uL2NvbmZpZ3VyYXRpb25SZWdpc3RyeS5qcyc7XG5cbmV4cG9ydCBjb25zdCBERUZBVUxUX0xPQ0FMX0VDSE9fRVhDTFVERTogUmVhZG9ubHlBcnJheTxzdHJpbmc+ID0gWyd2aW0nLCAndmknLCAnbmFubycsICd0bXV4J107XG5cbmV4cG9ydCBjb25zdCBlbnVtIFRlcm1pbmFsVHlwZUFoZWFkU2V0dGluZ0lkIHtcblx0TG9jYWxFY2hvTGF0ZW5jeVRocmVzaG9sZCA9ICd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmxvY2FsRWNob0xhdGVuY3lUaHJlc2hvbGQnLFxuXHRMb2NhbEVjaG9FbmFibGVkID0gJ3Rlcm1pbmFsLmludGVncmF0ZWQubG9jYWxFY2hvRW5hYmxlZCcsXG5cdExvY2FsRWNob0V4Y2x1ZGVQcm9ncmFtcyA9ICd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmxvY2FsRWNob0V4Y2x1ZGVQcm9ncmFtcycsXG5cdExvY2FsRWNob1N0eWxlID0gJ3Rlcm1pbmFsLmludGVncmF0ZWQubG9jYWxFY2hvU3R5bGUnLFxufVxuXG5leHBvcnQgaW50ZXJmYWNlIElUZXJtaW5hbFR5cGVBaGVhZENvbmZpZ3VyYXRpb24ge1xuXHRsb2NhbEVjaG9MYXRlbmN5VGhyZXNob2xkOiBudW1iZXI7XG5cdGxvY2FsRWNob0V4Y2x1ZGVQcm9ncmFtczogUmVhZG9ubHlBcnJheTxzdHJpbmc+O1xuXHRsb2NhbEVjaG9FbmFibGVkOiAnYXV0bycgfCAnb24nIHwgJ29mZic7XG5cdGxvY2FsRWNob1N0eWxlOiAnYm9sZCcgfCAnZGltJyB8ICdpdGFsaWMnIHwgJ3VuZGVybGluZWQnIHwgJ2ludmVydGVkJyB8IHN0cmluZztcbn1cblxuZXhwb3J0IGNvbnN0IHRlcm1pbmFsVHlwZUFoZWFkQ29uZmlndXJhdGlvbjogSVN0cmluZ0RpY3Rpb25hcnk8SUNvbmZpZ3VyYXRpb25Qcm9wZXJ0eVNjaGVtYT4gPSB7XG5cdFtUZXJtaW5hbFR5cGVBaGVhZFNldHRpbmdJZC5Mb2NhbEVjaG9MYXRlbmN5VGhyZXNob2xkXToge1xuXHRcdGRlc2NyaXB0aW9uOiBsb2NhbGl6ZSgndGVybWluYWwuaW50ZWdyYXRlZC5sb2NhbEVjaG9MYXRlbmN5VGhyZXNob2xkJywgXCJMZW5ndGggb2YgbmV0d29yayBkZWxheSwgaW4gbWlsbGlzZWNvbmRzLCB3aGVyZSBsb2NhbCBlZGl0cyB3aWxsIGJlIGVjaG9lZCBvbiB0aGUgdGVybWluYWwgd2l0aG91dCB3YWl0aW5nIGZvciBzZXJ2ZXIgYWNrbm93bGVkZ2VtZW50LiBJZiAnMCcsIGxvY2FsIGVjaG8gd2lsbCBhbHdheXMgYmUgb24sIGFuZCBpZiAnLTEnIGl0IHdpbGwgYmUgZGlzYWJsZWQuXCIpLFxuXHRcdHR5cGU6ICdpbnRlZ2VyJyxcblx0XHRtaW5pbXVtOiAtMSxcblx0XHRkZWZhdWx0OiAzMCxcblx0XHR0YWdzOiBbJ3ByZXZpZXcnXSxcblx0fSxcblx0W1Rlcm1pbmFsVHlwZUFoZWFkU2V0dGluZ0lkLkxvY2FsRWNob0VuYWJsZWRdOiB7XG5cdFx0bWFya2Rvd25EZXNjcmlwdGlvbjogbG9jYWxpemUoJ3Rlcm1pbmFsLmludGVncmF0ZWQubG9jYWxFY2hvRW5hYmxlZCcsIFwiV2hlbiBsb2NhbCBlY2hvIHNob3VsZCBiZSBlbmFibGVkLiBUaGlzIHdpbGwgb3ZlcnJpZGUgezB9XCIsICdgI3Rlcm1pbmFsLmludGVncmF0ZWQubG9jYWxFY2hvTGF0ZW5jeVRocmVzaG9sZCNgJyksXG5cdFx0dHlwZTogJ3N0cmluZycsXG5cdFx0ZW51bTogWydvbicsICdvZmYnLCAnYXV0byddLFxuXHRcdGVudW1EZXNjcmlwdGlvbnM6IFtcblx0XHRcdGxvY2FsaXplKCd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmxvY2FsRWNob0VuYWJsZWQub24nLCBcIkFsd2F5cyBlbmFibGVkXCIpLFxuXHRcdFx0bG9jYWxpemUoJ3Rlcm1pbmFsLmludGVncmF0ZWQubG9jYWxFY2hvRW5hYmxlZC5vZmYnLCBcIkFsd2F5cyBkaXNhYmxlZFwiKSxcblx0XHRcdGxvY2FsaXplKCd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmxvY2FsRWNob0VuYWJsZWQuYXV0bycsIFwiRW5hYmxlZCBvbmx5IGZvciByZW1vdGUgd29ya3NwYWNlc1wiKVxuXHRcdF0sXG5cdFx0ZGVmYXVsdDogJ29mZicsXG5cdFx0dGFnczogWydwcmV2aWV3J10sXG5cdH0sXG5cdFtUZXJtaW5hbFR5cGVBaGVhZFNldHRpbmdJZC5Mb2NhbEVjaG9FeGNsdWRlUHJvZ3JhbXNdOiB7XG5cdFx0ZGVzY3JpcHRpb246IGxvY2FsaXplKCd0ZXJtaW5hbC5pbnRlZ3JhdGVkLmxvY2FsRWNob0V4Y2x1ZGVQcm9ncmFtcycsIFwiTG9jYWwgZWNobyB3aWxsIGJlIGRpc2FibGVkIHdoZW4gYW55IG9mIHRoZXNlIHByb2dyYW0gbmFtZXMgYXJlIGZvdW5kIGluIHRoZSB0ZXJtaW5hbCB0aXRsZS5cIiksXG5cdFx0dHlwZTogJ2FycmF5Jyxcblx0XHRpdGVtczoge1xuXHRcdFx0dHlwZTogJ3N0cmluZycsXG5cdFx0XHR1bmlxdWVJdGVtczogdHJ1ZVxuXHRcdH0sXG5cdFx0ZGVmYXVsdDogREVGQVVMVF9MT0NBTF9FQ0hPX0VYQ0xVREUsXG5cdFx0dGFnczogWydwcmV2aWV3J10sXG5cdH0sXG5cdFtUZXJtaW5hbFR5cGVBaGVhZFNldHRpbmdJZC5Mb2NhbEVjaG9TdHlsZV06IHtcblx0XHRkZXNjcmlwdGlvbjogbG9jYWxpemUoJ3Rlcm1pbmFsLmludGVncmF0ZWQubG9jYWxFY2hvU3R5bGUnLCBcIlRlcm1pbmFsIHN0eWxlIG9mIGxvY2FsbHkgZWNob2VkIHRleHQ7IGVpdGhlciBhIGZvbnQgc3R5bGUgb3IgYW4gUkdCIGNvbG9yLlwiKSxcblx0XHRkZWZhdWx0OiAnZGltJyxcblx0XHRhbnlPZjogW1xuXHRcdFx0e1xuXHRcdFx0XHRlbnVtOiBbJ2JvbGQnLCAnZGltJywgJ2l0YWxpYycsICd1bmRlcmxpbmVkJywgJ2ludmVydGVkJywgJyNmZjAwMDAnXSxcblx0XHRcdH0sXG5cdFx0XHR7XG5cdFx0XHRcdHR5cGU6ICdzdHJpbmcnLFxuXHRcdFx0XHRmb3JtYXQ6ICdjb2xvci1oZXgnLFxuXHRcdFx0fVxuXHRcdF0sXG5cdFx0dGFnczogWydwcmV2aWV3J10sXG5cdH0sXG59O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBa0NFO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFsQ0Y7Ozs7QUFNQSxTQUFTRSxRQUFRLFFBQVEsdUJBQXVCO0FBR2hELE9BQU8sTUFBTUMsMEJBQTBCO0FBQUE7QUFBQSxDQUFBSCxjQUFBLEdBQUFJLENBQUEsT0FBMEIsQ0FBQyxLQUFLLEVBQUUsSUFBSSxFQUFFLE1BQU0sRUFBRSxNQUFNLENBQUM7QUFnQjlGLE9BQU8sTUFBTUMsOEJBQThCO0FBQUE7QUFBQSxDQUFBTCxjQUFBLEdBQUFJLENBQUEsT0FBb0Q7RUFDOUYsOEdBQXdEO0lBQ3ZERSxXQUFXLEVBQUVKLFFBQVEsQ0FBQywrQ0FBK0MsRUFBRSwrTUFBK00sQ0FBQztJQUN2UkssSUFBSSxFQUFFLFNBQVM7SUFDZkMsT0FBTyxFQUFFLENBQUMsQ0FBQztJQUNYQyxPQUFPLEVBQUUsRUFBRTtJQUNYQyxJQUFJLEVBQUUsQ0FBQyxTQUFTO0dBQ2hCO0VBQ0QsNEZBQStDO0lBQzlDQyxtQkFBbUIsRUFBRVQsUUFBUSxDQUFDLHNDQUFzQyxFQUFFLDJEQUEyRCxFQUFFLG1EQUFtRCxDQUFDO0lBQ3ZMSyxJQUFJLEVBQUUsUUFBUTtJQUNkSyxJQUFJLEVBQUUsQ0FBQyxJQUFJLEVBQUUsS0FBSyxFQUFFLE1BQU0sQ0FBQztJQUMzQkMsZ0JBQWdCLEVBQUUsQ0FDakJYLFFBQVEsQ0FBQyx5Q0FBeUMsRUFBRSxnQkFBZ0IsQ0FBQyxFQUNyRUEsUUFBUSxDQUFDLDBDQUEwQyxFQUFFLGlCQUFpQixDQUFDLEVBQ3ZFQSxRQUFRLENBQUMsMkNBQTJDLEVBQUUsb0NBQW9DLENBQUMsQ0FDM0Y7SUFDRE8sT0FBTyxFQUFFLEtBQUs7SUFDZEMsSUFBSSxFQUFFLENBQUMsU0FBUztHQUNoQjtFQUNELDRHQUF1RDtJQUN0REosV0FBVyxFQUFFSixRQUFRLENBQUMsOENBQThDLEVBQUUsOEZBQThGLENBQUM7SUFDcktLLElBQUksRUFBRSxPQUFPO0lBQ2JPLEtBQUssRUFBRTtNQUNOUCxJQUFJLEVBQUUsUUFBUTtNQUNkUSxXQUFXLEVBQUU7S0FDYjtJQUNETixPQUFPLEVBQUVOLDBCQUEwQjtJQUNuQ08sSUFBSSxFQUFFLENBQUMsU0FBUztHQUNoQjtFQUNELHdGQUE2QztJQUM1Q0osV0FBVyxFQUFFSixRQUFRLENBQUMsb0NBQW9DLEVBQUUsNkVBQTZFLENBQUM7SUFDMUlPLE9BQU8sRUFBRSxLQUFLO0lBQ2RPLEtBQUssRUFBRSxDQUNOO01BQ0NKLElBQUksRUFBRSxDQUFDLE1BQU0sRUFBRSxLQUFLLEVBQUUsUUFBUSxFQUFFLFlBQVksRUFBRSxVQUFVLEVBQUUsU0FBUztLQUNuRSxFQUNEO01BQ0NMLElBQUksRUFBRSxRQUFRO01BQ2RVLE1BQU0sRUFBRTtLQUNSLENBQ0Q7SUFDRFAsSUFBSSxFQUFFLENBQUMsU0FBUzs7Q0FFakIiLCJpZ25vcmVMaXN0IjpbXX0=

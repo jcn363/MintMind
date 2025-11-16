@@ -1,0 +1,91 @@
+fe006a910f2735fede6c1137bc7b77cb
+/* istanbul ignore next */
+function cov_39qn3qv8n() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/test/node/testApp.ts";
+  var hash = "74e056c5fc343ee0e7ce5ff5ab320a76e5aa0012";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/test/node/testApp.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 15
+        },
+        end: {
+          line: 7,
+          column: 33
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 16
+        },
+        end: {
+          line: 8,
+          column: 33
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 0
+        },
+        end: {
+          line: 9,
+          column: 57
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/parts/ipc/test/node/testApp.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,MAAM,EAAE,MAAM,sBAAsB,CAAC;AAC9C,OAAO,EAAE,WAAW,EAAE,WAAW,EAAE,MAAM,kBAAkB,CAAC;AAE5D,MAAM,MAAM,GAAG,IAAI,MAAM,CAAC,MAAM,CAAC,CAAC;AAClC,MAAM,OAAO,GAAG,IAAI,WAAW,EAAE,CAAC;AAClC,MAAM,CAAC,eAAe,CAAC,MAAM,EAAE,IAAI,WAAW,CAAC,OAAO,CAAC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/parts/ipc/test/node/testApp.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Server } from '../../node/ipc.cp.js';\nimport { TestChannel, TestService } from './testService.js';\n\nconst server = new Server('test');\nconst service = new TestService();\nserver.registerChannel('test', new TestChannel(service));\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "74e056c5fc343ee0e7ce5ff5ab320a76e5aa0012"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_39qn3qv8n = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_39qn3qv8n();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Server } from '../../node/ipc.cp.js';
+import { TestChannel, TestService } from './testService.js';
+const server =
+/* istanbul ignore next */
+(cov_39qn3qv8n().s[0]++, new Server('test'));
+const service =
+/* istanbul ignore next */
+(cov_39qn3qv8n().s[1]++, new TestService());
+/* istanbul ignore next */
+cov_39qn3qv8n().s[2]++;
+server.registerChannel('test', new TestChannel(service));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJTZXJ2ZXIiLCJUZXN0Q2hhbm5lbCIsIlRlc3RTZXJ2aWNlIiwic2VydmVyIiwiY292XzM5cW4zcXY4biIsInMiLCJzZXJ2aWNlIiwicmVnaXN0ZXJDaGFubmVsIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL3BhcnRzL2lwYy90ZXN0L25vZGUvdGVzdEFwcC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgU2VydmVyIH0gZnJvbSAnLi4vLi4vbm9kZS9pcGMuY3AuanMnO1xuaW1wb3J0IHsgVGVzdENoYW5uZWwsIFRlc3RTZXJ2aWNlIH0gZnJvbSAnLi90ZXN0U2VydmljZS5qcyc7XG5cbmNvbnN0IHNlcnZlciA9IG5ldyBTZXJ2ZXIoJ3Rlc3QnKTtcbmNvbnN0IHNlcnZpY2UgPSBuZXcgVGVzdFNlcnZpY2UoKTtcbnNlcnZlci5yZWdpc3RlckNoYW5uZWwoJ3Rlc3QnLCBuZXcgVGVzdENoYW5uZWwoc2VydmljZSkpO1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0EsTUFBTSxRQUFRLHNCQUFzQjtBQUM3QyxTQUFTQyxXQUFXLEVBQUVDLFdBQVcsUUFBUSxrQkFBa0I7QUFFM0QsTUFBTUMsTUFBTTtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUcsSUFBSUwsTUFBTSxDQUFDLE1BQU0sQ0FBQztBQUNqQyxNQUFNTSxPQUFPO0FBQUE7QUFBQSxDQUFBRixhQUFBLEdBQUFDLENBQUEsT0FBRyxJQUFJSCxXQUFXLEVBQUU7QUFBQztBQUFBRSxhQUFBLEdBQUFDLENBQUE7QUFDbENGLE1BQU0sQ0FBQ0ksZUFBZSxDQUFDLE1BQU0sRUFBRSxJQUFJTixXQUFXLENBQUNLLE9BQU8sQ0FBQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

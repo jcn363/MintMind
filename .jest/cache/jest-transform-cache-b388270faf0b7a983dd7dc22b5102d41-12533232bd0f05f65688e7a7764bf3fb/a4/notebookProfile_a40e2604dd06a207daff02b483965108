@@ -1,0 +1,182 @@
+35cbe4f234577be22e3469639af31c88
+/* istanbul ignore next */
+function cov_1dqpjvoevf() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile.ts";
+  var hash = "da5e8245fadab5649b94e2e28c02dff69e0fb6a7";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 35
+        },
+        end: {
+          line: 8,
+          column: 111
+        }
+      },
+      "1": {
+        start: {
+          line: 8,
+          column: 48
+        },
+        end: {
+          line: 8,
+          column: 111
+        }
+      },
+      "2": {
+        start: {
+          line: 9,
+          column: 18
+        },
+        end: {
+          line: 9,
+          column: 21
+        }
+      },
+      "3": {
+        start: {
+          line: 10,
+          column: 21
+        },
+        end: {
+          line: 27,
+          column: 1
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 8,
+            column: 35
+          },
+          end: {
+            line: 8,
+            column: 36
+          }
+        },
+        loc: {
+          start: {
+            line: 8,
+            column: 48
+          },
+          end: {
+            line: 8,
+            column: 111
+          }
+        },
+        line: 8
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 10,
+            column: 15
+          },
+          end: {
+            line: 10,
+            column: 16
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 21
+          },
+          end: {
+            line: 27,
+            column: 1
+          }
+        },
+        line: 10
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,gBAAgB,EAAE,MAAM,2CAA2C,CAAC;AAC7E,OAAO,EAAE,MAAM,EAAE,MAAM,uCAAuC,CAAC;AAC/D,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AAEjD,MAAM,0BAA0B,GAAG,CAAC,OAAe,EAAE,EAAE,CAAC,gBAAgB,CAAC,qBAAqB,EAAE,EAAE,OAAO,EAAE,CAAC,CAAC,QAAQ,EAAE,CAAC;AACxH,MAAM,SAAS,GAAG,GAAG,CAAC;AAEtB,eAAe,GAAG,EAAE,CAAC;;;yBAGI,0BAA0B,CAAC,SAAS,CAAC;gBAC9C,SAAS;IACrB,MAAM,CAAC,QAAQ,CAAC,SAAS,EAAE,SAAS,CAAC,CAAC;;yBAEjB,0BAA0B,CAAC,SAAS,CAAC;gBAC9C,SAAS;IACrB,MAAM,CAAC,QAAQ,CAAC,SAAS,EAAE,SAAS,CAAC,CAAC;;yBAEjB,0BAA0B,CAAC,OAAO,CAAC;gBAC5C,SAAS;IACrB,MAAM,CAAC,QAAQ,CAAC,OAAO,EAAE,OAAO,CAAC,CAAC;;;;CAIrC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/welcomeGettingStarted/common/media/notebookProfile.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createCommandUri } from '../../../../../base/common/htmlContent.js';\nimport { escape } from '../../../../../base/common/strings.js';\nimport { localize } from '../../../../../nls.js';\n\nconst createSetProfileCommandUri = (profile: string) => createCommandUri('notebook.setProfile', { profile }).toString();\nconst imageSize = 400;\n\nexport default () => `\n<vertically-centered>\n<checklist>\n\t<checkbox on-checked=\"${createSetProfileCommandUri('default')}\" checked-on=\"config.notebook.cellFocusIndicator == 'border' && config.notebook.insertToolbarLocation == 'both' && config.notebook.globalToolbar == false && config.notebook.compactView == true && config.notebook.showCellStatusBar == 'visible'\">\n\t\t<img width=\"${imageSize}\" src=\"./notebookThemes/default.png\"/>\n\t\t${escape(localize('default', \"Default\"))}\n\t</checkbox>\n\t<checkbox on-checked=\"${createSetProfileCommandUri('jupyter')}\" checked-on=\"config.notebook.cellFocusIndicator == 'gutter' && config.notebook.insertToolbarLocation == 'notebookToolbar' && config.notebook.globalToolbar == true && config.notebook.compactView == true  && config.notebook.showCellStatusBar == 'visible'\">\n\t\t<img width=\"${imageSize}\" src=\"./notebookThemes/jupyter.png\"/>\n\t\t${escape(localize('jupyter', \"Jupyter\"))}\n\t</checkbox>\n\t<checkbox on-checked=\"${createSetProfileCommandUri('colab')}\" checked-on=\"config.notebook.cellFocusIndicator == 'border' && config.notebook.insertToolbarLocation == 'betweenCells' && config.notebook.globalToolbar == false && config.notebook.compactView == false && config.notebook.showCellStatusBar == 'hidden'\">\n\t\t<img width=\"${imageSize}\" src=\"./notebookThemes/colab.png\"/>\n\t\t${escape(localize('colab', \"Colab\"))}\n\t</checkbox>\n</checklist>\n</vertically-centered>\n`;\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "da5e8245fadab5649b94e2e28c02dff69e0fb6a7"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1dqpjvoevf = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1dqpjvoevf();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createCommandUri } from '../../../../../base/common/htmlContent.js';
+import { escape } from '../../../../../base/common/strings.js';
+import { localize } from '../../../../../nls.js';
+/* istanbul ignore next */
+cov_1dqpjvoevf().s[0]++;
+const createSetProfileCommandUri = profile => {
+  /* istanbul ignore next */
+  cov_1dqpjvoevf().f[0]++;
+  cov_1dqpjvoevf().s[1]++;
+  return createCommandUri('notebook.setProfile', {
+    profile
+  }).toString();
+};
+const imageSize =
+/* istanbul ignore next */
+(cov_1dqpjvoevf().s[2]++, 400);
+export default () => {
+  /* istanbul ignore next */
+  cov_1dqpjvoevf().f[1]++;
+  cov_1dqpjvoevf().s[3]++;
+  return `
+<vertically-centered>
+<checklist>
+	<checkbox on-checked="${createSetProfileCommandUri('default')}" checked-on="config.notebook.cellFocusIndicator == 'border' && config.notebook.insertToolbarLocation == 'both' && config.notebook.globalToolbar == false && config.notebook.compactView == true && config.notebook.showCellStatusBar == 'visible'">
+		<img width="${imageSize}" src="./notebookThemes/default.png"/>
+		${escape(localize('default', "Default"))}
+	</checkbox>
+	<checkbox on-checked="${createSetProfileCommandUri('jupyter')}" checked-on="config.notebook.cellFocusIndicator == 'gutter' && config.notebook.insertToolbarLocation == 'notebookToolbar' && config.notebook.globalToolbar == true && config.notebook.compactView == true  && config.notebook.showCellStatusBar == 'visible'">
+		<img width="${imageSize}" src="./notebookThemes/jupyter.png"/>
+		${escape(localize('jupyter', "Jupyter"))}
+	</checkbox>
+	<checkbox on-checked="${createSetProfileCommandUri('colab')}" checked-on="config.notebook.cellFocusIndicator == 'border' && config.notebook.insertToolbarLocation == 'betweenCells' && config.notebook.globalToolbar == false && config.notebook.compactView == false && config.notebook.showCellStatusBar == 'hidden'">
+		<img width="${imageSize}" src="./notebookThemes/colab.png"/>
+		${escape(localize('colab', "Colab"))}
+	</checkbox>
+</checklist>
+</vertically-centered>
+`;
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVDb21tYW5kVXJpIiwiZXNjYXBlIiwibG9jYWxpemUiLCJjb3ZfMWRxcGp2b2V2ZiIsInMiLCJjcmVhdGVTZXRQcm9maWxlQ29tbWFuZFVyaSIsInByb2ZpbGUiLCJmIiwidG9TdHJpbmciLCJpbWFnZVNpemUiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3dlbGNvbWVHZXR0aW5nU3RhcnRlZC9jb21tb24vbWVkaWEvbm90ZWJvb2tQcm9maWxlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBjcmVhdGVDb21tYW5kVXJpIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vaHRtbENvbnRlbnQuanMnO1xuaW1wb3J0IHsgZXNjYXBlIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vc3RyaW5ncy5qcyc7XG5pbXBvcnQgeyBsb2NhbGl6ZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL25scy5qcyc7XG5cbmNvbnN0IGNyZWF0ZVNldFByb2ZpbGVDb21tYW5kVXJpID0gKHByb2ZpbGU6IHN0cmluZykgPT4gY3JlYXRlQ29tbWFuZFVyaSgnbm90ZWJvb2suc2V0UHJvZmlsZScsIHsgcHJvZmlsZSB9KS50b1N0cmluZygpO1xuY29uc3QgaW1hZ2VTaXplID0gNDAwO1xuXG5leHBvcnQgZGVmYXVsdCAoKSA9PiBgXG48dmVydGljYWxseS1jZW50ZXJlZD5cbjxjaGVja2xpc3Q+XG5cdDxjaGVja2JveCBvbi1jaGVja2VkPVwiJHtjcmVhdGVTZXRQcm9maWxlQ29tbWFuZFVyaSgnZGVmYXVsdCcpfVwiIGNoZWNrZWQtb249XCJjb25maWcubm90ZWJvb2suY2VsbEZvY3VzSW5kaWNhdG9yID09ICdib3JkZXInICYmIGNvbmZpZy5ub3RlYm9vay5pbnNlcnRUb29sYmFyTG9jYXRpb24gPT0gJ2JvdGgnICYmIGNvbmZpZy5ub3RlYm9vay5nbG9iYWxUb29sYmFyID09IGZhbHNlICYmIGNvbmZpZy5ub3RlYm9vay5jb21wYWN0VmlldyA9PSB0cnVlICYmIGNvbmZpZy5ub3RlYm9vay5zaG93Q2VsbFN0YXR1c0JhciA9PSAndmlzaWJsZSdcIj5cblx0XHQ8aW1nIHdpZHRoPVwiJHtpbWFnZVNpemV9XCIgc3JjPVwiLi9ub3RlYm9va1RoZW1lcy9kZWZhdWx0LnBuZ1wiLz5cblx0XHQke2VzY2FwZShsb2NhbGl6ZSgnZGVmYXVsdCcsIFwiRGVmYXVsdFwiKSl9XG5cdDwvY2hlY2tib3g+XG5cdDxjaGVja2JveCBvbi1jaGVja2VkPVwiJHtjcmVhdGVTZXRQcm9maWxlQ29tbWFuZFVyaSgnanVweXRlcicpfVwiIGNoZWNrZWQtb249XCJjb25maWcubm90ZWJvb2suY2VsbEZvY3VzSW5kaWNhdG9yID09ICdndXR0ZXInICYmIGNvbmZpZy5ub3RlYm9vay5pbnNlcnRUb29sYmFyTG9jYXRpb24gPT0gJ25vdGVib29rVG9vbGJhcicgJiYgY29uZmlnLm5vdGVib29rLmdsb2JhbFRvb2xiYXIgPT0gdHJ1ZSAmJiBjb25maWcubm90ZWJvb2suY29tcGFjdFZpZXcgPT0gdHJ1ZSAgJiYgY29uZmlnLm5vdGVib29rLnNob3dDZWxsU3RhdHVzQmFyID09ICd2aXNpYmxlJ1wiPlxuXHRcdDxpbWcgd2lkdGg9XCIke2ltYWdlU2l6ZX1cIiBzcmM9XCIuL25vdGVib29rVGhlbWVzL2p1cHl0ZXIucG5nXCIvPlxuXHRcdCR7ZXNjYXBlKGxvY2FsaXplKCdqdXB5dGVyJywgXCJKdXB5dGVyXCIpKX1cblx0PC9jaGVja2JveD5cblx0PGNoZWNrYm94IG9uLWNoZWNrZWQ9XCIke2NyZWF0ZVNldFByb2ZpbGVDb21tYW5kVXJpKCdjb2xhYicpfVwiIGNoZWNrZWQtb249XCJjb25maWcubm90ZWJvb2suY2VsbEZvY3VzSW5kaWNhdG9yID09ICdib3JkZXInICYmIGNvbmZpZy5ub3RlYm9vay5pbnNlcnRUb29sYmFyTG9jYXRpb24gPT0gJ2JldHdlZW5DZWxscycgJiYgY29uZmlnLm5vdGVib29rLmdsb2JhbFRvb2xiYXIgPT0gZmFsc2UgJiYgY29uZmlnLm5vdGVib29rLmNvbXBhY3RWaWV3ID09IGZhbHNlICYmIGNvbmZpZy5ub3RlYm9vay5zaG93Q2VsbFN0YXR1c0JhciA9PSAnaGlkZGVuJ1wiPlxuXHRcdDxpbWcgd2lkdGg9XCIke2ltYWdlU2l6ZX1cIiBzcmM9XCIuL25vdGVib29rVGhlbWVzL2NvbGFiLnBuZ1wiLz5cblx0XHQke2VzY2FwZShsb2NhbGl6ZSgnY29sYWInLCBcIkNvbGFiXCIpKX1cblx0PC9jaGVja2JveD5cbjwvY2hlY2tsaXN0PlxuPC92ZXJ0aWNhbGx5LWNlbnRlcmVkPlxuYDtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLGdCQUFnQixRQUFRLDJDQUEyQztBQUM1RSxTQUFTQyxNQUFNLFFBQVEsdUNBQXVDO0FBQzlELFNBQVNDLFFBQVEsUUFBUSx1QkFBdUI7QUFBQztBQUFBQyxjQUFBLEdBQUFDLENBQUE7QUFFakQsTUFBTUMsMEJBQTBCLEdBQUlDLE9BQWUsSUFBSztFQUFBO0VBQUFILGNBQUEsR0FBQUksQ0FBQTtFQUFBSixjQUFBLEdBQUFDLENBQUE7RUFBQSxPQUFBSixnQkFBZ0IsQ0FBQyxxQkFBcUIsRUFBRTtJQUFFTTtFQUFPLENBQUUsQ0FBQyxDQUFDRSxRQUFRLEVBQUU7QUFBRixDQUFFO0FBQ3ZILE1BQU1DLFNBQVM7QUFBQTtBQUFBLENBQUFOLGNBQUEsR0FBQUMsQ0FBQSxPQUFHLEdBQUc7QUFFckIsZUFBZSxNQUFNO0VBQUE7RUFBQUQsY0FBQSxHQUFBSSxDQUFBO0VBQUFKLGNBQUEsR0FBQUMsQ0FBQTtFQUFBOzs7eUJBR0lDLDBCQUEwQixDQUFDLFNBQVMsQ0FBQztnQkFDOUNJLFNBQVM7SUFDckJSLE1BQU0sQ0FBQ0MsUUFBUSxDQUFDLFNBQVMsRUFBRSxTQUFTLENBQUMsQ0FBQzs7eUJBRWpCRywwQkFBMEIsQ0FBQyxTQUFTLENBQUM7Z0JBQzlDSSxTQUFTO0lBQ3JCUixNQUFNLENBQUNDLFFBQVEsQ0FBQyxTQUFTLEVBQUUsU0FBUyxDQUFDLENBQUM7O3lCQUVqQkcsMEJBQTBCLENBQUMsT0FBTyxDQUFDO2dCQUM1Q0ksU0FBUztJQUNyQlIsTUFBTSxDQUFDQyxRQUFRLENBQUMsT0FBTyxFQUFFLE9BQU8sQ0FBQyxDQUFDOzs7O0NBSXJDO0NBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

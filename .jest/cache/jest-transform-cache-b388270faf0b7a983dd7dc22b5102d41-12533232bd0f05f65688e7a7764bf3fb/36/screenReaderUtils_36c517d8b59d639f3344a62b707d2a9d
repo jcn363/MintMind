@@ -1,0 +1,46 @@
+8fe412e76c5e1300d886e02625e05193
+/* istanbul ignore next */
+function cov_2mznuunzxa() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/screenReaderUtils.ts";
+  var hash = "d71200e84eef3b99f1e502a7dac125a21e9058d4";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/screenReaderUtils.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/screenReaderUtils.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/browser/controller/editContext/native/screenReaderUtils.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IComputedEditorOptions } from '../../../../common/config/editorOptions.js';\nimport { Selection } from '../../../../common/core/selection.js';\n\nexport interface IScreenReaderContent {\n\n\tdispose(): void;\n\n\t/**\n\t * Handle screen reader content before cutting the content\n\t */\n\tonWillCut(): void;\n\n\t/**\n\t * Handle screen reader content before pasting the content\n\t */\n\tonWillPaste(): void;\n\n\t/**\n\t * Handle focus changes\n\t */\n\tonFocusChange(newFocusValue: boolean): void;\n\n\t/**\n\t * Handle configuration changes\n\t */\n\tonConfigurationChanged(options: IComputedEditorOptions): void;\n\n\t/**\n\t * Update the screen reader content given the selection. It will update the content and set the range within the screen reader content if needed.\n\t */\n\tupdateScreenReaderContent(primarySelection: Selection): void;\n\n\t/**\n\t * Update the scroll top value of the screen reader content\n\t */\n\tupdateScrollTop(primarySelection: Selection): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "d71200e84eef3b99f1e502a7dac125a21e9058d4"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2mznuunzxa = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2mznuunzxa();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvYnJvd3Nlci9jb250cm9sbGVyL2VkaXRDb250ZXh0L25hdGl2ZS9zY3JlZW5SZWFkZXJVdGlscy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUNvbXB1dGVkRWRpdG9yT3B0aW9ucyB9IGZyb20gJy4uLy4uLy4uLy4uL2NvbW1vbi9jb25maWcvZWRpdG9yT3B0aW9ucy5qcyc7XG5pbXBvcnQgeyBTZWxlY3Rpb24gfSBmcm9tICcuLi8uLi8uLi8uLi9jb21tb24vY29yZS9zZWxlY3Rpb24uanMnO1xuXG5leHBvcnQgaW50ZXJmYWNlIElTY3JlZW5SZWFkZXJDb250ZW50IHtcblxuXHRkaXNwb3NlKCk6IHZvaWQ7XG5cblx0LyoqXG5cdCAqIEhhbmRsZSBzY3JlZW4gcmVhZGVyIGNvbnRlbnQgYmVmb3JlIGN1dHRpbmcgdGhlIGNvbnRlbnRcblx0ICovXG5cdG9uV2lsbEN1dCgpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBIYW5kbGUgc2NyZWVuIHJlYWRlciBjb250ZW50IGJlZm9yZSBwYXN0aW5nIHRoZSBjb250ZW50XG5cdCAqL1xuXHRvbldpbGxQYXN0ZSgpOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBIYW5kbGUgZm9jdXMgY2hhbmdlc1xuXHQgKi9cblx0b25Gb2N1c0NoYW5nZShuZXdGb2N1c1ZhbHVlOiBib29sZWFuKTogdm9pZDtcblxuXHQvKipcblx0ICogSGFuZGxlIGNvbmZpZ3VyYXRpb24gY2hhbmdlc1xuXHQgKi9cblx0b25Db25maWd1cmF0aW9uQ2hhbmdlZChvcHRpb25zOiBJQ29tcHV0ZWRFZGl0b3JPcHRpb25zKTogdm9pZDtcblxuXHQvKipcblx0ICogVXBkYXRlIHRoZSBzY3JlZW4gcmVhZGVyIGNvbnRlbnQgZ2l2ZW4gdGhlIHNlbGVjdGlvbi4gSXQgd2lsbCB1cGRhdGUgdGhlIGNvbnRlbnQgYW5kIHNldCB0aGUgcmFuZ2Ugd2l0aGluIHRoZSBzY3JlZW4gcmVhZGVyIGNvbnRlbnQgaWYgbmVlZGVkLlxuXHQgKi9cblx0dXBkYXRlU2NyZWVuUmVhZGVyQ29udGVudChwcmltYXJ5U2VsZWN0aW9uOiBTZWxlY3Rpb24pOiB2b2lkO1xuXG5cdC8qKlxuXHQgKiBVcGRhdGUgdGhlIHNjcm9sbCB0b3AgdmFsdWUgb2YgdGhlIHNjcmVlbiByZWFkZXIgY29udGVudFxuXHQgKi9cblx0dXBkYXRlU2Nyb2xsVG9wKHByaW1hcnlTZWxlY3Rpb246IFNlbGVjdGlvbik6IHZvaWQ7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

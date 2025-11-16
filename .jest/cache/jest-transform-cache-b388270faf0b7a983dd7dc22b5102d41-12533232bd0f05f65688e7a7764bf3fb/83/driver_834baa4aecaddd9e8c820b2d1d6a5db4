@@ -1,0 +1,47 @@
+c7766673ca4d9c5eb7c66daf823f2a35
+/* istanbul ignore next */
+function cov_2dinf6vpon() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/driver/common/driver.ts";
+  var hash = "60b5387e5bfe503fa675923f540fc6cf0cf35b63";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/driver/common/driver.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/driver/common/driver.ts",
+      mappings: "AAAA;;;gGAGgG;;AA6ChG,MAAM",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/driver/common/driver.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\n// !! Do not remove the following START and END markers, they are parsed by the smoketest build\n\n//*START\nexport interface IElement {\n\treadonly tagName: string;\n\treadonly className: string;\n\treadonly textContent: string;\n\treadonly attributes: { [name: string]: string };\n\treadonly children: IElement[];\n\treadonly top: number;\n\treadonly left: number;\n}\n\nexport interface ILocaleInfo {\n\treadonly language: string;\n\treadonly locale?: string;\n}\n\nexport interface ILocalizedStrings {\n\treadonly open: string;\n\treadonly close: string;\n\treadonly find: string;\n}\n\nexport interface ILogFile {\n\treadonly relativePath: string;\n\treadonly contents: string;\n}\n\nexport interface IWindowDriver {\n\tsetValue(selector: string, text: string): Promise<void>;\n\tisActiveElement(selector: string): Promise<boolean>;\n\tgetElements(selector: string, recursive: boolean): Promise<IElement[]>;\n\tgetElementXY(selector: string, xoffset?: number, yoffset?: number): Promise<{ x: number; y: number }>;\n\ttypeInEditor(selector: string, text: string): Promise<void>;\n\tgetEditorSelection(selector: string): Promise<{ selectionStart: number; selectionEnd: number }>;\n\tgetTerminalBuffer(selector: string): Promise<string[]>;\n\twriteInTerminal(selector: string, text: string): Promise<void>;\n\tgetLocaleInfo(): Promise<ILocaleInfo>;\n\tgetLocalizedStrings(): Promise<ILocalizedStrings>;\n\tgetLogs(): Promise<ILogFile[]>;\n\twhenWorkbenchRestored(): Promise<void>;\n}\n//*END\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "60b5387e5bfe503fa675923f540fc6cf0cf35b63"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2dinf6vpon = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2dinf6vpon();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//*END
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvZHJpdmVyL2NvbW1vbi9kcml2ZXIudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbi8vICEhIERvIG5vdCByZW1vdmUgdGhlIGZvbGxvd2luZyBTVEFSVCBhbmQgRU5EIG1hcmtlcnMsIHRoZXkgYXJlIHBhcnNlZCBieSB0aGUgc21va2V0ZXN0IGJ1aWxkXG5cbi8vKlNUQVJUXG5leHBvcnQgaW50ZXJmYWNlIElFbGVtZW50IHtcblx0cmVhZG9ubHkgdGFnTmFtZTogc3RyaW5nO1xuXHRyZWFkb25seSBjbGFzc05hbWU6IHN0cmluZztcblx0cmVhZG9ubHkgdGV4dENvbnRlbnQ6IHN0cmluZztcblx0cmVhZG9ubHkgYXR0cmlidXRlczogeyBbbmFtZTogc3RyaW5nXTogc3RyaW5nIH07XG5cdHJlYWRvbmx5IGNoaWxkcmVuOiBJRWxlbWVudFtdO1xuXHRyZWFkb25seSB0b3A6IG51bWJlcjtcblx0cmVhZG9ubHkgbGVmdDogbnVtYmVyO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElMb2NhbGVJbmZvIHtcblx0cmVhZG9ubHkgbGFuZ3VhZ2U6IHN0cmluZztcblx0cmVhZG9ubHkgbG9jYWxlPzogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElMb2NhbGl6ZWRTdHJpbmdzIHtcblx0cmVhZG9ubHkgb3Blbjogc3RyaW5nO1xuXHRyZWFkb25seSBjbG9zZTogc3RyaW5nO1xuXHRyZWFkb25seSBmaW5kOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUxvZ0ZpbGUge1xuXHRyZWFkb25seSByZWxhdGl2ZVBhdGg6IHN0cmluZztcblx0cmVhZG9ubHkgY29udGVudHM6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJV2luZG93RHJpdmVyIHtcblx0c2V0VmFsdWUoc2VsZWN0b3I6IHN0cmluZywgdGV4dDogc3RyaW5nKTogUHJvbWlzZTx2b2lkPjtcblx0aXNBY3RpdmVFbGVtZW50KHNlbGVjdG9yOiBzdHJpbmcpOiBQcm9taXNlPGJvb2xlYW4+O1xuXHRnZXRFbGVtZW50cyhzZWxlY3Rvcjogc3RyaW5nLCByZWN1cnNpdmU6IGJvb2xlYW4pOiBQcm9taXNlPElFbGVtZW50W10+O1xuXHRnZXRFbGVtZW50WFkoc2VsZWN0b3I6IHN0cmluZywgeG9mZnNldD86IG51bWJlciwgeW9mZnNldD86IG51bWJlcik6IFByb21pc2U8eyB4OiBudW1iZXI7IHk6IG51bWJlciB9Pjtcblx0dHlwZUluRWRpdG9yKHNlbGVjdG9yOiBzdHJpbmcsIHRleHQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD47XG5cdGdldEVkaXRvclNlbGVjdGlvbihzZWxlY3Rvcjogc3RyaW5nKTogUHJvbWlzZTx7IHNlbGVjdGlvblN0YXJ0OiBudW1iZXI7IHNlbGVjdGlvbkVuZDogbnVtYmVyIH0+O1xuXHRnZXRUZXJtaW5hbEJ1ZmZlcihzZWxlY3Rvcjogc3RyaW5nKTogUHJvbWlzZTxzdHJpbmdbXT47XG5cdHdyaXRlSW5UZXJtaW5hbChzZWxlY3Rvcjogc3RyaW5nLCB0ZXh0OiBzdHJpbmcpOiBQcm9taXNlPHZvaWQ+O1xuXHRnZXRMb2NhbGVJbmZvKCk6IFByb21pc2U8SUxvY2FsZUluZm8+O1xuXHRnZXRMb2NhbGl6ZWRTdHJpbmdzKCk6IFByb21pc2U8SUxvY2FsaXplZFN0cmluZ3M+O1xuXHRnZXRMb2dzKCk6IFByb21pc2U8SUxvZ0ZpbGVbXT47XG5cdHdoZW5Xb3JrYmVuY2hSZXN0b3JlZCgpOiBQcm9taXNlPHZvaWQ+O1xufVxuLy8qRU5EXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7OztBQWdEQSIsImlnbm9yZUxpc3QiOltdfQ==

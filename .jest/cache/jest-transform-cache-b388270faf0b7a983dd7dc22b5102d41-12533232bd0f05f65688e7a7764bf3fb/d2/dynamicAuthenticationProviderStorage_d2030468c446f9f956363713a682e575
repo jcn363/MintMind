@@ -1,0 +1,62 @@
+17fe54669982e321b2c82347c13c5795
+/* istanbul ignore next */
+function cov_1b42x5nxja() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/authentication/common/dynamicAuthenticationProviderStorage.ts";
+  var hash = "57c2e16d38168e28b6a35ceafb54aff629ca09e5";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/authentication/common/dynamicAuthenticationProviderStorage.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 60
+        },
+        end: {
+          line: 6,
+          column: 122
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/authentication/common/dynamicAuthenticationProviderStorage.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAI7F,MAAM,CAAC,MAAM,4CAA4C,GAAG,eAAe,CAA+C,6CAA6C,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/authentication/common/dynamicAuthenticationProviderStorage.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IAuthorizationTokenResponse } from '../../../../base/common/oauth.js';\nimport { Event } from '../../../../base/common/event.js';\n\nexport const IDynamicAuthenticationProviderStorageService = createDecorator<IDynamicAuthenticationProviderStorageService>('dynamicAuthenticationProviderStorageService');\n\nexport interface DynamicAuthenticationProviderInfo {\n\treadonly providerId: string;\n\treadonly label: string;\n\t/**\n\t * @deprecated in favor of authorizationServer\n\t */\n\treadonly issuer?: string;\n\treadonly authorizationServer: string;\n\treadonly clientId: string;\n}\n\nexport interface DynamicAuthenticationProviderTokensChangeEvent {\n\treadonly authProviderId: string;\n\treadonly clientId: string;\n\treadonly tokens: (IAuthorizationTokenResponse & { created_at: number })[] | undefined;\n}\n\n/**\n * Service for managing storage of dynamic authentication provider data.\n */\nexport interface IDynamicAuthenticationProviderStorageService {\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Event fired when tokens for a dynamic authentication provider change.\n\t */\n\treadonly onDidChangeTokens: Event<DynamicAuthenticationProviderTokensChangeEvent>;\n\n\t/**\n\t * Get the client details (ID and secret) for a dynamic authentication provider.\n\t * @param providerId The provider ID or authorization server URL.\n\t * @returns The client details if they exist, undefined otherwise.\n\t */\n\tgetClientRegistration(providerId: string): Promise<{ clientId?: string; clientSecret?: string } | undefined>;\n\n\t/**\n\t * Store both client ID and client secret for a dynamic authentication provider.\n\t * @param providerId The provider ID or authorization server URL.\n\t * @param authorizationServer The authorization server URL for the provider.\n\t * @param clientId The client ID to store.\n\t * @param clientSecret Optional client secret to store.\n\t * @param label Optional label for the provider.\n\t */\n\tstoreClientRegistration(providerId: string, authorizationServer: string, clientId: string, clientSecret?: string, label?: string): Promise<void>;\n\n\t/**\n\t * Get all dynamic authentication providers that have been interacted with.\n\t * @returns Array of provider information.\n\t */\n\tgetInteractedProviders(): ReadonlyArray<DynamicAuthenticationProviderInfo>;\n\n\t/**\n\t * Remove a dynamic authentication provider and its stored data.\n\t * @param providerId The provider ID to remove.\n\t */\n\tremoveDynamicProvider(providerId: string): Promise<void>;\n\n\t/**\n\t * Get sessions for a dynamic authentication provider from secret storage.\n\t * @param authProviderId The authentication provider ID.\n\t * @param clientId The client ID.\n\t * @returns Array of authorization tokens with creation timestamps, or undefined if none exist.\n\t */\n\tgetSessionsForDynamicAuthProvider(authProviderId: string, clientId: string): Promise<(IAuthorizationTokenResponse & { created_at: number })[] | undefined>;\n\n\t/**\n\t * Set sessions for a dynamic authentication provider in secret storage.\n\t * @param authProviderId The authentication provider ID.\n\t * @param clientId The client ID.\n\t * @param sessions Array of authorization tokens with creation timestamps.\n\t */\n\tsetSessionsForDynamicAuthProvider(authProviderId: string, clientId: string, sessions: (IAuthorizationTokenResponse & { created_at: number })[]): Promise<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "57c2e16d38168e28b6a35ceafb54aff629ca09e5"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1b42x5nxja = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1b42x5nxja();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IDynamicAuthenticationProviderStorageService =
+/* istanbul ignore next */
+(cov_1b42x5nxja().s[0]++, createDecorator('dynamicAuthenticationProviderStorageService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJRHluYW1pY0F1dGhlbnRpY2F0aW9uUHJvdmlkZXJTdG9yYWdlU2VydmljZSIsImNvdl8xYjQyeDVueGphIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL2F1dGhlbnRpY2F0aW9uL2NvbW1vbi9keW5hbWljQXV0aGVudGljYXRpb25Qcm92aWRlclN0b3JhZ2UudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuaW1wb3J0IHsgSUF1dGhvcml6YXRpb25Ub2tlblJlc3BvbnNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vb2F1dGguanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5cbmV4cG9ydCBjb25zdCBJRHluYW1pY0F1dGhlbnRpY2F0aW9uUHJvdmlkZXJTdG9yYWdlU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJRHluYW1pY0F1dGhlbnRpY2F0aW9uUHJvdmlkZXJTdG9yYWdlU2VydmljZT4oJ2R5bmFtaWNBdXRoZW50aWNhdGlvblByb3ZpZGVyU3RvcmFnZVNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBEeW5hbWljQXV0aGVudGljYXRpb25Qcm92aWRlckluZm8ge1xuXHRyZWFkb25seSBwcm92aWRlcklkOiBzdHJpbmc7XG5cdHJlYWRvbmx5IGxhYmVsOiBzdHJpbmc7XG5cdC8qKlxuXHQgKiBAZGVwcmVjYXRlZCBpbiBmYXZvciBvZiBhdXRob3JpemF0aW9uU2VydmVyXG5cdCAqL1xuXHRyZWFkb25seSBpc3N1ZXI/OiBzdHJpbmc7XG5cdHJlYWRvbmx5IGF1dGhvcml6YXRpb25TZXJ2ZXI6IHN0cmluZztcblx0cmVhZG9ubHkgY2xpZW50SWQ6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBEeW5hbWljQXV0aGVudGljYXRpb25Qcm92aWRlclRva2Vuc0NoYW5nZUV2ZW50IHtcblx0cmVhZG9ubHkgYXV0aFByb3ZpZGVySWQ6IHN0cmluZztcblx0cmVhZG9ubHkgY2xpZW50SWQ6IHN0cmluZztcblx0cmVhZG9ubHkgdG9rZW5zOiAoSUF1dGhvcml6YXRpb25Ub2tlblJlc3BvbnNlICYgeyBjcmVhdGVkX2F0OiBudW1iZXIgfSlbXSB8IHVuZGVmaW5lZDtcbn1cblxuLyoqXG4gKiBTZXJ2aWNlIGZvciBtYW5hZ2luZyBzdG9yYWdlIG9mIGR5bmFtaWMgYXV0aGVudGljYXRpb24gcHJvdmlkZXIgZGF0YS5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJRHluYW1pY0F1dGhlbnRpY2F0aW9uUHJvdmlkZXJTdG9yYWdlU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogRXZlbnQgZmlyZWQgd2hlbiB0b2tlbnMgZm9yIGEgZHluYW1pYyBhdXRoZW50aWNhdGlvbiBwcm92aWRlciBjaGFuZ2UuXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZENoYW5nZVRva2VuczogRXZlbnQ8RHluYW1pY0F1dGhlbnRpY2F0aW9uUHJvdmlkZXJUb2tlbnNDaGFuZ2VFdmVudD47XG5cblx0LyoqXG5cdCAqIEdldCB0aGUgY2xpZW50IGRldGFpbHMgKElEIGFuZCBzZWNyZXQpIGZvciBhIGR5bmFtaWMgYXV0aGVudGljYXRpb24gcHJvdmlkZXIuXG5cdCAqIEBwYXJhbSBwcm92aWRlcklkIFRoZSBwcm92aWRlciBJRCBvciBhdXRob3JpemF0aW9uIHNlcnZlciBVUkwuXG5cdCAqIEByZXR1cm5zIFRoZSBjbGllbnQgZGV0YWlscyBpZiB0aGV5IGV4aXN0LCB1bmRlZmluZWQgb3RoZXJ3aXNlLlxuXHQgKi9cblx0Z2V0Q2xpZW50UmVnaXN0cmF0aW9uKHByb3ZpZGVySWQ6IHN0cmluZyk6IFByb21pc2U8eyBjbGllbnRJZD86IHN0cmluZzsgY2xpZW50U2VjcmV0Pzogc3RyaW5nIH0gfCB1bmRlZmluZWQ+O1xuXG5cdC8qKlxuXHQgKiBTdG9yZSBib3RoIGNsaWVudCBJRCBhbmQgY2xpZW50IHNlY3JldCBmb3IgYSBkeW5hbWljIGF1dGhlbnRpY2F0aW9uIHByb3ZpZGVyLlxuXHQgKiBAcGFyYW0gcHJvdmlkZXJJZCBUaGUgcHJvdmlkZXIgSUQgb3IgYXV0aG9yaXphdGlvbiBzZXJ2ZXIgVVJMLlxuXHQgKiBAcGFyYW0gYXV0aG9yaXphdGlvblNlcnZlciBUaGUgYXV0aG9yaXphdGlvbiBzZXJ2ZXIgVVJMIGZvciB0aGUgcHJvdmlkZXIuXG5cdCAqIEBwYXJhbSBjbGllbnRJZCBUaGUgY2xpZW50IElEIHRvIHN0b3JlLlxuXHQgKiBAcGFyYW0gY2xpZW50U2VjcmV0IE9wdGlvbmFsIGNsaWVudCBzZWNyZXQgdG8gc3RvcmUuXG5cdCAqIEBwYXJhbSBsYWJlbCBPcHRpb25hbCBsYWJlbCBmb3IgdGhlIHByb3ZpZGVyLlxuXHQgKi9cblx0c3RvcmVDbGllbnRSZWdpc3RyYXRpb24ocHJvdmlkZXJJZDogc3RyaW5nLCBhdXRob3JpemF0aW9uU2VydmVyOiBzdHJpbmcsIGNsaWVudElkOiBzdHJpbmcsIGNsaWVudFNlY3JldD86IHN0cmluZywgbGFiZWw/OiBzdHJpbmcpOiBQcm9taXNlPHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBHZXQgYWxsIGR5bmFtaWMgYXV0aGVudGljYXRpb24gcHJvdmlkZXJzIHRoYXQgaGF2ZSBiZWVuIGludGVyYWN0ZWQgd2l0aC5cblx0ICogQHJldHVybnMgQXJyYXkgb2YgcHJvdmlkZXIgaW5mb3JtYXRpb24uXG5cdCAqL1xuXHRnZXRJbnRlcmFjdGVkUHJvdmlkZXJzKCk6IFJlYWRvbmx5QXJyYXk8RHluYW1pY0F1dGhlbnRpY2F0aW9uUHJvdmlkZXJJbmZvPjtcblxuXHQvKipcblx0ICogUmVtb3ZlIGEgZHluYW1pYyBhdXRoZW50aWNhdGlvbiBwcm92aWRlciBhbmQgaXRzIHN0b3JlZCBkYXRhLlxuXHQgKiBAcGFyYW0gcHJvdmlkZXJJZCBUaGUgcHJvdmlkZXIgSUQgdG8gcmVtb3ZlLlxuXHQgKi9cblx0cmVtb3ZlRHluYW1pY1Byb3ZpZGVyKHByb3ZpZGVySWQ6IHN0cmluZyk6IFByb21pc2U8dm9pZD47XG5cblx0LyoqXG5cdCAqIEdldCBzZXNzaW9ucyBmb3IgYSBkeW5hbWljIGF1dGhlbnRpY2F0aW9uIHByb3ZpZGVyIGZyb20gc2VjcmV0IHN0b3JhZ2UuXG5cdCAqIEBwYXJhbSBhdXRoUHJvdmlkZXJJZCBUaGUgYXV0aGVudGljYXRpb24gcHJvdmlkZXIgSUQuXG5cdCAqIEBwYXJhbSBjbGllbnRJZCBUaGUgY2xpZW50IElELlxuXHQgKiBAcmV0dXJucyBBcnJheSBvZiBhdXRob3JpemF0aW9uIHRva2VucyB3aXRoIGNyZWF0aW9uIHRpbWVzdGFtcHMsIG9yIHVuZGVmaW5lZCBpZiBub25lIGV4aXN0LlxuXHQgKi9cblx0Z2V0U2Vzc2lvbnNGb3JEeW5hbWljQXV0aFByb3ZpZGVyKGF1dGhQcm92aWRlcklkOiBzdHJpbmcsIGNsaWVudElkOiBzdHJpbmcpOiBQcm9taXNlPChJQXV0aG9yaXphdGlvblRva2VuUmVzcG9uc2UgJiB7IGNyZWF0ZWRfYXQ6IG51bWJlciB9KVtdIHwgdW5kZWZpbmVkPjtcblxuXHQvKipcblx0ICogU2V0IHNlc3Npb25zIGZvciBhIGR5bmFtaWMgYXV0aGVudGljYXRpb24gcHJvdmlkZXIgaW4gc2VjcmV0IHN0b3JhZ2UuXG5cdCAqIEBwYXJhbSBhdXRoUHJvdmlkZXJJZCBUaGUgYXV0aGVudGljYXRpb24gcHJvdmlkZXIgSUQuXG5cdCAqIEBwYXJhbSBjbGllbnRJZCBUaGUgY2xpZW50IElELlxuXHQgKiBAcGFyYW0gc2Vzc2lvbnMgQXJyYXkgb2YgYXV0aG9yaXphdGlvbiB0b2tlbnMgd2l0aCBjcmVhdGlvbiB0aW1lc3RhbXBzLlxuXHQgKi9cblx0c2V0U2Vzc2lvbnNGb3JEeW5hbWljQXV0aFByb3ZpZGVyKGF1dGhQcm92aWRlcklkOiBzdHJpbmcsIGNsaWVudElkOiBzdHJpbmcsIHNlc3Npb25zOiAoSUF1dGhvcml6YXRpb25Ub2tlblJlc3BvbnNlICYgeyBjcmVhdGVkX2F0OiBudW1iZXIgfSlbXSk6IFByb21pc2U8dm9pZD47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFJNUYsT0FBTyxNQUFNQyw0Q0FBNEM7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQStDLDZDQUE2QyxDQUFDIiwiaWdub3JlTGlzdCI6W119

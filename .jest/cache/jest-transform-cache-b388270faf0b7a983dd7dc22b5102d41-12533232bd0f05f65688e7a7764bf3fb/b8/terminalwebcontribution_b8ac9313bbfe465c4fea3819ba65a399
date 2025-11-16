@@ -1,0 +1,87 @@
+fe970ae910ae8a5f9274b86f32579f7c
+/* istanbul ignore next */
+function cov_2360ti69ur() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminal.web.contribution.ts";
+  var hash = "dda7cef4f5d3ca1fa2aec99862234967a5621235";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminal.web.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 10,
+          column: 0
+        },
+        end: {
+          line: 10,
+          column: 125
+        }
+      },
+      "1": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 18,
+          column: 3
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminal.web.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAoB,mBAAmB,EAAE,MAAM,+DAA+D,CAAC;AACtH,OAAO,EAAE,+BAA+B,EAAqB,MAAM,uBAAuB,CAAC;AAC3F,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,qCAAqC,EAAE,MAAM,qCAAqC,CAAC;AAC5F,OAAO,EAAE,mBAAmB,EAAE,MAAM,iCAAiC,CAAC;AAEtE,iBAAiB,CAAC,+BAA+B,EAAE,qCAAqC,oCAA4B,CAAC;AAErH,2FAA2F;AAC3F,qCAAqC;AACrC,mBAAmB,CAAC,sBAAsB,CAAC;IAC1C,EAAE,6DAAuB;IACzB,MAAM,6CAAmC;IACzC,IAAI,EAAE,mBAAmB,CAAC,QAAQ;IAClC,OAAO,EAAE,mDAA6B,wBAAe;CACrD,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminal.web.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { KeyCode, KeyMod } from '../../../../base/common/keyCodes.js';\nimport { KeybindingWeight, KeybindingsRegistry } from '../../../../platform/keybinding/common/keybindingsRegistry.js';\nimport { ITerminalProfileResolverService, TerminalCommandId } from '../common/terminal.js';\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\nimport { BrowserTerminalProfileResolverService } from './terminalProfileResolverService.js';\nimport { TerminalContextKeys } from '../common/terminalContextKey.js';\n\nregisterSingleton(ITerminalProfileResolverService, BrowserTerminalProfileResolverService, InstantiationType.Delayed);\n\n// Register standard external terminal keybinding as integrated terminal when in web as the\n// external terminal is not available\nKeybindingsRegistry.registerKeybindingRule({\n\tid: TerminalCommandId.New,\n\tweight: KeybindingWeight.WorkbenchContrib,\n\twhen: TerminalContextKeys.notFocus,\n\tprimary: KeyMod.CtrlCmd | KeyMod.Shift | KeyCode.KeyC\n});\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "dda7cef4f5d3ca1fa2aec99862234967a5621235"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2360ti69ur = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2360ti69ur();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { KeybindingsRegistry } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
+import { ITerminalProfileResolverService } from '../common/terminal.js';
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { BrowserTerminalProfileResolverService } from './terminalProfileResolverService.js';
+import { TerminalContextKeys } from '../common/terminalContextKey.js';
+/* istanbul ignore next */
+cov_2360ti69ur().s[0]++;
+registerSingleton(ITerminalProfileResolverService, BrowserTerminalProfileResolverService, 1 /* InstantiationType.Delayed */);
+// Register standard external terminal keybinding as integrated terminal when in web as the
+// external terminal is not available
+/* istanbul ignore next */
+cov_2360ti69ur().s[1]++;
+KeybindingsRegistry.registerKeybindingRule({
+  id: "workbench.action.terminal.new" /* TerminalCommandId.New */,
+  weight: 200 /* KeybindingWeight.WorkbenchContrib */,
+  when: TerminalContextKeys.notFocus,
+  primary: 2048 /* KeyMod.CtrlCmd */ | 1024 /* KeyMod.Shift */ | 33 /* KeyCode.KeyC */
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMjM2MHRpNjl1ciIsImFjdHVhbENvdmVyYWdlIiwiS2V5YmluZGluZ3NSZWdpc3RyeSIsIklUZXJtaW5hbFByb2ZpbGVSZXNvbHZlclNlcnZpY2UiLCJyZWdpc3RlclNpbmdsZXRvbiIsIkJyb3dzZXJUZXJtaW5hbFByb2ZpbGVSZXNvbHZlclNlcnZpY2UiLCJUZXJtaW5hbENvbnRleHRLZXlzIiwicyIsInJlZ2lzdGVyS2V5YmluZGluZ1J1bGUiLCJpZCIsIndlaWdodCIsIndoZW4iLCJub3RGb2N1cyIsInByaW1hcnkiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9jb250cmliL3Rlcm1pbmFsL2Jyb3dzZXIvdGVybWluYWwud2ViLmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgS2V5Q29kZSwgS2V5TW9kIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24va2V5Q29kZXMuanMnO1xuaW1wb3J0IHsgS2V5YmluZGluZ1dlaWdodCwgS2V5YmluZGluZ3NSZWdpc3RyeSB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2tleWJpbmRpbmcvY29tbW9uL2tleWJpbmRpbmdzUmVnaXN0cnkuanMnO1xuaW1wb3J0IHsgSVRlcm1pbmFsUHJvZmlsZVJlc29sdmVyU2VydmljZSwgVGVybWluYWxDb21tYW5kSWQgfSBmcm9tICcuLi9jb21tb24vdGVybWluYWwuanMnO1xuaW1wb3J0IHsgSW5zdGFudGlhdGlvblR5cGUsIHJlZ2lzdGVyU2luZ2xldG9uIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vZXh0ZW5zaW9ucy5qcyc7XG5pbXBvcnQgeyBCcm93c2VyVGVybWluYWxQcm9maWxlUmVzb2x2ZXJTZXJ2aWNlIH0gZnJvbSAnLi90ZXJtaW5hbFByb2ZpbGVSZXNvbHZlclNlcnZpY2UuanMnO1xuaW1wb3J0IHsgVGVybWluYWxDb250ZXh0S2V5cyB9IGZyb20gJy4uL2NvbW1vbi90ZXJtaW5hbENvbnRleHRLZXkuanMnO1xuXG5yZWdpc3RlclNpbmdsZXRvbihJVGVybWluYWxQcm9maWxlUmVzb2x2ZXJTZXJ2aWNlLCBCcm93c2VyVGVybWluYWxQcm9maWxlUmVzb2x2ZXJTZXJ2aWNlLCBJbnN0YW50aWF0aW9uVHlwZS5EZWxheWVkKTtcblxuLy8gUmVnaXN0ZXIgc3RhbmRhcmQgZXh0ZXJuYWwgdGVybWluYWwga2V5YmluZGluZyBhcyBpbnRlZ3JhdGVkIHRlcm1pbmFsIHdoZW4gaW4gd2ViIGFzIHRoZVxuLy8gZXh0ZXJuYWwgdGVybWluYWwgaXMgbm90IGF2YWlsYWJsZVxuS2V5YmluZGluZ3NSZWdpc3RyeS5yZWdpc3RlcktleWJpbmRpbmdSdWxlKHtcblx0aWQ6IFRlcm1pbmFsQ29tbWFuZElkLk5ldyxcblx0d2VpZ2h0OiBLZXliaW5kaW5nV2VpZ2h0LldvcmtiZW5jaENvbnRyaWIsXG5cdHdoZW46IFRlcm1pbmFsQ29udGV4dEtleXMubm90Rm9jdXMsXG5cdHByaW1hcnk6IEtleU1vZC5DdHJsQ21kIHwgS2V5TW9kLlNoaWZ0IHwgS2V5Q29kZS5LZXlDXG59KTtcbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CTztJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbkJQOzs7O0FBTUEsU0FBMkJFLG1CQUFtQixRQUFRLCtEQUErRDtBQUNySCxTQUFTQywrQkFBK0IsUUFBMkIsdUJBQXVCO0FBQzFGLFNBQTRCQyxpQkFBaUIsUUFBUSx5REFBeUQ7QUFDOUcsU0FBU0MscUNBQXFDLFFBQVEscUNBQXFDO0FBQzNGLFNBQVNDLG1CQUFtQixRQUFRLGlDQUFpQztBQUFDO0FBQUFOLGNBQUEsR0FBQU8sQ0FBQTtBQUV0RUgsaUJBQWlCLENBQUNELCtCQUErQixFQUFFRSxxQ0FBcUMsb0NBQTRCO0FBRXBIO0FBQ0E7QUFBQTtBQUFBTCxjQUFBLEdBQUFPLENBQUE7QUFDQUwsbUJBQW1CLENBQUNNLHNCQUFzQixDQUFDO0VBQzFDQyxFQUFFO0VBQ0ZDLE1BQU07RUFDTkMsSUFBSSxFQUFFTCxtQkFBbUIsQ0FBQ00sUUFBUTtFQUNsQ0MsT0FBTyxFQUFFLHNEQUE2QjtDQUN0QyxDQUFDIiwiaWdub3JlTGlzdCI6W119

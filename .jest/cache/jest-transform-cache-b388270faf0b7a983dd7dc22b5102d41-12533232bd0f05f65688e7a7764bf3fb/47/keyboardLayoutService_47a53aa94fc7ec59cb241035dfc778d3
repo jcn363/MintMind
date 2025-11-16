@@ -1,0 +1,46 @@
+aec29b031f2c418a48d73fc124d0eecb
+/* istanbul ignore next */
+function cov_2j7i8bppo4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/keyboardLayout/common/keyboardLayoutService.ts";
+  var hash = "7ad57774107e76992c00340ebefe502a29ba1d20";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/keyboardLayout/common/keyboardLayoutService.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/keyboardLayout/common/keyboardLayoutService.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/keyboardLayout/common/keyboardLayoutService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { IKeyboardLayoutInfo, IKeyboardMapping } from './keyboardLayout.js';\n\nexport interface IKeyboardLayoutData {\n\tkeyboardLayoutInfo: IKeyboardLayoutInfo;\n\tkeyboardMapping: IKeyboardMapping;\n}\n\nexport interface INativeKeyboardLayoutService {\n\treadonly _serviceBrand: undefined;\n\treadonly onDidChangeKeyboardLayout: Event<IKeyboardLayoutData>;\n\tgetKeyboardLayoutData(): Promise<IKeyboardLayoutData>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "7ad57774107e76992c00340ebefe502a29ba1d20"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_2j7i8bppo4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_2j7i8bppo4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9rZXlib2FyZExheW91dC9jb21tb24va2V5Ym9hcmRMYXlvdXRTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IElLZXlib2FyZExheW91dEluZm8sIElLZXlib2FyZE1hcHBpbmcgfSBmcm9tICcuL2tleWJvYXJkTGF5b3V0LmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJS2V5Ym9hcmRMYXlvdXREYXRhIHtcblx0a2V5Ym9hcmRMYXlvdXRJbmZvOiBJS2V5Ym9hcmRMYXlvdXRJbmZvO1xuXHRrZXlib2FyZE1hcHBpbmc6IElLZXlib2FyZE1hcHBpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU5hdGl2ZUtleWJvYXJkTGF5b3V0U2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblx0cmVhZG9ubHkgb25EaWRDaGFuZ2VLZXlib2FyZExheW91dDogRXZlbnQ8SUtleWJvYXJkTGF5b3V0RGF0YT47XG5cdGdldEtleWJvYXJkTGF5b3V0RGF0YSgpOiBQcm9taXNlPElLZXlib2FyZExheW91dERhdGE+O1xufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSIsImlnbm9yZUxpc3QiOltdfQ==

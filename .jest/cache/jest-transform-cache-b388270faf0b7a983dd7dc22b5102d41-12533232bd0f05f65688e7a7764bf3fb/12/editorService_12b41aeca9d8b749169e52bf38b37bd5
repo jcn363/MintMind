@@ -1,0 +1,211 @@
+bfda491363d31685d298fb984ac2a96f
+/* istanbul ignore next */
+function cov_1uevc09zng() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorService.ts";
+  var hash = "6c319d890eb6f6dbdc50961f3023e1a6277d1380";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 30
+        },
+        end: {
+          line: 7,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 28
+        },
+        end: {
+          line: 11,
+          column: 30
+        }
+      },
+      "2": {
+        start: {
+          line: 15,
+          column: 26
+        },
+        end: {
+          line: 15,
+          column: 28
+        }
+      },
+      "3": {
+        start: {
+          line: 19,
+          column: 32
+        },
+        end: {
+          line: 19,
+          column: 34
+        }
+      },
+      "4": {
+        start: {
+          line: 21,
+          column: 22
+        },
+        end: {
+          line: 21,
+          column: 25
+        }
+      },
+      "5": {
+        start: {
+          line: 22,
+          column: 4
+        },
+        end: {
+          line: 22,
+          column: 63
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "isPreferredGroup",
+        decl: {
+          start: {
+            line: 20,
+            column: 16
+          },
+          end: {
+            line: 20,
+            column: 32
+          }
+        },
+        loc: {
+          start: {
+            line: 20,
+            column: 38
+          },
+          end: {
+            line: 23,
+            column: 1
+          }
+        },
+        line: 20
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 22,
+            column: 11
+          },
+          end: {
+            line: 22,
+            column: 62
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 22,
+            column: 11
+          },
+          end: {
+            line: 22,
+            column: 34
+          }
+        }, {
+          start: {
+            line: 22,
+            column: 38
+          },
+          end: {
+            line: 22,
+            column: 62
+          }
+        }],
+        line: 22
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {
+      "0": [0, 0]
+    },
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAM7F,OAAO,EAA6D,aAAa,EAAE,MAAM,0BAA0B,CAAC;AAKpH,MAAM,CAAC,MAAM,cAAc,GAAG,eAAe,CAAiB,eAAe,CAAC,CAAC;AAE/E;;GAEG;AACH,MAAM,CAAC,MAAM,YAAY,GAAG,CAAC,CAAC,CAAC;AAG/B;;GAEG;AACH,MAAM,CAAC,MAAM,UAAU,GAAG,CAAC,CAAC,CAAC;AAG7B;;GAEG;AACH,MAAM,CAAC,MAAM,gBAAgB,GAAG,CAAC,CAAC,CAAC;AAKnC,MAAM,UAAU,gBAAgB,CAAC,GAAY;IAC5C,MAAM,SAAS,GAAG,GAAiC,CAAC;IAEpD,OAAO,OAAO,GAAG,KAAK,QAAQ,IAAI,aAAa,CAAC,SAAS,CAAC,CAAC;AAC5D,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/editor/common/editorService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IResourceEditorInput, IEditorOptions, IResourceEditorInputIdentifier, ITextResourceEditorInput } from '../../../../platform/editor/common/editor.js';\nimport { IEditorPane, GroupIdentifier, IUntitledTextResourceEditorInput, IResourceDiffEditorInput, ITextDiffEditorPane, IEditorIdentifier, ISaveOptions, IRevertOptions, EditorsOrder, IVisibleEditorPane, IEditorCloseEvent, IUntypedEditorInput, IFindEditorOptions, IEditorWillOpenEvent, ITextResourceDiffEditorInput } from '../../../common/editor.js';\nimport { EditorInput } from '../../../common/editor/editorInput.js';\nimport { Event } from '../../../../base/common/event.js';\nimport { IEditor, IDiffEditor } from '../../../../editor/common/editorCommon.js';\nimport { ICloseEditorOptions, IEditorGroup, IEditorGroupsContainer, isEditorGroup } from './editorGroupsService.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { IGroupModelChangeEvent } from '../../../common/editor/editorGroupModel.js';\nimport { DisposableStore } from '../../../../base/common/lifecycle.js';\n\nexport const IEditorService = createDecorator<IEditorService>('editorService');\n\n/**\n * Open an editor in the currently active group.\n */\nexport const ACTIVE_GROUP = -1;\nexport type ACTIVE_GROUP_TYPE = typeof ACTIVE_GROUP;\n\n/**\n * Open an editor to the side of the active group.\n */\nexport const SIDE_GROUP = -2;\nexport type SIDE_GROUP_TYPE = typeof SIDE_GROUP;\n\n/**\n * Open an editor in a new auxiliary window.\n */\nexport const AUX_WINDOW_GROUP = -3;\nexport type AUX_WINDOW_GROUP_TYPE = typeof AUX_WINDOW_GROUP;\n\nexport type PreferredGroup = IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE;\n\nexport function isPreferredGroup(obj: unknown): obj is PreferredGroup {\n\tconst candidate = obj as PreferredGroup | undefined;\n\n\treturn typeof obj === 'number' || isEditorGroup(candidate);\n}\n\nexport interface ISaveEditorsOptions extends ISaveOptions {\n\n\t/**\n\t * If true, will ask for a location of the editor to save to.\n\t */\n\treadonly saveAs?: boolean;\n}\n\nexport interface ISaveEditorsResult {\n\n\t/**\n\t * Whether the save operation was successful.\n\t */\n\treadonly success: boolean;\n\n\t/**\n\t * Resulting editors after the save operation.\n\t */\n\treadonly editors: Array<EditorInput | IUntypedEditorInput>;\n}\n\nexport interface IUntypedEditorReplacement {\n\n\t/**\n\t * The editor to replace.\n\t */\n\treadonly editor: EditorInput;\n\n\t/**\n\t * The replacement for the editor.\n\t */\n\treadonly replacement: IUntypedEditorInput;\n\n\t/**\n\t * Skips asking the user for confirmation and doesn't\n\t * save the document. Only use this if you really need to!\n\t*/\n\tforceReplaceDirty?: boolean;\n}\n\nexport interface IBaseSaveRevertAllEditorOptions {\n\n\t/**\n\t * Whether to include untitled editors as well.\n\t */\n\treadonly includeUntitled?: {\n\n\t\t/**\n\t\t * Whether to include scratchpad editors.\n\t\t * Scratchpads are not included if not specified.\n\t\t */\n\t\treadonly includeScratchpad: boolean;\n\n\t} | boolean;\n\n\t/**\n\t * Whether to exclude sticky editors.\n\t */\n\treadonly excludeSticky?: boolean;\n}\n\nexport interface ISaveAllEditorsOptions extends ISaveEditorsOptions, IBaseSaveRevertAllEditorOptions { }\n\nexport interface IRevertAllEditorsOptions extends IRevertOptions, IBaseSaveRevertAllEditorOptions { }\n\nexport interface IOpenEditorsOptions {\n\n\t/**\n\t * Whether to validate trust when opening editors\n\t * that are potentially not inside the workspace.\n\t */\n\treadonly validateTrust?: boolean;\n}\n\nexport interface IEditorsChangeEvent {\n\t/**\n\t * The group which had the editor change\n\t */\n\tgroupId: GroupIdentifier;\n\t/*\n\t * The event fired from the model\n\t */\n\tevent: IGroupModelChangeEvent;\n}\n\nexport interface IEditorService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Emitted when the currently active editor changes.\n\t *\n\t * @see {@link IEditorService.activeEditorPane}\n\t */\n\treadonly onDidActiveEditorChange: Event<void>;\n\n\t/**\n\t * Emitted when any of the current visible editors changes.\n\t *\n\t * @see {@link IEditorService.visibleEditorPanes}\n\t */\n\treadonly onDidVisibleEditorsChange: Event<void>;\n\n\t/**\n\t * An aggregated event for any change to any editor across\n\t * all groups.\n\t */\n\treadonly onDidEditorsChange: Event<IEditorsChangeEvent>;\n\n\t/**\n\t * Emitted when an editor is about to open.\n\t */\n\treadonly onWillOpenEditor: Event<IEditorWillOpenEvent>;\n\n\t/**\n\t * Emitted when an editor is closed.\n\t */\n\treadonly onDidCloseEditor: Event<IEditorCloseEvent>;\n\n\t/**\n\t * The currently active editor pane or `undefined` if none. The editor pane is\n\t * the workbench container for editors of any kind.\n\t *\n\t * @see {@link IEditorService.activeEditor} for access to the active editor input\n\t */\n\treadonly activeEditorPane: IVisibleEditorPane | undefined;\n\n\t/**\n\t * The currently active editor or `undefined` if none. An editor is active when it is\n\t * located in the currently active editor group. It will be `undefined` if the active\n\t * editor group has no editors open.\n\t */\n\treadonly activeEditor: EditorInput | undefined;\n\n\t/**\n\t * The currently active text editor control or `undefined` if there is currently no active\n\t * editor or the active editor widget is neither a text nor a diff editor.\n\t *\n\t * @see {@link IEditorService.activeEditor}\n\t */\n\treadonly activeTextEditorControl: IEditor | IDiffEditor | undefined;\n\n\t/**\n\t * The currently active text editor language id or `undefined` if there is currently no active\n\t * editor or the active editor control is neither a text nor a diff editor. If the active\n\t * editor is a diff editor, the modified side's language id will be taken.\n\t */\n\treadonly activeTextEditorLanguageId: string | undefined;\n\n\t/**\n\t * All editor panes that are currently visible across all editor groups.\n\t *\n\t * @see {@link IEditorService.visibleEditors} for access to the visible editor inputs\n\t */\n\treadonly visibleEditorPanes: readonly IVisibleEditorPane[];\n\n\t/**\n\t * All editors that are currently visible. An editor is visible when it is opened in an\n\t * editor group and active in that group. Multiple editor groups can be opened at the same time.\n\t */\n\treadonly visibleEditors: readonly EditorInput[];\n\n\t/**\n\t * All text editor widgets that are currently visible across all editor groups. A text editor\n\t * widget is either a text or a diff editor.\n\t *\n\t * This property supports side-by-side editors as well, by returning both sides if they are\n\t * text editor widgets.\n\t */\n\treadonly visibleTextEditorControls: readonly (IEditor | IDiffEditor)[];\n\n\t/**\n\t * All text editor widgets that are currently visible across all editor groups. A text editor\n\t * widget is either a text or a diff editor.\n\t *\n\t * This property supports side-by-side editors as well, by returning both sides if they are\n\t * text editor widgets.\n\t *\n\t * @param order the order of the editors to use\n\t */\n\tgetVisibleTextEditorControls(order: EditorsOrder): readonly (IEditor | IDiffEditor)[];\n\n\t/**\n\t * All editors that are opened across all editor groups in sequential order\n\t * of appearance.\n\t *\n\t * This includes active as well as inactive editors in each editor group.\n\t */\n\treadonly editors: readonly EditorInput[];\n\n\t/**\n\t * The total number of editors that are opened either inactive or active.\n\t */\n\treadonly count: number;\n\n\t/**\n\t * All editors that are opened across all editor groups with their group\n\t * identifier.\n\t *\n\t * @param order the order of the editors to use\n\t * @param options whether to exclude sticky editors or not\n\t */\n\tgetEditors(order: EditorsOrder, options?: { excludeSticky?: boolean }): readonly IEditorIdentifier[];\n\n\t/**\n\t * Open an editor in an editor group.\n\t *\n\t * @param editor the editor to open\n\t * @param options the options to use for the editor\n\t * @param group the target group. If unspecified, the editor will open in the currently\n\t * active group. Use `SIDE_GROUP` to open the editor in a new editor group to the side\n\t * of the currently active group.\n\t *\n\t * @returns the editor that opened or `undefined` if the operation failed or the editor was not\n\t * opened to be active.\n\t */\n\topenEditor(editor: IResourceEditorInput, group?: IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE): Promise<IEditorPane | undefined>;\n\topenEditor(editor: ITextResourceEditorInput | IUntitledTextResourceEditorInput, group?: IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE): Promise<IEditorPane | undefined>;\n\topenEditor(editor: ITextResourceDiffEditorInput | IResourceDiffEditorInput, group?: IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE): Promise<ITextDiffEditorPane | undefined>;\n\topenEditor(editor: IUntypedEditorInput, group?: IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE): Promise<IEditorPane | undefined>;\n\n\t/**\n\t * @deprecated using this method is a sign that your editor has not adopted the editor\n\t * resolver yet. Please use `IEditorResolverService.registerEditor` to make your editor\n\t * known to the workbench and then use untyped editor inputs for opening:\n\t *\n\t * ```ts\n\t * editorService.openEditor({ resource });\n\t * ```\n\t *\n\t * If you already have an `EditorInput` in hand and must use it for opening, use `group.openEditor`\n\t * instead, via `IEditorGroupsService`.\n\t */\n\topenEditor(editor: EditorInput, options?: IEditorOptions, group?: IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE): Promise<IEditorPane | undefined>;\n\n\t/**\n\t * Open editors in an editor group.\n\t *\n\t * @param editors the editors to open with associated options\n\t * @param group the target group. If unspecified, the editor will open in the currently\n\t * active group. Use `SIDE_GROUP` to open the editor in a new editor group to the side\n\t * of the currently active group.\n\t *\n\t * @returns the editors that opened. The array can be empty or have less elements for editors\n\t * that failed to open or were instructed to open as inactive.\n\t */\n\topenEditors(editors: IUntypedEditorInput[], group?: IEditorGroup | GroupIdentifier | SIDE_GROUP_TYPE | ACTIVE_GROUP_TYPE | AUX_WINDOW_GROUP_TYPE, options?: IOpenEditorsOptions): Promise<readonly IEditorPane[]>;\n\n\t/**\n\t * Replaces editors in an editor group with the provided replacement.\n\t *\n\t * @param replacements the editors to replace\n\t * @param group the editor group\n\t *\n\t * @returns a promise that is resolved when the replaced active\n\t * editor (if any) has finished loading.\n\t */\n\treplaceEditors(replacements: IUntypedEditorReplacement[], group: IEditorGroup | GroupIdentifier): Promise<void>;\n\n\t/**\n\t * Find out if the provided editor is opened in any editor group.\n\t *\n\t * Note: An editor can be opened but not actively visible.\n\t *\n\t * Note: This method will return `true` if a side by side editor\n\t * is opened where the `primary` editor matches too.\n\t */\n\tisOpened(editor: IResourceEditorInputIdentifier): boolean;\n\n\t/**\n\t * Find out if the provided editor is visible in any editor group.\n\t */\n\tisVisible(editor: EditorInput): boolean;\n\n\t/**\n\t * Close an editor in a specific editor group.\n\t */\n\tcloseEditor(editor: IEditorIdentifier, options?: ICloseEditorOptions): Promise<void>;\n\n\t/**\n\t * Close multiple editors in specific editor groups.\n\t */\n\tcloseEditors(editors: readonly IEditorIdentifier[], options?: ICloseEditorOptions): Promise<void>;\n\n\t/**\n\t * This method will return an entry for each editor that reports\n\t * a `resource` that matches the provided one in the group or\n\t * across all groups.\n\t *\n\t * It is possible that multiple editors are returned in case the\n\t * same resource is opened in different editors. To find the specific\n\t * editor, use the `IResourceEditorInputIdentifier` as input.\n\t */\n\tfindEditors(resource: URI, options?: IFindEditorOptions): readonly IEditorIdentifier[];\n\tfindEditors(editor: IResourceEditorInputIdentifier, options?: IFindEditorOptions): readonly IEditorIdentifier[];\n\n\t/**\n\t * Save the provided list of editors.\n\t */\n\tsave(editors: IEditorIdentifier | readonly IEditorIdentifier[], options?: ISaveEditorsOptions): Promise<ISaveEditorsResult>;\n\n\t/**\n\t * Save all editors.\n\t */\n\tsaveAll(options?: ISaveAllEditorsOptions): Promise<ISaveEditorsResult>;\n\n\t/**\n\t * Reverts the provided list of editors.\n\t *\n\t * @returns `true` if all editors reverted and `false` otherwise.\n\t */\n\trevert(editors: IEditorIdentifier | readonly IEditorIdentifier[], options?: IRevertOptions): Promise<boolean>;\n\n\t/**\n\t * Reverts all editors.\n\t *\n\t * @returns `true` if all editors reverted and `false` otherwise.\n\t */\n\trevertAll(options?: IRevertAllEditorsOptions): Promise<boolean>;\n\n\t/**\n\t * Create a scoped editor service that only operates on the provided\n\t * editor group container. Use `main` to create a scoped editor service\n\t * to the main editor group container of the main window.\n\t */\n\tcreateScoped(editorGroupsContainer: IEditorGroupsContainer, disposables: DisposableStore): IEditorService;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "6c319d890eb6f6dbdc50961f3023e1a6277d1380"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1uevc09zng = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1uevc09zng();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { isEditorGroup } from './editorGroupsService.js';
+export const IEditorService =
+/* istanbul ignore next */
+(cov_1uevc09zng().s[0]++, createDecorator('editorService'));
+/**
+ * Open an editor in the currently active group.
+ */
+export const ACTIVE_GROUP =
+/* istanbul ignore next */
+(cov_1uevc09zng().s[1]++, -1);
+/**
+ * Open an editor to the side of the active group.
+ */
+export const SIDE_GROUP =
+/* istanbul ignore next */
+(cov_1uevc09zng().s[2]++, -2);
+/**
+ * Open an editor in a new auxiliary window.
+ */
+export const AUX_WINDOW_GROUP =
+/* istanbul ignore next */
+(cov_1uevc09zng().s[3]++, -3);
+export function isPreferredGroup(obj) {
+  /* istanbul ignore next */
+  cov_1uevc09zng().f[0]++;
+  const candidate =
+  /* istanbul ignore next */
+  (cov_1uevc09zng().s[4]++, obj);
+  /* istanbul ignore next */
+  cov_1uevc09zng().s[5]++;
+  return /* istanbul ignore next */(cov_1uevc09zng().b[0][0]++, typeof obj === 'number') ||
+  /* istanbul ignore next */
+  (cov_1uevc09zng().b[0][1]++, isEditorGroup(candidate));
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXVldmMwOXpuZyIsImFjdHVhbENvdmVyYWdlIiwiY3JlYXRlRGVjb3JhdG9yIiwiaXNFZGl0b3JHcm91cCIsIklFZGl0b3JTZXJ2aWNlIiwicyIsIkFDVElWRV9HUk9VUCIsIlNJREVfR1JPVVAiLCJBVVhfV0lORE9XX0dST1VQIiwiaXNQcmVmZXJyZWRHcm91cCIsIm9iaiIsImYiLCJjYW5kaWRhdGUiLCJiIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvZWRpdG9yL2NvbW1vbi9lZGl0b3JTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IElSZXNvdXJjZUVkaXRvcklucHV0LCBJRWRpdG9yT3B0aW9ucywgSVJlc291cmNlRWRpdG9ySW5wdXRJZGVudGlmaWVyLCBJVGV4dFJlc291cmNlRWRpdG9ySW5wdXQgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9lZGl0b3IvY29tbW9uL2VkaXRvci5qcyc7XG5pbXBvcnQgeyBJRWRpdG9yUGFuZSwgR3JvdXBJZGVudGlmaWVyLCBJVW50aXRsZWRUZXh0UmVzb3VyY2VFZGl0b3JJbnB1dCwgSVJlc291cmNlRGlmZkVkaXRvcklucHV0LCBJVGV4dERpZmZFZGl0b3JQYW5lLCBJRWRpdG9ySWRlbnRpZmllciwgSVNhdmVPcHRpb25zLCBJUmV2ZXJ0T3B0aW9ucywgRWRpdG9yc09yZGVyLCBJVmlzaWJsZUVkaXRvclBhbmUsIElFZGl0b3JDbG9zZUV2ZW50LCBJVW50eXBlZEVkaXRvcklucHV0LCBJRmluZEVkaXRvck9wdGlvbnMsIElFZGl0b3JXaWxsT3BlbkV2ZW50LCBJVGV4dFJlc291cmNlRGlmZkVkaXRvcklucHV0IH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2VkaXRvci5qcyc7XG5pbXBvcnQgeyBFZGl0b3JJbnB1dCB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9lZGl0b3IvZWRpdG9ySW5wdXQuanMnO1xuaW1wb3J0IHsgRXZlbnQgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9ldmVudC5qcyc7XG5pbXBvcnQgeyBJRWRpdG9yLCBJRGlmZkVkaXRvciB9IGZyb20gJy4uLy4uLy4uLy4uL2VkaXRvci9jb21tb24vZWRpdG9yQ29tbW9uLmpzJztcbmltcG9ydCB7IElDbG9zZUVkaXRvck9wdGlvbnMsIElFZGl0b3JHcm91cCwgSUVkaXRvckdyb3Vwc0NvbnRhaW5lciwgaXNFZGl0b3JHcm91cCB9IGZyb20gJy4vZWRpdG9yR3JvdXBzU2VydmljZS5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgSUdyb3VwTW9kZWxDaGFuZ2VFdmVudCB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi9lZGl0b3IvZWRpdG9yR3JvdXBNb2RlbC5qcyc7XG5pbXBvcnQgeyBEaXNwb3NhYmxlU3RvcmUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9saWZlY3ljbGUuanMnO1xuXG5leHBvcnQgY29uc3QgSUVkaXRvclNlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUVkaXRvclNlcnZpY2U+KCdlZGl0b3JTZXJ2aWNlJyk7XG5cbi8qKlxuICogT3BlbiBhbiBlZGl0b3IgaW4gdGhlIGN1cnJlbnRseSBhY3RpdmUgZ3JvdXAuXG4gKi9cbmV4cG9ydCBjb25zdCBBQ1RJVkVfR1JPVVAgPSAtMTtcbmV4cG9ydCB0eXBlIEFDVElWRV9HUk9VUF9UWVBFID0gdHlwZW9mIEFDVElWRV9HUk9VUDtcblxuLyoqXG4gKiBPcGVuIGFuIGVkaXRvciB0byB0aGUgc2lkZSBvZiB0aGUgYWN0aXZlIGdyb3VwLlxuICovXG5leHBvcnQgY29uc3QgU0lERV9HUk9VUCA9IC0yO1xuZXhwb3J0IHR5cGUgU0lERV9HUk9VUF9UWVBFID0gdHlwZW9mIFNJREVfR1JPVVA7XG5cbi8qKlxuICogT3BlbiBhbiBlZGl0b3IgaW4gYSBuZXcgYXV4aWxpYXJ5IHdpbmRvdy5cbiAqL1xuZXhwb3J0IGNvbnN0IEFVWF9XSU5ET1dfR1JPVVAgPSAtMztcbmV4cG9ydCB0eXBlIEFVWF9XSU5ET1dfR1JPVVBfVFlQRSA9IHR5cGVvZiBBVVhfV0lORE9XX0dST1VQO1xuXG5leHBvcnQgdHlwZSBQcmVmZXJyZWRHcm91cCA9IElFZGl0b3JHcm91cCB8IEdyb3VwSWRlbnRpZmllciB8IFNJREVfR1JPVVBfVFlQRSB8IEFDVElWRV9HUk9VUF9UWVBFIHwgQVVYX1dJTkRPV19HUk9VUF9UWVBFO1xuXG5leHBvcnQgZnVuY3Rpb24gaXNQcmVmZXJyZWRHcm91cChvYmo6IHVua25vd24pOiBvYmogaXMgUHJlZmVycmVkR3JvdXAge1xuXHRjb25zdCBjYW5kaWRhdGUgPSBvYmogYXMgUHJlZmVycmVkR3JvdXAgfCB1bmRlZmluZWQ7XG5cblx0cmV0dXJuIHR5cGVvZiBvYmogPT09ICdudW1iZXInIHx8IGlzRWRpdG9yR3JvdXAoY2FuZGlkYXRlKTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJU2F2ZUVkaXRvcnNPcHRpb25zIGV4dGVuZHMgSVNhdmVPcHRpb25zIHtcblxuXHQvKipcblx0ICogSWYgdHJ1ZSwgd2lsbCBhc2sgZm9yIGEgbG9jYXRpb24gb2YgdGhlIGVkaXRvciB0byBzYXZlIHRvLlxuXHQgKi9cblx0cmVhZG9ubHkgc2F2ZUFzPzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJU2F2ZUVkaXRvcnNSZXN1bHQge1xuXG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRoZSBzYXZlIG9wZXJhdGlvbiB3YXMgc3VjY2Vzc2Z1bC5cblx0ICovXG5cdHJlYWRvbmx5IHN1Y2Nlc3M6IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIFJlc3VsdGluZyBlZGl0b3JzIGFmdGVyIHRoZSBzYXZlIG9wZXJhdGlvbi5cblx0ICovXG5cdHJlYWRvbmx5IGVkaXRvcnM6IEFycmF5PEVkaXRvcklucHV0IHwgSVVudHlwZWRFZGl0b3JJbnB1dD47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVVudHlwZWRFZGl0b3JSZXBsYWNlbWVudCB7XG5cblx0LyoqXG5cdCAqIFRoZSBlZGl0b3IgdG8gcmVwbGFjZS5cblx0ICovXG5cdHJlYWRvbmx5IGVkaXRvcjogRWRpdG9ySW5wdXQ7XG5cblx0LyoqXG5cdCAqIFRoZSByZXBsYWNlbWVudCBmb3IgdGhlIGVkaXRvci5cblx0ICovXG5cdHJlYWRvbmx5IHJlcGxhY2VtZW50OiBJVW50eXBlZEVkaXRvcklucHV0O1xuXG5cdC8qKlxuXHQgKiBTa2lwcyBhc2tpbmcgdGhlIHVzZXIgZm9yIGNvbmZpcm1hdGlvbiBhbmQgZG9lc24ndFxuXHQgKiBzYXZlIHRoZSBkb2N1bWVudC4gT25seSB1c2UgdGhpcyBpZiB5b3UgcmVhbGx5IG5lZWQgdG8hXG5cdCovXG5cdGZvcmNlUmVwbGFjZURpcnR5PzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJQmFzZVNhdmVSZXZlcnRBbGxFZGl0b3JPcHRpb25zIHtcblxuXHQvKipcblx0ICogV2hldGhlciB0byBpbmNsdWRlIHVudGl0bGVkIGVkaXRvcnMgYXMgd2VsbC5cblx0ICovXG5cdHJlYWRvbmx5IGluY2x1ZGVVbnRpdGxlZD86IHtcblxuXHRcdC8qKlxuXHRcdCAqIFdoZXRoZXIgdG8gaW5jbHVkZSBzY3JhdGNocGFkIGVkaXRvcnMuXG5cdFx0ICogU2NyYXRjaHBhZHMgYXJlIG5vdCBpbmNsdWRlZCBpZiBub3Qgc3BlY2lmaWVkLlxuXHRcdCAqL1xuXHRcdHJlYWRvbmx5IGluY2x1ZGVTY3JhdGNocGFkOiBib29sZWFuO1xuXG5cdH0gfCBib29sZWFuO1xuXG5cdC8qKlxuXHQgKiBXaGV0aGVyIHRvIGV4Y2x1ZGUgc3RpY2t5IGVkaXRvcnMuXG5cdCAqL1xuXHRyZWFkb25seSBleGNsdWRlU3RpY2t5PzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJU2F2ZUFsbEVkaXRvcnNPcHRpb25zIGV4dGVuZHMgSVNhdmVFZGl0b3JzT3B0aW9ucywgSUJhc2VTYXZlUmV2ZXJ0QWxsRWRpdG9yT3B0aW9ucyB7IH1cblxuZXhwb3J0IGludGVyZmFjZSBJUmV2ZXJ0QWxsRWRpdG9yc09wdGlvbnMgZXh0ZW5kcyBJUmV2ZXJ0T3B0aW9ucywgSUJhc2VTYXZlUmV2ZXJ0QWxsRWRpdG9yT3B0aW9ucyB7IH1cblxuZXhwb3J0IGludGVyZmFjZSBJT3BlbkVkaXRvcnNPcHRpb25zIHtcblxuXHQvKipcblx0ICogV2hldGhlciB0byB2YWxpZGF0ZSB0cnVzdCB3aGVuIG9wZW5pbmcgZWRpdG9yc1xuXHQgKiB0aGF0IGFyZSBwb3RlbnRpYWxseSBub3QgaW5zaWRlIHRoZSB3b3Jrc3BhY2UuXG5cdCAqL1xuXHRyZWFkb25seSB2YWxpZGF0ZVRydXN0PzogYm9vbGVhbjtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRWRpdG9yc0NoYW5nZUV2ZW50IHtcblx0LyoqXG5cdCAqIFRoZSBncm91cCB3aGljaCBoYWQgdGhlIGVkaXRvciBjaGFuZ2Vcblx0ICovXG5cdGdyb3VwSWQ6IEdyb3VwSWRlbnRpZmllcjtcblx0Lypcblx0ICogVGhlIGV2ZW50IGZpcmVkIGZyb20gdGhlIG1vZGVsXG5cdCAqL1xuXHRldmVudDogSUdyb3VwTW9kZWxDaGFuZ2VFdmVudDtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJRWRpdG9yU2VydmljZSB7XG5cblx0cmVhZG9ubHkgX3NlcnZpY2VCcmFuZDogdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBFbWl0dGVkIHdoZW4gdGhlIGN1cnJlbnRseSBhY3RpdmUgZWRpdG9yIGNoYW5nZXMuXG5cdCAqXG5cdCAqIEBzZWUge0BsaW5rIElFZGl0b3JTZXJ2aWNlLmFjdGl2ZUVkaXRvclBhbmV9XG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZEFjdGl2ZUVkaXRvckNoYW5nZTogRXZlbnQ8dm9pZD47XG5cblx0LyoqXG5cdCAqIEVtaXR0ZWQgd2hlbiBhbnkgb2YgdGhlIGN1cnJlbnQgdmlzaWJsZSBlZGl0b3JzIGNoYW5nZXMuXG5cdCAqXG5cdCAqIEBzZWUge0BsaW5rIElFZGl0b3JTZXJ2aWNlLnZpc2libGVFZGl0b3JQYW5lc31cblx0ICovXG5cdHJlYWRvbmx5IG9uRGlkVmlzaWJsZUVkaXRvcnNDaGFuZ2U6IEV2ZW50PHZvaWQ+O1xuXG5cdC8qKlxuXHQgKiBBbiBhZ2dyZWdhdGVkIGV2ZW50IGZvciBhbnkgY2hhbmdlIHRvIGFueSBlZGl0b3IgYWNyb3NzXG5cdCAqIGFsbCBncm91cHMuXG5cdCAqL1xuXHRyZWFkb25seSBvbkRpZEVkaXRvcnNDaGFuZ2U6IEV2ZW50PElFZGl0b3JzQ2hhbmdlRXZlbnQ+O1xuXG5cdC8qKlxuXHQgKiBFbWl0dGVkIHdoZW4gYW4gZWRpdG9yIGlzIGFib3V0IHRvIG9wZW4uXG5cdCAqL1xuXHRyZWFkb25seSBvbldpbGxPcGVuRWRpdG9yOiBFdmVudDxJRWRpdG9yV2lsbE9wZW5FdmVudD47XG5cblx0LyoqXG5cdCAqIEVtaXR0ZWQgd2hlbiBhbiBlZGl0b3IgaXMgY2xvc2VkLlxuXHQgKi9cblx0cmVhZG9ubHkgb25EaWRDbG9zZUVkaXRvcjogRXZlbnQ8SUVkaXRvckNsb3NlRXZlbnQ+O1xuXG5cdC8qKlxuXHQgKiBUaGUgY3VycmVudGx5IGFjdGl2ZSBlZGl0b3IgcGFuZSBvciBgdW5kZWZpbmVkYCBpZiBub25lLiBUaGUgZWRpdG9yIHBhbmUgaXNcblx0ICogdGhlIHdvcmtiZW5jaCBjb250YWluZXIgZm9yIGVkaXRvcnMgb2YgYW55IGtpbmQuXG5cdCAqXG5cdCAqIEBzZWUge0BsaW5rIElFZGl0b3JTZXJ2aWNlLmFjdGl2ZUVkaXRvcn0gZm9yIGFjY2VzcyB0byB0aGUgYWN0aXZlIGVkaXRvciBpbnB1dFxuXHQgKi9cblx0cmVhZG9ubHkgYWN0aXZlRWRpdG9yUGFuZTogSVZpc2libGVFZGl0b3JQYW5lIHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBUaGUgY3VycmVudGx5IGFjdGl2ZSBlZGl0b3Igb3IgYHVuZGVmaW5lZGAgaWYgbm9uZS4gQW4gZWRpdG9yIGlzIGFjdGl2ZSB3aGVuIGl0IGlzXG5cdCAqIGxvY2F0ZWQgaW4gdGhlIGN1cnJlbnRseSBhY3RpdmUgZWRpdG9yIGdyb3VwLiBJdCB3aWxsIGJlIGB1bmRlZmluZWRgIGlmIHRoZSBhY3RpdmVcblx0ICogZWRpdG9yIGdyb3VwIGhhcyBubyBlZGl0b3JzIG9wZW4uXG5cdCAqL1xuXHRyZWFkb25seSBhY3RpdmVFZGl0b3I6IEVkaXRvcklucHV0IHwgdW5kZWZpbmVkO1xuXG5cdC8qKlxuXHQgKiBUaGUgY3VycmVudGx5IGFjdGl2ZSB0ZXh0IGVkaXRvciBjb250cm9sIG9yIGB1bmRlZmluZWRgIGlmIHRoZXJlIGlzIGN1cnJlbnRseSBubyBhY3RpdmVcblx0ICogZWRpdG9yIG9yIHRoZSBhY3RpdmUgZWRpdG9yIHdpZGdldCBpcyBuZWl0aGVyIGEgdGV4dCBub3IgYSBkaWZmIGVkaXRvci5cblx0ICpcblx0ICogQHNlZSB7QGxpbmsgSUVkaXRvclNlcnZpY2UuYWN0aXZlRWRpdG9yfVxuXHQgKi9cblx0cmVhZG9ubHkgYWN0aXZlVGV4dEVkaXRvckNvbnRyb2w6IElFZGl0b3IgfCBJRGlmZkVkaXRvciB8IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogVGhlIGN1cnJlbnRseSBhY3RpdmUgdGV4dCBlZGl0b3IgbGFuZ3VhZ2UgaWQgb3IgYHVuZGVmaW5lZGAgaWYgdGhlcmUgaXMgY3VycmVudGx5IG5vIGFjdGl2ZVxuXHQgKiBlZGl0b3Igb3IgdGhlIGFjdGl2ZSBlZGl0b3IgY29udHJvbCBpcyBuZWl0aGVyIGEgdGV4dCBub3IgYSBkaWZmIGVkaXRvci4gSWYgdGhlIGFjdGl2ZVxuXHQgKiBlZGl0b3IgaXMgYSBkaWZmIGVkaXRvciwgdGhlIG1vZGlmaWVkIHNpZGUncyBsYW5ndWFnZSBpZCB3aWxsIGJlIHRha2VuLlxuXHQgKi9cblx0cmVhZG9ubHkgYWN0aXZlVGV4dEVkaXRvckxhbmd1YWdlSWQ6IHN0cmluZyB8IHVuZGVmaW5lZDtcblxuXHQvKipcblx0ICogQWxsIGVkaXRvciBwYW5lcyB0aGF0IGFyZSBjdXJyZW50bHkgdmlzaWJsZSBhY3Jvc3MgYWxsIGVkaXRvciBncm91cHMuXG5cdCAqXG5cdCAqIEBzZWUge0BsaW5rIElFZGl0b3JTZXJ2aWNlLnZpc2libGVFZGl0b3JzfSBmb3IgYWNjZXNzIHRvIHRoZSB2aXNpYmxlIGVkaXRvciBpbnB1dHNcblx0ICovXG5cdHJlYWRvbmx5IHZpc2libGVFZGl0b3JQYW5lczogcmVhZG9ubHkgSVZpc2libGVFZGl0b3JQYW5lW107XG5cblx0LyoqXG5cdCAqIEFsbCBlZGl0b3JzIHRoYXQgYXJlIGN1cnJlbnRseSB2aXNpYmxlLiBBbiBlZGl0b3IgaXMgdmlzaWJsZSB3aGVuIGl0IGlzIG9wZW5lZCBpbiBhblxuXHQgKiBlZGl0b3IgZ3JvdXAgYW5kIGFjdGl2ZSBpbiB0aGF0IGdyb3VwLiBNdWx0aXBsZSBlZGl0b3IgZ3JvdXBzIGNhbiBiZSBvcGVuZWQgYXQgdGhlIHNhbWUgdGltZS5cblx0ICovXG5cdHJlYWRvbmx5IHZpc2libGVFZGl0b3JzOiByZWFkb25seSBFZGl0b3JJbnB1dFtdO1xuXG5cdC8qKlxuXHQgKiBBbGwgdGV4dCBlZGl0b3Igd2lkZ2V0cyB0aGF0IGFyZSBjdXJyZW50bHkgdmlzaWJsZSBhY3Jvc3MgYWxsIGVkaXRvciBncm91cHMuIEEgdGV4dCBlZGl0b3Jcblx0ICogd2lkZ2V0IGlzIGVpdGhlciBhIHRleHQgb3IgYSBkaWZmIGVkaXRvci5cblx0ICpcblx0ICogVGhpcyBwcm9wZXJ0eSBzdXBwb3J0cyBzaWRlLWJ5LXNpZGUgZWRpdG9ycyBhcyB3ZWxsLCBieSByZXR1cm5pbmcgYm90aCBzaWRlcyBpZiB0aGV5IGFyZVxuXHQgKiB0ZXh0IGVkaXRvciB3aWRnZXRzLlxuXHQgKi9cblx0cmVhZG9ubHkgdmlzaWJsZVRleHRFZGl0b3JDb250cm9sczogcmVhZG9ubHkgKElFZGl0b3IgfCBJRGlmZkVkaXRvcilbXTtcblxuXHQvKipcblx0ICogQWxsIHRleHQgZWRpdG9yIHdpZGdldHMgdGhhdCBhcmUgY3VycmVudGx5IHZpc2libGUgYWNyb3NzIGFsbCBlZGl0b3IgZ3JvdXBzLiBBIHRleHQgZWRpdG9yXG5cdCAqIHdpZGdldCBpcyBlaXRoZXIgYSB0ZXh0IG9yIGEgZGlmZiBlZGl0b3IuXG5cdCAqXG5cdCAqIFRoaXMgcHJvcGVydHkgc3VwcG9ydHMgc2lkZS1ieS1zaWRlIGVkaXRvcnMgYXMgd2VsbCwgYnkgcmV0dXJuaW5nIGJvdGggc2lkZXMgaWYgdGhleSBhcmVcblx0ICogdGV4dCBlZGl0b3Igd2lkZ2V0cy5cblx0ICpcblx0ICogQHBhcmFtIG9yZGVyIHRoZSBvcmRlciBvZiB0aGUgZWRpdG9ycyB0byB1c2Vcblx0ICovXG5cdGdldFZpc2libGVUZXh0RWRpdG9yQ29udHJvbHMob3JkZXI6IEVkaXRvcnNPcmRlcik6IHJlYWRvbmx5IChJRWRpdG9yIHwgSURpZmZFZGl0b3IpW107XG5cblx0LyoqXG5cdCAqIEFsbCBlZGl0b3JzIHRoYXQgYXJlIG9wZW5lZCBhY3Jvc3MgYWxsIGVkaXRvciBncm91cHMgaW4gc2VxdWVudGlhbCBvcmRlclxuXHQgKiBvZiBhcHBlYXJhbmNlLlxuXHQgKlxuXHQgKiBUaGlzIGluY2x1ZGVzIGFjdGl2ZSBhcyB3ZWxsIGFzIGluYWN0aXZlIGVkaXRvcnMgaW4gZWFjaCBlZGl0b3IgZ3JvdXAuXG5cdCAqL1xuXHRyZWFkb25seSBlZGl0b3JzOiByZWFkb25seSBFZGl0b3JJbnB1dFtdO1xuXG5cdC8qKlxuXHQgKiBUaGUgdG90YWwgbnVtYmVyIG9mIGVkaXRvcnMgdGhhdCBhcmUgb3BlbmVkIGVpdGhlciBpbmFjdGl2ZSBvciBhY3RpdmUuXG5cdCAqL1xuXHRyZWFkb25seSBjb3VudDogbnVtYmVyO1xuXG5cdC8qKlxuXHQgKiBBbGwgZWRpdG9ycyB0aGF0IGFyZSBvcGVuZWQgYWNyb3NzIGFsbCBlZGl0b3IgZ3JvdXBzIHdpdGggdGhlaXIgZ3JvdXBcblx0ICogaWRlbnRpZmllci5cblx0ICpcblx0ICogQHBhcmFtIG9yZGVyIHRoZSBvcmRlciBvZiB0aGUgZWRpdG9ycyB0byB1c2Vcblx0ICogQHBhcmFtIG9wdGlvbnMgd2hldGhlciB0byBleGNsdWRlIHN0aWNreSBlZGl0b3JzIG9yIG5vdFxuXHQgKi9cblx0Z2V0RWRpdG9ycyhvcmRlcjogRWRpdG9yc09yZGVyLCBvcHRpb25zPzogeyBleGNsdWRlU3RpY2t5PzogYm9vbGVhbiB9KTogcmVhZG9ubHkgSUVkaXRvcklkZW50aWZpZXJbXTtcblxuXHQvKipcblx0ICogT3BlbiBhbiBlZGl0b3IgaW4gYW4gZWRpdG9yIGdyb3VwLlxuXHQgKlxuXHQgKiBAcGFyYW0gZWRpdG9yIHRoZSBlZGl0b3IgdG8gb3BlblxuXHQgKiBAcGFyYW0gb3B0aW9ucyB0aGUgb3B0aW9ucyB0byB1c2UgZm9yIHRoZSBlZGl0b3Jcblx0ICogQHBhcmFtIGdyb3VwIHRoZSB0YXJnZXQgZ3JvdXAuIElmIHVuc3BlY2lmaWVkLCB0aGUgZWRpdG9yIHdpbGwgb3BlbiBpbiB0aGUgY3VycmVudGx5XG5cdCAqIGFjdGl2ZSBncm91cC4gVXNlIGBTSURFX0dST1VQYCB0byBvcGVuIHRoZSBlZGl0b3IgaW4gYSBuZXcgZWRpdG9yIGdyb3VwIHRvIHRoZSBzaWRlXG5cdCAqIG9mIHRoZSBjdXJyZW50bHkgYWN0aXZlIGdyb3VwLlxuXHQgKlxuXHQgKiBAcmV0dXJucyB0aGUgZWRpdG9yIHRoYXQgb3BlbmVkIG9yIGB1bmRlZmluZWRgIGlmIHRoZSBvcGVyYXRpb24gZmFpbGVkIG9yIHRoZSBlZGl0b3Igd2FzIG5vdFxuXHQgKiBvcGVuZWQgdG8gYmUgYWN0aXZlLlxuXHQgKi9cblx0b3BlbkVkaXRvcihlZGl0b3I6IElSZXNvdXJjZUVkaXRvcklucHV0LCBncm91cD86IElFZGl0b3JHcm91cCB8IEdyb3VwSWRlbnRpZmllciB8IFNJREVfR1JPVVBfVFlQRSB8IEFDVElWRV9HUk9VUF9UWVBFIHwgQVVYX1dJTkRPV19HUk9VUF9UWVBFKTogUHJvbWlzZTxJRWRpdG9yUGFuZSB8IHVuZGVmaW5lZD47XG5cdG9wZW5FZGl0b3IoZWRpdG9yOiBJVGV4dFJlc291cmNlRWRpdG9ySW5wdXQgfCBJVW50aXRsZWRUZXh0UmVzb3VyY2VFZGl0b3JJbnB1dCwgZ3JvdXA/OiBJRWRpdG9yR3JvdXAgfCBHcm91cElkZW50aWZpZXIgfCBTSURFX0dST1VQX1RZUEUgfCBBQ1RJVkVfR1JPVVBfVFlQRSB8IEFVWF9XSU5ET1dfR1JPVVBfVFlQRSk6IFByb21pc2U8SUVkaXRvclBhbmUgfCB1bmRlZmluZWQ+O1xuXHRvcGVuRWRpdG9yKGVkaXRvcjogSVRleHRSZXNvdXJjZURpZmZFZGl0b3JJbnB1dCB8IElSZXNvdXJjZURpZmZFZGl0b3JJbnB1dCwgZ3JvdXA/OiBJRWRpdG9yR3JvdXAgfCBHcm91cElkZW50aWZpZXIgfCBTSURFX0dST1VQX1RZUEUgfCBBQ1RJVkVfR1JPVVBfVFlQRSB8IEFVWF9XSU5ET1dfR1JPVVBfVFlQRSk6IFByb21pc2U8SVRleHREaWZmRWRpdG9yUGFuZSB8IHVuZGVmaW5lZD47XG5cdG9wZW5FZGl0b3IoZWRpdG9yOiBJVW50eXBlZEVkaXRvcklucHV0LCBncm91cD86IElFZGl0b3JHcm91cCB8IEdyb3VwSWRlbnRpZmllciB8IFNJREVfR1JPVVBfVFlQRSB8IEFDVElWRV9HUk9VUF9UWVBFIHwgQVVYX1dJTkRPV19HUk9VUF9UWVBFKTogUHJvbWlzZTxJRWRpdG9yUGFuZSB8IHVuZGVmaW5lZD47XG5cblx0LyoqXG5cdCAqIEBkZXByZWNhdGVkIHVzaW5nIHRoaXMgbWV0aG9kIGlzIGEgc2lnbiB0aGF0IHlvdXIgZWRpdG9yIGhhcyBub3QgYWRvcHRlZCB0aGUgZWRpdG9yXG5cdCAqIHJlc29sdmVyIHlldC4gUGxlYXNlIHVzZSBgSUVkaXRvclJlc29sdmVyU2VydmljZS5yZWdpc3RlckVkaXRvcmAgdG8gbWFrZSB5b3VyIGVkaXRvclxuXHQgKiBrbm93biB0byB0aGUgd29ya2JlbmNoIGFuZCB0aGVuIHVzZSB1bnR5cGVkIGVkaXRvciBpbnB1dHMgZm9yIG9wZW5pbmc6XG5cdCAqXG5cdCAqIGBgYHRzXG5cdCAqIGVkaXRvclNlcnZpY2Uub3BlbkVkaXRvcih7IHJlc291cmNlIH0pO1xuXHQgKiBgYGBcblx0ICpcblx0ICogSWYgeW91IGFscmVhZHkgaGF2ZSBhbiBgRWRpdG9ySW5wdXRgIGluIGhhbmQgYW5kIG11c3QgdXNlIGl0IGZvciBvcGVuaW5nLCB1c2UgYGdyb3VwLm9wZW5FZGl0b3JgXG5cdCAqIGluc3RlYWQsIHZpYSBgSUVkaXRvckdyb3Vwc1NlcnZpY2VgLlxuXHQgKi9cblx0b3BlbkVkaXRvcihlZGl0b3I6IEVkaXRvcklucHV0LCBvcHRpb25zPzogSUVkaXRvck9wdGlvbnMsIGdyb3VwPzogSUVkaXRvckdyb3VwIHwgR3JvdXBJZGVudGlmaWVyIHwgU0lERV9HUk9VUF9UWVBFIHwgQUNUSVZFX0dST1VQX1RZUEUgfCBBVVhfV0lORE9XX0dST1VQX1RZUEUpOiBQcm9taXNlPElFZGl0b3JQYW5lIHwgdW5kZWZpbmVkPjtcblxuXHQvKipcblx0ICogT3BlbiBlZGl0b3JzIGluIGFuIGVkaXRvciBncm91cC5cblx0ICpcblx0ICogQHBhcmFtIGVkaXRvcnMgdGhlIGVkaXRvcnMgdG8gb3BlbiB3aXRoIGFzc29jaWF0ZWQgb3B0aW9uc1xuXHQgKiBAcGFyYW0gZ3JvdXAgdGhlIHRhcmdldCBncm91cC4gSWYgdW5zcGVjaWZpZWQsIHRoZSBlZGl0b3Igd2lsbCBvcGVuIGluIHRoZSBjdXJyZW50bHlcblx0ICogYWN0aXZlIGdyb3VwLiBVc2UgYFNJREVfR1JPVVBgIHRvIG9wZW4gdGhlIGVkaXRvciBpbiBhIG5ldyBlZGl0b3IgZ3JvdXAgdG8gdGhlIHNpZGVcblx0ICogb2YgdGhlIGN1cnJlbnRseSBhY3RpdmUgZ3JvdXAuXG5cdCAqXG5cdCAqIEByZXR1cm5zIHRoZSBlZGl0b3JzIHRoYXQgb3BlbmVkLiBUaGUgYXJyYXkgY2FuIGJlIGVtcHR5IG9yIGhhdmUgbGVzcyBlbGVtZW50cyBmb3IgZWRpdG9yc1xuXHQgKiB0aGF0IGZhaWxlZCB0byBvcGVuIG9yIHdlcmUgaW5zdHJ1Y3RlZCB0byBvcGVuIGFzIGluYWN0aXZlLlxuXHQgKi9cblx0b3BlbkVkaXRvcnMoZWRpdG9yczogSVVudHlwZWRFZGl0b3JJbnB1dFtdLCBncm91cD86IElFZGl0b3JHcm91cCB8IEdyb3VwSWRlbnRpZmllciB8IFNJREVfR1JPVVBfVFlQRSB8IEFDVElWRV9HUk9VUF9UWVBFIHwgQVVYX1dJTkRPV19HUk9VUF9UWVBFLCBvcHRpb25zPzogSU9wZW5FZGl0b3JzT3B0aW9ucyk6IFByb21pc2U8cmVhZG9ubHkgSUVkaXRvclBhbmVbXT47XG5cblx0LyoqXG5cdCAqIFJlcGxhY2VzIGVkaXRvcnMgaW4gYW4gZWRpdG9yIGdyb3VwIHdpdGggdGhlIHByb3ZpZGVkIHJlcGxhY2VtZW50LlxuXHQgKlxuXHQgKiBAcGFyYW0gcmVwbGFjZW1lbnRzIHRoZSBlZGl0b3JzIHRvIHJlcGxhY2Vcblx0ICogQHBhcmFtIGdyb3VwIHRoZSBlZGl0b3IgZ3JvdXBcblx0ICpcblx0ICogQHJldHVybnMgYSBwcm9taXNlIHRoYXQgaXMgcmVzb2x2ZWQgd2hlbiB0aGUgcmVwbGFjZWQgYWN0aXZlXG5cdCAqIGVkaXRvciAoaWYgYW55KSBoYXMgZmluaXNoZWQgbG9hZGluZy5cblx0ICovXG5cdHJlcGxhY2VFZGl0b3JzKHJlcGxhY2VtZW50czogSVVudHlwZWRFZGl0b3JSZXBsYWNlbWVudFtdLCBncm91cDogSUVkaXRvckdyb3VwIHwgR3JvdXBJZGVudGlmaWVyKTogUHJvbWlzZTx2b2lkPjtcblxuXHQvKipcblx0ICogRmluZCBvdXQgaWYgdGhlIHByb3ZpZGVkIGVkaXRvciBpcyBvcGVuZWQgaW4gYW55IGVkaXRvciBncm91cC5cblx0ICpcblx0ICogTm90ZTogQW4gZWRpdG9yIGNhbiBiZSBvcGVuZWQgYnV0IG5vdCBhY3RpdmVseSB2aXNpYmxlLlxuXHQgKlxuXHQgKiBOb3RlOiBUaGlzIG1ldGhvZCB3aWxsIHJldHVybiBgdHJ1ZWAgaWYgYSBzaWRlIGJ5IHNpZGUgZWRpdG9yXG5cdCAqIGlzIG9wZW5lZCB3aGVyZSB0aGUgYHByaW1hcnlgIGVkaXRvciBtYXRjaGVzIHRvby5cblx0ICovXG5cdGlzT3BlbmVkKGVkaXRvcjogSVJlc291cmNlRWRpdG9ySW5wdXRJZGVudGlmaWVyKTogYm9vbGVhbjtcblxuXHQvKipcblx0ICogRmluZCBvdXQgaWYgdGhlIHByb3ZpZGVkIGVkaXRvciBpcyB2aXNpYmxlIGluIGFueSBlZGl0b3IgZ3JvdXAuXG5cdCAqL1xuXHRpc1Zpc2libGUoZWRpdG9yOiBFZGl0b3JJbnB1dCk6IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIENsb3NlIGFuIGVkaXRvciBpbiBhIHNwZWNpZmljIGVkaXRvciBncm91cC5cblx0ICovXG5cdGNsb3NlRWRpdG9yKGVkaXRvcjogSUVkaXRvcklkZW50aWZpZXIsIG9wdGlvbnM/OiBJQ2xvc2VFZGl0b3JPcHRpb25zKTogUHJvbWlzZTx2b2lkPjtcblxuXHQvKipcblx0ICogQ2xvc2UgbXVsdGlwbGUgZWRpdG9ycyBpbiBzcGVjaWZpYyBlZGl0b3IgZ3JvdXBzLlxuXHQgKi9cblx0Y2xvc2VFZGl0b3JzKGVkaXRvcnM6IHJlYWRvbmx5IElFZGl0b3JJZGVudGlmaWVyW10sIG9wdGlvbnM/OiBJQ2xvc2VFZGl0b3JPcHRpb25zKTogUHJvbWlzZTx2b2lkPjtcblxuXHQvKipcblx0ICogVGhpcyBtZXRob2Qgd2lsbCByZXR1cm4gYW4gZW50cnkgZm9yIGVhY2ggZWRpdG9yIHRoYXQgcmVwb3J0c1xuXHQgKiBhIGByZXNvdXJjZWAgdGhhdCBtYXRjaGVzIHRoZSBwcm92aWRlZCBvbmUgaW4gdGhlIGdyb3VwIG9yXG5cdCAqIGFjcm9zcyBhbGwgZ3JvdXBzLlxuXHQgKlxuXHQgKiBJdCBpcyBwb3NzaWJsZSB0aGF0IG11bHRpcGxlIGVkaXRvcnMgYXJlIHJldHVybmVkIGluIGNhc2UgdGhlXG5cdCAqIHNhbWUgcmVzb3VyY2UgaXMgb3BlbmVkIGluIGRpZmZlcmVudCBlZGl0b3JzLiBUbyBmaW5kIHRoZSBzcGVjaWZpY1xuXHQgKiBlZGl0b3IsIHVzZSB0aGUgYElSZXNvdXJjZUVkaXRvcklucHV0SWRlbnRpZmllcmAgYXMgaW5wdXQuXG5cdCAqL1xuXHRmaW5kRWRpdG9ycyhyZXNvdXJjZTogVVJJLCBvcHRpb25zPzogSUZpbmRFZGl0b3JPcHRpb25zKTogcmVhZG9ubHkgSUVkaXRvcklkZW50aWZpZXJbXTtcblx0ZmluZEVkaXRvcnMoZWRpdG9yOiBJUmVzb3VyY2VFZGl0b3JJbnB1dElkZW50aWZpZXIsIG9wdGlvbnM/OiBJRmluZEVkaXRvck9wdGlvbnMpOiByZWFkb25seSBJRWRpdG9ySWRlbnRpZmllcltdO1xuXG5cdC8qKlxuXHQgKiBTYXZlIHRoZSBwcm92aWRlZCBsaXN0IG9mIGVkaXRvcnMuXG5cdCAqL1xuXHRzYXZlKGVkaXRvcnM6IElFZGl0b3JJZGVudGlmaWVyIHwgcmVhZG9ubHkgSUVkaXRvcklkZW50aWZpZXJbXSwgb3B0aW9ucz86IElTYXZlRWRpdG9yc09wdGlvbnMpOiBQcm9taXNlPElTYXZlRWRpdG9yc1Jlc3VsdD47XG5cblx0LyoqXG5cdCAqIFNhdmUgYWxsIGVkaXRvcnMuXG5cdCAqL1xuXHRzYXZlQWxsKG9wdGlvbnM/OiBJU2F2ZUFsbEVkaXRvcnNPcHRpb25zKTogUHJvbWlzZTxJU2F2ZUVkaXRvcnNSZXN1bHQ+O1xuXG5cdC8qKlxuXHQgKiBSZXZlcnRzIHRoZSBwcm92aWRlZCBsaXN0IG9mIGVkaXRvcnMuXG5cdCAqXG5cdCAqIEByZXR1cm5zIGB0cnVlYCBpZiBhbGwgZWRpdG9ycyByZXZlcnRlZCBhbmQgYGZhbHNlYCBvdGhlcndpc2UuXG5cdCAqL1xuXHRyZXZlcnQoZWRpdG9yczogSUVkaXRvcklkZW50aWZpZXIgfCByZWFkb25seSBJRWRpdG9ySWRlbnRpZmllcltdLCBvcHRpb25zPzogSVJldmVydE9wdGlvbnMpOiBQcm9taXNlPGJvb2xlYW4+O1xuXG5cdC8qKlxuXHQgKiBSZXZlcnRzIGFsbCBlZGl0b3JzLlxuXHQgKlxuXHQgKiBAcmV0dXJucyBgdHJ1ZWAgaWYgYWxsIGVkaXRvcnMgcmV2ZXJ0ZWQgYW5kIGBmYWxzZWAgb3RoZXJ3aXNlLlxuXHQgKi9cblx0cmV2ZXJ0QWxsKG9wdGlvbnM/OiBJUmV2ZXJ0QWxsRWRpdG9yc09wdGlvbnMpOiBQcm9taXNlPGJvb2xlYW4+O1xuXG5cdC8qKlxuXHQgKiBDcmVhdGUgYSBzY29wZWQgZWRpdG9yIHNlcnZpY2UgdGhhdCBvbmx5IG9wZXJhdGVzIG9uIHRoZSBwcm92aWRlZFxuXHQgKiBlZGl0b3IgZ3JvdXAgY29udGFpbmVyLiBVc2UgYG1haW5gIHRvIGNyZWF0ZSBhIHNjb3BlZCBlZGl0b3Igc2VydmljZVxuXHQgKiB0byB0aGUgbWFpbiBlZGl0b3IgZ3JvdXAgY29udGFpbmVyIG9mIHRoZSBtYWluIHdpbmRvdy5cblx0ICovXG5cdGNyZWF0ZVNjb3BlZChlZGl0b3JHcm91cHNDb250YWluZXI6IElFZGl0b3JHcm91cHNDb250YWluZXIsIGRpc3Bvc2FibGVzOiBEaXNwb3NhYmxlU3RvcmUpOiBJRWRpdG9yU2VydmljZTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBOEJBO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUE5QkE7Ozs7QUFLQSxTQUFTRSxlQUFlLFFBQVEsNERBQTREO0FBTTVGLFNBQW9FQyxhQUFhLFFBQVEsMEJBQTBCO0FBS25ILE9BQU8sTUFBTUMsY0FBYztBQUFBO0FBQUEsQ0FBQUosY0FBQSxHQUFBSyxDQUFBLE9BQUdILGVBQWUsQ0FBaUIsZUFBZSxDQUFDO0FBRTlFOzs7QUFHQSxPQUFPLE1BQU1JLFlBQVk7QUFBQTtBQUFBLENBQUFOLGNBQUEsR0FBQUssQ0FBQSxPQUFHLENBQUMsQ0FBQztBQUc5Qjs7O0FBR0EsT0FBTyxNQUFNRSxVQUFVO0FBQUE7QUFBQSxDQUFBUCxjQUFBLEdBQUFLLENBQUEsT0FBRyxDQUFDLENBQUM7QUFHNUI7OztBQUdBLE9BQU8sTUFBTUcsZ0JBQWdCO0FBQUE7QUFBQSxDQUFBUixjQUFBLEdBQUFLLENBQUEsT0FBRyxDQUFDLENBQUM7QUFLbEMsT0FBTSxTQUFVSSxnQkFBZ0JBLENBQUNDLEdBQVk7RUFBQTtFQUFBVixjQUFBLEdBQUFXLENBQUE7RUFDNUMsTUFBTUMsU0FBUztFQUFBO0VBQUEsQ0FBQVosY0FBQSxHQUFBSyxDQUFBLE9BQUdLLEdBQWlDO0VBQUM7RUFBQVYsY0FBQSxHQUFBSyxDQUFBO0VBRXBELE9BQU8sMkJBQUFMLGNBQUEsR0FBQWEsQ0FBQSxpQkFBT0gsR0FBRyxLQUFLLFFBQVE7RUFBQTtFQUFBLENBQUFWLGNBQUEsR0FBQWEsQ0FBQSxVQUFJVixhQUFhLENBQUNTLFNBQVMsQ0FBQztBQUMzRCIsImlnbm9yZUxpc3QiOltdfQ==

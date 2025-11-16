@@ -1,0 +1,175 @@
+f759d88e2da32b35c99c9f84cdffb7f3
+/* istanbul ignore next */
+function cov_w9a7kkrjd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution.ts";
+  var hash = "8d63e370280283634da984e372220a9790ec6b27";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 100
+        }
+      },
+      "1": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 31,
+          column: 3
+        }
+      },
+      "2": {
+        start: {
+          line: 24,
+          column: 37
+        },
+        end: {
+          line: 24,
+          column: 72
+        }
+      },
+      "3": {
+        start: {
+          line: 25,
+          column: 25
+        },
+        end: {
+          line: 25,
+          column: 143
+        }
+      },
+      "4": {
+        start: {
+          line: 26,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 146
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 23,
+            column: 9
+          },
+          end: {
+            line: 23,
+            column: 10
+          }
+        },
+        loc: {
+          start: {
+            line: 23,
+            column: 26
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        line: 23
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,0BAA0B,CAAC;AAClC,OAAO,EAAE,QAAQ,EAAE,SAAS,EAAE,MAAM,uBAAuB,CAAC;AAC5D,OAAO,EAAE,MAAM,EAAE,MAAM,mDAAmD,CAAC;AAC3E,OAAO,EAAE,qBAAqB,EAAE,MAAM,+DAA+D,CAAC;AACtG,OAAO,EAAE,cAAc,EAAE,MAAM,yDAAyD,CAAC;AACzF,OAAO,EAAE,sBAAsB,EAAE,MAAM,8CAA8C,CAAC;AACtF,OAAO,EAAE,4BAA4B,EAAE,MAAM,iDAAiD,CAAC;AAC/F,OAAO,EAAE,gCAAgC,EAAE,MAAM,uCAAuC,CAAC;AAGzF,iCAAiC;AAEjC,4BAA4B,CAAC,gCAAgC,CAAC,EAAE,EAAE,gCAAgC,CAAC,CAAC;AAUpG,sBAAsB,CAAC;IACtB,EAAE,uGAAkD;IACpD,KAAK,EAAE,SAAS,CAAC,8CAA8C,EAAE,sBAAsB,CAAC;IACxF,OAAO,EAAE;QACR,SAAS,EAAE,cAAc,CAAC,MAAM,CAAC,UAAU,sFAAqC,EAAE,EAAE,IAAI,CAAC;QACzF,KAAK,EAAE,QAAQ,CAAC,cAAc,EAAE,eAAe,CAAC;QAChD,aAAa,EAAE,QAAQ,CAAC,EAAE,GAAG,EAAE,gBAAgB,EAAE,OAAO,EAAE,CAAC,uBAAuB,CAAC,EAAE,EAAE,iBAAiB,CAAC;KACzG;IACD,GAAG,EAAE,CAAC,CAAC,EAAE,QAAQ,EAAE,EAAE;QACpB,MAAM,oBAAoB,GAAG,QAAQ,CAAC,GAAG,CAAC,qBAAqB,CAAC,CAAC;QACjE,MAAM,QAAQ,GAAG,CAAC,oBAAoB,CAAC,QAAQ,wFAAuC,CAAC;QACvF,OAAO,oBAAoB,CAAC,WAAW,yFAAwC,QAAQ,CAAC,CAAC;IAC1F,CAAC;IACD,IAAI,EAAE;QACL,EAAE,EAAE,EAAE,MAAM,CAAC,2BAA2B,EAAE;KAC1C;CACD,CAAC,CAAC;AAEH,aAAa;AAEb,iBAAiB;AAEjB,OAAO,wCAAwC,CAAC;AAEhD,aAAa",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/browser/terminal.stickyScroll.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport './media/stickyScroll.css';\nimport { localize, localize2 } from '../../../../../nls.js';\nimport { MenuId } from '../../../../../platform/actions/common/actions.js';\nimport { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';\nimport { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';\nimport { registerTerminalAction } from '../../../terminal/browser/terminalActions.js';\nimport { registerTerminalContribution } from '../../../terminal/browser/terminalExtensions.js';\nimport { TerminalStickyScrollContribution } from './terminalStickyScrollContribution.js';\nimport { TerminalStickyScrollSettingId } from '../common/terminalStickyScrollConfiguration.js';\n\n// #region Terminal Contributions\n\nregisterTerminalContribution(TerminalStickyScrollContribution.ID, TerminalStickyScrollContribution);\n\n// #endregion\n\n// #region Actions\n\nconst enum TerminalStickyScrollCommandId {\n\tToggleStickyScroll = 'workbench.action.terminal.toggleStickyScroll',\n}\n\nregisterTerminalAction({\n\tid: TerminalStickyScrollCommandId.ToggleStickyScroll,\n\ttitle: localize2('workbench.action.terminal.toggleStickyScroll', 'Toggle Sticky Scroll'),\n\ttoggled: {\n\t\tcondition: ContextKeyExpr.equals(`config.${TerminalStickyScrollSettingId.Enabled}`, true),\n\t\ttitle: localize('stickyScroll', \"Sticky Scroll\"),\n\t\tmnemonicTitle: localize({ key: 'miStickyScroll', comment: ['&& denotes a mnemonic'] }, \"&&Sticky Scroll\"),\n\t},\n\trun: (c, accessor) => {\n\t\tconst configurationService = accessor.get(IConfigurationService);\n\t\tconst newValue = !configurationService.getValue(TerminalStickyScrollSettingId.Enabled);\n\t\treturn configurationService.updateValue(TerminalStickyScrollSettingId.Enabled, newValue);\n\t},\n\tmenu: [\n\t\t{ id: MenuId.TerminalStickyScrollContext }\n\t]\n});\n\n// #endregion\n\n// #region Colors\n\nimport './terminalStickyScrollColorRegistry.js';\n\n// #endregion\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "8d63e370280283634da984e372220a9790ec6b27"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_w9a7kkrjd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_w9a7kkrjd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import './media/stickyScroll.css';
+import { localize, localize2 } from '../../../../../nls.js';
+import { MenuId } from '../../../../../platform/actions/common/actions.js';
+import { IConfigurationService } from '../../../../../platform/configuration/common/configuration.js';
+import { ContextKeyExpr } from '../../../../../platform/contextkey/common/contextkey.js';
+import { registerTerminalAction } from '../../../terminal/browser/terminalActions.js';
+import { registerTerminalContribution } from '../../../terminal/browser/terminalExtensions.js';
+import { TerminalStickyScrollContribution } from './terminalStickyScrollContribution.js';
+// #region Terminal Contributions
+/* istanbul ignore next */
+cov_w9a7kkrjd().s[0]++;
+registerTerminalContribution(TerminalStickyScrollContribution.ID, TerminalStickyScrollContribution);
+/* istanbul ignore next */
+cov_w9a7kkrjd().s[1]++;
+registerTerminalAction({
+  id: "workbench.action.terminal.toggleStickyScroll" /* TerminalStickyScrollCommandId.ToggleStickyScroll */,
+  title: localize2('workbench.action.terminal.toggleStickyScroll', 'Toggle Sticky Scroll'),
+  toggled: {
+    condition: ContextKeyExpr.equals(`config.${"terminal.integrated.stickyScroll.enabled" /* TerminalStickyScrollSettingId.Enabled */}`, true),
+    title: localize('stickyScroll', "Sticky Scroll"),
+    mnemonicTitle: localize({
+      key: 'miStickyScroll',
+      comment: ['&& denotes a mnemonic']
+    }, "&&Sticky Scroll")
+  },
+  run: (c, accessor) => {
+    /* istanbul ignore next */
+    cov_w9a7kkrjd().f[0]++;
+    const configurationService =
+    /* istanbul ignore next */
+    (cov_w9a7kkrjd().s[2]++, accessor.get(IConfigurationService));
+    const newValue =
+    /* istanbul ignore next */
+    (cov_w9a7kkrjd().s[3]++, !configurationService.getValue("terminal.integrated.stickyScroll.enabled" /* TerminalStickyScrollSettingId.Enabled */));
+    /* istanbul ignore next */
+    cov_w9a7kkrjd().s[4]++;
+    return configurationService.updateValue("terminal.integrated.stickyScroll.enabled" /* TerminalStickyScrollSettingId.Enabled */, newValue);
+  },
+  menu: [{
+    id: MenuId.TerminalStickyScrollContext
+  }]
+});
+// #endregion
+// #region Colors
+import './terminalStickyScrollColorRegistry.js';
+// #endregion
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfdzlhN2trcmpkIiwiYWN0dWFsQ292ZXJhZ2UiLCJsb2NhbGl6ZSIsImxvY2FsaXplMiIsIk1lbnVJZCIsIklDb25maWd1cmF0aW9uU2VydmljZSIsIkNvbnRleHRLZXlFeHByIiwicmVnaXN0ZXJUZXJtaW5hbEFjdGlvbiIsInJlZ2lzdGVyVGVybWluYWxDb250cmlidXRpb24iLCJUZXJtaW5hbFN0aWNreVNjcm9sbENvbnRyaWJ1dGlvbiIsInMiLCJJRCIsImlkIiwidGl0bGUiLCJ0b2dnbGVkIiwiY29uZGl0aW9uIiwiZXF1YWxzIiwibW5lbW9uaWNUaXRsZSIsImtleSIsImNvbW1lbnQiLCJydW4iLCJjIiwiYWNjZXNzb3IiLCJmIiwiY29uZmlndXJhdGlvblNlcnZpY2UiLCJnZXQiLCJuZXdWYWx1ZSIsImdldFZhbHVlIiwidXBkYXRlVmFsdWUiLCJtZW51IiwiVGVybWluYWxTdGlja3lTY3JvbGxDb250ZXh0Il0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi90ZXJtaW5hbENvbnRyaWIvc3RpY2t5U2Nyb2xsL2Jyb3dzZXIvdGVybWluYWwuc3RpY2t5U2Nyb2xsLmNvbnRyaWJ1dGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0ICcuL21lZGlhL3N0aWNreVNjcm9sbC5jc3MnO1xuaW1wb3J0IHsgbG9jYWxpemUsIGxvY2FsaXplMiB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL25scy5qcyc7XG5pbXBvcnQgeyBNZW51SWQgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9hY3Rpb25zL2NvbW1vbi9hY3Rpb25zLmpzJztcbmltcG9ydCB7IElDb25maWd1cmF0aW9uU2VydmljZSB9IGZyb20gJy4uLy4uLy4uLy4uLy4uL3BsYXRmb3JtL2NvbmZpZ3VyYXRpb24vY29tbW9uL2NvbmZpZ3VyYXRpb24uanMnO1xuaW1wb3J0IHsgQ29udGV4dEtleUV4cHIgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9wbGF0Zm9ybS9jb250ZXh0a2V5L2NvbW1vbi9jb250ZXh0a2V5LmpzJztcbmltcG9ydCB7IHJlZ2lzdGVyVGVybWluYWxBY3Rpb24gfSBmcm9tICcuLi8uLi8uLi90ZXJtaW5hbC9icm93c2VyL3Rlcm1pbmFsQWN0aW9ucy5qcyc7XG5pbXBvcnQgeyByZWdpc3RlclRlcm1pbmFsQ29udHJpYnV0aW9uIH0gZnJvbSAnLi4vLi4vLi4vdGVybWluYWwvYnJvd3Nlci90ZXJtaW5hbEV4dGVuc2lvbnMuanMnO1xuaW1wb3J0IHsgVGVybWluYWxTdGlja3lTY3JvbGxDb250cmlidXRpb24gfSBmcm9tICcuL3Rlcm1pbmFsU3RpY2t5U2Nyb2xsQ29udHJpYnV0aW9uLmpzJztcbmltcG9ydCB7IFRlcm1pbmFsU3RpY2t5U2Nyb2xsU2V0dGluZ0lkIH0gZnJvbSAnLi4vY29tbW9uL3Rlcm1pbmFsU3RpY2t5U2Nyb2xsQ29uZmlndXJhdGlvbi5qcyc7XG5cbi8vICNyZWdpb24gVGVybWluYWwgQ29udHJpYnV0aW9uc1xuXG5yZWdpc3RlclRlcm1pbmFsQ29udHJpYnV0aW9uKFRlcm1pbmFsU3RpY2t5U2Nyb2xsQ29udHJpYnV0aW9uLklELCBUZXJtaW5hbFN0aWNreVNjcm9sbENvbnRyaWJ1dGlvbik7XG5cbi8vICNlbmRyZWdpb25cblxuLy8gI3JlZ2lvbiBBY3Rpb25zXG5cbmNvbnN0IGVudW0gVGVybWluYWxTdGlja3lTY3JvbGxDb21tYW5kSWQge1xuXHRUb2dnbGVTdGlja3lTY3JvbGwgPSAnd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC50b2dnbGVTdGlja3lTY3JvbGwnLFxufVxuXG5yZWdpc3RlclRlcm1pbmFsQWN0aW9uKHtcblx0aWQ6IFRlcm1pbmFsU3RpY2t5U2Nyb2xsQ29tbWFuZElkLlRvZ2dsZVN0aWNreVNjcm9sbCxcblx0dGl0bGU6IGxvY2FsaXplMignd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC50b2dnbGVTdGlja3lTY3JvbGwnLCAnVG9nZ2xlIFN0aWNreSBTY3JvbGwnKSxcblx0dG9nZ2xlZDoge1xuXHRcdGNvbmRpdGlvbjogQ29udGV4dEtleUV4cHIuZXF1YWxzKGBjb25maWcuJHtUZXJtaW5hbFN0aWNreVNjcm9sbFNldHRpbmdJZC5FbmFibGVkfWAsIHRydWUpLFxuXHRcdHRpdGxlOiBsb2NhbGl6ZSgnc3RpY2t5U2Nyb2xsJywgXCJTdGlja3kgU2Nyb2xsXCIpLFxuXHRcdG1uZW1vbmljVGl0bGU6IGxvY2FsaXplKHsga2V5OiAnbWlTdGlja3lTY3JvbGwnLCBjb21tZW50OiBbJyYmIGRlbm90ZXMgYSBtbmVtb25pYyddIH0sIFwiJiZTdGlja3kgU2Nyb2xsXCIpLFxuXHR9LFxuXHRydW46IChjLCBhY2Nlc3NvcikgPT4ge1xuXHRcdGNvbnN0IGNvbmZpZ3VyYXRpb25TZXJ2aWNlID0gYWNjZXNzb3IuZ2V0KElDb25maWd1cmF0aW9uU2VydmljZSk7XG5cdFx0Y29uc3QgbmV3VmFsdWUgPSAhY29uZmlndXJhdGlvblNlcnZpY2UuZ2V0VmFsdWUoVGVybWluYWxTdGlja3lTY3JvbGxTZXR0aW5nSWQuRW5hYmxlZCk7XG5cdFx0cmV0dXJuIGNvbmZpZ3VyYXRpb25TZXJ2aWNlLnVwZGF0ZVZhbHVlKFRlcm1pbmFsU3RpY2t5U2Nyb2xsU2V0dGluZ0lkLkVuYWJsZWQsIG5ld1ZhbHVlKTtcblx0fSxcblx0bWVudTogW1xuXHRcdHsgaWQ6IE1lbnVJZC5UZXJtaW5hbFN0aWNreVNjcm9sbENvbnRleHQgfVxuXHRdXG59KTtcblxuLy8gI2VuZHJlZ2lvblxuXG4vLyAjcmVnaW9uIENvbG9yc1xuXG5pbXBvcnQgJy4vdGVybWluYWxTdGlja3lTY3JvbGxDb2xvclJlZ2lzdHJ5LmpzJztcblxuLy8gI2VuZHJlZ2lvblxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBNEJHO0lBQUFBLGFBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGFBQUE7QUE1Qkg7Ozs7QUFLQSxPQUFPLDBCQUEwQjtBQUNqQyxTQUFTRSxRQUFRLEVBQUVDLFNBQVMsUUFBUSx1QkFBdUI7QUFDM0QsU0FBU0MsTUFBTSxRQUFRLG1EQUFtRDtBQUMxRSxTQUFTQyxxQkFBcUIsUUFBUSwrREFBK0Q7QUFDckcsU0FBU0MsY0FBYyxRQUFRLHlEQUF5RDtBQUN4RixTQUFTQyxzQkFBc0IsUUFBUSw4Q0FBOEM7QUFDckYsU0FBU0MsNEJBQTRCLFFBQVEsaURBQWlEO0FBQzlGLFNBQVNDLGdDQUFnQyxRQUFRLHVDQUF1QztBQUd4RjtBQUFBO0FBQUFULGFBQUEsR0FBQVUsQ0FBQTtBQUVBRiw0QkFBNEIsQ0FBQ0MsZ0NBQWdDLENBQUNFLEVBQUUsRUFBRUYsZ0NBQWdDLENBQUM7QUFBQztBQUFBVCxhQUFBLEdBQUFVLENBQUE7QUFVcEdILHNCQUFzQixDQUFDO0VBQ3RCSyxFQUFFO0VBQ0ZDLEtBQUssRUFBRVYsU0FBUyxDQUFDLDhDQUE4QyxFQUFFLHNCQUFzQixDQUFDO0VBQ3hGVyxPQUFPLEVBQUU7SUFDUkMsU0FBUyxFQUFFVCxjQUFjLENBQUNVLE1BQU0sQ0FBQyxVQUFVLHdGQUF1QyxFQUFFLElBQUksQ0FBQztJQUN6RkgsS0FBSyxFQUFFWCxRQUFRLENBQUMsY0FBYyxFQUFFLGVBQWUsQ0FBQztJQUNoRGUsYUFBYSxFQUFFZixRQUFRLENBQUM7TUFBRWdCLEdBQUcsRUFBRSxnQkFBZ0I7TUFBRUMsT0FBTyxFQUFFLENBQUMsdUJBQXVCO0lBQUMsQ0FBRSxFQUFFLGlCQUFpQjtHQUN4RztFQUNEQyxHQUFHLEVBQUVBLENBQUNDLENBQUMsRUFBRUMsUUFBUSxLQUFJO0lBQUE7SUFBQXRCLGFBQUEsR0FBQXVCLENBQUE7SUFDcEIsTUFBTUMsb0JBQW9CO0lBQUE7SUFBQSxDQUFBeEIsYUFBQSxHQUFBVSxDQUFBLE9BQUdZLFFBQVEsQ0FBQ0csR0FBRyxDQUFDcEIscUJBQXFCLENBQUM7SUFDaEUsTUFBTXFCLFFBQVE7SUFBQTtJQUFBLENBQUExQixhQUFBLEdBQUFVLENBQUEsT0FBRyxDQUFDYyxvQkFBb0IsQ0FBQ0csUUFBUSx3RkFBdUM7SUFBQztJQUFBM0IsYUFBQSxHQUFBVSxDQUFBO0lBQ3ZGLE9BQU9jLG9CQUFvQixDQUFDSSxXQUFXLHlGQUF3Q0YsUUFBUSxDQUFDO0VBQ3pGLENBQUM7RUFDREcsSUFBSSxFQUFFLENBQ0w7SUFBRWpCLEVBQUUsRUFBRVIsTUFBTSxDQUFDMEI7RUFBMkIsQ0FBRTtDQUUzQyxDQUFDO0FBRUY7QUFFQTtBQUVBLE9BQU8sd0NBQXdDO0FBRS9DIiwiaWdub3JlTGlzdCI6W119

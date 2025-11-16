@@ -1,0 +1,234 @@
+ce6888ad6035c13231a71793de899b1d
+/* istanbul ignore next */
+function cov_1nemhus458() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/common/core/editOperation.ts";
+  var hash = "809c0e706d7d29af5a88c0db4296d326e5456f2e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/common/core/editOperation.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 12,
+          column: 10
+        }
+      },
+      "1": {
+        start: {
+          line: 15,
+          column: 8
+        },
+        end: {
+          line: 18,
+          column: 10
+        }
+      },
+      "2": {
+        start: {
+          line: 21,
+          column: 8
+        },
+        end: {
+          line: 24,
+          column: 10
+        }
+      },
+      "3": {
+        start: {
+          line: 27,
+          column: 8
+        },
+        end: {
+          line: 31,
+          column: 10
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 4
+          },
+          end: {
+            line: 7,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 34
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 14,
+            column: 4
+          },
+          end: {
+            line: 14,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 25
+          },
+          end: {
+            line: 19,
+            column: 5
+          }
+        },
+        line: 14
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 20,
+            column: 4
+          },
+          end: {
+            line: 20,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 20,
+            column: 32
+          },
+          end: {
+            line: 25,
+            column: 5
+          }
+        },
+        line: 20
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 26,
+            column: 4
+          },
+          end: {
+            line: 26,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 26,
+            column: 36
+          },
+          end: {
+            line: 32,
+            column: 5
+          }
+        },
+        line: 26
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/common/core/editOperation.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAU,KAAK,EAAE,MAAM,YAAY,CAAC;AAsB3C,MAAM,OAAO,aAAa;IAElB,MAAM,CAAC,MAAM,CAAC,QAAkB,EAAE,IAAY;QACpD,OAAO;YACN,KAAK,EAAE,IAAI,KAAK,CAAC,QAAQ,CAAC,UAAU,EAAE,QAAQ,CAAC,MAAM,EAAE,QAAQ,CAAC,UAAU,EAAE,QAAQ,CAAC,MAAM,CAAC;YAC5F,IAAI,EAAE,IAAI;YACV,gBAAgB,EAAE,IAAI;SACtB,CAAC;IACH,CAAC;IAEM,MAAM,CAAC,MAAM,CAAC,KAAY;QAChC,OAAO;YACN,KAAK,EAAE,KAAK;YACZ,IAAI,EAAE,IAAI;SACV,CAAC;IACH,CAAC;IAEM,MAAM,CAAC,OAAO,CAAC,KAAY,EAAE,IAAmB;QACtD,OAAO;YACN,KAAK,EAAE,KAAK;YACZ,IAAI,EAAE,IAAI;SACV,CAAC;IACH,CAAC;IAEM,MAAM,CAAC,WAAW,CAAC,KAAY,EAAE,IAAmB;QAC1D,OAAO;YACN,KAAK,EAAE,KAAK;YACZ,IAAI,EAAE,IAAI;YACV,gBAAgB,EAAE,IAAI;SACtB,CAAC;IACH,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/common/core/editOperation.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Position } from './position.js';\nimport { IRange, Range } from './range.js';\n\n/**\n * A single edit operation, that acts as a simple replace.\n * i.e. Replace text at `range` with `text` in model.\n */\nexport interface ISingleEditOperation {\n\t/**\n\t * The range to replace. This can be empty to emulate a simple insert.\n\t */\n\trange: IRange;\n\t/**\n\t * The text to replace with. This can be null to emulate a simple delete.\n\t */\n\ttext: string | null;\n\t/**\n\t * This indicates that this operation has \"insert\" semantics.\n\t * i.e. forceMoveMarkers = true => if `range` is collapsed, all markers at the position will be moved.\n\t */\n\tforceMoveMarkers?: boolean;\n}\n\nexport class EditOperation {\n\n\tpublic static insert(position: Position, text: string): ISingleEditOperation {\n\t\treturn {\n\t\t\trange: new Range(position.lineNumber, position.column, position.lineNumber, position.column),\n\t\t\ttext: text,\n\t\t\tforceMoveMarkers: true\n\t\t};\n\t}\n\n\tpublic static delete(range: Range): ISingleEditOperation {\n\t\treturn {\n\t\t\trange: range,\n\t\t\ttext: null\n\t\t};\n\t}\n\n\tpublic static replace(range: Range, text: string | null): ISingleEditOperation {\n\t\treturn {\n\t\t\trange: range,\n\t\t\ttext: text\n\t\t};\n\t}\n\n\tpublic static replaceMove(range: Range, text: string | null): ISingleEditOperation {\n\t\treturn {\n\t\t\trange: range,\n\t\t\ttext: text,\n\t\t\tforceMoveMarkers: true\n\t\t};\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "809c0e706d7d29af5a88c0db4296d326e5456f2e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1nemhus458 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1nemhus458();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { Range } from './range.js';
+export class EditOperation {
+  static insert(position, text) {
+    /* istanbul ignore next */
+    cov_1nemhus458().f[0]++;
+    cov_1nemhus458().s[0]++;
+    return {
+      range: new Range(position.lineNumber, position.column, position.lineNumber, position.column),
+      text: text,
+      forceMoveMarkers: true
+    };
+  }
+  static delete(range) {
+    /* istanbul ignore next */
+    cov_1nemhus458().f[1]++;
+    cov_1nemhus458().s[1]++;
+    return {
+      range: range,
+      text: null
+    };
+  }
+  static replace(range, text) {
+    /* istanbul ignore next */
+    cov_1nemhus458().f[2]++;
+    cov_1nemhus458().s[2]++;
+    return {
+      range: range,
+      text: text
+    };
+  }
+  static replaceMove(range, text) {
+    /* istanbul ignore next */
+    cov_1nemhus458().f[3]++;
+    cov_1nemhus458().s[3]++;
+    return {
+      range: range,
+      text: text,
+      forceMoveMarkers: true
+    };
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMW5lbWh1czQ1OCIsImFjdHVhbENvdmVyYWdlIiwiUmFuZ2UiLCJFZGl0T3BlcmF0aW9uIiwiaW5zZXJ0IiwicG9zaXRpb24iLCJ0ZXh0IiwiZiIsInMiLCJyYW5nZSIsImxpbmVOdW1iZXIiLCJjb2x1bW4iLCJmb3JjZU1vdmVNYXJrZXJzIiwiZGVsZXRlIiwicmVwbGFjZSIsInJlcGxhY2VNb3ZlIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvY29tbW9uL2NvcmUvZWRpdE9wZXJhdGlvbi50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgUG9zaXRpb24gfSBmcm9tICcuL3Bvc2l0aW9uLmpzJztcbmltcG9ydCB7IElSYW5nZSwgUmFuZ2UgfSBmcm9tICcuL3JhbmdlLmpzJztcblxuLyoqXG4gKiBBIHNpbmdsZSBlZGl0IG9wZXJhdGlvbiwgdGhhdCBhY3RzIGFzIGEgc2ltcGxlIHJlcGxhY2UuXG4gKiBpLmUuIFJlcGxhY2UgdGV4dCBhdCBgcmFuZ2VgIHdpdGggYHRleHRgIGluIG1vZGVsLlxuICovXG5leHBvcnQgaW50ZXJmYWNlIElTaW5nbGVFZGl0T3BlcmF0aW9uIHtcblx0LyoqXG5cdCAqIFRoZSByYW5nZSB0byByZXBsYWNlLiBUaGlzIGNhbiBiZSBlbXB0eSB0byBlbXVsYXRlIGEgc2ltcGxlIGluc2VydC5cblx0ICovXG5cdHJhbmdlOiBJUmFuZ2U7XG5cdC8qKlxuXHQgKiBUaGUgdGV4dCB0byByZXBsYWNlIHdpdGguIFRoaXMgY2FuIGJlIG51bGwgdG8gZW11bGF0ZSBhIHNpbXBsZSBkZWxldGUuXG5cdCAqL1xuXHR0ZXh0OiBzdHJpbmcgfCBudWxsO1xuXHQvKipcblx0ICogVGhpcyBpbmRpY2F0ZXMgdGhhdCB0aGlzIG9wZXJhdGlvbiBoYXMgXCJpbnNlcnRcIiBzZW1hbnRpY3MuXG5cdCAqIGkuZS4gZm9yY2VNb3ZlTWFya2VycyA9IHRydWUgPT4gaWYgYHJhbmdlYCBpcyBjb2xsYXBzZWQsIGFsbCBtYXJrZXJzIGF0IHRoZSBwb3NpdGlvbiB3aWxsIGJlIG1vdmVkLlxuXHQgKi9cblx0Zm9yY2VNb3ZlTWFya2Vycz86IGJvb2xlYW47XG59XG5cbmV4cG9ydCBjbGFzcyBFZGl0T3BlcmF0aW9uIHtcblxuXHRwdWJsaWMgc3RhdGljIGluc2VydChwb3NpdGlvbjogUG9zaXRpb24sIHRleHQ6IHN0cmluZyk6IElTaW5nbGVFZGl0T3BlcmF0aW9uIHtcblx0XHRyZXR1cm4ge1xuXHRcdFx0cmFuZ2U6IG5ldyBSYW5nZShwb3NpdGlvbi5saW5lTnVtYmVyLCBwb3NpdGlvbi5jb2x1bW4sIHBvc2l0aW9uLmxpbmVOdW1iZXIsIHBvc2l0aW9uLmNvbHVtbiksXG5cdFx0XHR0ZXh0OiB0ZXh0LFxuXHRcdFx0Zm9yY2VNb3ZlTWFya2VyczogdHJ1ZVxuXHRcdH07XG5cdH1cblxuXHRwdWJsaWMgc3RhdGljIGRlbGV0ZShyYW5nZTogUmFuZ2UpOiBJU2luZ2xlRWRpdE9wZXJhdGlvbiB7XG5cdFx0cmV0dXJuIHtcblx0XHRcdHJhbmdlOiByYW5nZSxcblx0XHRcdHRleHQ6IG51bGxcblx0XHR9O1xuXHR9XG5cblx0cHVibGljIHN0YXRpYyByZXBsYWNlKHJhbmdlOiBSYW5nZSwgdGV4dDogc3RyaW5nIHwgbnVsbCk6IElTaW5nbGVFZGl0T3BlcmF0aW9uIHtcblx0XHRyZXR1cm4ge1xuXHRcdFx0cmFuZ2U6IHJhbmdlLFxuXHRcdFx0dGV4dDogdGV4dFxuXHRcdH07XG5cdH1cblxuXHRwdWJsaWMgc3RhdGljIHJlcGxhY2VNb3ZlKHJhbmdlOiBSYW5nZSwgdGV4dDogc3RyaW5nIHwgbnVsbCk6IElTaW5nbGVFZGl0T3BlcmF0aW9uIHtcblx0XHRyZXR1cm4ge1xuXHRcdFx0cmFuZ2U6IHJhbmdlLFxuXHRcdFx0dGV4dDogdGV4dCxcblx0XHRcdGZvcmNlTW92ZU1hcmtlcnM6IHRydWVcblx0XHR9O1xuXHR9XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBd0NHO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUF4Q0g7Ozs7QUFNQSxTQUFpQkUsS0FBSyxRQUFRLFlBQVk7QUFzQjFDLE9BQU0sTUFBT0MsYUFBYTtFQUVsQixPQUFPQyxNQUFNQSxDQUFDQyxRQUFrQixFQUFFQyxJQUFZO0lBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQVEsQ0FBQTtJQUNwRCxPQUFPO01BQ05DLEtBQUssRUFBRSxJQUFJUCxLQUFLLENBQUNHLFFBQVEsQ0FBQ0ssVUFBVSxFQUFFTCxRQUFRLENBQUNNLE1BQU0sRUFBRU4sUUFBUSxDQUFDSyxVQUFVLEVBQUVMLFFBQVEsQ0FBQ00sTUFBTSxDQUFDO01BQzVGTCxJQUFJLEVBQUVBLElBQUk7TUFDVk0sZ0JBQWdCLEVBQUU7S0FDbEI7RUFDRjtFQUVPLE9BQU9DLE1BQU1BLENBQUNKLEtBQVk7SUFBQTtJQUFBVCxjQUFBLEdBQUFPLENBQUE7SUFBQVAsY0FBQSxHQUFBUSxDQUFBO0lBQ2hDLE9BQU87TUFDTkMsS0FBSyxFQUFFQSxLQUFLO01BQ1pILElBQUksRUFBRTtLQUNOO0VBQ0Y7RUFFTyxPQUFPUSxPQUFPQSxDQUFDTCxLQUFZLEVBQUVILElBQW1CO0lBQUE7SUFBQU4sY0FBQSxHQUFBTyxDQUFBO0lBQUFQLGNBQUEsR0FBQVEsQ0FBQTtJQUN0RCxPQUFPO01BQ05DLEtBQUssRUFBRUEsS0FBSztNQUNaSCxJQUFJLEVBQUVBO0tBQ047RUFDRjtFQUVPLE9BQU9TLFdBQVdBLENBQUNOLEtBQVksRUFBRUgsSUFBbUI7SUFBQTtJQUFBTixjQUFBLEdBQUFPLENBQUE7SUFBQVAsY0FBQSxHQUFBUSxDQUFBO0lBQzFELE9BQU87TUFDTkMsS0FBSyxFQUFFQSxLQUFLO01BQ1pILElBQUksRUFBRUEsSUFBSTtNQUNWTSxnQkFBZ0IsRUFBRTtLQUNsQjtFQUNGIiwiaWdub3JlTGlzdCI6W119

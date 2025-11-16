@@ -1,0 +1,46 @@
+15f2eaecba55591a812d3e8fee61d339
+/* istanbul ignore next */
+function cov_gte2fwgc7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/markers/browser/markers.ts";
+  var hash = "3940ac46e5e43b91daac225ccaf95f9e0b244b64";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/markers/browser/markers.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/markers/browser/markers.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/markers/browser/markers.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { MarkersFilters } from './markersViewActions.js';\nimport { IView } from '../../../common/views.js';\nimport { MarkerElement, ResourceMarkers } from './markersModel.js';\nimport { MarkersViewMode } from '../common/markers.js';\n\nexport interface IMarkersView extends IView {\n\n\treadonly filters: MarkersFilters;\n\tfocusFilter(): void;\n\tclearFilterText(): void;\n\tgetFilterStats(): { total: number; filtered: number };\n\n\tgetFocusElement(): MarkerElement | undefined;\n\tgetFocusedSelectedElements(): MarkerElement[] | null;\n\tgetAllResourceMarkers(): ResourceMarkers[];\n\n\tcollapseAll(): void;\n\tsetMultiline(multiline: boolean): void;\n\tsetViewMode(viewMode: MarkersViewMode): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "3940ac46e5e43b91daac225ccaf95f9e0b244b64"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_gte2fwgc7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_gte2fwgc7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9tYXJrZXJzL2Jyb3dzZXIvbWFya2Vycy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgTWFya2Vyc0ZpbHRlcnMgfSBmcm9tICcuL21hcmtlcnNWaWV3QWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBJVmlldyB9IGZyb20gJy4uLy4uLy4uL2NvbW1vbi92aWV3cy5qcyc7XG5pbXBvcnQgeyBNYXJrZXJFbGVtZW50LCBSZXNvdXJjZU1hcmtlcnMgfSBmcm9tICcuL21hcmtlcnNNb2RlbC5qcyc7XG5pbXBvcnQgeyBNYXJrZXJzVmlld01vZGUgfSBmcm9tICcuLi9jb21tb24vbWFya2Vycy5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSU1hcmtlcnNWaWV3IGV4dGVuZHMgSVZpZXcge1xuXG5cdHJlYWRvbmx5IGZpbHRlcnM6IE1hcmtlcnNGaWx0ZXJzO1xuXHRmb2N1c0ZpbHRlcigpOiB2b2lkO1xuXHRjbGVhckZpbHRlclRleHQoKTogdm9pZDtcblx0Z2V0RmlsdGVyU3RhdHMoKTogeyB0b3RhbDogbnVtYmVyOyBmaWx0ZXJlZDogbnVtYmVyIH07XG5cblx0Z2V0Rm9jdXNFbGVtZW50KCk6IE1hcmtlckVsZW1lbnQgfCB1bmRlZmluZWQ7XG5cdGdldEZvY3VzZWRTZWxlY3RlZEVsZW1lbnRzKCk6IE1hcmtlckVsZW1lbnRbXSB8IG51bGw7XG5cdGdldEFsbFJlc291cmNlTWFya2VycygpOiBSZXNvdXJjZU1hcmtlcnNbXTtcblxuXHRjb2xsYXBzZUFsbCgpOiB2b2lkO1xuXHRzZXRNdWx0aWxpbmUobXVsdGlsaW5lOiBib29sZWFuKTogdm9pZDtcblx0c2V0Vmlld01vZGUodmlld01vZGU6IE1hcmtlcnNWaWV3TW9kZSk6IHZvaWQ7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBIiwiaWdub3JlTGlzdCI6W119

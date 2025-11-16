@@ -1,0 +1,46 @@
+a6a72b8e4f081a557d00f2531c623901
+/* istanbul ignore next */
+function cov_6qpoyodc7() {
+  var path = "/home/user/Desktop/MintMind/src/vs/editor/test/browser/controller/imeRecordedTypes.ts";
+  var hash = "316a7b6dbce0b546c5572fb74d2cb537dfe06e51";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/editor/test/browser/controller/imeRecordedTypes.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/editor/test/browser/controller/imeRecordedTypes.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/editor/test/browser/controller/imeRecordedTypes.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { OperatingSystem } from '../../../../base/common/platform.js';\nimport { IBrowser } from '../../../browser/controller/editContext/textArea/textAreaEditContextInput.js';\n\nexport interface IRecordedTextareaState {\n\tselectionDirection: 'forward' | 'backward' | 'none';\n\tselectionEnd: number;\n\tselectionStart: number;\n\tvalue: string;\n}\n\nexport interface IRecordedKeyboardEvent {\n\ttimeStamp: number;\n\tstate: IRecordedTextareaState;\n\ttype: 'keydown' | 'keypress' | 'keyup';\n\taltKey: boolean;\n\tcharCode: number;\n\tcode: string;\n\tctrlKey: boolean;\n\tisComposing: boolean;\n\tkey: string;\n\tkeyCode: number;\n\tlocation: number;\n\tmetaKey: boolean;\n\trepeat: boolean;\n\tshiftKey: boolean;\n}\n\nexport interface IRecordedCompositionEvent {\n\ttimeStamp: number;\n\tstate: IRecordedTextareaState;\n\ttype: 'compositionstart' | 'compositionupdate' | 'compositionend';\n\tdata: string;\n}\n\nexport interface IRecordedInputEvent {\n\ttimeStamp: number;\n\tstate: IRecordedTextareaState;\n\ttype: 'beforeinput' | 'input';\n\tdata: string | null;\n\tinputType: string;\n\tisComposing: boolean | undefined;\n}\n\nexport type IRecordedEvent = IRecordedKeyboardEvent | IRecordedCompositionEvent | IRecordedInputEvent;\n\nexport interface IRecorded {\n\tenv: {\n\t\tOS: OperatingSystem;\n\t\tbrowser: IBrowser;\n\t};\n\tinitial: IRecordedTextareaState;\n\tevents: IRecordedEvent[];\n\tfinal: IRecordedTextareaState;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "316a7b6dbce0b546c5572fb74d2cb537dfe06e51"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_6qpoyodc7 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_6qpoyodc7();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9lZGl0b3IvdGVzdC9icm93c2VyL2NvbnRyb2xsZXIvaW1lUmVjb3JkZWRUeXBlcy50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgT3BlcmF0aW5nU3lzdGVtIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vcGxhdGZvcm0uanMnO1xuaW1wb3J0IHsgSUJyb3dzZXIgfSBmcm9tICcuLi8uLi8uLi9icm93c2VyL2NvbnRyb2xsZXIvZWRpdENvbnRleHQvdGV4dEFyZWEvdGV4dEFyZWFFZGl0Q29udGV4dElucHV0LmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJUmVjb3JkZWRUZXh0YXJlYVN0YXRlIHtcblx0c2VsZWN0aW9uRGlyZWN0aW9uOiAnZm9yd2FyZCcgfCAnYmFja3dhcmQnIHwgJ25vbmUnO1xuXHRzZWxlY3Rpb25FbmQ6IG51bWJlcjtcblx0c2VsZWN0aW9uU3RhcnQ6IG51bWJlcjtcblx0dmFsdWU6IHN0cmluZztcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJUmVjb3JkZWRLZXlib2FyZEV2ZW50IHtcblx0dGltZVN0YW1wOiBudW1iZXI7XG5cdHN0YXRlOiBJUmVjb3JkZWRUZXh0YXJlYVN0YXRlO1xuXHR0eXBlOiAna2V5ZG93bicgfCAna2V5cHJlc3MnIHwgJ2tleXVwJztcblx0YWx0S2V5OiBib29sZWFuO1xuXHRjaGFyQ29kZTogbnVtYmVyO1xuXHRjb2RlOiBzdHJpbmc7XG5cdGN0cmxLZXk6IGJvb2xlYW47XG5cdGlzQ29tcG9zaW5nOiBib29sZWFuO1xuXHRrZXk6IHN0cmluZztcblx0a2V5Q29kZTogbnVtYmVyO1xuXHRsb2NhdGlvbjogbnVtYmVyO1xuXHRtZXRhS2V5OiBib29sZWFuO1xuXHRyZXBlYXQ6IGJvb2xlYW47XG5cdHNoaWZ0S2V5OiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElSZWNvcmRlZENvbXBvc2l0aW9uRXZlbnQge1xuXHR0aW1lU3RhbXA6IG51bWJlcjtcblx0c3RhdGU6IElSZWNvcmRlZFRleHRhcmVhU3RhdGU7XG5cdHR5cGU6ICdjb21wb3NpdGlvbnN0YXJ0JyB8ICdjb21wb3NpdGlvbnVwZGF0ZScgfCAnY29tcG9zaXRpb25lbmQnO1xuXHRkYXRhOiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlY29yZGVkSW5wdXRFdmVudCB7XG5cdHRpbWVTdGFtcDogbnVtYmVyO1xuXHRzdGF0ZTogSVJlY29yZGVkVGV4dGFyZWFTdGF0ZTtcblx0dHlwZTogJ2JlZm9yZWlucHV0JyB8ICdpbnB1dCc7XG5cdGRhdGE6IHN0cmluZyB8IG51bGw7XG5cdGlucHV0VHlwZTogc3RyaW5nO1xuXHRpc0NvbXBvc2luZzogYm9vbGVhbiB8IHVuZGVmaW5lZDtcbn1cblxuZXhwb3J0IHR5cGUgSVJlY29yZGVkRXZlbnQgPSBJUmVjb3JkZWRLZXlib2FyZEV2ZW50IHwgSVJlY29yZGVkQ29tcG9zaXRpb25FdmVudCB8IElSZWNvcmRlZElucHV0RXZlbnQ7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlY29yZGVkIHtcblx0ZW52OiB7XG5cdFx0T1M6IE9wZXJhdGluZ1N5c3RlbTtcblx0XHRicm93c2VyOiBJQnJvd3Nlcjtcblx0fTtcblx0aW5pdGlhbDogSVJlY29yZGVkVGV4dGFyZWFTdGF0ZTtcblx0ZXZlbnRzOiBJUmVjb3JkZWRFdmVudFtdO1xuXHRmaW5hbDogSVJlY29yZGVkVGV4dGFyZWFTdGF0ZTtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

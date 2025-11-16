@@ -1,0 +1,63 @@
+b762fcada608c12d573b7747ae168010
+/* istanbul ignore next */
+function cov_1jlxj4ygxx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/environment/common/environmentService.ts";
+  var hash = "449a1fae8836385b6a438e6749d1c282d6e42a98";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/environment/common/environmentService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 7,
+          column: 44
+        },
+        end: {
+          line: 7,
+          column: 87
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/environment/common/environmentService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,sBAAsB,EAAE,MAAM,4DAA4D,CAAC;AAEpG,OAAO,EAAE,mBAAmB,EAAE,MAAM,wDAAwD,CAAC;AAG7F,MAAM,CAAC,MAAM,4BAA4B,GAAG,sBAAsB,CAAoD,mBAAmB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/environment/common/environmentService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { refineServiceDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { IPath } from '../../../../platform/window/common/window.js';\nimport { IEnvironmentService } from '../../../../platform/environment/common/environment.js';\nimport { URI } from '../../../../base/common/uri.js';\n\nexport const IWorkbenchEnvironmentService = refineServiceDecorator<IEnvironmentService, IWorkbenchEnvironmentService>(IEnvironmentService);\n\n/**\n * A workbench specific environment service that is only present in workbench\n * layer.\n */\nexport interface IWorkbenchEnvironmentService extends IEnvironmentService {\n\n\t// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\t// NOTE: KEEP THIS INTERFACE AS SMALL AS POSSIBLE. AS SUCH:\n\t//       PUT NON-WEB PROPERTIES INTO THE NATIVE WORKBENCH\n\t//       ENVIRONMENT SERVICE\n\t// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\t// --- Paths\n\treadonly logFile: URI;\n\treadonly windowLogsPath: URI;\n\treadonly extHostLogsPath: URI;\n\n\t// --- Extensions\n\treadonly extensionEnabledProposedApi?: string[];\n\n\t// --- Config\n\treadonly remoteAuthority?: string;\n\treadonly skipReleaseNotes: boolean;\n\treadonly skipWelcome: boolean;\n\treadonly disableWorkspaceTrust: boolean;\n\treadonly webviewExternalEndpoint: string;\n\n\t// --- Development\n\treadonly debugRenderer: boolean;\n\treadonly logExtensionHostCommunication?: boolean;\n\treadonly enableSmokeTestDriver?: boolean;\n\treadonly profDurationMarkers?: string[];\n\n\t// --- Editors to open\n\treadonly filesToOpenOrCreate?: IPath[] | undefined;\n\treadonly filesToDiff?: IPath[] | undefined;\n\treadonly filesToMerge?: IPath[] | undefined;\n\n\t// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\t// NOTE: KEEP THIS INTERFACE AS SMALL AS POSSIBLE. AS SUCH:\n\t//       - PUT NON-WEB PROPERTIES INTO NATIVE WB ENV SERVICE\n\t// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "449a1fae8836385b6a438e6749d1c282d6e42a98"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1jlxj4ygxx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1jlxj4ygxx();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { refineServiceDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+import { IEnvironmentService } from '../../../../platform/environment/common/environment.js';
+export const IWorkbenchEnvironmentService =
+/* istanbul ignore next */
+(cov_1jlxj4ygxx().s[0]++, refineServiceDecorator(IEnvironmentService));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJyZWZpbmVTZXJ2aWNlRGVjb3JhdG9yIiwiSUVudmlyb25tZW50U2VydmljZSIsIklXb3JrYmVuY2hFbnZpcm9ubWVudFNlcnZpY2UiLCJjb3ZfMWpseGo0eWd4eCIsInMiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3dvcmtiZW5jaC9zZXJ2aWNlcy9lbnZpcm9ubWVudC9jb21tb24vZW52aXJvbm1lbnRTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyByZWZpbmVTZXJ2aWNlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBJUGF0aCB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL3dpbmRvdy9jb21tb24vd2luZG93LmpzJztcbmltcG9ydCB7IElFbnZpcm9ubWVudFNlcnZpY2UgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9lbnZpcm9ubWVudC9jb21tb24vZW52aXJvbm1lbnQuanMnO1xuaW1wb3J0IHsgVVJJIH0gZnJvbSAnLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vdXJpLmpzJztcblxuZXhwb3J0IGNvbnN0IElXb3JrYmVuY2hFbnZpcm9ubWVudFNlcnZpY2UgPSByZWZpbmVTZXJ2aWNlRGVjb3JhdG9yPElFbnZpcm9ubWVudFNlcnZpY2UsIElXb3JrYmVuY2hFbnZpcm9ubWVudFNlcnZpY2U+KElFbnZpcm9ubWVudFNlcnZpY2UpO1xuXG4vKipcbiAqIEEgd29ya2JlbmNoIHNwZWNpZmljIGVudmlyb25tZW50IHNlcnZpY2UgdGhhdCBpcyBvbmx5IHByZXNlbnQgaW4gd29ya2JlbmNoXG4gKiBsYXllci5cbiAqL1xuZXhwb3J0IGludGVyZmFjZSBJV29ya2JlbmNoRW52aXJvbm1lbnRTZXJ2aWNlIGV4dGVuZHMgSUVudmlyb25tZW50U2VydmljZSB7XG5cblx0Ly8gISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhXG5cdC8vIE5PVEU6IEtFRVAgVEhJUyBJTlRFUkZBQ0UgQVMgU01BTEwgQVMgUE9TU0lCTEUuIEFTIFNVQ0g6XG5cdC8vICAgICAgIFBVVCBOT04tV0VCIFBST1BFUlRJRVMgSU5UTyBUSEUgTkFUSVZFIFdPUktCRU5DSFxuXHQvLyAgICAgICBFTlZJUk9OTUVOVCBTRVJWSUNFXG5cdC8vICEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhIVxuXG5cdC8vIC0tLSBQYXRoc1xuXHRyZWFkb25seSBsb2dGaWxlOiBVUkk7XG5cdHJlYWRvbmx5IHdpbmRvd0xvZ3NQYXRoOiBVUkk7XG5cdHJlYWRvbmx5IGV4dEhvc3RMb2dzUGF0aDogVVJJO1xuXG5cdC8vIC0tLSBFeHRlbnNpb25zXG5cdHJlYWRvbmx5IGV4dGVuc2lvbkVuYWJsZWRQcm9wb3NlZEFwaT86IHN0cmluZ1tdO1xuXG5cdC8vIC0tLSBDb25maWdcblx0cmVhZG9ubHkgcmVtb3RlQXV0aG9yaXR5Pzogc3RyaW5nO1xuXHRyZWFkb25seSBza2lwUmVsZWFzZU5vdGVzOiBib29sZWFuO1xuXHRyZWFkb25seSBza2lwV2VsY29tZTogYm9vbGVhbjtcblx0cmVhZG9ubHkgZGlzYWJsZVdvcmtzcGFjZVRydXN0OiBib29sZWFuO1xuXHRyZWFkb25seSB3ZWJ2aWV3RXh0ZXJuYWxFbmRwb2ludDogc3RyaW5nO1xuXG5cdC8vIC0tLSBEZXZlbG9wbWVudFxuXHRyZWFkb25seSBkZWJ1Z1JlbmRlcmVyOiBib29sZWFuO1xuXHRyZWFkb25seSBsb2dFeHRlbnNpb25Ib3N0Q29tbXVuaWNhdGlvbj86IGJvb2xlYW47XG5cdHJlYWRvbmx5IGVuYWJsZVNtb2tlVGVzdERyaXZlcj86IGJvb2xlYW47XG5cdHJlYWRvbmx5IHByb2ZEdXJhdGlvbk1hcmtlcnM/OiBzdHJpbmdbXTtcblxuXHQvLyAtLS0gRWRpdG9ycyB0byBvcGVuXG5cdHJlYWRvbmx5IGZpbGVzVG9PcGVuT3JDcmVhdGU/OiBJUGF0aFtdIHwgdW5kZWZpbmVkO1xuXHRyZWFkb25seSBmaWxlc1RvRGlmZj86IElQYXRoW10gfCB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IGZpbGVzVG9NZXJnZT86IElQYXRoW10gfCB1bmRlZmluZWQ7XG5cblx0Ly8gISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhXG5cdC8vIE5PVEU6IEtFRVAgVEhJUyBJTlRFUkZBQ0UgQVMgU01BTEwgQVMgUE9TU0lCTEUuIEFTIFNVQ0g6XG5cdC8vICAgICAgIC0gUFVUIE5PTi1XRUIgUFJPUEVSVElFUyBJTlRPIE5BVElWRSBXQiBFTlYgU0VSVklDRVxuXHQvLyAhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISFcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBS0EsU0FBU0Esc0JBQXNCLFFBQVEsNERBQTREO0FBRW5HLFNBQVNDLG1CQUFtQixRQUFRLHdEQUF3RDtBQUc1RixPQUFPLE1BQU1DLDRCQUE0QjtBQUFBO0FBQUEsQ0FBQUMsY0FBQSxHQUFBQyxDQUFBLE9BQUdKLHNCQUFzQixDQUFvREMsbUJBQW1CLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

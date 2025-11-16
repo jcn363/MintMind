@@ -1,0 +1,168 @@
+053b26af3adb3bd04e71e88ea33bdf9d
+/* istanbul ignore next */
+function cov_1w5d1cihq4() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/accessibilitySignals/browser/accessibilitySignal.contribution.ts";
+  var hash = "302554612f2b30625a96df0ececaeb9ea08ad72b";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/accessibilitySignals/browser/accessibilitySignal.contribution.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 13,
+          column: 0
+        },
+        end: {
+          line: 13,
+          column: 110
+        }
+      },
+      "1": {
+        start: {
+          line: 14,
+          column: 0
+        },
+        end: {
+          line: 14,
+          column: 179
+        }
+      },
+      "2": {
+        start: {
+          line: 14,
+          column: 101
+        },
+        end: {
+          line: 14,
+          column: 138
+        }
+      },
+      "3": {
+        start: {
+          line: 15,
+          column: 0
+        },
+        end: {
+          line: 15,
+          column: 161
+        }
+      },
+      "4": {
+        start: {
+          line: 16,
+          column: 0
+        },
+        end: {
+          line: 16,
+          column: 37
+        }
+      },
+      "5": {
+        start: {
+          line: 17,
+          column: 0
+        },
+        end: {
+          line: 17,
+          column: 51
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 14,
+            column: 95
+          },
+          end: {
+            line: 14,
+            column: 96
+          }
+        },
+        loc: {
+          start: {
+            line: 14,
+            column: 101
+          },
+          end: {
+            line: 14,
+            column: 138
+          }
+        },
+        line: 14
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/accessibilitySignals/browser/accessibilitySignal.contribution.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,0BAA0B,EAAE,2BAA2B,EAAE,MAAM,gFAAgF,CAAC;AACzJ,OAAO,EAAE,eAAe,EAAE,MAAM,gDAAgD,CAAC;AACjF,OAAO,EAAqB,iBAAiB,EAAE,MAAM,yDAAyD,CAAC;AAC/G,OAAO,EAAE,8BAA8B,EAAkB,MAAM,kCAAkC,CAAC;AAClG,OAAO,EAAE,2CAA2C,EAAE,MAAM,8CAA8C,CAAC;AAC3G,OAAO,EAAE,iCAAiC,EAAE,mBAAmB,EAAE,MAAM,eAAe,CAAC;AACvF,OAAO,EAAE,qCAAqC,EAAE,MAAM,4CAA4C,CAAC;AACnG,OAAO,EAAE,sBAAsB,EAAE,MAAM,iEAAiE,CAAC;AAEzG,iBAAiB,CAAC,2BAA2B,EAAE,0BAA0B,oCAA4B,CAAC;AAEtG,8BAA8B,CAAC,uCAAuC,EAAE,sBAAsB,CAAC,GAAG,EAAE,CAAC,qCAAqC,CAAC,uCAA+B,CAAC;AAC3K,8BAA8B,CAAC,6CAA6C,EAAE,2CAA2C,uCAA+B,CAAC;AAEzJ,eAAe,CAAC,mBAAmB,CAAC,CAAC;AACrC,eAAe,CAAC,iCAAiC,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/accessibilitySignals/browser/accessibilitySignal.contribution.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { AccessibilitySignalService, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';\nimport { registerAction2 } from '../../../../platform/actions/common/actions.js';\nimport { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';\nimport { registerWorkbenchContribution2, WorkbenchPhase } from '../../../common/contributions.js';\nimport { AccessibilitySignalLineDebuggerContribution } from './accessibilitySignalDebuggerContribution.js';\nimport { ShowAccessibilityAnnouncementHelp, ShowSignalSoundHelp } from './commands.js';\nimport { EditorTextPropertySignalsContribution } from './editorTextPropertySignalsContribution.js';\nimport { wrapInReloadableClass0 } from '../../../../platform/observable/common/wrapInReloadableClass.js';\n\nregisterSingleton(IAccessibilitySignalService, AccessibilitySignalService, InstantiationType.Delayed);\n\nregisterWorkbenchContribution2('EditorTextPropertySignalsContribution', wrapInReloadableClass0(() => EditorTextPropertySignalsContribution), WorkbenchPhase.AfterRestored);\nregisterWorkbenchContribution2('AccessibilitySignalLineDebuggerContribution', AccessibilitySignalLineDebuggerContribution, WorkbenchPhase.AfterRestored);\n\nregisterAction2(ShowSignalSoundHelp);\nregisterAction2(ShowAccessibilityAnnouncementHelp);\n\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "302554612f2b30625a96df0ececaeb9ea08ad72b"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1w5d1cihq4 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1w5d1cihq4();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { AccessibilitySignalService, IAccessibilitySignalService } from '../../../../platform/accessibilitySignal/browser/accessibilitySignalService.js';
+import { registerAction2 } from '../../../../platform/actions/common/actions.js';
+import { registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+import { registerWorkbenchContribution2 } from '../../../common/contributions.js';
+import { AccessibilitySignalLineDebuggerContribution } from './accessibilitySignalDebuggerContribution.js';
+import { ShowAccessibilityAnnouncementHelp, ShowSignalSoundHelp } from './commands.js';
+import { EditorTextPropertySignalsContribution } from './editorTextPropertySignalsContribution.js';
+import { wrapInReloadableClass0 } from '../../../../platform/observable/common/wrapInReloadableClass.js';
+/* istanbul ignore next */
+cov_1w5d1cihq4().s[0]++;
+registerSingleton(IAccessibilitySignalService, AccessibilitySignalService, 1 /* InstantiationType.Delayed */);
+/* istanbul ignore next */
+cov_1w5d1cihq4().s[1]++;
+registerWorkbenchContribution2('EditorTextPropertySignalsContribution', wrapInReloadableClass0(() => {
+  /* istanbul ignore next */
+  cov_1w5d1cihq4().f[0]++;
+  cov_1w5d1cihq4().s[2]++;
+  return EditorTextPropertySignalsContribution;
+}), 3 /* WorkbenchPhase.AfterRestored */);
+/* istanbul ignore next */
+cov_1w5d1cihq4().s[3]++;
+registerWorkbenchContribution2('AccessibilitySignalLineDebuggerContribution', AccessibilitySignalLineDebuggerContribution, 3 /* WorkbenchPhase.AfterRestored */);
+/* istanbul ignore next */
+cov_1w5d1cihq4().s[4]++;
+registerAction2(ShowSignalSoundHelp);
+/* istanbul ignore next */
+cov_1w5d1cihq4().s[5]++;
+registerAction2(ShowAccessibilityAnnouncementHelp);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMXc1ZDFjaWhxNCIsImFjdHVhbENvdmVyYWdlIiwiQWNjZXNzaWJpbGl0eVNpZ25hbFNlcnZpY2UiLCJJQWNjZXNzaWJpbGl0eVNpZ25hbFNlcnZpY2UiLCJyZWdpc3RlckFjdGlvbjIiLCJyZWdpc3RlclNpbmdsZXRvbiIsInJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uMiIsIkFjY2Vzc2liaWxpdHlTaWduYWxMaW5lRGVidWdnZXJDb250cmlidXRpb24iLCJTaG93QWNjZXNzaWJpbGl0eUFubm91bmNlbWVudEhlbHAiLCJTaG93U2lnbmFsU291bmRIZWxwIiwiRWRpdG9yVGV4dFByb3BlcnR5U2lnbmFsc0NvbnRyaWJ1dGlvbiIsIndyYXBJblJlbG9hZGFibGVDbGFzczAiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvY29udHJpYi9hY2Nlc3NpYmlsaXR5U2lnbmFscy9icm93c2VyL2FjY2Vzc2liaWxpdHlTaWduYWwuY29udHJpYnV0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBBY2Nlc3NpYmlsaXR5U2lnbmFsU2VydmljZSwgSUFjY2Vzc2liaWxpdHlTaWduYWxTZXJ2aWNlIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vYWNjZXNzaWJpbGl0eVNpZ25hbC9icm93c2VyL2FjY2Vzc2liaWxpdHlTaWduYWxTZXJ2aWNlLmpzJztcbmltcG9ydCB7IHJlZ2lzdGVyQWN0aW9uMiB9IGZyb20gJy4uLy4uLy4uLy4uL3BsYXRmb3JtL2FjdGlvbnMvY29tbW9uL2FjdGlvbnMuanMnO1xuaW1wb3J0IHsgSW5zdGFudGlhdGlvblR5cGUsIHJlZ2lzdGVyU2luZ2xldG9uIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vZXh0ZW5zaW9ucy5qcyc7XG5pbXBvcnQgeyByZWdpc3RlcldvcmtiZW5jaENvbnRyaWJ1dGlvbjIsIFdvcmtiZW5jaFBoYXNlIH0gZnJvbSAnLi4vLi4vLi4vY29tbW9uL2NvbnRyaWJ1dGlvbnMuanMnO1xuaW1wb3J0IHsgQWNjZXNzaWJpbGl0eVNpZ25hbExpbmVEZWJ1Z2dlckNvbnRyaWJ1dGlvbiB9IGZyb20gJy4vYWNjZXNzaWJpbGl0eVNpZ25hbERlYnVnZ2VyQ29udHJpYnV0aW9uLmpzJztcbmltcG9ydCB7IFNob3dBY2Nlc3NpYmlsaXR5QW5ub3VuY2VtZW50SGVscCwgU2hvd1NpZ25hbFNvdW5kSGVscCB9IGZyb20gJy4vY29tbWFuZHMuanMnO1xuaW1wb3J0IHsgRWRpdG9yVGV4dFByb3BlcnR5U2lnbmFsc0NvbnRyaWJ1dGlvbiB9IGZyb20gJy4vZWRpdG9yVGV4dFByb3BlcnR5U2lnbmFsc0NvbnRyaWJ1dGlvbi5qcyc7XG5pbXBvcnQgeyB3cmFwSW5SZWxvYWRhYmxlQ2xhc3MwIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vb2JzZXJ2YWJsZS9jb21tb24vd3JhcEluUmVsb2FkYWJsZUNsYXNzLmpzJztcblxucmVnaXN0ZXJTaW5nbGV0b24oSUFjY2Vzc2liaWxpdHlTaWduYWxTZXJ2aWNlLCBBY2Nlc3NpYmlsaXR5U2lnbmFsU2VydmljZSwgSW5zdGFudGlhdGlvblR5cGUuRGVsYXllZCk7XG5cbnJlZ2lzdGVyV29ya2JlbmNoQ29udHJpYnV0aW9uMignRWRpdG9yVGV4dFByb3BlcnR5U2lnbmFsc0NvbnRyaWJ1dGlvbicsIHdyYXBJblJlbG9hZGFibGVDbGFzczAoKCkgPT4gRWRpdG9yVGV4dFByb3BlcnR5U2lnbmFsc0NvbnRyaWJ1dGlvbiksIFdvcmtiZW5jaFBoYXNlLkFmdGVyUmVzdG9yZWQpO1xucmVnaXN0ZXJXb3JrYmVuY2hDb250cmlidXRpb24yKCdBY2Nlc3NpYmlsaXR5U2lnbmFsTGluZURlYnVnZ2VyQ29udHJpYnV0aW9uJywgQWNjZXNzaWJpbGl0eVNpZ25hbExpbmVEZWJ1Z2dlckNvbnRyaWJ1dGlvbiwgV29ya2JlbmNoUGhhc2UuQWZ0ZXJSZXN0b3JlZCk7XG5cbnJlZ2lzdGVyQWN0aW9uMihTaG93U2lnbmFsU291bmRIZWxwKTtcbnJlZ2lzdGVyQWN0aW9uMihTaG93QWNjZXNzaWJpbGl0eUFubm91bmNlbWVudEhlbHApO1xuXG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW1CQTtJQUFBQSxjQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxjQUFBO0FBbkJBOzs7O0FBS0EsU0FBU0UsMEJBQTBCLEVBQUVDLDJCQUEyQixRQUFRLGdGQUFnRjtBQUN4SixTQUFTQyxlQUFlLFFBQVEsZ0RBQWdEO0FBQ2hGLFNBQTRCQyxpQkFBaUIsUUFBUSx5REFBeUQ7QUFDOUcsU0FBU0MsOEJBQThCLFFBQXdCLGtDQUFrQztBQUNqRyxTQUFTQywyQ0FBMkMsUUFBUSw4Q0FBOEM7QUFDMUcsU0FBU0MsaUNBQWlDLEVBQUVDLG1CQUFtQixRQUFRLGVBQWU7QUFDdEYsU0FBU0MscUNBQXFDLFFBQVEsNENBQTRDO0FBQ2xHLFNBQVNDLHNCQUFzQixRQUFRLGlFQUFpRTtBQUFDO0FBQUFYLGNBQUEsR0FBQVksQ0FBQTtBQUV6R1AsaUJBQWlCLENBQUNGLDJCQUEyQixFQUFFRCwwQkFBMEIsb0NBQTRCO0FBQUM7QUFBQUYsY0FBQSxHQUFBWSxDQUFBO0FBRXRHTiw4QkFBOEIsQ0FBQyx1Q0FBdUMsRUFBRUssc0JBQXNCLENBQUMsTUFBTUQ7RUFBQUE7RUFBQUEsdUJBQUE7RUFBQUEsdUJBQUE7RUFBQUEsTUFBQSxDQUFBQSxxQ0FBcUM7QUFBckMsQ0FBcUMsQ0FBQyx1Q0FBK0I7QUFBQztBQUFBVixjQUFBLEdBQUFZLENBQUE7QUFDM0tOLDhCQUE4QixDQUFDLDZDQUE2QyxFQUFFQywyQ0FBMkMsdUNBQStCO0FBQUM7QUFBQVAsY0FBQSxHQUFBWSxDQUFBO0FBRXpKUixlQUFlLENBQUNLLG1CQUFtQixDQUFDO0FBQUM7QUFBQVQsY0FBQSxHQUFBWSxDQUFBO0FBQ3JDUixlQUFlLENBQUNJLGlDQUFpQyxDQUFDIiwiaWdub3JlTGlzdCI6W119

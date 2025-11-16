@@ -1,0 +1,62 @@
+81d146759ac14de11c99c4a16abe3aa8
+/* istanbul ignore next */
+function cov_gg8cvztyx() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/common/integrity.ts";
+  var hash = "84543f20889a42339ee27f613e385c15eae7d256";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/common/integrity.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 33
+        },
+        end: {
+          line: 6,
+          column: 68
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/common/integrity.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAE7F,MAAM,CAAC,MAAM,iBAAiB,GAAG,eAAe,CAAoB,kBAAkB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/integrity/common/integrity.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\n\nexport const IIntegrityService = createDecorator<IIntegrityService>('integrityService');\n\nexport interface ChecksumPair {\n\turi: URI;\n\tactual: string;\n\texpected: string;\n\tisPure: boolean;\n}\n\nexport interface IntegrityTestResult {\n\tisPure: boolean;\n\tproof: ChecksumPair[];\n}\n\nexport interface IIntegrityService {\n\treadonly _serviceBrand: undefined;\n\n\tisPure(): Promise<IntegrityTestResult>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "84543f20889a42339ee27f613e385c15eae7d256"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_gg8cvztyx = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_gg8cvztyx();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IIntegrityService =
+/* istanbul ignore next */
+(cov_gg8cvztyx().s[0]++, createDecorator('integrityService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJSW50ZWdyaXR5U2VydmljZSIsImNvdl9nZzhjdnp0eXgiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvaW50ZWdyaXR5L2NvbW1vbi9pbnRlZ3JpdHkudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcblxuZXhwb3J0IGNvbnN0IElJbnRlZ3JpdHlTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElJbnRlZ3JpdHlTZXJ2aWNlPignaW50ZWdyaXR5U2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIENoZWNrc3VtUGFpciB7XG5cdHVyaTogVVJJO1xuXHRhY3R1YWw6IHN0cmluZztcblx0ZXhwZWN0ZWQ6IHN0cmluZztcblx0aXNQdXJlOiBib29sZWFuO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIEludGVncml0eVRlc3RSZXN1bHQge1xuXHRpc1B1cmU6IGJvb2xlYW47XG5cdHByb29mOiBDaGVja3N1bVBhaXJbXTtcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJSW50ZWdyaXR5U2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRpc1B1cmUoKTogUHJvbWlzZTxJbnRlZ3JpdHlUZXN0UmVzdWx0Pjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsZUFBZSxRQUFRLDREQUE0RDtBQUU1RixPQUFPLE1BQU1DLGlCQUFpQjtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBb0Isa0JBQWtCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

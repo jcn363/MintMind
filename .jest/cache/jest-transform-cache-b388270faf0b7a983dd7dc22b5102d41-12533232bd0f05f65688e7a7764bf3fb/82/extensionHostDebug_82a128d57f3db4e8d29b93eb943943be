@@ -1,0 +1,62 @@
+fbdb5fd84398e4b5ea1ed639aded1cb4
+/* istanbul ignore next */
+function cov_6wnggdtgd() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/debug/common/extensionHostDebug.ts";
+  var hash = "48ccd289e91701be6cb28e07f052f868a2672a4d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/debug/common/extensionHostDebug.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 42
+        },
+        end: {
+          line: 6,
+          column: 86
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/debug/common/extensionHostDebug.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,6CAA6C,CAAC;AAE9E,MAAM,CAAC,MAAM,0BAA0B,GAAG,eAAe,CAA6B,2BAA2B,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/debug/common/extensionHostDebug.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport { createDecorator } from '../../instantiation/common/instantiation.js';\n\nexport const IExtensionHostDebugService = createDecorator<IExtensionHostDebugService>('extensionHostDebugService');\n\nexport interface IAttachSessionEvent {\n\tsessionId: string;\n\tsubId?: string;\n\tport: number;\n}\n\nexport interface ITerminateSessionEvent {\n\tsessionId: string;\n\tsubId?: string;\n}\n\nexport interface IReloadSessionEvent {\n\tsessionId: string;\n}\n\nexport interface ICloseSessionEvent {\n\tsessionId: string;\n}\n\nexport interface IOpenExtensionWindowResult {\n\trendererDebugAddr?: string;\n\tsuccess: boolean;\n}\n\nexport interface IExtensionHostDebugService {\n\treadonly _serviceBrand: undefined;\n\n\treload(sessionId: string): void;\n\treadonly onReload: Event<IReloadSessionEvent>;\n\n\tclose(sessionId: string): void;\n\treadonly onClose: Event<ICloseSessionEvent>;\n\n\tattachSession(sessionId: string, port: number, subId?: string): void;\n\treadonly onAttachSession: Event<IAttachSessionEvent>;\n\n\tterminateSession(sessionId: string, subId?: string): void;\n\treadonly onTerminateSession: Event<ITerminateSessionEvent>;\n\n\topenExtensionDevelopmentHostWindow(args: string[], debugRenderer: boolean): Promise<IOpenExtensionWindowResult>;\n\n\tattachToCurrentWindowRenderer(windowId: number): Promise<IOpenExtensionWindowResult>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "48ccd289e91701be6cb28e07f052f868a2672a4d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_6wnggdtgd = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_6wnggdtgd();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../instantiation/common/instantiation.js';
+export const IExtensionHostDebugService =
+/* istanbul ignore next */
+(cov_6wnggdtgd().s[0]++, createDecorator('extensionHostDebugService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJRXh0ZW5zaW9uSG9zdERlYnVnU2VydmljZSIsImNvdl82d25nZ2R0Z2QiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9wbGF0Zm9ybS9kZWJ1Zy9jb21tb24vZXh0ZW5zaW9uSG9zdERlYnVnLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBFdmVudCB9IGZyb20gJy4uLy4uLy4uL2Jhc2UvY29tbW9uL2V2ZW50LmpzJztcbmltcG9ydCB7IGNyZWF0ZURlY29yYXRvciB9IGZyb20gJy4uLy4uL2luc3RhbnRpYXRpb24vY29tbW9uL2luc3RhbnRpYXRpb24uanMnO1xuXG5leHBvcnQgY29uc3QgSUV4dGVuc2lvbkhvc3REZWJ1Z1NlcnZpY2UgPSBjcmVhdGVEZWNvcmF0b3I8SUV4dGVuc2lvbkhvc3REZWJ1Z1NlcnZpY2U+KCdleHRlbnNpb25Ib3N0RGVidWdTZXJ2aWNlJyk7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUF0dGFjaFNlc3Npb25FdmVudCB7XG5cdHNlc3Npb25JZDogc3RyaW5nO1xuXHRzdWJJZD86IHN0cmluZztcblx0cG9ydDogbnVtYmVyO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElUZXJtaW5hdGVTZXNzaW9uRXZlbnQge1xuXHRzZXNzaW9uSWQ6IHN0cmluZztcblx0c3ViSWQ/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSVJlbG9hZFNlc3Npb25FdmVudCB7XG5cdHNlc3Npb25JZDogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElDbG9zZVNlc3Npb25FdmVudCB7XG5cdHNlc3Npb25JZDogc3RyaW5nO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElPcGVuRXh0ZW5zaW9uV2luZG93UmVzdWx0IHtcblx0cmVuZGVyZXJEZWJ1Z0FkZHI/OiBzdHJpbmc7XG5cdHN1Y2Nlc3M6IGJvb2xlYW47XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUV4dGVuc2lvbkhvc3REZWJ1Z1NlcnZpY2Uge1xuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0cmVsb2FkKHNlc3Npb25JZDogc3RyaW5nKTogdm9pZDtcblx0cmVhZG9ubHkgb25SZWxvYWQ6IEV2ZW50PElSZWxvYWRTZXNzaW9uRXZlbnQ+O1xuXG5cdGNsb3NlKHNlc3Npb25JZDogc3RyaW5nKTogdm9pZDtcblx0cmVhZG9ubHkgb25DbG9zZTogRXZlbnQ8SUNsb3NlU2Vzc2lvbkV2ZW50PjtcblxuXHRhdHRhY2hTZXNzaW9uKHNlc3Npb25JZDogc3RyaW5nLCBwb3J0OiBudW1iZXIsIHN1YklkPzogc3RyaW5nKTogdm9pZDtcblx0cmVhZG9ubHkgb25BdHRhY2hTZXNzaW9uOiBFdmVudDxJQXR0YWNoU2Vzc2lvbkV2ZW50PjtcblxuXHR0ZXJtaW5hdGVTZXNzaW9uKHNlc3Npb25JZDogc3RyaW5nLCBzdWJJZD86IHN0cmluZyk6IHZvaWQ7XG5cdHJlYWRvbmx5IG9uVGVybWluYXRlU2Vzc2lvbjogRXZlbnQ8SVRlcm1pbmF0ZVNlc3Npb25FdmVudD47XG5cblx0b3BlbkV4dGVuc2lvbkRldmVsb3BtZW50SG9zdFdpbmRvdyhhcmdzOiBzdHJpbmdbXSwgZGVidWdSZW5kZXJlcjogYm9vbGVhbik6IFByb21pc2U8SU9wZW5FeHRlbnNpb25XaW5kb3dSZXN1bHQ+O1xuXG5cdGF0dGFjaFRvQ3VycmVudFdpbmRvd1JlbmRlcmVyKHdpbmRvd0lkOiBudW1iZXIpOiBQcm9taXNlPElPcGVuRXh0ZW5zaW9uV2luZG93UmVzdWx0Pjtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBTUEsU0FBU0EsZUFBZSxRQUFRLDZDQUE2QztBQUU3RSxPQUFPLE1BQU1DLDBCQUEwQjtBQUFBO0FBQUEsQ0FBQUMsYUFBQSxHQUFBQyxDQUFBLE9BQUdILGVBQWUsQ0FBNkIsMkJBQTJCLENBQUMiLCJpZ25vcmVMaXN0IjpbXX0=

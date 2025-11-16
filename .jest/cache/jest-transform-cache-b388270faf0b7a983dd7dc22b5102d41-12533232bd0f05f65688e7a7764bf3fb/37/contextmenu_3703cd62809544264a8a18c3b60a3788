@@ -1,0 +1,46 @@
+2845aaeaab5bf6b132f09a4788ca1adf
+/* istanbul ignore next */
+function cov_ii3qf186l() {
+  var path = "/home/user/Desktop/MintMind/src/vs/base/browser/contextmenu.ts";
+  var hash = "78a9ff35603fb2c49cc29ca78573fe378a4d80c0";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/base/browser/contextmenu.ts",
+    statementMap: {},
+    fnMap: {},
+    branchMap: {},
+    s: {},
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/base/browser/contextmenu.ts",
+      mappings: "AAAA;;;gGAGgG",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/base/browser/contextmenu.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { StandardMouseEvent } from './mouseEvent.js';\nimport { IActionViewItemOptions } from './ui/actionbar/actionViewItems.js';\nimport { IActionViewItem } from './ui/actionbar/actionbar.js';\nimport { AnchorAlignment, AnchorAxisAlignment, IAnchor } from './ui/contextview/contextview.js';\nimport { IAction, IActionRunner } from '../common/actions.js';\nimport { ResolvedKeybinding } from '../common/keybindings.js';\nimport { OmitOptional } from '../common/types.js';\n\nexport interface IContextMenuEvent {\n\treadonly shiftKey?: boolean;\n\treadonly ctrlKey?: boolean;\n\treadonly altKey?: boolean;\n\treadonly metaKey?: boolean;\n}\n\n/**\n * A specific context menu location to position the menu at.\n * Uses some TypeScript type tricks to prevent allowing to\n * pass in a `MouseEvent` and force people to use `StandardMouseEvent`.\n */\ntype ContextMenuLocation = OmitOptional<IAnchor> & { getModifierState?: never };\n\nexport interface IContextMenuDelegate {\n\t/**\n\t * The anchor where to position the context view.\n\t * Use a `HTMLElement` to position the view at the element,\n\t * a `StandardMouseEvent` to position it at the mouse position\n\t * or an `ContextMenuLocation` to position it at a specific location.\n\t */\n\tgetAnchor(): HTMLElement | StandardMouseEvent | ContextMenuLocation;\n\tgetActions(): readonly IAction[];\n\tgetCheckedActionsRepresentation?(action: IAction): 'radio' | 'checkbox';\n\tgetActionViewItem?(action: IAction, options: IActionViewItemOptions): IActionViewItem | undefined;\n\tgetActionsContext?(event?: IContextMenuEvent): unknown;\n\tgetKeyBinding?(action: IAction): ResolvedKeybinding | undefined;\n\tgetMenuClassName?(): string;\n\tonHide?(didCancel: boolean): void;\n\tactionRunner?: IActionRunner;\n\tskipTelemetry?: boolean;\n\tautoSelectFirstItem?: boolean;\n\tanchorAlignment?: AnchorAlignment;\n\tanchorAxisAlignment?: AnchorAxisAlignment;\n\tdomForShadowRoot?: HTMLElement;\n\t/**\n\t * custom context menus with higher layers are rendered higher in z-index order\n\t */\n\tlayer?: number;\n}\n\nexport interface IContextMenuProvider {\n\tshowContextMenu(delegate: IContextMenuDelegate): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "78a9ff35603fb2c49cc29ca78573fe378a4d80c0"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ii3qf186l = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ii3qf186l();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+export {};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy9iYXNlL2Jyb3dzZXIvY29udGV4dG1lbnUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS1cbiAqICBDb3B5cmlnaHQgKGMpIE1pY3Jvc29mdCBDb3Jwb3JhdGlvbi4gQWxsIHJpZ2h0cyByZXNlcnZlZC5cbiAqICBMaWNlbnNlZCB1bmRlciB0aGUgTUlUIExpY2Vuc2UuIFNlZSBMaWNlbnNlLnR4dCBpbiB0aGUgcHJvamVjdCByb290IGZvciBsaWNlbnNlIGluZm9ybWF0aW9uLlxuICotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovXG5cbmltcG9ydCB7IFN0YW5kYXJkTW91c2VFdmVudCB9IGZyb20gJy4vbW91c2VFdmVudC5qcyc7XG5pbXBvcnQgeyBJQWN0aW9uVmlld0l0ZW1PcHRpb25zIH0gZnJvbSAnLi91aS9hY3Rpb25iYXIvYWN0aW9uVmlld0l0ZW1zLmpzJztcbmltcG9ydCB7IElBY3Rpb25WaWV3SXRlbSB9IGZyb20gJy4vdWkvYWN0aW9uYmFyL2FjdGlvbmJhci5qcyc7XG5pbXBvcnQgeyBBbmNob3JBbGlnbm1lbnQsIEFuY2hvckF4aXNBbGlnbm1lbnQsIElBbmNob3IgfSBmcm9tICcuL3VpL2NvbnRleHR2aWV3L2NvbnRleHR2aWV3LmpzJztcbmltcG9ydCB7IElBY3Rpb24sIElBY3Rpb25SdW5uZXIgfSBmcm9tICcuLi9jb21tb24vYWN0aW9ucy5qcyc7XG5pbXBvcnQgeyBSZXNvbHZlZEtleWJpbmRpbmcgfSBmcm9tICcuLi9jb21tb24va2V5YmluZGluZ3MuanMnO1xuaW1wb3J0IHsgT21pdE9wdGlvbmFsIH0gZnJvbSAnLi4vY29tbW9uL3R5cGVzLmpzJztcblxuZXhwb3J0IGludGVyZmFjZSBJQ29udGV4dE1lbnVFdmVudCB7XG5cdHJlYWRvbmx5IHNoaWZ0S2V5PzogYm9vbGVhbjtcblx0cmVhZG9ubHkgY3RybEtleT86IGJvb2xlYW47XG5cdHJlYWRvbmx5IGFsdEtleT86IGJvb2xlYW47XG5cdHJlYWRvbmx5IG1ldGFLZXk/OiBib29sZWFuO1xufVxuXG4vKipcbiAqIEEgc3BlY2lmaWMgY29udGV4dCBtZW51IGxvY2F0aW9uIHRvIHBvc2l0aW9uIHRoZSBtZW51IGF0LlxuICogVXNlcyBzb21lIFR5cGVTY3JpcHQgdHlwZSB0cmlja3MgdG8gcHJldmVudCBhbGxvd2luZyB0b1xuICogcGFzcyBpbiBhIGBNb3VzZUV2ZW50YCBhbmQgZm9yY2UgcGVvcGxlIHRvIHVzZSBgU3RhbmRhcmRNb3VzZUV2ZW50YC5cbiAqL1xudHlwZSBDb250ZXh0TWVudUxvY2F0aW9uID0gT21pdE9wdGlvbmFsPElBbmNob3I+ICYgeyBnZXRNb2RpZmllclN0YXRlPzogbmV2ZXIgfTtcblxuZXhwb3J0IGludGVyZmFjZSBJQ29udGV4dE1lbnVEZWxlZ2F0ZSB7XG5cdC8qKlxuXHQgKiBUaGUgYW5jaG9yIHdoZXJlIHRvIHBvc2l0aW9uIHRoZSBjb250ZXh0IHZpZXcuXG5cdCAqIFVzZSBhIGBIVE1MRWxlbWVudGAgdG8gcG9zaXRpb24gdGhlIHZpZXcgYXQgdGhlIGVsZW1lbnQsXG5cdCAqIGEgYFN0YW5kYXJkTW91c2VFdmVudGAgdG8gcG9zaXRpb24gaXQgYXQgdGhlIG1vdXNlIHBvc2l0aW9uXG5cdCAqIG9yIGFuIGBDb250ZXh0TWVudUxvY2F0aW9uYCB0byBwb3NpdGlvbiBpdCBhdCBhIHNwZWNpZmljIGxvY2F0aW9uLlxuXHQgKi9cblx0Z2V0QW5jaG9yKCk6IEhUTUxFbGVtZW50IHwgU3RhbmRhcmRNb3VzZUV2ZW50IHwgQ29udGV4dE1lbnVMb2NhdGlvbjtcblx0Z2V0QWN0aW9ucygpOiByZWFkb25seSBJQWN0aW9uW107XG5cdGdldENoZWNrZWRBY3Rpb25zUmVwcmVzZW50YXRpb24/KGFjdGlvbjogSUFjdGlvbik6ICdyYWRpbycgfCAnY2hlY2tib3gnO1xuXHRnZXRBY3Rpb25WaWV3SXRlbT8oYWN0aW9uOiBJQWN0aW9uLCBvcHRpb25zOiBJQWN0aW9uVmlld0l0ZW1PcHRpb25zKTogSUFjdGlvblZpZXdJdGVtIHwgdW5kZWZpbmVkO1xuXHRnZXRBY3Rpb25zQ29udGV4dD8oZXZlbnQ/OiBJQ29udGV4dE1lbnVFdmVudCk6IHVua25vd247XG5cdGdldEtleUJpbmRpbmc/KGFjdGlvbjogSUFjdGlvbik6IFJlc29sdmVkS2V5YmluZGluZyB8IHVuZGVmaW5lZDtcblx0Z2V0TWVudUNsYXNzTmFtZT8oKTogc3RyaW5nO1xuXHRvbkhpZGU/KGRpZENhbmNlbDogYm9vbGVhbik6IHZvaWQ7XG5cdGFjdGlvblJ1bm5lcj86IElBY3Rpb25SdW5uZXI7XG5cdHNraXBUZWxlbWV0cnk/OiBib29sZWFuO1xuXHRhdXRvU2VsZWN0Rmlyc3RJdGVtPzogYm9vbGVhbjtcblx0YW5jaG9yQWxpZ25tZW50PzogQW5jaG9yQWxpZ25tZW50O1xuXHRhbmNob3JBeGlzQWxpZ25tZW50PzogQW5jaG9yQXhpc0FsaWdubWVudDtcblx0ZG9tRm9yU2hhZG93Um9vdD86IEhUTUxFbGVtZW50O1xuXHQvKipcblx0ICogY3VzdG9tIGNvbnRleHQgbWVudXMgd2l0aCBoaWdoZXIgbGF5ZXJzIGFyZSByZW5kZXJlZCBoaWdoZXIgaW4gei1pbmRleCBvcmRlclxuXHQgKi9cblx0bGF5ZXI/OiBudW1iZXI7XG59XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUNvbnRleHRNZW51UHJvdmlkZXIge1xuXHRzaG93Q29udGV4dE1lbnUoZGVsZWdhdGU6IElDb250ZXh0TWVudURlbGVnYXRlKTogdm9pZDtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEiLCJpZ25vcmVMaXN0IjpbXX0=

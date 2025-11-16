@@ -5,7 +5,8 @@
 
 import * as fs from 'fs';
 import { exec } from 'child_process';
-import { app, BrowserWindow, clipboard, contentTracing, Display, Menu, MessageBoxOptions, MessageBoxReturnValue, OpenDevToolsOptions, OpenDialogOptions, OpenDialogReturnValue, powerMonitor, SaveDialogOptions, SaveDialogReturnValue, screen, shell, webContents } from 'electron';
+import { app, BrowserWindow, clipboard, contentTracing, Display, Menu, MessageBoxOptions, MessageBoxReturnValue, OpenDevToolsOptions, OpenDialogOptions, OpenDialogReturnValue, powerMonitor, SaveDialogOptions, SaveDialogReturnValue, screen, webContents } from 'electron';
+import { invoke } from '@tauri-apps/api/core';
 import { arch, cpus, freemem, loadavg, platform, release, totalmem, type } from 'os';
 import { promisify } from 'util';
 import { memoize } from '../../../base/common/decorators.js';
@@ -578,7 +579,7 @@ export class NativeHostMainService extends Disposable implements INativeHostMain
 	//#region OS
 
 	async showItemInFolder(windowId: number | undefined, path: string): Promise<void> {
-		shell.showItemInFolder(path);
+		await invoke('show_item_in_folder', { path });
 	}
 
 	async setRepresentedFilename(windowId: number | undefined, path: string, options?: INativeHostOptions): Promise<void> {
@@ -594,11 +595,9 @@ export class NativeHostMainService extends Disposable implements INativeHostMain
 	async openExternal(windowId: number | undefined, url: string, defaultApplication?: string): Promise<boolean> {
 		this.environmentMainService.unsetSnapExportedVariables();
 		try {
-			if (matchesSomeScheme(url, Schemas.http, Schemas.https)) {
-				this.openExternalBrowser(windowId, url, defaultApplication);
-			} else {
-				this.doOpenShellExternal(windowId, url);
-			}
+			await invoke('open_external', { url, default_application: defaultApplication });
+		} catch (error) {
+			this.handleOpenExternalError(windowId, url, error);
 		} finally {
 			this.environmentMainService.restoreSnapExportedVariables();
 		}
@@ -650,7 +649,7 @@ export class NativeHostMainService extends Disposable implements INativeHostMain
 
 	private async doOpenShellExternal(windowId: number | undefined, url: string): Promise<void> {
 		try {
-			await shell.openExternal(url);
+			await invoke('open_external', { url });
 		} catch (error) {
 			let isLink: boolean;
 			let message: string;
@@ -674,16 +673,14 @@ export class NativeHostMainService extends Disposable implements INativeHostMain
 				]
 			}, this.windowById(windowId)?.win ?? undefined);
 
-			if (response === 1 /* Cancel */) {
-				return;
+			if (response === 0 && isLink) {
+				this.writeClipboardText(windowId, url);
 			}
-
-			this.writeClipboardText(windowId, url);
 		}
 	}
 
 	moveItemToTrash(windowId: number | undefined, fullPath: string): Promise<void> {
-		return shell.trashItem(fullPath);
+		return invoke('move_item_to_trash', { path: fullPath });
 	}
 
 	async isAdmin(): Promise<boolean> {

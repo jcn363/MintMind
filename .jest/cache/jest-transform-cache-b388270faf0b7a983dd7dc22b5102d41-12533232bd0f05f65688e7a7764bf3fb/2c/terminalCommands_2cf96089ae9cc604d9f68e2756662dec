@@ -1,0 +1,252 @@
+139425ec171886a6e3973e3e6fffada3
+/* istanbul ignore next */
+function cov_1n1czmuocj() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalCommands.ts";
+  var hash = "4328132f7ed115b8cf83fab3ea98c9059e5f1c30";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalCommands.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 8,
+          column: 4
+        },
+        end: {
+          line: 8,
+          column: 42
+        }
+      },
+      "1": {
+        start: {
+          line: 11,
+          column: 4
+        },
+        end: {
+          line: 24,
+          column: 5
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 17
+        },
+        end: {
+          line: 11,
+          column: 18
+        }
+      },
+      "3": {
+        start: {
+          line: 12,
+          column: 30
+        },
+        end: {
+          line: 12,
+          column: 31
+        }
+      },
+      "4": {
+        start: {
+          line: 13,
+          column: 29
+        },
+        end: {
+          line: 13,
+          column: 34
+        }
+      },
+      "5": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 23,
+          column: 11
+        }
+      },
+      "6": {
+        start: {
+          line: 20,
+          column: 16
+        },
+        end: {
+          line: 20,
+          column: 92
+        }
+      },
+      "7": {
+        start: {
+          line: 21,
+          column: 16
+        },
+        end: {
+          line: 21,
+          column: 75
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "setupTerminalCommands",
+        decl: {
+          start: {
+            line: 7,
+            column: 16
+          },
+          end: {
+            line: 7,
+            column: 37
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 40
+          },
+          end: {
+            line: 9,
+            column: 1
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "registerOpenTerminalAtIndexCommands",
+        decl: {
+          start: {
+            line: 10,
+            column: 9
+          },
+          end: {
+            line: 10,
+            column: 44
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 47
+          },
+          end: {
+            line: 25,
+            column: 1
+          }
+        },
+        line: 10
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 19,
+            column: 21
+          },
+          end: {
+            line: 19,
+            column: 22
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 33
+          },
+          end: {
+            line: 22,
+            column: 13
+          }
+        },
+        line: 19
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalCommands.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,mBAAmB,EAAoB,MAAM,+DAA+D,CAAC;AACtH,OAAO,EAAE,qBAAqB,EAAE,MAAM,eAAe,CAAC;AAEtD,MAAM,UAAU,qBAAqB;IACpC,mCAAmC,EAAE,CAAC;AACvC,CAAC;AAED,SAAS,mCAAmC;IAC3C,KAAK,IAAI,CAAC,GAAG,CAAC,EAAE,CAAC,GAAG,CAAC,EAAE,CAAC,EAAE,EAAE,CAAC;QAC5B,MAAM,aAAa,GAAG,CAAC,CAAC;QACxB,MAAM,YAAY,GAAG,CAAC,GAAG,CAAC,CAAC;QAE3B,mBAAmB,CAAC,gCAAgC,CAAC;YACpD,EAAE,EAAE,yCAAyC,YAAY,EAAE;YAC3D,MAAM,6CAAmC;YACzC,IAAI,EAAE,SAAS;YACf,OAAO,EAAE,CAAC;YACV,OAAO,EAAE,QAAQ,CAAC,EAAE;gBACnB,QAAQ,CAAC,GAAG,CAAC,qBAAqB,CAAC,CAAC,wBAAwB,CAAC,aAAa,CAAC,CAAC;gBAC5E,OAAO,QAAQ,CAAC,GAAG,CAAC,qBAAqB,CAAC,CAAC,SAAS,CAAC,IAAI,CAAC,CAAC;YAC5D,CAAC;SACD,CAAC,CAAC;IACJ,CAAC;AACF,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminal/browser/terminalCommands.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { KeybindingsRegistry, KeybindingWeight } from '../../../../platform/keybinding/common/keybindingsRegistry.js';\nimport { ITerminalGroupService } from './terminal.js';\n\nexport function setupTerminalCommands(): void {\n\tregisterOpenTerminalAtIndexCommands();\n}\n\nfunction registerOpenTerminalAtIndexCommands(): void {\n\tfor (let i = 0; i < 9; i++) {\n\t\tconst terminalIndex = i;\n\t\tconst visibleIndex = i + 1;\n\n\t\tKeybindingsRegistry.registerCommandAndKeybindingRule({\n\t\t\tid: `workbench.action.terminal.focusAtIndex${visibleIndex}`,\n\t\t\tweight: KeybindingWeight.WorkbenchContrib,\n\t\t\twhen: undefined,\n\t\t\tprimary: 0,\n\t\t\thandler: accessor => {\n\t\t\t\taccessor.get(ITerminalGroupService).setActiveInstanceByIndex(terminalIndex);\n\t\t\t\treturn accessor.get(ITerminalGroupService).showPanel(true);\n\t\t\t}\n\t\t});\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4328132f7ed115b8cf83fab3ea98c9059e5f1c30"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1n1czmuocj = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1n1czmuocj();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { KeybindingsRegistry } from '../../../../platform/keybinding/common/keybindingsRegistry.js';
+import { ITerminalGroupService } from './terminal.js';
+export function setupTerminalCommands() {
+  /* istanbul ignore next */
+  cov_1n1czmuocj().f[0]++;
+  cov_1n1czmuocj().s[0]++;
+  registerOpenTerminalAtIndexCommands();
+}
+function registerOpenTerminalAtIndexCommands() {
+  /* istanbul ignore next */
+  cov_1n1czmuocj().f[1]++;
+  cov_1n1czmuocj().s[1]++;
+  for (let i =
+  /* istanbul ignore next */
+  (cov_1n1czmuocj().s[2]++, 0); i < 9; i++) {
+    const terminalIndex =
+    /* istanbul ignore next */
+    (cov_1n1czmuocj().s[3]++, i);
+    const visibleIndex =
+    /* istanbul ignore next */
+    (cov_1n1czmuocj().s[4]++, i + 1);
+    /* istanbul ignore next */
+    cov_1n1czmuocj().s[5]++;
+    KeybindingsRegistry.registerCommandAndKeybindingRule({
+      id: `workbench.action.terminal.focusAtIndex${visibleIndex}`,
+      weight: 200 /* KeybindingWeight.WorkbenchContrib */,
+      when: undefined,
+      primary: 0,
+      handler: accessor => {
+        /* istanbul ignore next */
+        cov_1n1czmuocj().f[2]++;
+        cov_1n1czmuocj().s[6]++;
+        accessor.get(ITerminalGroupService).setActiveInstanceByIndex(terminalIndex);
+        /* istanbul ignore next */
+        cov_1n1czmuocj().s[7]++;
+        return accessor.get(ITerminalGroupService).showPanel(true);
+      }
+    });
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfMW4xY3ptdW9jaiIsImFjdHVhbENvdmVyYWdlIiwiS2V5YmluZGluZ3NSZWdpc3RyeSIsIklUZXJtaW5hbEdyb3VwU2VydmljZSIsInNldHVwVGVybWluYWxDb21tYW5kcyIsImYiLCJzIiwicmVnaXN0ZXJPcGVuVGVybWluYWxBdEluZGV4Q29tbWFuZHMiLCJpIiwidGVybWluYWxJbmRleCIsInZpc2libGVJbmRleCIsInJlZ2lzdGVyQ29tbWFuZEFuZEtleWJpbmRpbmdSdWxlIiwiaWQiLCJ3ZWlnaHQiLCJ3aGVuIiwidW5kZWZpbmVkIiwicHJpbWFyeSIsImhhbmRsZXIiLCJhY2Nlc3NvciIsImdldCIsInNldEFjdGl2ZUluc3RhbmNlQnlJbmRleCIsInNob3dQYW5lbCJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWwvYnJvd3Nlci90ZXJtaW5hbENvbW1hbmRzLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBLZXliaW5kaW5nc1JlZ2lzdHJ5LCBLZXliaW5kaW5nV2VpZ2h0IH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0va2V5YmluZGluZy9jb21tb24va2V5YmluZGluZ3NSZWdpc3RyeS5qcyc7XG5pbXBvcnQgeyBJVGVybWluYWxHcm91cFNlcnZpY2UgfSBmcm9tICcuL3Rlcm1pbmFsLmpzJztcblxuZXhwb3J0IGZ1bmN0aW9uIHNldHVwVGVybWluYWxDb21tYW5kcygpOiB2b2lkIHtcblx0cmVnaXN0ZXJPcGVuVGVybWluYWxBdEluZGV4Q29tbWFuZHMoKTtcbn1cblxuZnVuY3Rpb24gcmVnaXN0ZXJPcGVuVGVybWluYWxBdEluZGV4Q29tbWFuZHMoKTogdm9pZCB7XG5cdGZvciAobGV0IGkgPSAwOyBpIDwgOTsgaSsrKSB7XG5cdFx0Y29uc3QgdGVybWluYWxJbmRleCA9IGk7XG5cdFx0Y29uc3QgdmlzaWJsZUluZGV4ID0gaSArIDE7XG5cblx0XHRLZXliaW5kaW5nc1JlZ2lzdHJ5LnJlZ2lzdGVyQ29tbWFuZEFuZEtleWJpbmRpbmdSdWxlKHtcblx0XHRcdGlkOiBgd29ya2JlbmNoLmFjdGlvbi50ZXJtaW5hbC5mb2N1c0F0SW5kZXgke3Zpc2libGVJbmRleH1gLFxuXHRcdFx0d2VpZ2h0OiBLZXliaW5kaW5nV2VpZ2h0LldvcmtiZW5jaENvbnRyaWIsXG5cdFx0XHR3aGVuOiB1bmRlZmluZWQsXG5cdFx0XHRwcmltYXJ5OiAwLFxuXHRcdFx0aGFuZGxlcjogYWNjZXNzb3IgPT4ge1xuXHRcdFx0XHRhY2Nlc3Nvci5nZXQoSVRlcm1pbmFsR3JvdXBTZXJ2aWNlKS5zZXRBY3RpdmVJbnN0YW5jZUJ5SW5kZXgodGVybWluYWxJbmRleCk7XG5cdFx0XHRcdHJldHVybiBhY2Nlc3Nvci5nZXQoSVRlcm1pbmFsR3JvdXBTZXJ2aWNlKS5zaG93UGFuZWwodHJ1ZSk7XG5cdFx0XHR9XG5cdFx0fSk7XG5cdH1cbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0lBbUJHO0lBQUFBLGNBQUEsWUFBQUEsQ0FBQTtNQUFBLE9BQUFDLGNBQUE7SUFBQTtFQUFBO0VBQUEsT0FBQUEsY0FBQTtBQUFBO0FBQUFELGNBQUE7QUFuQkg7Ozs7QUFLQSxTQUFTRSxtQkFBbUIsUUFBMEIsK0RBQStEO0FBQ3JILFNBQVNDLHFCQUFxQixRQUFRLGVBQWU7QUFFckQsT0FBTSxTQUFVQyxxQkFBcUJBLENBQUE7RUFBQTtFQUFBSixjQUFBLEdBQUFLLENBQUE7RUFBQUwsY0FBQSxHQUFBTSxDQUFBO0VBQ3BDQyxtQ0FBbUMsRUFBRTtBQUN0QztBQUVBLFNBQVNBLG1DQUFtQ0EsQ0FBQTtFQUFBO0VBQUFQLGNBQUEsR0FBQUssQ0FBQTtFQUFBTCxjQUFBLEdBQUFNLENBQUE7RUFDM0MsS0FBSyxJQUFJRSxDQUFDO0VBQUE7RUFBQSxDQUFBUixjQUFBLEdBQUFNLENBQUEsT0FBRyxDQUFDLEdBQUVFLENBQUMsR0FBRyxDQUFDLEVBQUVBLENBQUMsRUFBRSxFQUFFO0lBQzNCLE1BQU1DLGFBQWE7SUFBQTtJQUFBLENBQUFULGNBQUEsR0FBQU0sQ0FBQSxPQUFHRSxDQUFDO0lBQ3ZCLE1BQU1FLFlBQVk7SUFBQTtJQUFBLENBQUFWLGNBQUEsR0FBQU0sQ0FBQSxPQUFHRSxDQUFDLEdBQUcsQ0FBQztJQUFDO0lBQUFSLGNBQUEsR0FBQU0sQ0FBQTtJQUUzQkosbUJBQW1CLENBQUNTLGdDQUFnQyxDQUFDO01BQ3BEQyxFQUFFLEVBQUUseUNBQXlDRixZQUFZLEVBQUU7TUFDM0RHLE1BQU07TUFDTkMsSUFBSSxFQUFFQyxTQUFTO01BQ2ZDLE9BQU8sRUFBRSxDQUFDO01BQ1ZDLE9BQU8sRUFBRUMsUUFBUSxJQUFHO1FBQUE7UUFBQWxCLGNBQUEsR0FBQUssQ0FBQTtRQUFBTCxjQUFBLEdBQUFNLENBQUE7UUFDbkJZLFFBQVEsQ0FBQ0MsR0FBRyxDQUFDaEIscUJBQXFCLENBQUMsQ0FBQ2lCLHdCQUF3QixDQUFDWCxhQUFhLENBQUM7UUFBQztRQUFBVCxjQUFBLEdBQUFNLENBQUE7UUFDNUUsT0FBT1ksUUFBUSxDQUFDQyxHQUFHLENBQUNoQixxQkFBcUIsQ0FBQyxDQUFDa0IsU0FBUyxDQUFDLElBQUksQ0FBQztNQUMzRDtLQUNBLENBQUM7RUFDSDtBQUNEIiwiaWdub3JlTGlzdCI6W119

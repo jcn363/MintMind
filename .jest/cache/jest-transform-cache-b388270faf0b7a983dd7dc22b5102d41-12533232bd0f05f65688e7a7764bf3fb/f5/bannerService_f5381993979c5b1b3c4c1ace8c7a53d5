@@ -1,0 +1,62 @@
+796d62866d7b746714f96021a011684d
+/* istanbul ignore next */
+function cov_l6usw7hxp() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/banner/browser/bannerService.ts";
+  var hash = "a97a33d14d3be94f25be7d6665b697c1468fa00d";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/banner/browser/bannerService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 30
+        },
+        end: {
+          line: 6,
+          column: 62
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/banner/browser/bannerService.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAc7F,MAAM,CAAC,MAAM,cAAc,GAAG,eAAe,CAAiB,eAAe,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/banner/browser/bannerService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { MarkdownString } from '../../../../base/common/htmlContent.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { ILinkDescriptor } from '../../../../platform/opener/browser/link.js';\nimport { ThemeIcon } from '../../../../base/common/themables.js';\n\nexport interface IBannerItem {\n\treadonly id: string;\n\treadonly icon: ThemeIcon | URI | undefined;\n\treadonly message: string | MarkdownString;\n\treadonly actions?: ILinkDescriptor[];\n\treadonly ariaLabel?: string;\n\treadonly onClose?: () => void;\n\treadonly closeLabel?: string;\n}\n\nexport const IBannerService = createDecorator<IBannerService>('bannerService');\n\nexport interface IBannerService {\n\treadonly _serviceBrand: undefined;\n\n\tfocus(): void;\n\tfocusNextAction(): void;\n\tfocusPreviousAction(): void;\n\thide(id: string): void;\n\tshow(item: IBannerItem): void;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "a97a33d14d3be94f25be7d6665b697c1468fa00d"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_l6usw7hxp = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_l6usw7hxp();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IBannerService =
+/* istanbul ignore next */
+(cov_l6usw7hxp().s[0]++, createDecorator('bannerService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJQmFubmVyU2VydmljZSIsImNvdl9sNnVzdzdoeHAiLCJzIl0sInNvdXJjZXMiOlsiL2hvbWUvdXNlci9EZXNrdG9wL01pbnRNaW5kL3NyYy92cy93b3JrYmVuY2gvc2VydmljZXMvYmFubmVyL2Jyb3dzZXIvYmFubmVyU2VydmljZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgTWFya2Rvd25TdHJpbmcgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi9odG1sQ29udGVudC5qcyc7XG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBJTGlua0Rlc2NyaXB0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9vcGVuZXIvYnJvd3Nlci9saW5rLmpzJztcbmltcG9ydCB7IFRoZW1lSWNvbiB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3RoZW1hYmxlcy5qcyc7XG5cbmV4cG9ydCBpbnRlcmZhY2UgSUJhbm5lckl0ZW0ge1xuXHRyZWFkb25seSBpZDogc3RyaW5nO1xuXHRyZWFkb25seSBpY29uOiBUaGVtZUljb24gfCBVUkkgfCB1bmRlZmluZWQ7XG5cdHJlYWRvbmx5IG1lc3NhZ2U6IHN0cmluZyB8IE1hcmtkb3duU3RyaW5nO1xuXHRyZWFkb25seSBhY3Rpb25zPzogSUxpbmtEZXNjcmlwdG9yW107XG5cdHJlYWRvbmx5IGFyaWFMYWJlbD86IHN0cmluZztcblx0cmVhZG9ubHkgb25DbG9zZT86ICgpID0+IHZvaWQ7XG5cdHJlYWRvbmx5IGNsb3NlTGFiZWw/OiBzdHJpbmc7XG59XG5cbmV4cG9ydCBjb25zdCBJQmFubmVyU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJQmFubmVyU2VydmljZT4oJ2Jhbm5lclNlcnZpY2UnKTtcblxuZXhwb3J0IGludGVyZmFjZSBJQmFubmVyU2VydmljZSB7XG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHRmb2N1cygpOiB2b2lkO1xuXHRmb2N1c05leHRBY3Rpb24oKTogdm9pZDtcblx0Zm9jdXNQcmV2aW91c0FjdGlvbigpOiB2b2lkO1xuXHRoaWRlKGlkOiBzdHJpbmcpOiB2b2lkO1xuXHRzaG93KGl0ZW06IElCYW5uZXJJdGVtKTogdm9pZDtcbn1cbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBOzs7O0FBT0EsU0FBU0EsZUFBZSxRQUFRLDREQUE0RDtBQWM1RixPQUFPLE1BQU1DLGNBQWM7QUFBQTtBQUFBLENBQUFDLGFBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQWlCLGVBQWUsQ0FBQyIsImlnbm9yZUxpc3QiOltdfQ==

@@ -1,0 +1,62 @@
+59be84b5091f4dae05a9abdcd6c47069
+/* istanbul ignore next */
+function cov_1ctoru3yg2() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/files/common/elevatedFileService.ts";
+  var hash = "eb68aea92b5f9ee9f4f06a508a252bf412ff3917";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/files/common/elevatedFileService.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 36
+        },
+        end: {
+          line: 6,
+          column: 74
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/files/common/elevatedFileService.ts",
+      mappings: "AAAA;;;gGAGgG;AAEhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAK7F,MAAM,CAAC,MAAM,oBAAoB,GAAG,eAAe,CAAuB,qBAAqB,CAAC,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/files/common/elevatedFileService.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { URI } from '../../../../base/common/uri.js';\nimport { VSBuffer, VSBufferReadable, VSBufferReadableStream } from '../../../../base/common/buffer.js';\nimport { IFileStatWithMetadata, IWriteFileOptions } from '../../../../platform/files/common/files.js';\n\nexport const IElevatedFileService = createDecorator<IElevatedFileService>('elevatedFileService');\n\nexport interface IElevatedFileService {\n\n\treadonly _serviceBrand: undefined;\n\n\t/**\n\t * Whether saving elevated is supported for the provided resource.\n\t */\n\tisSupported(resource: URI): boolean;\n\n\t/**\n\t * Attempts to write to the target resource elevated. This may bring\n\t * up a dialog to ask for admin username / password.\n\t */\n\twriteFileElevated(resource: URI, value: VSBuffer | VSBufferReadable | VSBufferReadableStream, options?: IWriteFileOptions): Promise<IFileStatWithMetadata>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "eb68aea92b5f9ee9f4f06a508a252bf412ff3917"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_1ctoru3yg2 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_1ctoru3yg2();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IElevatedFileService =
+/* istanbul ignore next */
+(cov_1ctoru3yg2().s[0]++, createDecorator('elevatedFileService'));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJRWxldmF0ZWRGaWxlU2VydmljZSIsImNvdl8xY3RvcnUzeWcyIiwicyJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL2ZpbGVzL2NvbW1vbi9lbGV2YXRlZEZpbGVTZXJ2aWNlLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBjcmVhdGVEZWNvcmF0b3IgfSBmcm9tICcuLi8uLi8uLi8uLi9wbGF0Zm9ybS9pbnN0YW50aWF0aW9uL2NvbW1vbi9pbnN0YW50aWF0aW9uLmpzJztcbmltcG9ydCB7IFVSSSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL3VyaS5qcyc7XG5pbXBvcnQgeyBWU0J1ZmZlciwgVlNCdWZmZXJSZWFkYWJsZSwgVlNCdWZmZXJSZWFkYWJsZVN0cmVhbSB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2J1ZmZlci5qcyc7XG5pbXBvcnQgeyBJRmlsZVN0YXRXaXRoTWV0YWRhdGEsIElXcml0ZUZpbGVPcHRpb25zIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vZmlsZXMvY29tbW9uL2ZpbGVzLmpzJztcblxuZXhwb3J0IGNvbnN0IElFbGV2YXRlZEZpbGVTZXJ2aWNlID0gY3JlYXRlRGVjb3JhdG9yPElFbGV2YXRlZEZpbGVTZXJ2aWNlPignZWxldmF0ZWRGaWxlU2VydmljZScpO1xuXG5leHBvcnQgaW50ZXJmYWNlIElFbGV2YXRlZEZpbGVTZXJ2aWNlIHtcblxuXHRyZWFkb25seSBfc2VydmljZUJyYW5kOiB1bmRlZmluZWQ7XG5cblx0LyoqXG5cdCAqIFdoZXRoZXIgc2F2aW5nIGVsZXZhdGVkIGlzIHN1cHBvcnRlZCBmb3IgdGhlIHByb3ZpZGVkIHJlc291cmNlLlxuXHQgKi9cblx0aXNTdXBwb3J0ZWQocmVzb3VyY2U6IFVSSSk6IGJvb2xlYW47XG5cblx0LyoqXG5cdCAqIEF0dGVtcHRzIHRvIHdyaXRlIHRvIHRoZSB0YXJnZXQgcmVzb3VyY2UgZWxldmF0ZWQuIFRoaXMgbWF5IGJyaW5nXG5cdCAqIHVwIGEgZGlhbG9nIHRvIGFzayBmb3IgYWRtaW4gdXNlcm5hbWUgLyBwYXNzd29yZC5cblx0ICovXG5cdHdyaXRlRmlsZUVsZXZhdGVkKHJlc291cmNlOiBVUkksIHZhbHVlOiBWU0J1ZmZlciB8IFZTQnVmZmVyUmVhZGFibGUgfCBWU0J1ZmZlclJlYWRhYmxlU3RyZWFtLCBvcHRpb25zPzogSVdyaXRlRmlsZU9wdGlvbnMpOiBQcm9taXNlPElGaWxlU3RhdFdpdGhNZXRhZGF0YT47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQTs7OztBQUtBLFNBQVNBLGVBQWUsUUFBUSw0REFBNEQ7QUFLNUYsT0FBTyxNQUFNQyxvQkFBb0I7QUFBQTtBQUFBLENBQUFDLGNBQUEsR0FBQUMsQ0FBQSxPQUFHSCxlQUFlLENBQXVCLHFCQUFxQixDQUFDIiwiaWdub3JlTGlzdCI6W119

@@ -1,0 +1,139 @@
+53f9dc3fdd6be2304044af585adecb81
+/* istanbul ignore next */
+function cov_sk66wx9eg() {
+  var path = "/home/user/Desktop/MintMind/src/vs/platform/quickinput/browser/tree/quickInputDelegate.ts";
+  var hash = "4e3f42f703c72b06afe8f2db4d3cb0a8b0468a2e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/platform/quickinput/browser/tree/quickInputDelegate.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 18
+        }
+      },
+      "1": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 41
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 10,
+            column: 4
+          },
+          end: {
+            line: 10,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 10,
+            column: 24
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 10
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 4
+          },
+          end: {
+            line: 13,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 28
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/platform/quickinput/browser/tree/quickInputDelegate.ts",
+      mappings: "AAAA;;;gGAGgG;AAIhG,OAAO,EAAE,sBAAsB,EAAE,MAAM,6BAA6B,CAAC;AAErE;;GAEG;AACH,MAAM,OAAO,sBAAsB;IAClC,SAAS,CAAC,QAAW;QACpB,OAAO,EAAE,CAAC;IACX,CAAC;IAED,aAAa,CAAC,QAAW;QACxB,OAAO,sBAAsB,CAAC,EAAE,CAAC;IAClC,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/platform/quickinput/browser/tree/quickInputDelegate.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IListVirtualDelegate } from '../../../../base/browser/ui/list/list.js';\nimport { IQuickTreeItem } from '../../common/quickInput.js';\nimport { QuickInputTreeRenderer } from './quickInputTreeRenderer.js';\n\n/**\n * Delegate for QuickInputTree that provides height and template information.\n */\nexport class QuickInputTreeDelegate<T extends IQuickTreeItem> implements IListVirtualDelegate<T> {\n\tgetHeight(_element: T): number {\n\t\treturn 22;\n\t}\n\n\tgetTemplateId(_element: T): string {\n\t\treturn QuickInputTreeRenderer.ID;\n\t}\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "4e3f42f703c72b06afe8f2db4d3cb0a8b0468a2e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_sk66wx9eg = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_sk66wx9eg();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { QuickInputTreeRenderer } from './quickInputTreeRenderer.js';
+/**
+ * Delegate for QuickInputTree that provides height and template information.
+ */
+export class QuickInputTreeDelegate {
+  getHeight(_element) {
+    /* istanbul ignore next */
+    cov_sk66wx9eg().f[0]++;
+    cov_sk66wx9eg().s[0]++;
+    return 22;
+  }
+  getTemplateId(_element) {
+    /* istanbul ignore next */
+    cov_sk66wx9eg().f[1]++;
+    cov_sk66wx9eg().s[1]++;
+    return QuickInputTreeRenderer.ID;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3Zfc2s2Nnd4OWVnIiwiYWN0dWFsQ292ZXJhZ2UiLCJRdWlja0lucHV0VHJlZVJlbmRlcmVyIiwiUXVpY2tJbnB1dFRyZWVEZWxlZ2F0ZSIsImdldEhlaWdodCIsIl9lbGVtZW50IiwiZiIsInMiLCJnZXRUZW1wbGF0ZUlkIiwiSUQiXSwic291cmNlcyI6WyIvaG9tZS91c2VyL0Rlc2t0b3AvTWludE1pbmQvc3JjL3ZzL3BsYXRmb3JtL3F1aWNraW5wdXQvYnJvd3Nlci90cmVlL3F1aWNrSW5wdXREZWxlZ2F0ZS50cyJdLCJzb3VyY2VzQ29udGVudCI6WyIvKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLVxuICogIENvcHlyaWdodCAoYykgTWljcm9zb2Z0IENvcnBvcmF0aW9uLiBBbGwgcmlnaHRzIHJlc2VydmVkLlxuICogIExpY2Vuc2VkIHVuZGVyIHRoZSBNSVQgTGljZW5zZS4gU2VlIExpY2Vuc2UudHh0IGluIHRoZSBwcm9qZWN0IHJvb3QgZm9yIGxpY2Vuc2UgaW5mb3JtYXRpb24uXG4gKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cblxuaW1wb3J0IHsgSUxpc3RWaXJ0dWFsRGVsZWdhdGUgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2Jyb3dzZXIvdWkvbGlzdC9saXN0LmpzJztcbmltcG9ydCB7IElRdWlja1RyZWVJdGVtIH0gZnJvbSAnLi4vLi4vY29tbW9uL3F1aWNrSW5wdXQuanMnO1xuaW1wb3J0IHsgUXVpY2tJbnB1dFRyZWVSZW5kZXJlciB9IGZyb20gJy4vcXVpY2tJbnB1dFRyZWVSZW5kZXJlci5qcyc7XG5cbi8qKlxuICogRGVsZWdhdGUgZm9yIFF1aWNrSW5wdXRUcmVlIHRoYXQgcHJvdmlkZXMgaGVpZ2h0IGFuZCB0ZW1wbGF0ZSBpbmZvcm1hdGlvbi5cbiAqL1xuZXhwb3J0IGNsYXNzIFF1aWNrSW5wdXRUcmVlRGVsZWdhdGU8VCBleHRlbmRzIElRdWlja1RyZWVJdGVtPiBpbXBsZW1lbnRzIElMaXN0VmlydHVhbERlbGVnYXRlPFQ+IHtcblx0Z2V0SGVpZ2h0KF9lbGVtZW50OiBUKTogbnVtYmVyIHtcblx0XHRyZXR1cm4gMjI7XG5cdH1cblxuXHRnZXRUZW1wbGF0ZUlkKF9lbGVtZW50OiBUKTogc3RyaW5nIHtcblx0XHRyZXR1cm4gUXVpY2tJbnB1dFRyZWVSZW5kZXJlci5JRDtcblx0fVxufVxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQW9CQztJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBcEJEOzs7O0FBT0EsU0FBU0Usc0JBQXNCLFFBQVEsNkJBQTZCO0FBRXBFOzs7QUFHQSxPQUFNLE1BQU9DLHNCQUFzQjtFQUNsQ0MsU0FBU0EsQ0FBQ0MsUUFBVztJQUFBO0lBQUFMLGFBQUEsR0FBQU0sQ0FBQTtJQUFBTixhQUFBLEdBQUFPLENBQUE7SUFDcEIsT0FBTyxFQUFFO0VBQ1Y7RUFFQUMsYUFBYUEsQ0FBQ0gsUUFBVztJQUFBO0lBQUFMLGFBQUEsR0FBQU0sQ0FBQTtJQUFBTixhQUFBLEdBQUFPLENBQUE7SUFDeEIsT0FBT0wsc0JBQXNCLENBQUNPLEVBQUU7RUFDakMiLCJpZ25vcmVMaXN0IjpbXX0=

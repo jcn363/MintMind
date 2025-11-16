@@ -1,0 +1,123 @@
+ed81bdde971889a51521f424dc8fc402
+/* istanbul ignore next */
+function cov_hs4bth5p1() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/common/jsonEditing.ts";
+  var hash = "1a190e993509585aa20487242fe24fffca3e4621";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/common/jsonEditing.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 35
+        },
+        end: {
+          line: 6,
+          column: 72
+        }
+      },
+      "1": {
+        start: {
+          line: 10,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 23
+        }
+      },
+      "2": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 25
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 9,
+            column: 4
+          },
+          end: {
+            line: 9,
+            column: 5
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 31
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 9
+      }
+    },
+    branchMap: {},
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    },
+    f: {
+      "0": 0
+    },
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/common/jsonEditing.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,eAAe,EAAE,MAAM,4DAA4D,CAAC;AAG7F,MAAM,CAAC,MAAM,mBAAmB,GAAG,eAAe,CAAsB,oBAAoB,CAAC,CAAC;AAU9F,MAAM,OAAO,gBAAiB,SAAQ,KAAK;IACN;IAApC,YAAY,OAAe,EAAS,IAA0B;QAC7D,KAAK,CAAC,OAAO,CAAC,CAAC;QADoB,SAAI,GAAJ,IAAI,CAAsB;IAE9D,CAAC;CACD",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/services/configuration/common/jsonEditing.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { URI } from '../../../../base/common/uri.js';\nimport { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';\nimport { JSONPath } from '../../../../base/common/json.js';\n\nexport const IJSONEditingService = createDecorator<IJSONEditingService>('jsonEditingService');\n\nexport const enum JSONEditingErrorCode {\n\n\t/**\n\t * Error when trying to write to a file that contains JSON errors.\n\t */\n\tERROR_INVALID_FILE\n}\n\nexport class JSONEditingError extends Error {\n\tconstructor(message: string, public code: JSONEditingErrorCode) {\n\t\tsuper(message);\n\t}\n}\n\nexport interface IJSONValue {\n\tpath: JSONPath;\n\tvalue: unknown;\n}\n\nexport interface IJSONEditingService {\n\n\treadonly _serviceBrand: undefined;\n\n\twrite(resource: URI, values: IJSONValue[], save: boolean): Promise<void>;\n}\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "1a190e993509585aa20487242fe24fffca3e4621"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_hs4bth5p1 = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_hs4bth5p1();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { createDecorator } from '../../../../platform/instantiation/common/instantiation.js';
+export const IJSONEditingService =
+/* istanbul ignore next */
+(cov_hs4bth5p1().s[0]++, createDecorator('jsonEditingService'));
+export class JSONEditingError extends Error {
+  code;
+  constructor(message, code) {
+    /* istanbul ignore next */
+    cov_hs4bth5p1().f[0]++;
+    cov_hs4bth5p1().s[1]++;
+    super(message);
+    /* istanbul ignore next */
+    cov_hs4bth5p1().s[2]++;
+    this.code = code;
+  }
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjcmVhdGVEZWNvcmF0b3IiLCJJSlNPTkVkaXRpbmdTZXJ2aWNlIiwiY292X2hzNGJ0aDVwMSIsInMiLCJKU09ORWRpdGluZ0Vycm9yIiwiRXJyb3IiLCJjb2RlIiwiY29uc3RydWN0b3IiLCJtZXNzYWdlIiwiZiJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL3NlcnZpY2VzL2NvbmZpZ3VyYXRpb24vY29tbW9uL2pzb25FZGl0aW5nLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgeyBVUkkgfSBmcm9tICcuLi8uLi8uLi8uLi9iYXNlL2NvbW1vbi91cmkuanMnO1xuaW1wb3J0IHsgY3JlYXRlRGVjb3JhdG9yIH0gZnJvbSAnLi4vLi4vLi4vLi4vcGxhdGZvcm0vaW5zdGFudGlhdGlvbi9jb21tb24vaW5zdGFudGlhdGlvbi5qcyc7XG5pbXBvcnQgeyBKU09OUGF0aCB9IGZyb20gJy4uLy4uLy4uLy4uL2Jhc2UvY29tbW9uL2pzb24uanMnO1xuXG5leHBvcnQgY29uc3QgSUpTT05FZGl0aW5nU2VydmljZSA9IGNyZWF0ZURlY29yYXRvcjxJSlNPTkVkaXRpbmdTZXJ2aWNlPignanNvbkVkaXRpbmdTZXJ2aWNlJyk7XG5cbmV4cG9ydCBjb25zdCBlbnVtIEpTT05FZGl0aW5nRXJyb3JDb2RlIHtcblxuXHQvKipcblx0ICogRXJyb3Igd2hlbiB0cnlpbmcgdG8gd3JpdGUgdG8gYSBmaWxlIHRoYXQgY29udGFpbnMgSlNPTiBlcnJvcnMuXG5cdCAqL1xuXHRFUlJPUl9JTlZBTElEX0ZJTEVcbn1cblxuZXhwb3J0IGNsYXNzIEpTT05FZGl0aW5nRXJyb3IgZXh0ZW5kcyBFcnJvciB7XG5cdGNvbnN0cnVjdG9yKG1lc3NhZ2U6IHN0cmluZywgcHVibGljIGNvZGU6IEpTT05FZGl0aW5nRXJyb3JDb2RlKSB7XG5cdFx0c3VwZXIobWVzc2FnZSk7XG5cdH1cbn1cblxuZXhwb3J0IGludGVyZmFjZSBJSlNPTlZhbHVlIHtcblx0cGF0aDogSlNPTlBhdGg7XG5cdHZhbHVlOiB1bmtub3duO1xufVxuXG5leHBvcnQgaW50ZXJmYWNlIElKU09ORWRpdGluZ1NlcnZpY2Uge1xuXG5cdHJlYWRvbmx5IF9zZXJ2aWNlQnJhbmQ6IHVuZGVmaW5lZDtcblxuXHR3cml0ZShyZXNvdXJjZTogVVJJLCB2YWx1ZXM6IElKU09OVmFsdWVbXSwgc2F2ZTogYm9vbGVhbik6IFByb21pc2U8dm9pZD47XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUE7Ozs7QUFNQSxTQUFTQSxlQUFlLFFBQVEsNERBQTREO0FBRzVGLE9BQU8sTUFBTUMsbUJBQW1CO0FBQUE7QUFBQSxDQUFBQyxhQUFBLEdBQUFDLENBQUEsT0FBR0gsZUFBZSxDQUFzQixvQkFBb0IsQ0FBQztBQVU3RixPQUFNLE1BQU9JLGdCQUFpQixTQUFRQyxLQUFLO0VBQ05DLElBQUE7RUFBcENDLFlBQVlDLE9BQWUsRUFBU0YsSUFBMEI7SUFBQTtJQUFBSixhQUFBLEdBQUFPLENBQUE7SUFBQVAsYUFBQSxHQUFBQyxDQUFBO0lBQzdELEtBQUssQ0FBQ0ssT0FBTyxDQUFDO0lBQUM7SUFBQU4sYUFBQSxHQUFBQyxDQUFBO0lBRG9CLEtBQUFHLElBQUksR0FBSkEsSUFBSTtFQUV4QyIsImlnbm9yZUxpc3QiOltdfQ==

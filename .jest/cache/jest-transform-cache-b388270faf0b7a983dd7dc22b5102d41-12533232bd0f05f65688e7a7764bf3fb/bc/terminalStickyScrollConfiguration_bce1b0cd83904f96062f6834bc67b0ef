@@ -1,0 +1,75 @@
+c9de2469812678564eb90a97d8b906a4
+/* istanbul ignore next */
+function cov_ruumqyaax() {
+  var path = "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/common/terminalStickyScrollConfiguration.ts";
+  var hash = "e66a369e2483231171167be19f1d622aa3196e10";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/common/terminalStickyScrollConfiguration.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 6,
+          column: 49
+        },
+        end: {
+          line: 19,
+          column: 1
+        }
+      }
+    },
+    fnMap: {},
+    branchMap: {},
+    s: {
+      "0": 0
+    },
+    f: {},
+    b: {},
+    inputSourceMap: {
+      file: "/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/common/terminalStickyScrollConfiguration.ts",
+      mappings: "AAAA;;;gGAGgG;AAGhG,OAAO,EAAE,QAAQ,EAAE,MAAM,uBAAuB,CAAC;AAcjD,MAAM,CAAC,MAAM,iCAAiC,GAAoD;IACjG,wFAAuC,EAAE;QACxC,mBAAmB,EAAE,QAAQ,CAAC,sBAAsB,EAAE,gIAAgI,EAAE,+DAA+D,EAAE,MAAM,8FAAyC,KAAK,CAAC;QAC9S,IAAI,EAAE,SAAS;QACf,OAAO,EAAE,IAAI;KACb;IACD,kGAA4C,EAAE;QAC7C,mBAAmB,EAAE,QAAQ,CAAC,2BAA2B,EAAE,2IAA2I,CAAC;QACvM,IAAI,EAAE,QAAQ;QACd,OAAO,EAAE,CAAC;QACV,OAAO,EAAE,CAAC;QACV,OAAO,EAAE,EAAE;KACX;CACD,CAAC",
+      names: [],
+      sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/stickyScroll/common/terminalStickyScrollConfiguration.ts"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport type { IStringDictionary } from '../../../../../base/common/collections.js';\nimport { localize } from '../../../../../nls.js';\nimport type { IConfigurationPropertySchema } from '../../../../../platform/configuration/common/configurationRegistry.js';\nimport { TerminalSettingId } from '../../../../../platform/terminal/common/terminal.js';\n\nexport const enum TerminalStickyScrollSettingId {\n\tEnabled = 'terminal.integrated.stickyScroll.enabled',\n\tMaxLineCount = 'terminal.integrated.stickyScroll.maxLineCount',\n}\n\nexport interface ITerminalStickyScrollConfiguration {\n\tenabled: boolean;\n\tmaxLineCount: number;\n}\n\nexport const terminalStickyScrollConfiguration: IStringDictionary<IConfigurationPropertySchema> = {\n\t[TerminalStickyScrollSettingId.Enabled]: {\n\t\tmarkdownDescription: localize('stickyScroll.enabled', \"Shows the current command at the top of the terminal. This feature requires [shell integration]({0}) to be activated. See {1}.\", 'https://code.visualstudio.com/docs/terminal/shell-integration', `\\`#${TerminalSettingId.ShellIntegrationEnabled}#\\``),\n\t\ttype: 'boolean',\n\t\tdefault: true\n\t},\n\t[TerminalStickyScrollSettingId.MaxLineCount]: {\n\t\tmarkdownDescription: localize('stickyScroll.maxLineCount', \"Defines the maximum number of sticky lines to show. Sticky scroll lines will never exceed 40% of the viewport regardless of this setting.\"),\n\t\ttype: 'number',\n\t\tdefault: 5,\n\t\tminimum: 1,\n\t\tmaximum: 10\n\t},\n};\n"],
+      version: 3
+    },
+    _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
+    hash: "e66a369e2483231171167be19f1d622aa3196e10"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+  if (!coverage[path] || coverage[path].hash !== hash) {
+    coverage[path] = coverageData;
+  }
+  var actualCoverage = coverage[path];
+  {
+    // @ts-ignore
+    cov_ruumqyaax = function () {
+      return actualCoverage;
+    };
+  }
+  return actualCoverage;
+}
+cov_ruumqyaax();
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+import { localize } from '../../../../../nls.js';
+export const terminalStickyScrollConfiguration =
+/* istanbul ignore next */
+(cov_ruumqyaax().s[0]++, {
+  ["terminal.integrated.stickyScroll.enabled" /* TerminalStickyScrollSettingId.Enabled */]: {
+    markdownDescription: localize('stickyScroll.enabled', "Shows the current command at the top of the terminal. This feature requires [shell integration]({0}) to be activated. See {1}.", 'https://code.visualstudio.com/docs/terminal/shell-integration', `\`#${"terminal.integrated.shellIntegration.enabled" /* TerminalSettingId.ShellIntegrationEnabled */}#\``),
+    type: 'boolean',
+    default: true
+  },
+  ["terminal.integrated.stickyScroll.maxLineCount" /* TerminalStickyScrollSettingId.MaxLineCount */]: {
+    markdownDescription: localize('stickyScroll.maxLineCount', "Defines the maximum number of sticky lines to show. Sticky scroll lines will never exceed 40% of the viewport regardless of this setting."),
+    type: 'number',
+    default: 5,
+    minimum: 1,
+    maximum: 10
+  }
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJjb3ZfcnV1bXF5YWF4IiwiYWN0dWFsQ292ZXJhZ2UiLCJsb2NhbGl6ZSIsInRlcm1pbmFsU3RpY2t5U2Nyb2xsQ29uZmlndXJhdGlvbiIsInMiLCJtYXJrZG93bkRlc2NyaXB0aW9uIiwidHlwZSIsImRlZmF1bHQiLCJtaW5pbXVtIiwibWF4aW11bSJdLCJzb3VyY2VzIjpbIi9ob21lL3VzZXIvRGVza3RvcC9NaW50TWluZC9zcmMvdnMvd29ya2JlbmNoL2NvbnRyaWIvdGVybWluYWxDb250cmliL3N0aWNreVNjcm9sbC9jb21tb24vdGVybWluYWxTdGlja3lTY3JvbGxDb25maWd1cmF0aW9uLnRzIl0sInNvdXJjZXNDb250ZW50IjpbIi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tXG4gKiAgQ29weXJpZ2h0IChjKSBNaWNyb3NvZnQgQ29ycG9yYXRpb24uIEFsbCByaWdodHMgcmVzZXJ2ZWQuXG4gKiAgTGljZW5zZWQgdW5kZXIgdGhlIE1JVCBMaWNlbnNlLiBTZWUgTGljZW5zZS50eHQgaW4gdGhlIHByb2plY3Qgcm9vdCBmb3IgbGljZW5zZSBpbmZvcm1hdGlvbi5cbiAqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qL1xuXG5pbXBvcnQgdHlwZSB7IElTdHJpbmdEaWN0aW9uYXJ5IH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vYmFzZS9jb21tb24vY29sbGVjdGlvbnMuanMnO1xuaW1wb3J0IHsgbG9jYWxpemUgfSBmcm9tICcuLi8uLi8uLi8uLi8uLi9ubHMuanMnO1xuaW1wb3J0IHR5cGUgeyBJQ29uZmlndXJhdGlvblByb3BlcnR5U2NoZW1hIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vY29uZmlndXJhdGlvbi9jb21tb24vY29uZmlndXJhdGlvblJlZ2lzdHJ5LmpzJztcbmltcG9ydCB7IFRlcm1pbmFsU2V0dGluZ0lkIH0gZnJvbSAnLi4vLi4vLi4vLi4vLi4vcGxhdGZvcm0vdGVybWluYWwvY29tbW9uL3Rlcm1pbmFsLmpzJztcblxuZXhwb3J0IGNvbnN0IGVudW0gVGVybWluYWxTdGlja3lTY3JvbGxTZXR0aW5nSWQge1xuXHRFbmFibGVkID0gJ3Rlcm1pbmFsLmludGVncmF0ZWQuc3RpY2t5U2Nyb2xsLmVuYWJsZWQnLFxuXHRNYXhMaW5lQ291bnQgPSAndGVybWluYWwuaW50ZWdyYXRlZC5zdGlja3lTY3JvbGwubWF4TGluZUNvdW50Jyxcbn1cblxuZXhwb3J0IGludGVyZmFjZSBJVGVybWluYWxTdGlja3lTY3JvbGxDb25maWd1cmF0aW9uIHtcblx0ZW5hYmxlZDogYm9vbGVhbjtcblx0bWF4TGluZUNvdW50OiBudW1iZXI7XG59XG5cbmV4cG9ydCBjb25zdCB0ZXJtaW5hbFN0aWNreVNjcm9sbENvbmZpZ3VyYXRpb246IElTdHJpbmdEaWN0aW9uYXJ5PElDb25maWd1cmF0aW9uUHJvcGVydHlTY2hlbWE+ID0ge1xuXHRbVGVybWluYWxTdGlja3lTY3JvbGxTZXR0aW5nSWQuRW5hYmxlZF06IHtcblx0XHRtYXJrZG93bkRlc2NyaXB0aW9uOiBsb2NhbGl6ZSgnc3RpY2t5U2Nyb2xsLmVuYWJsZWQnLCBcIlNob3dzIHRoZSBjdXJyZW50IGNvbW1hbmQgYXQgdGhlIHRvcCBvZiB0aGUgdGVybWluYWwuIFRoaXMgZmVhdHVyZSByZXF1aXJlcyBbc2hlbGwgaW50ZWdyYXRpb25dKHswfSkgdG8gYmUgYWN0aXZhdGVkLiBTZWUgezF9LlwiLCAnaHR0cHM6Ly9jb2RlLnZpc3VhbHN0dWRpby5jb20vZG9jcy90ZXJtaW5hbC9zaGVsbC1pbnRlZ3JhdGlvbicsIGBcXGAjJHtUZXJtaW5hbFNldHRpbmdJZC5TaGVsbEludGVncmF0aW9uRW5hYmxlZH0jXFxgYCksXG5cdFx0dHlwZTogJ2Jvb2xlYW4nLFxuXHRcdGRlZmF1bHQ6IHRydWVcblx0fSxcblx0W1Rlcm1pbmFsU3RpY2t5U2Nyb2xsU2V0dGluZ0lkLk1heExpbmVDb3VudF06IHtcblx0XHRtYXJrZG93bkRlc2NyaXB0aW9uOiBsb2NhbGl6ZSgnc3RpY2t5U2Nyb2xsLm1heExpbmVDb3VudCcsIFwiRGVmaW5lcyB0aGUgbWF4aW11bSBudW1iZXIgb2Ygc3RpY2t5IGxpbmVzIHRvIHNob3cuIFN0aWNreSBzY3JvbGwgbGluZXMgd2lsbCBuZXZlciBleGNlZWQgNDAlIG9mIHRoZSB2aWV3cG9ydCByZWdhcmRsZXNzIG9mIHRoaXMgc2V0dGluZy5cIiksXG5cdFx0dHlwZTogJ251bWJlcicsXG5cdFx0ZGVmYXVsdDogNSxcblx0XHRtaW5pbXVtOiAxLFxuXHRcdG1heGltdW06IDEwXG5cdH0sXG59O1xuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQThCRTtJQUFBQSxhQUFBLFlBQUFBLENBQUE7TUFBQSxPQUFBQyxjQUFBO0lBQUE7RUFBQTtFQUFBLE9BQUFBLGNBQUE7QUFBQTtBQUFBRCxhQUFBO0FBOUJGOzs7O0FBTUEsU0FBU0UsUUFBUSxRQUFRLHVCQUF1QjtBQWNoRCxPQUFPLE1BQU1DLGlDQUFpQztBQUFBO0FBQUEsQ0FBQUgsYUFBQSxHQUFBSSxDQUFBLE9BQW9EO0VBQ2pHLDBGQUF5QztJQUN4Q0MsbUJBQW1CLEVBQUVILFFBQVEsQ0FBQyxzQkFBc0IsRUFBRSxnSUFBZ0ksRUFBRSwrREFBK0QsRUFBRSxNQUFNLG1HQUE4QyxDQUFDO0lBQzlTSSxJQUFJLEVBQUUsU0FBUztJQUNmQyxPQUFPLEVBQUU7R0FDVDtFQUNELG9HQUE4QztJQUM3Q0YsbUJBQW1CLEVBQUVILFFBQVEsQ0FBQywyQkFBMkIsRUFBRSwySUFBMkksQ0FBQztJQUN2TUksSUFBSSxFQUFFLFFBQVE7SUFDZEMsT0FBTyxFQUFFLENBQUM7SUFDVkMsT0FBTyxFQUFFLENBQUM7SUFDVkMsT0FBTyxFQUFFOztDQUVWIiwiaWdub3JlTGlzdCI6W119
