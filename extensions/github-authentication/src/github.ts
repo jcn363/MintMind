@@ -349,16 +349,6 @@ export class GitHubAuthenticationProvider implements vscode.AuthenticationProvid
 	    // if we've got a session already.
 	    const sortedScopes = [...scopes].sort();
 
-	    /* __GDPR__
-	    	"login" : {
-	    		"owner": "TylerLeonhardt",
-	    		"comment": "Used to determine how much usage the GitHub Auth Provider gets.",
-	    		"scopes": { "classification": "PublicNonPersonalData", "purpose": "FeatureInsight", "comment": "Used to determine what scope combinations are being requested." }
-	    	}
-	    */
-	    this._telemetryReporter?.sendTelemetryEvent('login', {
-	      scopes: JSON.stringify(scopes),
-	    });
 
 	    if (options && !isGitHubAuthenticationProviderOptions(options)) {
 	      throw new Error('Invalid options');
@@ -420,17 +410,9 @@ export class GitHubAuthenticationProvider implements vscode.AuthenticationProvid
 	    } catch (fallbackError) {
 	      // If login was cancelled, do not notify user.
 	      if (e === 'Cancelled' || e.message === 'Cancelled') {
-	        /* __GDPR__
-	        	"loginCancelled" : { "owner": "TylerLeonhardt", "comment": "Used to determine how often users cancel the login flow." }
-	        */
-	        this._telemetryReporter?.sendTelemetryEvent('loginCancelled');
 	        throw e;
 	      }
 
-	      /* __GDPR__
-	      	"loginFailed" : { "owner": "TylerLeonhardt", "comment": "Used to determine how often users run into an error login flow." }
-	      */
-	      this._telemetryReporter?.sendTelemetryEvent('loginFailed');
 
 	      console.error('GitHub login failed both via Tauri and fallback:', e);
 	      throw fallbackError;
@@ -450,10 +432,6 @@ export class GitHubAuthenticationProvider implements vscode.AuthenticationProvid
 
 	public async removeSession(id: string) {
 		try {
-			/* __GDPR__
-				"logout" : { "owner": "TylerLeonhardt", "comment": "Used to determine how often users log out of an account." }
-			*/
-			this._telemetryReporter?.sendTelemetryEvent('logout');
 
 			this._logger.info(`Logging out of ${id}`);
 
@@ -471,10 +449,6 @@ export class GitHubAuthenticationProvider implements vscode.AuthenticationProvid
 				this._logger.error('Session not found');
 			}
 		} catch (e) {
-			/* __GDPR__
-				"logoutFailed" : { "owner": "TylerLeonhardt", "comment": "Used to determine how often logging out of an account fails." }
-			*/
-			this._telemetryReporter?.sendTelemetryEvent('logoutFailed');
 
 			vscode.window.showErrorMessage(vscode.l10n.t('Sign out failed: {0}', `${e}`));
 			this._logger.error(e);

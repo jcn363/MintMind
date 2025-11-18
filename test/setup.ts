@@ -26,10 +26,27 @@ declare global {
   };
 }
 
-// Configurar variables de entorno para tests
+// Configurar variables de entorno para tests con respaldo seguro
+const originalEnv = { ...process.env };
 process.env.NODE_ENV = 'test';
 process.env.BUN_ENV = 'test';
 process.env.JEST_WORKER_ID = process.env.JEST_WORKER_ID || '1';
+
+// Función para restaurar variables de entorno originales después de cada test
+const restoreOriginalEnv = () => {
+  Object.keys(process.env).forEach(key => {
+    if (!(key in originalEnv)) {
+      delete process.env[key];
+    } else {
+      process.env[key] = originalEnv[key];
+    }
+  });
+};
+
+// Limpiar cambios de process.env después de cada test
+afterEach(() => {
+  restoreOriginalEnv();
+});
 
 // Utilidades globales para tests
 const testUtils = {
@@ -78,8 +95,8 @@ const testUtils = {
   }
 };
 
-// Asignar testUtils al objeto global
-(global as any).testUtils = testUtils;
+// Asignar testUtils al objeto global con tipado correcto
+(globalThis as any).testUtils = testUtils;
 
 // Configurar Jest globals
 beforeAll(() => {
@@ -88,10 +105,13 @@ beforeAll(() => {
 });
 
 beforeEach(() => {
-  // Limpiar todos los mocks antes de cada test
+  // Limpiar mocks con mejor aislamiento por test
   jest.clearAllMocks();
   jest.resetAllMocks();
   jest.restoreAllMocks();
+
+  // Reset modules para evitar interferencias entre tests
+  jest.resetModules();
 });
 
 afterEach(() => {
@@ -108,6 +128,7 @@ afterAll(() => {
   // Limpieza final después de todos los tests
   jest.clearAllTimers();
   jest.useRealTimers();
+  jest.restoreAllMocks();
 });
 
 export {};

@@ -1,12 +1,12 @@
-import { invoke } from '@tauri-apps/api/core';
-
 jest.mock('@tauri-apps/api/core');
+import { invoke } from '@tauri-apps/api/core';
 
 describe('PTY Commands', () => {
   const mockInvoke = invoke as jest.MockedFunction<typeof invoke>;
 
   beforeEach(() => {
-    mockInvoke.mockResolvedValue(null);
+    // Clear all mocks but don't set default behavior
+    jest.clearAllMocks();
   });
 
   afterEach(() => {
@@ -24,7 +24,7 @@ describe('PTY Commands', () => {
       const rows = 24;
       const shell_integration = { enabled: true, nonce: 'test_nonce' };
 
-      const expectedResult = {
+      const expectedResult: PTYSpawnResult = {
         pid: 1234,
         cwd: '/home/user',
         backend: 'portable-pty'
@@ -53,7 +53,7 @@ describe('PTY Commands', () => {
       const cols = 80;
       const rows = 24;
 
-      const expectedResult = {
+      const expectedResult: PTYSpawnResult = {
         pid: 5678,
         cwd: '/tmp',
         backend: 'portable-pty'
@@ -124,7 +124,7 @@ describe('PTY Commands', () => {
     it('should invoke pty_read with id and max_bytes, returning base64 encoded data', async () => {
       const id = 'terminal_1';
       const max_bytes = 4096;
-      const expectedResult = {
+      const expectedResult: PTYReadResult = {
         data: 'SGVsbG8gV29ybGQ=', // "Hello World" in base64
         bytes_read: 11
       };

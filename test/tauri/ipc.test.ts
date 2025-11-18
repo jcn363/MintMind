@@ -6,7 +6,7 @@ describe('IPC Commands', () => {
   const mockInvoke = invoke as jest.MockedFunction<typeof invoke>;
 
   beforeEach(() => {
-    mockInvoke.mockResolvedValue(null);
+    // No default mock value - set per test as needed
   });
 
   afterEach(() => {

@@ -10,7 +10,6 @@ export const LANGUAGE_DEFAULT = 'en';
 let _isWindows = false;
 let _isMacintosh = false;
 let _isLinux = false;
-let _isIOS = false;
 let _isCI = false;
 let _locale: string | undefined;
 let _language: string = LANGUAGE_DEFAULT;
@@ -236,7 +235,7 @@ export const enum OperatingSystem {
 	Macintosh = 2,
 	Linux = 3
 }
-export const OS = (_isMacintosh || _isIOS ? OperatingSystem.Macintosh : (_isWindows ? OperatingSystem.Windows : OperatingSystem.Linux));
+export const OS = (_isMacintosh ? OperatingSystem.Macintosh : (_isWindows ? OperatingSystem.Windows : OperatingSystem.Linux));
 
 let _isLittleEndian = true;
 let _isLittleEndianComputed = false;
@@ -256,7 +255,6 @@ export const isChrome = Boolean(userAgent && userAgent.indexOf('Chrome') >= 0);
 export const isFirefox = Boolean(userAgent && userAgent.indexOf('Firefox') >= 0);
 export const isSafari = Boolean(!isChrome && (userAgent && userAgent.indexOf('Safari') >= 0));
 export const isEdge = Boolean(userAgent && userAgent.indexOf('Edg/') >= 0);
-export const isAndroid = Boolean(userAgent && userAgent.indexOf('Android') >= 0);
 
 export function isBigSurOrNewer(osVersion: string): boolean {
 	return parseFloat(osVersion) >= 20;

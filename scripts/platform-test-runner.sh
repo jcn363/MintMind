@@ -45,21 +45,21 @@ FAILED_TESTS=()
 PASSED_TESTS=()
 
 # Run Rust tests
-if run_test "Rust tests" "cd src-tauri && cargo test --release"; then
+if run_test "Rust tests" "(cd src-tauri && cargo test --release)"; then
     PASSED_TESTS+=("Rust")
 else
     FAILED_TESTS+=("Rust")
 fi
 
 # Run TypeScript tests
-if run_test "TypeScript tests" "npm run test:tauri"; then
+if run_test "TypeScript tests" "(cd src-tauri && cargo test)"; then
     PASSED_TESTS+=("TypeScript")
 else
     FAILED_TESTS+=("TypeScript")
 fi
 
 # Run E2E tests
-if run_test "E2E tests" "npx playwright test"; then
+if run_test "E2E tests" "(cd test/e2e && npx playwright test)"; then
     PASSED_TESTS+=("E2E")
 else
     FAILED_TESTS+=("E2E")

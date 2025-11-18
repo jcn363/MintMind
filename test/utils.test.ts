@@ -107,33 +107,61 @@ describe('MathUtils', () => {
 });
 
 /**
- * Test para configuración global de Jest
+ * Tests adicionales para casos edge y validación de tipos estricta
  */
-describe('Global Test Configuration', () => {
-  it('should have test environment variables set', () => {
-    expect(process.env.NODE_ENV).toBe('test');
-    expect(process.env.BUN_ENV).toBe('test');
-  });
-
-  it('should have global test utilities available', () => {
-    expect(global.testUtils).toBeDefined();
-    expect(typeof global.testUtils.createMockFunction).toBe('function');
-    expect(typeof global.testUtils.createMockObject).toBe('function');
-    expect(typeof global.testUtils.flushPromises).toBe('function');
-  });
-
-  it('should create mock functions correctly', () => {
-    const mockFn = global.testUtils.createMockFunction((x: number) => x * 2);
-    expect(mockFn(5)).toBe(10);
-    expect(mockFn).toHaveBeenCalledWith(5);
-  });
-
-  it('should create mock objects correctly', () => {
-    const mockObj = global.testUtils.createMockObject<{ name: string; age: number }>({
-      name: 'Test',
-      age: 25,
+describe('MathUtils Edge Cases', () => {
+  describe('Type Validation', () => {
+    it('should handle floating point precision correctly', () => {
+      const result = MathUtils.add(0.1, 0.2);
+      expect(result).toBeCloseTo(0.3, 10); // Close enough for floating point
     });
-    expect(mockObj.name).toBe('Test');
-    expect(mockObj.age).toBe(25);
+
+    it('should handle very large numbers', () => {
+      const largeNum = Number.MAX_SAFE_INTEGER;
+      const result = MathUtils.multiply(largeNum, 2);
+      expect(result).toBe(largeNum * 2);
+    });
+
+    it('should handle very small numbers', () => {
+      const smallNum = Number.MIN_VALUE;
+      const result = MathUtils.add(smallNum, smallNum);
+      expect(result).toBe(smallNum * 2);
+    });
+
+    it('should throw error for NaN inputs', () => {
+      expect(() => MathUtils.add(NaN, 5)).toThrow('Both arguments must be numbers');
+      expect(() => MathUtils.add(5, NaN)).toThrow('Both arguments must be numbers');
+    });
+
+    it('should throw error for Infinity inputs', () => {
+      expect(() => MathUtils.add(Infinity, 5)).toThrow('Both arguments must be numbers');
+      expect(() => MathUtils.add(5, -Infinity)).toThrow('Both arguments must be numbers');
+    });
+  });
+
+  describe('Async Operations', () => {
+    it('should handle async operations with delays', async () => {
+      const startTime = Date.now();
+      const result = await MathUtils.asyncAdd(10, 20);
+      const endTime = Date.now();
+
+      expect(result).toBe(30);
+      expect(endTime - startTime).toBeGreaterThanOrEqual(10); // At least 10ms delay
+    });
+
+    it('should propagate async errors correctly', async () => {
+      await expect(MathUtils.asyncAdd('invalid' as any, 5)).rejects.toThrow('Both arguments must be numbers');
+    });
+
+    it('should handle multiple concurrent async operations', async () => {
+      const promises = [
+        MathUtils.asyncAdd(1, 1),
+        MathUtils.asyncAdd(2, 2),
+        MathUtils.asyncAdd(3, 3),
+      ];
+
+      const results = await Promise.all(promises);
+      expect(results).toEqual([2, 4, 6]);
+    });
   });
 });

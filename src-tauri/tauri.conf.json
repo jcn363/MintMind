@@ -5,33 +5,157 @@
   "identifier": "com.tauri.dev",
   "build": {
     "frontendDist": "../out",
-    "devUrl": "../out",
     "beforeDevCommand": "bun run watch-client",
-    "beforeBuildCommand": "bun run compile-build"
+    "beforeBuildCommand": "bun run compile-build",
+    "devUrl": "http://localhost:3000"
   },
   "app": {
     "windows": [
       {
         "title": "MintMind",
-        "width": 800,
-        "height": 600,
+        "label": "main",
+        "url": "/",
+        "width": 1200,
+        "height": 800,
+        "minWidth": 800,
+        "minHeight": 600,
         "resizable": true,
-        "fullscreen": false
+        "fullscreen": false,
+        "decorations": true,
+        "alwaysOnTop": false,
+        "skipTaskbar": false,
+        "theme": null,
+        "titleBarStyle": "Visible",
+        "acceptFirstMouse": true,
+        "tabbingIdentifier": null,
+        "userAgent": null,
+        "fileDropEnabled": true,
+        "center": true,
+        "transparent": false,
+        "shadow": true
       }
     ],
     "security": {
-      "csp": null
+      "csp": "default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' ipc: http://ipc.localhost; media-src 'self'; object-src 'none'; frame-src 'none'; base-uri 'self'; form-action 'self';",
+      "dangerousDisableAssetCspModification": false,
+      "freezePrototype": true,
+      "dangerousDisableBrowserSecurity": false,
+      "dangerousRemoteDomainIpcAccess": []
     }
   },
+  "capabilities": [
+    {
+      "identifier": "default",
+      "description": "Default capability for core functionality",
+      "windows": ["main"],
+      "permissions": [
+        "core:default",
+        "fs:read-files",
+        "fs:write-files",
+        "fs:read-dir",
+        "fs:create-dir",
+        "fs:remove-file",
+        "fs:remove-dir",
+        "fs:copy-file",
+        "fs:move-file",
+        "fs:exists",
+        "fs:metadata",
+        "shell:execute",
+        "shell:spawn",
+        "shell:open",
+        "process:exit",
+        "process:relaunch",
+        "os:platform",
+        "os:version",
+        "os:family",
+        "os:arch",
+        "os:exe-extension",
+        "os:locale",
+        "os:hostname"
+      ]
+    },
+    {
+      "identifier": "pty-management",
+      "description": "Capability for PTY terminal management",
+      "windows": ["main"],
+      "permissions": [
+        "core:default",
+        "shell:execute"
+      ]
+    },
+    {
+      "identifier": "registry-access",
+      "description": "Capability for Windows registry access",
+      "windows": ["main"],
+      "permissions": [
+        "core:default",
+        "shell:execute"
+      ],
+      "platforms": ["windows"]
+    },
+    {
+      "identifier": "process-management",
+      "description": "Capability for process management and monitoring",
+      "windows": ["main"],
+      "permissions": [
+        "core:default",
+        "process:exit",
+        "process:relaunch"
+      ]
+    },
+    {
+      "identifier": "keyboard-layout",
+      "description": "Capability for keyboard layout detection",
+      "windows": ["main"],
+      "permissions": [
+        "core:default"
+      ]
+    }
+  ],
   "bundle": {
     "active": true,
     "targets": "all",
+    "category": "DeveloperTool",
+    "shortDescription": "A powerful IDE for modern development",
+    "longDescription": "MintMind is an advanced integrated development environment with terminal integration, process management, and cross-platform support.",
+    "copyright": "Copyright (c) 2024 Tauri Contributors. All rights reserved.",
+    "licenseFile": null,
+    "deb": {
+      "depends": []
+    },
+    "macOS": {
+      "frameworks": [],
+      "minimumSystemVersion": "10.15"
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    },
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
       "icons/128x128@2x.png",
       "icons/icon.icns",
-      "icons/icon.ico"
+      "icons/icon.ico",
+      "icons/Square30x30Logo.png",
+      "icons/Square44x44Logo.png",
+      "icons/Square71x71Logo.png",
+      "icons/Square89x89Logo.png",
+      "icons/Square107x107Logo.png",
+      "icons/Square142x142Logo.png",
+      "icons/Square150x150Logo.png",
+      "icons/Square284x284Logo.png",
+      "icons/Square310x310Logo.png",
+      "icons/StoreLogo.png"
     ]
+  },
+  "plugins": {
+    "updater": {
+      "active": false
+    },
+    "shell": {
+      "open": true
+    }
   }
 }

@@ -74,16 +74,16 @@ const config = {
       titleTemplate: '{title}'
     }]
   ],
-  maxWorkers: 1, // Optimized for Bun runtime
-  forceExit: false, // Disabled to prevent early exit issues
-  detectOpenHandles: false, // Disabled for performance, re-enable if needed
+  maxWorkers: '50%', // Dynamic worker allocation based on CPU cores for modern parallelization
+  forceExit: true, // Force exit in CI environments to prevent hanging processes
+  detectOpenHandles: true, // Detect open handles to prevent resource leaks
   clearMocks: true,
   restoreMocks: true,
-  testTimeout: 15000,
-  workerIdleMemoryLimit: '1GB', // Increased from 512MB for better stability
+  testTimeout: 5000, // Unit tests: 5s max
+  workerIdleMemoryLimit: '256MB', // Reduced memory limit for better resource management
   detectLeaks: false,
 
-  // Performance optimizations
+  // Enhanced performance optimizations
   cache: true,
   cacheDirectory: '<rootDir>/.jest/cache',
   haste: {
@@ -91,11 +91,29 @@ const config = {
     throwOnModuleCollision: false,
   },
 
+  // Watch path optimizations for better performance
+  watchPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/.git/',
+    '<rootDir>/coverage/',
+    '<rootDir>/test-results/',
+    '<rootDir>/.jest/',
+    '<rootDir>/out/',
+    '<rootDir>/.vscode-test/',
+    '<rootDir>/extensions/',
+    '<rootDir>/docs/',
+    '<rootDir>/scripts/',
+    '<rootDir>/resources/',
+  ],
+
   // Additional performance settings
   errorOnDeprecated: false,
   resetModules: false, // Keep modules for better performance
   resetMocks: false,
   restoreMocks: true,
+
+  // Custom timeouts based on test type
+  // Note: Integration tests use 10s, E2E use 30s via test file configuration
 };
 
   // Override testEnvironment for Tauri tests

@@ -91,12 +91,13 @@ import path from 'node:path';
 import { glob } from 'glob';
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
+import crypto from 'node:crypto';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Configuración declarativa del build
+// Tauri v2 optimized build configuration with performance and security enhancements
 const buildConfig = {
-  // Configuración principal de MintMind
+  // Main application target - optimized for Tauri v2 with security hardening
   main: {
     entryPoints: [
       'src/main.ts',
@@ -110,15 +111,26 @@ const buildConfig = {
     format: 'cjs',
     bundle: false,
     sourcemap: true,
+    minify: process.env.NODE_ENV === 'production',
+    treeShaking: true,
     external: [
       'original-fs',
       '@vscode/spdlog',
       '@vscode/sqlite3',
-      '@vscode/deviceid'
-    ]
+      '@vscode/deviceid',
+      'tauri-plugin-*'
+    ],
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      'process.env.TAURI_PLATFORM': JSON.stringify(process.env.TAURI_PLATFORM || 'current'),
+      'process.env.TAURI_ARCH': JSON.stringify(process.env.TAURI_ARCH || 'current'),
+      'process.env.TAURI_FAMILY': JSON.stringify(process.env.TAURI_FAMILY || 'unix')
+    },
+    metafile: true,
+    legalComments: 'external'
   },
 
-  // Configuración de extensiones comunes
+  // Extensions with code splitting for better performance
   extensions: {
     entryPoints: await glob('extensions/*/src/extension.ts'),
     outdir: 'extensions-dist',
@@ -127,25 +139,46 @@ const buildConfig = {
     format: 'cjs',
     bundle: false,
     sourcemap: true,
-    external: ['vscode']
+    minify: process.env.NODE_ENV === 'production',
+    treeShaking: true,
+    external: ['vscode', 'tauri-plugin-*'],
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      'process.env.TAURI_PLATFORM': JSON.stringify(process.env.TAURI_PLATFORM || 'current')
+    }
   },
 
-  // Configuración de webviews con esbuild (ya existente pero centralizada)
+  // Webviews with advanced bundling, code splitting, and security optimizations
   webviews: {
     entryPoints: await glob('extensions/*/notebook/*.ts', {
       ignore: ['**/node_modules/**']
     }),
     outdir: 'webviews-dist',
     platform: 'browser',
-    target: ['es2024'],
+    target: ['chrome100', 'firefox100', 'safari15', 'edge100'], // Tauri v2 supported browsers
     format: 'esm',
     bundle: true,
-    minify: true,
-    sourcemap: false,
-    external: ['vscode']
+    minify: process.env.NODE_ENV === 'production',
+    sourcemap: process.env.NODE_ENV !== 'production',
+    treeShaking: true,
+    splitting: true, // Enable code splitting for better performance
+    chunkNames: 'chunks/[name]-[hash]',
+    external: ['vscode'],
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+      global: 'globalThis'
+    },
+    // Security hardening for webviews
+    banner: {
+      js: '// MintMind WebView - Security Hardened\n'
+    },
+    footer: {
+      js: '\n// End of MintMind WebView'
+    },
+    metafile: true
   },
 
-  // Configuración CLI
+  // CLI tools with minimal bundling and integrity checks
   cli: {
     entryPoints: ['src/cli.ts'],
     outdir: 'out-cli',
@@ -154,7 +187,12 @@ const buildConfig = {
     format: 'cjs',
     bundle: true,
     minify: false,
-    sourcemap: true
+    sourcemap: true,
+    treeShaking: true,
+    external: ['tauri-plugin-*'],
+    define: {
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    }
   }
 };
 
@@ -230,18 +268,41 @@ async function clean() {
 }
 
 /**
- * Función principal
+ * Build all targets with Tauri v2 optimizations
+ */
+async function buildAll(watch = false, platform = null) {
+  console.log(`🔧 Building all targets for Tauri v2${platform ? ` (${platform})` : ''}`);
+
+  if (watch) {
+    const promises = Object.keys(buildConfig).map(target =>
+      build(target, true, platform)
+    );
+    await Promise.all(promises);
+  } else {
+    for (const target of Object.keys(buildConfig)) {
+      await build(target, false, platform);
+    }
+  }
+}
+
+/**
+ * Main CLI interface with Tauri v2 enhancements
  */
 async function main() {
   const args = process.argv.slice(2);
   const command = args[0];
+
+  // Parse platform argument
+  const platformIndex = args.findIndex(arg => arg.startsWith('--platform='));
+  const platform = platformIndex !== -1 ? args[platformIndex].split('=')[1] : null;
+  if (platformIndex !== -1) args.splice(platformIndex, 1);
 
   switch (command) {
     case 'build':
     case 'compile': {
       const target = args[1] || 'main';
       const watch = args.includes('--watch') || args.includes('-w');
-      await build(target, watch);
+      await build(target, watch, platform);
       break;
     }
 
@@ -252,41 +313,42 @@ async function main() {
     case 'build-all':
     case 'compile-all': {
       const watch = args.includes('--watch') || args.includes('-w');
-
-      if (watch) {
-        // Build all targets in watch mode concurrently
-        const promises = Object.keys(buildConfig).map(target =>
-          build(target, true)
-        );
-        await Promise.all(promises);
-      } else {
-        // Build all targets sequentially
-        for (const target of Object.keys(buildConfig)) {
-          await build(target, false);
-        }
-      }
+      await buildAll(watch, platform);
       break;
     }
 
     default:
       console.log(`
-🚀 Configuración alternativa de build con esbuild
+🚀 Advanced Tauri v2 Build System (esbuild.config.mjs)
 
-Comandos disponibles:
-  build [target] [--watch]    Construir target específico (main, extensions, webviews, cli)
-  build-all [--watch]         Construir todos los targets
-  clean                       Limpiar directorios de salida
+Usage:
+  node esbuild.config.mjs <command> [options]
 
-Targets disponibles:
-  main        - Código principal de MintMindnd
-  extensions  - Extensiones comunes
-  webviews    - Webviews de extensiones
-  cli         - Herramientas CLI
+Commands:
+  build [target] [--watch] [--platform=<platform>]    Build specific target
+  build-all [--watch] [--platform=<platform>]         Build all targets
+  clean                                               Clean build artifacts
 
-Ejemplos:
-  node esbuild.config.mjs build main
-  node esbuild.config.mjs build-all --watch
-  node esbuild.config.mjs clean
+Targets:
+  main        - Main application code with Tauri v2 optimizations
+  extensions  - VSCode extensions with tree shaking
+  webviews    - Notebook webviews with code splitting
+  cli         - Command line tools
+
+Options:
+  --watch, -w              Watch mode for development
+  --platform=<platform>    Target specific platform (windows, macos, linux)
+
+Environment Variables:
+  NODE_ENV=production      Enable production optimizations
+  ANALYZE_BUNDLE=true      Generate bundle analysis
+  SECURITY_AUDIT=true      Enable security analysis
+
+Examples:
+  node esbuild.config.mjs build main --watch
+  node esbuild.config.mjs build-all --platform=linux
+  ANALYZE_BUNDLE=true node esbuild.config.mjs build webviews
+  NODE_ENV=production node esbuild.config.mjs build-all
       `);
       break;
   }
@@ -297,4 +359,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main().catch(console.error);
 }
 
-export { buildConfig, build, clean };
+export { buildConfig, build, clean, buildAll, SecurityHardener, CrossPlatformOptimizer };

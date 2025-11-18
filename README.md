@@ -249,9 +249,9 @@ Para desarrollar extensiones, consulta la documentación en [`extensions/README.
 
 Hay muchas formas de participar en este proyecto:
 
-- [Enviar bugs y solicitudes de características](https://github.com/jcn363t/vscode/issues), y ayudar a verificarlos cuando se implementen
-- Revisar [cambios en el código fuente](https://github.com/jcn363t/vscode/pulls)
-- Revisar la [documentación](https://github.com/jcn363t/vscode-docs) y hacer pull requests para cualquier cosa desde errores tipográficos hasta contenido nuevo
+- [Enviar bugs y solicitudes de características](https://github.com/jcn363/vscode/issues), y ayudar a verificarlos cuando se implementen
+- Revisar [cambios en el código fuente](https://github.com/jcn363/vscode/pulls)
+- Revisar la [documentación](https://github.com/jcn363/vscode-docs) y hacer pull requests para cualquier cosa desde errores tipográficos hasta contenido nuevo
 
 Si estás interesado en corregir issues y contribuir directamente al código base,
 consulta los documentos detallados:
@@ -285,12 +285,12 @@ consulta los documentos detallados:
 
 - Hacer preguntas en [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode)
 - [Solicitar nuevas características](CONTRIBUTING.md)
-- Votar por [solicitudes de características populares](https://github.com/jcn363t/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
-- [Reportar un issue](https://github.com/jcn363t/vscode/issues)
-- Conectar con la comunidad de autores de extensiones en [GitHub Discussions](https://github.com/jcn363t/vscode-discussions/discussions) o [Slack](https://aka.ms/vscode-dev-community)
+- Votar por [solicitudes de características populares](https://github.com/jcn363/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
+- [Reportar un issue](https://github.com/jcn363/vscode/issues)
+- Conectar con la comunidad de autores de extensiones en [GitHub Discussions](https://github.com/jcn363/vscode-discussions/discussions) o [Slack](https://aka.ms/vscode-dev-community)
 - Seguir [@code](https://twitter.com/code) y hacernos saber qué piensas!
 
-Consulta nuestro [wiki](https://github.com/jcn363t/vscode/wiki/Feedback-Channels) para una descripción de cada uno de estos canales e información sobre otros canales disponibles impulsados por la comunidad.
+Consulta nuestro [wiki](https://github.com/jcn363/vscode/wiki/Feedback-Channels) para una descripción de cada uno de estos canales e información sobre otros canales disponibles impulsados por la comunidad.
 
 ## Directrices de Desarrollo Global
 
@@ -338,13 +338,13 @@ Para la documentación completa de las directrices de desarrollo, consulta [GLOB
 
 ### Recursos Adicionales
 
-- **Wiki del Proyecto**: [Documentación comunitaria](https://github.com/jcn363t/vscode/wiki)
+- **Wiki del Proyecto**: [Documentación comunitaria](https://github.com/jcn363/vscode/wiki)
 - **Blog de Desarrollo**: Actualizaciones y anuncios técnicos
 - **Ejemplos de Código**: Repositorios con ejemplos prácticos
 
 ## Related Projects
 
-Many of the core components and extensions to MintMind live in their own repositories on GitHub. For example, the [node debug adapter](https://github.com/jcn363t/vscode-node-debug) and the [mono debug adapter](https://github.com/jcn363t/vscode-mono-debug) repositories are separate from each other. For a complete list, please visit the [Related Projects](https://github.com/jcn363t/vscode/wiki/Related-Projects) page on our [wiki](https://github.com/jcn363t/vscode/wiki).
+Many of the core components and extensions to MintMind live in their own repositories on GitHub. For example, the [node debug adapter](https://github.com/jcn363/vscode-node-debug) and the [mono debug adapter](https://github.com/jcn363/vscode-mono-debug) repositories are separate from each other. For a complete list, please visit the [Related Projects](https://github.com/jcn363/vscode/wiki/Related-Projects) page on our [wiki](https://github.com/jcn363/vscode/wiki).
 
 ## Bundled Extensions
 
@@ -356,7 +356,7 @@ This repository includes a MintMind Dev Containers / GitHub Codespaces developme
 
 - For [Dev Containers](https://code.visualstudio.com/docs/remote/containers), use the **Dev Containers: Clone Repository in Container Volume...** command which creates a Docker volume for better disk I/O on macOS and Windows.
 
-  - If you already have MintMind and Docker installed, you can also click [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jcn363t/vscode) to get started. This will cause MintMind to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
+  - If you already have MintMind and Docker installed, you can also click [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jcn363/vscode) to get started. This will cause MintMind to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
 
 - For Codespaces, install the [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) extension in MintMind, and use the **Codespaces: Create New Codespace** command.
 
@@ -364,10 +364,10 @@ Docker / the Codespace should have at least **4 Cores and 6 GB of RAM (8 GB reco
 
 ## Code of Conduct
 
-This project has adopted the [jcn363t Open Source Code of Conduct](https://opensource.jcn363t.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.jcn363t.com/codeofconduct/faq/) or contact [opencode@jcn363t.com](mailto:opencode@jcn363t.com) with any additional questions or comments.
+This project has adopted the [jcn363 Open Source Code of Conduct](https://opensource.jcn363.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.jcn363.com/codeofconduct/faq/) or contact [opencode@jcn363.com](mailto:opencode@jcn363.com) with any additional questions or comments.
 
 ## License
 
-Copyright (c) jcn363t Corporation. All rights reserved.
+
 
 Licensed under the [MIT](LICENSE.txt) license.

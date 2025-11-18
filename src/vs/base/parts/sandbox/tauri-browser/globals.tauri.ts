@@ -44,13 +44,12 @@ class TauriIpcRenderer {
 			const windowLabel = window.label;
 			return invoke(command, {
 				window_label: windowLabel,
+				zoom_level: args[0] as number
+			});
 		} else if (command === 'reload_window' || command === 'open_dev_tools') {
 			const window = getCurrentWindow();
 			const windowLabel = window.label;
 			return invoke(command, { window_label: windowLabel });
-		}
-				zoom_level: args[0] as number
-			});
 		} else if (command === 'toggle_dev_tools') {
 			const window = getCurrentWindow();
 			const windowLabel = window.label;

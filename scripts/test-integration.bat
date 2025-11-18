@@ -35,7 +35,7 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 
 :: Tests in the extension host
 
-set API_TESTS_EXTRA_ARGS=--disable-telemetry --disable-experiments --skip-welcome --skip-release-notes --crash-reporter-directory=%MINTMINDCRASHDIR% --logsPath=%MINTMINDLOGSDIR% --no-cached-data --disable-updates --use-inmemory-secretstorage --disable-extensions --disable-workspace-trust --user-data-dir=%MINTMINDUSERDATADIR%
+set API_TESTS_EXTRA_ARGS=--disable-experiments --skip-welcome --skip-release-notes --crash-reporter-directory=%MINTMINDCRASHDIR% --logsPath=%MINTMINDLOGSDIR% --no-cached-data --disable-updates --use-inmemory-secretstorage --disable-extensions --disable-workspace-trust --user-data-dir=%MINTMINDUSERDATADIR%
 
 echo.
 echo ### API tests (folder)

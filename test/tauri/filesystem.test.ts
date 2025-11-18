@@ -6,7 +6,7 @@ describe('Filesystem Commands', () => {
   const mockInvoke = invoke as jest.MockedFunction<typeof invoke>;
 
   beforeEach(() => {
-    mockInvoke.mockResolvedValue(null);
+    // No default mock value - set per test as needed
   });
 
   afterEach(() => {
@@ -43,7 +43,7 @@ describe('Filesystem Commands', () => {
     it('should handle read_text_file with invalid path', async () => {
       const path = '/invalid/path/file.txt';
 
-      mockInvoke.mockRejectedValue('Failed to read file \'/invalid/path/file.txt\': No such file or directory');
+      mockInvoke.mockRejectedValueOnce('Failed to read file \'/invalid/path/file.txt\': No such file or directory');
 
       await expect(invoke('read_text_file', { path })).rejects.toThrow('Failed to read file');
     });

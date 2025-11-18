@@ -11,7 +11,6 @@ describe('Windows-Specific Commands', () => {
   const mockInvoke = invoke as jest.MockedFunction<typeof invoke>;
 
   beforeEach(() => {
-    mockInvoke.mockResolvedValue(null);
     mockSkipIf.mockImplementation((condition) => condition ? describe.skip : describe);
   });
 
