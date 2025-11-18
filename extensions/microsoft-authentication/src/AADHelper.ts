@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as vscode from 'vscode';
+import { Environment } from '@azure/ms-rest-azure-env';
+import TelemetryReporter from '@vscode/extension-telemetry';
 import * as path from 'path';
-import { isSupportedEnvironment } from './common/uri';
-import { IntervalTimer, raceCancellationAndTimeoutError, SequencerByKey } from './common/async';
-import { generateCodeChallenge, generateCodeVerifier, randomUUID } from './cryptoUtils';
+import * as vscode from 'vscode';
 import { BetterTokenStorage, IDidChangeInOtherWindowEvent } from './betterSecretStorage';
+import { IntervalTimer, raceCancellationAndTimeoutError, SequencerByKey } from './common/async';
+import { isSupportedEnvironment } from './common/uri';
+import { generateCodeChallenge, generateCodeVerifier, randomUUID } from './cryptoUtils';
 import { LoopbackAuthServer } from './node/authServer';
 import { base64Decode } from './node/buffer';
 import fetch from './node/fetch';
 import { UriEventHandler } from './UriEventHandler';
-import TelemetryReporter from '@vscode/extension-telemetry';
-import { Environment } from '@azure/ms-rest-azure-env';
 
 const redirectUrl = 'https://vscode.dev/redirect';
 const defaultActiveDirectoryEndpointUrl = Environment.AzureCloud.activeDirectoryEndpointUrl;
@@ -135,7 +135,7 @@ export class AzureActiveDirectoryService {
 				scopes,
 				scopeStr: session.scope,
 				// filter our special scopes
-				scopesToSend: scopes.filter(s => !s.startsWith('VSCODE_')).join(' '),
+				scopesToSend: scopes.filter(s => !s.startsWith('MINTMIND_')).join(' '),
 				clientId: this.getClientId(scopes),
 				tenant: this.getTenantId(scopes),
 			};
@@ -229,7 +229,7 @@ export class AzureActiveDirectoryService {
 		if (authorizationServer) {
 			const tenant = authorizationServer.path.split('/')[1];
 			if (tenant) {
-				modifiedScopes.push(`VSCODE_TENANT:${tenant}`);
+				modifiedScopes.push(`MINTMIND_TENANT:${tenant}`);
 			}
 		}
 		modifiedScopes = modifiedScopes.sort();
@@ -242,7 +242,7 @@ export class AzureActiveDirectoryService {
 			scopes: modifiedScopes,
 			scopeStr: modifiedScopesStr,
 			// filter our special scopes
-			scopesToSend: modifiedScopes.filter(s => !s.startsWith('VSCODE_')).join(' '),
+			scopesToSend: modifiedScopes.filter(s => !s.startsWith('MINTMIND_')).join(' '),
 			tenant: this.getTenantId(modifiedScopes),
 		};
 
@@ -272,13 +272,13 @@ export class AzureActiveDirectoryService {
 				if (account?.label && t.account.label !== account.label) {
 					continue;
 				}
-				// If the client id is the default client id, then check for the absence of the VSCODE_CLIENT_ID scope
-				if (scopeData.clientId === DEFAULT_CLIENT_ID && !t.scope.includes('VSCODE_CLIENT_ID')) {
+				// If the client id is the default client id, then check for the absence of the MINTMIND_CLIENT_ID scope
+				if (scopeData.clientId === DEFAULT_CLIENT_ID && !t.scope.includes('MINTMIND_CLIENT_ID')) {
 					token = t;
 					break;
 				}
-				// If the client id is not the default client id, then check for the matching VSCODE_CLIENT_ID scope
-				if (scopeData.clientId !== DEFAULT_CLIENT_ID && t.scope.includes(`VSCODE_CLIENT_ID:${scopeData.clientId}`)) {
+				// If the client id is not the default client id, then check for the matching MINTMIND_CLIENT_ID scope
+				if (scopeData.clientId !== DEFAULT_CLIENT_ID && t.scope.includes(`MINTMIND_CLIENT_ID:${scopeData.clientId}`)) {
 					token = t;
 					break;
 				}
@@ -320,7 +320,7 @@ export class AzureActiveDirectoryService {
 		if (authorizationServer) {
 			const tenant = authorizationServer.path.split('/')[1];
 			if (tenant) {
-				modifiedScopes.push(`VSCODE_TENANT:${tenant}`);
+				modifiedScopes.push(`MINTMIND_TENANT:${tenant}`);
 			}
 		}
 		modifiedScopes = modifiedScopes.sort();
@@ -329,7 +329,7 @@ export class AzureActiveDirectoryService {
 			scopes: modifiedScopes,
 			scopeStr: modifiedScopes.join(' '),
 			// filter our special scopes
-			scopesToSend: modifiedScopes.filter(s => !s.startsWith('VSCODE_')).join(' '),
+			scopesToSend: modifiedScopes.filter(s => !s.startsWith('MINTMIND_')).join(' '),
 			clientId: this.getClientId(scopes),
 			tenant: this.getTenantId(modifiedScopes),
 		};
@@ -675,8 +675,8 @@ export class AzureActiveDirectoryService {
 
 	private getClientId(scopes: string[]) {
 		return scopes.reduce<string | undefined>((prev, current) => {
-			if (current.startsWith('VSCODE_CLIENT_ID:')) {
-				return current.split('VSCODE_CLIENT_ID:')[1];
+			if (current.startsWith('MINTMIND_CLIENT_ID:')) {
+				return current.split('MINTMIND_CLIENT_ID:')[1];
 			}
 			return prev;
 		}, undefined) ?? DEFAULT_CLIENT_ID;
@@ -684,8 +684,8 @@ export class AzureActiveDirectoryService {
 
 	private getTenantId(scopes: string[]) {
 		return scopes.reduce<string | undefined>((prev, current) => {
-			if (current.startsWith('VSCODE_TENANT:')) {
-				return current.split('VSCODE_TENANT:')[1];
+			if (current.startsWith('MINTMIND_TENANT:')) {
+				return current.split('MINTMIND_TENANT:')[1];
 			}
 			return prev;
 		}, undefined) ?? DEFAULT_TENANT;
@@ -906,7 +906,7 @@ export class AzureActiveDirectoryService {
 						scopes,
 						scopeStr: session.scope,
 						// filter our special scopes
-						scopesToSend: scopes.filter(s => !s.startsWith('VSCODE_')).join(' '),
+						scopesToSend: scopes.filter(s => !s.startsWith('MINTMIND_')).join(' '),
 						clientId: this.getClientId(scopes),
 						tenant: this.getTenantId(scopes),
 					};

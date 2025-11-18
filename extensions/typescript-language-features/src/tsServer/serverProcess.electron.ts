@@ -11,11 +11,11 @@ import * as vscode from 'vscode';
 import { TypeScriptServiceConfiguration } from '../configuration/configuration';
 import { Disposable } from '../utils/dispose';
 import { API } from './api';
+import { NodeVersionManager } from './nodeManager';
 import type * as Proto from './protocol/protocol';
 import { TsServerLog, TsServerProcess, TsServerProcessFactory, TsServerProcessKind } from './server';
 import { TypeScriptVersionManager } from './versionManager';
 import { TypeScriptVersion } from './versionProvider';
-import { NodeVersionManager } from './nodeManager';
 
 
 const defaultSize: number = 8192;
@@ -139,7 +139,7 @@ function generatePatchedEnv(env: any, modulePath: string, hasExecPath: boolean):
 	const newEnv = Object.assign({}, env);
 
 	if (!hasExecPath) {
-		newEnv['ELECTRON_RUN_AS_NODE'] = '1';
+		newEnv['TAURI_RUN_AS_NODE'] = '1';
 	}
 	newEnv['NODE_PATH'] = path.join(modulePath, '..', '..', '..');
 

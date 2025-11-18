@@ -561,7 +561,7 @@ export class McpServerRequestHandler extends Disposable {
 
 
 /**
- * Maps VSCode LogLevel to MCP LoggingLevel
+ * Maps MintMind LogLevel to MCP LoggingLevel
  */
 function mapLogLevelToMcp(logLevel: LogLevel): MCP.LoggingLevel {
 	switch (logLevel) {

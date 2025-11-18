@@ -5,27 +5,27 @@
 
 import * as assert from 'assert';
 import * as sinon from 'sinon';
+import { VSBuffer, encodeBase64 } from '../../common/buffer.js';
 import {
-	getClaimsFromJWT,
-	getDefaultMetadataForUrl,
-	isAuthorizationAuthorizeResponse,
-	isAuthorizationDeviceResponse,
-	isAuthorizationErrorResponse,
-	isAuthorizationDynamicClientRegistrationResponse,
-	isAuthorizationProtectedResourceMetadata,
-	isAuthorizationServerMetadata,
-	isAuthorizationTokenResponse,
-	parseWWWAuthenticateHeader,
-	fetchDynamicRegistration,
-	fetchResourceMetadata,
-	fetchAuthorizationServerMetadata,
-	scopesMatch,
-	IAuthorizationJWTClaims,
-	IAuthorizationServerMetadata,
-	DEFAULT_AUTH_FLOW_PORT
+    DEFAULT_AUTH_FLOW_PORT,
+    IAuthorizationJWTClaims,
+    IAuthorizationServerMetadata,
+    fetchAuthorizationServerMetadata,
+    fetchDynamicRegistration,
+    fetchResourceMetadata,
+    getClaimsFromJWT,
+    getDefaultMetadataForUrl,
+    isAuthorizationAuthorizeResponse,
+    isAuthorizationDeviceResponse,
+    isAuthorizationDynamicClientRegistrationResponse,
+    isAuthorizationErrorResponse,
+    isAuthorizationProtectedResourceMetadata,
+    isAuthorizationServerMetadata,
+    isAuthorizationTokenResponse,
+    parseWWWAuthenticateHeader,
+    scopesMatch
 } from '../../common/oauth.js';
 import { ensureNoDisposablesAreLeakedInTestSuite } from './utils.js';
-import { encodeBase64, VSBuffer } from '../../common/buffer.js';
 
 describe('OAuth', () => {
 	ensureNoDisposablesAreLeakedInTestSuite();
@@ -274,8 +274,8 @@ describe('OAuth', () => {
 		});
 
 		it('scopesMatch should return true for scopes in different order', () => {
-			const scopes1 = ['6f1cc985-85e8-487e-b0dd-aa633302a731/.default', 'VSCODE_TENANT:organizations'];
-			const scopes2 = ['VSCODE_TENANT:organizations', '6f1cc985-85e8-487e-b0dd-aa633302a731/.default'];
+			const scopes1 = ['6f1cc985-85e8-487e-b0dd-aa633302a731/.default', 'MINTMIND_TENANT:organizations'];
+			const scopes2 = ['MINTMIND_TENANT:organizations', '6f1cc985-85e8-487e-b0dd-aa633302a731/.default'];
 			assert.strictEqual(scopesMatch(scopes1, scopes2), true);
 		});
 
@@ -292,8 +292,8 @@ describe('OAuth', () => {
 		});
 
 		it('scopesMatch should handle complex Microsoft scopes', () => {
-			const scopes1 = ['6f1cc985-85e8-487e-b0dd-aa633302a731/.default', 'VSCODE_TENANT:organizations'];
-			const scopes2 = ['VSCODE_TENANT:organizations', '6f1cc985-85e8-487e-b0dd-aa633302a731/.default'];
+			const scopes1 = ['6f1cc985-85e8-487e-b0dd-aa633302a731/.default', 'MINTMIND_TENANT:organizations'];
+			const scopes2 = ['MINTMIND_TENANT:organizations', '6f1cc985-85e8-487e-b0dd-aa633302a731/.default'];
 			assert.strictEqual(scopesMatch(scopes1, scopes2), true);
 		});
 

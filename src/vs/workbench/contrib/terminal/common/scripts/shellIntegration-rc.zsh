@@ -5,27 +5,27 @@
 builtin autoload -Uz add-zsh-hook is-at-least
 
 # Prevent the script recursing when setting up
-if [ -n "$VSCODE_SHELL_INTEGRATION" ]; then
+if [ -n "$MINTMIND_SHELL_INTEGRATION" ]; then
 	ZDOTDIR=$USER_ZDOTDIR
 	builtin return
 fi
 
-# This variable allows the shell to both detect that VS Code's shell integration is enabled as well
+# This variable allows the shell to both detect that MintMind's shell integration is enabled as well
 # as disable it by unsetting the variable.
-VSCODE_SHELL_INTEGRATION=1
+MINTMIND_SHELL_INTEGRATION=1
 
 # By default, zsh will set the $HISTFILE to the $ZDOTDIR location automatically. In the case of the
 # shell integration being injected, this means that the terminal will use a different history file
 # to other terminals. To fix this issue, set $HISTFILE back to the default location before ~/.zshrc
 # is called as that may depend upon the value.
-if [[  "$VSCODE_INJECTION" == "1" ]]; then
+if [[  "$MINTMIND_INJECTION" == "1" ]]; then
 	HISTFILE=$USER_ZDOTDIR/.zsh_history
 fi
 
 # Only fix up ZDOTDIR if shell integration was injected (not manually installed) and has not been called yet
-if [[ "$VSCODE_INJECTION" == "1" ]]; then
+if [[ "$MINTMIND_INJECTION" == "1" ]]; then
 	if [[ $options[norcs] = off  && -f $USER_ZDOTDIR/.zshrc ]]; then
-		VSCODE_ZDOTDIR=$ZDOTDIR
+		MINTMIND_ZDOTDIR=$ZDOTDIR
 		ZDOTDIR=$USER_ZDOTDIR
 		# A user's custom HISTFILE location might be set when their .zshrc file is sourced below
 		. $USER_ZDOTDIR/.zshrc
@@ -43,40 +43,40 @@ if is-at-least 4.3; then
 fi
 
 # Apply EnvironmentVariableCollections if needed
-if [ -n "${VSCODE_ENV_REPLACE:-}" ]; then
-	IFS=':' read -rA ADDR <<< "$VSCODE_ENV_REPLACE"
+if [ -n "${MINTMIND_ENV_REPLACE:-}" ]; then
+	IFS=':' read -rA ADDR <<< "$MINTMIND_ENV_REPLACE"
 	for ITEM in "${ADDR[@]}"; do
 		VARNAME="$(echo ${ITEM%%=*})"
 		export $VARNAME="$(echo -e ${ITEM#*=})"
 	done
-	unset VSCODE_ENV_REPLACE
+	unset MINTMIND_ENV_REPLACE
 fi
-if [ -n "${VSCODE_ENV_PREPEND:-}" ]; then
-	IFS=':' read -rA ADDR <<< "$VSCODE_ENV_PREPEND"
+if [ -n "${MINTMIND_ENV_PREPEND:-}" ]; then
+	IFS=':' read -rA ADDR <<< "$MINTMIND_ENV_PREPEND"
 	for ITEM in "${ADDR[@]}"; do
 		VARNAME="$(echo ${ITEM%%=*})"
 		export $VARNAME="$(echo -e ${ITEM#*=})${(P)VARNAME}"
 	done
-	unset VSCODE_ENV_PREPEND
+	unset MINTMIND_ENV_PREPEND
 fi
-if [ -n "${VSCODE_ENV_APPEND:-}" ]; then
-	IFS=':' read -rA ADDR <<< "$VSCODE_ENV_APPEND"
+if [ -n "${MINTMIND_ENV_APPEND:-}" ]; then
+	IFS=':' read -rA ADDR <<< "$MINTMIND_ENV_APPEND"
 	for ITEM in "${ADDR[@]}"; do
 		VARNAME="$(echo ${ITEM%%=*})"
 		export $VARNAME="${(P)VARNAME}$(echo -e ${ITEM#*=})"
 	done
-	unset VSCODE_ENV_APPEND
+	unset MINTMIND_ENV_APPEND
 fi
 
 # Register Python shell activate hooks
 # Prevent multiple activation with guard
-if [ -z "${VSCODE_PYTHON_AUTOACTIVATE_GUARD:-}" ]; then
-	export VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
-	if [ -n "${VSCODE_PYTHON_ZSH_ACTIVATE:-}" ] && [ "$TERM_PROGRAM" = "vscode" ]; then
+if [ -z "${MINTMIND_PYTHON_AUTOACTIVATE_GUARD:-}" ]; then
+	export MINTMIND_PYTHON_AUTOACTIVATE_GUARD=1
+	if [ -n "${MINTMIND_PYTHON_ZSH_ACTIVATE:-}" ] && [ "$TERM_PROGRAM" = "vscode" ]; then
 		# Prevent crashing by negating exit code
-		if ! builtin eval "$VSCODE_PYTHON_ZSH_ACTIVATE"; then
+		if ! builtin eval "$MINTMIND_PYTHON_ZSH_ACTIVATE"; then
 			__vsc_activation_status=$?
-			builtin printf '\x1b[0m\x1b[7m * \x1b[0;103m VS Code Python zsh activation failed with exit code %d \x1b[0m' "$__vsc_activation_status"
+			builtin printf '\x1b[0m\x1b[7m * \x1b[0;103m MintMind Python zsh activation failed with exit code %d \x1b[0m' "$__vsc_activation_status"
 		fi
 	fi
 fi
@@ -94,7 +94,7 @@ fi
 
 # Shell integration was disabled by the shell, exit without warning assuming either the shell has
 # explicitly disabled shell integration as it's incompatible or it implements the protocol.
-if [ -z "$VSCODE_SHELL_INTEGRATION" ]; then
+if [ -z "$MINTMIND_SHELL_INTEGRATION" ]; then
 	builtin return
 fi
 
@@ -131,11 +131,11 @@ __vsc_in_command_execution="1"
 __vsc_current_command=""
 
 # It's fine this is in the global scope as it getting at it requires access to the shell environment
-__vsc_nonce="$VSCODE_NONCE"
-unset VSCODE_NONCE
+__vsc_nonce="$MINTMIND_NONCE"
+unset MINTMIND_NONCE
 
-__vscode_shell_env_reporting="${VSCODE_SHELL_ENV_REPORTING:-}"
-unset VSCODE_SHELL_ENV_REPORTING
+__vscode_shell_env_reporting="${MINTMIND_SHELL_ENV_REPORTING:-}"
+unset MINTMIND_SHELL_ENV_REPORTING
 
 envVarsToReport=()
 IFS=',' read -rA envVarsToReport <<< "$__vscode_shell_env_reporting"
@@ -316,6 +316,6 @@ __vsc_preexec() {
 add-zsh-hook precmd __vsc_precmd
 add-zsh-hook preexec __vsc_preexec
 
-if [[ $options[login] = off && $USER_ZDOTDIR != $VSCODE_ZDOTDIR ]]; then
+if [[ $options[login] = off && $USER_ZDOTDIR != $MINTMIND_ZDOTDIR ]]; then
 	ZDOTDIR=$USER_ZDOTDIR
 fi

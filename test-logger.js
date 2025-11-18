@@ -5,7 +5,7 @@
 const { vscodeLogger, createModuleLogger } = require('./src/vs/base/common/logger.js');
 
 // Test del logger principal
-console.log('=== Testing VSCode Logger ===');
+console.log('=== Testing MintMind Logger ===');
 vscodeLogger.debug('This is a debug message');
 vscodeLogger.info('This is an info message');
 vscodeLogger.warn('This is a warning message');

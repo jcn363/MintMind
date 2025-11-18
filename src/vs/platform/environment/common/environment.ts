@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { URI } from '../../../base/common/uri.js';
-import { NativeParsedArgs } from './argv.js';
 import { createDecorator, refineServiceDecorator } from '../../instantiation/common/instantiation.js';
+import { NativeParsedArgs } from './argv.js';
 
 export const IEnvironmentService = createDecorator<IEnvironmentService>('environmentService');
 export const INativeEnvironmentService = refineServiceDecorator<IEnvironmentService, INativeEnvironmentService>(IEnvironmentService);
@@ -43,7 +43,7 @@ export interface IEnvironmentService {
 	// AS SUCH:
 	//   - PUT NON-WEB PROPERTIES INTO NATIVE ENVIRONMENT SERVICE
 	//   - PUT WORKBENCH ONLY PROPERTIES INTO WORKBENCH ENVIRONMENT SERVICE
-	//   - PUT ELECTRON-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
+	//   - PUT TAURI-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
 	//
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -98,7 +98,7 @@ export interface IEnvironmentService {
 	// AS SUCH:
 	//   - PUT NON-WEB PROPERTIES INTO NATIVE ENVIRONMENT SERVICE
 	//   - PUT WORKBENCH ONLY PROPERTIES INTO WORKBENCH ENVIRONMENT SERVICE
-	//   - PUT ELECTRON-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
+	//   - PUT TAURI-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
 	//
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }
@@ -115,7 +115,7 @@ export interface INativeEnvironmentService extends IEnvironmentService {
 	//
 	// AS SUCH:
 	//   - PUT WORKBENCH ONLY PROPERTIES INTO WORKBENCH ENVIRONMENT SERVICE
-	//   - PUT ELECTRON-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
+	//   - PUT TAURI-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
 	//
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -154,7 +154,7 @@ export interface INativeEnvironmentService extends IEnvironmentService {
 	// AS SUCH:
 	//   - PUT NON-WEB PROPERTIES INTO NATIVE ENVIRONMENT SERVICE
 	//   - PUT WORKBENCH ONLY PROPERTIES INTO WORKBENCH ENVIRONMENT SERVICE
-	//   - PUT ELECTRON-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
+	//   - PUT TAURI-MAIN ONLY PROPERTIES INTO MAIN ENVIRONMENT SERVICE
 	//
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 }

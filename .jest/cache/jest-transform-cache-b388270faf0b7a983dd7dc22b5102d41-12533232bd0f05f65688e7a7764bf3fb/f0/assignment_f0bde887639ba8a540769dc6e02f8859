@@ -779,7 +779,7 @@ function cov_1cjqyzeu35() {
       mappings: "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",
       names: [],
       sources: ["/home/user/Desktop/MintMind/src/vs/platform/assignment/common/assignment.ts"],
-      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport * as platform from '../../../base/common/platform.js';\nimport type { IExperimentationFilterProvider } from 'tas-client-umd';\n\nexport const ASSIGNMENT_STORAGE_KEY = 'VSCode.ABExp.FeatureData';\nexport const ASSIGNMENT_REFETCH_INTERVAL = 60 * 60 * 1000; // 1 hour\n\nexport interface IAssignmentService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidRefetchAssignments: Event<void>;\n\tgetTreatment<T extends string | number | boolean>(name: string): Promise<T | undefined>;\n}\n\nexport enum TargetPopulation {\n\tInsiders = 'insider',\n\tPublic = 'public',\n\tExploration = 'exploration'\n}\n\n/*\nBased upon the official VSCode currently existing filters in the\nExP backend for the VSCode cluster.\nhttps://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/AnE.ExP.TAS.TachyonHost.Configuration?path=%2FConfigurations%2Fvscode%2Fvscode.json&version=GBmaster\n\"X-MSEdge-Market\": \"detection.market\",\n\"X-FD-Corpnet\": \"detection.corpnet\",\n\"X-VSCode-AppVersion\": \"appversion\",\n\"X-VSCode-Build\": \"build\",\n\"X-MSEdge-ClientId\": \"clientid\",\n\"X-VSCode-ExtensionName\": \"extensionname\",\n\"X-VSCode-ExtensionVersion\": \"extensionversion\",\n\"X-VSCode-TargetPopulation\": \"targetpopulation\",\n\"X-VSCode-Language\": \"language\"\n*/\nexport enum Filters {\n\t/**\n\t * The market in which the extension is distributed.\n\t */\n\tMarket = 'X-MSEdge-Market',\n\n\t/**\n\t * The corporation network.\n\t */\n\tCorpNet = 'X-FD-Corpnet',\n\n\t/**\n\t * Version of the application which uses experimentation service.\n\t */\n\tApplicationVersion = 'X-VSCode-AppVersion',\n\n\t/**\n\t * Insiders vs Stable.\n\t */\n\tBuild = 'X-VSCode-Build',\n\n\t/**\n\t * Client Id which is used as primary unit for the experimentation.\n\t */\n\tClientId = 'X-MSEdge-ClientId',\n\n\t/**\n\t * Developer Device Id which can be used as an alternate unit for experimentation.\n\t */\n\tDeveloperDeviceId = 'X-VSCode-DevDeviceId',\n\n\t/**\n\t * Extension header.\n\t */\n\tExtensionName = 'X-VSCode-ExtensionName',\n\n\t/**\n\t * The version of the extension.\n\t */\n\tExtensionVersion = 'X-VSCode-ExtensionVersion',\n\n\t/**\n\t * The language in use by VS Code\n\t */\n\tLanguage = 'X-VSCode-Language',\n\n\t/**\n\t * The target population.\n\t * This is used to separate internal, early preview, GA, etc.\n\t */\n\tTargetPopulation = 'X-VSCode-TargetPopulation',\n}\n\nexport class AssignmentFilterProvider implements IExperimentationFilterProvider {\n\tconstructor(\n\t\tprivate version: string,\n\t\tprivate appName: string,\n\t\tprivate machineId: string,\n\t\tprivate devDeviceId: string,\n\t\tprivate targetPopulation: TargetPopulation\n\t) { }\n\n\t/**\n\t * Returns a version string that can be parsed by the TAS client.\n\t * The tas client cannot handle suffixes lke \"-insider\"\n\t * Ref: https://github.com/microsoft/tas-client/blob/30340d5e1da37c2789049fcf45928b954680606f/vscode-tas-client/src/vscode-tas-client/VSCodeFilterProvider.ts#L35\n\t *\n\t * @param version Version string to be trimmed.\n\t*/\n\tprivate static trimVersionSuffix(version: string): string {\n\t\tconst regex = /\\-[a-zA-Z0-9]+$/;\n\t\tconst result = version.split(regex);\n\n\t\treturn result[0];\n\t}\n\n\tgetFilterValue(filter: string): string | null {\n\t\tswitch (filter) {\n\t\t\tcase Filters.ApplicationVersion:\n\t\t\t\treturn AssignmentFilterProvider.trimVersionSuffix(this.version); // productService.version\n\t\t\tcase Filters.Build:\n\t\t\t\treturn this.appName; // productService.nameLong\n\t\t\tcase Filters.ClientId:\n\t\t\t\treturn this.machineId;\n\t\t\tcase Filters.DeveloperDeviceId:\n\t\t\t\treturn this.devDeviceId;\n\t\t\tcase Filters.Language:\n\t\t\t\treturn platform.language;\n\t\t\tcase Filters.ExtensionName:\n\t\t\t\treturn 'vscode-core'; // always return vscode-core for exp service\n\t\t\tcase Filters.ExtensionVersion:\n\t\t\t\treturn '999999.0'; // always return a very large number for cross-extension experimentation\n\t\t\tcase Filters.TargetPopulation:\n\t\t\t\treturn this.targetPopulation;\n\t\t\tdefault:\n\t\t\t\treturn '';\n\t\t}\n\t}\n\n\tgetFilters(): Map<string, unknown> {\n\t\tconst filters: Map<string, unknown> = new Map<string, unknown>();\n\t\tconst filterValues = Object.values(Filters);\n\t\tfor (const value of filterValues) {\n\t\t\tfilters.set(value, this.getFilterValue(value));\n\t\t}\n\n\t\treturn filters;\n\t}\n}\n"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { Event } from '../../../base/common/event.js';\nimport * as platform from '../../../base/common/platform.js';\nimport type { IExperimentationFilterProvider } from 'tas-client-umd';\n\nexport const ASSIGNMENT_STORAGE_KEY = 'MintMind.ABExp.FeatureData';\nexport const ASSIGNMENT_REFETCH_INTERVAL = 60 * 60 * 1000; // 1 hour\n\nexport interface IAssignmentService {\n\treadonly _serviceBrand: undefined;\n\n\treadonly onDidRefetchAssignments: Event<void>;\n\tgetTreatment<T extends string | number | boolean>(name: string): Promise<T | undefined>;\n}\n\nexport enum TargetPopulation {\n\tInsiders = 'insider',\n\tPublic = 'public',\n\tExploration = 'exploration'\n}\n\n/*\nBased upon the official MintMind currently existing filters in the\nExP backend for the MintMind cluster.\nhttps://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/AnE.ExP.TAS.TachyonHost.Configuration?path=%2FConfigurations%2Fvscode%2Fvscode.json&version=GBmaster\n\"X-MSEdge-Market\": \"detection.market\",\n\"X-FD-Corpnet\": \"detection.corpnet\",\n\"X-MintMind-AppVersion\": \"appversion\",\n\"X-MintMind-Build\": \"build\",\n\"X-MSEdge-ClientId\": \"clientid\",\n\"X-MintMind-ExtensionName\": \"extensionname\",\n\"X-MintMind-ExtensionVersion\": \"extensionversion\",\n\"X-MintMind-TargetPopulation\": \"targetpopulation\",\n\"X-MintMind-Language\": \"language\"\n*/\nexport enum Filters {\n\t/**\n\t * The market in which the extension is distributed.\n\t */\n\tMarket = 'X-MSEdge-Market',\n\n\t/**\n\t * The corporation network.\n\t */\n\tCorpNet = 'X-FD-Corpnet',\n\n\t/**\n\t * Version of the application which uses experimentation service.\n\t */\n\tApplicationVersion = 'X-MintMind-AppVersion',\n\n\t/**\n\t * Insiders vs Stable.\n\t */\n\tBuild = 'X-MintMind-Build',\n\n\t/**\n\t * Client Id which is used as primary unit for the experimentation.\n\t */\n\tClientId = 'X-MSEdge-ClientId',\n\n\t/**\n\t * Developer Device Id which can be used as an alternate unit for experimentation.\n\t */\n\tDeveloperDeviceId = 'X-MintMind-DevDeviceId',\n\n\t/**\n\t * Extension header.\n\t */\n\tExtensionName = 'X-MintMind-ExtensionName',\n\n\t/**\n\t * The version of the extension.\n\t */\n\tExtensionVersion = 'X-MintMind-ExtensionVersion',\n\n\t/**\n\t * The language in use by MintMind\n\t */\n\tLanguage = 'X-MintMind-Language',\n\n\t/**\n\t * The target population.\n\t * This is used to separate internal, early preview, GA, etc.\n\t */\n\tTargetPopulation = 'X-MintMind-TargetPopulation',\n}\n\nexport class AssignmentFilterProvider implements IExperimentationFilterProvider {\n\tconstructor(\n\t\tprivate version: string,\n\t\tprivate appName: string,\n\t\tprivate machineId: string,\n\t\tprivate devDeviceId: string,\n\t\tprivate targetPopulation: TargetPopulation\n\t) { }\n\n\t/**\n\t * Returns a version string that can be parsed by the TAS client.\n\t * The tas client cannot handle suffixes lke \"-insider\"\n\t * Ref: https://github.com/microsoft/tas-client/blob/30340d5e1da37c2789049fcf45928b954680606f/vscode-tas-client/src/vscode-tas-client/MintMindFilterProvider.ts#L35\n\t *\n\t * @param version Version string to be trimmed.\n\t*/\n\tprivate static trimVersionSuffix(version: string): string {\n\t\tconst regex = /\\-[a-zA-Z0-9]+$/;\n\t\tconst result = version.split(regex);\n\n\t\treturn result[0];\n\t}\n\n\tgetFilterValue(filter: string): string | null {\n\t\tswitch (filter) {\n\t\t\tcase Filters.ApplicationVersion:\n\t\t\t\treturn AssignmentFilterProvider.trimVersionSuffix(this.version); // productService.version\n\t\t\tcase Filters.Build:\n\t\t\t\treturn this.appName; // productService.nameLong\n\t\t\tcase Filters.ClientId:\n\t\t\t\treturn this.machineId;\n\t\t\tcase Filters.DeveloperDeviceId:\n\t\t\t\treturn this.devDeviceId;\n\t\t\tcase Filters.Language:\n\t\t\t\treturn platform.language;\n\t\t\tcase Filters.ExtensionName:\n\t\t\t\treturn 'vscode-core'; // always return vscode-core for exp service\n\t\t\tcase Filters.ExtensionVersion:\n\t\t\t\treturn '999999.0'; // always return a very large number for cross-extension experimentation\n\t\t\tcase Filters.TargetPopulation:\n\t\t\t\treturn this.targetPopulation;\n\t\t\tdefault:\n\t\t\t\treturn '';\n\t\t}\n\t}\n\n\tgetFilters(): Map<string, unknown> {\n\t\tconst filters: Map<string, unknown> = new Map<string, unknown>();\n\t\tconst filterValues = Object.values(Filters);\n\t\tfor (const value of filterValues) {\n\t\t\tfilters.set(value, this.getFilterValue(value));\n\t\t}\n\n\t\treturn filters;\n\t}\n}\n"],
       version: 3
     },
     _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -806,7 +806,7 @@ cov_1cjqyzeu35();
 import * as platform from '../../../base/common/platform.js';
 export const ASSIGNMENT_STORAGE_KEY =
 /* istanbul ignore next */
-(cov_1cjqyzeu35().s[0]++, 'VSCode.ABExp.FeatureData');
+(cov_1cjqyzeu35().s[0]++, 'MintMind.ABExp.FeatureData');
 export const ASSIGNMENT_REFETCH_INTERVAL =
 /* istanbul ignore next */
 (cov_1cjqyzeu35().s[1]++, 60 * 60 * 1000); // 1 hour
@@ -830,18 +830,18 @@ cov_1cjqyzeu35().s[2]++;
 /* istanbul ignore next */
 (cov_1cjqyzeu35().b[0][1]++, TargetPopulation = {}));
 /*
-Based upon the official VSCode currently existing filters in the
-ExP backend for the VSCode cluster.
+Based upon the official MintMind currently existing filters in the
+ExP backend for the MintMind cluster.
 https://experimentation.visualstudio.com/Analysis%20and%20Experimentation/_git/AnE.ExP.TAS.TachyonHost.Configuration?path=%2FConfigurations%2Fvscode%2Fvscode.json&version=GBmaster
 "X-MSEdge-Market": "detection.market",
 "X-FD-Corpnet": "detection.corpnet",
-"X-VSCode-AppVersion": "appversion",
-"X-VSCode-Build": "build",
+"X-MintMind-AppVersion": "appversion",
+"X-MintMind-Build": "build",
 "X-MSEdge-ClientId": "clientid",
-"X-VSCode-ExtensionName": "extensionname",
-"X-VSCode-ExtensionVersion": "extensionversion",
-"X-VSCode-TargetPopulation": "targetpopulation",
-"X-VSCode-Language": "language"
+"X-MintMind-ExtensionName": "extensionname",
+"X-MintMind-ExtensionVersion": "extensionversion",
+"X-MintMind-TargetPopulation": "targetpopulation",
+"X-MintMind-Language": "language"
 */
 export var Filters;
 /* istanbul ignore next */
@@ -865,13 +865,13 @@ cov_1cjqyzeu35().s[6]++;
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[9]++;
-  Filters["ApplicationVersion"] = "X-VSCode-AppVersion";
+  Filters["ApplicationVersion"] = "X-MintMind-AppVersion";
   /**
    * Insiders vs Stable.
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[10]++;
-  Filters["Build"] = "X-VSCode-Build";
+  Filters["Build"] = "X-MintMind-Build";
   /**
    * Client Id which is used as primary unit for the experimentation.
    */
@@ -883,32 +883,32 @@ cov_1cjqyzeu35().s[6]++;
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[12]++;
-  Filters["DeveloperDeviceId"] = "X-VSCode-DevDeviceId";
+  Filters["DeveloperDeviceId"] = "X-MintMind-DevDeviceId";
   /**
    * Extension header.
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[13]++;
-  Filters["ExtensionName"] = "X-VSCode-ExtensionName";
+  Filters["ExtensionName"] = "X-MintMind-ExtensionName";
   /**
    * The version of the extension.
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[14]++;
-  Filters["ExtensionVersion"] = "X-VSCode-ExtensionVersion";
+  Filters["ExtensionVersion"] = "X-MintMind-ExtensionVersion";
   /**
-   * The language in use by VS Code
+   * The language in use by MintMind
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[15]++;
-  Filters["Language"] = "X-VSCode-Language";
+  Filters["Language"] = "X-MintMind-Language";
   /**
    * The target population.
    * This is used to separate internal, early preview, GA, etc.
    */
   /* istanbul ignore next */
   cov_1cjqyzeu35().s[16]++;
-  Filters["TargetPopulation"] = "X-VSCode-TargetPopulation";
+  Filters["TargetPopulation"] = "X-MintMind-TargetPopulation";
 })(
 /* istanbul ignore next */
 (cov_1cjqyzeu35().b[1][0]++, Filters) ||
@@ -941,7 +941,7 @@ export class AssignmentFilterProvider {
   /**
    * Returns a version string that can be parsed by the TAS client.
    * The tas client cannot handle suffixes lke "-insider"
-   * Ref: https://github.com/microsoft/tas-client/blob/30340d5e1da37c2789049fcf45928b954680606f/vscode-tas-client/src/vscode-tas-client/VSCodeFilterProvider.ts#L35
+   * Ref: https://github.com/microsoft/tas-client/blob/30340d5e1da37c2789049fcf45928b954680606f/vscode-tas-client/src/vscode-tas-client/MintMindFilterProvider.ts#L35
    *
    * @param version Version string to be trimmed.
   */

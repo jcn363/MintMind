@@ -161,7 +161,7 @@ class OpenNewsletterSignupUrlAction extends Action2 {
 	constructor() {
 		super({
 			id: OpenNewsletterSignupUrlAction.ID,
-			title: localize2('newsletterSignup', 'Signup for the VS Code Newsletter'),
+			title: localize2('newsletterSignup', 'Signup for the MintMind Newsletter'),
 			category: Categories.Help,
 			f1: true
 		});
@@ -332,12 +332,12 @@ class GetStartedWithAccessibilityFeatures extends Action2 {
 	}
 }
 
-class AskVSCodeCopilot extends Action2 {
+class AskMintMindCopilot extends Action2 {
 	static readonly ID = 'workbench.action.askVScode';
 
 	constructor() {
 		super({
-			id: AskVSCodeCopilot.ID,
+			id: AskMintMindndCopilot.ID,
 			title: localize2('askVScode', 'Ask @vscode'),
 			category: Categories.Help,
 			f1: true,
@@ -353,7 +353,7 @@ class AskVSCodeCopilot extends Action2 {
 
 MenuRegistry.appendMenuItem(MenuId.MenubarHelpMenu, {
 	command: {
-		id: AskVSCodeCopilot.ID,
+		id: AskMintMindndCopilot.ID,
 		title: localize2('askVScode', 'Ask @vscode'),
 	},
 	order: 7,
@@ -401,4 +401,4 @@ if (OpenPrivacyStatementUrlAction.AVAILABLE) {
 
 registerAction2(GetStartedWithAccessibilityFeatures);
 
-registerAction2(AskVSCodeCopilot);
+registerAction2(AskMintMindndCopilot);

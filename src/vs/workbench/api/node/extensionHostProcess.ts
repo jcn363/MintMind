@@ -6,12 +6,15 @@
 import minimist from 'minimist';
 import * as nativeWatchdog from 'native-watchdog';
 import * as net from 'net';
+import { createRequire } from 'node:module';
 import { ProcessTimeRunOnceScheduler } from '../../../base/common/async.js';
 import { VSBuffer } from '../../../base/common/buffer.js';
 import { PendingMigrationError, isCancellationError, isSigPipeError, onUnexpectedError, onUnexpectedExternalError } from '../../../base/common/errors.js';
 import { Event } from '../../../base/common/event.js';
+import { IDisposable } from '../../../base/common/lifecycle.js';
 import * as performance from '../../../base/common/performance.js';
 import { IURITransformer } from '../../../base/common/uriIpc.js';
+import { createURITransformer } from '../../../base/common/uriTransformer.js';
 import { Promises } from '../../../base/node/pfs.js';
 import { IMessagePassingProtocol } from '../../../base/parts/ipc/common/ipc.js';
 import { BufferedEmitter, PersistentProtocol, ProtocolConstants } from '../../../base/parts/ipc/common/ipc.net.js';
@@ -19,15 +22,12 @@ import { NodeSocket, WebSocketNodeSocket } from '../../../base/parts/ipc/node/ip
 import type { MessagePortMain, MessageEvent as UtilityMessageEvent } from '../../../base/parts/sandbox/node/electronTypes.js';
 import { boolean } from '../../../editor/common/config/editorOptions.js';
 import product from '../../../platform/product/common/product.js';
-import { ExtensionHostMain, IExitFn } from '../common/extensionHostMain.js';
-import { IHostUtils } from '../common/extHostExtensionService.js';
-import { createURITransformer } from '../../../base/common/uriTransformer.js';
 import { ExtHostConnectionType, readExtHostConnection } from '../../services/extensions/common/extensionHostEnv.js';
 import { ExtensionHostExitCode, IExtHostReadyMessage, IExtHostReduceGraceTimeMessage, IExtHostSocketMessage, IExtensionHostInitData, MessageType, createMessageOfType, isMessageOfType } from '../../services/extensions/common/extensionHostProtocol.js';
-import { IDisposable } from '../../../base/common/lifecycle.js';
 import '../common/extHost.common.services.js';
+import { IHostUtils } from '../common/extHostExtensionService.js';
+import { ExtensionHostMain, IExitFn } from '../common/extensionHostMain.js';
 import './extHost.node.services.js';
-import { createRequire } from 'node:module';
 const require = createRequire(import.meta.url);
 
 interface ParsedExtHostArgs {
@@ -38,7 +38,7 @@ interface ParsedExtHostArgs {
 }
 
 // silence experimental warnings when in development
-if (process.env.VSCODE_DEV) {
+if (process.env.MINTMIND_DEV) {
 	const warningListeners = process.listeners('warning');
 	process.removeAllListeners('warning');
 	process.on('warning', (warning: any) => {
@@ -110,11 +110,11 @@ function patchProcess(allowExit: boolean) {
 		console.warn(err.stack);
 	};
 
-	// Set ELECTRON_RUN_AS_NODE environment variable for extensions that use
+	// Set TAURI_RUN_AS_NODE environment variable for extensions that use
 	// child_process.spawn with process.execPath and expect to run as node process
 	// on the desktop.
 	// Refs https://github.com/microsoft/vscode/issues/151012#issuecomment-1156593228
-	process.env['ELECTRON_RUN_AS_NODE'] = '1';
+	process.env['TAURI_RUN_AS_NODE'] = '1';
 
 	// eslint-disable-next-line local/code-no-any-casts
 	process.on = <any>function (event: string, listener: (...args: any[]) => void) {
@@ -191,7 +191,7 @@ function _createExtHostProtocol(): Promise<IMessagePassingProtocol> {
 			let protocol: PersistentProtocol | null = null;
 
 			const timer = setTimeout(() => {
-				onTerminate('VSCODE_EXTHOST_IPC_SOCKET timeout');
+				onTerminate('MINTMIND_EXTHOST_IPC_SOCKET timeout');
 			}, 60000);
 
 			const reconnectionGraceTime = ProtocolConstants.ReconnectionGraceTime;
@@ -200,7 +200,7 @@ function _createExtHostProtocol(): Promise<IMessagePassingProtocol> {
 			const disconnectRunner2 = new ProcessTimeRunOnceScheduler(() => onTerminate('renderer disconnected for too long (2)'), reconnectionShortGraceTime);
 
 			process.on('message', (msg: IExtHostSocketMessage | IExtHostReduceGraceTimeMessage, handle: net.Socket) => {
-				if (msg && msg.type === 'VSCODE_EXTHOST_IPC_SOCKET') {
+				if (msg && msg.type === 'MINTMIND_EXTHOST_IPC_SOCKET') {
 					// Disable Nagle's algorithm. We also do this on the server process,
 					// but nodejs doesn't document if this option is transferred with the socket
 					handle.setNoDelay(true);
@@ -234,7 +234,7 @@ function _createExtHostProtocol(): Promise<IMessagePassingProtocol> {
 						});
 					}
 				}
-				if (msg && msg.type === 'VSCODE_EXTHOST_IPC_REDUCE_GRACE_TIME') {
+				if (msg && msg.type === 'MINTMIND_EXTHOST_IPC_REDUCE_GRACE_TIME') {
 					if (disconnectRunner2.isScheduled()) {
 						// we are disconnected and already running the short reconnection timer
 						return;
@@ -247,7 +247,7 @@ function _createExtHostProtocol(): Promise<IMessagePassingProtocol> {
 			});
 
 			// Now that we have managed to install a message listener, ask the other side to send us the socket
-			const req: IExtHostReadyMessage = { type: 'VSCODE_EXTHOST_IPC_READY' };
+			const req: IExtHostReadyMessage = { type: 'MINTMIND_EXTHOST_IPC_READY' };
 			process.send?.(req);
 		});
 

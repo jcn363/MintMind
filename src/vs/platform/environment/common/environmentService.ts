@@ -10,9 +10,9 @@ import { dirname, join, normalize, resolve } from '../../../base/common/path.js'
 import { env } from '../../../base/common/process.js';
 import { joinPath } from '../../../base/common/resources.js';
 import { URI } from '../../../base/common/uri.js';
+import { IProductService } from '../../product/common/productService.js';
 import { NativeParsedArgs } from './argv.js';
 import { ExtensionKind, IExtensionHostDebugParams, INativeEnvironmentService } from './environment.js';
-import { IProductService } from '../../product/common/productService.js';
 
 export const EXTENSION_IDENTIFIER_WITH_LOG_REGEX = /^([^.]+\..+)[:=](.+)$/;
 
@@ -22,7 +22,7 @@ export interface INativeEnvironmentPaths {
 	 * The user data directory to use for anything that should be
 	 * persisted except for the content that is meant for the `homeDir`.
 	 *
-	 * Only one instance of VSCode can use the same `userDataDir`.
+	 * Only one instance of MintMind can use the same `userDataDir`.
 	 */
 	userDataDir: string;
 
@@ -93,7 +93,7 @@ export abstract class AbstractNativeEnvironmentService implements INativeEnviron
 
 	@memoize
 	get argvResource(): URI {
-		const vscodePortable = env['VSCODE_PORTABLE'];
+		const vscodePortable = env['MINTMIND_PORTABLE'];
 		if (vscodePortable) {
 			return URI.file(join(vscodePortable, 'argv.json'));
 		}
@@ -133,12 +133,12 @@ export abstract class AbstractNativeEnvironmentService implements INativeEnviron
 			return resolve(cliExtensionsDir);
 		}
 
-		const vscodeExtensions = env['VSCODE_EXTENSIONS'];
+		const vscodeExtensions = env['MINTMIND_EXTENSIONS'];
 		if (vscodeExtensions) {
 			return vscodeExtensions;
 		}
 
-		const vscodePortable = env['VSCODE_PORTABLE'];
+		const vscodePortable = env['MINTMIND_PORTABLE'];
 		if (vscodePortable) {
 			return join(vscodePortable, 'extensions');
 		}
@@ -204,7 +204,7 @@ export abstract class AbstractNativeEnvironmentService implements INativeEnviron
 	get debugExtensionHost(): IExtensionHostDebugParams { return parseExtensionHostDebugPort(this.args, this.isBuilt); }
 	get debugRenderer(): boolean { return !!this.args.debugRenderer; }
 
-	get isBuilt(): boolean { return !env['VSCODE_DEV']; }
+	get isBuilt(): boolean { return !env['MINTMIND_DEV']; }
 	get verbose(): boolean { return !!this.args.verbose; }
 
 	@memoize
@@ -242,7 +242,7 @@ export abstract class AbstractNativeEnvironmentService implements INativeEnviron
 	@memoize
 	get policyFile(): URI | undefined {
 		if (this.args['__enable-file-policy']) {
-			const vscodePortable = env['VSCODE_PORTABLE'];
+			const vscodePortable = env['MINTMIND_PORTABLE'];
 			if (vscodePortable) {
 				return URI.file(join(vscodePortable, 'policy.json'));
 			}

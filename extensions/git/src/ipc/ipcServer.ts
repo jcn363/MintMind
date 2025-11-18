@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import * as crypto from 'crypto';
+import * as fs from 'fs';
+import * as http from 'http';
+import * as os from 'os';
+import * as path from 'path';
 import { Disposable } from 'vscode';
 import { ITerminalEnvironmentProvider } from '../terminal';
 import { toDisposable } from '../util';
-import * as path from 'path';
-import * as http from 'http';
-import * as os from 'os';
-import * as fs from 'fs';
-import * as crypto from 'crypto';
 
 function getIPCHandlePath(id: string): string {
 	if (process.platform === 'win32') {
@@ -108,11 +108,11 @@ export class IPCServer implements IIPCServer, ITerminalEnvironmentProvider, Disp
 	}
 
 	getEnv(): { [key: string]: string } {
-		return { VSCODE_GIT_IPC_HANDLE: this.ipcHandlePath };
+		return { MINTMIND_GIT_IPC_HANDLE: this.ipcHandlePath };
 	}
 
 	getTerminalEnv(): { [key: string]: string } {
-		return { VSCODE_GIT_IPC_HANDLE: this.ipcHandlePath };
+		return { MINTMIND_GIT_IPC_HANDLE: this.ipcHandlePath };
 	}
 
 	dispose(): void {

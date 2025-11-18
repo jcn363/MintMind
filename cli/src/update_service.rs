@@ -8,7 +8,7 @@ use std::{fmt, path::Path};
 use serde::{Deserialize, Serialize};
 
 use crate::{
-	constants::VSCODE_CLI_UPDATE_ENDPOINT,
+	constants::MINTMIND_CLI_UPDATE_ENDPOINT,
 	log, options,
 	util::{
 		errors::{wrap, AnyError, CodeError, WrappedError},
@@ -19,7 +19,7 @@ use crate::{
 	},
 };
 
-/// Implementation of the VS Code Update service for use in the CLI.
+/// Implementation of the MintMind Update service for use in the CLI.
 #[derive(Clone)]
 pub struct UpdateService {
 	client: BoxedHttp,
@@ -57,7 +57,7 @@ fn quality_download_segment(quality: options::Quality) -> &'static str {
 }
 
 fn get_update_endpoint() -> Result<&'static str, CodeError> {
-	VSCODE_CLI_UPDATE_ENDPOINT.ok_or_else(|| CodeError::UpdatesNotConfigured("no service url"))
+	MINTMIND_CLI_UPDATE_ENDPOINT.ok_or_else(|| CodeError::UpdatesNotConfigured("no service url"))
 }
 
 impl UpdateService {

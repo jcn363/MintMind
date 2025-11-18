@@ -9,18 +9,21 @@ This section covers the installation of Jest and its required dependencies, incl
 Before installing Jest, remove any existing testing frameworks from your project to avoid conflicts and ensure a clean migration.
 
 **For npm:**
+
 ```bash
 npm uninstall mocha chai sinon
 npm uninstall @types/mocha @types/chai @types/sinon
 ```
 
 **For yarn:**
+
 ```bash
 yarn remove mocha chai sinon
 yarn remove @types/mocha @types/chai @types/sinon
 ```
 
 **For bun:**
+
 ```bash
 bun remove mocha chai sinon
 bun remove @types/mocha @types/chai @types/sinon
@@ -31,16 +34,19 @@ bun remove @types/mocha @types/chai @types/sinon
 Install Jest and the essential packages required for a TypeScript testing environment.
 
 **For npm:**
+
 ```bash
 npm install --save-dev jest @types/jest ts-jest
 ```
 
 **For yarn:**
+
 ```bash
 yarn add --dev jest @types/jest ts-jest
 ```
 
 **For bun:**
+
 ```bash
 bun add -d jest @types/jest ts-jest
 ```
@@ -50,16 +56,19 @@ bun add -d jest @types/jest ts-jest
 For projects using TypeScript, ensure the TypeScript compiler and related tools are properly configured for Jest integration.
 
 **Additional TypeScript testing dependencies (if not already installed):**
+
 ```bash
 npm install --save-dev typescript tslib
 ```
 
 **For yarn:**
+
 ```bash
 yarn add --dev typescript tslib
 ```
 
 **For bun:**
+
 ```bash
 bun add -d typescript tslib
 ```
@@ -70,11 +79,11 @@ Update your `package.json` scripts section to include Jest test commands. Replac
 
 ```json
 {
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
-  }
+	"scripts": {
+		"test": "bunx jest",
+		"test:watch": "bunx jest --watch",
+		"test:coverage": "bunx jest --coverage"
+	}
 }
 ```
 
@@ -83,16 +92,19 @@ Update your `package.json` scripts section to include Jest test commands. Replac
 For projects requiring DOM testing or browser environment simulation:
 
 **For DOM testing with jsdom:**
+
 ```bash
 npm install --save-dev jest-environment-jsdom
 ```
 
 **For yarn:**
+
 ```bash
 yarn add --dev jest-environment-jsdom
 ```
 
 **For bun:**
+
 ```bash
 bun add -d jest-environment-jsdom
 ```
@@ -130,20 +142,20 @@ For projects using TypeScript with ES modules, use this configuration:
 ```javascript
 /** @type {import('jest').Config} */
 const config = {
-  preset: 'ts-jest/presets/default-esm',
-  testEnvironment: 'node',
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.test.ts',
-    '<rootDir>/src/**/*.test.ts'
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{ts,js}',
-    '!src/**/*.d.ts',
-    '!src/**/__tests__/**'
-  ],
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
-  }
+	preset: "ts-jest/presets/default-esm",
+	testEnvironment: "node",
+	testMatch: [
+		"<rootDir>/src/**/__tests__/**/*.test.ts",
+		"<rootDir>/src/**/*.test.ts",
+	],
+	collectCoverageFrom: [
+		"src/**/*.{ts,js}",
+		"!src/**/*.d.ts",
+		"!src/**/__tests__/**",
+	],
+	moduleNameMapper: {
+		"^(\\.{1,2}/.*)\\.js$": "$1",
+	},
 };
 
 export default config;
@@ -155,18 +167,15 @@ For projects using Babel for JavaScript transformation:
 
 ```javascript
 module.exports = {
-  testEnvironment: 'node',
-  transform: {
-    '^.+\\.js$': 'babel-jest'
-  },
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.test.js',
-    '<rootDir>/src/**/*.test.js'
-  ],
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx}',
-    '!src/**/__tests__/**'
-  ]
+	testEnvironment: "node",
+	transform: {
+		"^.+\\.js$": "babel-jest",
+	},
+	testMatch: [
+		"<rootDir>/src/**/__tests__/**/*.test.js",
+		"<rootDir>/src/**/*.test.js",
+	],
+	collectCoverageFrom: ["src/**/*.{js,jsx}", "!src/**/__tests__/**"],
 };
 ```
 
@@ -176,24 +185,24 @@ For projects with both TypeScript and JavaScript:
 
 ```javascript
 module.exports = {
-  preset: 'ts-jest',
-  testEnvironment: 'jsdom',
-  testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.test.{ts,tsx,js,jsx}',
-    '<rootDir>/src/**/*.test.{ts,tsx,js,jsx}'
-  ],
-  transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'
-  },
-  moduleNameMapper: {
-    '^(\\.{1,2}/.*)\\.js$': '$1'
-  },
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx,js,jsx}',
-    '!src/**/*.d.ts',
-    '!src/**/__tests__/**'
-  ]
+	preset: "ts-jest",
+	testEnvironment: "jsdom",
+	testMatch: [
+		"<rootDir>/src/**/__tests__/**/*.test.{ts,tsx,js,jsx}",
+		"<rootDir>/src/**/*.test.{ts,tsx,js,jsx}",
+	],
+	transform: {
+		"^.+\\.(ts|tsx)$": "ts-jest",
+		"^.+\\.(js|jsx)$": "babel-jest",
+	},
+	moduleNameMapper: {
+		"^(\\.{1,2}/.*)\\.js$": "$1",
+	},
+	collectCoverageFrom: [
+		"src/**/*.{ts,tsx,js,jsx}",
+		"!src/**/*.d.ts",
+		"!src/**/__tests__/**",
+	],
 };
 ```
 
@@ -203,17 +212,17 @@ If your project uses Babel, create or update your `babel.config.js`:
 
 ```javascript
 module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current'
-        }
-      }
-    ],
-    '@babel/preset-typescript'
-  ]
+	presets: [
+		[
+			"@babel/preset-env",
+			{
+				targets: {
+					node: "current",
+				},
+			},
+		],
+		"@babel/preset-typescript",
+	],
 };
 ```
 
@@ -221,18 +230,18 @@ For React projects:
 
 ```javascript
 module.exports = {
-  presets: [
-    [
-      '@babel/preset-env',
-      {
-        targets: {
-          node: 'current'
-        }
-      }
-    ],
-    '@babel/preset-typescript',
-    ['@babel/preset-react', { runtime: 'automatic' }]
-  ]
+	presets: [
+		[
+			"@babel/preset-env",
+			{
+				targets: {
+					node: "current",
+				},
+			},
+		],
+		"@babel/preset-typescript",
+		["@babel/preset-react", { runtime: "automatic" }],
+	],
 };
 ```
 
@@ -242,29 +251,22 @@ Ensure your `tsconfig.json` is properly configured for Jest:
 
 ```json
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "allowJs": true,
-    "checkJs": false,
-    "verbatimModuleSyntax": false,
-    "types": ["jest", "node"],
-    "declaration": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
-  },
-  "include": [
-    "src/**/*",
-    "test/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts"
-  ]
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": false,
+		"verbatimModuleSyntax": false,
+		"types": ["jest", "node"],
+		"declaration": true,
+		"outDir": "./dist",
+		"rootDir": "./src"
+	},
+	"include": ["src/**/*", "test/**/*"],
+	"exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
 ```
 
@@ -276,28 +278,24 @@ Configure code coverage thresholds and collection:
 
 ```javascript
 module.exports = {
-  collectCoverageFrom: [
-    'src/**/*.{js,ts,jsx,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/__tests__/**',
-    '!src/**/__mocks__/**',
-    '!src/index.{js,ts}',
-    '!src/types/**'
-  ],
-  coverageThreshold: {
-    global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
-    }
-  },
-  coverageReporters: [
-    'text',
-    'lcov',
-    'html'
-  ],
-  coverageDirectory: 'coverage'
+	collectCoverageFrom: [
+		"src/**/*.{js,ts,jsx,tsx}",
+		"!src/**/*.d.ts",
+		"!src/**/__tests__/**",
+		"!src/**/__mocks__/**",
+		"!src/index.{js,ts}",
+		"!src/types/**",
+	],
+	coverageThreshold: {
+		global: {
+			branches: 80,
+			functions: 80,
+			lines: 80,
+			statements: 80,
+		},
+	},
+	coverageReporters: ["text", "lcov", "html"],
+	coverageDirectory: "coverage",
 };
 ```
 
@@ -305,32 +303,32 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  collectCoverageFrom: [
-    'src/**/*.{js,ts,jsx,tsx}',
-    '!src/**/*.d.ts',
-    '!src/**/__tests__/**',
-    '!src/**/__mocks__/**'
-  ],
-  coverageThreshold: {
-    global: {
-      branches: 75,
-      functions: 75,
-      lines: 75,
-      statements: 75
-    },
-    './src/components/': {
-      branches: 90,
-      functions: 90,
-      lines: 90,
-      statements: 90
-    },
-    './src/utils/': {
-      branches: 85,
-      functions: 85,
-      lines: 85,
-      statements: 85
-    }
-  }
+	collectCoverageFrom: [
+		"src/**/*.{js,ts,jsx,tsx}",
+		"!src/**/*.d.ts",
+		"!src/**/__tests__/**",
+		"!src/**/__mocks__/**",
+	],
+	coverageThreshold: {
+		global: {
+			branches: 75,
+			functions: 75,
+			lines: 75,
+			statements: 75,
+		},
+		"./src/components/": {
+			branches: 90,
+			functions: 90,
+			lines: 90,
+			statements: 90,
+		},
+		"./src/utils/": {
+			branches: 85,
+			functions: 85,
+			lines: 85,
+			statements: 85,
+		},
+	},
 };
 ```
 
@@ -342,14 +340,14 @@ Configure mocking strategies for different scenarios:
 
 ```javascript
 module.exports = {
-  moduleNameMapper: {
-    // Mock CSS imports
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
-    // Mock image imports
-    '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/__mocks__/fileMock.js',
-    // Alias resolution
-    '^@/(.*)$': '<rootDir>/src/$1'
-  }
+	moduleNameMapper: {
+		// Mock CSS imports
+		"\\.(css|less|scss|sass)$": "identity-obj-proxy",
+		// Mock image imports
+		"\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/__mocks__/fileMock.js",
+		// Alias resolution
+		"^@/(.*)$": "<rootDir>/src/$1",
+	},
 };
 ```
 
@@ -359,33 +357,33 @@ Create setup files for global mocks and configurations:
 
 ```javascript
 // test/setup.ts
-import 'jest-canvas-mock';
+import "jest-canvas-mock";
 
 // Mock fetch globally
 global.fetch = jest.fn();
 
 // Mock localStorage
 const localStorageMock = {
-  getItem: jest.fn(),
-  setItem: jest.fn(),
-  removeItem: jest.fn(),
-  clear: jest.fn(),
+	getItem: jest.fn(),
+	setItem: jest.fn(),
+	removeItem: jest.fn(),
+	clear: jest.fn(),
 };
 global.localStorage = localStorageMock;
 
 // Mock window methods
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
-  })),
+Object.defineProperty(window, "matchMedia", {
+	writable: true,
+	value: jest.fn().mockImplementation((query) => ({
+		matches: false,
+		media: query,
+		onchange: null,
+		addListener: jest.fn(), // deprecated
+		removeListener: jest.fn(), // deprecated
+		addEventListener: jest.fn(),
+		removeEventListener: jest.fn(),
+		dispatchEvent: jest.fn(),
+	})),
 });
 ```
 
@@ -395,7 +393,7 @@ Create manual mocks in `__mocks__` directories:
 
 ```javascript
 // __mocks__/axios.js
-const mockAxios = jest.createMockFromModule('axios');
+const mockAxios = jest.createMockFromModule("axios");
 
 mockAxios.create = jest.fn(() => mockAxios);
 mockAxios.get = jest.fn(() => Promise.resolve({ data: {} }));
@@ -410,19 +408,19 @@ For ES modules, use different approaches:
 
 ```javascript
 // For named exports
-jest.mock('some-module', () => ({
-  namedExport: jest.fn(),
-  anotherExport: jest.fn()
+jest.mock("some-module", () => ({
+	namedExport: jest.fn(),
+	anotherExport: jest.fn(),
 }));
 
 // For default exports
-jest.mock('some-module', () => jest.fn());
+jest.mock("some-module", () => jest.fn());
 
 // For mixed exports
-jest.mock('some-module', () => ({
-  __esModule: true,
-  default: jest.fn(),
-  namedExport: jest.fn()
+jest.mock("some-module", () => ({
+	__esModule: true,
+	default: jest.fn(),
+	namedExport: jest.fn(),
 }));
 ```
 
@@ -432,27 +430,27 @@ You can also configure Jest directly in `package.json`:
 
 ```json
 {
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.test.{ts,tsx}",
-      "<rootDir>/src/**/*.test.{ts,tsx}"
-    ],
-    "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1",
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-    },
-    "collectCoverageFrom": [
-      "src/**/*.{ts,tsx}",
-      "!src/**/*.d.ts",
-      "!src/**/__tests__/**"
-    ],
-    "setupFilesAfterEnv": ["<rootDir>/test/setup.ts"],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "ts-jest"
-    }
-  }
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "jsdom",
+		"testMatch": [
+			"<rootDir>/src/**/__tests__/**/*.test.{ts,tsx}",
+			"<rootDir>/src/**/*.test.{ts,tsx}"
+		],
+		"moduleNameMapper": {
+			"^@/(.*)$": "<rootDir>/src/$1",
+			"\\.(css|less|scss|sass)$": "identity-obj-proxy"
+		},
+		"collectCoverageFrom": [
+			"src/**/*.{ts,tsx}",
+			"!src/**/*.d.ts",
+			"!src/**/__tests__/**"
+		],
+		"setupFilesAfterEnv": ["<rootDir>/test/setup.ts"],
+		"transform": {
+			"^.+\\.(ts|tsx)$": "ts-jest"
+		}
+	}
 }
 ```
 
@@ -462,12 +460,10 @@ You can also configure Jest directly in `package.json`:
 
 ```javascript
 module.exports = {
-  testEnvironment: 'node',
-  testMatch: [
-    '<rootDir>/src/**/*.test.ts'
-  ],
-  // Node-specific settings
-  setupFilesAfterEnv: ['<rootDir>/test/setup-node.ts']
+	testEnvironment: "node",
+	testMatch: ["<rootDir>/src/**/*.test.ts"],
+	// Node-specific settings
+	setupFilesAfterEnv: ["<rootDir>/test/setup-node.ts"],
 };
 ```
 
@@ -475,13 +471,13 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  testEnvironment: 'jsdom',
-  testEnvironmentOptions: {
-    url: 'http://localhost:3000',
-    userAgent: 'JestTestAgent/1.0'
-  },
-  setupFiles: ['<rootDir>/test/browser-mock.ts'],
-  setupFilesAfterEnv: ['<rootDir>/test/setup-browser.ts']
+	testEnvironment: "jsdom",
+	testEnvironmentOptions: {
+		url: "http://localhost:3000",
+		userAgent: "JestTestAgent/1.0",
+	},
+	setupFiles: ["<rootDir>/test/browser-mock.ts"],
+	setupFilesAfterEnv: ["<rootDir>/test/setup-browser.ts"],
 };
 ```
 
@@ -491,23 +487,23 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  // Run tests in parallel
-  maxWorkers: '50%',
-  
-  // Timeout settings
-  testTimeout: 10000,
-  
-  // Force exit to prevent hanging
-  forceExit: true,
-  detectOpenHandles: true,
-  
-  // Memory management
-  workerIdleMemoryLimit: '512MB',
-  detectLeaks: false,
-  
-  // Clear mocks between tests
-  clearMocks: true,
-  restoreMocks: true
+	// Run tests in parallel
+	maxWorkers: "50%",
+
+	// Timeout settings
+	testTimeout: 10000,
+
+	// Force exit to prevent hanging
+	forceExit: true,
+	detectOpenHandles: true,
+
+	// Memory management
+	workerIdleMemoryLimit: "512MB",
+	detectLeaks: false,
+
+	// Clear mocks between tests
+	clearMocks: true,
+	restoreMocks: true,
 };
 ```
 
@@ -515,19 +511,19 @@ module.exports = {
 
 ```javascript
 // custom-environment.js
-const JsdomTestEnvironment = require('jest-environment-jsdom');
+const JsdomTestEnvironment = require("jest-environment-jsdom");
 
 class CustomTestEnvironment extends JsdomTestEnvironment {
-  async setup() {
-    await super.setup();
-    // Custom setup logic
-    this.global.customProperty = 'value';
-  }
+	async setup() {
+		await super.setup();
+		// Custom setup logic
+		this.global.customProperty = "value";
+	}
 
-  async teardown() {
-    // Custom teardown logic
-    await super.teardown();
-  }
+	async teardown() {
+		// Custom teardown logic
+		await super.teardown();
+	}
 }
 
 module.exports = CustomTestEnvironment;
@@ -537,7 +533,7 @@ Then use it in your config:
 
 ```javascript
 module.exports = {
-  testEnvironment: './custom-environment.js'
+	testEnvironment: "./custom-environment.js",
 };
 ```
 
@@ -573,10 +569,10 @@ Jest uses the same `describe` and `it` functions as Mocha/Jasmine, so basic test
 
 ```javascript
 // Before (Mocha/Jasmine) and After (Jest) - identical
-describe('Calculator', () => {
-  it('should add two numbers', () => {
-    expect(add(2, 3)).toBe(5);
-  });
+describe("Calculator", () => {
+	it("should add two numbers", () => {
+		expect(add(2, 3)).toBe(5);
+	});
 });
 ```
 
@@ -584,22 +580,22 @@ describe('Calculator', () => {
 
 ```javascript
 // Before (Mocha/Jasmine) and After (Jest) - identical
-describe('Calculator', () => {
-  describe('Addition', () => {
-    it('should add positive numbers', () => {
-      expect(add(2, 3)).toBe(5);
-    });
+describe("Calculator", () => {
+	describe("Addition", () => {
+		it("should add positive numbers", () => {
+			expect(add(2, 3)).toBe(5);
+		});
 
-    it('should add negative numbers', () => {
-      expect(add(-2, -3)).toBe(-5);
-    });
-  });
+		it("should add negative numbers", () => {
+			expect(add(-2, -3)).toBe(-5);
+		});
+	});
 
-  describe('Subtraction', () => {
-    it('should subtract numbers', () => {
-      expect(subtract(5, 3)).toBe(2);
-    });
-  });
+	describe("Subtraction", () => {
+		it("should subtract numbers", () => {
+			expect(subtract(5, 3)).toBe(2);
+		});
+	});
 });
 ```
 
@@ -611,22 +607,22 @@ Jest includes a built-in assertion library that replaces Chai's `expect` syntax.
 
 ```javascript
 // Chai (Before)
-const chai = require('chai');
+const chai = require("chai");
 const expect = chai.expect;
 
-describe('Assertions', () => {
-  it('should check equality', () => {
-    expect(2 + 2).to.equal(4);
-    expect(result).to.not.equal(5);
-  });
+describe("Assertions", () => {
+	it("should check equality", () => {
+		expect(2 + 2).to.equal(4);
+		expect(result).to.not.equal(5);
+	});
 });
 
 // Jest (After)
-describe('Assertions', () => {
-  it('should check equality', () => {
-    expect(2 + 2).toBe(4);
-    expect(result).not.toBe(5);
-  });
+describe("Assertions", () => {
+	it("should check equality", () => {
+		expect(2 + 2).toBe(4);
+		expect(result).not.toBe(5);
+	});
 });
 ```
 
@@ -634,19 +630,19 @@ describe('Assertions', () => {
 
 ```javascript
 // Chai (Before)
-it('should check types and existence', () => {
-  expect(result).to.be.a('string');
-  expect(result).to.exist;
-  expect(empty).to.be.undefined;
-  expect(value).to.be.null;
+it("should check types and existence", () => {
+	expect(result).to.be.a("string");
+	expect(result).to.exist;
+	expect(empty).to.be.undefined;
+	expect(value).to.be.null;
 });
 
 // Jest (After)
-it('should check types and existence', () => {
-  expect(typeof result).toBe('string');
-  expect(result).toBeDefined();
-  expect(empty).toBeUndefined();
-  expect(value).toBeNull();
+it("should check types and existence", () => {
+	expect(typeof result).toBe("string");
+	expect(result).toBeDefined();
+	expect(empty).toBeUndefined();
+	expect(value).toBeNull();
 });
 ```
 
@@ -654,19 +650,19 @@ it('should check types and existence', () => {
 
 ```javascript
 // Chai (Before)
-it('should check arrays and objects', () => {
-  expect([1, 2, 3]).to.include(2);
-  expect([1, 2, 3]).to.have.lengthOf(3);
-  expect(user).to.have.property('name');
-  expect(user).to.have.property('name', 'John');
+it("should check arrays and objects", () => {
+	expect([1, 2, 3]).to.include(2);
+	expect([1, 2, 3]).to.have.lengthOf(3);
+	expect(user).to.have.property("name");
+	expect(user).to.have.property("name", "John");
 });
 
 // Jest (After)
-it('should check arrays and objects', () => {
-  expect([1, 2, 3]).toContain(2);
-  expect([1, 2, 3]).toHaveLength(3);
-  expect(user).toHaveProperty('name');
-  expect(user).toHaveProperty('name', 'John');
+it("should check arrays and objects", () => {
+	expect([1, 2, 3]).toContain(2);
+	expect([1, 2, 3]).toHaveLength(3);
+	expect(user).toHaveProperty("name");
+	expect(user).toHaveProperty("name", "John");
 });
 ```
 
@@ -674,13 +670,13 @@ it('should check arrays and objects', () => {
 
 ```javascript
 // Chai (Before)
-it('should throw an error', () => {
-  expect(() => divide(10, 0)).to.throw('Division by zero');
+it("should throw an error", () => {
+	expect(() => divide(10, 0)).to.throw("Division by zero");
 });
 
 // Jest (After)
-it('should throw an error', () => {
-  expect(() => divide(10, 0)).toThrow('Division by zero');
+it("should throw an error", () => {
+	expect(() => divide(10, 0)).toThrow("Division by zero");
 });
 ```
 
@@ -692,33 +688,33 @@ Jest provides built-in mocking capabilities that replace Sinon's spy and mock fu
 
 ```javascript
 // Sinon (Before)
-const sinon = require('sinon');
+const sinon = require("sinon");
 
-describe('Spies', () => {
-  it('should spy on function calls', () => {
-    const spy = sinon.spy(myObject, 'method');
-    myObject.method('arg1', 'arg2');
+describe("Spies", () => {
+	it("should spy on function calls", () => {
+		const spy = sinon.spy(myObject, "method");
+		myObject.method("arg1", "arg2");
 
-    expect(spy.calledOnce).to.be.true;
-    expect(spy.calledWith('arg1', 'arg2')).to.be.true;
-    expect(spy.callCount).to.equal(1);
+		expect(spy.calledOnce).to.be.true;
+		expect(spy.calledWith("arg1", "arg2")).to.be.true;
+		expect(spy.callCount).to.equal(1);
 
-    spy.restore();
-  });
+		spy.restore();
+	});
 });
 
 // Jest (After)
-describe('Spies', () => {
-  it('should spy on function calls', () => {
-    const spy = jest.spyOn(myObject, 'method');
-    myObject.method('arg1', 'arg2');
+describe("Spies", () => {
+	it("should spy on function calls", () => {
+		const spy = jest.spyOn(myObject, "method");
+		myObject.method("arg1", "arg2");
 
-    expect(spy).toHaveBeenCalledTimes(1);
-    expect(spy).toHaveBeenCalledWith('arg1', 'arg2');
-    expect(spy).toHaveBeenCalledTimes(1);
+		expect(spy).toHaveBeenCalledTimes(1);
+		expect(spy).toHaveBeenCalledWith("arg1", "arg2");
+		expect(spy).toHaveBeenCalledTimes(1);
 
-    spy.mockRestore();
-  });
+		spy.mockRestore();
+	});
 });
 ```
 
@@ -726,24 +722,24 @@ describe('Spies', () => {
 
 ```javascript
 // Sinon (Before)
-it('should mock function return values', () => {
-  const mock = sinon.mock(myObject);
-  mock.expects('method').once().returns('mocked value');
+it("should mock function return values", () => {
+	const mock = sinon.mock(myObject);
+	mock.expects("method").once().returns("mocked value");
 
-  const result = myObject.method();
-  expect(result).to.equal('mocked value');
+	const result = myObject.method();
+	expect(result).to.equal("mocked value");
 
-  mock.verify();
+	mock.verify();
 });
 
 // Jest (After)
-it('should mock function return values', () => {
-  const mockFn = jest.fn().mockReturnValue('mocked value');
-  myObject.method = mockFn;
+it("should mock function return values", () => {
+	const mockFn = jest.fn().mockReturnValue("mocked value");
+	myObject.method = mockFn;
 
-  const result = myObject.method();
-  expect(result).toBe('mocked value');
-  expect(mockFn).toHaveBeenCalledTimes(1);
+	const result = myObject.method();
+	expect(result).toBe("mocked value");
+	expect(mockFn).toHaveBeenCalledTimes(1);
 });
 ```
 
@@ -751,39 +747,39 @@ it('should mock function return values', () => {
 
 ```javascript
 // Sinon (Before)
-const sinon = require('sinon');
+const sinon = require("sinon");
 
-describe('Module Mocking', () => {
-  let axiosStub;
+describe("Module Mocking", () => {
+	let axiosStub;
 
-  beforeEach(() => {
-    axiosStub = sinon.stub(axios, 'get').resolves({ data: 'mocked' });
-  });
+	beforeEach(() => {
+		axiosStub = sinon.stub(axios, "get").resolves({ data: "mocked" });
+	});
 
-  afterEach(() => {
-    axiosStub.restore();
-  });
+	afterEach(() => {
+		axiosStub.restore();
+	});
 
-  it('should mock axios calls', async () => {
-    const result = await axios.get('/api/data');
-    expect(result.data).to.equal('mocked');
-  });
+	it("should mock axios calls", async () => {
+		const result = await axios.get("/api/data");
+		expect(result.data).to.equal("mocked");
+	});
 });
 
 // Jest (After)
-describe('Module Mocking', () => {
-  beforeEach(() => {
-    jest.spyOn(axios, 'get').mockResolvedValue({ data: 'mocked' });
-  });
+describe("Module Mocking", () => {
+	beforeEach(() => {
+		jest.spyOn(axios, "get").mockResolvedValue({ data: "mocked" });
+	});
 
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
+	afterEach(() => {
+		jest.restoreAllMocks();
+	});
 
-  it('should mock axios calls', async () => {
-    const result = await axios.get('/api/data');
-    expect(result.data).toBe('mocked');
-  });
+	it("should mock axios calls", async () => {
+		const result = await axios.get("/api/data");
+		expect(result.data).toBe("mocked");
+	});
 });
 ```
 
@@ -799,7 +795,7 @@ Jest handles timeouts differently from Mocha/Jasmine. Global timeouts are config
 
 // Jest (in jest.config.js or package.json)
 module.exports = {
-  testTimeout: 5000  // 5 second global timeout
+	testTimeout: 5000, // 5 second global timeout
 };
 ```
 
@@ -807,25 +803,25 @@ module.exports = {
 
 ```javascript
 // Mocha/Jasmine (Before)
-describe('Slow Tests', () => {
-  it('should handle slow operation', function(done) {
-    this.timeout(10000); // 10 second timeout for this test
+describe("Slow Tests", () => {
+	it("should handle slow operation", function (done) {
+		this.timeout(10000); // 10 second timeout for this test
 
-    setTimeout(() => {
-      expect(true).to.be.true;
-      done();
-    }, 5000);
-  });
+		setTimeout(() => {
+			expect(true).to.be.true;
+			done();
+		}, 5000);
+	});
 });
 
 // Jest (After)
-describe('Slow Tests', () => {
-  it('should handle slow operation', async () => {
-    jest.setTimeout(10000); // 10 second timeout for this test
+describe("Slow Tests", () => {
+	it("should handle slow operation", async () => {
+		jest.setTimeout(10000); // 10 second timeout for this test
 
-    await new Promise(resolve => setTimeout(resolve, 5000));
-    expect(true).toBe(true);
-  }, 10000); // Alternative: pass timeout as third parameter
+		await new Promise((resolve) => setTimeout(resolve, 5000));
+		expect(true).toBe(true);
+	}, 10000); // Alternative: pass timeout as third parameter
 });
 ```
 
@@ -837,20 +833,20 @@ Jest's `beforeEach` and `afterEach` work identically to Mocha/Jasmine but with J
 
 ```javascript
 // Before (Mocha/Jasmine) and After (Jest) - identical
-describe('Database Tests', () => {
-  let db;
+describe("Database Tests", () => {
+	let db;
 
-  beforeEach(async () => {
-    db = await createTestDatabase();
-  });
+	beforeEach(async () => {
+		db = await createTestDatabase();
+	});
 
-  afterEach(async () => {
-    await db.cleanup();
-  });
+	afterEach(async () => {
+		await db.cleanup();
+	});
 
-  it('should perform database operations', () => {
-    // test code
-  });
+	it("should perform database operations", () => {
+		// test code
+	});
 });
 ```
 
@@ -858,35 +854,35 @@ describe('Database Tests', () => {
 
 ```javascript
 // Mocha/Jasmine (Before)
-describe('Mock Tests', () => {
-  let mock;
+describe("Mock Tests", () => {
+	let mock;
 
-  beforeEach(() => {
-    mock = sinon.mock(myModule);
-  });
+	beforeEach(() => {
+		mock = sinon.mock(myModule);
+	});
 
-  afterEach(() => {
-    mock.restore();
-  });
+	afterEach(() => {
+		mock.restore();
+	});
 
-  it('should use mock', () => {
-    // test code
-  });
+	it("should use mock", () => {
+		// test code
+	});
 });
 
 // Jest (After)
-describe('Mock Tests', () => {
-  beforeEach(() => {
-    jest.spyOn(myModule, 'method');
-  });
+describe("Mock Tests", () => {
+	beforeEach(() => {
+		jest.spyOn(myModule, "method");
+	});
 
-  afterEach(() => {
-    jest.restoreAllMocks(); // Jest's automatic cleanup
-  });
+	afterEach(() => {
+		jest.restoreAllMocks(); // Jest's automatic cleanup
+	});
 
-  it('should use mock', () => {
-    // test code
-  });
+	it("should use mock", () => {
+		// test code
+	});
 });
 ```
 
@@ -915,12 +911,12 @@ expect(value).toBeLessThanOrEqual(50);
 ```javascript
 // Chai (Before)
 expect(str).to.match(/pattern/);
-expect(str).to.include('substring');
+expect(str).to.include("substring");
 expect(str).to.have.lengthOf(10);
 
 // Jest (After)
 expect(str).toMatch(/pattern/);
-expect(str).toContain('substring');
+expect(str).toContain("substring");
 expect(str).toHaveLength(10);
 ```
 
@@ -928,17 +924,17 @@ expect(str).toHaveLength(10);
 
 ```javascript
 // Chai with chai-as-promised (Before)
-const chaiAsPromised = require('chai-as-promised');
+const chaiAsPromised = require("chai-as-promised");
 
 chai.use(chaiAsPromised);
 
-it('should resolve', () => {
-  return expect(Promise.resolve('value')).to.eventually.equal('value');
+it("should resolve", () => {
+	return expect(Promise.resolve("value")).to.eventually.equal("value");
 });
 
 // Jest (After) - built-in async/await support
-it('should resolve', async () => {
-  await expect(Promise.resolve('value')).resolves.toBe('value');
+it("should resolve", async () => {
+	await expect(Promise.resolve("value")).resolves.toBe("value");
 });
 ```
 
@@ -950,31 +946,33 @@ Jest has excellent async/await support and provides better error reporting for a
 
 ```javascript
 // Mocha/Jasmine (Before)
-describe('Async Tests', () => {
-  it('should handle async operations', function(done) {
-    asyncOperation().then(result => {
-      expect(result).to.equal('success');
-      done();
-    }).catch(done);
-  });
+describe("Async Tests", () => {
+	it("should handle async operations", function (done) {
+		asyncOperation()
+			.then((result) => {
+				expect(result).to.equal("success");
+				done();
+			})
+			.catch(done);
+	});
 
-  it('should handle promises', () => {
-    return asyncOperation().then(result => {
-      expect(result).to.equal('success');
-    });
-  });
+	it("should handle promises", () => {
+		return asyncOperation().then((result) => {
+			expect(result).to.equal("success");
+		});
+	});
 });
 
 // Jest (After)
-describe('Async Tests', () => {
-  it('should handle async operations', async () => {
-    const result = await asyncOperation();
-    expect(result).toBe('success');
-  });
+describe("Async Tests", () => {
+	it("should handle async operations", async () => {
+		const result = await asyncOperation();
+		expect(result).toBe("success");
+	});
 
-  it('should handle promises', () => {
-    return expect(asyncOperation()).resolves.toBe('success');
-  });
+	it("should handle promises", () => {
+		return expect(asyncOperation()).resolves.toBe("success");
+	});
 });
 ```
 
@@ -982,18 +980,20 @@ describe('Async Tests', () => {
 
 ```javascript
 // Mocha/Jasmine (Before)
-it('should handle async errors', function(done) {
-  failingOperation().then(() => {
-    done(new Error('Should have failed'));
-  }).catch(err => {
-    expect(err.message).to.equal('Expected error');
-    done();
-  });
+it("should handle async errors", function (done) {
+	failingOperation()
+		.then(() => {
+			done(new Error("Should have failed"));
+		})
+		.catch((err) => {
+			expect(err.message).to.equal("Expected error");
+			done();
+		});
 });
 
 // Jest (After)
-it('should handle async errors', async () => {
-  await expect(failingOperation()).rejects.toThrow('Expected error');
+it("should handle async errors", async () => {
+	await expect(failingOperation()).rejects.toThrow("Expected error");
 });
 ```
 
@@ -1001,27 +1001,27 @@ it('should handle async errors', async () => {
 
 ```javascript
 // Mocha/Jasmine (Before)
-it('should test callbacks', function(done) {
-  asyncCallbackFunction((err, result) => {
-    if (err) return done(err);
-    expect(result).to.equal('data');
-    done();
-  });
+it("should test callbacks", function (done) {
+	asyncCallbackFunction((err, result) => {
+		if (err) return done(err);
+		expect(result).to.equal("data");
+		done();
+	});
 });
 
 // Jest (After)
-it('should test callbacks', () => {
-  return new Promise((resolve, reject) => {
-    asyncCallbackFunction((err, result) => {
-      try {
-        expect(err).toBeNull();
-        expect(result).toBe('data');
-        resolve();
-      } catch (error) {
-        reject(error);
-      }
-    });
-  });
+it("should test callbacks", () => {
+	return new Promise((resolve, reject) => {
+		asyncCallbackFunction((err, result) => {
+			try {
+				expect(err).toBeNull();
+				expect(result).toBe("data");
+				resolve();
+			} catch (error) {
+				reject(error);
+			}
+		});
+	});
 });
 ```
 
@@ -1031,73 +1031,79 @@ Here's a comprehensive before/after example showing all major conversions:
 
 ```javascript
 // Mocha + Chai + Sinon (Before)
-const chai = require('chai');
+const chai = require("chai");
 const expect = chai.expect;
-const sinon = require('sinon');
+const sinon = require("sinon");
 
-describe('User Service', () => {
-  let userService;
-  let apiMock;
+describe("User Service", () => {
+	let userService;
+	let apiMock;
 
-  beforeEach(function() {
-    this.timeout(5000);
-    userService = new UserService();
-    apiMock = sinon.mock(api);
-  });
+	beforeEach(function () {
+		this.timeout(5000);
+		userService = new UserService();
+		apiMock = sinon.mock(api);
+	});
 
-  afterEach(() => {
-    apiMock.restore();
-  });
+	afterEach(() => {
+		apiMock.restore();
+	});
 
-  describe('getUser', () => {
-    it('should return user data', function(done) {
-      apiMock.expects('get').once().returns(Promise.resolve({ id: 1, name: 'John' }));
+	describe("getUser", () => {
+		it("should return user data", function (done) {
+			apiMock
+				.expects("get")
+				.once()
+				.returns(Promise.resolve({ id: 1, name: "John" }));
 
-      userService.getUser(1).then(user => {
-        expect(user).to.have.property('id', 1);
-        expect(user).to.have.property('name', 'John');
-        expect(user.name).to.be.a('string');
-        done();
-      }).catch(done);
-    });
+			userService
+				.getUser(1)
+				.then((user) => {
+					expect(user).to.have.property("id", 1);
+					expect(user).to.have.property("name", "John");
+					expect(user.name).to.be.a("string");
+					done();
+				})
+				.catch(done);
+		});
 
-    it('should handle errors', () => {
-      return userService.getUser(999).catch(err => {
-        expect(err.message).to.include('User not found');
-      });
-    });
-  });
+		it("should handle errors", () => {
+			return userService.getUser(999).catch((err) => {
+				expect(err.message).to.include("User not found");
+			});
+		});
+	});
 });
 
 // Jest (After)
-describe('User Service', () => {
-  let userService;
+describe("User Service", () => {
+	let userService;
 
-  beforeEach(() => {
-    jest.setTimeout(5000);
-    userService = new UserService();
-    jest.spyOn(api, 'get').mockResolvedValue({ id: 1, name: 'John' });
-  });
+	beforeEach(() => {
+		jest.setTimeout(5000);
+		userService = new UserService();
+		jest.spyOn(api, "get").mockResolvedValue({ id: 1, name: "John" });
+	});
 
-  afterEach(() => {
-    jest.restoreAllMocks();
-  });
+	afterEach(() => {
+		jest.restoreAllMocks();
+	});
 
-  describe('getUser', () => {
-    it('should return user data', async () => {
-      const user = await userService.getUser(1);
+	describe("getUser", () => {
+		it("should return user data", async () => {
+			const user = await userService.getUser(1);
 
-      expect(user).toHaveProperty('id', 1);
-      expect(user).toHaveProperty('name', 'John');
-      expect(typeof user.name).toBe('string');
-    });
+			expect(user).toHaveProperty("id", 1);
+			expect(user).toHaveProperty("name", "John");
+			expect(typeof user.name).toBe("string");
+		});
 
-    it('should handle errors', async () => {
-      jest.spyOn(api, 'get').mockRejectedValue(new Error('User not found'));
+		it("should handle errors", async () => {
+			jest.spyOn(api, "get").mockRejectedValue(new Error("User not found"));
 
-      await expect(userService.getUser(999)).rejects.toThrow('User not found');
-    });
-  });
+			await expect(userService.getUser(999)).rejects.toThrow("User not found");
+		});
+	});
 });
 ```
 

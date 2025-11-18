@@ -1,0 +1,131 @@
+# ===================================================================
+# Rust AI IDE - Enhanced Cargo Deny Configuration
+# ===================================================================
+#
+# This configuration provides comprehensive license compliance checking,
+# banned crate enforcement, and security policy validation for the
+# Rust AI IDE workspace with 150+ crates across 5 layers.
+#
+# Features:
+# - Strict license compliance enforcement (MIT/Apache-2.0 only)
+# - Banned crate detection and blocking (openssl, md5, ring, quick-js)
+# - Security vulnerability detection integration
+# - CI/CD pipeline integration with detailed reporting
+# - Workspace-aware scanning with dependency analysis
+# - Exception management with expiration tracking
+
+# ===================================================================
+# LICENSE COMPLIANCE - Policy Enforcement
+# ===================================================================
+[licenses]
+# Only allow MIT and Apache-2.0 licenses (project policy)
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-DFS-2016",
+    "CC0-1.0",
+    "0BSD",
+]
+
+# Ban GPL variants explicitly (deprecated in newer cargo-deny versions, but kept for backward compatibility)
+# Note: Consider migrating to 'copyleft = "deny"' in future cargo-deny updates
+
+# Require license files to be present for all dependencies
+confidence-threshold = 0.8 # Minimum confidence for license detection
+
+# ===================================================================
+# BANS - Dependency Version Enforcement
+# ===================================================================
+[bans]
+deny = [
+   "openssl",
+   "md5",
+   "ring",
+   "quick-js",
+   "hyper-tls",
+   "native-tls",
+   "tls",
+   "unsafe-any",
+   "memoffset",
+   "base64@<=0.13",
+   "serde_json@<=1.0.85",
+   "proptest",
+   "quickcheck",
+   "criterion",
+]
+
+[bans.version-requirements]
+serde = ">=1.0.228"
+tokio = ">=1.48.0"
+chrono = ">=0.4.42"
+thiserror = ">=2.0.17"
+anyhow = ">=1.0.100"
+
+# Allow git2 despite GPL-2.0 due to necessity
+[[licenses.exceptions]]
+name = "git2"
+allow = ["GPL-2.0"]
+
+# ===================================================================
+# BANS - Dependency Version Enforcement
+# ===================================================================
+
+# Allow git2 despite GPL-2.0 due to necessity
+[[licenses.exceptions]]
+name = "git2"
+allow = ["GPL-2.0"]
+
+
+# ===================================================================
+# ADVISORIES - Vulnerability Management Integration
+# ===================================================================
+[advisories]
+# Integration with cargo-audit for vulnerability detection
+db-path = "~/.cargo/advisory-db"
+db-urls = ["https://github.com/rustsec/advisory-db"]
+
+# Vulnerability severity handling
+yanked = "deny"
+
+# ===================================================================
+# SOURCES - Registry and Git Source Management
+# ===================================================================
+[sources]
+# Only allow crates.io registry (project policy)
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]
+
+# Ban unknown registries and unknown git sources
+unknown-registry = "deny"
+unknown-git = "deny"
+
+# Allow specific GitHub organizations for trusted dependencies
+allow-git = [
+    "https://github.com/gtk-rs/gtk4-rs",
+    "https://github.com/tauri-apps/tauri",
+    "https://github.com/rust-ai-ide",
+]
+
+# ===================================================================
+# EXCEPTIONS - Justified Policy Exceptions
+# ===================================================================
+# Temporarily allow specific crates with documented reasons
+# All exceptions must have expiration dates and remediation plans
+[[licenses.exceptions]]
+name = "git2"
+allow = ["GPL-2.0"]
+
+
+# ===================================================================
+# OUTPUT CONFIGURATION - CI/CD Integration
+# ===================================================================
+
+# ===================================================================
+# GRAPH - Dependency Graph Analysis
+# ===================================================================
+[graph]
+# Dependency graph analysis for security insights
+# Note: Enable visualization if needed in compatible version

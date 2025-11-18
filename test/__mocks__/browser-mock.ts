@@ -170,7 +170,7 @@ global.CustomEvent = class CustomEvent extends Event {
   detail: any;
 
   initCustomEvent(type: string, bubbles?: boolean, cancelable?: boolean, detail?: any) {
-    this.type = type;
+    (this as any).type = type;
     this.detail = detail;
   }
 };
@@ -238,23 +238,23 @@ if (!global.URL) {
 
 // Mock fetch if not available
 if (!global.fetch) {
-  global.fetch = jest.fn(() =>
-    Promise.resolve({
-      ok: true,
-      status: 200,
-      statusText: 'OK',
-      type: 'basic',
-      url: '',
-      redirected: false,
-      headers: new Map(),
-      json: () => Promise.resolve({}),
-      text: () => Promise.resolve(''),
-      arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
-      blob: () => Promise.resolve(new Blob()),
-      formData: () => Promise.resolve(new FormData()),
-      clone: () => ({ ...global.fetch.mock.results[0].value }),
-    } as Response)
-  );
+  const mockResponse = {
+    ok: true,
+    status: 200,
+    statusText: 'OK',
+    type: 'basic' as const,
+    url: '',
+    redirected: false,
+    headers: new Map(),
+    json: () => Promise.resolve({}),
+    text: () => Promise.resolve(''),
+    arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
+    blob: () => Promise.resolve(new Blob()),
+    formData: () => Promise.resolve(new FormData()),
+    clone: () => ({ ...mockResponse }),
+  };
+
+  global.fetch = jest.fn(() => Promise.resolve(mockResponse));
 }
 
 // Mock WebSocket if not available

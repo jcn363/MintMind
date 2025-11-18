@@ -9,7 +9,6 @@ use crate::services::paths as paths;
 use base64::{Engine as _, engine::general_purpose::STANDARD as BASE64_STANDARD};
 use std::collections::HashMap;
 use std::ffi::OsStr;
-use std::os::unix::fs::FileExt;
 use std::path::Path;
 use std::sync::{Arc, Mutex};
 use tokio::fs;

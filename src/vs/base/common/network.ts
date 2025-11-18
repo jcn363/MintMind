@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as errors from './errors.js';
+import * as paths from './path.js';
 import * as platform from './platform.js';
 import { equalsIgnoreCase, startsWithIgnoreCase } from './strings.js';
 import { URI } from './uri.js';
-import * as paths from './path.js';
 
 export namespace Schemas {
 
@@ -265,11 +265,11 @@ export const nodeModulesPath: AppResourcePath = 'vs/../../node_modules';
 export const nodeModulesAsarPath: AppResourcePath = 'vs/../../node_modules.asar';
 export const nodeModulesAsarUnpackedPath: AppResourcePath = 'vs/../../node_modules.asar.unpacked';
 
-export const VSCODE_AUTHORITY = 'vscode-app';
+export const MINTMIND_AUTHORITY = 'vscode-app';
 
 class FileAccessImpl {
 
-	private static readonly FALLBACK_AUTHORITY = VSCODE_AUTHORITY;
+	private static readonly FALLBACK_AUTHORITY = MINTMIND_AUTHORITY;
 
 	/**
 	 * Returns a URI to use in contexts where the browser is responsible
@@ -355,8 +355,8 @@ class FileAccessImpl {
 			return uriOrModule;
 		}
 
-		if (globalThis._VSCODE_FILE_ROOT) {
-			const rootUriOrPath = globalThis._VSCODE_FILE_ROOT;
+		if (globalThis._MINTMIND_FILE_ROOT) {
+			const rootUriOrPath = globalThis._MINTMIND_FILE_ROOT;
 
 			// File URL (with scheme)
 			if (/^\w[\w\d+.-]*:\/\//.test(rootUriOrPath)) {

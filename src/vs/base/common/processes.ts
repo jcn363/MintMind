@@ -11,7 +11,7 @@ import { IProcessEnvironment, isLinux } from './platform.js';
 export interface CommandOptions {
 	/**
 	 * The current working directory of the executed program or shell.
-	 * If omitted VSCode's current workspace root is used.
+	 * If omitted MintMind's current workspace root is used.
 	 */
 	cwd?: string;
 
@@ -99,7 +99,7 @@ export interface ProcessItem {
 }
 
 /**
- * Sanitizes a VS Code process environment by removing all Electron/VS Code-related values.
+ * Sanitizes a MintMind process environment by removing all Electron/MintMind-related values.
  */
 export function sanitizeProcessEnvironment(env: IProcessEnvironment, ...preserve: string[]): void {
 	const set = preserve.reduce<Record<string, boolean>>((set, key) => {
@@ -107,8 +107,8 @@ export function sanitizeProcessEnvironment(env: IProcessEnvironment, ...preserve
 		return set;
 	}, {});
 	const keysToRemove = [
-		/^ELECTRON_.+$/,
-		/^VSCODE_(?!(PORTABLE|SHELL_LOGIN|ENV_REPLACE|ENV_APPEND|ENV_PREPEND)).+$/,
+		/^TAURI_.+$/,
+		/^MINTMIND_(?!(PORTABLE|SHELL_LOGIN|ENV_REPLACE|ENV_APPEND|ENV_PREPEND)).+$/,
 		/^SNAP(|_.*)$/,
 		/^GDK_PIXBUF_.+$/,
 	];
@@ -127,7 +127,7 @@ export function sanitizeProcessEnvironment(env: IProcessEnvironment, ...preserve
 
 /**
  * Remove dangerous environment variables that have caused crashes
- * in forked processes (i.e. in ELECTRON_RUN_AS_NODE processes)
+ * in forked processes (i.e. in TAURI_RUN_AS_NODE processes)
  *
  * @param env The env object to change
  */

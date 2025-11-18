@@ -2,11 +2,11 @@
 
 ## Resumen Ejecutivo
 
-MintMind es una implementación basada en VS Code que combina capacidades avanzadas de edición de código con integración nativa de IA a través del protocolo MCP (Model Context Protocol). Esta documentación describe la arquitectura técnica completa, incluyendo capas, componentes principales, flujos de datos y patrones de diseño utilizados.
+MintMind es una implementación basada en MintMind que combina capacidades avanzadas de edición de código con integración nativa de IA a través del protocolo MCP (Model Context Protocol). Esta documentación describe la arquitectura técnica completa, incluyendo capas, componentes principales, flujos de datos y patrones de diseño utilizados.
 
 ## Arquitectura General
 
-MintMind sigue una arquitectura modular en capas, inspirada en VS Code pero extendida con capacidades MCP para integración de IA. La arquitectura se divide en cuatro capas principales:
+MintMind sigue una arquitectura modular en capas, inspirada en MintMind pero extendida con capacidades MCP para integración de IA. La arquitectura se divide en cuatro capas principales:
 
 ```
 ┌─────────────────────────────────────────┐
@@ -22,7 +22,39 @@ MintMind sigue una arquitectura modular en capas, inspirada en VS Code pero exte
 │           Capa Base                    │
 │   (Utilidades, Tipos, Common)          │
 └─────────────────────────────────────────┘
-```
+
+## Directory Naming Convention
+
+### Historical Context: electron-main and electron-browser
+
+You may notice directory names like `electron-main` and `electron-browser` throughout the codebase. **These names are historical** and do not indicate Electron dependencies. They represent architectural layers:
+
+- **`electron-main`**: Code that runs in the **main process** (now Tauri's Rust backend)
+  - Examples: `src/vs/platform/window/electron-main/`, `src/vs/platform/lifecycle/electron-main/`
+  - Tauri equivalent: Rust commands in `src-tauri/src/`
+
+- **`electron-browser`**: Code that runs in the **renderer process** (now Tauri's webview)
+  - Examples: `src/vs/platform/window/electron-browser/`, `src/vs/base/parts/sandbox/electron-browser/`
+  - Tauri equivalent: Frontend TypeScript code using `@tauri-apps/api`
+
+### Why Keep These Names?
+
+1. **Architectural Clarity**: The names clearly distinguish main process vs. renderer process code
+2. **VS Code Compatibility**: Maintains compatibility with upstream VS Code architecture
+3. **Migration History**: Preserves git history and makes it easier to track changes
+4. **No Runtime Dependency**: The directory names are purely organizational—no Electron code remains
+
+### Tauri Architecture Mapping
+
+| Legacy (Electron) | Current (Tauri) | Purpose |
+|-------------------|-----------------|----------|
+| `electron-main` | Rust backend (`src-tauri/`) | Main process, native APIs |
+| `electron-browser` | TypeScript frontend + Tauri API | Renderer process, UI |
+| `ipcMain`/`ipcRenderer` | Tauri commands/events | Inter-process communication |
+| `BrowserWindow` | `WebviewWindow` | Window management |
+| Node.js modules | Rust crates | Native functionality |
+
+All Electron APIs have been replaced with Tauri equivalents. See `docs/TAURI_REMOVAL_COMPLETE.md` for details.
 
 ## Capas Arquitectónicas
 
@@ -236,7 +268,7 @@ Las extensiones siguen un patrón de contribución declarativa:
 - **Activation Events**: Eventos que activan extensiones
 - **Contribution Points**: Puntos de extensión declarativos
 - **Extension Host**: Entorno de ejecución aislado
-- **API de Extensiones**: Interfaz para interactuar con VS Code
+- **API de Extensiones**: Interfaz para interactuar con MintMind
 
 ## Patrón de Comunicación
 
@@ -295,4 +327,4 @@ MintMind utiliza múltiples protocolos de comunicación:
 
 ## Conclusión
 
-La arquitectura de MintMind combina lo mejor de VS Code con capacidades avanzadas de IA a través de MCP. La separación clara en capas, los patrones de diseño consistentes y la arquitectura modular permiten una plataforma extensible, mantenible y de alto rendimiento que puede adaptarse a futuras necesidades mientras mantiene compatibilidad con el ecosistema de extensiones existente.
+La arquitectura de MintMind combina lo mejor de MintMind con capacidades avanzadas de IA a través de MCP. La separación clara en capas, los patrones de diseño consistentes y la arquitectura modular permiten una plataforma extensible, mantenible y de alto rendimiento que puede adaptarse a futuras necesidades mientras mantiene compatibilidad con el ecosistema de extensiones existente.

@@ -24,7 +24,7 @@ namespace SchemaAssociationNotification {
 	export const type: NotificationType<ISchemaAssociations | SchemaConfiguration[]> = new NotificationType('json/schemaAssociations');
 }
 
-namespace VSCodeContentRequest {
+namespace MintMindContentRequest {
 	export const type: RequestType<string, string, any> = new RequestType('vscode/content');
 }
 
@@ -100,7 +100,7 @@ export function startServer(connection: Connection, runtime: RuntimeEnvironment)
 			if (builtInHandler) {
 				return builtInHandler.getContent(uri);
 			}
-			return connection.sendRequest(VSCodeContentRequest.type, uri).then(responseText => {
+			return connection.sendRequest(MintMindndContentRequest.type, uri).then(responseText => {
 				return responseText;
 			}, error => {
 				return Promise.reject(error.message);
@@ -385,7 +385,7 @@ export function startServer(connection: Connection, runtime: RuntimeEnvironment)
 	}
 
 	connection.onDidChangeWatchedFiles((change) => {
-		// Monitored files have changed in VSCode
+		// Monitored files have changed in MintMindnd
 		let hasChanges = false;
 		change.changes.forEach(c => {
 			if (languageService.resetSchema(c.uri)) {

@@ -14,14 +14,14 @@ use std::time::{Duration, Instant};
 
 use hyper::server::Server;
 use hyper::service::{make_service_fn, service_fn};
-use hyper::{Body, Request, Response};
+use hyper::{client::conn, body::Body, Request, Response};
 use tokio::io::{AsyncBufReadExt, BufReader};
 use tokio::{pin, time};
 
 use crate::async_pipe::{
 	get_socket_name, get_socket_rw_stream, listen_socket_rw_stream, AsyncPipe,
 };
-use crate::constants::VSCODE_CLI_QUALITY;
+use crate::constants::MINTMIND_CLI_QUALITY;
 use crate::download_cache::DownloadCache;
 use crate::log;
 use crate::options::Quality;
@@ -44,7 +44,7 @@ use super::{args::ServeWebArgs, CommandContext};
 
 /// Length of a commit hash, for validation
 const COMMIT_HASH_LEN: usize = 40;
-/// Number of seconds where, if there's no connections to a VS Code server,
+/// Number of seconds where, if there's no connections to a MintMind server,
 /// the server is shut down.
 const SERVER_IDLE_TIMEOUT_SECS: u64 = 60 * 60;
 /// Number of seconds in which the server times out when there is a connection
@@ -63,10 +63,10 @@ const PATH_COOKIE_NAME: &str = "vscode-secret-key-path";
 const SECRET_KEY_COOKIE_NAME: &str = "vscode-cli-secret-half";
 
 /// Implements the vscode "server of servers". Clients who go to the URI get
-/// served the latest version of the VS Code server whenever they load the
-/// page. The VS Code server prefixes all assets and connections it loads with
+/// served the latest version of the MintMind server whenever they load the
+/// page. The MintMind server prefixes all assets and connections it loads with
 /// its version string, so existing clients can continue to get served even
-/// while new clients get new VS Code Server versions.
+/// while new clients get new MintMind Server versions.
 pub async fn serve_web(ctx: CommandContext, mut args: ServeWebArgs) -> Result<i32, AnyError> {
 	legal::require_consent(&ctx.paths, args.accept_server_license_terms)?;
 
@@ -250,7 +250,7 @@ fn append_secret_headers(
 	);
 }
 
-/// Gets the release info from the VS Code path prefix, which is in the
+/// Gets the release info from the MintMind path prefix, which is in the
 /// format `/<quality>-<commit>/...`
 fn get_release_from_path(path: &str, platform: Platform) -> Option<(Release, String)> {
 	if !path.starts_with('/') {
@@ -288,7 +288,7 @@ async fn forward_http_req_to_server(
 	req: Request<Body>,
 ) -> Response<Body> {
 	let (mut request_sender, connection) =
-		match hyper::client::conn::Builder::new().handshake(rw).await {
+		match conn::http1::Builder::new().handshake(rw).await {
 			Ok(r) => r,
 			Err(e) => return response::connection_err(e),
 		};
@@ -317,7 +317,7 @@ async fn forward_ws_req_to_server(
 ) -> Response<Body> {
 	// splicing of client and servers inspired by https://github.com/hyperium/hyper/blob/fece9f7f50431cf9533cfe7106b53a77b48db699/examples/upgrades.rs
 	let (mut request_sender, connection) =
-		match hyper::client::conn::Builder::new().handshake(rw).await {
+		match conn::http1::Builder::new().handshake(rw).await {
 			Ok(r) => r,
 			Err(e) => return response::connection_err(e),
 		};
@@ -554,7 +554,7 @@ impl ConnectionManager {
 		let cache = DownloadCache::new(ctx.paths.web_server_storage());
 		let target_kind = TargetKind::Web;
 
-		let quality = VSCODE_CLI_QUALITY.map_or(Quality::Stable, |q| match Quality::try_from(q) {
+		let quality = MINTMIND_CLI_QUALITY.map_or(Quality::Stable, |q| match Quality::try_from(q) {
 			Ok(q) => q,
 			Err(_) => Quality::Stable,
 		});
@@ -634,7 +634,7 @@ impl ConnectionManager {
 		let now = Instant::now();
 		let target_kind = TargetKind::Web;
 
-		let quality = VSCODE_CLI_QUALITY
+		let quality = MINTMIND_CLI_QUALITY
 			.ok_or_else(|| CodeError::UpdatesNotConfigured("no configured quality"))
 			.and_then(|q| {
 				Quality::try_from(q).map_err(|_| CodeError::UpdatesNotConfigured("unknown quality"))
@@ -676,7 +676,7 @@ impl ConnectionManager {
 		Ok(release)
 	}
 
-	/// Gets the StartData for the a version of the VS Code server, triggering
+	/// Gets the StartData for the a version of the MintMind server, triggering
 	/// download/start if necessary. It returns `CodeError::ServerNotYetDownloaded`
 	/// while the server is downloading, which is used to have a refresh loop on the page.
 	async fn get_version_data(&self, release: Release) -> Result<StartData, CodeError> {
@@ -816,7 +816,7 @@ impl ConnectionManager {
 		}
 
 		// removed, otherwise the workbench will not be usable when running the CLI from sources.
-		cmd.env_remove("VSCODE_DEV");
+		cmd.env_remove("MINTMIND_DEV");
 
 		let mut child = match cmd.spawn() {
 			Ok(c) => c,

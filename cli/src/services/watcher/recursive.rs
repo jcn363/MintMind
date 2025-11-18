@@ -213,6 +213,7 @@ mod tests {
     use std::fs;
     use tempfile::tempdir;
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_recursive_watcher_creation() {
         let temp_dir = tempdir().unwrap();

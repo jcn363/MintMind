@@ -5,15 +5,15 @@
 
 import assert from 'assert';
 import { Event } from '../../../../common/event.js';
+import { FileAccess } from '../../../../common/network.js';
 import { IChannel } from '../../common/ipc.js';
 import { Client } from '../../node/ipc.cp.js';
 import { ITestService, TestServiceClient } from './testService.js';
-import { FileAccess } from '../../../../common/network.js';
 
 function createClient(): Client {
 	return new Client(FileAccess.asFileUri('bootstrap-fork').fsPath, {
 		serverName: 'TestServer',
-		env: { VSCODE_ESM_ENTRYPOINT: 'vs/base/parts/ipc/test/node/testApp', verbose: true }
+		env: { MINTMIND_ESM_ENTRYPOINT: 'vs/base/parts/ipc/test/node/testApp', verbose: true }
 	});
 }
 

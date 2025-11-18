@@ -17,7 +17,7 @@ Este documento describe la configuración alternativa de build que reemplaza el 
 
 ### `esbuild.config.mjs`
 Configuración principal declarativa con esbuild. Define targets para:
-- **main**: Código principal de VSCode
+- **main**: Código principal de MintMind
 - **extensions**: Extensiones comunes
 - **webviews**: Webviews de extensiones (usa configuración existente)
 - **cli**: Herramientas de línea de comandos
@@ -150,7 +150,7 @@ bun add -D esbuild @swc/core @swc/cli glob
 
 - Requiere Node.js 18+ para características modernas
 - Algunos plugins Gulp pueden necesitar adaptación
-- La configuración es específica para VSCode - ajustar según necesidades
+- La configuración es específica para MintMind - ajustar según necesidades
 - SWC es opcional pero recomendado para máximo rendimiento
 
 ## 🎯 Próximos Pasos

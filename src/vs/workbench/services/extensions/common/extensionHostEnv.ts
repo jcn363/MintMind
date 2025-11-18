@@ -15,7 +15,7 @@ export const enum ExtHostConnectionType {
  * The extension host will connect via named pipe / domain socket to its renderer.
  */
 export class IPCExtHostConnection {
-	public static ENV_KEY = 'VSCODE_EXTHOST_IPC_HOOK';
+	public static ENV_KEY = 'MINTMIND_EXTHOST_IPC_HOOK';
 
 	public readonly type = ExtHostConnectionType.IPC;
 
@@ -32,7 +32,7 @@ export class IPCExtHostConnection {
  * The extension host will receive via nodejs IPC the socket to its renderer.
  */
 export class SocketExtHostConnection {
-	public static ENV_KEY = 'VSCODE_EXTHOST_WILL_SEND_SOCKET';
+	public static ENV_KEY = 'MINTMIND_EXTHOST_WILL_SEND_SOCKET';
 
 	public readonly type = ExtHostConnectionType.Socket;
 
@@ -45,7 +45,7 @@ export class SocketExtHostConnection {
  * The extension host will receive via nodejs IPC the MessagePort to its renderer.
  */
 export class MessagePortExtHostConnection {
-	public static ENV_KEY = 'VSCODE_WILL_SEND_MESSAGE_PORT';
+	public static ENV_KEY = 'MINTMIND_WILL_SEND_MESSAGE_PORT';
 
 	public readonly type = ExtHostConnectionType.MessagePort;
 

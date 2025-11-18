@@ -668,7 +668,7 @@ describe('MCP Integration', () => {
     });
   });
 
-  describe('Integración con aplicación VS Code', () => {
+  describe('Integración con aplicación MintMind', () => {
     it('debe integrar MCP con servicios del workbench', async () => {
       // Arrange
       const mockApplicationService = {

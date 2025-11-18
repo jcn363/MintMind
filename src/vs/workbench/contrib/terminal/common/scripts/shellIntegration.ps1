@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------------------------------------
 
 # Prevent installing more than once per session
-if ((Test-Path variable:global:__VSCodeState) -and $null -ne $Global:__VSCodeState.OriginalPrompt) {
+if ((Test-Path variable:global:__MintMindState) -and $null -ne $Global:__MintMindState.OriginalPrompt) {
 	return;
 }
 
@@ -13,7 +13,7 @@ if ($ExecutionContext.SessionState.LanguageMode -ne "FullLanguage") {
 	return;
 }
 
-$Global:__VSCodeState = @{
+$Global:__MintMindState = @{
 	OriginalPrompt = $function:Prompt
 	LastHistoryId = -1
 	IsInExecution = $false
@@ -27,71 +27,71 @@ $Global:__VSCodeState = @{
 # Store the nonce in a regular variable and unset the environment variable. It's by design that
 # anything that can execute PowerShell code can read the nonce, as it's basically impossible to hide
 # in PowerShell. The most important thing is getting it out of the environment.
-$Global:__VSCodeState.Nonce = $env:VSCODE_NONCE
-$env:VSCODE_NONCE = $null
+$Global:__MintMindState.Nonce = $env:MINTMIND_NONCE
+$env:MINTMIND_NONCE = $null
 
-$Global:__VSCodeState.IsStable = $env:VSCODE_STABLE
-$env:VSCODE_STABLE = $null
+$Global:__MintMindState.IsStable = $env:MINTMIND_STABLE
+$env:MINTMIND_STABLE = $null
 
-$Global:__VSCodeState.IsA11yMode = $env:VSCODE_A11Y_MODE
-$env:VSCODE_A11Y_MODE = $null
+$Global:__MintMindState.IsA11yMode = $env:MINTMIND_A11Y_MODE
+$env:MINTMIND_A11Y_MODE = $null
 
-$__vscode_shell_env_reporting = $env:VSCODE_SHELL_ENV_REPORTING
-$env:VSCODE_SHELL_ENV_REPORTING = $null
+$__vscode_shell_env_reporting = $env:MINTMIND_SHELL_ENV_REPORTING
+$env:MINTMIND_SHELL_ENV_REPORTING = $null
 if ($__vscode_shell_env_reporting) {
-	$Global:__VSCodeState.EnvVarsToReport = $__vscode_shell_env_reporting.Split(',')
+	$Global:__MintMindState.EnvVarsToReport = $__vscode_shell_env_reporting.Split(',')
 }
 Remove-Variable -Name __vscode_shell_env_reporting -ErrorAction SilentlyContinue
 
 $osVersion = [System.Environment]::OSVersion.Version
-$Global:__VSCodeState.IsWindows10 = $IsWindows -and $osVersion.Major -eq 10 -and $osVersion.Minor -eq 0 -and $osVersion.Build -lt 22000
+$Global:__MintMindState.IsWindows10 = $IsWindows -and $osVersion.Major -eq 10 -and $osVersion.Minor -eq 0 -and $osVersion.Build -lt 22000
 Remove-Variable -Name osVersion -ErrorAction SilentlyContinue
 
-if ($env:VSCODE_ENV_REPLACE) {
-	$Split = $env:VSCODE_ENV_REPLACE.Split(":")
+if ($env:MINTMIND_ENV_REPLACE) {
+	$Split = $env:MINTMIND_ENV_REPLACE.Split(":")
 	foreach ($Item in $Split) {
 		$Inner = $Item.Split('=', 2)
 		[Environment]::SetEnvironmentVariable($Inner[0], $Inner[1].Replace('\x3a', ':'))
 	}
-	$env:VSCODE_ENV_REPLACE = $null
+	$env:MINTMIND_ENV_REPLACE = $null
 }
-if ($env:VSCODE_ENV_PREPEND) {
-	$Split = $env:VSCODE_ENV_PREPEND.Split(":")
+if ($env:MINTMIND_ENV_PREPEND) {
+	$Split = $env:MINTMIND_ENV_PREPEND.Split(":")
 	foreach ($Item in $Split) {
 		$Inner = $Item.Split('=', 2)
 		[Environment]::SetEnvironmentVariable($Inner[0], $Inner[1].Replace('\x3a', ':') + [Environment]::GetEnvironmentVariable($Inner[0]))
 	}
-	$env:VSCODE_ENV_PREPEND = $null
+	$env:MINTMIND_ENV_PREPEND = $null
 }
-if ($env:VSCODE_ENV_APPEND) {
-	$Split = $env:VSCODE_ENV_APPEND.Split(":")
+if ($env:MINTMIND_ENV_APPEND) {
+	$Split = $env:MINTMIND_ENV_APPEND.Split(":")
 	foreach ($Item in $Split) {
 		$Inner = $Item.Split('=', 2)
 		[Environment]::SetEnvironmentVariable($Inner[0], [Environment]::GetEnvironmentVariable($Inner[0]) + $Inner[1].Replace('\x3a', ':'))
 	}
-	$env:VSCODE_ENV_APPEND = $null
+	$env:MINTMIND_ENV_APPEND = $null
 }
 
 # Register Python shell activate hooks
 # Prevent multiple activation with guard
-if (-not $env:VSCODE_PYTHON_AUTOACTIVATE_GUARD) {
-	$env:VSCODE_PYTHON_AUTOACTIVATE_GUARD = '1'
-	if ($env:VSCODE_PYTHON_PWSH_ACTIVATE -and $env:TERM_PROGRAM -eq 'vscode') {
-		$activateScript = $env:VSCODE_PYTHON_PWSH_ACTIVATE
-		Remove-Item Env:VSCODE_PYTHON_PWSH_ACTIVATE
+if (-not $env:MINTMIND_PYTHON_AUTOACTIVATE_GUARD) {
+	$env:MINTMIND_PYTHON_AUTOACTIVATE_GUARD = '1'
+	if ($env:MINTMIND_PYTHON_PWSH_ACTIVATE -and $env:TERM_PROGRAM -eq 'vscode') {
+		$activateScript = $env:MINTMIND_PYTHON_PWSH_ACTIVATE
+		Remove-Item Env:MINTMIND_PYTHON_PWSH_ACTIVATE
 
 		try {
 			Invoke-Expression $activateScript
-			$Global:__VSCodeState.OriginalPrompt = $function:Prompt
+			$Global:__MintMindState.OriginalPrompt = $function:Prompt
 		}
 		catch {
 			$activationError = $_
-			Write-Host "`e[0m`e[7m * `e[0;103m VS Code Python powershell activation failed with exit code $($activationError.Exception.Message) `e[0m"
+			Write-Host "`e[0m`e[7m * `e[0;103m MintMind Python powershell activation failed with exit code $($activationError.Exception.Message) `e[0m"
 		}
 	}
 }
 
-function Global:__VSCode-Escape-Value([string]$value) {
+function Global:__MintMind-Escape-Value([string]$value) {
 	# NOTE: In PowerShell v6.1+, this can be written `$value -replace '…', { … }` instead of `[regex]::Replace`.
 	# Replace any non-alphanumeric characters.
 	[regex]::Replace($value, "[$([char]0x00)-$([char]0x1f)\\\n;]", { param($match)
@@ -111,9 +111,9 @@ function Global:Prompt() {
 	$Result = ""
 	# Skip finishing the command if the first command has not yet started or an execution has not
 	# yet begun
-	if ($Global:__VSCodeState.LastHistoryId -ne -1 -and ($Global:__VSCodeState.HasPSReadLine -eq $false -or $Global:__VSCodeState.IsInExecution -eq $true)) {
-		$Global:__VSCodeState.IsInExecution = $false
-		if ($LastHistoryEntry.Id -eq $Global:__VSCodeState.LastHistoryId) {
+	if ($Global:__MintMindState.LastHistoryId -ne -1 -and ($Global:__MintMindState.HasPSReadLine -eq $false -or $Global:__MintMindState.IsInExecution -eq $true)) {
+		$Global:__MintMindState.IsInExecution = $false
+		if ($LastHistoryEntry.Id -eq $Global:__MintMindState.LastHistoryId) {
 			# Don't provide a command line or exit code if there was no history entry (eg. ctrl+c, enter on no command)
 			$Result += "$([char]0x1b)]633;D`a"
 		}
@@ -128,19 +128,19 @@ function Global:Prompt() {
 	$Result += "$([char]0x1b)]633;A`a"
 	# Current working directory
 	# OSC 633 ; <Property>=<Value> ST
-	$Result += if ($pwd.Provider.Name -eq 'FileSystem') { "$([char]0x1b)]633;P;Cwd=$(__VSCode-Escape-Value $pwd.ProviderPath)`a" }
+	$Result += if ($pwd.Provider.Name -eq 'FileSystem') { "$([char]0x1b)]633;P;Cwd=$(__MintMind-Escape-Value $pwd.ProviderPath)`a" }
 
 	# Send current environment variables as JSON
 	# OSC 633 ; EnvJson ; <Environment> ; <Nonce>
-	if ($Global:__VSCodeState.EnvVarsToReport.Count -gt 0) {
+	if ($Global:__MintMindState.EnvVarsToReport.Count -gt 0) {
 		$envMap = @{}
-        foreach ($varName in $Global:__VSCodeState.EnvVarsToReport) {
+        foreach ($varName in $Global:__MintMindState.EnvVarsToReport) {
             if (Test-Path "env:$varName") {
                 $envMap[$varName] = (Get-Item "env:$varName").Value
             }
         }
         $envJson = $envMap | ConvertTo-Json -Compress
-        $Result += "$([char]0x1b)]633;EnvJson;$(__VSCode-Escape-Value $envJson);$($Global:__VSCodeState.Nonce)`a"
+        $Result += "$([char]0x1b)]633;EnvJson;$(__MintMind-Escape-Value $envJson);$($Global:__MintMindState.Nonce)`a"
 	}
 
 	# Before running the original prompt, put $? back to what it was:
@@ -148,18 +148,18 @@ function Global:Prompt() {
 		Write-Error "failure" -ea ignore
 	}
 	# Run the original prompt
-	$OriginalPrompt += $Global:__VSCodeState.OriginalPrompt.Invoke()
+	$OriginalPrompt += $Global:__MintMindState.OriginalPrompt.Invoke()
 	$Result += $OriginalPrompt
 
 	# Prompt
 	# OSC 633 ; <Property>=<Value> ST
-	if ($Global:__VSCodeState.IsStable -eq "0") {
-		$Result += "$([char]0x1b)]633;P;Prompt=$(__VSCode-Escape-Value $OriginalPrompt)`a"
+	if ($Global:__MintMindState.IsStable -eq "0") {
+		$Result += "$([char]0x1b)]633;P;Prompt=$(__MintMind-Escape-Value $OriginalPrompt)`a"
 	}
 
 	# Write command started
 	$Result += "$([char]0x1b)]633;B`a"
-	$Global:__VSCodeState.LastHistoryId = $LastHistoryEntry.Id
+	$Global:__MintMindState.LastHistoryId = $LastHistoryEntry.Id
 	return $Result
 }
 
@@ -174,7 +174,7 @@ elseif ((Test-Path variable:global:GitPromptSettings) -and $Global:GitPromptSett
 	[Console]::Write("$([char]0x1b)]633;P;PromptType=posh-git`a")
 }
 
-if ($Global:__VSCodeState.IsA11yMode -eq "1") {
+if ($Global:__MintMindState.IsA11yMode -eq "1") {
 	if (-not (Get-Module -Name PSReadLine)) {
 		$scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 		$specialPsrlPath = Join-Path $scriptRoot 'psreadline'
@@ -187,24 +187,24 @@ if ($Global:__VSCodeState.IsA11yMode -eq "1") {
 
 # Only send the command executed sequence when PSReadLine is loaded, if not shell integration should
 # still work thanks to the command line sequence
-$Global:__VSCodeState.HasPSReadLine = $false
+$Global:__MintMindState.HasPSReadLine = $false
 if (Get-Module -Name PSReadLine) {
-	$Global:__VSCodeState.HasPSReadLine = $true
+	$Global:__MintMindState.HasPSReadLine = $true
 	[Console]::Write("$([char]0x1b)]633;P;HasRichCommandDetection=True`a")
 
-	$Global:__VSCodeState.OriginalPSConsoleHostReadLine = $function:PSConsoleHostReadLine
+	$Global:__MintMindState.OriginalPSConsoleHostReadLine = $function:PSConsoleHostReadLine
 	function Global:PSConsoleHostReadLine {
-		$CommandLine = $Global:__VSCodeState.OriginalPSConsoleHostReadLine.Invoke()
-		$Global:__VSCodeState.IsInExecution = $true
+		$CommandLine = $Global:__MintMindState.OriginalPSConsoleHostReadLine.Invoke()
+		$Global:__MintMindState.IsInExecution = $true
 
 		# Command line
 		# OSC 633 ; E [; <CommandLine> [; <Nonce>]] ST
 		$Result = "$([char]0x1b)]633;E;"
-		$Result += $(__VSCode-Escape-Value $CommandLine)
+		$Result += $(__MintMind-Escape-Value $CommandLine)
 		# Only send the nonce if the OS is not Windows 10 as it seems to echo to the terminal
 		# sometimes
-		if ($Global:__VSCodeState.IsWindows10 -eq $false) {
-			$Result += ";$($Global:__VSCodeState.Nonce)"
+		if ($Global:__MintMindState.IsWindows10 -eq $false) {
+			$Result += ";$($Global:__MintMindState.Nonce)"
 		}
 		$Result += "`a"
 
@@ -219,9 +219,9 @@ if (Get-Module -Name PSReadLine) {
 	}
 
 	# Set ContinuationPrompt property
-	$Global:__VSCodeState.ContinuationPrompt = (Get-PSReadLineOption).ContinuationPrompt
-	if ($Global:__VSCodeState.ContinuationPrompt) {
-		[Console]::Write("$([char]0x1b)]633;P;ContinuationPrompt=$(__VSCode-Escape-Value $Global:__VSCodeState.ContinuationPrompt)`a")
+	$Global:__MintMindState.ContinuationPrompt = (Get-PSReadLineOption).ContinuationPrompt
+	if ($Global:__MintMindState.ContinuationPrompt) {
+		[Console]::Write("$([char]0x1b)]633;P;ContinuationPrompt=$(__MintMind-Escape-Value $Global:__MintMindState.ContinuationPrompt)`a")
 	}
 }
 
@@ -234,7 +234,7 @@ else {
 	[Console]::Write("$([char]0x1b)]633;P;IsWindows=$IsWindows`a")
 }
 
-# Set always on key handlers which map to default VS Code keybindings
+# Set always on key handlers which map to default MintMind keybindings
 function Set-MappedKeyHandler {
 	param ([string[]] $Chord, [string[]]$Sequence)
 	try {
@@ -257,6 +257,6 @@ function Set-MappedKeyHandlers {
 	Set-MappedKeyHandler -Chord Shift+End -Sequence 'F12,d'
 }
 
-if ($Global:__VSCodeState.HasPSReadLine) {
+if ($Global:__MintMindState.HasPSReadLine) {
 	Set-MappedKeyHandlers
 }

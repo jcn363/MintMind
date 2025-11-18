@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>VSCode Tests</title>
+	<title>MintMind Tests</title>
 	<link href="../../../node_modules/mocha/mocha.css" rel="stylesheet" />
 </head>
 
@@ -111,7 +111,7 @@
 			style.type = 'text/css';
 			document.head.appendChild(style);
 
-			globalThis._VSCODE_CSS_LOAD = function (url) {
+			globalThis._MINTMIND_CSS_LOAD = function (url) {
 				// debugger;
 				style.sheet.insertRule(`@import url(${url});`);
 			};
@@ -121,7 +121,7 @@
 				const cssModules = value.split(',');
 				for (const cssModule of cssModules) {
 					const cssUrl = new URL(`../../../${out}/${cssModule}`, baseUrl).href;
-					const jsSrc = `globalThis._VSCODE_CSS_LOAD('${cssUrl}');\n`;
+					const jsSrc = `globalThis._MINTMIND_CSS_LOAD('${cssUrl}');\n`;
 					const blob = new Blob([jsSrc], { type: 'application/javascript' });
 					importMap.imports[cssUrl] = URL.createObjectURL(blob);
 				}
@@ -148,7 +148,7 @@
 
 		// set up require
 
-		globalThis._VSCODE_FILE_ROOT = new URL('../../../src', baseUrl).href;
+		globalThis._MINTMIND_FILE_ROOT = new URL('../../../src', baseUrl).href;
 		globalThis.require = {
 			paths: {
 				xterm: new URL('../../../node_modules/xterm', baseUrl).href,
@@ -245,7 +245,7 @@
 
 		let _resolveTestData;
 		let _resolveTestRun;
-		globalThis._VSCODE_TEST_RUN = new Promise(resolve => _resolveTestData = resolve)
+		globalThis._MINTMIND_TEST_RUN = new Promise(resolve => _resolveTestData = resolve)
 
 		window.loadAndRun = async function loadAndRun(data, manual = false) {
 			_resolveTestData({data, manual})
@@ -261,7 +261,7 @@
 	</script>
 
 	<script type="text" id="bootstrap">
-		const {data: {modules, grep}, manual} = await globalThis._VSCODE_TEST_RUN
+		const {data: {modules, grep}, manual} = await globalThis._MINTMIND_TEST_RUN
 
 		// load
 		await loadModules(modules);

@@ -7,7 +7,7 @@ import { networkInterfaces } from 'os';
 import { TernarySearchTree } from '../common/ternarySearchTree.js';
 import * as uuid from '../common/uuid.js';
 import { getMac } from './macAddress.js';
-import { isWindows } from '../common/platform.js';
+import { isWindows, isTauriMode } from '../common/platform.js';
 
 // http://www.techrepublic.com/blog/data-center/mac-address-scorecard-for-common-virtual-machine-platforms/
 // VMware ESX 3, Server, Workstation, Player	00-50-56, 00-0C-29, 00-05-69
@@ -102,8 +102,30 @@ async function getMacMachineId(errorLogger: (error: Error) => void): Promise<str
 }
 
 const SQM_KEY: string = 'Software\\Microsoft\\SQMClient';
+let tauriInvoke: any;
 export async function getSqmMachineId(errorLogger: (error: Error) => void): Promise<string> {
-	if (isWindows) {
+	if (!isWindows) {
+		return '';
+	}
+
+	if (isTauriMode()) {
+		try {
+			if (!tauriInvoke) {
+				const { invoke } = await import('@tauri-apps/api/core');
+				tauriInvoke = invoke;
+			}
+			const result = await tauriInvoke('windows_get_string_reg_key', {
+				hive: 'HKEY_LOCAL_MACHINE',
+				path: SQM_KEY,
+				name: 'MachineId'
+			});
+			return result || '';
+		} catch (err) {
+			errorLogger(err as Error);
+			return '';
+		}
+	} else {
+		// Electron fallback
 		const Registry = await import('@vscode/windows-registry');
 		try {
 			return Registry.GetStringRegKey('HKEY_LOCAL_MACHINE', SQM_KEY, 'MachineId') || '';
@@ -112,7 +134,6 @@ export async function getSqmMachineId(errorLogger: (error: Error) => void): Prom
 			return '';
 		}
 	}
-	return '';
 }
 
 export async function getDevDeviceId(errorLogger: (error: Error) => void): Promise<string> {

@@ -23,7 +23,7 @@ import { hash } from './utils/hash';
 import { createDocumentSymbolsLimitItem, createLanguageStatusItem, createLimitStatusItem } from './languageStatus';
 import { getLanguageParticipants, LanguageParticipants } from './languageParticipants';
 
-namespace VSCodeContentRequest {
+namespace MintMindContentRequest {
 	export const type: RequestType<string, string, any> = new RequestType('vscode/content');
 }
 
@@ -369,7 +369,7 @@ async function startClientWithParticipants(_context: ExtensionContext, languageP
 	const schemaDocuments: { [uri: string]: boolean } = {};
 
 	// handle content request
-	client.onRequest(VSCodeContentRequest.type, async (uriPath: string) => {
+	client.onRequest(MintMindndContentRequest.type, async (uriPath: string) => {
 		const uri = Uri.parse(uriPath);
 		const uriString = uri.toString(true);
 		if (uri.scheme === 'untitled') {

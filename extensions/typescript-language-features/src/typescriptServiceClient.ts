@@ -12,7 +12,7 @@ import { Schemes } from './configuration/schemes';
 import { IExperimentationTelemetryReporter } from './experimentTelemetryReporter';
 import { DiagnosticKind, DiagnosticsManager } from './languageFeatures/diagnostics';
 import { Logger } from './logging/logger';
-import { TelemetryReporter, VSCodeTelemetryReporter } from './logging/telemetry';
+import { TelemetryReporter, MintMindTelemetryReporter } from './logging/telemetry';
 import Tracer from './logging/tracer';
 import { ProjectType, inferredProjectCompilerOptions } from './tsconfig';
 import { API } from './tsServer/api';
@@ -226,7 +226,7 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 			}
 		}, this, this._disposables);
 
-		this.telemetryReporter = new VSCodeTelemetryReporter(services.experimentTelemetryReporter, () => {
+		this.telemetryReporter = new MintMindndTelemetryReporter(services.experimentTelemetryReporter, () => {
 			if (this.serverState.type === ServerState.Type.Running) {
 				if (this.serverState.tsserverVersion) {
 					return this.serverState.tsserverVersion;
@@ -659,7 +659,7 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 					this.hasServerFatallyCrashedTooManyTimes = true;
 					if (this.pluginManager.plugins.length) {
 						prompt = vscode.window.showErrorMessage<vscode.MessageItem>(
-							vscode.l10n.t("The JS/TS language service immediately crashed 5 times. The service will not be restarted.\nThis may be caused by a plugin contributed by one of these extensions: {0}.\nPlease try disabling these extensions before filing an issue against VS Code.", pluginExtensionList));
+							vscode.l10n.t("The JS/TS language service immediately crashed 5 times. The service will not be restarted.\nThis may be caused by a plugin contributed by one of these extensions: {0}.\nPlease try disabling these extensions before filing an issue against MintMind.", pluginExtensionList));
 					} else {
 						prompt = vscode.window.showErrorMessage(
 							vscode.l10n.t("The JS/TS language service immediately crashed 5 times. The service will not be restarted."),
@@ -680,7 +680,7 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 					if (!this._isPromptingAfterCrash) {
 						if (this.pluginManager.plugins.length) {
 							prompt = vscode.window.showWarningMessage<vscode.MessageItem>(
-								vscode.l10n.t("The JS/TS language service crashed 5 times in the last 5 Minutes.\nThis may be caused by a plugin contributed by one of these extensions: {0}\nPlease try disabling these extensions before filing an issue against VS Code.", pluginExtensionList));
+								vscode.l10n.t("The JS/TS language service crashed 5 times in the last 5 Minutes.\nThis may be caused by a plugin contributed by one of these extensions: {0}\nPlease try disabling these extensions before filing an issue against MintMind.", pluginExtensionList));
 						} else {
 							prompt = vscode.window.showWarningMessage(
 								vscode.l10n.t("The JS/TS language service crashed 5 times in the last 5 Minutes."),
@@ -694,7 +694,7 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 				if (!this._isPromptingAfterCrash) {
 					if (this.pluginManager.plugins.length) {
 						prompt = vscode.window.showWarningMessage<vscode.MessageItem>(
-							vscode.l10n.t("The JS/TS language service crashed.\nThis may be caused by a plugin contributed by one of these extensions: {0}.\nPlease try disabling these extensions before filing an issue against VS Code.", pluginExtensionList));
+							vscode.l10n.t("The JS/TS language service crashed.\nThis may be caused by a plugin contributed by one of these extensions: {0}.\nPlease try disabling these extensions before filing an issue against MintMind.", pluginExtensionList));
 					} else {
 						prompt = vscode.window.showWarningMessage(
 							vscode.l10n.t("The JS/TS language service crashed."),

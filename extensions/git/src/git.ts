@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { promises as fs, exists, realpath } from 'fs';
-import * as path from 'path';
-import * as os from 'os';
+import * as byline from 'byline';
 import * as cp from 'child_process';
-import { fileURLToPath } from 'url';
-import which from 'which';
 import { EventEmitter } from 'events';
 import * as filetype from 'file-type';
-import { assign, groupBy, IDisposable, toDisposable, dispose, mkdirp, readBytes, detectUnicodeEncoding, Encoding, onceEvent, splitInChunks, Limiter, Versions, isWindows, pathEquals, isMacintosh, isDescendant, relativePathWithNoFallback, Mutable } from './util';
-import { CancellationError, CancellationToken, ConfigurationChangeEvent, LogOutputChannel, Progress, Uri, workspace } from 'vscode';
-import { Commit as ApiCommit, Ref, RefType, Branch, Remote, ForcePushMode, GitErrorCodes, LogOptions, Change, Status, CommitOptions, RefQuery as ApiRefQuery, InitOptions } from './api/git';
-import * as byline from 'byline';
+import { exists, promises as fs, realpath } from 'fs';
+import * as os from 'os';
+import * as path from 'path';
 import { StringDecoder } from 'string_decoder';
+import { fileURLToPath } from 'url';
+import { CancellationError, CancellationToken, ConfigurationChangeEvent, LogOutputChannel, Progress, Uri, workspace } from 'vscode';
+import which from 'which';
+import { Commit as ApiCommit, RefQuery as ApiRefQuery, Branch, Change, CommitOptions, ForcePushMode, GitErrorCodes, InitOptions, LogOptions, Ref, RefType, Remote, Status } from './api/git';
+import { Encoding, IDisposable, Limiter, Mutable, Versions, assign, detectUnicodeEncoding, dispose, groupBy, isDescendant, isMacintosh, isWindows, mkdirp, onceEvent, pathEquals, readBytes, relativePathWithNoFallback, splitInChunks, toDisposable } from './util';
 
 // https://github.com/microsoft/vscode/issues/65693
 const MAX_CLI_LENGTH = 30000;
@@ -675,7 +675,7 @@ export class Git {
 		}
 
 		options.env = assign({}, process.env, this.env, options.env || {}, {
-			VSCODE_GIT_COMMAND: args[0],
+			MINTMIND_GIT_COMMAND: args[0],
 			LC_ALL: 'en_US.UTF-8',
 			LANG: 'en_US.UTF-8',
 			GIT_PAGER: 'cat'
@@ -2216,7 +2216,7 @@ export class Repository {
 		}
 
 		if (options.silent) {
-			spawnOptions.env!['VSCODE_GIT_FETCH_SILENT'] = 'true';
+			spawnOptions.env!['MINTMIND_GIT_FETCH_SILENT'] = 'true';
 		}
 
 		try {

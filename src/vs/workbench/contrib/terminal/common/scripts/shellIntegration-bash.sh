@@ -4,19 +4,19 @@
 # ---------------------------------------------------------------------------------------------
 
 # Prevent the script recursing when setting up
-if [[ -n "${VSCODE_SHELL_INTEGRATION:-}" ]]; then
+if [[ -n "${MINTMIND_SHELL_INTEGRATION:-}" ]]; then
 	builtin return
 fi
 
-VSCODE_SHELL_INTEGRATION=1
+MINTMIND_SHELL_INTEGRATION=1
 
 vsc_env_keys=()
 vsc_env_values=()
 use_associative_array=0
 bash_major_version=${BASH_VERSINFO[0]}
 
-__vscode_shell_env_reporting="${VSCODE_SHELL_ENV_REPORTING:-}"
-unset VSCODE_SHELL_ENV_REPORTING
+__vscode_shell_env_reporting="${MINTMIND_SHELL_ENV_REPORTING:-}"
+unset MINTMIND_SHELL_ENV_REPORTING
 
 envVarsToReport=()
 IFS=',' read -ra envVarsToReport <<< "$__vscode_shell_env_reporting"
@@ -28,8 +28,8 @@ if (( BASH_VERSINFO[0] >= 4 )); then
 fi
 
 # Run relevant rc/profile only if shell integration has been injected, not when run manually
-if [ "$VSCODE_INJECTION" == "1" ]; then
-	if [ -z "$VSCODE_SHELL_LOGIN" ]; then
+if [ "$MINTMIND_INJECTION" == "1" ]; then
+	if [ -z "$MINTMIND_SHELL_LOGIN" ]; then
 		if [ -r ~/.bashrc ]; then
 			. ~/.bashrc
 		fi
@@ -47,59 +47,59 @@ if [ "$VSCODE_INJECTION" == "1" ]; then
 		elif [ -r ~/.profile ]; then
 			. ~/.profile
 		fi
-		builtin unset VSCODE_SHELL_LOGIN
+		builtin unset MINTMIND_SHELL_LOGIN
 
 		# Apply any explicit path prefix (see #99878)
-		if [ -n "${VSCODE_PATH_PREFIX:-}" ]; then
-			export PATH="$VSCODE_PATH_PREFIX$PATH"
-			builtin unset VSCODE_PATH_PREFIX
+		if [ -n "${MINTMIND_PATH_PREFIX:-}" ]; then
+			export PATH="$MINTMIND_PATH_PREFIX$PATH"
+			builtin unset MINTMIND_PATH_PREFIX
 		fi
 	fi
-	builtin unset VSCODE_INJECTION
+	builtin unset MINTMIND_INJECTION
 fi
 
-if [ -z "$VSCODE_SHELL_INTEGRATION" ]; then
+if [ -z "$MINTMIND_SHELL_INTEGRATION" ]; then
 	builtin return
 fi
 
 # Apply EnvironmentVariableCollections if needed
-if [ -n "${VSCODE_ENV_REPLACE:-}" ]; then
-	IFS=':' read -ra ADDR <<< "$VSCODE_ENV_REPLACE"
+if [ -n "${MINTMIND_ENV_REPLACE:-}" ]; then
+	IFS=':' read -ra ADDR <<< "$MINTMIND_ENV_REPLACE"
 	for ITEM in "${ADDR[@]}"; do
 		VARNAME="$(echo $ITEM | cut -d "=" -f 1)"
 		VALUE="$(echo -e "$ITEM" | cut -d "=" -f 2-)"
 		export $VARNAME="$VALUE"
 	done
-	builtin unset VSCODE_ENV_REPLACE
+	builtin unset MINTMIND_ENV_REPLACE
 fi
-if [ -n "${VSCODE_ENV_PREPEND:-}" ]; then
-	IFS=':' read -ra ADDR <<< "$VSCODE_ENV_PREPEND"
+if [ -n "${MINTMIND_ENV_PREPEND:-}" ]; then
+	IFS=':' read -ra ADDR <<< "$MINTMIND_ENV_PREPEND"
 	for ITEM in "${ADDR[@]}"; do
 		VARNAME="$(echo $ITEM | cut -d "=" -f 1)"
 		VALUE="$(echo -e "$ITEM" | cut -d "=" -f 2-)"
 		export $VARNAME="$VALUE${!VARNAME}"
 	done
-	builtin unset VSCODE_ENV_PREPEND
+	builtin unset MINTMIND_ENV_PREPEND
 fi
-if [ -n "${VSCODE_ENV_APPEND:-}" ]; then
-	IFS=':' read -ra ADDR <<< "$VSCODE_ENV_APPEND"
+if [ -n "${MINTMIND_ENV_APPEND:-}" ]; then
+	IFS=':' read -ra ADDR <<< "$MINTMIND_ENV_APPEND"
 	for ITEM in "${ADDR[@]}"; do
 		VARNAME="$(echo $ITEM | cut -d "=" -f 1)"
 		VALUE="$(echo -e "$ITEM" | cut -d "=" -f 2-)"
 		export $VARNAME="${!VARNAME}$VALUE"
 	done
-	builtin unset VSCODE_ENV_APPEND
+	builtin unset MINTMIND_ENV_APPEND
 fi
 
 # Register Python shell activate hooks
 # Prevent multiple activation with guard
-if [ -z "${VSCODE_PYTHON_AUTOACTIVATE_GUARD:-}" ]; then
-	export VSCODE_PYTHON_AUTOACTIVATE_GUARD=1
-	if [ -n "${VSCODE_PYTHON_BASH_ACTIVATE:-}" ] && [ "$TERM_PROGRAM" = "vscode" ]; then
+if [ -z "${MINTMIND_PYTHON_AUTOACTIVATE_GUARD:-}" ]; then
+	export MINTMIND_PYTHON_AUTOACTIVATE_GUARD=1
+	if [ -n "${MINTMIND_PYTHON_BASH_ACTIVATE:-}" ] && [ "$TERM_PROGRAM" = "vscode" ]; then
 		# Prevent crashing by negating exit code
-		if ! builtin eval "$VSCODE_PYTHON_BASH_ACTIVATE"; then
+		if ! builtin eval "$MINTMIND_PYTHON_BASH_ACTIVATE"; then
 			__vsc_activation_status=$?
-			builtin printf '\x1b[0m\x1b[7m * \x1b[0;103m VS Code Python bash activation failed with exit code %d \x1b[0m' "$__vsc_activation_status"
+			builtin printf '\x1b[0m\x1b[7m * \x1b[0;103m MintMind Python bash activation failed with exit code %d \x1b[0m' "$__vsc_activation_status"
 		fi
 	fi
 fi
@@ -202,12 +202,12 @@ __vsc_in_command_execution="1"
 __vsc_current_command=""
 
 # It's fine this is in the global scope as it getting at it requires access to the shell environment
-__vsc_nonce="$VSCODE_NONCE"
-unset VSCODE_NONCE
+__vsc_nonce="$MINTMIND_NONCE"
+unset MINTMIND_NONCE
 
 # Some features should only work in Insiders
-__vsc_stable="$VSCODE_STABLE"
-unset VSCODE_STABLE
+__vsc_stable="$MINTMIND_STABLE"
+unset MINTMIND_STABLE
 
 # Report continuation prompt
 if [ "$__vsc_stable" = "0" ]; then

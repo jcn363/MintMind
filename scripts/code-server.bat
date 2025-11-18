@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-title VSCode Server
+title MintMind Server
 
 set ROOT_DIR=%~dp0..
 
@@ -9,10 +9,10 @@ pushd %ROOT_DIR%
 
 :: Configuration
 set NODE_ENV=development
-set VSCODE_DEV=1
+set MINTMIND_DEV=1
 
 :: Get electron, compile, built-in extensions
-if "%VSCODE_SKIP_PRELAUNCH%"=="" node build/lib/preLaunch.js
+if "%MINTMIND_SKIP_PRELAUNCH%"=="" node build/lib/preLaunch.js
 
 :: Node executable
 FOR /F "tokens=*" %%g IN ('node build/lib/node.js') do (SET NODE=%%g)

@@ -15,7 +15,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 	// Playwright keeps using this as a start... maybe it needs some massaging
 	// server.tool(
 	// 	'vscode_automation_restart',
-	// 	'Restart VS Code with optional workspace or folder and extra arguments',
+	// 	'Restart MintMind with optional workspace or folder and extra arguments',
 	// 	{
 	// 		workspaceOrFolder: z.string().optional().describe('Optional path to workspace or folder to open'),
 	// 		extraArgs: z.array(z.string()).optional().describe('Optional extra command line arguments')
@@ -26,7 +26,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 	// 		return {
 	// 			content: [{
 	// 				type: 'text' as const,
-	// 				text: `VS Code restarted successfully${workspaceOrFolder ? ` with workspace: ${workspaceOrFolder}` : ''}`
+	// 				text: `MintMind restarted successfully${workspaceOrFolder ? ` with workspace: ${workspaceOrFolder}` : ''}`
 	// 			}]
 	// 		};
 	// 	}
@@ -34,7 +34,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 
 	tools.push(server.tool(
 		'vscode_automation_stop',
-		'Stop the VS Code application',
+		'Stop the MintMind application',
 		async () => {
 			const app = await appService.getOrCreateApplication();
 			await app.stopTracing(undefined, true);
@@ -42,7 +42,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 			return {
 				content: [{
 					type: 'text' as const,
-					text: 'VS Code stopped successfully'
+					text: 'MintMind stopped successfully'
 				}]
 			};
 		}
@@ -51,7 +51,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 	// This doesn't seem particularly useful
 	// server.tool(
 	// 	'vscode_automation_get_quality',
-	// 	'Get the quality/build type of VS Code (Dev, Insiders, Stable, etc.)',
+	// 	'Get the quality/build type of MintMind (Dev, Insiders, Stable, etc.)',
 	// 	async () => {
 	// 		const info = {
 	// 			quality: app.quality,
@@ -64,7 +64,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 	// 		return {
 	// 			content: [{
 	// 				type: 'text' as const,
-	// 				text: `VS Code Info:\n${JSON.stringify(info, null, 2)}`
+	// 				text: `MintMind Info:\n${JSON.stringify(info, null, 2)}`
 	// 			}]
 	// 		};
 	// 	}
@@ -115,7 +115,7 @@ export function applyCoreTools(server: McpServer, appService: ApplicationService
 	// Defer to Playwright's tool
 	// server.tool(
 	// 	'vscode_automation_send_keybinding',
-	// 	'Send a keybinding to VS Code (e.g., ctrl+shift+p, cmd+s)',
+	// 	'Send a keybinding to MintMind (e.g., ctrl+shift+p, cmd+s)',
 	// 	{
 	// 		keybinding: z.string().describe('The keybinding to send (e.g., ctrl+shift+p, cmd+s, escape)'),
 	// 		waitSelector: z.string().optional().describe('Optional CSS selector to wait for after sending the keybinding')

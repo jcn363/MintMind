@@ -5,10 +5,10 @@
 import * as path from 'path';
 import { CancellationToken, DocumentLink, DocumentLinkProvider, l10n, Range, TabInputText, TextDocument, Uri, window, workspace } from 'vscode';
 import { IIPCHandler, IIPCServer } from './ipc/ipcServer';
-import { ITerminalEnvironmentProvider } from './terminal';
-import { EmptyDisposable, IDisposable } from './util';
 import { Model } from './model';
 import { Repository } from './repository';
+import { ITerminalEnvironmentProvider } from './terminal';
+import { EmptyDisposable, IDisposable } from './util';
 
 interface GitEditorRequest {
 	commitMessagePath?: string;
@@ -28,9 +28,9 @@ export class GitEditor implements IIPCHandler, ITerminalEnvironmentProvider {
 
 		this.env = {
 			GIT_EDITOR: `"${path.join(__dirname, ipc ? 'git-editor.sh' : 'git-editor-empty.sh')}"`,
-			VSCODE_GIT_EDITOR_NODE: process.execPath,
-			VSCODE_GIT_EDITOR_EXTRA_ARGS: '',
-			VSCODE_GIT_EDITOR_MAIN: path.join(__dirname, 'git-editor-main.js')
+			MINTMIND_GIT_EDITOR_NODE: process.execPath,
+			MINTMIND_GIT_EDITOR_EXTRA_ARGS: '',
+			MINTMIND_GIT_EDITOR_MAIN: path.join(__dirname, 'git-editor-main.js')
 		};
 	}
 

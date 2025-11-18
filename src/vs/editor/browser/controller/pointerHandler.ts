@@ -141,10 +141,7 @@ export class PointerHandler extends Disposable {
 
 	constructor(context: ViewContext, viewController: ViewController, viewHelper: IPointerHandlerHelper) {
 		super();
-		const isPhone = platform.isIOS || (platform.isAndroid && platform.isMobile);
-		if (isPhone && BrowserFeatures.pointerEvents) {
-			this.handler = this._register(new PointerEventHandler(context, viewController, viewHelper));
-		} else if (mainWindow.TouchEvent) {
+		if (mainWindow.TouchEvent) {
 			this.handler = this._register(new TouchHandler(context, viewController, viewHelper));
 		} else {
 			this.handler = this._register(new MouseHandler(context, viewController, viewHelper));

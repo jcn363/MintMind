@@ -101,9 +101,9 @@
 
 			const blob = new Blob([[
 				`/*extensionHostWorker*/`,
-				`globalThis._VSCODE_NLS_MESSAGES = ${JSON.stringify(nlsMessages)};`,
-				`globalThis._VSCODE_NLS_LANGUAGE = ${JSON.stringify(nlsLanguage)};`,
-				`globalThis._VSCODE_FILE_ROOT = ${JSON.stringify(fileRoot)};`,
+				`globalThis._MINTMIND_NLS_MESSAGES = ${JSON.stringify(nlsMessages)};`,
+				`globalThis._MINTMIND_NLS_LANGUAGE = ${JSON.stringify(nlsLanguage)};`,
+				`globalThis._MINTMIND_FILE_ROOT = ${JSON.stringify(fileRoot)};`,
 				`await import(${JSON.stringify(workerUrl)});`,
 				`/*extensionHostWorker*/`
 			].join('')], { type: 'application/javascript' });

@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { spawn } from 'child_process';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
 import * as assert from 'assert';
-import { McpStdioStateHandler } from '../../node/mcpStdioStateHandler.js';
+import { spawn } from 'child_process';
 import { isWindows } from '../../../../../base/common/platform.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../base/test/common/utils.js';
+import { McpStdioStateHandler } from '../../node/mcpStdioStateHandler.js';
 
 const GRACE_TIME = 100;
 
@@ -17,7 +17,7 @@ describe('McpStdioStateHandler', () => {
 	function run(code: string) {
 		const child = spawn('node', ['-e', code], {
 			stdio: 'pipe',
-			env: { ...process.env, ELECTRON_RUN_AS_NODE: '1' },
+			env: { ...process.env, TAURI_RUN_AS_NODE: '1' },
 		});
 
 		return {

@@ -3,18 +3,18 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as os from 'os';
 import * as fs from 'fs';
 import * as net from 'net';
+import * as os from 'os';
+import { performance } from 'perf_hooks';
 import { FileAccess } from '../../base/common/network.js';
+import { dirname, join } from '../../base/common/path.js';
+import * as perf from '../../base/common/performance.js';
+import { ErrorReporter, parseArgs } from '../../platform/environment/node/argv.js';
+import product from '../../platform/product/common/product.js';
 import { run as runCli } from './remoteExtensionHostAgentCli.js';
 import { createServer as doCreateServer, IServerAPI } from './remoteExtensionHostAgentServer.js';
-import { parseArgs, ErrorReporter } from '../../platform/environment/node/argv.js';
-import { join, dirname } from '../../base/common/path.js';
-import { performance } from 'perf_hooks';
 import { serverOptions } from './serverEnvironmentService.js';
-import product from '../../platform/product/common/product.js';
-import * as perf from '../../base/common/performance.js';
 
 perf.mark('code/server/codeLoaded');
 (global as unknown as { vscodeServerCodeLoadedTime?: number }).vscodeServerCodeLoadedTime = performance.now();
@@ -36,7 +36,7 @@ const errorReporter: ErrorReporter = {
 
 const args = parseArgs(process.argv.slice(2), serverOptions, errorReporter);
 
-const REMOTE_DATA_FOLDER = args['server-data-dir'] || process.env['VSCODE_AGENT_FOLDER'] || join(os.homedir(), product.serverDataFolderName || '.vscode-remote');
+const REMOTE_DATA_FOLDER = args['server-data-dir'] || process.env['MINTMIND_AGENT_FOLDER'] || join(os.homedir(), product.serverDataFolderName || '.vscode-remote');
 const USER_DATA_PATH = join(REMOTE_DATA_FOLDER, 'data');
 const APP_SETTINGS_HOME = join(USER_DATA_PATH, 'User');
 const GLOBAL_STORAGE_HOME = join(APP_SETTINGS_HOME, 'globalStorage');

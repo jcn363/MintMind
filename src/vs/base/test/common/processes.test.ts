@@ -13,37 +13,37 @@ describe('Processes', () => {
 	it('sanitizeProcessEnvironment', () => {
 		const env = {
 			FOO: 'bar',
-			ELECTRON_ENABLE_STACK_DUMPING: 'x',
-			ELECTRON_ENABLE_LOGGING: 'x',
-			ELECTRON_NO_ASAR: 'x',
-			ELECTRON_NO_ATTACH_CONSOLE: 'x',
-			ELECTRON_RUN_AS_NODE: 'x',
-			VSCODE_CLI: 'x',
-			VSCODE_DEV: 'x',
-			VSCODE_IPC_HOOK: 'x',
-			VSCODE_NLS_CONFIG: 'x',
-			VSCODE_PORTABLE: '3',
-			VSCODE_PID: 'x',
-			VSCODE_SHELL_LOGIN: '1',
-			VSCODE_CODE_CACHE_PATH: 'x',
-			VSCODE_NEW_VAR: 'x',
+			TAURI_ENABLE_STACK_DUMPING: 'x',
+			TAURI_ENABLE_LOGGING: 'x',
+			TAURI_NO_ASAR: 'x',
+			TAURI_NO_ATTACH_CONSOLE: 'x',
+			TAURI_RUN_AS_NODE: 'x',
+			MINTMIND_CLI: 'x',
+			MINTMIND_DEV: 'x',
+			MINTMIND_IPC_HOOK: 'x',
+			MINTMIND_NLS_CONFIG: 'x',
+			MINTMIND_PORTABLE: '3',
+			MINTMIND_PID: 'x',
+			MINTMIND_SHELL_LOGIN: '1',
+			MINTMIND_CODE_CACHE_PATH: 'x',
+			MINTMIND_NEW_VAR: 'x',
 			GDK_PIXBUF_MODULE_FILE: 'x',
 			GDK_PIXBUF_MODULEDIR: 'x',
-			VSCODE_PYTHON_BASH_ACTIVATE: 'source /path/to/venv/bin/activate',
-			VSCODE_PYTHON_ZSH_ACTIVATE: 'source /path/to/venv/bin/activate',
-			VSCODE_PYTHON_PWSH_ACTIVATE: '. /path/to/venv/Scripts/Activate.ps1',
-			VSCODE_PYTHON_FISH_ACTIVATE: 'source /path/to/venv/bin/activate.fish',
-			VSCODE_PYTHON_AUTOACTIVATE_GUARD: '1'
+			MINTMIND_PYTHON_BASH_ACTIVATE: 'source /path/to/venv/bin/activate',
+			MINTMIND_PYTHON_ZSH_ACTIVATE: 'source /path/to/venv/bin/activate',
+			MINTMIND_PYTHON_PWSH_ACTIVATE: '. /path/to/venv/Scripts/Activate.ps1',
+			MINTMIND_PYTHON_FISH_ACTIVATE: 'source /path/to/venv/bin/activate.fish',
+			MINTMIND_PYTHON_AUTOACTIVATE_GUARD: '1'
 		};
 		processes.sanitizeProcessEnvironment(env);
 		assert.strictEqual(env['FOO'], 'bar');
-		assert.strictEqual(env['VSCODE_SHELL_LOGIN'], '1');
-		assert.strictEqual(env['VSCODE_PORTABLE'], '3');
-		assert.strictEqual(env['VSCODE_PYTHON_BASH_ACTIVATE'], undefined);
-		assert.strictEqual(env['VSCODE_PYTHON_ZSH_ACTIVATE'], undefined);
-		assert.strictEqual(env['VSCODE_PYTHON_PWSH_ACTIVATE'], undefined);
-		assert.strictEqual(env['VSCODE_PYTHON_FISH_ACTIVATE'], undefined);
-		assert.strictEqual(env['VSCODE_PYTHON_AUTOACTIVATE_GUARD'], undefined);
+		assert.strictEqual(env['MINTMIND_SHELL_LOGIN'], '1');
+		assert.strictEqual(env['MINTMIND_PORTABLE'], '3');
+		assert.strictEqual(env['MINTMIND_PYTHON_BASH_ACTIVATE'], undefined);
+		assert.strictEqual(env['MINTMIND_PYTHON_ZSH_ACTIVATE'], undefined);
+		assert.strictEqual(env['MINTMIND_PYTHON_PWSH_ACTIVATE'], undefined);
+		assert.strictEqual(env['MINTMIND_PYTHON_FISH_ACTIVATE'], undefined);
+		assert.strictEqual(env['MINTMIND_PYTHON_AUTOACTIVATE_GUARD'], undefined);
 		assert.strictEqual(Object.keys(env).length, 3);
 	});
 });

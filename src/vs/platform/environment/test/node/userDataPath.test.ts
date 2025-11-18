@@ -1,13 +1,13 @@
-/*---------------------------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
 import assert from 'assert';
 import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../base/test/common/utils.js';
+import product from '../../../product/common/product.js';
 import { OPTIONS, parseArgs } from '../../node/argv.js';
 import { getUserDataPath } from '../../node/userDataPath.js';
-import product from '../../../product/common/product.js';
 
 describe('User data path', () => {
 
@@ -17,18 +17,18 @@ describe('User data path', () => {
 	});
 
 	it('getUserDataPath - portable mode', () => {
-		const origPortable = process.env['VSCODE_PORTABLE'];
+		const origPortable = process.env['MINTMIND_PORTABLE'];
 		try {
 			const portableDir = 'portable-dir';
-			process.env['VSCODE_PORTABLE'] = portableDir;
+			process.env['MINTMIND_PORTABLE'] = portableDir;
 
 			const path = getUserDataPath(parseArgs(process.argv, OPTIONS), product.nameShort);
 			assert.ok(path.includes(portableDir));
 		} finally {
 			if (typeof origPortable === 'string') {
-				process.env['VSCODE_PORTABLE'] = origPortable;
+				process.env['MINTMIND_PORTABLE'] = origPortable;
 			} else {
-				delete process.env['VSCODE_PORTABLE'];
+				delete process.env['MINTMIND_PORTABLE'];
 			}
 		}
 	});
@@ -42,19 +42,19 @@ describe('User data path', () => {
 		assert.ok(path.includes(cliUserDataDir));
 	});
 
-	it('getUserDataPath - VSCODE_APPDATA', () => {
-		const origAppData = process.env['VSCODE_APPDATA'];
+	it('getUserDataPath - MINTMIND_APPDATA', () => {
+		const origAppData = process.env['MINTMIND_APPDATA'];
 		try {
 			const appDataDir = 'appdata-dir';
-			process.env['VSCODE_APPDATA'] = appDataDir;
+			process.env['MINTMIND_APPDATA'] = appDataDir;
 
 			const path = getUserDataPath(parseArgs(process.argv, OPTIONS), product.nameShort);
 			assert.ok(path.includes(appDataDir));
 		} finally {
 			if (typeof origAppData === 'string') {
-				process.env['VSCODE_APPDATA'] = origAppData;
+				process.env['MINTMIND_APPDATA'] = origAppData;
 			} else {
-				delete process.env['VSCODE_APPDATA'];
+				delete process.env['MINTMIND_APPDATA'];
 			}
 		}
 	});

@@ -68,7 +68,7 @@ export async function loadEditorContributions(): Promise<void> {
 		import('./contrib/floatingMenu/browser/floatingMenu.contribution.js'),
 	]);
 
-	// Load up these strings even in VSCode, even if they are not used
+	// Load up these strings even in MintMind, even if they are not used
 	// in order to get them translated
 	await import('./common/standaloneStrings.js');
 

@@ -19,7 +19,7 @@ export interface WindowData {
 }
 
 export enum IssueSource {
-	VSCode = 'vscode',
+	MintMind = 'vscode',
 	Extension = 'extension',
 	Marketplace = 'marketplace'
 }

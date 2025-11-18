@@ -188,7 +188,7 @@ export class NodeJSFileWatcherLibrary extends Disposable {
 			return;
 		}
 
-		// macOS: watching samba shares can crash VSCode so we do
+		// macOS: watching samba shares can crash MintMind so we do
 		// a simple check for the file path pointing to /Volumes
 		// (https://github.com/microsoft/vscode/issues/106879)
 		// TODO@electron this needs a revisit when the crash is

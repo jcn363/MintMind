@@ -56,7 +56,7 @@ export interface ILogger {
 }
 
 // Implementación del logger
-class VSCodeLogger implements ILogger {
+class MintMindLogger implements ILogger {
   debug(message: string, ...meta: unknown[]): void {
     logger.debug(message, ...meta);
   }
@@ -75,7 +75,7 @@ class VSCodeLogger implements ILogger {
 }
 
 // Instancia singleton del logger
-export const vscodeLogger = new VSCodeLogger();
+export const vscodeLogger = new MintMindndLogger();
 
 // Función helper para crear loggers específicos de módulo
 export function createModuleLogger(moduleName: string): ILogger {

@@ -156,6 +156,7 @@ async fn retry_get_socket_rw_stream(
 mod tests {
 	use super::*;
 
+	#[cfg_attr(miri, ignore)]
 	#[tokio::test]
 	async fn test_acquires_singleton() {
 		let dir = tempfile::tempdir().expect("expected to make temp dir");
@@ -169,6 +170,7 @@ mod tests {
 		}
 	}
 
+	#[cfg_attr(miri, ignore)]
 	#[tokio::test]
 	async fn test_acquires_client() {
 		let dir = tempfile::tempdir().expect("expected to make temp dir");

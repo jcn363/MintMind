@@ -3,21 +3,21 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import { chmod, mkdirSync, realpathSync } from 'fs';
 import * as os from 'os';
+import { promisify } from 'util';
 import { FileAccess } from '../../../base/common/network.js';
 import * as path from '../../../base/common/path.js';
 import { IProcessEnvironment, isMacintosh, isWindows } from '../../../base/common/platform.js';
 import * as process from '../../../base/common/process.js';
 import { format } from '../../../base/common/strings.js';
+import type { SingleOrMany } from '../../../base/common/types.js';
 import { ILogService } from '../../log/common/log.js';
 import { IProductService } from '../../product/common/productService.js';
-import { IShellLaunchConfig, ITerminalEnvironment, ITerminalProcessOptions, ShellIntegrationInjectionFailureReason } from '../common/terminal.js';
 import { EnvironmentVariableMutatorType } from '../common/environmentVariable.js';
-import { deserializeEnvironmentVariableCollections } from '../common/environmentVariableShared.js';
 import { MergedEnvironmentVariableCollection } from '../common/environmentVariableCollection.js';
-import { chmod, realpathSync, mkdirSync } from 'fs';
-import { promisify } from 'util';
-import type { SingleOrMany } from '../../../base/common/types.js';
+import { deserializeEnvironmentVariableCollections } from '../common/environmentVariableShared.js';
+import { IShellLaunchConfig, ITerminalEnvironment, ITerminalProcessOptions, ShellIntegrationInjectionFailureReason } from '../common/terminal.js';
 
 export function getWindowsBuildNumber(): number {
 	const osVersion = (/(\d+)\.(\d+)\.(\d+)/g).exec(os.release());
@@ -93,11 +93,11 @@ export async function getShellIntegrationInjection(
 	const type = 'injection';
 	let newArgs: string[] | undefined;
 	const envMixin: IProcessEnvironment = {
-		'VSCODE_INJECTION': '1'
+		'MINTMIND_INJECTION': '1'
 	};
 
 	if (options.shellIntegration.nonce) {
-		envMixin['VSCODE_NONCE'] = options.shellIntegration.nonce;
+		envMixin['MINTMIND_NONCE'] = options.shellIntegration.nonce;
 	}
 	// Temporarily pass list of hardcoded env vars for shell env api
 	const scopedDownShellEnvs = ['PATH', 'VIRTUAL_ENV', 'HOME', 'SHELL', 'PWD'];
@@ -105,17 +105,17 @@ export async function getShellIntegrationInjection(
 		if (isWindows) {
 			const enableWindowsEnvReporting = options.windowsUseConptyDll || options.windowsEnableConpty && getWindowsBuildNumber() >= 22631 && shell !== 'bash.exe';
 			if (enableWindowsEnvReporting) {
-				envMixin['VSCODE_SHELL_ENV_REPORTING'] = scopedDownShellEnvs.join(',');
+				envMixin['MINTMIND_SHELL_ENV_REPORTING'] = scopedDownShellEnvs.join(',');
 			}
 		} else {
-			envMixin['VSCODE_SHELL_ENV_REPORTING'] = scopedDownShellEnvs.join(',');
+			envMixin['MINTMIND_SHELL_ENV_REPORTING'] = scopedDownShellEnvs.join(',');
 		}
 	}
 
 	// Windows
 	if (isWindows) {
 		if (shell === 'pwsh.exe' || shell === 'powershell.exe') {
-			envMixin['VSCODE_A11Y_MODE'] = options.isScreenReaderOptimized ? '1' : '0';
+			envMixin['MINTMIND_A11Y_MODE'] = options.isScreenReaderOptimized ? '1' : '0';
 
 			if (!originalArgs || arePwshImpliedArgs(originalArgs)) {
 				newArgs = shellIntegrationArgs.get(ShellIntegrationExecutable.WindowsPwsh);
@@ -126,13 +126,13 @@ export async function getShellIntegrationInjection(
 				return { type: 'failure', reason: ShellIntegrationInjectionFailureReason.UnsupportedArgs };
 			}
 			newArgs[newArgs.length - 1] = format(newArgs[newArgs.length - 1], appRoot, '');
-			envMixin['VSCODE_STABLE'] = productService.quality === 'stable' ? '1' : '0';
+			envMixin['MINTMIND_STABLE'] = productService.quality === 'stable' ? '1' : '0';
 			return { type, newArgs, envMixin };
 		} else if (shell === 'bash.exe') {
 			if (!originalArgs || originalArgs.length === 0) {
 				newArgs = shellIntegrationArgs.get(ShellIntegrationExecutable.Bash);
 			} else if (areZshBashFishLoginArgs(originalArgs)) {
-				envMixin['VSCODE_SHELL_LOGIN'] = '1';
+				envMixin['MINTMIND_SHELL_LOGIN'] = '1';
 				addEnvMixinPathPrefix(options, envMixin, shell);
 				newArgs = shellIntegrationArgs.get(ShellIntegrationExecutable.Bash);
 			}
@@ -141,7 +141,7 @@ export async function getShellIntegrationInjection(
 			}
 			newArgs = [...newArgs]; // Shallow clone the array to avoid setting the default array
 			newArgs[newArgs.length - 1] = format(newArgs[newArgs.length - 1], appRoot);
-			envMixin['VSCODE_STABLE'] = productService.quality === 'stable' ? '1' : '0';
+			envMixin['MINTMIND_STABLE'] = productService.quality === 'stable' ? '1' : '0';
 			return { type, newArgs, envMixin };
 		}
 		logService.warn(`Shell integration cannot be enabled for executable "${shellLaunchConfig.executable}" and args`, shellLaunchConfig.args);
@@ -154,7 +154,7 @@ export async function getShellIntegrationInjection(
 			if (!originalArgs || originalArgs.length === 0) {
 				newArgs = shellIntegrationArgs.get(ShellIntegrationExecutable.Bash);
 			} else if (areZshBashFishLoginArgs(originalArgs)) {
-				envMixin['VSCODE_SHELL_LOGIN'] = '1';
+				envMixin['MINTMIND_SHELL_LOGIN'] = '1';
 				addEnvMixinPathPrefix(options, envMixin, shell);
 				newArgs = shellIntegrationArgs.get(ShellIntegrationExecutable.Bash);
 			}
@@ -163,7 +163,7 @@ export async function getShellIntegrationInjection(
 			}
 			newArgs = [...newArgs]; // Shallow clone the array to avoid setting the default array
 			newArgs[newArgs.length - 1] = format(newArgs[newArgs.length - 1], appRoot);
-			envMixin['VSCODE_STABLE'] = productService.quality === 'stable' ? '1' : '0';
+			envMixin['MINTMIND_STABLE'] = productService.quality === 'stable' ? '1' : '0';
 			return { type, newArgs, envMixin };
 		}
 		case 'fish': {
@@ -197,7 +197,7 @@ export async function getShellIntegrationInjection(
 			}
 			newArgs = [...newArgs]; // Shallow clone the array to avoid setting the default array
 			newArgs[newArgs.length - 1] = format(newArgs[newArgs.length - 1], appRoot, '');
-			envMixin['VSCODE_STABLE'] = productService.quality === 'stable' ? '1' : '0';
+			envMixin['MINTMIND_STABLE'] = productService.quality === 'stable' ? '1' : '0';
 			return { type, newArgs, envMixin };
 		}
 		case 'zsh': {
@@ -292,7 +292,7 @@ export async function getShellIntegrationInjection(
  *
  * This causes significant problems for the environment variable
  * collection API as the custom paths added to the end will now be somewhere in the middle of
- * the PATH. To combat this, VSCODE_PATH_PREFIX is used to re-apply any prefix after the profile
+ * the PATH. To combat this, MINTMIND_PATH_PREFIX is used to re-apply any prefix after the profile
  * has run. This will cause duplication in the PATH but should fix the issue.
  *
  * See #99878 for more information.
@@ -316,7 +316,7 @@ function addEnvMixinPathPrefix(options: ITerminalProcessOptions, envMixin: IProc
 
 		// Add to the environment mixin to be applied in the shell integration script
 		if (prependToPath.length > 0) {
-			envMixin['VSCODE_PATH_PREFIX'] = prependToPath.join('');
+			envMixin['MINTMIND_PATH_PREFIX'] = prependToPath.join('');
 		}
 	}
 }

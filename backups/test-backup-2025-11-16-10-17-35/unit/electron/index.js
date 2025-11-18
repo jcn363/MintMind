@@ -108,7 +108,7 @@ if (crashReporterDirectory) {
 
 	crashReporter.start({
 		companyName: 'Microsoft',
-		productName: process.env['VSCODE_DEV'] ? `${product.nameShort} Dev` : product.nameShort,
+		productName: process.env['MINTMIND_DEV'] ? `${product.nameShort} Dev` : product.nameShort,
 		uploadToServer: false,
 		compress: true
 	});
@@ -313,7 +313,7 @@ app.on('ready', () => {
 		width: 800,
 		show: false,
 		webPreferences: {
-			preload: path.join(__dirname, 'preload.js'), // ensure similar environment as VSCode as tests may depend on this
+			preload: path.join(__dirname, 'preload.js'), // ensure similar environment as MintMind as tests may depend on this
 			additionalArguments: [`--vscode-window-config=vscode:test-vscode-window-config`],
 			nodeIntegration: true,
 			contextIsolation: false,

@@ -283,7 +283,7 @@ describe('URI', () => {
 		}
 	});
 
-	it('VSCode URI module\'s driveLetterPath regex is incorrect, #32961', function () {
+	it('MintMind URI module\'s driveLetterPath regex is incorrect, #32961', function () {
 		const uri = URI.parse('file:///_:/path');
 		assert.strictEqual(uri.fsPath, isWindows ? '\\_:\\path' : '/_:/path');
 	});

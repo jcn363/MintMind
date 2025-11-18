@@ -3,14 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as playwright from 'playwright';
-import { getDevElectronPath, Quality, ConsoleLogger, FileLogger, Logger, MultiLogger, getBuildElectronPath, getBuildVersion, measureAndLog, Application } from '../../automation';
-import * as path from 'path';
+import * as vscodetest from '@vscode/test-electron';
 import * as fs from 'fs';
 import * as os from 'os';
-import * as vscodetest from '@vscode/test-electron';
-import { createApp, retry } from './utils';
+import * as path from 'path';
+import * as playwright from 'playwright';
+import { Application, ConsoleLogger, FileLogger, Logger, MultiLogger, Quality, getBuildElectronPath, getBuildVersion, getDevElectronPath, measureAndLog } from '../../automation';
 import { opts } from './options';
+import { createApp, retry } from './utils';
 
 const rootPath = path.join(__dirname, '..', '..', '..');
 const logsRootPath = path.join(rootPath, '.build', 'vscode-playwright-mcp', 'logs');
@@ -67,11 +67,11 @@ function parseVersion(version: string): { major: number; minor: number; patch: n
 }
 
 function parseQuality(): Quality {
-	if (process.env.VSCODE_DEV === '1') {
+	if (process.env.MINTMIND_DEV === '1') {
 		return Quality.Dev;
 	}
 
-	const quality = process.env.VSCODE_QUALITY ?? '';
+	const quality = process.env.MINTMIND_QUALITY ?? '';
 
 	switch (quality) {
 		case 'stable':
@@ -100,13 +100,13 @@ if (!opts.web) {
 	} else {
 		testCodePath = getDevElectronPath();
 		electronPath = testCodePath;
-		process.env.VSCODE_REPOSITORY = rootPath;
-		process.env.VSCODE_DEV = '1';
-		process.env.VSCODE_CLI = '1';
+		process.env.MINTMIND_REPOSITORY = rootPath;
+		process.env.MINTMIND_DEV = '1';
+		process.env.MINTMIND_CLI = '1';
 	}
 
 	if (!fs.existsSync(electronPath || '')) {
-		fail(`Cannot find VSCode at ${electronPath}. Please run VSCode once first (scripts/code.sh, scripts\\code.bat) and try again.`);
+		fail(`Cannot find MintMind at ${electronPath}. Please run MintMind once first (scripts/code.sh, scripts\\code.bat) and try again.`);
 	}
 
 	quality = parseQuality();
@@ -122,7 +122,7 @@ if (!opts.web) {
 // #### Web Smoke Tests ####
 //
 else {
-	const testCodeServerPath = opts.build || process.env.VSCODE_REMOTE_SERVER_PATH;
+	const testCodeServerPath = opts.build || process.env.MINTMIND_REMOTE_SERVER_PATH;
 
 	if (typeof testCodeServerPath === 'string') {
 		if (!fs.existsSync(testCodeServerPath)) {
@@ -133,9 +133,9 @@ else {
 	}
 
 	if (!testCodeServerPath) {
-		process.env.VSCODE_REPOSITORY = rootPath;
-		process.env.VSCODE_DEV = '1';
-		process.env.VSCODE_CLI = '1';
+		process.env.MINTMIND_REPOSITORY = rootPath;
+		process.env.MINTMIND_DEV = '1';
+		process.env.MINTMIND_CLI = '1';
 
 		logger.log(`Running web smoke out of sources`);
 	}
@@ -143,7 +143,7 @@ else {
 	quality = parseQuality();
 }
 
-logger.log(`VS Code product quality: ${quality}.`);
+logger.log(`MintMind product quality: ${quality}.`);
 
 async function ensureStableCode(): Promise<void> {
 	let stableCodePath = opts['stable-build'];
@@ -165,7 +165,7 @@ async function ensureStableCode(): Promise<void> {
 			throw new Error(`Could not find suitable stable version for ${version}`);
 		}
 
-		logger.log(`Found VS Code v${version}, downloading previous VS Code version ${stableVersion}...`);
+		logger.log(`Found MintMind v${version}, downloading previous MintMind version ${stableVersion}...`);
 
 		let lastProgressMessage: string | undefined = undefined;
 		let lastProgressReportedAt = 0;
@@ -202,10 +202,10 @@ async function ensureStableCode(): Promise<void> {
 		}));
 
 		if (process.platform === 'darwin') {
-			// Visual Studio Code.app/Contents/MacOS/Electron
+			// MintMind.app/Contents/MacOS/Electron
 			stableCodePath = path.dirname(path.dirname(path.dirname(stableCodeExecutable)));
 		} else {
-			// VSCode/Code.exe (Windows) | VSCode/code (Linux)
+			// MintMindnd/Code.exe (Windows) MintMindMind/code (Linux)
 			stableCodePath = path.dirname(stableCodeExecutable);
 		}
 
@@ -213,7 +213,7 @@ async function ensureStableCode(): Promise<void> {
 	}
 
 	if (!fs.existsSync(stableCodePath)) {
-		throw new Error(`Cannot find Stable VSCode at ${stableCodePath}.`);
+		throw new Error(`Cannot find Stable MintMindnd at ${stableCodePath}.`);
 	}
 
 	logger.log(`Using stable build ${stableCodePath} for migration tests`);
@@ -236,12 +236,12 @@ export async function getApplication({ recordVideo }: { recordVideo?: boolean } 
 	const testCodePath = getDevElectronPath();
 	const electronPath = testCodePath;
 	if (!fs.existsSync(electronPath || '')) {
-		throw new Error(`Cannot find VSCode at ${electronPath}. Please run VSCode once first (scripts/code.sh, scripts\\code.bat) and try again.`);
+		throw new Error(`Cannot find MintMindnd at ${electronPath}. Please ruMintMindMind once first (scripts/code.sh, scripts\\code.bat) and try again.`);
 	}
-	process.env.VSCODE_REPOSITORY = rootPath;
-	process.env.VSCODE_DEV = '1';
-	process.env.VSCODE_CLI = '1';
-	delete process.env.ELECTRON_RUN_AS_NODE; // Ensure we run as Node.js
+	process.env.MINTMIND_REPOSITORY = rootPath;
+	process.env.MINTMIND_DEV = '1';
+	process.env.MINTMIND_CLI = '1';
+	delete process.env.TAURI_RUN_AS_NODE; // Ensure we run as Node.js
 
 	await setup();
 	const application = createApp({

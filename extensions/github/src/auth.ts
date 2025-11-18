@@ -46,7 +46,7 @@ export function getOctokit(): Promise<Octokit> {
 
 			return new Octokit({
 				request: { agent },
-				userAgent: 'GitHub VSCode',
+				userAgent: 'GitHub MintMind',
 				auth: `token ${token}`
 			});
 		}).then(null, async err => {

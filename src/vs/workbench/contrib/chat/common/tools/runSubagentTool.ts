@@ -30,7 +30,7 @@ import {
 	ToolDataSource,
 	ToolProgress,
 	ToolSet,
-	VSCodeToolReference
+	MintMindToolReference
 } from '../languageModelToolsService.js';
 import { createToolSimpleTextResult } from './toolHelpers.js';
 
@@ -68,7 +68,7 @@ export class RunSubagentTool extends Disposable implements IToolImpl {
 	getToolData(): IToolData {
 		const runSubagentToolData: IToolData = {
 			id: RunSubagentToolId,
-			toolReferenceName: VSCodeToolReference.runSubagent,
+			toolReferenceName: MintMindndToolReference.runSubagent,
 			canBeReferencedInPrompt: true,
 			icon: ThemeIcon.fromId(Codicon.organization.id),
 			displayName: localize('tool.runSubagent.displayName', 'Run Subagent'),

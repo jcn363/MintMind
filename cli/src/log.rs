@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 
 use chrono::Local;
-use opentelemetry_sdk::trace::{Tracer, TracerProvider};
-use opentelemetry::trace::{SpanBuilder, Tracer as TraitTracer, TracerProvider as TracerProviderTrait};
+use opentelemetry_sdk::trace::{Tracer, SdkTracerProvider};
+use opentelemetry::trace::{SpanBuilder, Tracer as TraitTracer, TracerProvider};
 use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::{
@@ -197,7 +197,7 @@ impl LogSink for FileLogSink {
 impl Logger {
 	pub fn test() -> Self {
 		Self {
-			tracer: Arc::new(TracerProvider::builder().build().tracer("codeclitest")),
+			tracer: Arc::new(SdkTracerProvider::builder().build().tracer("codeclitest")),
 			sink: vec![],
 			prefix: None,
 		}

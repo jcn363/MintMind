@@ -4,7 +4,7 @@ Este documento describe la organización y estructura de los tests en el proyect
 
 ## Estructura de Tests
 
-```
+```text
 test/
 ├── unit/                 # Tests unitarios (Jest)
 ├── integration/         # Tests de integración (Jest)
@@ -41,12 +41,14 @@ test/
 **Propósito**: Validar interacción entre componentes y módulos.
 
 **Características**:
+
 - Configuración Jest específica
 - Setup de BD/servidor de test
 - Helpers reutilizables
 - Cobertura del 70% mínimo
 
 **Ejecución**:
+
 ```bash
 npm run test:integration
 ```
@@ -58,12 +60,14 @@ npm run test:integration
 **Propósito**: Validar flujos completos desde la interfaz de usuario.
 
 **Características**:
+
 - Playwright para automatización de browsers
 - Múltiples navegadores y dispositivos
 - Screenshots y videos automáticos
 - Servidor de desarrollo integrado
 
 **Ejecución**:
+
 ```bash
 npm run test:e2e
 ```
@@ -113,13 +117,13 @@ npm run test:e2e
 
 ```json
 {
-  "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:integration": "jest --config test/integration/jest.config.js",
-    "test:e2e": "cd test/e2e && npm run test",
-    "test:smoke": "cd test/smoke && npm run mocha"
-  }
+ "scripts": {
+  "test": "jest",
+  "test:coverage": "jest --coverage",
+  "test:integration": "jest --config test/integration/jest.config.js",
+  "test:e2e": "cd test/e2e && npm run test",
+  "test:smoke": "cd test/smoke && npm run mocha"
+ }
 }
 ```
 
@@ -140,16 +144,16 @@ npm run test:e2e
 ### Estructura de Tests
 
 ```typescript
-describe('Componente Bajo Test', () => {
-  describe('Método específico', () => {
-    it('debe hacer algo específico', () => {
-      // Arrange, Act, Assert
-    });
-
-    it('debe manejar error case', () => {
-      // Error cases
-    });
+describe("Componente Bajo Test", () => {
+ describe("Método específico", () => {
+  it("debe hacer algo específico", () => {
+   // Arrange, Act, Assert
   });
+
+  it("debe manejar error case", () => {
+   // Error cases
+  });
+ });
 });
 ```
 
@@ -187,7 +191,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - run: npm ci
       - run: npm run test:coverage
       - run: npm run test:integration
@@ -199,7 +203,7 @@ jobs:
 
 ### Herramientas por Tipo
 
-- **Unitarios**: VS Code debugger con Jest
+- **Unitarios**: MintMind debugger con Jest
 - **Integración**: Console logs, BD inspection
 - **E2E**: Playwright UI mode, screenshots
 

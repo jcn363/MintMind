@@ -5,7 +5,7 @@ set -e
 # This script now uses Snyk REST API directly with token-based authentication
 # instead of relying on the CLI's interactive auth mechanism.
 
-# Import logging utilities from the VSCode logger system
+# Import logging utilities from the MintMind logger system
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
 

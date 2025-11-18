@@ -4,7 +4,7 @@
 
     ./scripts/test.[sh|bat]
 
-All unit tests are run inside a Electron renderer environment which access to DOM and Nodejs api. This is the closest to the environment in which VS Code itself ships. Notes:
+All unit tests are run inside a Electron renderer environment which access to DOM and Nodejs api. This is the closest to the environment in which MintMind itself ships. Notes:
 
 - use the `--debug` to see an electron window with dev tools which allows for debugging
 - to run only a subset of tests use the `--run` or `--glob` options
@@ -23,7 +23,7 @@ Unit tests from layers `common` and `browser` are run inside `chromium`, `webkit
 - to debug, open `<vscode>/test/unit/browser/renderer.html` inside a browser and use the `?m=<amd_module>`-query to specify what AMD module to load, e.g `file:///Users/jrieken/Code/vscode/test/unit/browser/renderer.html?m=vs/base/test/common/strings.test` runs all tests from `strings.test.ts`
 - to run only a subset of tests use the `--run` or `--glob` options
 
-**Note**: you can enable verbose logging of playwright library by setting a `DEBUG` environment variable before running the tests (https://playwright.dev/docs/debug#verbose-api-logs)
+**Note**: you can enable verbose logging of playwright library by setting a `DEBUG` environment variable before running the tests (<https://playwright.dev/docs/debug#verbose-api-logs>)
 
 ## Run (with node)
 

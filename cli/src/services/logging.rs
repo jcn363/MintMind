@@ -138,6 +138,6 @@ pub fn create_ipc_logger(sender: tokio::sync::mpsc::UnboundedSender<String>, lev
         }
     });
 
-    let tracer = sdktrace::TracerProvider::builder().build().tracer("ipc");
+    let tracer = sdktrace::SdkTracerProvider::builder().build().tracer("ipc");
     Logger::new(tracer, level).tee(ipc_sink)
 }

@@ -72,7 +72,7 @@ bun test --watch
 
 Test files should be placed in the `test` directory, organized by test type:
 
-```
+```text
 test/
   unit/           # Unit tests
   integration/    # Integration tests
@@ -89,15 +89,15 @@ import { describe, it, expect } from "bun:test";
 import { sum } from "../../src/utils/math";
 
 describe("Math Utils", () => {
-	describe("sum", () => {
-		it("should add two numbers correctly", () => {
-			expect(sum(1, 2)).toBe(3);
-		});
+ describe("sum", () => {
+  it("should add two numbers correctly", () => {
+   expect(sum(1, 2)).toBe(3);
+  });
 
-		it("should handle negative numbers", () => {
-			expect(sum(-1, -2)).toBe(-3);
-		});
-	});
+  it("should handle negative numbers", () => {
+   expect(sum(-1, -2)).toBe(-3);
+  });
+ });
 });
 ```
 
@@ -105,14 +105,14 @@ describe("Math Utils", () => {
 
 ```typescript
 describe("Async Operations", () => {
-	it("should fetch data", async () => {
-		const data = await fetchData();
-		expect(data).toBeDefined();
-	});
+ it("should fetch data", async () => {
+  const data = await fetchData();
+  expect(data).toBeDefined();
+ });
 
-	it("should handle errors", async () => {
-		await expect(failingOperation()).rejects.toThrow("Error message");
-	});
+ it("should handle errors", async () => {
+  await expect(failingOperation()).rejects.toThrow("Error message");
+ });
 });
 ```
 
@@ -125,11 +125,11 @@ Create reusable test fixtures in the `test/fixtures` directory:
 ```typescript
 // test/fixtures/test-document.ts
 export function createTestDocument(content: string): vscode.TextDocument {
-	return {
-		uri: vscode.Uri.parse("untitled:test.js"),
-		getText: () => content,
-		// ... other required methods
-	};
+ return {
+  uri: vscode.Uri.parse("untitled:test.js"),
+  getText: () => content,
+  // ... other required methods
+ };
 }
 ```
 
@@ -140,25 +140,25 @@ Extend Jest's expect with custom matchers:
 ```typescript
 // test/setup.ts
 expect.extend({
-	toBeWithinRange(received: number, floor: number, ceiling: number) {
-		const pass = received >= floor && received <= ceiling;
-		return {
-			message: () =>
-				`expected ${received} ${
-					pass ? "not " : ""
-				}to be within range ${floor} - ${ceiling}`,
-			pass,
-		};
-	},
+ toBeWithinRange(received: number, floor: number, ceiling: number) {
+  const pass = received >= floor && received <= ceiling;
+  return {
+   message: () =>
+    `expected ${received} ${
+     pass ? "not " : ""
+    }to be within range ${floor} - ${ceiling}`,
+   pass,
+  };
+ },
 });
 
 // Declare the type for TypeScript
 declare global {
-	namespace jest {
-		interface Matchers<R> {
-			toBeWithinRange(floor: number, ceiling: number): R;
-		}
-	}
+ namespace jest {
+  interface Matchers<R> {
+   toBeWithinRange(floor: number, ceiling: number): R;
+  }
+ }
 }
 ```
 
@@ -188,10 +188,10 @@ declare global {
 
 ## Debugging Tests
 
-### Debugging in VS Code
+### Debugging in MintMind
 
 1. Set breakpoints in your test files
-2. Use the VS Code debugger with the "Debug Tests" configuration
+2. Use the MintMind debugger with the "Debug Tests" configuration
 3. Inspect variables and step through code
 
 ### Debugging in the Browser
@@ -200,9 +200,11 @@ For tests that run in the browser:
 
 1. Add `debugger` statements in your test code
 2. Run tests with `--inspect-brk` flag:
+
    ```bash
    bun test --inspect-brk
    ```
+
 3. Open Chrome DevTools and navigate to `chrome://inspect`
 4. Click on the "Open dedicated DevTools for Node" link
 
@@ -235,16 +237,16 @@ Minimum coverage thresholds are set in `package.json`:
 
 ```json
 {
-	"jest": {
-		"coverageThreshold": {
-			"global": {
-				"branches": 80,
-				"functions": 85,
-				"lines": 90,
-				"statements": 90
-			}
-		}
-	}
+ "jest": {
+  "coverageThreshold": {
+   "global": {
+    "branches": 80,
+    "functions": 85,
+    "lines": 90,
+    "statements": 90
+   }
+  }
+ }
 }
 ```
 
@@ -266,18 +268,18 @@ bun run perf:report
 import { performance } from "node:perf_hooks";
 
 describe("Performance", () => {
-	it("should process items efficiently", () => {
-		const start = performance.now();
+ it("should process items efficiently", () => {
+  const start = performance.now();
 
-		// Code to measure
-		const result = processLargeDataset();
+  // Code to measure
+  const result = processLargeDataset();
 
-		const end = performance.now();
-		const duration = end - start;
+  const end = performance.now();
+  const duration = end - start;
 
-		console.log(`Processed in ${duration}ms`);
-		expect(duration).toBeLessThan(100); // 100ms threshold
-	});
+  console.log(`Processed in ${duration}ms`);
+  expect(duration).toBeLessThan(100); // 100ms threshold
+ });
 });
 ```
 
@@ -301,11 +303,11 @@ import { toMatchImageSnapshot } from "jest-image-snapshot";
 expect.extend({ toMatchImageSnapshot });
 
 describe("UI Components", () => {
-	it("should render the button correctly", async () => {
-		const button = render(<Button>Click me</Button>);
-		const image = await page.screenshot();
-		expect(image).toMatchImageSnapshot();
-	});
+ it("should render the button correctly", async () => {
+  const button = render(<Button>Click me</Button>);
+  const image = await page.screenshot();
+  expect(image).toMatchImageSnapshot();
+ });
 });
 ```
 
@@ -316,7 +318,7 @@ describe("UI Components", () => {
 ```typescript
 // Mock an entire module
 jest.mock("some-module", () => ({
-	someFunction: jest.fn(),
+ someFunction: jest.fn(),
 }));
 
 // Mock a single function
@@ -327,16 +329,16 @@ jest.mock("some-module");
 (someFunction as jest.Mock).mockReturnValue("mocked value");
 ```
 
-### Mocking VS Code API
+### Mocking MintMind API
 
 ```typescript
 // test/mocks/vscode.ts
 const vscode = {
-	window: {
-		showInformationMessage: jest.fn(),
-		showErrorMessage: jest.fn(),
-	},
-	// ... other VS Code APIs
+ window: {
+  showInformationMessage: jest.fn(),
+  showErrorMessage: jest.fn(),
+ },
+ // ... other MintMind APIs
 };
 
 export default vscode;

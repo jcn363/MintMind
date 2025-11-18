@@ -232,7 +232,6 @@ fn write_systemd_service_file(
 	default_path = "/org/freedesktop/systemd1"
 )]
 trait SystemdManagerDbus {
-	#[dbus_proxy(name = "EnableUnitFiles")]
 	fn enable_unit_files(
 		&self,
 		files: Vec<String>,
@@ -255,12 +254,9 @@ trait SystemdManagerDbus {
 		runtime: bool,
 	) -> zbus::Result<Vec<(String, String, String)>>;
 
-	#[dbus_proxy(name = "StartUnit")]
 	fn start_unit(&self, name: String, mode: String) -> zbus::Result<zvariant::OwnedObjectPath>;
 
-	#[dbus_proxy(name = "StopUnit")]
 	fn stop_unit(&self, name: String, mode: String) -> zbus::Result<zvariant::OwnedObjectPath>;
 
-	#[dbus_proxy(name = "Reload")]
 	fn reload(&self) -> zbus::Result<()>;
 }

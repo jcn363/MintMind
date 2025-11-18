@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as fsPromise from 'fs/promises';
-import path from 'path';
-import * as http from 'http';
 import * as parcelWatcher from '@parcel/watcher';
+import * as fsPromise from 'fs/promises';
+import * as http from 'http';
+import path from 'path';
 
 /**
  * Launches the server for the monaco editor playground
@@ -235,7 +235,7 @@ function handleGetFileChangesRequest(watcher: DirWatcher, fileServer: FileServer
 function makeLoaderJsHotReloadable(loaderJsCode: string, fileChangesUrl: URL): string {
 	loaderJsCode = loaderJsCode.replace(
 		/constructor\(env, scriptLoader, defineFunc, requireFunc, loaderAvailableTimestamp = 0\) {/,
-		'$&globalThis.___globalModuleManager = this; globalThis.vscode = { process: { env: { VSCODE_DEV: true } } }'
+		'$&globalThis.___globalModuleManager = this; globalThis.vscode = { process: { env: { MINTMIND_DEV: true } } }'
 	);
 
 	const ___globalModuleManager: any = undefined;

@@ -4,23 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { Event } from '../../base/common/event.js';
-import * as platform from '../../base/common/platform.js';
-import * as performance from '../../base/common/performance.js';
-import { URI } from '../../base/common/uri.js';
-import { createURITransformer } from '../../base/common/uriTransformer.js';
-import { IRemoteAgentEnvironmentDTO, IGetEnvironmentDataArguments, IGetExtensionHostExitInfoArguments } from '../../workbench/services/remote/common/remoteAgentEnvironmentChannel.js';
-import { IServerEnvironmentService } from './serverEnvironmentService.js';
-import { IServerChannel } from '../../base/parts/ipc/common/ipc.js';
-import { transformOutgoingURIs } from '../../base/common/uriIpc.js';
-import { listProcesses } from '../../base/node/ps.js';
-import { getMachineInfo, collectWorkspaceStats } from '../../platform/diagnostics/node/diagnosticsService.js';
-import { IDiagnosticInfoOptions, IDiagnosticInfo } from '../../platform/diagnostics/common/diagnostics.js';
 import { basename } from '../../base/common/path.js';
+import * as performance from '../../base/common/performance.js';
+import * as platform from '../../base/common/platform.js';
 import { ProcessItem } from '../../base/common/processes.js';
-import { ServerConnectionToken, ServerConnectionTokenType } from './serverConnectionToken.js';
-import { IExtensionHostStatusService } from './extensionHostStatusService.js';
-import { IUserDataProfilesService } from '../../platform/userDataProfile/common/userDataProfile.js';
 import { joinPath } from '../../base/common/resources.js';
+import { URI } from '../../base/common/uri.js';
+import { transformOutgoingURIs } from '../../base/common/uriIpc.js';
+import { createURITransformer } from '../../base/common/uriTransformer.js';
+import { listProcesses } from '../../base/node/ps.js';
+import { IServerChannel } from '../../base/parts/ipc/common/ipc.js';
+import { IDiagnosticInfo, IDiagnosticInfoOptions } from '../../platform/diagnostics/common/diagnostics.js';
+import { collectWorkspaceStats, getMachineInfo } from '../../platform/diagnostics/node/diagnosticsService.js';
+import { IUserDataProfilesService } from '../../platform/userDataProfile/common/userDataProfile.js';
+import { IGetEnvironmentDataArguments, IGetExtensionHostExitInfoArguments, IRemoteAgentEnvironmentDTO } from '../../workbench/services/remote/common/remoteAgentEnvironmentChannel.js';
+import { IExtensionHostStatusService } from './extensionHostStatusService.js';
+import { ServerConnectionToken, ServerConnectionTokenType } from './serverConnectionToken.js';
+import { IServerEnvironmentService } from './serverEnvironmentService.js';
 
 export class RemoteAgentEnvironmentChannel implements IServerChannel {
 
@@ -103,7 +103,7 @@ export class RemoteAgentEnvironmentChannel implements IServerChannel {
 		if (process.platform === 'linux') {
 			const glibcVersion = (process as ProcessWithGlibc).glibcVersion;
 			const minorVersion = glibcVersion ? parseInt(glibcVersion.split('.')[1]) : 28;
-			isUnsupportedGlibc = (minorVersion <= 27) || !!process.env['VSCODE_SERVER_CUSTOM_GLIBC_LINKER'];
+			isUnsupportedGlibc = (minorVersion <= 27) || !!process.env['MINTMIND_SERVER_CUSTOM_GLIBC_LINKER'];
 		}
 		return {
 			pid: process.pid,

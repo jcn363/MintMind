@@ -40,7 +40,7 @@ import { ConfirmedReason, IChatService, IChatToolInvocation, ToolConfirmKind } f
 import { ChatRequestToolReferenceEntry, toToolSetVariableEntry, toToolVariableEntry } from '../common/chatVariableEntries.js';
 import { ChatConfiguration } from '../common/constants.js';
 import { ILanguageModelToolsConfirmationService } from '../common/languageModelToolsConfirmationService.js';
-import { CountTokensCallback, createToolSchemaUri, GithubCopilotToolReference, ILanguageModelToolsService, IPreparedToolInvocation, IToolAndToolSetEnablementMap, IToolData, IToolImpl, IToolInvocation, IToolResult, IToolResultInputOutputDetails, stringifyPromptTsxPart, ToolDataSource, ToolSet, VSCodeToolReference } from '../common/languageModelToolsService.js';
+import { CountTokensCallback, createToolSchemaUri, GithubCopilotToolReference, ILanguageModelToolsService, IPreparedToolInvocation, IToolAndToolSetEnablementMap, IToolData, IToolImpl, IToolInvocation, IToolResult, IToolResultInputOutputDetails, stringifyPromptTsxPart, ToolDataSource, ToolSet, MintMindToolReference } from '../common/languageModelToolsService.js';
 import { Target } from '../common/promptSyntax/promptFileParser.js';
 import { getToolConfirmationAlert } from './chatAccessibilityProvider.js';
 
@@ -606,20 +606,20 @@ export class LanguageModelToolsService extends Disposable implements ILanguageMo
 		}
 	}
 
-	private _githubToVSCodeToolMap: Record<string, string> = {
-		[GithubCopilotToolReference.shell]: VSCodeToolReference.runCommands,
-		[GithubCopilotToolReference.customAgent]: VSCodeToolReference.runSubagent,
+	private _githubToMintMindndToolMap: Record<string, string> = {
+		[GithubCopilotToolReference.shell]: MintMindndToolReference.runCommands,
+		[GithubCopilotToolReference.customAgent]: MintMindndToolReference.runSubagent,
 		'github/*': 'github/github-mcp-server/*',
 		'playwright/*': 'microsoft/playwright-mcp/*',
 	};
-	private _githubPrefixToVSCodePrefix = [['github', 'github/github-mcp-server'], ['playwright', 'microsoft/playwright-mcp']] as const;
+	private _githubPrefixToMintMindndPrefix = [['github', 'github/github-mcp-server'], ['playwright', 'microsoft/playwright-mcp']] as const;
 
 	mapGithubToolName(name: string): string {
-		const mapped = this._githubToVSCodeToolMap[name];
+		const mapped = this._githubToMintMindndToolMap[name];
 		if (mapped) {
 			return mapped;
 		}
-		for (const [fromPrefix, toPrefix] of this._githubPrefixToVSCodePrefix) {
+		for (const [fromPrefix, toPrefix] of this._githubPrefixToMintMindndPrefix) {
 			const regexp = new RegExp(`^${fromPrefix}(/[^/]+)$`);
 			const m = name.match(regexp);
 			if (m) {

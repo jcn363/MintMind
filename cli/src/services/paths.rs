@@ -110,6 +110,9 @@ impl PathNormalizer {
         if path.is_empty() {
             return ".".to_string();
         }
+        if path == ".." {
+            return "..".to_string();
+        }
 
         #[cfg(windows)]
         {
@@ -900,6 +903,7 @@ mod tests {
     mod unix {
         use super::super::PathNormalizer;
 
+        #[cfg_attr(miri, ignore)]
         #[test]
         fn test_normalize() {
             assert_eq!(PathNormalizer::normalize(""), ".");
@@ -914,6 +918,7 @@ mod tests {
             assert_eq!(PathNormalizer::normalize("/foo/bar/./"), "/foo/bar/");
         }
 
+        #[cfg_attr(miri, ignore)]
         #[test]
         fn test_resolve() {
             assert_eq!(PathNormalizer::resolve(&[]), ".");
@@ -922,6 +927,7 @@ mod tests {
             assert_eq!(PathNormalizer::resolve(&["/foo/bar", "../baz"]), "/foo/baz");
         }
 
+        #[cfg_attr(miri, ignore)]
         #[test]
         fn test_join() {
             assert_eq!(PathNormalizer::join(&[]), ".");

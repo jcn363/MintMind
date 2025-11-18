@@ -3,27 +3,27 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as performance from '../../../base/common/performance.js';
+import nodeModule from 'node:module';
 import type * as vscode from 'vscode';
-import { createApiFactoryAndRegisterActors } from '../common/extHost.api.impl.js';
-import { INodeModuleFactory, RequireInterceptor } from '../common/extHostRequireInterceptor.js';
-import { ExtensionActivationTimesBuilder } from '../common/extHostExtensionActivator.js';
-import { connectProxyResolver } from './proxyResolver.js';
-import { AbstractExtHostExtensionService } from '../common/extHostExtensionService.js';
-import { ExtHostDownloadService } from './extHostDownloadService.js';
-import { URI } from '../../../base/common/uri.js';
+import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
+import { BidirectionalMap } from '../../../base/common/map.js';
 import { Schemas } from '../../../base/common/network.js';
+import * as performance from '../../../base/common/performance.js';
+import { assertType } from '../../../base/common/types.js';
+import { URI } from '../../../base/common/uri.js';
+import { generateUuid } from '../../../base/common/uuid.js';
+import { realpathSync } from '../../../base/node/pfs.js';
 import { IExtensionDescription } from '../../../platform/extensions/common/extensions.js';
+import { createApiFactoryAndRegisterActors } from '../common/extHost.api.impl.js';
+import { ExtensionActivationTimesBuilder } from '../common/extHostExtensionActivator.js';
+import { AbstractExtHostExtensionService } from '../common/extHostExtensionService.js';
+import { INodeModuleFactory, RequireInterceptor } from '../common/extHostRequireInterceptor.js';
 import { ExtensionRuntime } from '../common/extHostTypes.js';
 import { CLIServer } from './extHostCLIServer.js';
-import { realpathSync } from '../../../base/node/pfs.js';
 import { ExtHostConsoleForwarder } from './extHostConsoleForwarder.js';
 import { ExtHostDiskFileSystemProvider } from './extHostDiskFileSystemProvider.js';
-import nodeModule from 'node:module';
-import { assertType } from '../../../base/common/types.js';
-import { generateUuid } from '../../../base/common/uuid.js';
-import { BidirectionalMap } from '../../../base/common/map.js';
-import { DisposableStore, toDisposable } from '../../../base/common/lifecycle.js';
+import { ExtHostDownloadService } from './extHostDownloadService.js';
+import { connectProxyResolver } from './proxyResolver.js';
 
 const require = nodeModule.createRequire(import.meta.url);
 
@@ -112,7 +112,7 @@ class NodeModuleESMInterceptor extends RequireInterceptor {
 		};
 	};`;
 
-	private static _vscodeImportFnName = `_VSCODE_IMPORT_VSCODE_API`;
+	private static _vscodeImportFnName = `_MINTMIND_IMPORT_MINTMIND_API`;
 
 	private readonly _store = new DisposableStore();
 
@@ -210,7 +210,7 @@ export class ExtHostExtensionService extends AbstractExtHostExtensionService {
 		// Register CLI Server for ipc
 		if (this._initData.remote.isRemote && this._initData.remote.authority) {
 			const cliServer = this._instaService.createInstance(CLIServer);
-			process.env['VSCODE_IPC_HOOK_CLI'] = cliServer.ipcHandlePath;
+			process.env['MINTMIND_IPC_HOOK_CLI'] = cliServer.ipcHandlePath;
 		}
 
 		// Register local file system shortcut

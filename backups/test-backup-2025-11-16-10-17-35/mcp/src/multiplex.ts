@@ -2,16 +2,16 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
+import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { Server, ServerOptions } from '@modelcontextprotocol/sdk/server/index.js';
 import { Transport } from '@modelcontextprotocol/sdk/shared/transport.js';
-import { Implementation, ListToolsRequestSchema, CallToolRequestSchema, ListToolsResult, Tool, CallToolResult, McpError, ErrorCode, CallToolResultSchema } from '@modelcontextprotocol/sdk/types.js';
-import { getServer as getAutomationServer } from './automation';
-import { getServer as getPlaywrightServer } from './playwright';
-import { ApplicationService } from './application';
-import { createInMemoryTransportPair } from './inMemoryTransport';
-import { Client } from '@modelcontextprotocol/sdk/client/index.js';
+import { CallToolRequestSchema, CallToolResult, CallToolResultSchema, ErrorCode, Implementation, ListToolsRequestSchema, ListToolsResult, McpError, Tool } from '@modelcontextprotocol/sdk/types.js';
 import { Application } from '../../automation';
+import { ApplicationService } from './application';
+import { getServer as getAutomationServer } from './automation';
+import { createInMemoryTransportPair } from './inMemoryTransport';
 import { opts } from './options';
+import { getServer as getPlaywrightServer } from './playwright';
 
 interface SubServerConfig {
 	subServer: Client;
@@ -29,9 +29,9 @@ export async function getServer(): Promise<Server> {
 	const multiplexServer = new MultiplexServer(
 		[{ subServer: automationClient }],
 		{
-			name: 'VS Code Automation + Playwright Server',
+			name: 'MintMind Automation + Playwright Server',
 			version: '1.0.0',
-			title: 'Contains tools that can interact with a local build of VS Code. Used for verifying UI behavior.'
+			title: 'Contains tools that can interact with a local build of MintMind. Used for verifying UI behavior.',
 		}
 	);
 
@@ -176,7 +176,7 @@ export class MultiplexServer {
 
 		this.server.setRequestHandler(
 			CallToolRequestSchema,
-			async (request, extra): Promise<CallToolResult> => {
+			async (request): Promise<CallToolResult> => {
 				const toolName = request.params.name;
 				for (const subServer of this._subServers) {
 					const toolSet = this._subServerToToolSet.get(subServer);

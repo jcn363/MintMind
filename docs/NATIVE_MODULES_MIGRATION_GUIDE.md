@@ -57,7 +57,7 @@ This guide outlines the process for migrating four key native modules from the c
 - `extensions/vscode-api-tests/src/singlefolder-tests/chat.test.ts`: Access verification for Copilot CLI in chat extension
 
 #### Summary of Usage
-The module is used extensively for creating and managing pseudo-terminals in VS Code's integrated terminal. It handles process spawning, data I/O, terminal resizing, and process lifecycle management with specific handling for Windows ConPTY and macOS/Linux differences.
+The module is used extensively for creating and managing pseudo-terminals in MintMind's integrated terminal. It handles process spawning, data I/O, terminal resizing, and process lifecycle management with specific handling for Windows ConPTY and macOS/Linux differences.
 
 #### Recommended Rust Crate(s)
 - `portable-pty` (cross-platform pseudo-terminal support)
@@ -86,7 +86,7 @@ The module is used extensively for creating and managing pseudo-terminals in VS 
 - `src/vs/base/common/keyCodes.ts`: References to Chromium keyboard codes for mapping
 
 #### Summary of Usage
-Used to detect and manage keyboard layouts across different platforms, providing consistent key code mapping for VS Code's keyboard handling.
+Used to detect and manage keyboard layouts across different platforms, providing consistent key code mapping for MintMind's keyboard handling.
 
 #### Recommended Rust Crate(s)
 - `keymap` (cross-platform keyboard mapping)

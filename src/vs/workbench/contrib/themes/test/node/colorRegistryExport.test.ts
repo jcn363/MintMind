@@ -9,7 +9,7 @@ import { Registry } from '../../../../../platform/registry/common/platform.js';
 import { Extensions, IColorRegistry } from '../../../../../platform/theme/common/colorRegistry.js';
 
 describe('ColorRegistry', () => {
-	if (process.env.VSCODE_COLOR_REGISTRY_EXPORT) {
+	if (process.env.MINTMIND_COLOR_REGISTRY_EXPORT) {
 		it('exports', () => {
 			const themingRegistry = Registry.as<IColorRegistry>(Extensions.ColorContribution);
 			const colors = themingRegistry.getColors();

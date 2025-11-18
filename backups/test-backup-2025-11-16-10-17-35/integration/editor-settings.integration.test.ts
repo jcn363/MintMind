@@ -325,7 +325,7 @@ describe('Editor Settings Integration', () => {
           },
           {
             id: 'vscode',
-            name: 'VS Code',
+            name: 'MintMind',
             keybindings: 95,
           },
           {
@@ -337,7 +337,7 @@ describe('Editor Settings Integration', () => {
         setActiveProfile: jest.fn().mockResolvedValue(undefined),
         getActiveProfile: jest.fn().mockReturnValue({
           id: 'vscode',
-          name: 'VS Code',
+          name: 'MintMind',
         }),
         createProfile: jest.fn().mockResolvedValue({
           id: 'custom-profile',
@@ -358,7 +358,7 @@ describe('Editor Settings Integration', () => {
 
       // Assert
       expect(profiles).toHaveLength(3);
-      expect(profiles[1].name).toBe('VS Code');
+      expect(profiles[1].name).toBe('MintMind');
       expect(activeProfile.id).toBe('vscode');
       expect(mockKeybindingProfiles.setActiveProfile).toHaveBeenCalledWith('vim');
       expect(newProfile.name).toBe('Custom Profile');

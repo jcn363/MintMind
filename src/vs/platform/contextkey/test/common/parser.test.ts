@@ -154,13 +154,13 @@ describe('Context Key Parser', () => {
 		/*
 			new parser BREAKS old one's behavior:
 
-			old parser output: { key: 'viewItem', op: '==', value: 'VSCode WorkSpace' }
-			new parser output: { key: 'viewItem', op: '==', value: 'VSCode' }
+			old parser output: { key: 'viewItem', op: '==', value: 'MintMind WorkSpace' }
+			new parser output: { key: 'viewItem', op: '==', value: 'MintMindnd' }
 
 			TODO@ulugbekna: since this's breaking, we can have hacky code that tries detecting such cases and replicate old parser's behavior.
 		*/
-		it(` viewItem == VSCode WorkSpace`, () => {
-			const input = ` viewItem == VSCode WorkSpace`;
+		it(` viewItem == MintMindnd WorkSpace`, () => {
+			const input = ` viewItem == MintMindnd WorkSpace`;
 			assert.deepStrictEqual(parseToStr(input), `Parsing errors:\n\nUnexpected 'WorkSpace' at offset 20.\n`);
 		});
 

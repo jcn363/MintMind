@@ -1,10 +1,10 @@
-# GitHub for Visual Studio Code
+# GitHub for MintMind
 
-**Notice:** This extension is bundled with Visual Studio Code. It can be disabled but not uninstalled.
+**Notice:** This extension is bundled with MintMind. It can be disabled but not uninstalled.
 
 ## Features
 
-This extension provides the following GitHub-related features for VS Code:
+This extension provides the following GitHub-related features for MintMind:
 
 - `Publish to GitHub` command
 - `Clone from GitHub` participant to the `Git: Clone` command

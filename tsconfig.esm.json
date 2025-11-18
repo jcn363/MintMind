@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    /* Base Options */
+    "module": "ES2022",
+    "moduleResolution": "node16",
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "out-esm",
+    "rootDir": "src",
+    "composite": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Resolution Options */
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowJs": true,
+    "checkJs": false,
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "vs/*": ["src/vs/*"],
+      "@mintmind/*": ["src/*"]
+    },
+
+    /* Custom Transformers */
+    "plugins": [
+      { "transform": "@zerollup/ts-transform-paths" }
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "typings/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*",
+    "out",
+    "out-esm"
+  ]
+}

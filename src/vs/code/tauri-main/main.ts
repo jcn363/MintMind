@@ -6,77 +6,71 @@
 import '../../platform/update/common/update.config.contribution.js';
 
 import { invoke } from '@tauri-apps/api/tauri';
-import { URI } from '../../base/common/uri.js';
 import { coalesce, distinct } from '../../base/common/arrays.js';
 import { Promises } from '../../base/common/async.js';
 import { toErrorMessage } from '../../base/common/errorMessage.js';
 import { ExpectedError, setUnexpectedErrorHandler } from '../../base/common/errors.js';
-import { IPathWithLineAndColumn, isValidBasename, parseLineAndColumnAware, sanitizeFilePath } from '../../base/common/extpath.js';
 import { Event } from '../../base/common/event.js';
+import { IPathWithLineAndColumn, isValidBasename, parseLineAndColumnAware, sanitizeFilePath } from '../../base/common/extpath.js';
 import { getPathLabel } from '../../base/common/labels.js';
+import { DisposableStore } from '../../base/common/lifecycle.js';
 import { Schemas } from '../../base/common/network.js';
 import { basename, resolve } from '../../base/common/path.js';
-import { mark } from '../../base/common/performance.js';
-import { IProcessEnvironment, isLinux, isMacintosh, isWindows, OS } from '../../base/common/platform.js';
+import { IProcessEnvironment, OS, isLinux, isMacintosh, isWindows } from '../../base/common/platform.js';
+import { LINUX_SYSTEM_POLICY_FILE_PATH } from '../../base/common/policy.js';
 import { cwd } from '../../base/common/process.js';
 import { rtrim, trim } from '../../base/common/strings.js';
+import { URI } from '../../base/common/uri.js';
 import { Promises as FSPromises } from '../../base/node/pfs.js';
-import { CodeApplication } from './app.js';
+import { addUNCHostToAllowlist, getUNCHost } from '../../base/node/unc.js';
 import { localize } from '../../nls.js';
 import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
 import { ConfigurationService } from '../../platform/configuration/common/configurationService.js';
-import { IDiagnosticsMainService } from '../../platform/diagnostics/tauri-main/diagnosticsMainService.js';
-import { DiagnosticsService } from '../../platform/diagnostics/node/diagnosticsService.js';
 import { NativeParsedArgs } from '../../platform/environment/common/argv.js';
-import { EnvironmentMainService, IEnvironmentMainService } from '../../platform/environment/tauri-main/environmentMainService.js';
 import { addArg, parseMainProcessArgv } from '../../platform/environment/node/argvHelper.js';
 import { createWaitMarkerFileSync } from '../../platform/environment/node/wait.js';
-import { IFileService } from '../../platform/files/common/files.js';
+import { EnvironmentMainService, IEnvironmentMainService } from '../../platform/environment/tauri-main/environmentMainService.js';
 import { FileService } from '../../platform/files/common/fileService.js';
+import { IFileService } from '../../platform/files/common/files.js';
 import { DiskFileSystemProvider } from '../../platform/files/node/diskFileSystemProvider.js';
 import { SyncDescriptor } from '../../platform/instantiation/common/descriptors.js';
 import { IInstantiationService, ServicesAccessor } from '../../platform/instantiation/common/instantiation.js';
 import { InstantiationService } from '../../platform/instantiation/common/instantiationService.js';
 import { ServiceCollection } from '../../platform/instantiation/common/serviceCollection.js';
-import { ILaunchMainService } from '../../platform/launch/tauri-main/launchMainService.js';
 import { ILifecycleMainService, LifecycleMainService } from '../../platform/lifecycle/tauri-main/lifecycleMainService.js';
 import { BufferLogger } from '../../platform/log/common/bufferLog.js';
-import { ConsoleMainLogger, getLogLevel, ILoggerService, ILogService } from '../../platform/log/common/log.js';
+import { ConsoleMainLogger, ILogService, ILoggerService, getLogLevel } from '../../platform/log/common/log.js';
+import { LogService } from '../../platform/log/common/logService.js';
+import { ILoggerMainService, LoggerMainService } from '../../platform/log/tauri-main/loggerService.js';
+import { FilePolicyService } from '../../platform/policy/common/filePolicyService.js';
+import { IPolicyService, NullPolicyService } from '../../platform/policy/common/policy.js';
+import { NativePolicyService } from '../../platform/policy/node/nativePolicyService.js';
 import product from '../../platform/product/common/product.js';
 import { IProductService } from '../../platform/product/common/productService.js';
 import { IProtocolMainService } from '../../platform/protocol/tauri-main/protocol.js';
 import { ProtocolMainService } from '../../platform/protocol/tauri-main/protocolMainService.js';
-import { ITunnelService } from '../../platform/tunnel/common/tunnel.js';
-import { TunnelService } from '../../platform/tunnel/node/tunnelService.js';
 import { IRequestService } from '../../platform/request/common/request.js';
 import { RequestService } from '../../platform/request/tauri-utility/requestService.js';
 import { ISignService } from '../../platform/sign/common/sign.js';
 import { SignService } from '../../platform/sign/node/signService.js';
 import { IStateReadService, IStateService } from '../../platform/state/node/state.js';
-import { NullTelemetryService } from '../../platform/telemetry/common/telemetryUtils.js';
+import { SaveStrategy, StateService } from '../../platform/state/node/stateService.js';
 import { IThemeMainService } from '../../platform/theme/tauri-main/themeMainService.js';
-import { IUserDataProfilesMainService, UserDataProfilesMainService } from '../../platform/userDataProfile/tauri-main/userDataProfile.js';
-import { IPolicyService, NullPolicyService } from '../../platform/policy/common/policy.js';
-import { NativePolicyService } from '../../platform/policy/node/nativePolicyService.js';
-import { FilePolicyService } from '../../platform/policy/common/filePolicyService.js';
-import { DisposableStore } from '../../base/common/lifecycle.js';
+import { ThemeMainService } from '../../platform/theme/tauri-main/themeMainServiceImpl.js';
+import { ITunnelService } from '../../platform/tunnel/common/tunnel.js';
+import { TunnelService } from '../../platform/tunnel/node/tunnelService.js';
 import { IUriIdentityService } from '../../platform/uriIdentity/common/uriIdentity.js';
 import { UriIdentityService } from '../../platform/uriIdentity/common/uriIdentityService.js';
-import { ILoggerMainService, LoggerMainService } from '../../platform/log/tauri-main/loggerService.js';
-import { LogService } from '../../platform/log/common/logService.js';
-import { massageMessageBoxOptions } from '../../platform/dialogs/common/dialogs.js';
-import { SaveStrategy, StateService } from '../../platform/state/node/stateService.js';
 import { FileUserDataProvider } from '../../platform/userData/common/fileUserDataProvider.js';
-import { addUNCHostToAllowlist, getUNCHost } from '../../base/node/unc.js';
-import { ThemeMainService } from '../../platform/theme/tauri-main/themeMainServiceImpl.js';
-import { LINUX_SYSTEM_POLICY_FILE_PATH } from '../../base/common/policy.js';
+import { IUserDataProfilesMainService, UserDataProfilesMainService } from '../../platform/userDataProfile/tauri-main/userDataProfile.js';
+import { CodeApplication } from './app.js';
 
 /**
- * The main VS Code entry point.
+ * The main MintMind entry point.
  *
- * Note: This class can exist more than once for example when VS Code is already
+ * Note: This class can exist more than once for example when MintMind is already
  * running and a second instance is started from the command line. It will always
- * try to communicate with an existing instance to prevent that 2 VS Code instances
+ * try to communicate with an existing instance to prevent that 2 MintMind instances
  * are running at the same time.
  */
 class CodeMain {
@@ -175,7 +169,7 @@ class CodeMain {
 		services.set(IFileService, fileService);
 		const diskFileSystemProvider = new DiskFileSystemProvider(logService);
 		fileService.registerProvider(Schemas.file, diskFileSystemProvider);
-		
+
 		// URI Identity
 		const uriIdentityService = new UriIdentityService(fileService);
 		services.set(IUriIdentityService, uriIdentityService);
@@ -235,10 +229,10 @@ class CodeMain {
 
 	private patchEnvironment(environmentMainService: IEnvironmentMainService): IProcessEnvironment {
 		const instanceEnvironment: IProcessEnvironment = {
-			VSCODE_IPC_HOOK: environmentMainService.mainIPCHandle
+			MINTMIND_IPC_HOOK: environmentMainService.mainIPCHandle
 		};
 
-		['VSCODE_NLS_CONFIG', 'VSCODE_PORTABLE'].forEach(key => {
+		['MINTMIND_NLS_CONFIG', 'MINTMIND_PORTABLE'].forEach(key => {
 			const value = process.env[key];
 			if (typeof value === 'string') {
 				instanceEnvironment[key] = value;
@@ -355,7 +349,7 @@ class CodeMain {
 			// is closed and then exit the waiting process.
 			//
 			// Note: we are not doing this if the wait marker has been already
-			// added as argument. This can happen if VS Code was started from CLI.
+			// added as argument. This can happen if MintMind was started from CLI.
 			const waitMarkerFilePath = createWaitMarkerFileSync(args.verbose);
 			if (waitMarkerFilePath) {
 				addArg(process.argv, '--waitMarkerFilePath', waitMarkerFilePath);

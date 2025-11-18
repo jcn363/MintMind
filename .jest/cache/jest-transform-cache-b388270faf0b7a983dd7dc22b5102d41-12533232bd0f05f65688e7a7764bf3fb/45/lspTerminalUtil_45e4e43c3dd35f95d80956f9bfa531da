@@ -149,7 +149,7 @@ function cov_624hn3su7() {
       mappings: "AAAA;;;gGAGgG;AAEhG,MAAM,CAAC,MAAM,kCAAkC,GAAG,0CAA0C,CAAC;AAE7F,MAAM,CAAC,MAAM,6BAA6B,GAAG,IAAI,GAAG,CAA+D;IAClH;QACC,SAAS,EAAE,QAAQ;QACnB,UAAU,EAAE,QAAQ;QACpB,SAAS,EAAE,IAAI;KACf;CACD,CAAC,CAAC;AAEH,MAAM,UAAU,kCAAkC,CAAC,SAAiB;IACnE,KAAK,MAAM,iBAAiB,IAAI,6BAA6B,EAAE,CAAC;QAC/D,IAAI,iBAAiB,CAAC,SAAS,KAAK,SAAS,EAAE,CAAC;YAC/C,OAAO,iBAAiB,CAAC;QAC1B,CAAC;IACF,CAAC;IACD,OAAO,SAAS,CAAC;AAClB,CAAC",
       names: [],
       sources: ["/home/user/Desktop/MintMind/src/vs/workbench/contrib/terminalContrib/suggest/browser/lspTerminalUtil.ts"],
-      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const VSCODE_LSP_TERMINAL_PROMPT_TRACKER = 'vscode_lsp_terminal_prompt_tracker= {}\\n';\n\nexport const terminalLspSupportedLanguages = new Set<{ shellType: string; languageId: string; extension: string }>([\n\t{\n\t\tshellType: 'python',\n\t\tlanguageId: 'python',\n\t\textension: 'py'\n\t}\n]);\n\nexport function getTerminalLspSupportedLanguageObj(shellType: string): { shellType: string; languageId: string; extension: string } | undefined {\n\tfor (const supportedLanguage of terminalLspSupportedLanguages) {\n\t\tif (supportedLanguage.shellType === shellType) {\n\t\t\treturn supportedLanguage;\n\t\t}\n\t}\n\treturn undefined;\n}\n"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nexport const MINTMIND_LSP_TERMINAL_PROMPT_TRACKER = 'vscode_lsp_terminal_prompt_tracker= {}\\n';\n\nexport const terminalLspSupportedLanguages = new Set<{ shellType: string; languageId: string; extension: string }>([\n\t{\n\t\tshellType: 'python',\n\t\tlanguageId: 'python',\n\t\textension: 'py'\n\t}\n]);\n\nexport function getTerminalLspSupportedLanguageObj(shellType: string): { shellType: string; languageId: string; extension: string } | undefined {\n\tfor (const supportedLanguage of terminalLspSupportedLanguages) {\n\t\tif (supportedLanguage.shellType === shellType) {\n\t\t\treturn supportedLanguage;\n\t\t}\n\t}\n\treturn undefined;\n}\n"],
       version: 3
     },
     _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -173,7 +173,7 @@ cov_624hn3su7();
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-export const VSCODE_LSP_TERMINAL_PROMPT_TRACKER =
+export const MINTMIND_LSP_TERMINAL_PROMPT_TRACKER =
 /* istanbul ignore next */
 (cov_624hn3su7().s[0]++, 'vscode_lsp_terminal_prompt_tracker= {}\n');
 export const terminalLspSupportedLanguages =

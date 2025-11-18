@@ -24,7 +24,7 @@ import { LanguageModelToolsService } from '../../browser/languageModelToolsServi
 import { IChatModel } from '../../common/chatModel.js';
 import { IChatService, IChatToolInputInvocationData, IChatToolInvocation, ToolConfirmKind } from '../../common/chatService.js';
 import { ChatConfiguration } from '../../common/constants.js';
-import { GithubCopilotToolReference, isToolResultInputOutputDetails, IToolData, IToolImpl, IToolInvocation, ToolDataSource, ToolSet, VSCodeToolReference } from '../../common/languageModelToolsService.js';
+import { GithubCopilotToolReference, isToolResultInputOutputDetails, IToolData, IToolImpl, IToolInvocation, ToolDataSource, ToolSet, MintMindToolReference } from '../../common/languageModelToolsService.js';
 import { MockChatService } from '../common/mockChatService.js';
 import { ChatToolInvocation } from '../../common/chatProgressTypes/chatToolInvocation.js';
 import { LocalChatSessionUri } from '../../common/chatUri.js';
@@ -763,10 +763,10 @@ describe('LanguageModelToolsService', () => {
 	});
 
 
-	it('toToolAndToolSetEnablementMap map Github to VSCode tools', () => {
+	it('toToolAndToolSetEnablementMap map Github to MintMindnd tools', () => {
 		const runCommandsToolData: IToolData = {
-			id: VSCodeToolReference.runCommands,
-			toolReferenceName: VSCodeToolReference.runCommands,
+			id: MintMindndToolReference.runCommands,
+			toolReferenceName: MintMindndToolReference.runCommands,
 			modelDescription: 'runCommands',
 			displayName: 'runCommands',
 			source: ToolDataSource.Internal,
@@ -775,8 +775,8 @@ describe('LanguageModelToolsService', () => {
 
 		store.add(service.registerToolData(runCommandsToolData));
 		const runSubagentToolData: IToolData = {
-			id: VSCodeToolReference.runSubagent,
-			toolReferenceName: VSCodeToolReference.runSubagent,
+			id: MintMindndToolReference.runSubagent,
+			toolReferenceName: MintMindndToolReference.runSubagent,
 			modelDescription: 'runSubagent',
 			displayName: 'runSubagent',
 			source: ToolDataSource.Internal,
@@ -828,7 +828,7 @@ describe('LanguageModelToolsService', () => {
 			assert.strictEqual(result.get(runSubagentToolData), true, 'runSubagentToolData should be enabled');
 			assert.strictEqual(result.get(runCommandsToolData), true, 'runCommandsToolData should be enabled');
 			const qualifiedNames = service.toQualifiedToolNames(result).sort();
-			assert.deepStrictEqual(qualifiedNames, [VSCodeToolReference.runCommands, VSCodeToolReference.runSubagent], 'toQualifiedToolNames should return the VS Code tool names');
+			assert.deepStrictEqual(qualifiedNames, [MintMindndToolReference.runCommandsMintMindMindToolReference.runSubagent], 'toQualifiedToolNames should return the MintMind tool names');
 		}
 		{
 			const toolNames = ['github/*', 'playwright/*'];
@@ -837,7 +837,7 @@ describe('LanguageModelToolsService', () => {
 			assert.strictEqual(result.get(githubMcpToolSet), true, 'githubMcpToolSet should be enabled');
 			assert.strictEqual(result.get(playwrightMcpToolSet), true, 'playwrightMcpToolSet should be enabled');
 			const qualifiedNames = service.toQualifiedToolNames(result).sort();
-			assert.deepStrictEqual(qualifiedNames, ['github/github-mcp-server/*', 'microsoft/playwright-mcp/*'], 'toQualifiedToolNames should return the VS Code tool names');
+			assert.deepStrictEqual(qualifiedNames, ['github/github-mcp-server/*', 'microsoft/playwright-mcp/*'], 'toQualifiedToolNames should return the MintMind tool names');
 		}
 
 		{
@@ -848,7 +848,7 @@ describe('LanguageModelToolsService', () => {
 			assert.strictEqual(result.get(githubMcpTool1), true, 'githubMcpTool1 should be enabled');
 			assert.strictEqual(result.get(playwrightMcpTool1), true, 'playwrightMcpTool1 should be enabled');
 			const qualifiedNames = service.toQualifiedToolNames(result).sort();
-			assert.deepStrictEqual(qualifiedNames, ['github/github-mcp-server/create_branch', 'microsoft/playwright-mcp/browser_click'], 'toQualifiedToolNames should return the VS Code tool names');
+			assert.deepStrictEqual(qualifiedNames, ['github/github-mcp-server/create_branch', 'microsoft/playwright-mcp/browser_click'], 'toQualifiedToolNames should return the MintMind tool names');
 		}
 
 		{
@@ -859,7 +859,7 @@ describe('LanguageModelToolsService', () => {
 			assert.strictEqual(result.get(githubMcpTool1), true, 'githubMcpTool1 should be enabled');
 			assert.strictEqual(result.get(playwrightMcpTool1), true, 'playwrightMcpTool1 should be enabled');
 			const qualifiedNames = service.toQualifiedToolNames(result).sort();
-			assert.deepStrictEqual(qualifiedNames, ['github/github-mcp-server/create_branch', 'microsoft/playwright-mcp/browser_click'], 'toQualifiedToolNames should return the VS Code tool names');
+			assert.deepStrictEqual(qualifiedNames, ['github/github-mcp-server/create_branch', 'microsoft/playwright-mcp/browser_click'], 'toQualifiedToolNames should return the MintMind tool names');
 		}
 
 	});

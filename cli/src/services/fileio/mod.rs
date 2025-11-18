@@ -12,7 +12,6 @@ pub mod types;
 pub use service::FileIOService;
 pub use types::{FileIORequest, FileIOResponse};
 
-use serde_json;
 use std::sync::Arc;
 use tokio::sync::Mutex;
 

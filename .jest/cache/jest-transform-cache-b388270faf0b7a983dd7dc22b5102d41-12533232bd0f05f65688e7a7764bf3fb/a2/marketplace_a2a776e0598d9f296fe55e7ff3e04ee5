@@ -217,7 +217,7 @@ function cov_1q35jnugmy() {
       mappings: "AAAA;;;gGAGgG;AAKhG,OAAO,EAAE,mBAAmB,EAAE,MAAM,uBAAuB,CAAC;AAK5D,OAAO,EAAE,iBAAiB,EAAE,iBAAiB,EAAE,MAAM,0CAA0C,CAAC;AAEhG,MAAM,CAAC,KAAK,UAAU,yBAAyB,CAAC,OAAe,EAC9D,cAA+B,EAC/B,kBAAuC,EACvC,oBAA2C,EAC3C,WAAyB,EACzB,cAA2C,EAC3C,gBAAmC;IAEnC,MAAM,OAAO,GAAa;QACzB,oBAAoB,EAAE,UAAU,OAAO,EAAE;QACzC,YAAY,EAAE,UAAU,OAAO,KAAK,cAAc,CAAC,SAAS,GAAG;KAC/D,CAAC;IAEF,IAAI,iBAAiB,CAAC,cAAc,EAAE,kBAAkB,CAAC,IAAI,iBAAiB,CAAC,oBAAoB,CAAC,iCAAyB,EAAE,CAAC;QAC/H,MAAM,gBAAgB,GAAG,MAAM,mBAAmB,CAAC,kBAAkB,EAAE,WAAW,EAAE,cAAc,CAAC,CAAC;QACpG,OAAO,CAAC,kBAAkB,CAAC,GAAG,gBAAgB,CAAC;QAC/C,oGAAoG;QACpG,iHAAiH;QACjH,6EAA6E;QAC7E,OAAO,CAAC,kBAAkB,CAAC,GAAG,gBAAgB,CAAC,SAAS,IAAI,gBAAgB,CAAC;IAC9E,CAAC;IAED,OAAO,OAAO,CAAC;AAChB,CAAC",
       names: [],
       sources: ["/home/user/Desktop/MintMind/src/vs/platform/externalServices/common/marketplace.ts"],
-      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IHeaders } from '../../../base/parts/request/common/request.js';\nimport { IConfigurationService } from '../../configuration/common/configuration.js';\nimport { IEnvironmentService } from '../../environment/common/environment.js';\nimport { getServiceMachineId } from './serviceMachineId.js';\nimport { IFileService } from '../../files/common/files.js';\nimport { IProductService } from '../../product/common/productService.js';\nimport { IStorageService } from '../../storage/common/storage.js';\nimport { ITelemetryService, TelemetryLevel } from '../../telemetry/common/telemetry.js';\nimport { getTelemetryLevel, supportsTelemetry } from '../../telemetry/common/telemetryUtils.js';\n\nexport async function resolveMarketplaceHeaders(version: string,\n\tproductService: IProductService,\n\tenvironmentService: IEnvironmentService,\n\tconfigurationService: IConfigurationService,\n\tfileService: IFileService,\n\tstorageService: IStorageService | undefined,\n\ttelemetryService: ITelemetryService): Promise<IHeaders> {\n\n\tconst headers: IHeaders = {\n\t\t'X-Market-Client-Id': `VSCode ${version}`,\n\t\t'User-Agent': `VSCode ${version} (${productService.nameShort})`\n\t};\n\n\tif (supportsTelemetry(productService, environmentService) && getTelemetryLevel(configurationService) === TelemetryLevel.USAGE) {\n\t\tconst serviceMachineId = await getServiceMachineId(environmentService, fileService, storageService);\n\t\theaders['X-Market-User-Id'] = serviceMachineId;\n\t\t// Send machineId as VSCode-SessionId so we can correlate telemetry events across different services\n\t\t// machineId can be undefined sometimes (eg: when launching from CLI), so send serviceMachineId instead otherwise\n\t\t// Marketplace will reject the request if there is no VSCode-SessionId header\n\t\theaders['VSCode-SessionId'] = telemetryService.machineId || serviceMachineId;\n\t}\n\n\treturn headers;\n}\n"],
+      sourcesContent: ["/*---------------------------------------------------------------------------------------------\n *  Copyright (c) Microsoft Corporation. All rights reserved.\n *  Licensed under the MIT License. See License.txt in the project root for license information.\n *--------------------------------------------------------------------------------------------*/\n\nimport { IHeaders } from '../../../base/parts/request/common/request.js';\nimport { IConfigurationService } from '../../configuration/common/configuration.js';\nimport { IEnvironmentService } from '../../environment/common/environment.js';\nimport { getServiceMachineId } from './serviceMachineId.js';\nimport { IFileService } from '../../files/common/files.js';\nimport { IProductService } from '../../product/common/productService.js';\nimport { IStorageService } from '../../storage/common/storage.js';\nimport { ITelemetryService, TelemetryLevel } from '../../telemetry/common/telemetry.js';\nimport { getTelemetryLevel, supportsTelemetry } from '../../telemetry/common/telemetryUtils.js';\n\nexport async function resolveMarketplaceHeaders(version: string,\n\tproductService: IProductService,\n\tenvironmentService: IEnvironmentService,\n\tconfigurationService: IConfigurationService,\n\tfileService: IFileService,\n\tstorageService: IStorageService | undefined,\n\ttelemetryService: ITelemetryService): Promise<IHeaders> {\n\n\tconst headers: IHeaders = {\n\t\t'X-Market-Client-Id': `MintMind ${version}`,\n\t\t'User-Agent': `MintMind ${version} (${productService.nameShort})`\n\t};\n\n\tif (supportsTelemetry(productService, environmentService) && getTelemetryLevel(configurationService) === TelemetryLevel.USAGE) {\n\t\tconst serviceMachineId = await getServiceMachineId(environmentService, fileService, storageService);\n\t\theaders['X-Market-User-Id'] = serviceMachineId;\n\t\t// Send machineId as MintMind-SessionId so we can correlate telemetry events across different services\n\t\t// machineId can be undefined sometimes (eg: when launching from CLI), so send serviceMachineId instead otherwise\n\t\t// Marketplace will reject the request if there is no MintMind-SessionId header\n\t\theaders['MintMind-SessionId'] = telemetryService.machineId || serviceMachineId;\n\t}\n\n\treturn headers;\n}\n"],
       version: 3
     },
     _coverageSchema: "1a1c01bbd47fc00a2c39e90264f33305004495a9",
@@ -249,8 +249,8 @@ export async function resolveMarketplaceHeaders(version, productService, environ
   const headers =
   /* istanbul ignore next */
   (cov_1q35jnugmy().s[0]++, {
-    'X-Market-Client-Id': `VSCode ${version}`,
-    'User-Agent': `VSCode ${version} (${productService.nameShort})`
+    'X-Market-Client-Id': `MintMind ${version}`,
+    'User-Agent': `MintMind ${version} (${productService.nameShort})`
   });
   /* istanbul ignore next */
   cov_1q35jnugmy().s[1]++;
@@ -267,12 +267,12 @@ export async function resolveMarketplaceHeaders(version, productService, environ
     /* istanbul ignore next */
     cov_1q35jnugmy().s[3]++;
     headers['X-Market-User-Id'] = serviceMachineId;
-    // Send machineId as VSCode-SessionId so we can correlate telemetry events across different services
+    // Send machineId as MintMind-SessionId so we can correlate telemetry events across different services
     // machineId can be undefined sometimes (eg: when launching from CLI), so send serviceMachineId instead otherwise
-    // Marketplace will reject the request if there is no VSCode-SessionId header
+    // Marketplace will reject the request if there is no MintMind-SessionId header
     /* istanbul ignore next */
     cov_1q35jnugmy().s[4]++;
-    headers['VSCode-SessionId'] =
+    headers['MintMind-SessionId'] =
     /* istanbul ignore next */
     (cov_1q35jnugmy().b[2][0]++, telemetryService.machineId) ||
     /* istanbul ignore next */

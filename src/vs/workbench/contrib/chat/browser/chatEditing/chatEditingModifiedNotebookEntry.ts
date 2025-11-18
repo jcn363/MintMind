@@ -56,7 +56,7 @@ import { countChanges, ICellDiffInfo, sortCellChanges } from './notebook/noteboo
 import { IAiEditTelemetryService } from '../../../editTelemetry/browser/telemetry/aiEditTelemetry/aiEditTelemetryService.js';
 
 
-const SnapshotLanguageId = 'VSCodeChatNotebookSnapshotLanguage';
+const SnapshotLanguageId = 'MintMindChatNotebookSnapshotLanguage';
 
 export class ChatEditingModifiedNotebookEntry extends AbstractChatEditingModifiedFileEntry {
 	static NewModelCounter: number = 0;

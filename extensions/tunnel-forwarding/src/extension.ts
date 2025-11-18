@@ -21,7 +21,7 @@ export const enum TunnelPrivacyId {
  */
 const CLEANUP_TIMEOUT = 10_000;
 
-const cliPath = process.env.VSCODE_FORWARDING_IS_DEV
+const cliPath = process.env.MINTMIND_FORWARDING_IS_DEV
 	? path.join(__dirname, '../../../cli/target/debug/code')
 	: path.join(
 		vscode.env.appRoot,
@@ -265,7 +265,7 @@ class TunnelProvider implements vscode.TunnelProvider {
 		];
 
 		this.logger.log('info', '[forwarding] starting CLI');
-		const child = spawn(cliPath, args, { stdio: 'pipe', env: { ...process.env, NO_COLOR: '1', VSCODE_CLI_ACCESS_TOKEN: session.accessToken } });
+		const child = spawn(cliPath, args, { stdio: 'pipe', env: { ...process.env, NO_COLOR: '1', MINTMIND_CLI_ACCESS_TOKEN: session.accessToken } });
 		this.state = { state: State.Starting, process: child };
 
 		const progressP = new DeferredPromise<void>();

@@ -169,6 +169,7 @@ mod tests {
     }
 
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_basic_suspend_resume() {
         let mut suspender = create_test_suspender();
@@ -186,6 +187,7 @@ mod tests {
         assert!(!suspender.is_suspended(&path));
     }
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_record_failure_and_suspend() {
         let mut suspender = create_test_suspender();
@@ -202,6 +204,7 @@ mod tests {
         assert!(suspender.is_suspended(&path));
     }
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_record_success_resets_failures() {
         let mut suspender = create_test_suspender();
@@ -226,6 +229,7 @@ mod tests {
         assert!(suspender.is_suspended(&path));
     }
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_check_resurrection() {
         let temp_dir = tempdir().unwrap();
@@ -261,6 +265,7 @@ mod tests {
     }
 
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_suspend_resume() {
         let mut suspender = create_test_suspender();

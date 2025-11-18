@@ -12,16 +12,16 @@ import { FileAccess } from '../../base/common/network.js';
 import { delimiter, join } from '../../base/common/path.js';
 import { IProcessEnvironment, isWindows } from '../../base/common/platform.js';
 import { removeDangerousEnvVariables } from '../../base/common/processes.js';
-import { createRandomIPCHandle, NodeSocket, WebSocketNodeSocket } from '../../base/parts/ipc/node/ipc.net.js';
+import { NodeSocket, WebSocketNodeSocket, createRandomIPCHandle } from '../../base/parts/ipc/node/ipc.net.js';
 import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
 import { ILogService } from '../../platform/log/common/log.js';
 import { IRemoteExtensionHostStartParams } from '../../platform/remote/common/remoteAgentConnection.js';
 import { getResolvedShellEnv } from '../../platform/shell/node/shellEnv.js';
+import { IPCExtHostConnection, SocketExtHostConnection, writeExtHostConnection } from '../../workbench/services/extensions/common/extensionHostEnv.js';
+import { IExtHostReadyMessage, IExtHostReduceGraceTimeMessage, IExtHostSocketMessage } from '../../workbench/services/extensions/common/extensionHostProtocol.js';
 import { IExtensionHostStatusService } from './extensionHostStatusService.js';
 import { getNLSConfiguration } from './remoteLanguagePacks.js';
 import { IServerEnvironmentService } from './serverEnvironmentService.js';
-import { IPCExtHostConnection, SocketExtHostConnection, writeExtHostConnection } from '../../workbench/services/extensions/common/extensionHostEnv.js';
-import { IExtHostReadyMessage, IExtHostReduceGraceTimeMessage, IExtHostSocketMessage } from '../../workbench/services/extensions/common/extensionHostProtocol.js';
 
 export async function buildUserEnvironment(startParamsEnv: { [key: string]: string | null } = {}, withUserShellEnvironment: boolean, language: string, environmentService: IServerEnvironmentService, logService: ILogService, configurationService: IConfigurationService): Promise<IProcessEnvironment> {
 	const nlsConfig = await getNLSConfiguration(language, environmentService.userDataPath);
@@ -41,9 +41,9 @@ export async function buildUserEnvironment(startParamsEnv: { [key: string]: stri
 		...processEnv,
 		...userShellEnv,
 		...{
-			VSCODE_ESM_ENTRYPOINT: 'vs/workbench/api/node/extensionHostProcess',
-			VSCODE_HANDLES_UNCAUGHT_ERRORS: 'true',
-			VSCODE_NLS_CONFIG: JSON.stringify(nlsConfig)
+			MINTMIND_ESM_ENTRYPOINT: 'vs/workbench/api/node/extensionHostProcess',
+			MINTMIND_HANDLES_UNCAUGHT_ERRORS: 'true',
+			MINTMIND_NLS_CONFIG: JSON.stringify(nlsConfig)
 		},
 		...startParamsEnv
 	};
@@ -94,7 +94,7 @@ class ConnectionData {
 		}
 
 		return {
-			type: 'VSCODE_EXTHOST_IPC_SOCKET',
+			type: 'MINTMIND_EXTHOST_IPC_SOCKET',
 			initialDataChunk: (<Buffer>this.initialDataChunk.buffer).toString('base64'),
 			skipWebSocketFrames: skipWebSocketFrames,
 			permessageDeflate: permessageDeflate,
@@ -198,7 +198,7 @@ export class ExtensionHostConnection extends Disposable {
 			return;
 		}
 		const msg: IExtHostReduceGraceTimeMessage = {
-			type: 'VSCODE_EXTHOST_IPC_REDUCE_GRACE_TIME'
+			type: 'MINTMIND_EXTHOST_IPC_REDUCE_GRACE_TIME'
 		};
 		this._extensionHostProcess.send(msg);
 	}
@@ -307,7 +307,7 @@ export class ExtensionHostConnection extends Disposable {
 				});
 			} else {
 				const messageListener = (msg: IExtHostReadyMessage) => {
-					if (msg.type === 'VSCODE_EXTHOST_IPC_READY') {
+					if (msg.type === 'MINTMIND_EXTHOST_IPC_READY') {
 						this._extensionHostProcess!.removeListener('message', messageListener);
 						this._sendSocketToExtensionHost(this._extensionHostProcess!, this._connectionData!);
 						this._connectionData = null;

@@ -1,4 +1,4 @@
-/*---------------------------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
@@ -24,7 +24,7 @@ export class CustomEndpointTelemetryService implements ICustomEndpointTelemetryS
 		@ITelemetryService private readonly telemetryService: ITelemetryService,
 		@ILoggerService private readonly loggerService: ILoggerService,
 		@IEnvironmentService private readonly environmentService: IEnvironmentService,
-		@IProductService private readonly productService: IProductService
+		@IProductService private readonly productService: IProductService,
 	) { }
 
 	private getCustomTelemetryService(endpoint: ITelemetryEndpoint): ITelemetryService {
@@ -40,11 +40,12 @@ export class CustomEndpointTelemetryService implements ICustomEndpointTelemetryS
 					timeout: 1000 * 60 * 5,
 					args,
 					env: {
-						ELECTRON_RUN_AS_NODE: 1,
-						VSCODE_PIPE_LOGGING: 'true',
-						VSCODE_ESM_ENTRYPOINT: 'vs/workbench/contrib/debug/node/telemetryApp'
-					}
-				}
+						MINTMIND_PIPE_LOGGING: 'true',
+						MINTMIND_ESM_ENTRYPOINT: 'vs/workbench/contrib/debug/node/telemetryApp',
+						TAURI_RUN_AS_NODE: '1',
+						TAURI_DEBUG: process.env.NODE_ENV === 'development' ? '1' : undefined,
+					},
+				},
 			);
 
 			const channel = client.getChannel('telemetryAppender');
@@ -55,7 +56,7 @@ export class CustomEndpointTelemetryService implements ICustomEndpointTelemetryS
 
 			this.customTelemetryServices.set(endpoint.id, new TelemetryService({
 				appenders,
-				sendErrorTelemetry: endpoint.sendErrorTelemetry
+				sendErrorTelemetry: endpoint.sendErrorTelemetry,
 			}, this.configurationService, this.productService));
 		}
 

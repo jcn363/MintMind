@@ -3,8 +3,6 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-extern crate dirs;
-
 use std::{
 	fs::{self, create_dir_all, read_to_string, remove_dir_all},
 	io::Write,
@@ -13,9 +11,10 @@ use std::{
 };
 
 use serde::{de::DeserializeOwned, Serialize};
+use dirs_next;
 
 use crate::{
-	constants::{DEFAULT_DATA_PARENT_DIR, VSCODE_CLI_QUALITY},
+	constants::{DEFAULT_DATA_PARENT_DIR, MINTMIND_CLI_QUALITY},
 	download_cache::DownloadCache,
 	util::errors::{wrap, AnyError, NoHomeForLauncherError, WrappedError},
 };
@@ -140,7 +139,7 @@ impl LauncherPaths {
 			return Self::new(root);
 		}
 
-		let home_dir = match dirs::home_dir() {
+		let home_dir = match dirs_next::home_dir() {
 			None => return Self::new(root),
 			Some(d) => d,
 		};
@@ -166,7 +165,7 @@ impl LauncherPaths {
 		let mut replaced = root.to_owned();
 		for token in HOME_DIR_ALTS {
 			if root.contains(token) {
-				if let Some(home) = dirs::home_dir() {
+				if let Some(home) = dirs_next::home_dir() {
 					replaced = root.replace(token, &home.to_string_lossy())
 				} else {
 					return Err(AnyError::from(NoHomeForLauncherError()));
@@ -207,7 +206,7 @@ impl LauncherPaths {
 	pub fn tunnel_lockfile(&self) -> PathBuf {
 		self.root.join(format!(
 			"tunnel-{}.lock",
-			VSCODE_CLI_QUALITY.unwrap_or("oss")
+			MINTMIND_CLI_QUALITY.unwrap_or("oss")
 		))
 	}
 
@@ -215,7 +214,7 @@ impl LauncherPaths {
 	pub fn forwarding_lockfile(&self) -> PathBuf {
 		self.root.join(format!(
 			"forwarding-{}.lock",
-			VSCODE_CLI_QUALITY.unwrap_or("oss")
+			MINTMIND_CLI_QUALITY.unwrap_or("oss")
 		))
 	}
 

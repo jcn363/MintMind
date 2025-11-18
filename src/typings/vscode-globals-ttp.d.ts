@@ -7,7 +7,7 @@
 
 declare global {
 
-	var _VSCODE_WEB_PACKAGE_TTP: Pick<TrustedTypePolicy, 'name' | 'createScriptURL'> | undefined;
+	var _MINTMIND_WEB_PACKAGE_TTP: Pick<TrustedTypePolicy, 'name' | 'createScriptURL'> | undefined;
 }
 
 // fake export to make global work

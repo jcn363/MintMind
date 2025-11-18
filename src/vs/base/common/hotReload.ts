@@ -6,7 +6,7 @@
 import { IDisposable } from './lifecycle.js';
 
 export function isHotReloadEnabled(): boolean {
-	// return env && !!env['VSCODE_DEV_DEBUG'];
+	// return env && !!env['MINTMIND_DEV_DEBUG'];
 	return false; // TODO@hediet investigate how to get hot reload
 }
 export function registerHotReloadHandler(handler: HotReloadHandler): IDisposable {

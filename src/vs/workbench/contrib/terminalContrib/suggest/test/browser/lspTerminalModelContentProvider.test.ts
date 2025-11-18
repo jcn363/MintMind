@@ -3,22 +3,22 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
-import { ITextModelService } from '../../../../../../editor/common/services/resolverService.js';
-import { IModelService } from '../../../../../../editor/common/services/model.js';
-import { ITextModel } from '../../../../../../editor/common/model.js';
-import { createTerminalLanguageVirtualUri, LspTerminalModelContentProvider } from '../../browser/lspTerminalModelContentProvider.js';
-import * as sinon from 'sinon';
 import assert from 'assert';
-import { URI } from '../../../../../../base/common/uri.js';
-import { TerminalCapabilityStore } from '../../../../../../platform/terminal/common/capabilities/terminalCapabilityStore.js';
-import { IMarkerService } from '../../../../../../platform/markers/common/markers.js';
-import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
-import { GeneralShellType } from '../../../../../../platform/terminal/common/terminal.js';
-import { ITerminalCapabilityStore } from '../../../../../../platform/terminal/common/capabilities/capabilities.js';
-import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
+import * as sinon from 'sinon';
 import { Schemas } from '../../../../../../base/common/network.js';
-import { VSCODE_LSP_TERMINAL_PROMPT_TRACKER } from '../../browser/lspTerminalUtil.js';
+import { URI } from '../../../../../../base/common/uri.js';
+import { ensureNoDisposablesAreLeakedInTestSuite } from '../../../../../../base/test/common/utils.js';
+import { ILanguageService } from '../../../../../../editor/common/languages/language.js';
+import { ITextModel } from '../../../../../../editor/common/model.js';
+import { IModelService } from '../../../../../../editor/common/services/model.js';
+import { ITextModelService } from '../../../../../../editor/common/services/resolverService.js';
+import { TestInstantiationService } from '../../../../../../platform/instantiation/test/common/instantiationServiceMock.js';
+import { IMarkerService } from '../../../../../../platform/markers/common/markers.js';
+import { ITerminalCapabilityStore } from '../../../../../../platform/terminal/common/capabilities/capabilities.js';
+import { TerminalCapabilityStore } from '../../../../../../platform/terminal/common/capabilities/terminalCapabilityStore.js';
+import { GeneralShellType } from '../../../../../../platform/terminal/common/terminal.js';
+import { createTerminalLanguageVirtualUri, LspTerminalModelContentProvider } from '../../browser/lspTerminalModelContentProvider.js';
+import { MINTMIND_LSP_TERMINAL_PROMPT_TRACKER } from '../../browser/lspTerminalUtil.js';
 
 describe('LspTerminalModelContentProvider', () => {
 	const store = ensureNoDisposablesAreLeakedInTestSuite();
@@ -93,29 +93,29 @@ describe('LspTerminalModelContentProvider', () => {
 			lspTerminalModelContentProvider.setContent('print("hello")');
 
 			assert.strictEqual(setValueSpy.calledOnce, true);
-			assert.strictEqual(setValueSpy.args[0][0], VSCODE_LSP_TERMINAL_PROMPT_TRACKER);
+			assert.strictEqual(setValueSpy.args[0][0], MINTMIND_LSP_TERMINAL_PROMPT_TRACKER);
 		});
 
 		it('should update content with delimiter when document already has content', () => {
-			const existingContent = 'previous content\n' + VSCODE_LSP_TERMINAL_PROMPT_TRACKER;
+			const existingContent = 'previous content\n' + MINTMIND_LSP_TERMINAL_PROMPT_TRACKER;
 			getValueSpy.returns(existingContent);
 
 			lspTerminalModelContentProvider.setContent('print("hello")');
 
 			assert.strictEqual(setValueSpy.calledOnce, true);
-			const expectedContent = 'previous content\n\nprint("hello")\n' + VSCODE_LSP_TERMINAL_PROMPT_TRACKER;
+			const expectedContent = 'previous content\n\nprint("hello")\n' + MINTMIND_LSP_TERMINAL_PROMPT_TRACKER;
 			assert.strictEqual(setValueSpy.args[0][0], expectedContent);
 		});
 
 		it('should sanitize content when delimiter is in the middle of existing content', () => {
 			// Simulating a corrupted state where the delimiter is in the middle
-			const existingContent = 'previous content\n' + VSCODE_LSP_TERMINAL_PROMPT_TRACKER + 'some extra text';
+			const existingContent = 'previous content\n' + MINTMIND_LSP_TERMINAL_PROMPT_TRACKER + 'some extra text';
 			getValueSpy.returns(existingContent);
 
 			lspTerminalModelContentProvider.setContent('print("hello")');
 
 			assert.strictEqual(setValueSpy.calledOnce, true);
-			const expectedContent = 'previous content\n\nprint("hello")\n' + VSCODE_LSP_TERMINAL_PROMPT_TRACKER;
+			const expectedContent = 'previous content\n\nprint("hello")\n' + MINTMIND_LSP_TERMINAL_PROMPT_TRACKER;
 			assert.strictEqual(setValueSpy.args[0][0], expectedContent);
 		});
 

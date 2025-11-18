@@ -3,11 +3,11 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable } from '../../../../base/common/lifecycle.js';
-import { Emitter } from '../../../../base/common/event.js';
-import { IFileChange, ILogMessage, IUniversalWatcher, IWatcherErrorEvent, IUniversalWatchRequest } from '../../common/watcher.js';
-import { spawn, SpawnOptions, ChildProcess } from 'child_process';
+import { ChildProcess, SpawnOptions, spawn } from 'child_process';
 import { createInterface } from 'readline';
+import { Emitter } from '../../../../base/common/event.js';
+import { Disposable } from '../../../../base/common/lifecycle.js';
+import { IFileChange, ILogMessage, IUniversalWatchRequest, IUniversalWatcher, IWatcherErrorEvent } from '../../common/watcher.js';
 
 class JSONRPCClient {
 	private child: ChildProcess;
@@ -80,7 +80,7 @@ export class UniversalWatcherProxy extends Disposable implements IUniversalWatch
 
 		constructor(rustBinaryPath: string, env: Record<string, string>) {
 			super();
-			this.client = this._register(new JSONRPCClient(rustBinaryPath, ['serve'], { env: { ...env, VSCODE_PARENT_PID: process.pid.toString() } }))!;
+			this.client = this._register(new JSONRPCClient(rustBinaryPath, ['serve'], { env: { ...env, MINTMIND_PARENT_PID: process.pid.toString() } }))!;
 		this.client.setOnNotification((method, params) => {
 			switch (method) {
 				case 'onDidChangeFile':

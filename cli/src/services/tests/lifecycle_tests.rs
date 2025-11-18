@@ -33,7 +33,7 @@ async fn test_service_spawn() {
     assert!(handle.pid() > 0);
 
     // Verify environment is set correctly by checking if service can start
-    // (The service will fail if env is not set properly, as it expects VSCODE_PARENT_PID)
+    // (The service will fail if env is not set properly, as it expects MINTMIND_PARENT_PID)
     tokio::time::sleep(Duration::from_millis(100)).await; // Give time to start
     assert!(handle.is_running().await);
 

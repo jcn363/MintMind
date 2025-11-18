@@ -143,7 +143,7 @@ describe('Extensions Management Integration', () => {
       const mockExtensionManagement = {
         install: jest.fn().mockImplementation(async (extensionId, version) => {
           if (version === 'incompatible') {
-            throw new Error('Version incompatible with VS Code');
+            throw new Error('Version incompatible with MintMind');
           }
           return {
             identifier: { id: extensionId },
@@ -159,7 +159,7 @@ describe('Extensions Management Integration', () => {
       // Act & Assert - Versión incompatible
       await expect(mockExtensionManagement.install('test-ext', 'incompatible'))
         .rejects
-        .toThrow('Version incompatible with VS Code');
+        .toThrow('Version incompatible with MintMind');
     });
   });
 

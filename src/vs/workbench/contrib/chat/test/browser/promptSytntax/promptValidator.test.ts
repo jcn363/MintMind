@@ -198,7 +198,7 @@ describe('PromptValidator', () => {
 			assert.deepStrictEqual(
 				markers.map(m => ({ severity: m.severity, message: m.message })),
 				[
-					{ severity: MarkerSeverity.Warning, message: `Attribute 'applyTo' is not supported in VS Code agent files. Supported: argument-hint, description, handoffs, model, name, target, tools.` },
+					{ severity: MarkerSeverity.Warning, message: `Attribute 'applyTo' is not supported in MintMind agent files. Supported: argument-hint, description, handoffs, model, name, target, tools.` },
 				]
 			);
 		});
@@ -350,7 +350,7 @@ describe('PromptValidator', () => {
 		it('vscode target agent validates normally', async () => {
 			const content = [
 				'---',
-				'description: "VS Code agent"',
+				'description: "MintMind agent"',
 				'target: vscode',
 				'model: MAE 4.1',
 				`tools: ['tool1', 'tool2']`,
@@ -358,13 +358,13 @@ describe('PromptValidator', () => {
 				'Body with #tool1',
 			].join('\n');
 			const markers = await validate(content, PromptsType.agent);
-			assert.deepStrictEqual(markers, [], 'VS Code target should validate normally');
+			assert.deepStrictEqual(markers, [], 'MintMind target should validate normally');
 		});
 
 		it('vscode target agent warns about unknown tools', async () => {
 			const content = [
 				'---',
-				'description: "VS Code agent"',
+				'description: "MintMind agent"',
 				'target: vscode',
 				`tools: ['tool1', 'unknownTool']`,
 				'---',
@@ -379,7 +379,7 @@ describe('PromptValidator', () => {
 		it('vscode target agent with mcp-servers and github-tools', async () => {
 			const content = [
 				'---',
-				'description: "VS Code agent"',
+				'description: "MintMind agent"',
 				'target: vscode',
 				`tools: ['tool1', 'shell']`,
 				`mcp-servers: {}`,
@@ -389,7 +389,7 @@ describe('PromptValidator', () => {
 			const markers = await validate(content, PromptsType.agent);
 			const messages = markers.map(m => m.message);
 			assert.deepStrictEqual(messages, [
-				'Attribute \'mcp-servers\' is ignored when running locally in VS Code.',
+				'Attribute \'mcp-servers\' is ignored when running locally in MintMind.',
 				'Unknown tool \'shell\'.',
 			]);
 		});
@@ -397,7 +397,7 @@ describe('PromptValidator', () => {
 		it('undefined target with mcp-servers and github-tools', async () => {
 			const content = [
 				'---',
-				'description: "VS Code agent"',
+				'description: "MintMind agent"',
 				`tools: ['tool1', 'shell']`,
 				`mcp-servers: {}`,
 				'---',
@@ -406,7 +406,7 @@ describe('PromptValidator', () => {
 			const markers = await validate(content, PromptsType.agent);
 			const messages = markers.map(m => m.message);
 			assert.deepStrictEqual(messages, [
-				'Attribute \'mcp-servers\' is ignored when running locally in VS Code.',
+				'Attribute \'mcp-servers\' is ignored when running locally in MintMind.',
 			]);
 		});
 
@@ -537,7 +537,7 @@ describe('PromptValidator', () => {
 			{
 				const content = [
 					'---',
-					'description: "VS Code agent"',
+					'description: "MintMind agent"',
 					'target: vscode',
 					`tools: ['tool1']`,
 					'---',

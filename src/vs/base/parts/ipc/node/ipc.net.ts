@@ -881,7 +881,7 @@ export function createStaticIPCHandle(directoryPath: string, type: string, versi
 	const typeForSocket = type.substr(0, 6);
 
 	let result: string;
-	if (process.platform !== 'darwin' && XDG_RUNTIME_DIR && !process.env['VSCODE_PORTABLE']) {
+	if (process.platform !== 'darwin' && XDG_RUNTIME_DIR && !process.env['MINTMIND_PORTABLE']) {
 		result = join(XDG_RUNTIME_DIR, `vscode-${scopeForSocket}-${versionForSocket}-${typeForSocket}.sock`);
 	} else {
 		result = join(directoryPath, `${versionForSocket}-${typeForSocket}.sock`);

@@ -7,7 +7,7 @@ import { exec } from 'child_process';
 import { totalmem } from 'os';
 import { FileAccess } from '../common/network.js';
 import { ProcessItem } from '../common/processes.js';
-import { isWindows } from '../common/platform.js';
+import { isWindows, isTauriMode } from '../common/platform.js';
 
 export function listProcesses(rootPid: number): Promise<ProcessItem> {
 
@@ -123,53 +123,94 @@ export function listProcesses(rootPid: number): Promise<ProcessItem> {
 				}
 			};
 
-			(import('@vscode/windows-process-tree')).then(windowsProcessTree => {
-				windowsProcessTree.getProcessList(rootPid, (processList) => {
-					if (!processList) {
-						reject(new Error(`Root process ${rootPid} not found`));
-						return;
-					}
-					windowsProcessTree.getProcessCpuUsage(processList, (completeProcessList) => {
-						const processItems: Map<number, ProcessItem> = new Map();
-						completeProcessList.forEach(process => {
-							const commandLine = cleanUNCPrefix(process.commandLine || '');
-							processItems.set(process.pid, {
-								name: findName(commandLine),
-								cmd: commandLine,
-								pid: process.pid,
-								ppid: process.ppid,
-								load: process.cpu || 0,
-								mem: process.memory || 0
-							});
-						});
-
-						rootItem = processItems.get(rootPid);
-						if (rootItem) {
-							processItems.forEach(item => {
-								const parent = processItems.get(item.ppid);
-								if (parent) {
-									if (!parent.children) {
-										parent.children = [];
-									}
-									parent.children.push(item);
-								}
-							});
-
-							processItems.forEach(item => {
-								if (item.children) {
-									item.children = item.children.sort((a, b) => a.pid - b.pid);
-								}
-							});
-							resolve(rootItem);
-						} else {
-							reject(new Error(`Root process ${rootPid} not found`));
+			if (isTauriMode()) {
+				// Tauri implementation
+				let tauriInvoke: any;
+				(async () => {
+					try {
+						if (!tauriInvoke) {
+							const { invoke } = await import('@tauri-apps/api/core');
+							tauriInvoke = invoke;
 						}
-					});
-				}, windowsProcessTree.ProcessDataFlag.CommandLine | windowsProcessTree.ProcessDataFlag.Memory);
-			});
+
+						const processTree = await tauriInvoke('get_process_tree', { rootPid });
+						if (!processTree) {
+							reject(new Error(`Root process ${rootPid} not found`));
+							return;
+						}
+
+						// Convert Tauri process tree format to expected ProcessItem format
+						const convertToProcessItem = (proc: any): ProcessItem => {
+							const item: ProcessItem = {
+								name: findName(cleanUNCPrefix(proc.cmd || '')),
+								cmd: cleanUNCPrefix(proc.cmd || ''),
+								pid: proc.pid,
+								ppid: proc.ppid,
+								load: proc.cpu || 0,
+								mem: proc.memory || 0
+							};
+							if (proc.children && proc.children.length > 0) {
+								item.children = proc.children.map(convertToProcessItem).sort((a, b) => a.pid - b.pid);
+							}
+							return item;
+						};
+
+						rootItem = convertToProcessItem(processTree);
+						resolve(rootItem);
+					} catch (err) {
+						reject(err);
+					}
+				})();
+			} else {
+				// Electron fallback
+				(import('@vscode/windows-process-tree')).then(windowsProcessTree => {
+					windowsProcessTree.getProcessList(rootPid, (processList) => {
+						if (!processList) {
+							reject(new Error(`Root process ${rootPid} not found`));
+							return;
+						}
+						windowsProcessTree.getProcessCpuUsage(processList, (completeProcessList) => {
+							const processItems: Map<number, ProcessItem> = new Map();
+							completeProcessList.forEach(process => {
+								const commandLine = cleanUNCPrefix(process.commandLine || '');
+								processItems.set(process.pid, {
+									name: findName(commandLine),
+									cmd: commandLine,
+									pid: process.pid,
+									ppid: process.ppid,
+									load: process.cpu || 0,
+									mem: process.memory || 0
+								});
+							});
+
+							rootItem = processItems.get(rootPid);
+							if (rootItem) {
+								processItems.forEach(item => {
+									const parent = processItems.get(item.ppid);
+									if (parent) {
+										if (!parent.children) {
+											parent.children = [];
+										}
+										parent.children.push(item);
+									}
+								});
+
+								processItems.forEach(item => {
+									if (item.children) {
+										item.children = item.children.sort((a, b) => a.pid - b.pid);
+									}
+								});
+								resolve(rootItem);
+							} else {
+								reject(new Error(`Root process ${rootPid} not found`));
+							}
+						});
+					}, windowsProcessTree.ProcessDataFlag.CommandLine | windowsProcessTree.ProcessDataFlag.Memory);
+				});
+			}
 		} else {	// OS X & Linux
 			function calculateLinuxCpuUsage() {
-				// Flatten rootItem to get a list of all VSCode processes
+				// Flatten rootItem to get a list of all MintMind processes
 				let processes = [rootItem];
 				const pids: number[] = [];
 				while (processes.length) {

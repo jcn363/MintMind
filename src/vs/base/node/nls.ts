@@ -3,10 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { join } from '../common/path.js';
 import { promises } from 'fs';
-import { mark } from '../common/performance.js';
 import { ILanguagePacks, INLSConfiguration } from '../../nls.js';
+import { join } from '../common/path.js';
+import { mark } from '../common/performance.js';
 import { Promises } from './pfs.js';
 
 export interface IResolveNLSConfigurationContext {
@@ -43,7 +43,7 @@ export async function resolveNLSConfiguration({ userLocale, osLocale, userDataPa
 	mark('code/willGenerateNls');
 
 	if (
-		process.env['VSCODE_DEV'] ||
+		process.env['MINTMIND_DEV'] ||
 		userLocale === 'pseudo' ||
 		userLocale.startsWith('en') ||
 		!commit ||

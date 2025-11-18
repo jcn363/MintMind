@@ -3,15 +3,14 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as vscode from 'vscode';
 import * as cp from 'child_process';
-import * as path from 'path';
-import * as fs from 'fs';
-import * as os from 'os';
-import * as net from 'net';
-import * as http from 'http';
 import * as crypto from 'crypto';
-import { downloadAndUnzipVSCodeServer } from './download';
+import * as fs from 'fs';
+import * as http from 'http';
+import * as net from 'net';
+import * as os from 'os';
+import * as path from 'path';
+import * as vscode from 'vscode';
 import { terminateProcess } from './util/processes';
 
 let extHostProcess: cp.ChildProcess | undefined;
@@ -173,11 +172,11 @@ export function activate(context: vscode.ExtensionContext) {
 					commandArgs.push('--start-server');
 				}
 				const serverCommand = `${serverApplicationName}${process.platform === 'win32' ? '.cmd' : ''}`;
-				let serverLocation = env['VSCODE_REMOTE_SERVER_PATH']; // support environment variable to specify location of server on disk
+				let serverLocation = env['MINTMIND_REMOTE_SERVER_PATH']; // support environment variable to specify location of server on disk
 				if (!serverLocation) {
 					const serverBin = path.join(remoteDataDir, 'bin');
-					progress.report({ message: 'Installing VSCode Server' });
-					serverLocation = await downloadAndUnzipVSCodeServer(updateUrl, commit, quality, serverBin, m => outputChannel.appendLine(m));
+					progress.report({ message: 'Installing MintMindnd Server' });
+					serverLocation = await downloadAndUnzipMintMindndServer(updateUrl, commit, quality, serverBin, m => outputChannel.appendLine(m));
 				}
 
 				outputChannel.appendLine(`Using server build at ${serverLocation}`);
@@ -484,7 +483,7 @@ function getProductConfiguration(): IProductConfiguration {
 
 function getNewEnv(): { [x: string]: string | undefined } {
 	const env = { ...process.env };
-	delete env['ELECTRON_RUN_AS_NODE'];
+	delete env['TAURI_RUN_AS_NODE'];
 	return env;
 }
 

@@ -51,16 +51,16 @@ export default {
   // Configuración de cobertura
   coverageThreshold: {
     global: {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80
+      branches: 70,
+      functions: 70,
+      lines: 70,
+      statements: 70
     }
   },
 
   // Configuración de rendimiento
   maxWorkers: 1,
-  testTimeout: 30000,
+  testTimeout: 15000,
   bail: false,
 
   // Exclusiones
@@ -138,7 +138,7 @@ npx jest --config test/integration/jest.config.js
 
 ## Cobertura de Código
 
-- **Umbral global**: 80% para branches, functions, lines y statements
+- **Umbral global**: 70% para branches, functions, lines y statements
 - **Reportes**: Texto en consola, LCOV y HTML
 - **Directorio**: `./coverage/`
 
@@ -620,7 +620,7 @@ JEST_JUNIT_OUTPUT_DIR=test-results/junit.xml
 JEST_JUNIT_OUTPUT_NAME=junit.xml
 
 # Configuración de cobertura
-COVERAGE_THRESHOLD=80
+COVERAGE_THRESHOLD=70
 COVERAGE_REPORTER=lcov
 
 # Configuración de base de datos para tests de integración

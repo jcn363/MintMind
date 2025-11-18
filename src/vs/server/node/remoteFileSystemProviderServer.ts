@@ -41,8 +41,8 @@ export class RemoteAgentFileSystemProviderChannel extends AbstractDiskFileSystem
 		return transformer;
 	}
 
-	protected override transformIncoming(uriTransformer: IURITransformer, _resource: UriComponents, supportVSCodeResource = false): URI {
-		if (supportVSCodeResource && _resource.path === '/vscode-resource' && _resource.query) {
+	protected override transformIncoming(uriTransformer: IURITransformer, _resource: UriComponents, supportMintMindResource = false): URI {
+		if (supportMintMindndResource && _resource.path === '/vscode-resource' && _resource.query) {
 			const requestResourcePath = JSON.parse(_resource.query).requestResourcePath;
 
 			return URI.from({ scheme: 'file', path: requestResourcePath });

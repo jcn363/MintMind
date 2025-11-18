@@ -10,16 +10,23 @@ fi
 function code() {
 	cd $ROOT
 
+	# Tauri CLI access
 	if [[ "$OSTYPE" == "darwin"* ]]; then
-		NAME=`node -p "require('./product.json').nameLong"`
-		CODE="./.build/electron/$NAME.app/Contents/MacOS/Electron"
+		NAME=`node -p "require('./product.json').applicationName"`
+		CODE="./src-tauri/target/release/bundle/macos/$NAME.app/Contents/MacOS/$NAME"
 	else
 		NAME=`node -p "require('./product.json').applicationName"`
-		CODE=".build/electron/$NAME"
+		CODE="./src-tauri/target/release/$NAME"
+	fi
+
+	# If release build doesn't exist, suggest building it
+	if [ ! -f "$CODE" ]; then
+		echo "Release build not found. Run 'npm run tauri:build' first."
+		exit 1
 	fi
 
 	# Get electron, compile, built-in extensions
-	if [[ -z "${VSCODE_SKIP_PRELAUNCH}" ]]; then
+	if [[ -z "${MINTMIND_SKIP_PRELAUNCH}" ]]; then
 		node build/lib/preLaunch.js
 	fi
 
@@ -35,12 +42,9 @@ function code() {
 		DISABLE_TEST_EXTENSION=""
 	fi
 
-	ELECTRON_RUN_AS_NODE=1 \
 	NODE_ENV=development \
-	VSCODE_DEV=1 \
-	ELECTRON_ENABLE_LOGGING=1 \
-	ELECTRON_ENABLE_STACK_DUMPING=1 \
-	"$CODE" --inspect=5874 "$ROOT/out/cli.js" . $DISABLE_TEST_EXTENSION "$@"
+	MINTMIND_DEV=1 \
+	"$CODE" "$@"
 }
 
 code "$@"

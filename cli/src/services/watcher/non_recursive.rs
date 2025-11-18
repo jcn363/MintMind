@@ -154,6 +154,7 @@ mod tests {
     use super::*;
     use tempfile::tempdir;
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_non_recursive_watcher_creation() {
         let temp_dir = tempdir().unwrap();
@@ -161,6 +162,7 @@ mod tests {
         assert!(watcher.is_ok());
     }
 
+    #[cfg_attr(miri, ignore)]
     #[test]
     fn test_watch_unwatch_directory() {
         let temp_dir = tempdir().unwrap();

@@ -3,24 +3,24 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as fs from 'fs';
 import { exec } from 'child_process';
+import * as fs from 'fs';
+import { IPty, IPtyForkOptions, IWindowsPtyForkOptions, spawn } from 'node-pty';
 import { timeout } from '../../../base/common/async.js';
 import { Emitter, Event } from '../../../base/common/event.js';
 import { Disposable, toDisposable } from '../../../base/common/lifecycle.js';
 import * as path from '../../../base/common/path.js';
 import { IProcessEnvironment, isLinux, isMacintosh, isWindows } from '../../../base/common/platform.js';
-import { findExecutable } from '../../../base/node/processes.js';
 import { URI } from '../../../base/common/uri.js';
+import { findExecutable } from '../../../base/node/processes.js';
 import { localize } from '../../../nls.js';
 import { ILogService, LogLevel } from '../../log/common/log.js';
 import { IProductService } from '../../product/common/productService.js';
-import { FlowControlConstants, IShellLaunchConfig, ITerminalChildProcess, ITerminalLaunchError, IProcessProperty, IProcessPropertyMap as IProcessPropertyMap, ProcessPropertyType, TerminalShellType, IProcessReadyEvent, ITerminalProcessOptions, PosixShellType, IProcessReadyWindowsPty, GeneralShellType, ITerminalLaunchResult } from '../common/terminal.js';
-import { ChildProcessMonitor } from './childProcessMonitor.js';
-import { getShellIntegrationInjection, getWindowsBuildNumber, IShellIntegrationConfigInjection } from './terminalEnvironment.js';
-import { WindowsShellHelper } from './windowsShellHelper.js';
-import { IPty, IPtyForkOptions, IWindowsPtyForkOptions, spawn } from 'node-pty';
+import { FlowControlConstants, GeneralShellType, IProcessProperty, IProcessPropertyMap, IProcessReadyEvent, IProcessReadyWindowsPty, IShellLaunchConfig, ITerminalChildProcess, ITerminalLaunchError, ITerminalLaunchResult, ITerminalProcessOptions, PosixShellType, ProcessPropertyType, TerminalShellType } from '../common/terminal.js';
 import { chunkInput } from '../common/terminalProcess.js';
+import { ChildProcessMonitor } from './childProcessMonitor.js';
+import { IShellIntegrationConfigInjection, getShellIntegrationInjection, getWindowsBuildNumber } from './terminalEnvironment.js';
+import { WindowsShellHelper } from './windowsShellHelper.js';
 
 const enum ShutdownConstants {
 	/**
@@ -238,7 +238,7 @@ export class TerminalProcess extends Disposable implements ITerminalChildProcess
 			// This allows extensions to use shell integration with custom shells
 			if (this._options.shellIntegration.nonce) {
 				this._ptyOptions.env ||= {};
-				this._ptyOptions.env['VSCODE_NONCE'] = this._options.shellIntegration.nonce;
+				this._ptyOptions.env['MINTMIND_NONCE'] = this._options.shellIntegration.nonce;
 			}
 		}
 
@@ -625,7 +625,7 @@ export class TerminalProcess extends Disposable implements ITerminalChildProcess
 	async getCwd(): Promise<string> {
 		if (isMacintosh) {
 			// From Big Sur (darwin v20) there is a spawn blocking thread issue on Electron,
-			// this is fixed in VS Code's internal Electron.
+			// this is fixed in MintMind's internal Electron.
 			// https://github.com/Microsoft/vscode/issues/105446
 			return new Promise<string>(resolve => {
 				if (!this._ptyProcess) {

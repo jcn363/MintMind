@@ -3,13 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, ExtensionContext, LogOutputChannel, window, l10n, env, LogLevel } from 'vscode';
-import { startClient, LanguageClientConstructor, SchemaRequestService, languageServerDescription, AsyncDisposable } from '../jsonClient';
-import { ServerOptions, TransportKind, LanguageClientOptions, LanguageClient } from 'vscode-languageclient/node';
+import { Disposable, ExtensionContext, LogLevel, LogOutputChannel, env, l10n, window } from 'vscode';
+import { LanguageClient, LanguageClientOptions, ServerOptions, TransportKind } from 'vscode-languageclient/node';
+import { AsyncDisposable, LanguageClientConstructor, SchemaRequestService, languageServerDescription, startClient } from '../jsonClient';
 
 import { promises as fs } from 'fs';
 import * as path from 'path';
-import { xhr, XHRResponse, getErrorStatusDescription, Headers } from 'request-light';
+import { Headers, XHRResponse, getErrorStatusDescription, xhr } from 'request-light';
 
 import TelemetryReporter from '@vscode/extension-telemetry';
 import { JSONSchemaCache } from './schemaCache';
@@ -50,7 +50,7 @@ export async function activate(context: ExtensionContext) {
 	};
 
 	// pass the location of the localization bundle to the server
-	process.env['VSCODE_L10N_BUNDLE_LOCATION'] = l10n.uri?.toString() ?? '';
+	process.env['MINTMIND_L10N_BUNDLE_LOCATION'] = l10n.uri?.toString() ?? '';
 
 	const schemaRequests = await getSchemaRequestService(context, logOutputChannel);
 

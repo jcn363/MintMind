@@ -83,7 +83,7 @@ impl ServiceSpawner {
         let mut cmd = new_tokio_command(command);
 
         // Set up environment variables
-        cmd.env("VSCODE_PARENT_PID", config.parent_pid.to_string());
+        cmd.env("MINTMIND_PARENT_PID", config.parent_pid.to_string());
         cmd.env("RUST_LOG", format!("{}", config.log_level));
 
         // Add additional environment variables

@@ -391,7 +391,7 @@ export namespace GithubCopilotToolReference {
 	export const customAgent = 'custom-agent';
 }
 
-export namespace VSCodeToolReference {
+export namespace MintMindToolReference {
 	export const runCommands = 'runCommands';
 	export const runSubagent = 'runSubagent';
 }

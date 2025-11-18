@@ -5,11 +5,11 @@
 
 import * as playwright from '@playwright/test';
 import { ChildProcess, spawn } from 'child_process';
-import { join } from 'path';
 import * as fs from 'fs';
+import { join } from 'path';
 import { URI } from 'vscode-uri';
-import { Logger, measureAndLog } from './logger';
 import type { LaunchOptions } from './code';
+import { Logger, measureAndLog } from './logger';
 import { PlaywrightDriver } from './playwrightDriver';
 
 const root = join(__dirname, '..', '..', '..');
@@ -33,11 +33,11 @@ export async function launch(options: LaunchOptions): Promise<{ serverProcess: C
 async function launchServer(options: LaunchOptions) {
 	const { userDataDir, codePath, extensionsPath, logger, logsPath } = options;
 	const serverLogsPath = join(logsPath, 'server');
-	const codeServerPath = codePath ?? process.env.VSCODE_REMOTE_SERVER_PATH;
+	const codeServerPath = codePath ?? process.env.MINTMIND_REMOTE_SERVER_PATH;
 	const agentFolder = userDataDir;
 
 	const env = {
-		VSCODE_REMOTE_SERVER_PATH: codeServerPath,
+		MINTMIND_REMOTE_SERVER_PATH: codeServerPath,
 		...process.env
 	};
 

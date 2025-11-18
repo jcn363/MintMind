@@ -26,7 +26,7 @@ else if (typeof process !== 'undefined' && typeof process?.versions?.node === 's
 		get platform() { return process.platform; },
 		get arch() { return process.arch; },
 		get env() { return process.env; },
-		cwd() { return process.env['VSCODE_CWD'] || process.cwd(); }
+		cwd() { return process.env['MINTMIND_CWD'] || process.cwd(); }
 	};
 }
 

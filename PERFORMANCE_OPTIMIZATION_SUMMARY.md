@@ -2,7 +2,7 @@
 
 ## 🎯 Objetivos Alcanzados
 
-Se han implementado optimizaciones avanzadas de **lazy loading** y **tree shaking mejorado** en el sistema de bundling de VSCode, enfocándonos en dividir bundles grandes, implementar lazy loading para módulos pesados y mejorar el tree shaking para eliminar código no usado.
+Se han implementado optimizaciones avanzadas de **lazy loading** y **tree shaking mejorado** en el sistema de bundling de MintMind, enfocándonos en dividir bundles grandes, implementar lazy loading para módulos pesados y mejorar el tree shaking para eliminar código no usado.
 
 ## 🚀 Optimizaciones Implementadas
 

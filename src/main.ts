@@ -3,15 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { invoke } from '@tauri-apps/api/tauri';
 import { appConfigDir } from '@tauri-apps/api/path';
-import { readTextFile } from '@tauri-apps/api/fs';
-import { product } from './bootstrap-meta.js';
-import { bootstrapESM } from './bootstrap-esm.js';
-import { parse } from './vs/base/common/jsonc.js';
-import { performance } from 'node:perf_hooks';
-import * as os from 'node:os';
 import * as path from 'node:path';
+import { bootstrapESM } from './bootstrap-esm.js';
+import { product } from './bootstrap-meta.js';
 
 // Bootstrap ESM
 await bootstrapESM();
@@ -31,8 +26,8 @@ async function initializeTauriApp() {
 		availableLanguages: {}
 	};
 
-	process.env['VSCODE_NLS_CONFIG'] = JSON.stringify(nlsConfig);
-	process.env['VSCODE_CODE_CACHE_PATH'] = path.join(userDataPath, 'CachedData', product.commit || 'dev');
+	process.env['MINTMIND_NLS_CONFIG'] = JSON.stringify(nlsConfig);
+	process.env['MINTMIND_CODE_CACHE_PATH'] = path.join(userDataPath, 'CachedData', product.commit || 'dev');
 
 	// Load main application
 	await import('./vs/code/tauri-main/main.js');

@@ -10,4 +10,4 @@ pub mod logging;
 pub mod paths;
 pub mod watcher;
 
-pub use self::{fileio::*, ipc::*, lifecycle::*, logging::*, paths::*, watcher::*};
+pub use self::{fileio::*, ipc::*, lifecycle::*, logging::*, paths::*, watcher::UniversalWatcher};

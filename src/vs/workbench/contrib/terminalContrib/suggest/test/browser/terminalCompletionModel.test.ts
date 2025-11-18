@@ -113,7 +113,7 @@ describe('TerminalCompletionModel', function () {
 		});
 
 		it('should handle many files and folders correctly', function () {
-			// This is VS Code's root directory with some python items added that have special
+			// This is MintMind's root directory with some python items added that have special
 			// sorting
 			const items = [
 				...createFolderItems(

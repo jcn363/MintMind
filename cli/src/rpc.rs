@@ -673,7 +673,7 @@ pub struct FullRequest<M: AsRef<str>, P> {
 }
 
 #[derive(Deserialize, Clone)]
-pub(crate) struct RequestParams<P> {
+pub struct RequestParams<P> {
 	pub params: P,
 }
 

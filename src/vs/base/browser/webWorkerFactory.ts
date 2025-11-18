@@ -3,16 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { createTrustedTypesPolicy } from './trustedTypes.js';
+import { getNLSLanguage, getNLSMessages } from '../../nls.js';
+import { coalesce } from '../common/arrays.js';
 import { onUnexpectedError } from '../common/errors.js';
+import { Emitter } from '../common/event.js';
+import { Disposable, toDisposable } from '../common/lifecycle.js';
 import { COI } from '../common/network.js';
 import { URI } from '../common/uri.js';
 import { IWebWorker, IWebWorkerClient, Message, WebWorkerClient } from '../common/worker/webWorker.js';
-import { Disposable, toDisposable } from '../common/lifecycle.js';
-import { coalesce } from '../common/arrays.js';
-import { getNLSLanguage, getNLSMessages } from '../../nls.js';
-import { Emitter } from '../common/event.js';
 import { getMonacoEnvironment } from './browser.js';
+import { createTrustedTypesPolicy } from './trustedTypes.js';
 
 // Reuse the trusted types policy defined from worker bootstrap
 // when available.
@@ -83,9 +83,9 @@ function getWorkerBootstrapUrl(label: string, workerScriptUrl: string): string {
 	// terminating characters (such as ' or ").
 	const blob = new Blob([coalesce([
 		`/*${label}*/`,
-		`globalThis._VSCODE_NLS_MESSAGES = ${JSON.stringify(getNLSMessages())};`,
-		`globalThis._VSCODE_NLS_LANGUAGE = ${JSON.stringify(getNLSLanguage())};`,
-		`globalThis._VSCODE_FILE_ROOT = ${JSON.stringify(globalThis._VSCODE_FILE_ROOT)};`,
+		`globalThis._MINTMIND_NLS_MESSAGES = ${JSON.stringify(getNLSMessages())};`,
+		`globalThis._MINTMIND_NLS_LANGUAGE = ${JSON.stringify(getNLSLanguage())};`,
+		`globalThis._MINTMIND_FILE_ROOT = ${JSON.stringify(globalThis._MINTMIND_FILE_ROOT)};`,
 		`const ttPolicy = globalThis.trustedTypes?.createPolicy('defaultWorkerFactory', { createScriptURL: value => value });`,
 		`globalThis.workerttPolicy = ttPolicy;`,
 		`await import(ttPolicy?.createScriptURL(${JSON.stringify(workerScriptUrl)}) ?? ${JSON.stringify(workerScriptUrl)});`,

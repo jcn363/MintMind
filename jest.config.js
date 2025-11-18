@@ -1,19 +1,22 @@
 /** @type {import('jest').Config} */
 const config = {
   preset: 'ts-jest/presets/default-esm',
-  testEnvironment: 'jsdom',
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  testEnvironment: 'node',
   testEnvironmentOptions: {
     url: 'http://localhost',
   },
   setupFiles: [
-    '<rootDir>/test/__mocks__/browser-mock.ts',
   ],
   setupFilesAfterEnv: [
     '<rootDir>/test/setup.ts',
+    '<rootDir>/test/__mocks__/browser-mock.ts',
   ],
   moduleNameMapper: {
     '^vs/(.*)$': '<rootDir>/src/vs/$1',
     '^(\\.{1,2}/.*)\\.js$': '$1',
+    '^@tauri-apps/api/core': '<rootDir>/test/tauri/__mocks__/@tauri-apps-api-core.ts',
+    '^@tauri-apps/api/event': '<rootDir>/test/tauri/__mocks__/@tauri-apps-api-event.ts',
   },
   transform: {
     '^.+\\.tsx?$': ['ts-jest', {
@@ -36,6 +39,7 @@ const config = {
   testMatch: [
     '<rootDir>/**/test/**/*.test.ts',
     '<rootDir>/**/test/**/*.test.tsx',
+    '<rootDir>/test/tauri/**/*.test.ts',
   ],
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -58,12 +62,24 @@ const config = {
     },
   },
   coverageReporters: ['text', 'lcov', 'html'],
-  maxWorkers: '75%', // Increased from 50% for better parallelization
+  reporters: [
+    'default',
+    ['jest-junit', {
+      outputDirectory: 'test-results',
+      outputName: 'junit.xml',
+      ancestorSeparator: ' › ',
+      uniqueOutputName: false,
+      suiteNameTemplate: '{filepath}',
+      classNameTemplate: '{classname}',
+      titleTemplate: '{title}'
+    }]
+  ],
+  maxWorkers: 1, // Optimized for Bun runtime
   forceExit: false, // Disabled to prevent early exit issues
   detectOpenHandles: false, // Disabled for performance, re-enable if needed
   clearMocks: true,
   restoreMocks: true,
-  testTimeout: 10000,
+  testTimeout: 15000,
   workerIdleMemoryLimit: '1GB', // Increased from 512MB for better stability
   detectLeaks: false,
 
@@ -81,5 +97,10 @@ const config = {
   resetMocks: false,
   restoreMocks: true,
 };
+
+  // Override testEnvironment for Tauri tests
+  if (process.env.TEST_PATH_PATTERN && process.env.TEST_PATH_PATTERN.includes('tauri')) {
+    config.testEnvironment = 'node';
+  }
 
 export default config;

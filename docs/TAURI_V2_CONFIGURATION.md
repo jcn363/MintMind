@@ -26,6 +26,7 @@ The capabilities system organizes permissions in a dedicated directory structure
 - **Schema validation**: Reference `../gen/schemas/desktop-schema.json` for IDE autocomplete and validation
 
 Capability files follow this structure (as implemented in `src-tauri/capabilities/main-capability.json`):
+
 ```json
 {
   "$schema": "../gen/schemas/desktop-schema.json",
@@ -56,12 +57,12 @@ Capability files follow this structure (as implemented in `src-tauri/capabilitie
     {
       "identifier": "fs:allow-write-file",
       "allow": [
-        {"path": "$APPDATA/**"},
-        {"path": "$DOCUMENT/**"},
-        {"path": "$DOWNLOAD/**"},
-        {"path": "$HOME/**"},
-        {"path": "$RESOURCE/**"},
-        {"path": "$TEMP/**"}
+        { "path": "$APPDATA/**" },
+        { "path": "$DOCUMENT/**" },
+        { "path": "$DOWNLOAD/**" },
+        { "path": "$HOME/**" },
+        { "path": "$RESOURCE/**" },
+        { "path": "$TEMP/**" }
       ]
     }
   ]
@@ -75,6 +76,7 @@ Permissions can be specified as simple string identifiers or objects with scope 
 Permissions are categorized by functionality with specific identifiers:
 
 ### Core Permissions
+
 - `core:default`: Basic window management and event handling
 - `core:window:*`: Window lifecycle operations (create, close, minimize, maximize)
 - `core:event:*`: Inter-process communication events
@@ -82,6 +84,7 @@ Permissions are categorized by functionality with specific identifiers:
 - `core:app:*`: Application metadata and system information access
 
 ### Dialog Permissions
+
 - `dialog:default`: Basic dialog functionality
 - `dialog:allow-open`: File/folder open dialogs
 - `dialog:allow-save`: File save dialogs
@@ -89,6 +92,7 @@ Permissions are categorized by functionality with specific identifiers:
 - `dialog:allow-ask`: Confirmation dialogs
 
 ### Filesystem Permissions
+
 - `fs:default`: Basic filesystem access
 - `fs:allow-read-file`: Read file contents
 - `fs:allow-write-file`: Write file contents
@@ -101,6 +105,7 @@ Permissions are categorized by functionality with specific identifiers:
 - `fs:allow-copy-file`: Copy files
 
 ### Shell Permissions
+
 - `shell:default`: Basic shell functionality
 - `shell:allow-execute`: Execute system commands
 - `shell:allow-open`: Open URLs in default applications
@@ -112,6 +117,7 @@ For the complete list of available permissions, reference `src-tauri/gen/schemas
 Filesystem permissions support scope restrictions to limit access to specific paths:
 
 ### Scope Variables
+
 - `$APPDATA`: Application data directory
 - `$DESKTOP`: Desktop directory
 - `$DOCUMENT`: Documents directory
@@ -125,15 +131,18 @@ Filesystem permissions support scope restrictions to limit access to specific pa
 - `$PUBLIC`: Public/shared directory
 
 ### Glob Patterns
+
 - `**`: Recursive wildcard (matches all subdirectories)
 - `*`: Single-level wildcard (matches files/directories in current level)
 
-### Allow/Deny Rules *(Planned for future implementation)*
+### Allow/Deny Rules _(Planned for future implementation)_
+
 Scopes support both allow and deny rules for fine-tuned access control:
+
 ```json
 {
-  "allow": [{"path": "$HOME/**"}],
-  "deny": [{"path": "$HOME/.ssh/**"}]
+  "allow": [{ "path": "$HOME/**" }],
+  "deny": [{ "path": "$HOME/.ssh/**" }]
 }
 ```
 
@@ -146,6 +155,7 @@ Implemented: app.security.csp with strict directives as specified
 Content Security Policy (CSP) configuration controls resource loading and script execution:
 
 ### CSP Directives
+
 - `default-src`: Default source for all resource types
 - `script-src`: Allowed sources for JavaScript
 - `style-src`: Allowed sources for CSS
@@ -157,15 +167,18 @@ Content Security Policy (CSP) configuration controls resource loading and script
 - `object-src`: Allowed sources for plugins/objects
 
 ### Development vs Production
+
 - `app.security.csp`: Production CSP configuration ✅ **IMPLEMENTED**
 - `app.security.devCsp`: Relaxed CSP for development (includes `'unsafe-eval'` for development builds) ✅ **IMPLEMENTED**
 
 ### Tauri-Specific Protocols
+
 - `asset:`: Tauri asset protocol for bundled files
 - `customprotocol:`: Custom protocol handlers
 - `ipc:`: Inter-process communication protocol
 
 ### WASM Considerations
+
 Include `'wasm-unsafe-eval'` in CSP for WebAssembly execution in production builds.
 
 ## Bundle Configuration
@@ -175,6 +188,7 @@ Implemented: multi-targets nsis/msi/app/dmg/deb/rpm/appimage configured
 Tauri supports multi-platform application bundling with platform-specific settings:
 
 ### Bundle Targets ✅ **ALL IMPLEMENTED**
+
 - `nsis`: Windows NSIS installer
 - `msi`: Windows MSI installer
 - `app`: macOS application bundle
@@ -184,16 +198,19 @@ Tauri supports multi-platform application bundling with platform-specific settin
 - `appimage`: Linux AppImage portable application
 
 ### Icon Requirements
+
 - Windows: `.ico` format (256x256 recommended)
 - macOS: `.icns` format (1024x1024 recommended)
 - Linux: `.png` format (512x512 recommended)
 
 ### Platform-Specific Settings
+
 - WebView2 installation requirements for Windows
 - Code signing certificates and entitlements for macOS
 - Package dependencies and metadata for Linux distributions
 
 ### Build Commands
+
 - `npm run tauri:build`: Universal build for current platform
 - `npm run tauri:build:windows`: Windows-specific build
 - `npm run tauri:build:macos`: macOS-specific build
@@ -206,17 +223,21 @@ Tauri supports multi-platform application bundling with platform-specific settin
 Tauri v2 development workflow integrates frontend and backend development:
 
 ### Development Command
+
 - `npm run tauri:dev`: Executes `beforeDevCommand` (if configured) then starts Tauri development server
 
 ### Hot Reload
+
 - Frontend changes automatically trigger application reload
 - Rust backend changes require manual restart
 
 ### Debugging
+
 - Frontend: Chrome DevTools via `Ctrl+Shift+I` (Windows/Linux) or `Cmd+Opt+I` (macOS)
-- Backend: Rust debugging through VS Code extensions or CLI tools
+- Backend: Rust debugging through MintMind extensions or CLI tools
 
 ### Environment Information
+
 - `npm run tauri:info`: Displays system information, dependencies, and environment details for troubleshooting
 
 ## Security Best Practices
@@ -224,25 +245,30 @@ Tauri v2 development workflow integrates frontend and backend development:
 Follow these guidelines to maintain a secure Tauri application:
 
 ### Principle of Least Privilege
+
 - Grant only the minimum permissions required for application functionality
 - Use scoped permissions instead of broad access
 - Regularly audit capability files for unused permissions
 
 ### Scope Restrictions
+
 - Prefer specific paths over wildcard patterns (`$HOME/Documents/**` vs `$HOME/**`)
 - Use deny rules to exclude sensitive directories
 - Validate paths against `src-tauri/src/validations.rs` security checks
 
 ### Command Validation
+
 - Implement additional validation in `src-tauri/src/validations.rs` for shell commands ❌ **PENDING**
 - Sanitize user input before passing to system commands ❌ **PENDING**
 
 ### CSP Strictness
+
 - Avoid `'unsafe-eval'` and `'unsafe-inline'` in production CSP
 - Use nonces or hashes for inline scripts/styles when necessary
 - Regularly test CSP violations in browser console
 
 ### Plugin Initialization
+
 - Ensure filesystem plugin initializes before scope-dependent plugins ❌ **PENDING**
 - Verify plugin order in Cargo.toml and capability files ❌ **PENDING**
 
@@ -251,19 +277,23 @@ Follow these guidelines to maintain a secure Tauri application:
 Migration from Tauri v1 to v2 has been completed with comprehensive implementation:
 
 ### Parallel Builds
+
 - Maintain both Electron and Tauri builds during transition
 - Use feature flags to enable/disable functionality during migration
 
 ### API Equivalents
-- Reference `docs/ELECTRON_TO_TAURI_AUDIT.md` for Electron-to-Tauri API mappings
+
+- Reference `docs/TAURI_TO_TAURI_AUDIT.md` for Electron-to-Tauri API mappings
 - Update imports and API calls systematically
 
 ### Phase Dependencies
+
 - Phase 1: Basic Tauri setup and configuration ✅ **COMPLETED**
 - Phase 2: Dialog and Shell API migration (enabled by this configuration) ❌ **READY FOR IMPLEMENTATION**
 - Phase 3: Filesystem API migration (enabled by this configuration) ❌ **READY FOR IMPLEMENTATION**
 
 ### Testing Strategy
+
 - Test builds on all target platforms (Windows, macOS, Linux) ✅ **COMPLETED**
 - Verify functionality against Electron baseline ❌ **PENDING**
 - Perform security testing before production deployment ❌ **PENDING**
@@ -273,16 +303,19 @@ Migration from Tauri v1 to v2 has been completed with comprehensive implementati
 Common issues and their solutions:
 
 ### Permission Denied Errors
+
 - Verify capability file contains required permissions
 - Check filesystem scopes allow access to target paths
 - Ensure window identifier matches capability configuration
 
 ### CSP Violations
+
 - Review browser console for violation details
 - Adjust CSP directives in `tauri.conf.json`
 - Consider development vs production CSP differences
 
 ### Build Failures
+
 **Current Status**: Configuration validation is failing due to duplicate `identifier` field.
 
 - Run `npm run tauri:info` to verify environment setup
@@ -294,6 +327,7 @@ Common issues and their solutions:
 - **Bundle Target Inconsistencies**: Ensure bundle targets match platform-specific settings in `tauri.conf.json`
 
 ### Plugin Initialization Errors
+
 - Verify plugin order in Cargo.toml matches initialization requirements ❌ **PENDING**
 - Check capability file references correct plugin permissions ✅ **COMPLETED**
 - Ensure all plugin dependencies are installed ✅ **COMPLETED**
@@ -306,6 +340,6 @@ Common issues and their solutions:
 - [Migration Guide](https://v2.tauri.app/start/migrate/from-tauri-1/)
 - **Schema Validation Tip**: Use `tauri info --schema` to validate configuration files against the current Tauri schema
 - Internal Documentation:
-  - [`docs/ELECTRON_TO_TAURI_AUDIT.md`](docs/ELECTRON_TO_TAURI_AUDIT.md)
+  - [`docs/TAURI_TO_TAURI_AUDIT.md`](docs/TAURI_TO_TAURI_AUDIT.md)
   - [`docs/TAURI_MIGRATION_ROADMAP.md`](docs/TAURI_MIGRATION_ROADMAP.md)
   - [`docs/NATIVE_MODULES_MIGRATION_GUIDE.md`](docs/NATIVE_MODULES_MIGRATION_GUIDE.md)

@@ -34,7 +34,7 @@ async fn start_ipc_server() -> Result<(), Box<dyn std::error::Error + Send + Syn
     let watcher_service = Arc::new(Mutex::new(create_watcher_service(ipc_sink)));
 
     // Get parent PID from environment
-    let parent_pid: u32 = env::var("VSCODE_PARENT_PID")
+    let parent_pid: u32 = env::var("MINTMIND_PARENT_PID")
         .unwrap_or_else(|_| "1".to_string())
         .parse()
         .unwrap_or(1);
@@ -67,7 +67,7 @@ async fn start_ipc_server() -> Result<(), Box<dyn std::error::Error + Send + Syn
     });
 
     let dispatcher = method_builder.build(Logger::new(
-        opentelemetry_sdk::trace::TracerProvider::builder()
+        opentelemetry_sdk::trace::SdkTracerProvider::builder()
             .build()
             .tracer("watcher"),
         Level::Info,

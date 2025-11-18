@@ -22,6 +22,21 @@ import { getWindowsBuildNumber } from './terminalEnvironment.js';
 import { TerminalProcess } from './terminalProcess.js';
 import { localize } from '../../../nls.js';
 import { ignoreProcessNames } from './childProcessMonitor.js';
+
+// Runtime backend detection and dynamic imports
+function isTauriMode(): boolean {
+	return typeof (globalThis as any).__TAURI__ !== 'undefined';
+}
+
+let TauriTerminalProcess: typeof import('./terminalProcess.tauri').TauriTerminalProcess | undefined;
+
+async function loadTauriTerminalProcess(): Promise<typeof import('./terminalProcess.tauri').TauriTerminalProcess> {
+	if (!TauriTerminalProcess) {
+		const module = await import('./terminalProcess.tauri');
+		TauriTerminalProcess = module.TauriTerminalProcess;
+	}
+	return TauriTerminalProcess;
+}
 import { ErrorNoTelemetry } from '../../../base/common/errors.js';
 import { ShellIntegrationAddon } from '../common/xterm/shellIntegrationAddon.js';
 import { formatMessageForTerminal } from '../common/terminalStrings.js';
@@ -314,12 +329,29 @@ export class PtyService extends Disposable implements IPtyService {
 			throw new Error('Attempt to create a process when attach object was provided');
 		}
 		const id = ++this._lastPtyId;
-		const process = new TerminalProcess(shellLaunchConfig, cwd, cols, rows, env, executableEnv, options, this._logService, this._productService);
-		const processLaunchOptions: IPersistentTerminalProcessLaunchConfig = {
+		let process: TerminalProcess | import('./terminalProcess.tauri').TauriTerminalProcess;
+		let processLaunchOptions: IPersistentTerminalProcessLaunchConfig = {
 			env,
 			executableEnv,
 			options
 		};
+
+		// Runtime backend selection
+		if (isTauriMode()) {
+			try {
+				const TauriProcess = await loadTauriTerminalProcess();
+				process = this._instantiationService.createInstance(TauriProcess, shellLaunchConfig, cwd, cols, rows, env, options, this._logService, this._productService);
+				this._logService.info('Creating terminal process', { mode: 'Tauri', id });
+			} catch (err) {
+				this._logService.error('Failed to load Tauri terminal backend, falling back to Electron', err);
+				process = new TerminalProcess(shellLaunchConfig, cwd, cols, rows, env, executableEnv, options, this._logService, this._productService);
+				this._logService.info('Creating terminal process', { mode: 'Electron (fallback)', id });
+			}
+		} else {
+			process = new TerminalProcess(shellLaunchConfig, cwd, cols, rows, env, executableEnv, options, this._logService, this._productService);
+			this._logService.info('Creating terminal process', { mode: 'Electron', id });
+		}
+
 		const persistentProcess = new PersistentTerminalProcess(id, process, workspaceId, workspaceName, shouldPersist, cols, rows, processLaunchOptions, unicodeVersion, this._reconnectConstants, this._logService, isReviving && typeof shellLaunchConfig.initialText === 'string' ? shellLaunchConfig.initialText : undefined, rawReviveBuffer, shellLaunchConfig.icon, shellLaunchConfig.color, shellLaunchConfig.name, shellLaunchConfig.fixedDimensions);
 		process.onProcessExit(event => {
 			for (const contrib of this._contributions) {

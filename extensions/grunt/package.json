@@ -1,80 +1,80 @@
 {
-  "name": "grunt",
-  "publisher": "vscode",
-  "description": "Extension to add Grunt capabilities to VS Code.",
-  "displayName": "Grunt support for VS Code",
-  "version": "1.0.0",
-  "private": true,
-  "icon": "images/grunt.png",
-  "license": "MIT",
-  "engines": {
-    "vscode": "*"
-  },
-  "categories": [
-    "Other"
-  ],
-  "scripts": {
-    "compile": "gulp compile-extension:grunt",
-    "watch": "gulp watch-extension:grunt"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/node": "22.x"
-  },
-  "main": "./out/main",
   "activationEvents": [
     "onTaskType:grunt"
   ],
   "capabilities": {
-    "virtualWorkspaces": false,
     "untrustedWorkspaces": {
       "supported": true
-    }
+    },
+    "virtualWorkspaces": false
   },
+  "categories": [
+    "Other"
+  ],
   "contributes": {
     "configuration": {
       "id": "grunt",
-      "type": "object",
-      "title": "Grunt",
       "properties": {
         "grunt.autoDetect": {
-          "scope": "application",
-          "type": "string",
+          "default": "off",
+          "description": "%config.grunt.autoDetect%",
           "enum": [
             "off",
             "on"
           ],
-          "default": "off",
-          "description": "%config.grunt.autoDetect%"
+          "scope": "application",
+          "type": "string"
         }
-      }
+      },
+      "title": "Grunt",
+      "type": "object"
     },
     "taskDefinitions": [
       {
-        "type": "grunt",
+        "properties": {
+          "args": {
+            "description": "%grunt.taskDefinition.args.description%",
+            "type": "array"
+          },
+          "file": {
+            "description": "%grunt.taskDefinition.file.description%",
+            "type": "string"
+          },
+          "task": {
+            "description": "%grunt.taskDefinition.type.description%",
+            "type": "string"
+          }
+        },
         "required": [
           "task"
         ],
-        "properties": {
-          "task": {
-            "type": "string",
-            "description": "%grunt.taskDefinition.type.description%"
-          },
-          "args": {
-            "type": "array",
-            "description": "%grunt.taskDefinition.args.description%"
-          },
-          "file": {
-            "type": "string",
-            "description": "%grunt.taskDefinition.file.description%"
-          }
-        },
+        "type": "grunt",
         "when": "shellExecutionSupported"
       }
     ]
   },
+  "dependencies": {},
+  "description": "Extension to add Grunt capabilities to MintMind.",
+  "devDependencies": {
+    "@types/node": "22.x"
+  },
+  "displayName": "Grunt support for MintMind",
+  "engines": {
+    "vscode": "*"
+  },
+  "icon": "images/grunt.png",
+  "license": "MIT",
+  "main": "./out/main",
+  "name": "grunt",
+  "private": true,
+  "publisher": "vscode",
   "repository": {
     "type": "git",
     "url": "https://github.com/microsoft/vscode.git"
-  }
+  },
+  "scripts": {
+    "compile": "gulp compile-extension:grunt",
+    "watch": "gulp watch-extension:grunt"
+  },
+  "version": "1.0.0"
 }

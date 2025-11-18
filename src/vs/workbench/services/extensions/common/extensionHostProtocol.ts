@@ -101,11 +101,11 @@ export const enum ExtensionHostExitCode {
 }
 
 export interface IExtHostReadyMessage {
-	type: 'VSCODE_EXTHOST_IPC_READY';
+	type: 'MINTMIND_EXTHOST_IPC_READY';
 }
 
 export interface IExtHostSocketMessage {
-	type: 'VSCODE_EXTHOST_IPC_SOCKET';
+	type: 'MINTMIND_EXTHOST_IPC_SOCKET';
 	initialDataChunk: string;
 	skipWebSocketFrames: boolean;
 	permessageDeflate: boolean;
@@ -113,7 +113,7 @@ export interface IExtHostSocketMessage {
 }
 
 export interface IExtHostReduceGraceTimeMessage {
-	type: 'VSCODE_EXTHOST_IPC_REDUCE_GRACE_TIME';
+	type: 'MINTMIND_EXTHOST_IPC_REDUCE_GRACE_TIME';
 }
 
 export const enum MessageType {

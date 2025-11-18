@@ -83,7 +83,7 @@ export namespace GithubPromptHeaderAttributes {
 }
 
 export enum Target {
-	VSCode = 'vscode',
+	MintMind = 'vscode',
 	GitHubCopilot = 'github-copilot'
 }
 

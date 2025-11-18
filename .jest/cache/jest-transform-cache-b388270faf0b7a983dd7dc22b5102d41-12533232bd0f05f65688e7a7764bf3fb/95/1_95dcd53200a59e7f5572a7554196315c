@@ -3920,7 +3920,7 @@ const {
 const {
   vscodeWebEntryPoints,
   vscodeWebResourceIncludes,
-  createVSCodeWebFileContentMapper
+  createMintMindWebFileContentMapper
 } =
 /* istanbul ignore next */
 (cov_1b5h5jykk().s[21]++, require('./gulpfile.vscode.web'));
@@ -4720,7 +4720,7 @@ cov_1b5h5jykk().s[152]++;
       loaderConfig: optimize.loaderConfig(),
       inlineAmdImages: true,
       bundleInfo: undefined,
-      fileContentMapper: createVSCodeWebFileContentMapper('.build/extensions', type === 'reh-web' ?
+      fileContentMapper: createMintMindWebFileContentMapper('.build/extensions', type === 'reh-web' ?
       /* istanbul ignore next */
       (cov_1b5h5jykk().b[33][0]++, tweakProductForServerWeb(product)) :
       /* istanbul ignore next */

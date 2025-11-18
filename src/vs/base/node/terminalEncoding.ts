@@ -43,10 +43,10 @@ export async function resolveTerminalEncoding(verbose?: boolean): Promise<string
 	let rawEncodingPromise: Promise<string | undefined>;
 
 	// Support a global environment variable to win over other mechanics
-	const cliEncodingEnv = process.env['VSCODE_CLI_ENCODING'];
+	const cliEncodingEnv = process.env['MINTMIND_CLI_ENCODING'];
 	if (cliEncodingEnv) {
 		if (verbose) {
-			console.log(`Found VSCODE_CLI_ENCODING variable: ${cliEncodingEnv}`);
+			console.log(`Found MINTMIND_CLI_ENCODING variable: ${cliEncodingEnv}`);
 		}
 
 		rawEncodingPromise = Promise.resolve(cliEncodingEnv);

@@ -8,12 +8,12 @@ import { test, expect } from '@playwright/test';
  * Tests E2E for Rust File I/O integration in MintMind
  *
  * These tests validate the full user flow for the Rust File I/O feature,
- * including spawning VS Code, enabling the setting, and performing file operations.
+ * including spawning MintMind, enabling the setting, and performing file operations.
  */
 
 test.describe('MintMind - Rust File I/O E2E Integration', () => {
 
-  test('should spawn VS Code, enable Rust File I/O setting, and perform file operations without errors', async ({ page }) => {
+  test('should spawn MintMind, enable Rust File I/O setting, and perform file operations without errors', async ({ page }) => {
     // Navigate to the application
     await page.goto('http://127.0.0.1:3000');
 
@@ -21,7 +21,7 @@ test.describe('MintMind - Rust File I/O E2E Integration', () => {
     await expect(page).toHaveTitle(/MintMind/);
     await page.waitForSelector('[data-testid="main-content"]', { timeout: 10000 });
 
-    // Open settings (VS Code settings UI)
+    // Open settings (MintMind settings UI)
     const settingsButton = page.locator('[data-testid="settings-button"]');
     await expect(settingsButton).toBeVisible();
     await settingsButton.click();

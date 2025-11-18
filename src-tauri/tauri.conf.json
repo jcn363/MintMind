@@ -1,46 +1,37 @@
 {
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "MintMind",
   "version": "0.1.0",
-  "identifier": "com.mintmind.app",
-  "plugins": {
-    "fs": {
-      "scope": ["$APPDATA", "$DESKTOP", "$DOCUMENT", "$DOWNLOAD", "$HOME", "$PICTURE", "$VIDEO", "$AUDIO", "$PUBLIC", "$RESOURCE"]
+  "identifier": "com.tauri.dev",
+  "build": {
+    "frontendDist": "../out",
+    "devUrl": "../out",
+    "beforeDevCommand": "bun run watch-client",
+    "beforeBuildCommand": "bun run compile-build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "MintMind",
+        "width": 800,
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
     }
   },
   "bundle": {
-    "targets": ["nsis", "msi", "app", "dmg", "deb", "rpm", "appimage"],
-    "category": "DeveloperTool",
+    "active": true,
+    "targets": "all",
     "icon": [
-      "../resources/win32/code.ico",
-      "../resources/darwin/code.icns",
-      "../resources/linux/code_rgba.png"
-    ],
-    "resources": [],
-    "windows": {
-      "webviewInstallMode": {
-        "type": "downloadBootstrapper",
-        "silent": true
-      },
-      "wix": {
-        "language": "en-US"
-      }
-    },
-    "macOS": {
-      "minimumSystemVersion": "12.0",
-      "frameworks": []
-    },
-    "linux": {
-      "deb": {
-        "files": {}
-      },
-      "rpm": {
-        "release": "1"
-      }
-    }
-  },
-  "build": {
-    "frontendDist": "../out",
-    "beforeDevCommand": "bun run watch-client",
-    "beforeBuildCommand": "bun run compile-build"
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
   }
 }

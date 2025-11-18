@@ -2,7 +2,7 @@
 
 ## Resumen Ejecutivo
 
-Esta documentación detalla las APIs principales de MintMind, incluyendo interfaces TypeScript, contratos de servicios y protocolos de comunicación. MintMind extiende las APIs de VS Code con capacidades MCP (Model Context Protocol) para integración avanzada de IA.
+Esta documentación detalla las APIs principales de MintMind, incluyendo interfaces TypeScript, contratos de servicios y protocolos de comunicación. MintMind extiende las APIs de MintMind con capacidades MCP (Model Context Protocol) para integración avanzada de IA.
 
 ## Arquitectura de APIs
 
@@ -531,4 +531,4 @@ export interface IFileService {
 
 ## Conclusión
 
-Las APIs de MintMind proporcionan una interfaz completa y bien estructurada para interactuar con todas las capas de la aplicación. Desde servicios de bajo nivel hasta APIs de alto nivel para extensiones, el sistema está diseñado para ser extensible, mantenible y fácil de usar. La integración de MCP añade una capa adicional de capacidades de IA que complementa perfectamente las APIs existentes de VS Code.
+Las APIs de MintMind proporcionan una interfaz completa y bien estructurada para interactuar con todas las capas de la aplicación. Desde servicios de bajo nivel hasta APIs de alto nivel para extensiones, el sistema está diseñado para ser extensible, mantenible y fácil de usar. La integración de MCP añade una capa adicional de capacidades de IA que complementa perfectamente las APIs existentes de MintMind.

@@ -8,17 +8,17 @@
  */
 
 import * as path from '../../../../base/common/path.js';
+import { IProcessEnvironment, OperatingSystem, isMacintosh, isWindows, language } from '../../../../base/common/platform.js';
+import { sanitizeProcessEnvironment } from '../../../../base/common/processes.js';
+import { isNumber, isString } from '../../../../base/common/types.js';
 import { URI, uriToFsPath } from '../../../../base/common/uri.js';
+import type { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
+import { ILogService } from '../../../../platform/log/common/log.js';
+import { IShellLaunchConfig, ITerminalBackend, ITerminalEnvironment, TerminalSettingId, TerminalShellType, WindowsShellType } from '../../../../platform/terminal/common/terminal.js';
+import { escapeNonWindowsPath, sanitizeCwd } from '../../../../platform/terminal/common/terminalEnvironment.js';
 import { IWorkspaceContextService, IWorkspaceFolder } from '../../../../platform/workspace/common/workspace.js';
 import { IConfigurationResolverService } from '../../../services/configurationResolver/common/configurationResolver.js';
-import { sanitizeProcessEnvironment } from '../../../../base/common/processes.js';
-import { IShellLaunchConfig, ITerminalBackend, ITerminalEnvironment, TerminalSettingId, TerminalShellType, WindowsShellType } from '../../../../platform/terminal/common/terminal.js';
-import { IProcessEnvironment, isWindows, isMacintosh, language, OperatingSystem } from '../../../../base/common/platform.js';
-import { escapeNonWindowsPath, sanitizeCwd } from '../../../../platform/terminal/common/terminalEnvironment.js';
-import { isNumber, isString } from '../../../../base/common/types.js';
 import { IHistoryService } from '../../../services/history/common/history.js';
-import { ILogService } from '../../../../platform/log/common/log.js';
-import type { IConfigurationService } from '../../../../platform/configuration/common/configuration.js';
 
 export function mergeEnvironments(parent: IProcessEnvironment, other: ITerminalEnvironment | undefined): void {
 	if (!other) {
@@ -278,21 +278,21 @@ export async function createTerminalEnvironment(
 		// since this only affects integrated terminal and not the application itself.
 		if (isMacintosh) {
 			// Restore NODE_OPTIONS if it was set
-			if (env['VSCODE_NODE_OPTIONS']) {
-				env['NODE_OPTIONS'] = env['VSCODE_NODE_OPTIONS'];
-				delete env['VSCODE_NODE_OPTIONS'];
+			if (env['MINTMIND_NODE_OPTIONS']) {
+				env['NODE_OPTIONS'] = env['MINTMIND_NODE_OPTIONS'];
+				delete env['MINTMIND_NODE_OPTIONS'];
 			}
 
 			// Restore NODE_REPL_EXTERNAL_MODULE if it was set
-			if (env['VSCODE_NODE_REPL_EXTERNAL_MODULE']) {
-				env['NODE_REPL_EXTERNAL_MODULE'] = env['VSCODE_NODE_REPL_EXTERNAL_MODULE'];
-				delete env['VSCODE_NODE_REPL_EXTERNAL_MODULE'];
+			if (env['MINTMIND_NODE_REPL_EXTERNAL_MODULE']) {
+				env['NODE_REPL_EXTERNAL_MODULE'] = env['MINTMIND_NODE_REPL_EXTERNAL_MODULE'];
+				delete env['MINTMIND_NODE_REPL_EXTERNAL_MODULE'];
 			}
 		}
 
-		// Sanitize the environment, removing any undesirable VS Code and Electron environment
+		// Sanitize the environment, removing any undesirable MintMind and Electron environment
 		// variables
-		sanitizeProcessEnvironment(env, 'VSCODE_IPC_HOOK_CLI');
+		sanitizeProcessEnvironment(env, 'MINTMIND_IPC_HOOK_CLI');
 
 		// Merge config (settings) and ShellLaunchConfig environments
 		mergeEnvironments(env, allowedEnvFromConfig);

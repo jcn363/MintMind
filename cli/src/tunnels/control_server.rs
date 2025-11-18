@@ -82,7 +82,7 @@ struct HandlerContext {
 	socket_tx: mpsc::Sender<SocketSignal>,
 	/// Configured launcher paths.
 	launcher_paths: LauncherPaths,
-	/// Connected VS Code Server
+	/// Connected MintMind Server
 	code_server: CodeServerCell,
 	/// Potentially many "websocket" connections to client
 	server_bridges: ServerMultiplexer,
@@ -90,7 +90,7 @@ struct HandlerContext {
 	code_server_args: CodeServerArgs,
 	/// port forwarding functionality
 	port_forwarding: Option<PortForwarding>,
-	/// install platform for the VS Code server
+	/// install platform for the MintMind server
 	platform: Platform,
 	/// http client to make download/update requests
 	http: Arc<FallbackSimpleHttp>,
@@ -1130,7 +1130,7 @@ async fn handle_call_server_http(
 	code_server: Option<SocketCodeServer>,
 	params: CallServerHttpParams,
 ) -> Result<CallServerHttpResult, AnyError> {
-	use hyper::{body, client::conn::Builder, Body, Request};
+	use hyper::{body, client::conn, Body, Request};
 
 	// We use Hyper directly here since reqwest doesn't support sockets/pipes.
 	// See https://github.com/seanmonstar/reqwest/issues/39
@@ -1142,7 +1142,7 @@ async fn handle_call_server_http(
 
 	let rw = get_socket_rw_stream(socket).await?;
 
-	let (mut request_sender, connection) = Builder::new()
+	let (mut request_sender, connection) = conn::http1::Builder::new()
 		.handshake(rw)
 		.await
 		.map_err(|e| wrap(e, "error establishing connection"))?;

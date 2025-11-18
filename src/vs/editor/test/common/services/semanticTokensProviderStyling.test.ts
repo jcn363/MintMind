@@ -83,7 +83,7 @@ describe('ModelService', () => {
 		assert.deepStrictEqual(result.toString(), expected.toString());
 	});
 
-	it('issue #148651: VSCode UI process can hang if a semantic token with negative values is returned by language service', () => {
+	it('issue #148651: MintMind UI process can hang if a semantic token with negative values is returned by language service', () => {
 		const languageId = 'dockerfile';
 		disposables.add(languageService.registerLanguage({ id: languageId }));
 		const legend = {

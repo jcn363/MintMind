@@ -12,9 +12,9 @@ import * as errors from '../../../common/errors.js';
 import { Emitter, Event } from '../../../common/event.js';
 import { dispose, IDisposable, toDisposable } from '../../../common/lifecycle.js';
 import { deepClone } from '../../../common/objects.js';
-import { createQueuedSender } from '../../../node/processes.js';
 import { removeDangerousEnvVariables } from '../../../common/processes.js';
-import { ChannelClient as IPCClient, ChannelServer as IPCServer, IChannel, IChannelClient } from '../common/ipc.js';
+import { createQueuedSender } from '../../../node/processes.js';
+import { IChannel, IChannelClient, ChannelClient as IPCClient, ChannelServer as IPCServer } from '../common/ipc.js';
 
 /**
  * This implementation doesn't perform well since it uses base64 encoding for buffers.
@@ -177,7 +177,7 @@ export class Client implements IChannelClient, IDisposable {
 			const args = this.options.args || [];
 			const forkOpts: ForkOptions = Object.create(null);
 
-			forkOpts.env = { ...deepClone(process.env), 'VSCODE_PARENT_PID': String(process.pid) };
+			forkOpts.env = { ...deepClone(process.env), 'MINTMIND_PARENT_PID': String(process.pid) };
 
 			if (this.options.env) {
 				forkOpts.env = { ...forkOpts.env, ...this.options.env };

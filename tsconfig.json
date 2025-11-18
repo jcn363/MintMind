@@ -1,18 +1,8 @@
 {
+  "extends": "./tsconfig.esm.json",
   "compilerOptions": {
     "types": ["jest", "node"],
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "target": "es2020",
-    "module": "commonjs",
-    "strict": true,
-    "sourceMap": true,
-    "rootDir": "src",
-    "outDir": "out",
-    "baseUrl": ".",
-    "paths": {
-      "vs/*": ["src/vs/*"]
-    }
+    "outDir": "out"
   },
   "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules"]

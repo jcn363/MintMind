@@ -354,7 +354,7 @@ describe('SnippetController2', function () {
 		assertContextKeys(contextKeys, true, false, true);
 	});
 
-	it('“Nested” snippets terminating abruptly in VSCode 1.19.2. #42012', function () {
+	it('“Nested” snippets terminating abruptly in MintMind 1.19.2. #42012', function () {
 
 		ctrl = instaService.createInstance(SnippetController2, editor);
 		model.setValue('');

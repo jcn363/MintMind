@@ -13,9 +13,9 @@ import * as processes from '../../../node/processes.js';
 function fork(id: string): cp.ChildProcess {
 	const opts: any = {
 		env: objects.mixin(objects.deepClone(process.env), {
-			VSCODE_ESM_ENTRYPOINT: id,
-			VSCODE_PIPE_LOGGING: 'true',
-			VSCODE_VERBOSE_LOGGING: true
+			MINTMIND_ESM_ENTRYPOINT: id,
+			MINTMIND_PIPE_LOGGING: 'true',
+			MINTMIND_VERBOSE_LOGGING: true
 		})
 	};
 
@@ -24,8 +24,8 @@ function fork(id: string): cp.ChildProcess {
 
 suite('Processes', () => {
 	test('buffered sending - simple data', function (done: () => void) {
-		if (process.env['VSCODE_PID']) {
-			return done(); // this test fails when run from within VS Code
+		if (process.env['MINTMIND_PID']) {
+			return done(); // this test fails when run from within MintMind
 		}
 
 		const child = fork('vs/base/test/node/processes/fixtures/fork');
@@ -59,7 +59,7 @@ suite('Processes', () => {
 		});
 	});
 
-	(!platform.isWindows || process.env['VSCODE_PID'] ? test.skip : test)('buffered sending - lots of data (potential deadlock on win32)', function (done: () => void) { // test is only relevant for Windows and seems to crash randomly on some Linux builds
+	(!platform.isWindows || process.env['MINTMIND_PID'] ? test.skip : test)('buffered sending - lots of data (potential deadlock on win32)', function (done: () => void) { // test is only relevant for Windows and seems to crash randomly on some Linux builds
 		const child = fork('vs/base/test/node/processes/fixtures/fork_large');
 		const sender = processes.createQueuedSender(child);
 

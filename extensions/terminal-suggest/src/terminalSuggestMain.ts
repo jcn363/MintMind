@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 import { ExecOptionsWithStringEncoding } from 'child_process';
+import { basename } from 'path';
 import * as vscode from 'vscode';
 import azdSpec from './completions/azd';
 import cdSpec from './completions/cd';
@@ -12,13 +13,13 @@ import codeInsidersCompletionSpec from './completions/code-insiders';
 import codeTunnelCompletionSpec from './completions/code-tunnel';
 import codeTunnelInsidersCompletionSpec from './completions/code-tunnel-insiders';
 import copilotSpec from './completions/copilot';
-import gitCompletionSpec from './completions/git';
 import ghCompletionSpec from './completions/gh';
+import gitCompletionSpec from './completions/git';
 import npxCompletionSpec from './completions/npx';
 import setLocationSpec from './completions/set-location';
 import { upstreamSpecs } from './constants';
 import { ITerminalEnvironment, PathExecutableCache, watchPathDirectories } from './env/pathExecutableCache';
-import { executeCommand, executeCommandTimeout, IFigExecuteExternals } from './fig/execute';
+import { IFigExecuteExternals, executeCommand, executeCommandTimeout } from './fig/execute';
 import { getFigSuggestions } from './fig/figInterface';
 import { createCompletionItem } from './helpers/completionItem';
 import { osIsWindows } from './helpers/os';
@@ -28,9 +29,8 @@ import { getBashGlobals } from './shell/bash';
 import { getFishGlobals } from './shell/fish';
 import { getPwshGlobals } from './shell/pwsh';
 import { getZshGlobals } from './shell/zsh';
-import { defaultShellTypeResetChars, getTokenType, shellTypeResetChars, TokenType } from './tokens';
+import { TokenType, defaultShellTypeResetChars, getTokenType, shellTypeResetChars } from './tokens';
 import type { ICompletionResource } from './types';
-import { basename } from 'path';
 
 export const enum TerminalShellType {
 	Bash = 'bash',
@@ -546,8 +546,8 @@ export function sanitizeProcessEnvironment(env: Record<string, string>, ...prese
 		return set;
 	}, {});
 	const keysToRemove = [
-		/^ELECTRON_.$/,
-		/^VSCODE_(?!(PORTABLE|SHELL_LOGIN|ENV_REPLACE|ENV_APPEND|ENV_PREPEND)).+$/,
+		/^TAURI_.$/,
+		/^MINTMIND_(?!(PORTABLE|SHELL_LOGIN|ENV_REPLACE|ENV_APPEND|ENV_PREPEND)).+$/,
 		/^SNAP(|_.*)$/,
 		/^GDK_PIXBUF_.$/,
 	];

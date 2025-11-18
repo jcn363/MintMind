@@ -3,30 +3,30 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import * as vscodetest from '@vscode/test-electron';
+import * as cp from 'child_process';
 import * as fs from 'fs';
 import { gracefulify } from 'graceful-fs';
-import * as cp from 'child_process';
-import * as path from 'path';
-import * as os from 'os';
 import * as minimist from 'minimist';
-import * as vscodetest from '@vscode/test-electron';
 import fetch from 'node-fetch';
-import { Quality, MultiLogger, Logger, ConsoleLogger, FileLogger, measureAndLog, getDevElectronPath, getBuildElectronPath, getBuildVersion, ApplicationOptions } from '../../automation';
+import * as os from 'os';
+import * as path from 'path';
+import { ApplicationOptions, ConsoleLogger, FileLogger, Logger, MultiLogger, Quality, getBuildElectronPath, getBuildVersion, getDevElectronPath, measureAndLog } from '../../automation';
 import { retry } from './utils';
 
-import { setup as setupDataLossTests } from './areas/workbench/data-loss.test';
+import { setup as setupChatTests } from './areas/chat/chat.test';
+import { setup as setupExtensionTests } from './areas/extensions/extensions.test';
+import { setup as setupLanguagesTests } from './areas/languages/languages.test';
+import { setup as setupMultirootTests } from './areas/multiroot/multiroot.test';
+import { setup as setupNotebookTests } from './areas/notebook/notebook.test';
 import { setup as setupPreferencesTests } from './areas/preferences/preferences.test';
 import { setup as setupSearchTests } from './areas/search/search.test';
-import { setup as setupNotebookTests } from './areas/notebook/notebook.test';
-import { setup as setupLanguagesTests } from './areas/languages/languages.test';
 import { setup as setupStatusbarTests } from './areas/statusbar/statusbar.test';
-import { setup as setupExtensionTests } from './areas/extensions/extensions.test';
-import { setup as setupMultirootTests } from './areas/multiroot/multiroot.test';
-import { setup as setupLocalizationTests } from './areas/workbench/localization.test';
-import { setup as setupLaunchTests } from './areas/workbench/launch.test';
-import { setup as setupTerminalTests } from './areas/terminal/terminal.test';
 import { setup as setupTaskTests } from './areas/task/task.test';
-import { setup as setupChatTests } from './areas/chat/chat.test';
+import { setup as setupTerminalTests } from './areas/terminal/terminal.test';
+import { setup as setupDataLossTests } from './areas/workbench/data-loss.test';
+import { setup as setupLaunchTests } from './areas/workbench/launch.test';
+import { setup as setupLocalizationTests } from './areas/workbench/localization.test';
 
 const rootPath = path.join(__dirname, '..', '..', '..');
 
@@ -163,11 +163,11 @@ function parseVersion(version: string): { major: number; minor: number; patch: n
 }
 
 function parseQuality(): Quality {
-	if (process.env.VSCODE_DEV === '1') {
+	if (process.env.MINTMIND_DEV === '1') {
 		return Quality.Dev;
 	}
 
-	const quality = process.env.VSCODE_QUALITY ?? '';
+	const quality = process.env.MINTMIND_QUALITY ?? '';
 
 	switch (quality) {
 		case 'stable':
@@ -196,13 +196,13 @@ if (!opts.web) {
 	} else {
 		testCodePath = getDevElectronPath();
 		electronPath = testCodePath;
-		process.env.VSCODE_REPOSITORY = rootPath;
-		process.env.VSCODE_DEV = '1';
-		process.env.VSCODE_CLI = '1';
+		process.env.MINTMIND_REPOSITORY = rootPath;
+		process.env.MINTMIND_DEV = '1';
+		process.env.MINTMIND_CLI = '1';
 	}
 
 	if (!fs.existsSync(electronPath || '')) {
-		fail(`Cannot find VSCode at ${electronPath}. Please run VSCode once first (scripts/code.sh, scripts\\code.bat) and try again.`);
+		fail(`Cannot find MintMind at ${electronPath}. Please run MintMind once first (scripts/code.sh, scripts\\code.bat) and try again.`);
 	}
 
 	quality = parseQuality();
@@ -218,7 +218,7 @@ if (!opts.web) {
 // #### Web Smoke Tests ####
 //
 else {
-	const testCodeServerPath = opts.build || process.env.VSCODE_REMOTE_SERVER_PATH;
+	const testCodeServerPath = opts.build || process.env.MINTMIND_REMOTE_SERVER_PATH;
 
 	if (typeof testCodeServerPath === 'string') {
 		if (!fs.existsSync(testCodeServerPath)) {
@@ -229,9 +229,9 @@ else {
 	}
 
 	if (!testCodeServerPath) {
-		process.env.VSCODE_REPOSITORY = rootPath;
-		process.env.VSCODE_DEV = '1';
-		process.env.VSCODE_CLI = '1';
+		process.env.MINTMIND_REPOSITORY = rootPath;
+		process.env.MINTMIND_DEV = '1';
+		process.env.MINTMIND_CLI = '1';
 
 		logger.log(`Running web smoke out of sources`);
 	}
@@ -239,7 +239,7 @@ else {
 	quality = parseQuality();
 }
 
-logger.log(`VS Code product quality: ${quality}.`);
+logger.log(`MintMind product quality: ${quality}.`);
 
 const userDataDir = path.join(testDataPath, 'd');
 
@@ -289,7 +289,7 @@ async function ensureStableCode(): Promise<void> {
 			throw new Error(`Could not find suitable stable version for ${version}`);
 		}
 
-		logger.log(`Found VS Code v${version}, downloading previous VS Code version ${stableVersion}...`);
+		logger.log(`Found MintMind v${version}, downloading previous MintMind version ${stableVersion}...`);
 
 		let lastProgressMessage: string | undefined = undefined;
 		let lastProgressReportedAt = 0;
@@ -320,10 +320,10 @@ async function ensureStableCode(): Promise<void> {
 		});
 
 		if (process.platform === 'darwin') {
-			// Visual Studio Code.app/Contents/MacOS/Electron
+			// MintMind.app/Contents/MacOS/Electron
 			stableCodePath = path.dirname(path.dirname(path.dirname(stableCodeExecutable)));
 		} else {
-			// VSCode/Code.exe (Windows) | VSCode/code (Linux)
+			// MintMindnd/Code.exe (Windows) MintMindMind/code (Linux)
 			stableCodePath = path.dirname(stableCodeExecutable);
 		}
 
@@ -331,7 +331,7 @@ async function ensureStableCode(): Promise<void> {
 	}
 
 	if (!fs.existsSync(stableCodePath)) {
-		throw new Error(`Cannot find Stable VSCode at ${stableCodePath}.`);
+		throw new Error(`Cannot find Stable MintMindnd at ${stableCodePath}.`);
 	}
 
 	logger.log(`Using stable build ${stableCodePath} for migration tests`);
@@ -354,7 +354,7 @@ async function setup(): Promise<void> {
 
 // Before all tests run setup
 before(async function () {
-	this.timeout(5 * 60 * 1000); // increase since we download VSCode
+	this.timeout(5 * 60 * 1000); // increase since we download MintMindnd
 
 	const options: ApplicationOptions = {
 		quality,
@@ -391,7 +391,7 @@ after(async function () {
 	}
 });
 
-describe(`VSCode Smoke Tests (${opts.web ? 'Web' : 'Electron'})`, () => {
+describe(`MintMindnd Smoke Tests (${opts.web ? 'Web' : 'Electron'})`, () => {
 	if (!opts.web) { setupDataLossTests(() => { return { stableCodePath: opts['stable-build'], stableCodeVersion: opts['stable-version'] } /* Do not change, deferred for a reason! */; }, logger); }
 	setupPreferencesTests(logger);
 	setupSearchTests(logger);

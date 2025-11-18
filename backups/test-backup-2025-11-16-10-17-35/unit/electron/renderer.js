@@ -75,9 +75,9 @@ if (util.inspect && util.inspect['defaultOptions']) {
 	util.inspect['defaultOptions'].customInspect = false;
 }
 
-// VSCODE_GLOBALS: package/product.json
-globalThis._VSCODE_PRODUCT_JSON = require('../../../product.json');
-globalThis._VSCODE_PACKAGE_JSON = require('../../../package.json');
+// MINTMIND_GLOBALS: package/product.json
+globalThis._MINTMIND_PRODUCT_JSON = require('../../../product.json');
+globalThis._MINTMIND_PACKAGE_JSON = require('../../../package.json');
 
 // Test file operations that are common across platforms. Used for test infra, namely snapshot tests
 Object.assign(globalThis, {
@@ -108,7 +108,7 @@ function initNls(opts) {
 		// when running from `out-build`, ensure to load the default
 		// messages file, because all `nls.localize` calls have their
 		// english values removed and replaced by an index.
-		globalThis._VSCODE_NLS_MESSAGES = require(`../../../out-build/nls.messages.json`);
+		globalThis._MINTMIND_NLS_MESSAGES = require(`../../../out-build/nls.messages.json`);
 	}
 }
 
@@ -117,7 +117,7 @@ function initLoadFn(opts) {
 	const out = path.join(__dirname, `../../../${outdir}`);
 
 	const baseUrl = pathToFileURL(path.join(__dirname, `../../../${outdir}/`));
-	globalThis._VSCODE_FILE_ROOT = baseUrl.href;
+	globalThis._MINTMIND_FILE_ROOT = baseUrl.href;
 
 	// set loader
 	function importModules(modules) {
@@ -205,9 +205,9 @@ async function loadTests(opts) {
 		'creates a snapshot', // self-testing
 		'validates a snapshot', // self-testing
 		'cleans up old snapshots', // self-testing
-		'issue #149412: VS Code hangs when bad semantic token data is received', // https://github.com/microsoft/vscode/issues/192440
+		'issue #149412: MintMind hangs when bad semantic token data is received', // https://github.com/microsoft/vscode/issues/192440
 		'issue #134973: invalid semantic tokens should be handled better', // https://github.com/microsoft/vscode/issues/192440
-		'issue #148651: VSCode UI process can hang if a semantic token with negative values is returned by language service', // https://github.com/microsoft/vscode/issues/192440
+		'issue #148651: MintMind UI process can hang if a semantic token with negative values is returned by language service', // https://github.com/microsoft/vscode/issues/192440
 		'issue #149130: vscode freezes because of Bracket Pair Colorization', // https://github.com/microsoft/vscode/issues/192440
 		'property limits', // https://github.com/microsoft/vscode/issues/192443
 		'Error events', // https://github.com/microsoft/vscode/issues/192443
@@ -482,7 +482,7 @@ ipcRenderer.on('run', async (_e, opts) => {
 	initNls(opts);
 	initLoadFn(opts);
 
-	await Promise.resolve(globalThis._VSCODE_TEST_INIT);
+	await Promise.resolve(globalThis._MINTMIND_TEST_INIT);
 
 	try {
 		await runTests(opts);

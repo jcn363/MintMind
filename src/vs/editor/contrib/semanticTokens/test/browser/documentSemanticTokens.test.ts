@@ -133,7 +133,7 @@ describe('ModelSemanticColoring', () => {
 		});
 	});
 
-	it('issue #149412: VS Code hangs when bad semantic token data is received', async () => {
+	it('issue #149412: MintMind hangs when bad semantic token data is received', async () => {
 		await runWithFakedTimers({}, async () => {
 
 			disposables.add(languageService.registerLanguage({ id: 'testMode' }));

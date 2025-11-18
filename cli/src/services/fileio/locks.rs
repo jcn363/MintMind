@@ -44,7 +44,7 @@ impl ResourceLockManager {
     }
 
     pub fn release_lock(&mut self, resource_path: &str) -> Result<(), Box<dyn std::error::Error + Send + Sync>> {
-        let normalized_path = PathNormalizer::normalize(resource_path);
+        let _normalized_path = PathNormalizer::normalize(resource_path);
 
         // The semaphore automatically releases when the permit is dropped
         // We don't need to do anything here as the guard handles it

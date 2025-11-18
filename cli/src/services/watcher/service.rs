@@ -418,6 +418,7 @@ mod tests {
     use super::*;
     use tempfile::tempdir;
 
+    #[cfg_attr(miri, ignore)]
     #[tokio::test]
     async fn test_watch_unwatch() {
         let ipc_sink = Arc::new(|_msg: String| {});
@@ -444,6 +445,7 @@ mod tests {
         assert!(service.unwatch("non-existent").await.is_err());
     }
 
+    #[cfg_attr(miri, ignore)]
     #[tokio::test]
     async fn test_stats() {
         let ipc_sink = Arc::new(|_msg: String| {});

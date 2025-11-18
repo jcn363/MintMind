@@ -3,7 +3,7 @@
 #   Licensed under the MIT License. See License.txt in the project root for license information.
 # ---------------------------------------------------------------------------------------------
 #
-# Visual Studio Code terminal integration for fish
+# MintMind terminal integration for fish
 #
 # Manual installation:
 #
@@ -17,12 +17,12 @@
 # Don't run in scripts, other terminals, or more than once per session.
 status is-interactive
 and string match --quiet "$TERM_PROGRAM" "vscode"
-and ! set --query VSCODE_SHELL_INTEGRATION
+and ! set --query MINTMIND_SHELL_INTEGRATION
 or exit
 
-set --global VSCODE_SHELL_INTEGRATION 1
-set --global __vscode_shell_env_reporting $VSCODE_SHELL_ENV_REPORTING
-set -e VSCODE_SHELL_ENV_REPORTING
+set --global MINTMIND_SHELL_INTEGRATION 1
+set --global __vscode_shell_env_reporting $MINTMIND_SHELL_ENV_REPORTING
+set -e MINTMIND_SHELL_ENV_REPORTING
 set -g envVarsToReport
 if test -n "$__vscode_shell_env_reporting"
 	set envVarsToReport (string split "," "$__vscode_shell_env_reporting")
@@ -31,10 +31,10 @@ end
 # Apply any explicit path prefix (see #99878)
 # On fish, '$fish_user_paths' is always prepended to the PATH, for both login and non-login shells, so we need
 # to apply the path prefix fix always, not only for login shells (see #232291)
-if set -q VSCODE_PATH_PREFIX
-	set -gx PATH "$VSCODE_PATH_PREFIX$PATH"
+if set -q MINTMIND_PATH_PREFIX
+	set -gx PATH "$MINTMIND_PATH_PREFIX$PATH"
 end
-set -e VSCODE_PATH_PREFIX
+set -e MINTMIND_PATH_PREFIX
 
 set -g vsc_env_keys
 set -g vsc_env_values
@@ -49,55 +49,55 @@ function __vsc_apply_env_vars
 	end
 	set -l __vsc_applied_env_vars 1
 	# Apply EnvironmentVariableCollections if needed
-	if test -n "$VSCODE_ENV_REPLACE"
-		set ITEMS (string split : $VSCODE_ENV_REPLACE)
+	if test -n "$MINTMIND_ENV_REPLACE"
+		set ITEMS (string split : $MINTMIND_ENV_REPLACE)
 		for B in $ITEMS
 			set split (string split -m1 = $B)
 			set -gx "$split[1]" (echo -e "$split[2]")
 		end
-		set -e VSCODE_ENV_REPLACE
+		set -e MINTMIND_ENV_REPLACE
 	end
-	if test -n "$VSCODE_ENV_PREPEND"
-		set ITEMS (string split : $VSCODE_ENV_PREPEND)
+	if test -n "$MINTMIND_ENV_PREPEND"
+		set ITEMS (string split : $MINTMIND_ENV_PREPEND)
 		for B in $ITEMS
 			set split (string split -m1 = $B)
 			set -gx "$split[1]" (echo -e "$split[2]")"$$split[1]" # avoid -p as it adds a space
 		end
-		set -e VSCODE_ENV_PREPEND
+		set -e MINTMIND_ENV_PREPEND
 	end
-	if test -n "$VSCODE_ENV_APPEND"
-		set ITEMS (string split : $VSCODE_ENV_APPEND)
+	if test -n "$MINTMIND_ENV_APPEND"
+		set ITEMS (string split : $MINTMIND_ENV_APPEND)
 		for B in $ITEMS
 			set split (string split -m1 = $B)
 			set -gx "$split[1]" "$$split[1]"(echo -e "$split[2]") # avoid -a as it adds a space
 		end
-		set -e VSCODE_ENV_APPEND
+		set -e MINTMIND_ENV_APPEND
 	end
 end
 
 # Register Python shell activate hooks
 # Prevent multiple activation with guard
-if not set -q VSCODE_PYTHON_AUTOACTIVATE_GUARD
-	set -gx VSCODE_PYTHON_AUTOACTIVATE_GUARD 1
-	if test -n "$VSCODE_PYTHON_FISH_ACTIVATE"; and test "$TERM_PROGRAM" = "vscode"
+if not set -q MINTMIND_PYTHON_AUTOACTIVATE_GUARD
+	set -gx MINTMIND_PYTHON_AUTOACTIVATE_GUARD 1
+	if test -n "$MINTMIND_PYTHON_FISH_ACTIVATE"; and test "$TERM_PROGRAM" = "vscode"
 		# Fish does not crash on eval failure, so don't need negation.
-		eval $VSCODE_PYTHON_FISH_ACTIVATE
+		eval $MINTMIND_PYTHON_FISH_ACTIVATE
 		set __vsc_activation_status $status
 
 		if test $__vsc_activation_status -ne 0
-			builtin printf '\x1b[0m\x1b[7m * \x1b[0;103m VS Code Python fish activation failed with exit code %d \x1b[0m \n' "$__vsc_activation_status"
+			builtin printf '\x1b[0m\x1b[7m * \x1b[0;103m MintMind Python fish activation failed with exit code %d \x1b[0m \n' "$__vsc_activation_status"
 		end
 	end
 end
 
 # Handle the shell integration nonce
-if set -q VSCODE_NONCE
-	set -l __vsc_nonce $VSCODE_NONCE
-	set -e VSCODE_NONCE
+if set -q MINTMIND_NONCE
+	set -l __vsc_nonce $MINTMIND_NONCE
+	set -e MINTMIND_NONCE
 end
 
 # Helper function
-function __vsc_esc -d "Emit escape sequences for VS Code shell integration"
+function __vsc_esc -d "Emit escape sequences for MintMind shell integration"
 	builtin printf "\e]633;%s\a" (string join ";" -- $argv)
 end
 

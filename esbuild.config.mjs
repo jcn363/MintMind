@@ -96,7 +96,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Configuración declarativa del build
 const buildConfig = {
-  // Configuración principal de VSCode
+  // Configuración principal de MintMind
   main: {
     entryPoints: [
       'src/main.ts',
@@ -111,7 +111,6 @@ const buildConfig = {
     bundle: false,
     sourcemap: true,
     external: [
-      'electron',
       'original-fs',
       '@vscode/spdlog',
       '@vscode/sqlite3',
@@ -279,7 +278,7 @@ Comandos disponibles:
   clean                       Limpiar directorios de salida
 
 Targets disponibles:
-  main        - Código principal de VSCode
+  main        - Código principal de MintMindnd
   extensions  - Extensiones comunes
   webviews    - Webviews de extensiones
   cli         - Herramientas CLI

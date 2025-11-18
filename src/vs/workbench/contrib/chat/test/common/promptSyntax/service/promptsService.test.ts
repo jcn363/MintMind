@@ -992,11 +992,11 @@ describe('PromptsService', () => {
 									name: 'vscode-agent.agent.md',
 									contents: [
 										'---',
-										'description: \'VS Code specialized agent.\'',
+										'description: \'MintMind specialized agent.\'',
 										'target: \'vscode\'',
 										'model: \'gpt-4\'',
 										'---',
-										'I am specialized for VS Code editor tasks.',
+										'I am specialized for MintMind editor tasks.',
 									],
 								},
 								{
@@ -1034,11 +1034,11 @@ describe('PromptsService', () => {
 				},
 				{
 					name: 'vscode-agent',
-					description: 'VS Code specialized agent.',
+					description: 'MintMind specialized agent.',
 					target: 'vscode',
 					model: 'gpt-4',
 					agentInstructions: {
-						content: 'I am specialized for VS Code editor tasks.',
+						content: 'I am specialized for MintMind editor tasks.',
 						toolReferences: [],
 						metadata: undefined
 					},

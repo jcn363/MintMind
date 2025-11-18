@@ -3,6 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import type { Database, Statement } from '@vscode/sqlite3';
 import * as fs from 'fs';
 import { timeout } from '../../../common/async.js';
 import { Event } from '../../../common/event.js';
@@ -10,7 +11,6 @@ import { mapToString, setToString } from '../../../common/map.js';
 import { basename } from '../../../common/path.js';
 import { Promises } from '../../../node/pfs.js';
 import { IStorageDatabase, IStorageItemsChangeEvent, IUpdateRequest } from '../common/storage.js';
-import type { Database, Statement } from '@vscode/sqlite3';
 
 interface IDatabaseConnection {
 	readonly db: Database;
@@ -437,13 +437,13 @@ class SQLiteStorageDatabaseLogger {
 	// to reduce lots of output, require an environment variable to enable tracing
 	// this helps when running with --verbose normally where the storage tracing
 	// might hide useful output to look at
-	private static readonly VSCODE_TRACE_STORAGE = 'VSCODE_TRACE_STORAGE';
+	private static readonly MINTMIND_TRACE_STORAGE = 'MINTMIND_TRACE_STORAGE';
 
 	private readonly logTrace: ((msg: string) => void) | undefined;
 	private readonly logError: ((error: string | Error) => void) | undefined;
 
 	constructor(options?: ISQLiteStorageDatabaseLoggingOptions) {
-		if (options && typeof options.logTrace === 'function' && process.env[SQLiteStorageDatabaseLogger.VSCODE_TRACE_STORAGE]) {
+		if (options && typeof options.logTrace === 'function' && process.env[SQLiteStorageDatabaseLogger.MINTMIND_TRACE_STORAGE]) {
 			this.logTrace = options.logTrace;
 		}
 

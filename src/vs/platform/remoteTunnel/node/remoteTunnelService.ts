@@ -3,25 +3,25 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { CONFIGURATION_KEY_HOST_NAME, CONFIGURATION_KEY_PREVENT_SLEEP, ConnectionInfo, IRemoteTunnelSession, IRemoteTunnelService, LOGGER_NAME, LOG_ID, TunnelStates, TunnelStatus, TunnelMode, INACTIVE_TUNNEL_MODE, ActiveTunnelMode } from '../common/remoteTunnel.js';
-import { Emitter } from '../../../base/common/event.js';
-import { ITelemetryService } from '../../telemetry/common/telemetry.js';
-import { INativeEnvironmentService } from '../../environment/common/environment.js';
-import { Disposable } from '../../../base/common/lifecycle.js';
-import { ILogger, ILoggerService, LogLevelToString } from '../../log/common/log.js';
-import { dirname, join } from '../../../base/common/path.js';
 import { ChildProcess, StdioOptions, spawn } from 'child_process';
-import { IProductService } from '../../product/common/productService.js';
+import { homedir, hostname } from 'os';
+import { CancelablePromise, Delayer, createCancelablePromise } from '../../../base/common/async.js';
+import { Emitter } from '../../../base/common/event.js';
+import { Disposable } from '../../../base/common/lifecycle.js';
+import { dirname, join } from '../../../base/common/path.js';
 import { isMacintosh, isWindows } from '../../../base/common/platform.js';
-import { CancelablePromise, createCancelablePromise, Delayer } from '../../../base/common/async.js';
-import { ISharedProcessLifecycleService } from '../../lifecycle/node/sharedProcessLifecycleService.js';
-import { IConfigurationService } from '../../configuration/common/configuration.js';
-import { localize } from '../../../nls.js';
-import { hostname, homedir } from 'os';
-import { IStorageService, StorageScope, StorageTarget } from '../../storage/common/storage.js';
+import { joinPath } from '../../../base/common/resources.js';
 import { isString } from '../../../base/common/types.js';
 import { StreamSplitter } from '../../../base/node/nodeStreams.js';
-import { joinPath } from '../../../base/common/resources.js';
+import { localize } from '../../../nls.js';
+import { IConfigurationService } from '../../configuration/common/configuration.js';
+import { INativeEnvironmentService } from '../../environment/common/environment.js';
+import { ISharedProcessLifecycleService } from '../../lifecycle/node/sharedProcessLifecycleService.js';
+import { ILogger, ILoggerService, LogLevelToString } from '../../log/common/log.js';
+import { IProductService } from '../../product/common/productService.js';
+import { IStorageService, StorageScope, StorageTarget } from '../../storage/common/storage.js';
+import { ITelemetryService } from '../../telemetry/common/telemetry.js';
+import { ActiveTunnelMode, CONFIGURATION_KEY_HOST_NAME, CONFIGURATION_KEY_PREVENT_SLEEP, ConnectionInfo, INACTIVE_TUNNEL_MODE, IRemoteTunnelService, IRemoteTunnelSession, LOGGER_NAME, LOG_ID, TunnelMode, TunnelStates, TunnelStatus } from '../common/remoteTunnel.js';
 
 type RemoteTunnelEnablementClassification = {
 	owner: 'aeschli';
@@ -172,12 +172,12 @@ export class RemoteTunnelService extends Disposable implements IRemoteTunnelServ
 		if (!this._tunnelCommand) {
 			let binParentLocation;
 			if (isMacintosh) {
-				// appRoot = /Applications/Visual Studio Code - Insiders.app/Contents/Resources/app
-				// bin = /Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin
+				// appRoot = /Applications/MintMind - Insiders.app/Contents/Resources/app
+				// bin = /Applications/MintMind - Insiders.app/Contents/Resources/app/bin
 				binParentLocation = this.environmentService.appRoot;
 			} else {
-				// appRoot = C:\Users\<name>\AppData\Local\Programs\Microsoft VS Code Insiders\resources\app
-				// bin = C:\Users\<name>\AppData\Local\Programs\Microsoft VS Code Insiders\bin
+				// appRoot = C:\Users\<name>\AppData\Local\Programs\Microsoft MintMind Insiders\resources\app
+				// bin = C:\Users\<name>\AppData\Local\Programs\Microsoft MintMind Insiders\bin
 				// appRoot = /usr/share/code-insiders/resources/app
 				// bin = /usr/share/code-insiders/bin
 				binParentLocation = dirname(dirname(this.environmentService.appRoot));
@@ -306,7 +306,7 @@ export class RemoteTunnelService extends Disposable implements IRemoteTunnelServ
 				a = a.replaceAll(token, '*'.repeat(4));
 				onOutput(a, isErr);
 			};
-			const loginProcess = this.runCodeTunnelCommand('login', ['user', 'login', '--provider', session.providerId, '--log', LogLevelToString(this._logger.getLevel())], onLoginOutput, { VSCODE_CLI_ACCESS_TOKEN: token });
+			const loginProcess = this.runCodeTunnelCommand('login', ['user', 'login', '--provider', session.providerId, '--log', LogLevelToString(this._logger.getLevel())], onLoginOutput, { MINTMIND_CLI_ACCESS_TOKEN: token });
 			this._tunnelProcess = loginProcess;
 			try {
 				await loginProcess;

@@ -3,10 +3,13 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import { timeout } from '../../../base/common/async.js';
+import { DisposableStore } from '../../../base/common/lifecycle.js';
 import { DefaultURITransformer } from '../../../base/common/uriIpc.js';
 import { ProxyChannel } from '../../../base/parts/ipc/common/ipc.js';
 import { Server as ChildProcessServer } from '../../../base/parts/ipc/node/ipc.cp.js';
 import { Server as UtilityProcessServer } from '../../../base/parts/ipc/node/ipc.mp.js';
+import { isUtilityProcess } from '../../../base/parts/sandbox/node/electronTypes.js';
 import { localize } from '../../../nls.js';
 import { OPTIONS, parseArgs } from '../../environment/node/argv.js';
 import { NativeEnvironmentService } from '../../environment/node/environmentService.js';
@@ -19,28 +22,25 @@ import { IProductService } from '../../product/common/productService.js';
 import { IReconnectConstants, TerminalIpcChannels } from '../common/terminal.js';
 import { HeartbeatService } from './heartbeatService.js';
 import { PtyService } from './ptyService.js';
-import { isUtilityProcess } from '../../../base/parts/sandbox/node/electronTypes.js';
-import { timeout } from '../../../base/common/async.js';
-import { DisposableStore } from '../../../base/common/lifecycle.js';
 
 startPtyHost();
 
 async function startPtyHost() {
 	// Parse environment variables
-	const startupDelay = parseInt(process.env.VSCODE_STARTUP_DELAY ?? '0');
-	const simulatedLatency = parseInt(process.env.VSCODE_LATENCY ?? '0');
+	const startupDelay = parseInt(process.env.MINTMIND_STARTUP_DELAY ?? '0');
+	const simulatedLatency = parseInt(process.env.MINTMIND_LATENCY ?? '0');
 	const reconnectConstants: IReconnectConstants = {
-		graceTime: parseInt(process.env.VSCODE_RECONNECT_GRACE_TIME || '0'),
-		shortGraceTime: parseInt(process.env.VSCODE_RECONNECT_SHORT_GRACE_TIME || '0'),
-		scrollback: parseInt(process.env.VSCODE_RECONNECT_SCROLLBACK || '100')
+		graceTime: parseInt(process.env.MINTMIND_RECONNECT_GRACE_TIME || '0'),
+		shortGraceTime: parseInt(process.env.MINTMIND_RECONNECT_SHORT_GRACE_TIME || '0'),
+		scrollback: parseInt(process.env.MINTMIND_RECONNECT_SCROLLBACK || '100')
 	};
 
 	// Sanitize environment
-	delete process.env.VSCODE_RECONNECT_GRACE_TIME;
-	delete process.env.VSCODE_RECONNECT_SHORT_GRACE_TIME;
-	delete process.env.VSCODE_RECONNECT_SCROLLBACK;
-	delete process.env.VSCODE_LATENCY;
-	delete process.env.VSCODE_STARTUP_DELAY;
+	delete process.env.MINTMIND_RECONNECT_GRACE_TIME;
+	delete process.env.MINTMIND_RECONNECT_SHORT_GRACE_TIME;
+	delete process.env.MINTMIND_RECONNECT_SCROLLBACK;
+	delete process.env.MINTMIND_LATENCY;
+	delete process.env.MINTMIND_STARTUP_DELAY;
 
 	// Delay startup if needed, this must occur before RPC is setup to avoid the channel from timing
 	// out.

@@ -13,7 +13,7 @@ const mutatorTypeToLabelMap: Map<EnvironmentVariableMutatorType, string> = new M
 	[EnvironmentVariableMutatorType.Prepend, 'PREPEND'],
 	[EnvironmentVariableMutatorType.Replace, 'REPLACE']
 ]);
-const PYTHON_ACTIVATION_VARS_PATTERN = /^VSCODE_PYTHON_(PWSH|ZSH|BASH|FISH)_ACTIVATE/;
+const PYTHON_ACTIVATION_VARS_PATTERN = /^MINTMIND_PYTHON_(PWSH|ZSH|BASH|FISH)_ACTIVATE/;
 const PYTHON_ENV_EXTENSION_ID = 'ms-python.vscode-python-envs';
 
 export class MergedEnvironmentVariableCollection implements IMergedEnvironmentVariableCollection {
@@ -99,7 +99,7 @@ export class MergedEnvironmentVariableCollection implements IMergedEnvironmentVa
 				}
 				// Default: false
 				if (mutator.options?.applyAtShellIntegration ?? false) {
-					const key = `VSCODE_ENV_${mutatorTypeToLabelMap.get(mutator.type)!}`;
+					const key = `MINTMIND_ENV_${mutatorTypeToLabelMap.get(mutator.type)!}`;
 					env[key] = (env[key] ? env[key] + ':' : '') + variable + '=' + this._encodeColons(value);
 				}
 			}

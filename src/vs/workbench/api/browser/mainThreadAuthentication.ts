@@ -3,32 +3,32 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
-import * as nls from '../../../nls.js';
-import { extHostNamedCustomer, IExtHostContext } from '../../services/extensions/common/extHostCustomers.js';
-import { AuthenticationSession, AuthenticationSessionsChangeEvent, IAuthenticationProvider, IAuthenticationService, IAuthenticationExtensionsService, AuthenticationSessionAccount, IAuthenticationProviderSessionOptions, isAuthenticationWwwAuthenticateRequest, IAuthenticationConstraint, IAuthenticationWwwAuthenticateRequest } from '../../services/authentication/common/authentication.js';
-import { ExtHostAuthenticationShape, ExtHostContext, MainContext, MainThreadAuthenticationShape } from '../common/extHost.protocol.js';
-import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.js';
-import Severity from '../../../base/common/severity.js';
-import { INotificationService } from '../../../platform/notification/common/notification.js';
-import { ActivationKind, IExtensionService } from '../../services/extensions/common/extensions.js';
-import { ITelemetryService } from '../../../platform/telemetry/common/telemetry.js';
-import { Emitter, Event } from '../../../base/common/event.js';
-import { IAuthenticationAccessService } from '../../services/authentication/browser/authenticationAccessService.js';
-import { IAuthenticationUsageService } from '../../services/authentication/browser/authenticationUsageService.js';
-import { getAuthenticationProviderActivationEvent } from '../../services/authentication/browser/authenticationService.js';
-import { URI, UriComponents } from '../../../base/common/uri.js';
-import { IOpenerService } from '../../../platform/opener/common/opener.js';
-import { CancellationError } from '../../../base/common/errors.js';
-import { ILogService } from '../../../platform/log/common/log.js';
-import { ExtensionHostKind } from '../../services/extensions/common/extensionHostKind.js';
-import { IURLService } from '../../../platform/url/common/url.js';
 import { DeferredPromise, raceTimeout } from '../../../base/common/async.js';
+import { CancellationError } from '../../../base/common/errors.js';
+import { Emitter, Event } from '../../../base/common/event.js';
+import { Disposable, DisposableMap } from '../../../base/common/lifecycle.js';
 import { IAuthorizationTokenResponse } from '../../../base/common/oauth.js';
-import { IDynamicAuthenticationProviderStorageService } from '../../services/authentication/common/dynamicAuthenticationProviderStorage.js';
+import Severity from '../../../base/common/severity.js';
+import { URI, UriComponents } from '../../../base/common/uri.js';
+import * as nls from '../../../nls.js';
 import { IClipboardService } from '../../../platform/clipboard/common/clipboardService.js';
-import { IQuickInputService } from '../../../platform/quickinput/common/quickInput.js';
+import { IDialogService, IPromptButton } from '../../../platform/dialogs/common/dialogs.js';
+import { ILogService } from '../../../platform/log/common/log.js';
+import { INotificationService } from '../../../platform/notification/common/notification.js';
+import { IOpenerService } from '../../../platform/opener/common/opener.js';
 import { IProductService } from '../../../platform/product/common/productService.js';
+import { IQuickInputService } from '../../../platform/quickinput/common/quickInput.js';
+import { ITelemetryService } from '../../../platform/telemetry/common/telemetry.js';
+import { IURLService } from '../../../platform/url/common/url.js';
+import { IAuthenticationAccessService } from '../../services/authentication/browser/authenticationAccessService.js';
+import { getAuthenticationProviderActivationEvent } from '../../services/authentication/browser/authenticationService.js';
+import { IAuthenticationUsageService } from '../../services/authentication/browser/authenticationUsageService.js';
+import { AuthenticationSession, AuthenticationSessionAccount, AuthenticationSessionsChangeEvent, IAuthenticationConstraint, IAuthenticationExtensionsService, IAuthenticationProvider, IAuthenticationProviderSessionOptions, IAuthenticationService, IAuthenticationWwwAuthenticateRequest, isAuthenticationWwwAuthenticateRequest } from '../../services/authentication/common/authentication.js';
+import { IDynamicAuthenticationProviderStorageService } from '../../services/authentication/common/dynamicAuthenticationProviderStorage.js';
+import { IExtHostContext, extHostNamedCustomer } from '../../services/extensions/common/extHostCustomers.js';
+import { ExtensionHostKind } from '../../services/extensions/common/extensionHostKind.js';
+import { ActivationKind, IExtensionService } from '../../services/extensions/common/extensions.js';
+import { ExtHostAuthenticationShape, ExtHostContext, MainContext, MainThreadAuthenticationShape } from '../common/extHost.protocol.js';
 
 export interface AuthenticationInteractiveOptions {
 	detail?: string;
@@ -493,16 +493,16 @@ export class MainThreadAuthentication extends Disposable implements MainThreadAu
 	// Remove this in a few iterations.
 	private _sentClientIdUsageEvents = new Set<string>();
 	private sendClientIdUsageTelemetry(extensionId: string, providerId: string, scopes: readonly string[]): void {
-		const containsVSCodeClientIdScope = scopes.some(scope => scope.startsWith('VSCODE_CLIENT_ID:'));
-		const key = `${extensionId}|${providerId}|${containsVSCodeClientIdScope}`;
+		const containsMintMindClientIdScope = scopes.some(scope => scope.startsWith('MINTMIND_CLIENT_ID:'));
+		const key = `${extensionId}|${providerId}|${containsMintMindndClientIdScope}`;
 		if (this._sentClientIdUsageEvents.has(key)) {
 			return;
 		}
 		this._sentClientIdUsageEvents.add(key);
-		if (containsVSCodeClientIdScope) {
+		if (containsMintMindndClientIdScope) {
 			type ClientIdUsageClassification = {
 				owner: 'TylerLeonhardt';
-				comment: 'Used to see which extensions are using the VSCode client id override';
+				comment: 'Used to see which extensions are using the MintMindnd client id override';
 				extensionId: { classification: 'SystemMetaData'; purpose: 'FeatureInsight'; comment: 'The extension id.' };
 			};
 			this.telemetryService.publicLog2<{ extensionId: string }, ClientIdUsageClassification>('authentication.clientIdUsage', { extensionId });

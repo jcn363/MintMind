@@ -26,6 +26,7 @@ use crate::util::prereqs::skip_requirements_check;
 use crate::{log};
 use lazy_static::lazy_static;
 use opentelemetry::KeyValue;
+use dirs_next;
 use regex::Regex;
 use serde::Deserialize;
 use std::fs;
@@ -171,7 +172,7 @@ pub struct ServerParamsRaw {
 	pub platform: Platform,
 }
 
-/// Server params that can be used to start a VS Code server.
+/// Server params that can be used to start a MintMind server.
 pub struct ResolvedServerParams {
 	pub release: Release,
 	pub code_server_args: CodeServerArgs,
@@ -736,7 +737,7 @@ fn get_extensions_flag(extension_id: &str) -> String {
 	format!("--install-extension={extension_id}")
 }
 
-/// A type that can be used to scan stdout from the VS Code server. Returns
+/// A type that can be used to scan stdout from the MintMind server. Returns
 /// some other type that, in turn, is returned from starting the server.
 pub trait ServerOutputMatcher<R>
 where
@@ -803,7 +804,7 @@ pub fn print_listening(log: &log::Logger, tunnel_name: &str) {
 		"{} is listening for incoming connections", QUALITYLESS_SERVER_NAME
 	);
 
-	let home_dir = dirs::home_dir().unwrap_or_else(|| PathBuf::from(""));
+	let home_dir = dirs_next::home_dir().unwrap_or_else(|| PathBuf::from(""));
 	let current_dir = std::env::current_dir().unwrap_or_else(|_| PathBuf::from(""));
 
 	let dir = if home_dir == current_dir {

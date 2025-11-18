@@ -4,22 +4,22 @@
 # ---------------------------------------------------------------------------------------------
 
 # Prevent recursive sourcing
-if [[ -n "$VSCODE_PROFILE_INITIALIZED" ]]; then
+if [[ -n "$MINTMIND_PROFILE_INITIALIZED" ]]; then
 	return
 fi
-export VSCODE_PROFILE_INITIALIZED=1
+export MINTMIND_PROFILE_INITIALIZED=1
 
 if [[ $options[norcs] = off && -o "login" ]]; then
 	if [[ -f $USER_ZDOTDIR/.zprofile ]]; then
-		VSCODE_ZDOTDIR=$ZDOTDIR
+		MINTMIND_ZDOTDIR=$ZDOTDIR
 		ZDOTDIR=$USER_ZDOTDIR
 		. $USER_ZDOTDIR/.zprofile
-		ZDOTDIR=$VSCODE_ZDOTDIR
+		ZDOTDIR=$MINTMIND_ZDOTDIR
 	fi
 
 	# Apply any explicit path prefix (see #99878)
-	if (( ${+VSCODE_PATH_PREFIX} )); then
-		export PATH="$VSCODE_PATH_PREFIX$PATH"
+	if (( ${+MINTMIND_PATH_PREFIX} )); then
+		export PATH="$MINTMIND_PATH_PREFIX$PATH"
 	fi
-	builtin unset VSCODE_PATH_PREFIX
+	builtin unset MINTMIND_PATH_PREFIX
 fi

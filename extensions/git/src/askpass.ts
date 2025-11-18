@@ -3,12 +3,12 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { window, InputBoxOptions, Uri, Disposable, workspace, QuickPickOptions, l10n, LogOutputChannel } from 'vscode';
-import { IDisposable, EmptyDisposable, toDisposable, extractFilePathFromArgs } from './util';
 import * as path from 'path';
+import { Disposable, InputBoxOptions, LogOutputChannel, QuickPickOptions, Uri, l10n, window, workspace } from 'vscode';
+import { Credentials, CredentialsProvider } from './api/git';
 import { IIPCHandler, IIPCServer } from './ipc/ipcServer';
-import { CredentialsProvider, Credentials } from './api/git';
 import { ITerminalEnvironmentProvider } from './terminal';
+import { EmptyDisposable, IDisposable, extractFilePathFromArgs, toDisposable } from './util';
 
 export class Askpass implements IIPCHandler, ITerminalEnvironmentProvider {
 
@@ -28,10 +28,10 @@ export class Askpass implements IIPCHandler, ITerminalEnvironmentProvider {
 		this.env = {
 			// GIT_ASKPASS
 			GIT_ASKPASS: path.join(__dirname, this.ipc ? 'askpass.sh' : 'askpass-empty.sh'),
-			// VSCODE_GIT_ASKPASS
-			VSCODE_GIT_ASKPASS_NODE: process.execPath,
-			VSCODE_GIT_ASKPASS_EXTRA_ARGS: '',
-			VSCODE_GIT_ASKPASS_MAIN: path.join(__dirname, 'askpass-main.js')
+			// MINTMIND_GIT_ASKPASS
+			MINTMIND_GIT_ASKPASS_NODE: process.execPath,
+			MINTMIND_GIT_ASKPASS_EXTRA_ARGS: '',
+			MINTMIND_GIT_ASKPASS_MAIN: path.join(__dirname, 'askpass-main.js')
 		};
 
 		this.sshEnv = {

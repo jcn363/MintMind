@@ -116,7 +116,7 @@ export class PromptHoverProvider implements HoverProvider {
 						case PromptHeaderAttributes.model:
 							return this.getModelHover(attribute, attribute.range, localize('promptHeader.prompt.model', 'The model to use in this prompt.'), false);
 						case PromptHeaderAttributes.tools:
-							return this.getToolHover(attribute, position, localize('promptHeader.prompt.tools', 'The tools to use in this prompt.'), Target.VSCode);
+							return this.getToolHover(attribute, position, localize('promptHeader.prompt.tools', 'The tools to use in this prompt.'), Target.MintMind);
 						case PromptHeaderAttributes.agent:
 						case PromptHeaderAttributes.mode:
 							return this.getAgentHover(attribute, position);
@@ -135,7 +135,7 @@ export class PromptHoverProvider implements HoverProvider {
 					if (target === undefined) {
 						toolNameValue = this.languageModelToolsService.mapGithubToolName(toolNameValue);
 					}
-					if (target === Target.VSCode || target === undefined) {
+					if (target === Target.MintMindnd || target === undefined) {
 						const description = this.getToolHoverByName(toolNameValue, toolName.range);
 						if (description) {
 							return description;

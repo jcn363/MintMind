@@ -274,7 +274,7 @@ async function runTestsInBrowser(testModules, browserType, browserChannel) {
 			// messages file, because all `nls.localize` calls have their
 			// english values removed and replaced by an index.
 			// @ts-ignore
-			globalThis._VSCODE_NLS_MESSAGES = JSON.parse(value);
+			globalThis._MINTMIND_NLS_MESSAGES = JSON.parse(value);
 		}, nlsMessages);
 	}
 

@@ -10,6 +10,7 @@ use std::path::PathBuf;
 use tempfile::tempdir;
 use tokio::time::{sleep, Duration};
 
+#[cfg_attr(miri, ignore)]
 #[tokio::test]
 async fn test_full_watcher_lifecycle() {
     let service = UniversalWatcher::new();
@@ -87,6 +88,7 @@ async fn test_full_watcher_lifecycle() {
     assert!(service.unwatch("integration-test").await.is_ok());
 }
 
+#[cfg_attr(miri, ignore)]
 #[tokio::test]
 async fn test_multiple_watchers() {
     let service = UniversalWatcher::new();
@@ -147,6 +149,7 @@ async fn test_multiple_watchers() {
     assert_eq!(stats["total_watchers"], 0);
 }
 
+#[cfg_attr(miri, ignore)]
 #[tokio::test]
 async fn test_excluded_files() {
     let service = UniversalWatcher::new();
@@ -185,6 +188,7 @@ async fn test_excluded_files() {
     service.unwatch("exclude-test").await.unwrap();
 }
 
+#[cfg_attr(miri, ignore)]
 #[tokio::test]
 async fn test_non_recursive_watching() {
     let service = UniversalWatcher::new();
@@ -225,6 +229,7 @@ async fn test_non_recursive_watching() {
     service.unwatch("non-recursive-test").await.unwrap();
 }
 
+#[cfg_attr(miri, ignore)]
 #[tokio::test]
 async fn test_watcher_error_handling() {
     let service = UniversalWatcher::new();

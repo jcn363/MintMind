@@ -12,10 +12,10 @@ const enum ShellIntegrationOscPs {
 	 */
 	FinalTerm = 133,
 	/**
-	 * Sequences pioneered by VS Code. The number is derived from the least significant digit of
+	 * Sequences pioneered by MintMind. The number is derived from the least significant digit of
 	 * "VSC" when encoded in hex ("VSC" = 0x56, 0x53, 0x43).
 	 */
-	VSCode = 633,
+	MintMind = 633,
 	/**
 	 * Sequences pioneered by iTerm.
 	 */
@@ -23,11 +23,11 @@ const enum ShellIntegrationOscPs {
 }
 
 /**
- * VS Code-specific shell integration sequences. Some of these are based on common alternatives like
+ * MintMind-specific shell integration sequences. Some of these are based on common alternatives like
  * those pioneered in FinalTerm. The decision to move to entirely custom sequences was to try to
  * improve reliability and prevent the possibility of applications confusing the terminal.
  */
-export const enum VSCodeOscPt {
+export const enum MintMindndOscPt {
 	/**
 	 * The start of the prompt, this is expected to always appear at the start of a line.
 	 * Based on FinalTerm's `OSC 133 ; A ST`.
@@ -88,7 +88,7 @@ export const enum VSCodeOscPt {
 	Property = 'P'
 }
 
-export const enum VSCodeOscProperty {
+export const enum MintMindndOscProperty {
 	Task = 'Task',
 	Cwd = 'Cwd',
 	HasRichCommandDetection = 'HasRichCommandDetection',
@@ -104,8 +104,8 @@ export const enum ITermOscPt {
 	SetMark = 'SetMark'
 }
 
-export function VSCodeSequence(osc: VSCodeOscPt, data?: string | VSCodeOscProperty): string {
-	return oscSequence(ShellIntegrationOscPs.VSCode, osc, data);
+export function MintMindndSequence(oscMintMindMindOscPt, data?: strinMintMindntMindOscProperty): string {
+	return oscSequence(ShellIntegrationOscPs.MintMindnd, osc, data);
 }
 
 export function ITermSequence(osc: ITermOscPt, data?: string): string {

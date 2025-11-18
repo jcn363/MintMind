@@ -227,7 +227,7 @@ pub async fn start_node_ipc_server_with<S: Serialization + Send + Sync + Clone +
 pub async fn start_node_ipc_server() -> Result<(), CodeError> {
 	let base64_serializer = Base64Serialization::new(crate::json_rpc::JsonRpcSerializer {});
 	let rpc_builder = RpcBuilder::new(base64_serializer);
-    let provider = sdktrace::TracerProvider::builder().build();
+    let provider = sdktrace::SdkTracerProvider::builder().build();
     let tracer = provider.tracer("node_ipc");
 	let dispatcher = rpc_builder.methods(()).build(crate::log::Logger::new(tracer, crate::log::Level::Info));
 

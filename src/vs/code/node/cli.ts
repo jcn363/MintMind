@@ -7,27 +7,27 @@ import { ChildProcess, spawn, SpawnOptions, StdioOptions } from 'child_process';
 import { chmodSync, existsSync, readFileSync, statSync, truncateSync, unlinkSync } from 'fs';
 import { homedir, release, tmpdir } from 'os';
 import type { ProfilingSession, Target } from 'v8-inspect-profiler';
+import { DeferredPromise } from '../../base/common/async.js';
+import { CancellationTokenSource } from '../../base/common/cancellation.js';
 import { Event } from '../../base/common/event.js';
-import { isAbsolute, resolve, join, dirname } from '../../base/common/path.js';
+import { isUNC, randomPath } from '../../base/common/extpath.js';
+import { FileAccess } from '../../base/common/network.js';
+import { dirname, isAbsolute, join, resolve } from '../../base/common/path.js';
 import { IProcessEnvironment, isMacintosh, isWindows } from '../../base/common/platform.js';
 import { randomPort } from '../../base/common/ports.js';
+import { cwd } from '../../base/common/process.js';
+import { URI } from '../../base/common/uri.js';
 import { whenDeleted, writeFileSync } from '../../base/node/pfs.js';
 import { findFreePort } from '../../base/node/ports.js';
-import { watchFileContents } from '../../platform/files/node/watcher/nodejs/nodejsWatcherLib.js';
+import { addUNCHostToAllowlist } from '../../base/node/unc.js';
 import { NativeParsedArgs } from '../../platform/environment/common/argv.js';
 import { buildHelpMessage, buildStdinMessage, buildVersionMessage, NATIVE_CLI_COMMANDS, OPTIONS } from '../../platform/environment/node/argv.js';
 import { addArg, parseCLIProcessArgv } from '../../platform/environment/node/argvHelper.js';
 import { getStdinFilePath, hasStdinWithoutTty, readFromStdin, stdinDataListener } from '../../platform/environment/node/stdin.js';
 import { createWaitMarkerFileSync } from '../../platform/environment/node/wait.js';
+import { watchFileContents } from '../../platform/files/node/watcher/nodejs/nodejsWatcherLib.js';
 import product from '../../platform/product/common/product.js';
-import { CancellationTokenSource } from '../../base/common/cancellation.js';
-import { isUNC, randomPath } from '../../base/common/extpath.js';
 import { Utils } from '../../platform/profiling/common/profiling.js';
-import { FileAccess } from '../../base/common/network.js';
-import { cwd } from '../../base/common/process.js';
-import { addUNCHostToAllowlist } from '../../base/node/unc.js';
-import { URI } from '../../base/common/uri.js';
-import { DeferredPromise } from '../../base/common/async.js';
 
 function shouldSpawnCliProcess(argv: NativeParsedArgs): boolean {
 	return !!argv['install-source']
@@ -59,17 +59,19 @@ export async function main(argv: string[]): Promise<void> {
 			const env: IProcessEnvironment = {
 				...process.env
 			};
-			// bootstrap-esm.js determines the electron environment based
-			// on the following variable. For the server we need to unset
-			// it to prevent importing any electron specific modules.
+			// bootstrap-esm.js determines the runtime environment (Tauri/Node.js) based
+			// on environment variables. For the server CLI we need to unset these
+			// to prevent importing any runtime-specific modules and ensure pure Node.js execution.
 			// Refs https://github.com/microsoft/vscode/issues/221883
-			delete env['ELECTRON_RUN_AS_NODE'];
+			// Remove runtime-specific environment variables to ensure clean Node.js execution
+			delete env['TAURI_RUN_AS_NODE']; // Legacy Electron variable
+			delete env['TAURI_RUN_AS_NODE']; // Tauri equivalent
 
 			const tunnelArgs = argv.slice(argv.indexOf(subcommand) + 1); // all arguments behind `tunnel`
 			return new Promise((resolve, reject) => {
 				let tunnelProcess: ChildProcess;
 				const stdio: StdioOptions = ['ignore', 'pipe', 'pipe'];
-				if (process.env['VSCODE_DEV']) {
+				if (process.env['MINTMIND_DEV']) {
 					tunnelProcess = spawn('cargo', ['run', '--', subcommand, ...tunnelArgs], { cwd: join(getAppRoot(), 'cli'), stdio, env });
 				} else {
 					const appPath = process.platform === 'darwin'
@@ -131,7 +133,7 @@ export async function main(argv: string[]): Promise<void> {
 		// built, because our location on disk is different if built.
 
 		let cliProcessMain: string;
-		if (process.env['VSCODE_DEV']) {
+		if (process.env['MINTMIND_DEV']) {
 			cliProcessMain = './cliProcessMain.js';
 		} else {
 			cliProcessMain = './vs/code/node/cliProcessMain.js';
@@ -222,15 +224,15 @@ export async function main(argv: string[]): Promise<void> {
 	else {
 		const env: IProcessEnvironment = {
 			...process.env,
-			'ELECTRON_NO_ATTACH_CONSOLE': '1'
+			'TAURI_NO_ATTACH_CONSOLE': '1'
 		};
 
-		delete env['ELECTRON_RUN_AS_NODE'];
+		delete env['TAURI_RUN_AS_NODE'];
 
 		const processCallbacks: ((child: ChildProcess) => Promise<void>)[] = [];
 
 		if (args.verbose) {
-			env['ELECTRON_ENABLE_LOGGING'] = '1';
+			env['TAURI_ENABLE_LOGGING'] = '1';
 		}
 
 		if (args.verbose || args.status) {
@@ -415,7 +417,7 @@ export async function main(argv: string[]): Promise<void> {
 								}
 								let suffix = '';
 								const result = await session.stop();
-								if (!process.env['VSCODE_DEV']) {
+								if (!process.env['MINTMIND_DEV']) {
 									// when running from a not-development-build we remove
 									// absolute filenames because we don't want to reveal anything
 									// about users. We also append the `.txt` suffix to make it
@@ -494,7 +496,7 @@ export async function main(argv: string[]): Promise<void> {
 			// similar to if the app was launched from the dock
 			// https://github.com/microsoft/vscode/issues/102975
 
-			// The following args are for the open command itself, rather than for VS Code:
+			// The following args are for the open command itself, rather than for MintMind:
 			// -n creates a new instance.
 			//    Without -n, the open command re-opens the existing instance as-is.
 			// -g starts the new instance in the background.
@@ -550,7 +552,7 @@ export async function main(argv: string[]): Promise<void> {
 
 			spawnArgs.push('--args', ...argv.slice(2)); // pass on our arguments
 
-			if (env['VSCODE_DEV']) {
+			if (env['MINTMIND_DEV']) {
 				// If we're in development mode, replace the . arg with the
 				// vscode source arg. Because the OSS app isn't bundled,
 				// it needs the full vscode source arg to launch properly.

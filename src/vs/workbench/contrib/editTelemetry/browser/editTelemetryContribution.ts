@@ -11,7 +11,7 @@ import { observableConfigValue } from '../../../../platform/observable/common/pl
 import { ITelemetryService, TelemetryLevel, telemetryLevelEnabled } from '../../../../platform/telemetry/common/telemetry.js';
 import { AnnotatedDocuments } from './helpers/annotatedDocuments.js';
 import { EditTrackingFeature } from './telemetry/editSourceTrackingFeature.js';
-import { VSCodeWorkspace } from './helpers/vscodeObservableWorkspace.js';
+import { MintMindWorkspace } from './helpers/vscodeObservableWorkspace.js';
 import { AiStatsFeature } from './editStats/aiStatsFeature.js';
 import { EDIT_TELEMETRY_SETTING_ID, AI_STATS_SETTING_ID } from './settingIds.js';
 
@@ -23,7 +23,7 @@ export class EditTelemetryContribution extends Disposable {
 	) {
 		super();
 
-		const workspace = derived(reader => reader.store.add(this._instantiationService.createInstance(VSCodeWorkspace)));
+		const workspace = derived(reader => reader.store.add(this._instantiationService.createInstance(MintMindndWorkspace)));
 		const annotatedDocuments = derived(reader => reader.store.add(this._instantiationService.createInstance(AnnotatedDocuments, workspace.read(reader))));
 
 		const editSourceTrackingEnabled = observableConfigValue(EDIT_TELEMETRY_SETTING_ID, true, this._configurationService);

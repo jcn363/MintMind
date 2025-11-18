@@ -27,7 +27,7 @@ impl EchoService {
 #[tokio::main]
 async fn main() -> Result<(), AnyError> {
     // Get parent PID for monitoring
-    let parent_pid = env::var("VSCODE_PARENT_PID")
+    let parent_pid = env::var("MINTMIND_PARENT_PID")
         .unwrap_or_else(|_| "1".to_string())
         .parse::<u32>()
         .unwrap_or(1);

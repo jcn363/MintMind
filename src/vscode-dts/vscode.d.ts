@@ -10710,7 +10710,7 @@ declare module 'vscode' {
 	export namespace env {
 
 		/**
-		 * The application name of the editor, like 'VS Code'.
+		 * The application name of the editor, like 'MintMind'.
 		 */
 		export const appName: string;
 
@@ -10819,7 +10819,7 @@ declare module 'vscode' {
 		 * used scheme this can be:
 		 * * a browser (`http:`, `https:`)
 		 * * a mail client (`mailto:`)
-		 * * VSCode itself (`vscode:` from `vscode.env.uriScheme`)
+		 * * MintMind itself (`vscode:` from `vscode.env.uriScheme`)
 		 *
 		 * *Note* that {@linkcode window.showTextDocument showTextDocument} is the right
 		 * way to open a text document inside the editor, not this function.
@@ -12499,7 +12499,7 @@ declare module 'vscode' {
 		 * via the [shell integration command decoration](https://code.visualstudio.com/docs/terminal/shell-integration#_command-decorations-and-the-overview-ruler).
 		 *
 		 * This should be used if the terminal includes [custom shell integration support](https://code.visualstudio.com/docs/terminal/shell-integration#_supported-escape-sequences).
-		 * It should be set to a random GUID which will then set the `VSCODE_NONCE` environment
+		 * It should be set to a random GUID which will then set the `MINTMIND_NONCE` environment
 		 * variable. Inside the shell, this should then be removed from the environment so as to
 		 * protect it from general access. Once that is done it can be passed through in the
 		 * relevant sequences to make them trusted.

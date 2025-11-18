@@ -3,53 +3,53 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import './style.js';
+import { isChrome, isFirefox, isSafari } from '../../base/browser/browser.js';
 import { runWhenWindowIdle } from '../../base/browser/dom.js';
-import { Event, Emitter, setGlobalLeakWarningThreshold } from '../../base/common/event.js';
-import { RunOnceScheduler, timeout } from '../../base/common/async.js';
-import { isFirefox, isSafari, isChrome } from '../../base/browser/browser.js';
-import { mark } from '../../base/common/performance.js';
-import { onUnexpectedError, setUnexpectedErrorHandler } from '../../base/common/errors.js';
-import { Registry } from '../../platform/registry/common/platform.js';
-import { isWindows, isLinux, isWeb, isNative, isMacintosh } from '../../base/common/platform.js';
-import { IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../common/contributions.js';
-import { IEditorFactoryRegistry, EditorExtensions } from '../common/editor.js';
-import { getSingletonServiceDescriptors } from '../../platform/instantiation/common/extensions.js';
-import { Position, Parts, IWorkbenchLayoutService, positionToString } from '../services/layout/browser/layoutService.js';
-import { IStorageService, WillSaveStateReason, StorageScope, StorageTarget } from '../../platform/storage/common/storage.js';
-import { IConfigurationChangeEvent, IConfigurationService } from '../../platform/configuration/common/configuration.js';
-import { IInstantiationService } from '../../platform/instantiation/common/instantiation.js';
-import { ServiceCollection } from '../../platform/instantiation/common/serviceCollection.js';
-import { LifecyclePhase, ILifecycleService, WillShutdownEvent } from '../services/lifecycle/common/lifecycle.js';
-import { INotificationService } from '../../platform/notification/common/notification.js';
-import { NotificationService } from '../services/notification/common/notificationService.js';
-import { NotificationsCenter } from './parts/notifications/notificationsCenter.js';
-import { NotificationsAlerts } from './parts/notifications/notificationsAlerts.js';
-import { NotificationsStatus } from './parts/notifications/notificationsStatus.js';
-import { registerNotificationCommands } from './parts/notifications/notificationsCommands.js';
-import { NotificationsToasts } from './parts/notifications/notificationsToasts.js';
-import { setARIAContainer } from '../../base/browser/ui/aria/aria.js';
-import { FontMeasurements } from '../../editor/browser/config/fontMeasurements.js';
-import { createBareFontInfoFromRawSettings } from '../../editor/common/config/fontInfoFromSettings.js';
-import { ILogService } from '../../platform/log/common/log.js';
-import { toErrorMessage } from '../../base/common/errorMessage.js';
-import { WorkbenchContextKeysHandler } from './contextkeys.js';
-import { coalesce } from '../../base/common/arrays.js';
-import { InstantiationService } from '../../platform/instantiation/common/instantiationService.js';
-import { Layout } from './layout.js';
-import { IHostService } from '../services/host/browser/host.js';
-import { IDialogService } from '../../platform/dialogs/common/dialogs.js';
-import { mainWindow } from '../../base/browser/window.js';
 import { PixelRatio } from '../../base/browser/pixelRatio.js';
-import { IHoverService, WorkbenchHoverDelegate } from '../../platform/hover/browser/hover.js';
-import { setHoverDelegateFactory } from '../../base/browser/ui/hover/hoverDelegateFactory.js';
+import { setARIAContainer } from '../../base/browser/ui/aria/aria.js';
 import { setBaseLayerHoverDelegate } from '../../base/browser/ui/hover/hoverDelegate2.js';
-import { AccessibilityProgressSignalScheduler } from '../../platform/accessibilitySignal/browser/progressAccessibilitySignalScheduler.js';
+import { setHoverDelegateFactory } from '../../base/browser/ui/hover/hoverDelegateFactory.js';
 import { setProgressAccessibilitySignalScheduler } from '../../base/browser/ui/progressbar/progressAccessibilitySignal.js';
-import { AccessibleViewRegistry } from '../../platform/accessibility/browser/accessibleViewRegistry.js';
-import { NotificationAccessibleView } from './parts/notifications/notificationAccessibleView.js';
-import { IMarkdownRendererService } from '../../platform/markdown/browser/markdownRenderer.js';
+import { mainWindow } from '../../base/browser/window.js';
+import { coalesce } from '../../base/common/arrays.js';
+import { RunOnceScheduler, timeout } from '../../base/common/async.js';
+import { toErrorMessage } from '../../base/common/errorMessage.js';
+import { onUnexpectedError, setUnexpectedErrorHandler } from '../../base/common/errors.js';
+import { Emitter, Event, setGlobalLeakWarningThreshold } from '../../base/common/event.js';
+import { mark } from '../../base/common/performance.js';
+import { isLinux, isMacintosh, isNative, isWeb, isWindows } from '../../base/common/platform.js';
+import { FontMeasurements } from '../../editor/browser/config/fontMeasurements.js';
 import { EditorMarkdownCodeBlockRenderer } from '../../editor/browser/widget/markdownRenderer/browser/editorMarkdownCodeBlockRenderer.js';
+import { createBareFontInfoFromRawSettings } from '../../editor/common/config/fontInfoFromSettings.js';
+import { AccessibleViewRegistry } from '../../platform/accessibility/browser/accessibleViewRegistry.js';
+import { AccessibilityProgressSignalScheduler } from '../../platform/accessibilitySignal/browser/progressAccessibilitySignalScheduler.js';
+import { IConfigurationChangeEvent, IConfigurationService } from '../../platform/configuration/common/configuration.js';
+import { IDialogService } from '../../platform/dialogs/common/dialogs.js';
+import { IHoverService, WorkbenchHoverDelegate } from '../../platform/hover/browser/hover.js';
+import { getSingletonServiceDescriptors } from '../../platform/instantiation/common/extensions.js';
+import { IInstantiationService } from '../../platform/instantiation/common/instantiation.js';
+import { InstantiationService } from '../../platform/instantiation/common/instantiationService.js';
+import { ServiceCollection } from '../../platform/instantiation/common/serviceCollection.js';
+import { ILogService } from '../../platform/log/common/log.js';
+import { IMarkdownRendererService } from '../../platform/markdown/browser/markdownRenderer.js';
+import { INotificationService } from '../../platform/notification/common/notification.js';
+import { Registry } from '../../platform/registry/common/platform.js';
+import { IStorageService, StorageScope, StorageTarget, WillSaveStateReason } from '../../platform/storage/common/storage.js';
+import { IWorkbenchContributionsRegistry, Extensions as WorkbenchExtensions } from '../common/contributions.js';
+import { EditorExtensions, IEditorFactoryRegistry } from '../common/editor.js';
+import { IHostService } from '../services/host/browser/host.js';
+import { IWorkbenchLayoutService, Parts, Position, positionToString } from '../services/layout/browser/layoutService.js';
+import { ILifecycleService, LifecyclePhase, WillShutdownEvent } from '../services/lifecycle/common/lifecycle.js';
+import { NotificationService } from '../services/notification/common/notificationService.js';
+import { WorkbenchContextKeysHandler } from './contextkeys.js';
+import { Layout } from './layout.js';
+import { NotificationAccessibleView } from './parts/notifications/notificationAccessibleView.js';
+import { NotificationsAlerts } from './parts/notifications/notificationsAlerts.js';
+import { NotificationsCenter } from './parts/notifications/notificationsCenter.js';
+import { registerNotificationCommands } from './parts/notifications/notificationsCommands.js';
+import { NotificationsStatus } from './parts/notifications/notificationsStatus.js';
+import { NotificationsToasts } from './parts/notifications/notificationsToasts.js';
+import './style.js';
 
 export interface IWorkbenchOptions {
 
@@ -62,6 +62,13 @@ export interface IWorkbenchOptions {
 	 * Whether to reset the workbench parts layout on startup.
 	 */
 	resetLayout?: boolean;
+}
+
+// Export the initialization function
+export async function initializeWorkbench(container: HTMLElement, options: IWorkbenchOptions = {}): Promise<Workbench> {
+	const workbench = new Workbench(container, options);
+	workbench.startup();
+	return workbench;
 }
 
 export class Workbench extends Layout {
@@ -247,7 +254,7 @@ export class Workbench extends Layout {
 		}));
 
 		// In some environments we do not get enough time to persist state on shutdown.
-		// In other cases, VSCode might crash, so we periodically save state to reduce
+		// In other cases, MintMind might crash, so we periodically save state to reduce
 		// the chance of loosing any state.
 		// The window loosing focus is a good indication that the user has stopped working
 		// in that window so we pick that at a time to collect state.

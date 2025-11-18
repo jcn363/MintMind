@@ -2,7 +2,7 @@
 #
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License. See License.txt in the project root for license information.
-if [ "$VSCODE_WSL_DEBUG_INFO" = true ]; then
+if [ "$MINTMIND_WSL_DEBUG_INFO" = true ]; then
 	set -x
 fi
 
@@ -11,8 +11,8 @@ APP_NAME="@@APPNAME@@"
 QUALITY="@@QUALITY@@"
 NAME="@@NAME@@"
 SERVERDATAFOLDER="@@SERVERDATAFOLDER@@"
-VSCODE_PATH="$(dirname "$(dirname "$(realpath "$0")")")"
-ELECTRON="$VSCODE_PATH/$NAME.exe"
+MINTMIND_PATH="$(dirname "$(dirname "$(realpath "$0")")")"
+TAURI="$MINTMIND_PATH/$NAME.exe"
 
 IN_WSL=false
 if [ -n "$WSL_DISTRO_NAME" ]; then
@@ -30,33 +30,33 @@ else
 			# environment vars cannot be transferred from WSL to Windows
 			# See: https://github.com/microsoft/BashOnWindows/issues/1363
 			#      https://github.com/microsoft/BashOnWindows/issues/1494
-			"$ELECTRON" "$@"
+			"$TAURI" "$@"
 			exit $?
 		fi
 	fi
 fi
 if [ $IN_WSL = true ]; then
 
-	export WSLENV="ELECTRON_RUN_AS_NODE/w:$WSLENV"
-	CLI=$(wslpath -m "$VSCODE_PATH/resources/app/out/cli.js")
+	export WSLENV="TAURI_RUN_AS_NODE/w:$WSLENV"
+	CLI=$(wslpath -m "$MINTMIND_PATH/resources/app/out/cli.js")
 
 	# use the Remote WSL extension if installed
 	WSL_EXT_ID="ms-vscode-remote.remote-wsl"
 
-	ELECTRON_RUN_AS_NODE=1 "$ELECTRON" "$CLI" --locate-extension $WSL_EXT_ID >/tmp/remote-wsl-loc.txt 2>/dev/null </dev/null
+	TAURI_RUN_AS_NODE=1 "$TAURI" "$CLI" --locate-extension $WSL_EXT_ID >/tmp/remote-wsl-loc.txt 2>/dev/null </dev/null
 	WSL_EXT_WLOC=$(cat /tmp/remote-wsl-loc.txt)
 
 	if [ -n "$WSL_EXT_WLOC" ]; then
 		# replace \r\n with \n in WSL_EXT_WLOC
 		WSL_CODE=$(wslpath -u "${WSL_EXT_WLOC%%[[:cntrl:]]}")/scripts/wslCode.sh
-		"$WSL_CODE" "$COMMIT" "$QUALITY" "$ELECTRON" "$APP_NAME" "$SERVERDATAFOLDER" "$@"
+		"$WSL_CODE" "$COMMIT" "$QUALITY" "$TAURI" "$APP_NAME" "$SERVERDATAFOLDER" "$@"
 		exit $?
 	fi
 
 elif [ -x "$(command -v cygpath)" ]; then
-	CLI=$(cygpath -m "$VSCODE_PATH/resources/app/out/cli.js")
+	CLI=$(cygpath -m "$MINTMIND_PATH/resources/app/out/cli.js")
 else
-	CLI="$VSCODE_PATH/resources/app/out/cli.js"
+	CLI="$MINTMIND_PATH/resources/app/out/cli.js"
 fi
-ELECTRON_RUN_AS_NODE=1 "$ELECTRON" "$CLI" "$@"
+TAURI_RUN_AS_NODE=1 "$TAURI" "$CLI" "$@"
 exit $?

@@ -168,9 +168,9 @@ export class PromptValidator {
 							report(toMarker(localize('promptValidator.unknownAttribute.github-agent', "Attribute '{0}' is not supported in custom GitHub Copilot agent files. Supported: {1}.", attribute.key, supportedNames.value), attribute.range, MarkerSeverity.Warning));
 						} else {
 							if (validGithubCopilotAttributeNames.value.has(attribute.key)) {
-								report(toMarker(localize('promptValidator.ignoredAttribute.vscode-agent', "Attribute '{0}' is ignored when running locally in VS Code.", attribute.key), attribute.range, MarkerSeverity.Info));
+								report(toMarker(localize('promptValidator.ignoredAttribute.vscode-agent', "Attribute '{0}' is ignored when running locally in MintMind.", attribute.key), attribute.range, MarkerSeverity.Info));
 							} else {
-								report(toMarker(localize('promptValidator.unknownAttribute.vscode-agent', "Attribute '{0}' is not supported in VS Code agent files. Supported: {1}.", attribute.key, supportedNames.value), attribute.range, MarkerSeverity.Warning));
+								report(toMarker(localize('promptValidator.unknownAttribute.vscode-agent', "Attribute '{0}' is not supported in MintMind agent files. Supported: {1}.", attribute.key, supportedNames.value), attribute.range, MarkerSeverity.Warning));
 							}
 						}
 						break;
@@ -329,7 +329,7 @@ export class PromptValidator {
 				if (target === Target.GitHubCopilot) {
 					// no validation for github-copilot target
 				} else {
-					this.validateVSCodeTools(attribute.value, target, report);
+					this.validateMintMindTools(attribute.value, target, report);
 				}
 				break;
 			default:
@@ -337,7 +337,7 @@ export class PromptValidator {
 		}
 	}
 
-	private validateVSCodeTools(valueItem: IArrayValue, target: string | undefined, report: (markers: IMarkerData) => void) {
+	private validateMintMindndTools(valueItem: IArrayValue, target: string | undefined, report: (markers: IMarkerData) => void) {
 		if (valueItem.items.length > 0) {
 			const available = new Set<string>(this.languageModelToolsService.getQualifiedToolNames());
 			const deprecatedNames = this.languageModelToolsService.getDeprecatedQualifiedToolNames();

@@ -52,7 +52,7 @@ This document outlines the development practices and guidelines for the MintMind
 ```text
 mintmind/
 ├── src/                    # TypeScript/JavaScript source code
-├── extensions/             # VS Code extensions
+├── extensions/             # MintMind extensions
 ├── scripts/                # Build and utility scripts
 ├── docs/                   # Documentation
 ├── test/                   # Test suites (unit, integration, smoke, etc.)

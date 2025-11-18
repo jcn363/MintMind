@@ -424,7 +424,7 @@ test.describe('MintMind - Flujo de Gestión de Extensiones E2E', () => {
     await expect(noResultsMessage).toBeVisible();
 
     // Intentar instalar desde marketplace externo (simulado)
-    // En implementación real, esto probaría instalación desde VS Code Marketplace
+    // En implementación real, esto probaría instalación desde MintMind Marketplace
 
     // Verificar manejo de errores de red
     await page.context().setOffline(true);

@@ -3,26 +3,26 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as fs from 'fs';
-import * as url from 'url';
 import * as cp from 'child_process';
+import * as fs from 'fs';
 import * as http from 'http';
-import { cwd } from '../../base/common/process.js';
-import { dirname, extname, resolve, join } from '../../base/common/path.js';
-import { parseArgs, buildHelpMessage, buildVersionMessage, OPTIONS, OptionDescriptions, ErrorReporter } from '../../platform/environment/node/argv.js';
-import { NativeParsedArgs } from '../../platform/environment/common/argv.js';
-import { createWaitMarkerFileSync } from '../../platform/environment/node/wait.js';
-import { PipeCommand } from '../../workbench/api/node/extHostCLIServer.js';
-import { hasStdinWithoutTty, getStdinFilePath, readFromStdin } from '../../platform/environment/node/stdin.js';
+import * as url from 'url';
 import { DeferredPromise } from '../../base/common/async.js';
 import { FileAccess } from '../../base/common/network.js';
+import { dirname, extname, join, resolve } from '../../base/common/path.js';
+import { cwd } from '../../base/common/process.js';
+import { NativeParsedArgs } from '../../platform/environment/common/argv.js';
+import { ErrorReporter, OPTIONS, OptionDescriptions, buildHelpMessage, buildVersionMessage, parseArgs } from '../../platform/environment/node/argv.js';
+import { getStdinFilePath, hasStdinWithoutTty, readFromStdin } from '../../platform/environment/node/stdin.js';
+import { createWaitMarkerFileSync } from '../../platform/environment/node/wait.js';
+import { PipeCommand } from '../../workbench/api/node/extHostCLIServer.js';
 
 /*
- * Implements a standalone CLI app that opens VS Code from a remote terminal.
+ * Implements a standalone CLI app that opens MintMind from a remote terminal.
  *  - In integrated terminals for remote windows this connects to the remote server though a pipe.
- *    The pipe is passed in env VSCODE_IPC_HOOK_CLI.
- *  - In external terminals for WSL this calls VS Code on the Windows side.
- *    The VS Code desktop executable path is passed in env VSCODE_CLIENT_COMMAND.
+ *    The pipe is passed in env MINTMIND_IPC_HOOK_CLI.
+ *  - In external terminals for WSL this calls MintMind on the Windows side.
+ *    The MintMind desktop executable path is passed in env MINTMIND_CLIENT_COMMAND.
  */
 
 
@@ -83,15 +83,15 @@ const isSupportedForPipe = (optionId: keyof RemoteParsedArgs) => {
 	}
 };
 
-const cliPipe = process.env['VSCODE_IPC_HOOK_CLI'] as string;
-const cliCommand = process.env['VSCODE_CLIENT_COMMAND'] as string;
-const cliCommandCwd = process.env['VSCODE_CLIENT_COMMAND_CWD'] as string;
-const cliRemoteAuthority = process.env['VSCODE_CLI_AUTHORITY'] as string;
-const cliStdInFilePath = process.env['VSCODE_STDIN_FILE_PATH'] as string;
+const cliPipe = process.env['MINTMIND_IPC_HOOK_CLI'] as string;
+const cliCommand = process.env['MINTMIND_CLIENT_COMMAND'] as string;
+const cliCommandCwd = process.env['MINTMIND_CLIENT_COMMAND_CWD'] as string;
+const cliRemoteAuthority = process.env['MINTMIND_CLI_AUTHORITY'] as string;
+const cliStdInFilePath = process.env['MINTMIND_STDIN_FILE_PATH'] as string;
 
 export async function main(desc: ProductDescription, args: string[]): Promise<void> {
 	if (!cliPipe && !cliCommand) {
-		console.log('Command is only available in WSL or inside a Visual Studio Code terminal.');
+		console.log('Command is only available in WSL or inside a MintMind terminal.');
 		return;
 	}
 
@@ -278,10 +278,15 @@ export async function main(desc: ProductDescription, args: string[]): Promise<vo
 			});
 		} else {
 			const cliCwd = dirname(cliCommand);
-			const env = { ...process.env, ELECTRON_RUN_AS_NODE: '1' };
+			// Ensure Node.js runtime for CLI subprocess (not Tauri)
+			const env = {
+				...process.env,
+				TAURI_RUN_AS_NODE: '1',
+				TAURI_RUN_AS_NODE: '1' // Legacy compatibility
+			};
 			newCommandline.unshift('resources/app/out/cli.js');
 			if (verbose) {
-				console.log(`Invoking: cd "${cliCwd}" && ELECTRON_RUN_AS_NODE=1 "${cliCommand}" "${newCommandline.join('" "')}"`);
+				console.log(`Invoking: cd "${cliCwd}" && TAURI_RUN_AS_NODE=1 "${cliCommand}" "${newCommandline.join('" "')}"`);
 			}
 			if (runningInWSL2()) {
 				if (verbose) {
@@ -467,7 +472,7 @@ function asExtensionIdOrVSIX(inputs: string[] | undefined) {
 }
 
 function fatal(message: string, err: unknown): void {
-	console.error('Unable to connect to VS Code server: ' + message);
+	console.error('Unable to connect to MintMind server: ' + message);
 	console.error(err);
 	process.exit(1);
 }

@@ -23,7 +23,7 @@ Before you begin, ensure you have the following installed:
 - [Rust](https://www.rust-lang.org/) (for Tauri)
 - [Node.js](https://nodejs.org/) (v18 or later)
 - [Git](https://git-scm.com/)
-- [Visual Studio Code](https://code.visualstudio.com/) (recommended)
+- [MintMind](https://code.visualstudio.com/) (recommended)
 
 ## Setting Up the Development Environment
 
@@ -47,13 +47,14 @@ Before you begin, ensure you have the following installed:
    ```
 
 4. **Verify the installation**
+
    ```bash
    bun run check
    ```
 
 ## Project Structure
 
-```
+```text
 MintMind/
 ├── src/                # Source code
 │   ├── main/           # Main process code
@@ -89,9 +90,9 @@ bun run package
 
 ## Debugging
 
-### VS Code Debug Configurations
+### MintMind Debug Configurations
 
-The repository includes VS Code debug configurations in `.vscode/launch.json`:
+The repository includes MintMind debug configurations in `.vscode/launch.json`:
 
 - **Debug Main Process**: Debug the main Electron process
 - **Debug Renderer Process**: Debug the renderer process
@@ -160,7 +161,7 @@ bun run lint:fix
 
 We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
-```
+```text
 <type>[optional scope]: <description>
 
 [optional body]

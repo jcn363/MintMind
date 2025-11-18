@@ -1,10 +1,10 @@
 # Backend Service Integration Framework
 
-This directory contains a Rust framework for implementing backend services that integrate with the VS Code CLI through inter-process communication (IPC). The framework provides utilities for service lifecycle management, logging, path normalization, and RPC communication.
+This directory contains a Rust framework for implementing backend services that integrate with the MintMind CLI through inter-process communication (IPC). The framework provides utilities for service lifecycle management, logging, path normalization, and RPC communication.
 
 ## Overview
 
-The backend service integration framework enables developers to create high-performance services in Rust that can be spawned and managed by TypeScript code running in the VS Code CLI. The framework provides:
+The backend service integration framework enables developers to create high-performance services in Rust that can be spawned and managed by TypeScript code running in the MintMind CLI. The framework provides:
 
 - **IPC Communication**: Base64-encoded JSON-RPC over stdin/stdout for secure, structured communication
 - **Lifecycle Management**: Service spawning, parent process monitoring, and graceful shutdown
@@ -24,7 +24,7 @@ TypeScript (CLI) ↔ IPC Transport ↔ Rust Service
                                 → Path Normalizer
 ```
 
-Services run as separate processes and communicate bidirectionally with the parent TypeScript process using line-based message exchange over stdin/stdout. All messages are base64-encoded for compatibility with VS Code's IPC system.
+Services run as separate processes and communicate bidirectionally with the parent TypeScript process using line-based message exchange over stdin/stdout. All messages are base64-encoded for compatibility with MintMind's IPC system.
 
 ## Quick Start
 
@@ -51,7 +51,7 @@ impl MyService {
 #[tokio::main]
 async fn main() -> Result<(), AnyError> {
     // Get parent PID
-    let parent_pid = env::var("VSCODE_PARENT_PID")
+    let parent_pid = env::var("MINTMIND_PARENT_PID")
         .unwrap_or_else(|_| "1".to_string())
         .parse::<u32>()
         .unwrap_or(1);
@@ -131,7 +131,7 @@ import { ServiceSpawner } from './services';
 
 const spawner = new ServiceSpawner();
 const serviceProcess = await spawner.spawn('./my_service', [], {
-  env: { VSCODE_PARENT_PID: process.pid.toString() }
+  env: { MINTMIND_PARENT_PID: process.pid.toString() }
 });
 
 // Communicate with service
@@ -358,7 +358,7 @@ class RustService {
       stdio: ['pipe', 'pipe', 'inherit'],
       env: {
         ...process.env,
-        VSCODE_PARENT_PID: process.pid.toString(),
+        MINTMIND_PARENT_PID: process.pid.toString(),
       },
     });
 
@@ -417,7 +417,7 @@ class RustService {
 ### Communication Flow
 
 1. TypeScript spawns Rust process with stdin/stdout pipes
-2. Sets `VSCODE_PARENT_PID` environment variable
+2. Sets `MINTMIND_PARENT_PID` environment variable
 3. Sends base64-encoded JSON-RPC requests
 4. Receives base64-encoded JSON-RPC responses
 5. Handles service lifecycle (startup, monitoring, shutdown)

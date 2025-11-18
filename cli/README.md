@@ -2,7 +2,7 @@
 
 ## File I/O Service
 
-The native Rust File I/O service provides high-performance file operations with resource locking and IPC communication. It offers a secure, efficient alternative to direct file system operations in VS Code.
+The native Rust File I/O service provides high-performance file operations with resource locking and IPC communication. It offers a secure, efficient alternative to direct file system operations in MintMind.
 
 ### Features
 
@@ -52,7 +52,7 @@ The service can be run as a standalone binary:
 
 #### Integration
 
-The service integrates with VS Code through the `DiskFileSystemProviderClient` in `diskFileSystemProviderClient.ts`, which automatically spawns the native binary and communicates via IPC with fallback to the TypeScript implementation.
+The service integrates with MintMind through the `DiskFileSystemProviderClient` in `diskFileSystemProviderClient.ts`, which automatically spawns the native binary and communicates via IPC with fallback to the TypeScript implementation.
 
 ### RPC Methods
 
@@ -106,14 +106,14 @@ Tests include:
 
 ## Watcher Service
 
-The native Rust file watcher service provides high-performance file system monitoring for VS Code. It replaces the previous TypeScript implementation with a more efficient native binary.
+The native Rust file watcher service provides high-performance file system monitoring for MintMind. It replaces the previous TypeScript implementation with a more efficient native binary.
 
 ### Features
 
 - **Recursive and Non-Recursive Watching**: Support for both deep directory watching and shallow single-directory monitoring
 - **Event Coalescing**: Intelligent merging of multiple file system events to reduce noise
 - **Event Throttling**: Configurable buffering and timing to prevent event floods
-- **IPC Integration**: Seamless communication with VS Code via JSON-RPC over stdin/stdout
+- **IPC Integration**: Seamless communication with MintMind via JSON-RPC over stdin/stdout
 - **Subscription Reuse**: Efficient watcher reuse for non-recursive watchers
 - **Failure Recovery**: Automatic suspension and resumption of failed watchers
 
@@ -151,7 +151,7 @@ The watcher can be run as a standalone binary:
 
 #### Integration
 
-The watcher integrates with VS Code through the `UniversalWatcherClient` in `watcherClient.ts`, which automatically spawns the native binary and communicates via IPC.
+The watcher integrates with MintMind through the `UniversalWatcherClient` in `watcherClient.ts`, which automatically spawns the native binary and communicates via IPC.
 
 ### RPC Methods
 

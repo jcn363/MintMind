@@ -3,13 +3,16 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { AppResourcePath, FileAccess, nodeModulesAsarPath, nodeModulesPath, Schemas, VSCODE_AUTHORITY } from './base/common/network.js';
+import { AppResourcePath, FileAccess, MINTMIND_AUTHORITY, Schemas, nodeModulesAsarPath, nodeModulesPath } from './base/common/network.js';
 import * as platform from './base/common/platform.js';
 import { IProductConfiguration } from './base/common/product.js';
 import { URI } from './base/common/uri.js';
 import { generateUuid } from './base/common/uuid.js';
 
-export const canASAR = false; // TODO@esm: ASAR disabled in ESM
+/**
+ * @deprecated ASAR is not compatible with ESM modules. This flag will be removed in a future version.
+ */
+export const canASAR = false; // ASAR disabled in ESM as it's not compatible with ESM modules
 
 declare const window: any;
 declare const document: any;
@@ -73,19 +76,19 @@ class AMDModuleImporter {
 		globalThis.define.amd = true;
 
 		if (this._isRenderer) {
-			this._amdPolicy = globalThis._VSCODE_WEB_PACKAGE_TTP ?? window.trustedTypes?.createPolicy('amdLoader', {
+			this._amdPolicy = globalThis._MINTMIND_WEB_PACKAGE_TTP ?? window.trustedTypes?.createPolicy('amdLoader', {
 				createScriptURL(value: any) {
 					if (value.startsWith(window.location.origin)) {
 						return value;
 					}
-					if (value.startsWith(`${Schemas.vscodeFileResource}://${VSCODE_AUTHORITY}`)) {
+					if (value.startsWith(`${Schemas.vscodeFileResource}://${MINTMIND_AUTHORITY}`)) {
 						return value;
 					}
 					throw new Error(`[trusted_script_src] Invalid script url: ${value}`);
 				}
 			});
 		} else if (this._isWebWorker) {
-			this._amdPolicy = globalThis._VSCODE_WEB_PACKAGE_TTP ?? globalThis.trustedTypes?.createPolicy('amdLoader', {
+			this._amdPolicy = globalThis._MINTMIND_WEB_PACKAGE_TTP ?? globalThis.trustedTypes?.createPolicy('amdLoader', {
 				createScriptURL(value: string) {
 					return value;
 				}
@@ -147,7 +150,7 @@ class AMDModuleImporter {
 				scriptElement.removeEventListener('error', errorEventListener);
 			};
 
-			const loadEventListener = (e: any) => {
+			const loadEventListener = () => {
 				unbind();
 				resolve(this._defineCalls.pop());
 			};
@@ -204,7 +207,7 @@ const cache = new Map<string, Promise<any>>();
  */
 export async function importAMDNodeModule<T>(nodeModuleName: string, pathInsideNodeModule: string, isBuilt?: boolean): Promise<T> {
 	if (isBuilt === undefined) {
-		const product = globalThis._VSCODE_PRODUCT_JSON as unknown as IProductConfiguration;
+		const product = globalThis._MINTMIND_PRODUCT_JSON as unknown as IProductConfiguration;
 		isBuilt = Boolean((product ?? globalThis.vscode?.context?.configuration()?.product)?.commit);
 	}
 
@@ -229,7 +232,7 @@ export async function importAMDNodeModule<T>(nodeModuleName: string, pathInsideN
 }
 
 export function resolveAmdNodeModulePath(nodeModuleName: string, pathInsideNodeModule: string): string {
-	const product = globalThis._VSCODE_PRODUCT_JSON as unknown as IProductConfiguration;
+	const product = globalThis._MINTMIND_PRODUCT_JSON as unknown as IProductConfiguration;
 	const isBuilt = Boolean((product ?? globalThis.vscode?.context?.configuration()?.product)?.commit);
 	const useASAR = (canASAR && isBuilt && !platform.isWeb);
 

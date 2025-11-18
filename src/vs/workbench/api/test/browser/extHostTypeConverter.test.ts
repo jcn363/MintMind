@@ -127,7 +127,7 @@ describe('ExtHostTypeConverter', function () {
 		});
 	});
 
-	it('JS/TS Surround With Code Actions provide bad Workspace Edits when obtained by VSCode Command API #178654', function () {
+	it('JS/TS Surround With Code Actions provide bad Workspace Edits when obtained by MintMind Command API #178654', function () {
 
 		const uri = URI.parse('file:///foo/bar');
 		const ws = new extHostTypes.WorkspaceEdit();

@@ -8,7 +8,7 @@
 const path = require('path');
 const perf = require('@vscode/vscode-perf');
 
-const VSCODE_FOLDER = path.join(__dirname, '..');
+const MINTMIND_FOLDER = path.join(__dirname, '..');
 
 async function main() {
 
@@ -37,9 +37,9 @@ async function main() {
 		}
 
 		args.push('--folder');
-		args.push(VSCODE_FOLDER);
+		args.push(MINTMIND_FOLDER);
 		args.push('--file');
-		args.push(path.join(VSCODE_FOLDER, 'package.json'));
+		args.push(path.join(MINTMIND_FOLDER, 'package.json'));
 	}
 
 	if (build) {
@@ -85,7 +85,7 @@ function getExePath(buildPath) {
  * @returns {string}
  */
 function getLocalCLIPath() {
-	return process.platform === 'win32' ? path.join(VSCODE_FOLDER, 'scripts', 'code.bat') : path.join(VSCODE_FOLDER, 'scripts', 'code.sh');
+	return process.platform === 'win32' ? path.join(MINTMIND_FOLDER, 'scripts', 'code.bat') : path.join(MINTMIND_FOLDER, 'scripts', 'code.sh');
 }
 
 main();

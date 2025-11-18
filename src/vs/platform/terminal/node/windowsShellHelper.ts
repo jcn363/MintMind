@@ -7,7 +7,7 @@ import { timeout } from '../../../base/common/async.js';
 import { debounce } from '../../../base/common/decorators.js';
 import { Emitter, Event } from '../../../base/common/event.js';
 import { Disposable, IDisposable } from '../../../base/common/lifecycle.js';
-import { isWindows, platform } from '../../../base/common/platform.js';
+import { isWindows, platform, isTauriMode } from '../../../base/common/platform.js';
 import { GeneralShellType, TerminalShellType, WindowsShellType } from '../common/terminal.js';
 import type * as WindowsProcessTreeType from '@vscode/windows-process-tree';
 
@@ -41,6 +41,12 @@ const SHELL_EXECUTABLE_REGEXES = [
 ];
 
 let windowsProcessTree: typeof WindowsProcessTreeType;
+let tauriInvoke: any;
+if (isTauriMode()) {
+	import('@tauri-apps/api/core').then(({ invoke }) => {
+		tauriInvoke = invoke;
+	});
+}
 
 export class WindowsShellHelper extends Disposable implements IWindowsShellHelper {
 	private _currentRequest: Promise<string> | undefined;
@@ -129,20 +135,46 @@ export class WindowsShellHelper extends Disposable implements IWindowsShellHelpe
 		if (this._store.isDisposed) {
 			return Promise.resolve('');
 		}
-		// Prevent multiple requests at once, instead return current request
+
+		// Prevent multiple requests at once
 		if (this._currentRequest) {
 			return this._currentRequest;
 		}
-		if (!windowsProcessTree) {
-			windowsProcessTree = await import('@vscode/windows-process-tree');
-		}
-		this._currentRequest = new Promise<string>(resolve => {
-			windowsProcessTree.getProcessTree(this._rootProcessId, tree => {
-				const name = this.traverseTree(tree);
-				this._currentRequest = undefined;
-				resolve(name);
+
+		if (isTauriMode()) {
+			// Tauri implementation
+			this._currentRequest = new Promise<string>(async (resolve) => {
+				try {
+					if (!tauriInvoke) {
+						const { invoke } = await import('@tauri-apps/api/core');
+						tauriInvoke = invoke;
+					}
+
+					const shellName = await tauriInvoke('get_shell_executable', {
+						rootPid: this._rootProcessId
+					});
+					this._currentRequest = undefined;
+					resolve(shellName || '');
+				} catch (err) {
+					console.error('Failed to get shell name:', err);
+					this._currentRequest = undefined;
+					resolve('');
+				}
 			});
-		});
+		} else {
+			// Electron fallback
+			if (!windowsProcessTree) {
+				windowsProcessTree = await import('@vscode/windows-process-tree');
+			}
+			this._currentRequest = new Promise<string>(resolve => {
+				windowsProcessTree.getProcessTree(this._rootProcessId, tree => {
+					const name = this.traverseTree(tree);
+					this._currentRequest = undefined;
+					resolve(name);
+				});
+			});
+		}
+
 		return this._currentRequest;
 	}
 

@@ -4,10 +4,10 @@
 # ---------------------------------------------------------------------------------------------
 
 # Prevent recursive sourcing
-if [[ -n "$VSCODE_LOGIN_INITIALIZED" ]]; then
+if [[ -n "$MINTMIND_LOGIN_INITIALIZED" ]]; then
 	return
 fi
-export VSCODE_LOGIN_INITIALIZED=1
+export MINTMIND_LOGIN_INITIALIZED=1
 
 ZDOTDIR=$USER_ZDOTDIR
 if [[ $options[norcs] = off && -o "login" &&  -f $ZDOTDIR/.zlogin ]]; then

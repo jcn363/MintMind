@@ -3,17 +3,17 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import * as path from 'path';
-import * as cp from 'child_process';
 import * as playwright from '@playwright/test';
-import * as url from 'url';
-import * as tmp from 'tmp';
-import * as rimraf from 'rimraf';
-import { URI } from 'vscode-uri';
-import * as kill from 'tree-kill';
-import * as minimist from 'minimist';
-import { promisify } from 'util';
+import * as cp from 'child_process';
 import { promises } from 'fs';
+import * as minimist from 'minimist';
+import * as path from 'path';
+import * as rimraf from 'rimraf';
+import * as tmp from 'tmp';
+import * as kill from 'tree-kill';
+import * as url from 'url';
+import { promisify } from 'util';
+import { URI } from 'vscode-uri';
 
 const root = path.join(__dirname, '..', '..', '..', '..');
 const logsPath = path.join(root, '.build', 'logs', 'integration-tests-browser');
@@ -43,7 +43,7 @@ const args = minimist(process.argv.slice(2), {
 });
 
 if (args.help) {
-	console.error(`Integration test runner for VS Code in the browser
+	console.error(`Integration test runner for MintMind in the browser
 	Usage: node integration-tests-browser/out/index.js [options]
 
 	--workspacePath <path>             Path to the workspace (folder or *.code-workspace file) to open in the test
@@ -165,23 +165,23 @@ async function launchServer(browserType: BrowserType, browserChannel: BrowserCha
 	const userDataDir = path.join(testDataPath, 'd');
 
 	const env = {
-		VSCODE_BROWSER: browserChannel ? `${browserType}-${browserChannel}` : browserType,
+		MINTMIND_BROWSER: browserChannel ? `${browserType}-${browserChannel}` : browserType,
 		...process.env
 	};
 
 	const serverArgs = ['--enable-proposed-api', '--disable-telemetry', '--disable-experiments', '--server-data-dir', userDataDir, '--accept-server-license-terms', '--disable-workspace-trust'];
 
 	let serverLocation: string;
-	if (process.env.VSCODE_REMOTE_SERVER_PATH) {
-		const { serverApplicationName } = require(path.join(process.env.VSCODE_REMOTE_SERVER_PATH, 'product.json'));
-		serverLocation = path.join(process.env.VSCODE_REMOTE_SERVER_PATH, 'bin', `${serverApplicationName}${process.platform === 'win32' ? '.cmd' : ''}`);
+	if (process.env.MINTMIND_REMOTE_SERVER_PATH) {
+		const { serverApplicationName } = require(path.join(process.env.MINTMIND_REMOTE_SERVER_PATH, 'product.json'));
+		serverLocation = path.join(process.env.MINTMIND_REMOTE_SERVER_PATH, 'bin', `${serverApplicationName}${process.platform === 'win32' ? '.cmd' : ''}`);
 
 		if (args.debug) {
 			console.log(`Starting built server from '${serverLocation}'`);
 		}
 	} else {
 		serverLocation = path.join(root, `scripts/code-server.${process.platform === 'win32' ? 'bat' : 'sh'}`);
-		process.env.VSCODE_DEV = '1';
+		process.env.MINTMIND_DEV = '1';
 
 		if (args.debug) {
 			console.log(`Starting server out of sources from '${serverLocation}'`);

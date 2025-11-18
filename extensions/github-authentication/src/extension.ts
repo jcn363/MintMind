@@ -66,7 +66,7 @@ export async function activate(context: vscode.ExtensionContext) {
     const uriHandler = new UriEventHandler();
     context.subscriptions.push(uriHandler);
 
-    // Usar Tauri en lugar de VS Code APIs
+    // Usar Tauri en lugar de MintMind APIs
     const tauriResult = await invoke('github_get_sessions', { scopes: ['repo', 'user'] });
     if (tauriResult && Array.isArray(tauriResult) && tauriResult.length > 0) {
       // Hay sesiones existentes, inicializar con Tauri

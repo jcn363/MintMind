@@ -197,7 +197,7 @@ where
 	T: Serialize + ?Sized,
 {
 	let dec = serde_json::to_string(value).expect("expected to serialize");
-	if std::env::var("VSCODE_CLI_DISABLE_KEYCHAIN_ENCRYPT").is_ok() {
+	if std::env::var("MINTMIND_CLI_DISABLE_KEYCHAIN_ENCRYPT").is_ok() {
 		return dec;
 	}
 	encrypt(&dec)
@@ -208,7 +208,7 @@ fn unseal<T>(value: &str) -> Option<T>
 where
 	T: DeserializeOwned,
 {
-	// small back-compat for old unencrypted values, or if VSCODE_CLI_DISABLE_KEYCHAIN_ENCRYPT set
+	// small back-compat for old unencrypted values, or if MINTMIND_CLI_DISABLE_KEYCHAIN_ENCRYPT set
 	if let Ok(v) = serde_json::from_str::<T>(value) {
 		return Some(v);
 	}
@@ -408,7 +408,7 @@ impl Auth {
 			0o600,
 		));
 
-		let native_storage_result = if std::env::var("VSCODE_CLI_USE_FILE_KEYCHAIN").is_ok()
+		let native_storage_result = if std::env::var("MINTMIND_CLI_USE_FILE_KEYCHAIN").is_ok()
 			|| self.file_storage_path.exists()
 		{
 			Err(wrap("", "user prefers file storage").into())

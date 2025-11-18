@@ -79,6 +79,14 @@ if (typeof document !== 'undefined' && document.head) {
 			this._detect();
 			return this._isElectronNodeIntegrationWebWorker;
 		}
+		get isTauriRenderer() {
+			this._detect();
+			return this._isTauriRenderer;
+		}
+		get isTauriWebWorker() {
+			this._detect();
+			return this._isTauriWebWorker;
+		}
 		constructor() {
 			this._detected = false;
 			this._isWindows = false;
@@ -86,6 +94,8 @@ if (typeof document !== 'undefined' && document.head) {
 			this._isElectronRenderer = false;
 			this._isWebWorker = false;
 			this._isElectronNodeIntegrationWebWorker = false;
+			this._isTauriRenderer = false;
+			this._isTauriWebWorker = false;
 		}
 		_detect() {
 			if (this._detected) {
@@ -94,9 +104,13 @@ if (typeof document !== 'undefined' && document.head) {
 			this._detected = true;
 			this._isWindows = Environment._isWindows();
 			this._isNode = (typeof module !== 'undefined' && !!module.exports);
-			this._isElectronRenderer = (typeof process !== 'undefined' && typeof process.versions !== 'undefined' && typeof process.versions.electron !== 'undefined' && process.type === 'renderer');
 			this._isWebWorker = (typeof AMDLoader.global.importScripts === 'function');
-			this._isElectronNodeIntegrationWebWorker = this._isWebWorker && (typeof process !== 'undefined' && typeof process.versions !== 'undefined' && typeof process.versions.electron !== 'undefined' && process.type === 'worker');
+			// Detect Tauri webview environment (replaces legacy Electron renderer detection)
+			this._isTauriRenderer = (typeof window !== 'undefined' && typeof window.__TAURI__ !== 'undefined');
+			this._isTauriWebWorker = this._isWebWorker && (typeof globalThis !== 'undefined' && typeof globalThis.__TAURI__ !== 'undefined');
+			// Legacy properties for compatibility (always false in Tauri)
+			this._isElectronRenderer = false;
+			this._isElectronNodeIntegrationWebWorker = false;
 		}
 		static _isWindows() {
 			if (typeof navigator !== 'undefined') {
@@ -588,7 +602,7 @@ var AMDLoader;
 				if (this._env.isWebWorker) {
 					this._scriptLoader = new WorkerScriptLoader();
 				}
-				else if (this._env.isElectronRenderer) {
+				else if (this._env.isTauriRenderer) {
 					const { preferScriptTags } = moduleManager.getConfig().getOptionsLiteral();
 					if (preferScriptTags) {
 						this._scriptLoader = new BrowserScriptLoader();
@@ -913,7 +927,7 @@ var AMDLoader;
 			return script;
 		}
 		_getElectronRendererScriptPathOrUri(path) {
-			if (!this._env.isElectronRenderer) {
+			if (!this._env.isTauriRenderer) {
 				return path;
 			}
 			let driveLetterMatch = path.match(/^([a-z])\:(.*)/i);
@@ -1897,11 +1911,11 @@ var AMDLoader;
 				RequireFunc.__$__nodeRequire = nodeRequire;
 			}
 		}
-		if (env.isNode && !env.isElectronRenderer && !env.isElectronNodeIntegrationWebWorker) {
+		if (env.isNode && !env.isTauriRenderer && !env.isTauriWebWorker) {
 			module.exports = RequireFunc;
 		}
 		else {
-			if (!env.isElectronRenderer) {
+			if (!env.isTauriRenderer) {
 				AMDLoader.global.define = DefineFunc;
 			}
 			AMDLoader.global.require = RequireFunc;

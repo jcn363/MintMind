@@ -94,6 +94,10 @@ import { refreshShellIntegrationInfoStatus } from './terminalTooltip.js';
 import { generateUuid } from '../../../../base/common/uuid.js';
 import { PromptInputState } from '../../../../platform/terminal/common/capabilities/commandDetection/promptInputModel.js';
 import { hasKey } from '../../../../base/common/types.js';
+// Runtime backend detection and logging for Tauri PTY
+function isTauriMode(): boolean {
+	return typeof (globalThis as any).__TAURI__ !== 'undefined';
+}
 
 const enum Constants {
 	/**
@@ -1201,7 +1205,7 @@ export class TerminalInstance extends Disposable implements ITerminalInstance {
 
 	private _setShellIntegrationContextKey(): void {
 		if (this.xterm) {
-			this._terminalShellIntegrationEnabledContextKey.set(this.xterm.shellIntegration.status === ShellIntegrationStatus.VSCode);
+			this._terminalShellIntegrationEnabledContextKey.set(this.xterm.shellIntegration.status === ShellIntegrationStatus.MintMind);
 		}
 	}
 
@@ -2634,7 +2638,7 @@ export class TerminalLabelComputer extends Disposable {
 			shellCommand: commandDetection?.executingCommand && commandDetection.executingCommandConfidence === 'high' && promptInputModel
 				? promptInputModel.value + nonTaskSpinner
 				: undefined,
-			// Shell prompt input does not require high confidence as it's largely for VS Code developers
+			// Shell prompt input does not require high confidence as it's largely for MintMind developers
 			shellPromptInput: commandDetection?.executingCommand && promptInputModel
 				? promptInputModel.getCombinedString(true) + nonTaskSpinner
 				: promptInputModel?.getCombinedString(true),

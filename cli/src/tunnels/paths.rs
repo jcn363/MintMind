@@ -62,7 +62,7 @@ impl ServerPaths {
 		})
 	}
 
-	// VS Code Server pid
+	// MintMind Server pid
 	pub fn write_pid(&self, pid: u32) -> Result<(), WrappedError> {
 		write(&self.pidfile, format!("{pid}")).map_err(|e| {
 			wrap(
@@ -92,7 +92,7 @@ impl InstalledServer {
 		let server_dir = self.get_install_folder(p);
 		ServerPaths {
 			// allow using the OSS server in development via an override
-			executable: if let Some(p) = option_env!("VSCODE_CLI_OVERRIDE_SERVER_PATH") {
+			executable: if let Some(p) = option_env!("MINTMIND_CLI_OVERRIDE_SERVER_PATH") {
 				PathBuf::from(p)
 			} else {
 				server_dir

@@ -6,9 +6,10 @@
 //@ts-check
 
 import { createRequire } from 'node:module';
-import { fileURLToPath } from 'url';
-import * as path from 'path';
+import { existsSync } from 'fs';
 import * as os from 'os';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -103,9 +104,9 @@ const config = defineConfig(extensions.map(extension => {
 	config.mocha ??= {};
 	if (process.env.BUILD_ARTIFACTSTAGINGDIRECTORY || process.env.GITHUB_WORKSPACE) {
 		let suite = '';
-		if (process.env.VSCODE_BROWSER) {
-			suite = `${process.env.VSCODE_BROWSER} Browser Integration ${config.label} tests`;
-		} else if (process.env.REMOTE_VSCODE) {
+		if (process.env.MINTMIND_BROWSER) {
+			suite = `${process.env.MINTMIND_BROWSER} Browser Integration ${config.label} tests`;
+		} else if (process.env.REMOTE_MINTMIND) {
 			suite = `Remote Integration ${config.label} tests`;
 		} else {
 			suite = `Integration ${config.label} tests`;
@@ -127,11 +128,20 @@ const config = defineConfig(extensions.map(extension => {
 	if (!config.platform || config.platform === 'desktop') {
 		config.launchArgs = defaultLaunchArgs;
 		config.useInstallation = {
-			fromPath: process.env.INTEGRATION_TEST_ELECTRON_PATH || `${__dirname}/scripts/code.${process.platform === 'win32' ? 'bat' : 'sh'}`,
+			// Use Tauri binary for integration tests
+			// Tests expect the release binary to be available; debug binary is used as fallback if release does not exist
+			fromPath: (() => {
+				if (process.env.INTEGRATION_TEST_TAURI_PATH) {
+					return process.env.INTEGRATION_TEST_TAURI_PATH;
+				}
+				const releasePath = `${__dirname}/src-tauri/target/release/mintmind-tauri${process.platform === 'win32' ? '.exe' : ''}`;
+				const debugPath = `${__dirname}/src-tauri/target/debug/mintmind-tauri${process.platform === 'win32' ? '.exe' : ''}`;
+				return existsSync(releasePath) ? releasePath : debugPath;
+			})(),
 		};
 		config.env = {
 			...config.env,
-			VSCODE_SKIP_PRELAUNCH: '1',
+			MINTMIND_SKIP_PRELAUNCH: '1',
 		};
 	} else {
 		// web configs not supported, yet

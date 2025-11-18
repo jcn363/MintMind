@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-title VSCode Web Serverless
+title MintMind Web Serverless
 
 pushd %~dp0\..
 

@@ -4,35 +4,35 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as os from 'os';
+import { promiseWithResolvers } from '../../base/common/async.js';
 import { Emitter, Event } from '../../base/common/event.js';
-import { cloneAndChange } from '../../base/common/objects.js';
 import { Disposable } from '../../base/common/lifecycle.js';
+import { cloneAndChange } from '../../base/common/objects.js';
 import * as path from '../../base/common/path.js';
 import * as platform from '../../base/common/platform.js';
 import { URI } from '../../base/common/uri.js';
 import { IURITransformer } from '../../base/common/uriIpc.js';
+import { createURITransformer } from '../../base/common/uriTransformer.js';
 import { IServerChannel } from '../../base/parts/ipc/common/ipc.js';
 import { createRandomIPCHandle } from '../../base/parts/ipc/node/ipc.net.js';
+import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
+import { IExtensionManagementService } from '../../platform/extensionManagement/common/extensionManagement.js';
+import { ILogService } from '../../platform/log/common/log.js';
+import { IProductService } from '../../platform/product/common/productService.js';
 import { RemoteAgentConnectionContext } from '../../platform/remote/common/remoteAgentEnvironment.js';
-import { IPtyHostService, IShellLaunchConfig, ITerminalProfile } from '../../platform/terminal/common/terminal.js';
-import { IGetTerminalLayoutInfoArgs, ISetTerminalLayoutInfoArgs } from '../../platform/terminal/common/terminalProcess.js';
-import { IWorkspaceFolder } from '../../platform/workspace/common/workspace.js';
-import { createURITransformer } from '../../base/common/uriTransformer.js';
-import { CLIServerBase, ICommandsExecuter } from '../../workbench/api/node/extHostCLIServer.js';
 import { IEnvironmentVariableCollection } from '../../platform/terminal/common/environmentVariable.js';
 import { MergedEnvironmentVariableCollection } from '../../platform/terminal/common/environmentVariableCollection.js';
 import { deserializeEnvironmentDescriptionMap, deserializeEnvironmentVariableCollection } from '../../platform/terminal/common/environmentVariableShared.js';
+import { IPtyHostService, IShellLaunchConfig, ITerminalProfile } from '../../platform/terminal/common/terminal.js';
+import { shouldUseEnvironmentVariableCollection } from '../../platform/terminal/common/terminalEnvironment.js';
+import { IGetTerminalLayoutInfoArgs, ISetTerminalLayoutInfoArgs } from '../../platform/terminal/common/terminalProcess.js';
+import { IWorkspaceFolder } from '../../platform/workspace/common/workspace.js';
+import { CLIServerBase, ICommandsExecuter } from '../../workbench/api/node/extHostCLIServer.js';
 import { ICreateTerminalProcessArguments, ICreateTerminalProcessResult, IWorkspaceFolderData, RemoteTerminalChannelEvent, RemoteTerminalChannelRequest } from '../../workbench/contrib/terminal/common/remote/terminal.js';
 import * as terminalEnvironment from '../../workbench/contrib/terminal/common/terminalEnvironment.js';
 import { AbstractVariableResolverService } from '../../workbench/services/configurationResolver/common/variableResolver.js';
 import { buildUserEnvironment } from './extensionHostConnection.js';
 import { IServerEnvironmentService } from './serverEnvironmentService.js';
-import { IProductService } from '../../platform/product/common/productService.js';
-import { IExtensionManagementService } from '../../platform/extensionManagement/common/extensionManagement.js';
-import { IConfigurationService } from '../../platform/configuration/common/configuration.js';
-import { ILogService } from '../../platform/log/common/log.js';
-import { promiseWithResolvers } from '../../base/common/async.js';
-import { shouldUseEnvironmentVariableCollection } from '../../platform/terminal/common/terminalEnvironment.js';
 
 class CustomVariableResolver extends AbstractVariableResolverService {
 	constructor(
@@ -57,10 +57,10 @@ class CustomVariableResolver extends AbstractVariableResolverService {
 				return resolvedVariables[`config:${section}`];
 			},
 			getExecPath: (): string | undefined => {
-				return env['VSCODE_EXEC_PATH'];
+				return env['MINTMIND_EXEC_PATH'];
 			},
 			getAppRoot: (): string | undefined => {
-				return env['VSCODE_CWD'];
+				return env['MINTMIND_CWD'];
 			},
 			getFilePath: (): string | undefined => {
 				if (activeFileResource) {
@@ -259,7 +259,7 @@ export class RemoteTerminalChannel extends Disposable implements IServerChannel<
 
 		// Setup the CLI server to support forwarding commands run from the CLI
 		const ipcHandlePath = createRandomIPCHandle();
-		env.VSCODE_IPC_HOOK_CLI = ipcHandlePath;
+		env.MINTMIND_IPC_HOOK_CLI = ipcHandlePath;
 
 		const persistentProcessId = await this._ptyHostService.createProcess(shellLaunchConfig, initialCwd, args.cols, args.rows, args.unicodeVersion, env, baseEnv, args.options, args.shouldPersistTerminal, args.workspaceId, args.workspaceName);
 		const commandsExecuter: ICommandsExecuter = {

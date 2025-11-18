@@ -1,6 +1,6 @@
 # Dependency Management Policy
 
-This document outlines the dependency management strategy for the Visual Studio Code project, including policies for updating, pinning, and security considerations.
+This document outlines the dependency management strategy for the MintMind project, including policies for updating, pinning, and security considerations.
 
 ## Table of Contents
 - [Philosophy](#philosophy)
@@ -12,7 +12,7 @@ This document outlines the dependency management strategy for the Visual Studio 
 
 ## Philosophy
 
-The VS Code project balances stability, security, and feature velocity by:
+The MintMind project balances stability, security, and feature velocity by:
 - Keeping dependencies up-to-date when safe
 - Pinning versions only when necessary for compatibility or security
 - Prioritizing security fixes over new features
@@ -41,7 +41,7 @@ These dependencies are intentionally pinned to specific versions due to technica
 
 ### @types/cookie@1.0.0 (Latest: 0.6.0)
 - **Reason**: This is actually a newer version than the published "latest" (0.6.0)
-- **Background**: VS Code uses a development/pre-release version with more complete TypeScript definitions
+- **Background**: MintMind uses a development/pre-release version with more complete TypeScript definitions
 - **Risk of updating**: Loss of TypeScript intellisense and type safety
 - **Last reviewed**: 2025-11-11
 - **Next review**: When newer version becomes available
@@ -82,7 +82,7 @@ These dependencies are intentionally pinned to specific versions due to technica
 Some vulnerabilities may be accepted if:
 - They affect only development dependencies
 - No viable fix is available
-- Risk is theoretical and not exploitable in VS Code's use case
+- Risk is theoretical and not exploitable in MintMind's use case
 - Performance impact of fix outweighs security benefit
 
 ## Testing Requirements

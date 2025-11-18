@@ -3,19 +3,19 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import './bootstrap-server.js'; // this MUST come before other imports as it changes global state
-import * as path from 'node:path';
+import minimist from 'minimist';
 import * as http from 'node:http';
 import type { AddressInfo } from 'node:net';
 import * as os from 'node:os';
-import * as readline from 'node:readline';
+import * as path from 'node:path';
 import { performance } from 'node:perf_hooks';
-import minimist from 'minimist';
-import { devInjectNodeModuleLookupPath, removeGlobalNodeJsModuleLookupPaths } from './bootstrap-node.js';
+import * as readline from 'node:readline';
 import { bootstrapESM } from './bootstrap-esm.js';
-import { resolveNLSConfiguration } from './vs/base/node/nls.js';
 import { product } from './bootstrap-meta.js';
+import { devInjectNodeModuleLookupPath, removeGlobalNodeJsModuleLookupPaths } from './bootstrap-node.js';
+import './bootstrap-server.js'; // this MUST come before other imports as it changes global state
 import * as perf from './vs/base/common/performance.js';
+import { resolveNLSConfiguration } from './vs/base/node/nls.js';
 import { INLSConfiguration } from './vs/nls.js';
 import { IServerAPI } from './vs/server/node/remoteExtensionHostAgentServer.js';
 
@@ -30,7 +30,7 @@ const parsedArgs = minimist(process.argv.slice(2), {
 });
 ['host', 'port', 'accept-server-license-terms'].forEach(e => {
 	if (!parsedArgs[e]) {
-		const envValue = process.env[`VSCODE_SERVER_${e.toUpperCase().replace('-', '_')}`];
+		const envValue = process.env[`MINTMIND_SERVER_${e.toUpperCase().replace('-', '_')}`];
 		if (envValue) {
 			parsedArgs[e] = envValue;
 		}
@@ -133,7 +133,7 @@ if (shouldSpawnCli) {
 		}
 
 		output += `Server bound to ${typeof address === 'string' ? address : `${address.address}:${address.port} (${address.family})`}\n`;
-		// Do not change this line. VS Code looks for this in the output.
+		// Do not change this line. MintMind looks for this in the output.
 		output += `Extension host agent listening on ${typeof address === 'string' ? address : address.port}\n`;
 		console.log(output);
 
@@ -227,21 +227,21 @@ async function findFreePort(host: string | undefined, start: number, end: number
 async function loadCode(nlsConfiguration: INLSConfiguration) {
 
 	// required for `bootstrap-esm` to pick up NLS messages
-	process.env['VSCODE_NLS_CONFIG'] = JSON.stringify(nlsConfiguration);
+	process.env['MINTMIND_NLS_CONFIG'] = JSON.stringify(nlsConfiguration);
 
 	// See https://github.com/microsoft/vscode-remote-release/issues/6543
 	// We would normally install a SIGPIPE listener in bootstrap-node.js
 	// But in certain situations, the console itself can be in a broken pipe state
 	// so logging SIGPIPE to the console will cause an infinite async loop
-	process.env['VSCODE_HANDLES_SIGPIPE'] = 'true';
+	process.env['MINTMIND_HANDLES_SIGPIPE'] = 'true';
 
-	if (process.env['VSCODE_DEV']) {
+	if (process.env['MINTMIND_DEV']) {
 		// When running out of sources, we need to load node modules from remote/node_modules,
-		// which are compiled against nodejs, not electron
-		process.env['VSCODE_DEV_INJECT_NODE_MODULE_LOOKUP_PATH'] = process.env['VSCODE_DEV_INJECT_NODE_MODULE_LOOKUP_PATH'] || path.join(import.meta.dirname, '..', 'remote', 'node_modules');
-		devInjectNodeModuleLookupPath(process.env['VSCODE_DEV_INJECT_NODE_MODULE_LOOKUP_PATH']);
+		// which are compiled against Node.js runtime (not Tauri's Rust backend)
+		process.env['MINTMIND_DEV_INJECT_NODE_MODULE_LOOKUP_PATH'] = process.env['MINTMIND_DEV_INJECT_NODE_MODULE_LOOKUP_PATH'] || path.join(import.meta.dirname, '..', 'remote', 'node_modules');
+		devInjectNodeModuleLookupPath(process.env['MINTMIND_DEV_INJECT_NODE_MODULE_LOOKUP_PATH']);
 	} else {
-		delete process.env['VSCODE_DEV_INJECT_NODE_MODULE_LOOKUP_PATH'];
+		delete process.env['MINTMIND_DEV_INJECT_NODE_MODULE_LOOKUP_PATH'];
 	}
 
 	// Remove global paths from the node module lookup (node.js only)

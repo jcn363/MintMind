@@ -190,8 +190,8 @@ Edita el archivo `settings.json`:
 ```
 
 ### A través de variables de entorno
-- `VSCODE_TELEMETRY_LEVEL=off`: Deshabilita la telemetría
-- `VSCODE_DISABLE_TELEMETRY=1`: Deshabilita la telemetría (CLI)
+- `MINTMIND_TELEMETRY_LEVEL=off`: Deshabilita la telemetría
+- `MINTMIND_DISABLE_TELEMETRY=1`: Deshabilita la telemetría (CLI)
 
 ### Para servidores remotos
 - `--telemetry-level=all|error|crash|off`: Controla la telemetría del servidor
@@ -249,7 +249,7 @@ code --telemetry-level=all
 ### Extensiones
 - Las extensiones pueden enviar telemetría propia
 - Respeta la configuración del usuario
-- Debe usar las APIs oficiales de telemetría de VS Code
+- Debe usar las APIs oficiales de telemetría de MintMind
 
 ### Políticas de retención
 - Los datos se retienen según las políticas de jcn363t Azure Application Insights

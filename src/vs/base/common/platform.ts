@@ -1,4 +1,4 @@
-/*---------------------------------------------------------------------------------------------
+/* ---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
@@ -10,18 +10,13 @@ export const LANGUAGE_DEFAULT = 'en';
 let _isWindows = false;
 let _isMacintosh = false;
 let _isLinux = false;
-let _isLinuxSnap = false;
-let _isNative = false;
-let _isWeb = false;
-let _isElectron = false;
 let _isIOS = false;
 let _isCI = false;
-let _isMobile = false;
-let _locale: string | undefined = undefined;
+let _locale: string | undefined;
 let _language: string = LANGUAGE_DEFAULT;
 let _platformLocale: string = LANGUAGE_DEFAULT;
-let _translationsConfigFile: string | undefined = undefined;
-let _userAgent: string | undefined = undefined;
+let _translationsConfigFile: string | undefined;
+let _userAgent: string | undefined;
 
 export interface IProcessEnvironment {
 	[key: string]: string | undefined;
@@ -51,7 +46,7 @@ declare const process: INodeProcess;
 
 const $globalThis: any = globalThis;
 
-let nodeProcess: INodeProcess | undefined = undefined;
+let nodeProcess: INodeProcess | undefined;
 if (typeof $globalThis.vscode !== 'undefined' && typeof $globalThis.vscode.process !== 'undefined') {
 	// Native environment (sandboxed)
 	nodeProcess = $globalThis.vscode.process;
@@ -65,7 +60,6 @@ const isElectronRenderer = isElectronProcess && nodeProcess?.type === 'renderer'
 
 interface INavigator {
 	userAgent: string;
-	maxTouchPoints?: number;
 	language: string;
 }
 declare const navigator: INavigator;
@@ -75,12 +69,10 @@ if (typeof nodeProcess === 'object') {
 	_isWindows = (nodeProcess.platform === 'win32');
 	_isMacintosh = (nodeProcess.platform === 'darwin');
 	_isLinux = (nodeProcess.platform === 'linux');
-	_isLinuxSnap = _isLinux && !!nodeProcess.env['SNAP'] && !!nodeProcess.env['SNAP_REVISION'];
-	_isElectron = isElectronProcess;
-	_isCI = !!nodeProcess.env['CI'] || !!nodeProcess.env['BUILD_ARTIFACTSTAGINGDIRECTORY'] || !!nodeProcess.env['GITHUB_WORKSPACE'];
+	_isCI = Boolean(nodeProcess.env['CI']) || Boolean(nodeProcess.env['BUILD_ARTIFACTSTAGINGDIRECTORY']) || Boolean(nodeProcess.env['GITHUB_WORKSPACE']);
 	_locale = LANGUAGE_DEFAULT;
 	_language = LANGUAGE_DEFAULT;
-	const rawNlsConfig = nodeProcess.env['VSCODE_NLS_CONFIG'];
+	const rawNlsConfig = nodeProcess.env['MINTMIND_NLS_CONFIG'];
 	if (rawNlsConfig) {
 		try {
 			const nlsConfig: nls.INLSConfiguration = JSON.parse(rawNlsConfig);
@@ -88,10 +80,8 @@ if (typeof nodeProcess === 'object') {
 			_platformLocale = nlsConfig.osLocale;
 			_language = nlsConfig.resolvedLanguage || LANGUAGE_DEFAULT;
 			_translationsConfigFile = nlsConfig.languagePack?.translationsConfigFile;
-		} catch (e) {
-		}
+		} catch (e) { /* empty */ }
 	}
-	_isNative = true;
 }
 
 // Web environment
@@ -99,10 +89,7 @@ else if (typeof navigator === 'object' && !isElectronRenderer) {
 	_userAgent = navigator.userAgent;
 	_isWindows = _userAgent.indexOf('Windows') >= 0;
 	_isMacintosh = _userAgent.indexOf('Macintosh') >= 0;
-	_isIOS = (_userAgent.indexOf('Macintosh') >= 0 || _userAgent.indexOf('iPad') >= 0 || _userAgent.indexOf('iPhone') >= 0) && !!navigator.maxTouchPoints && navigator.maxTouchPoints > 0;
 	_isLinux = _userAgent.indexOf('Linux') >= 0;
-	_isMobile = _userAgent?.indexOf('Mobi') >= 0;
-	_isWeb = true;
 	_language = nls.getNLSLanguage() || LANGUAGE_DEFAULT;
 	_locale = navigator.language.toLowerCase();
 	_platformLocale = _locale;
@@ -142,14 +129,11 @@ if (_isMacintosh) {
 export const isWindows = _isWindows;
 export const isMacintosh = _isMacintosh;
 export const isLinux = _isLinux;
-export const isLinuxSnap = _isLinuxSnap;
-export const isNative = _isNative;
-export const isElectron = _isElectron;
-export const isWeb = _isWeb;
-export const isWebWorker = (_isWeb && typeof $globalThis.importScripts === 'function');
+export const isNative = Boolean(nodeProcess);
+export const isElectron = isElectronProcess;
+export const isWeb = Boolean(typeof navigator === 'object' && !isElectronRenderer);
+export const isWebWorker = (isWeb && typeof $globalThis.importScripts === 'function');
 export const webWorkerOrigin = isWebWorker ? $globalThis.origin : undefined;
-export const isIOS = _isIOS;
-export const isMobile = _isMobile;
 /**
  * Whether we run inside a CI environment, such as
  * GH actions or Azure Pipelines.
@@ -176,9 +160,8 @@ export namespace Language {
 			return language === 'en';
 		} else if (language.length >= 3) {
 			return language[0] === 'e' && language[1] === 'n' && language[2] === '-';
-		} else {
-			return false;
 		}
+		return false;
 	}
 
 	export function isDefault(): boolean {
@@ -225,7 +208,7 @@ export const setTimeout0 = (() => {
 
 		$globalThis.addEventListener('message', (e: any) => {
 			if (e.data && e.data.vscodeScheduleAsyncWork) {
-				for (let i = 0, len = pending.length; i < len; i++) {
+				for (let i = 0, len = pending.length; i < len; i+=1) {
 					const candidate = pending[i];
 					if (candidate.id === e.data.vscodeScheduleAsyncWork) {
 						pending.splice(i, 1);
@@ -240,7 +223,7 @@ export const setTimeout0 = (() => {
 			const myId = ++lastId;
 			pending.push({
 				id: myId,
-				callback: callback
+				callback: callback,
 			});
 			$globalThis.postMessage({ vscodeScheduleAsyncWork: myId }, '*');
 		};
@@ -269,11 +252,11 @@ export function isLittleEndian(): boolean {
 	return _isLittleEndian;
 }
 
-export const isChrome = !!(userAgent && userAgent.indexOf('Chrome') >= 0);
-export const isFirefox = !!(userAgent && userAgent.indexOf('Firefox') >= 0);
-export const isSafari = !!(!isChrome && (userAgent && userAgent.indexOf('Safari') >= 0));
-export const isEdge = !!(userAgent && userAgent.indexOf('Edg/') >= 0);
-export const isAndroid = !!(userAgent && userAgent.indexOf('Android') >= 0);
+export const isChrome = Boolean(userAgent && userAgent.indexOf('Chrome') >= 0);
+export const isFirefox = Boolean(userAgent && userAgent.indexOf('Firefox') >= 0);
+export const isSafari = Boolean(!isChrome && (userAgent && userAgent.indexOf('Safari') >= 0));
+export const isEdge = Boolean(userAgent && userAgent.indexOf('Edg/') >= 0);
+export const isAndroid = Boolean(userAgent && userAgent.indexOf('Android') >= 0);
 
 export function isBigSurOrNewer(osVersion: string): boolean {
 	return parseFloat(osVersion) >= 20;
