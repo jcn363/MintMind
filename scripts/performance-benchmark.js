@@ -42,14 +42,7 @@ async function measureStartupTime() {
     const start = Date.now();
 
     // Determine the binary path based on platform
-    let binaryPath;
-    if (platform() === 'win32') {
-      binaryPath = join(TAURI_BUNDLE_DIR, 'mintmind.exe'); // Adjust based on actual binary name
-    } else if (platform() === 'darwin') {
-      binaryPath = join(TAURI_BUNDLE_DIR, 'mintmind.app/Contents/MacOS/mintmind'); // Adjust for .app bundle
-    } else {
-      binaryPath = join(TAURI_BUNDLE_DIR, 'mintmind'); // Linux .AppImage or binary
-    }
+    const binaryPath = join(TAURI_BUNDLE_DIR, 'mintmind');
 
     const child = spawn(binaryPath, [], {
       stdio: ['pipe', 'pipe', 'pipe'],

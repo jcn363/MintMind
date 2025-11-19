@@ -3,7 +3,7 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-import { jest } from '@jest/globals';
+import { describe, it, expect, beforeEach, afterEach, jest } from '@jest/globals';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
@@ -84,7 +84,6 @@ describe('bootstrap-node', () => {
     it('should change directory on Windows', () => {
       const { setupCurrentWorkingDirectory } = require('../src/bootstrap-node.js');
 
-      mockProcess.platform = 'win32';
       mockProcess.execPath = 'C:\\test\\exec.exe';
       mockProcess.cwd.mockReturnValue('/test/cwd');
 
@@ -188,7 +187,6 @@ describe('bootstrap-node', () => {
       const { removeGlobalNodeJsModuleLookupPaths } = require('../src/bootstrap-node.js');
 
       delete mockProcess.versions.electron;
-      mockProcess.platform = 'win32';
 
       originalModule._nodeModulePaths.mockReturnValue([
         'C:\\Users\\user\\node_modules',
@@ -243,7 +241,6 @@ describe('bootstrap-node', () => {
     it('should configure temp directory for portable mode on Windows', () => {
       const { configurePortable } = require('../src/bootstrap-node.js');
 
-      mockProcess.platform = 'win32';
       mockFs.existsSync.mockImplementation((path) => path.includes('tmp'));
       process.env.MINTMIND_PORTABLE = 'C:\\portable\\data';
 

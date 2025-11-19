@@ -1578,8 +1578,8 @@ declare module 'vscode' {
 		 * ```ts
 		 * const u = URI.parse('file://server/c$/folder/file.txt')
 		 * u.authority === 'server'
-		 * u.path === '/c$/folder/file.txt'
-		 * u.fsPath === '\\server\c$\folder\file.txt'
+		 * u.path === '/shares/c/folder/file.txt'
+		 * u.fsPath === '/server/folder/file.txt'
 		 * ```
 		 */
 		readonly fsPath: string;

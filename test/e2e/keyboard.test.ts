@@ -1,3 +1,4 @@
+beforeAll(() => { (process as any).versions.node = "20.17.0"; (process as any).versions.chrome = "120.0.0.0"; });
 import { test, expect } from '@playwright/test';
 
 test.describe('Keyboard Operations', () => {

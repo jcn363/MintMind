@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/typescript-language-features/src/test/unit/jsdocSnippet.test.ts, window: extensions/typescript-language-features/src/test/unit/jsdocSnippet.test.ts, workspace: extensions/typescript-language-features/src/test/unit/jsdocSnippet.test.ts, ExtensionContext: class extensions/typescript-language-features/src/test/unit/jsdocSnippet.test.ts, commands: extensions/typescript-language-features/src/test/unit/jsdocSnippet.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

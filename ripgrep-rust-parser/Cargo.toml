@@ -1,0 +1,17 @@
+[package]
+name = "ripgrep-rust-parser"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "ripgrep_rust_parser"
+path = "src/lib.rs"
+
+[[bin]]
+name = "ripgrep-rust-parser"
+path = "src/main.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+base64 = "0.21"

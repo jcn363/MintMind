@@ -7,7 +7,7 @@ import { describe, it, expect, beforeEach, afterEach } from '@jest/globals';
 // Módulo de utilidades simple para testing
 class MathUtils {
   static add(a: number, b: number): number {
-    if (typeof a !== 'number' || typeof b !== 'number') {
+    if (typeof a !== 'number' || typeof b !== 'number' || !Number.isFinite(a) || !Number.isFinite(b)) {
       throw new Error('Both arguments must be numbers');
     }
     return a + b;

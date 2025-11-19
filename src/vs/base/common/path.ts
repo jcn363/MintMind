@@ -34,6 +34,7 @@
  */
 
 import * as process from './process.js';
+import { isWindows } from './platform.js';
 
 const CHAR_UPPERCASE_A = 65;/* A */
 const CHAR_LOWERCASE_A = 97; /* a */

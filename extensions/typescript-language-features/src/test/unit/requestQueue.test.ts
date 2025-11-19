@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/typescript-language-features/src/test/unit/requestQueue.test.ts, window: extensions/typescript-language-features/src/test/unit/requestQueue.test.ts, workspace: extensions/typescript-language-features/src/test/unit/requestQueue.test.ts, ExtensionContext: class extensions/typescript-language-features/src/test/unit/requestQueue.test.ts, commands: extensions/typescript-language-features/src/test/unit/requestQueue.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

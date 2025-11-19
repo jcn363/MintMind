@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/notebook-renderers/src/test/notebookRenderer.test.ts, window: extensions/notebook-renderers/src/test/notebookRenderer.test.ts, workspace: extensions/notebook-renderers/src/test/notebookRenderer.test.ts, ExtensionContext: class extensions/notebook-renderers/src/test/notebookRenderer.test.ts, commands: extensions/notebook-renderers/src/test/notebookRenderer.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

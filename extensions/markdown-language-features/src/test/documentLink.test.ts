@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/markdown-language-features/src/test/documentLink.test.ts, window: extensions/markdown-language-features/src/test/documentLink.test.ts, workspace: extensions/markdown-language-features/src/test/documentLink.test.ts, ExtensionContext: class extensions/markdown-language-features/src/test/documentLink.test.ts, commands: extensions/markdown-language-features/src/test/documentLink.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

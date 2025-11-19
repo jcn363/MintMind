@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/html-language-features/server/src/test/selectionRanges.test.ts, window: extensions/html-language-features/server/src/test/selectionRanges.test.ts, workspace: extensions/html-language-features/server/src/test/selectionRanges.test.ts, ExtensionContext: class extensions/html-language-features/server/src/test/selectionRanges.test.ts, commands: extensions/html-language-features/server/src/test/selectionRanges.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

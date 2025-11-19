@@ -54,7 +54,7 @@ export class MultiEditorTabsControl extends EditorTabsControl {
 	private readonly layoutScheduler = this._register(new MutableDisposable<IScheduledMultiEditorTabsControlLayout>());
 	private blockRevealActiveTab: boolean | undefined;
 
-	private path: IPath = isWindows ? win32 : posix;
+	private readonly path: IPath = posix;
 
 	private lastMouseWheelEventTime = 0;
 	private isMouseOverTabs = false;

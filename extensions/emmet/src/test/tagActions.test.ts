@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/emmet/src/test/tagActions.test.ts, window: extensions/emmet/src/test/tagActions.test.ts, workspace: extensions/emmet/src/test/tagActions.test.ts, ExtensionContext: class extensions/emmet/src/test/tagActions.test.ts, commands: extensions/emmet/src/test/tagActions.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

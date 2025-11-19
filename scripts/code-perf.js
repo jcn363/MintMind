@@ -61,23 +61,8 @@ function getExePath(buildPath) {
 		return buildPath;
 	}
 	let relativeExePath;
-	switch (process.platform) {
-		case 'darwin':
-			relativeExePath = path.join('Contents', 'MacOS', 'Electron');
-			break;
-		case 'linux': {
-			const product = require(path.join(buildPath, 'resources', 'app', 'product.json'));
-			relativeExePath = product.applicationName;
-			break;
-		}
-		case 'win32': {
-			const product = require(path.join(buildPath, 'resources', 'app', 'product.json'));
-			relativeExePath = `${product.nameShort}.exe`;
-			break;
-		}
-		default:
-			throw new Error('Unsupported platform.');
-	}
+	const product = require(path.join(buildPath, 'resources', 'app', 'product.json'));
+	relativeExePath = product.applicationName;
 	return buildPath.endsWith(relativeExePath) ? buildPath : path.join(buildPath, relativeExePath);
 }
 
@@ -85,7 +70,7 @@ function getExePath(buildPath) {
  * @returns {string}
  */
 function getLocalCLIPath() {
-	return process.platform === 'win32' ? path.join(MINTMIND_FOLDER, 'scripts', 'code.bat') : path.join(MINTMIND_FOLDER, 'scripts', 'code.sh');
+	return path.join(MINTMIND_FOLDER, 'scripts', 'code.sh');
 }
 
 main();

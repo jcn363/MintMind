@@ -5,8 +5,8 @@
 
 import { CharCode } from './charCode.js';
 import { MarshalledId } from './marshallingIds.js';
-import * as paths from './path.js';
-import { isWindows } from './platform.js';
+import * as paths from './path.ts';
+import { isWindows } from './platform.ts';
 
 const _schemePattern = /^\w[\w\d+.-]*$/;
 const _singleSlashStart = /^\//;

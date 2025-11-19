@@ -1,4 +1,4 @@
-jest.mock('@tauri-apps/api/core');
+jest.mock('@tauri-apps/api/core', () => ({ invoke: jest.fn() }));
 import { invoke } from '@tauri-apps/api/core';
 
 describe('PTY Commands', () => {

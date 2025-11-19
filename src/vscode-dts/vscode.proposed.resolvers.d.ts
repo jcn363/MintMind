@@ -282,7 +282,7 @@ declare module 'vscode' {
 
 	export interface ExecEnvironment {
 		readonly env: ProcessEnv;
-		/** 'darwin' | 'linux' | 'win32' */
+		/** 'linux' */
 		readonly osPlatform: string;
 		/** uname.version or windows version number, undefined if it could not be read. */
 		readonly osRelease?: string;

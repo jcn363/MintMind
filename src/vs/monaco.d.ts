@@ -161,8 +161,8 @@ declare namespace monaco {
 		 * ```ts
 			const u = Uri.parse('file://server/c$/folder/file.txt')
 			u.authority === 'server'
-			u.path === '/shares/c$/file.txt'
-			u.fsPath === '\\server\c$\folder\file.txt'
+			u.path === '/shares/c/file.txt'
+			u.fsPath === '/server/folder/file.txt'
 		```
 		 *
 		 * Using `Uri#path` to read a file (using fs-apis) would not be enough because parts of the path,
@@ -185,8 +185,8 @@ declare namespace monaco {
 		 */
 		static parse(value: string, _strict?: boolean): Uri;
 		/**
-		 * Creates a new Uri from a file system path, e.g. `c:\my\files`,
-		 * `/usr/home`, or `\\server\share\some\path`.
+		 * Creates a new Uri from a file system path, e.g. `/usr/home/files`,
+		 * `/usr/home`, or `/server/share/some/path`.
 		 *
 		 * The *difference* between `Uri#parse` and `Uri#file` is that the latter treats the argument
 		 * as path, not as stringified-uri. E.g. `Uri.file(path)` is **not the same as**

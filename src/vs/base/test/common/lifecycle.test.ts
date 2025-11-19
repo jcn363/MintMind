@@ -249,7 +249,7 @@ function assertThrows(fn: () => void, test: (error: any) => void) {
 		fn();
 		assert.fail('Expected function to throw, but it did not.');
 	} catch (e) {
-		assert.ok(it(e));
+		assert.ok(test(e));
 	}
 }
 

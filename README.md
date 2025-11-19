@@ -5,19 +5,33 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Bun](https://img.shields.io/badge/bun-v1.0.0-333333?logo=bun&labelColor=white)](https://bun.sh/)
 [![Tauri](https://img.shields.io/badge/Tauri-2.0.0-FFC131?logo=tauri&logoColor=white)](https://tauri.app/)
+[![Linux x86_64](https://img.shields.io/badge/Linux-x86_64-brightgreen?logo=linux&logoColor=white)](https://ubuntu.com/)
 
 MintMind is a modern, extensible IDE built with TypeScript, Tauri, and Bun, designed for high performance and AI integration.
 
 ## ✨ Features
 
 - 🚀 **Blazing Fast** - Built on Bun runtime for exceptional performance
-- 🖥️ **Cross-Platform** - Native desktop apps for Windows, macOS, and Linux
+- 🖥️ **Linux x86_64 exclusivo** - Aplicaciones nativas para Linux (Mint 21+, Ubuntu 22.04+, Fedora 40+)
 - 🤖 **AI Integration** - Seamless AI assistance through MCP (Model Context Protocol)
 - 🧩 **Extensible** - Rich plugin architecture with MintMind extension compatibility
 - 💻 **Built-in Tools** - Integrated terminal, debugger, and version control
 - 🎨 **Customizable UI** - Theme support and flexible layout options
 - 🔍 **Smart Code Navigation** - Go to definition, find references, and more
 - 🧪 **Testing** - Built-in test runner with Jest integration
+
+## 🛡️ Soporte Plataformas
+
+MintMind es **exclusivo para Linux x86_64** en distribuciones modernas:
+
+- **Linux Mint 21+** (Ubuntu 22.04 base)
+- **Ubuntu 22.04 LTS+**
+- **Debian 12+**
+- **Fedora 40+**
+
+**No compatible con**: Windows, macOS, ARM/aarch64, 32-bit, o distros legacy (glibc < 2.35).
+
+Todas las instrucciones usan estándares POSIX. Despliegue vía Docker/Podman/Kubernetes.
 
 ## 🧪 Testing
 
@@ -36,13 +50,13 @@ See [TAURI_TESTING_GUIDE.md](docs/TAURI_TESTING_GUIDE.md) for detailed testing d
 
 ### Prerequisites
 
-- Node.js 18+
-- Rust 1.70+ (install from <https://rustup.rs/>) - Required for Tauri framework, not Electron
-- Platform-specific requirements:
-
-  - Windows: Visual Studio Build Tools
-  - macOS: Xcode Command Line Tools
-  - Linux: webkit2gtk, libgtk-3-dev
+- Bun 1.1+
+- Rust 1.80+ (`curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y`)
+- **Dependencias Linux (Ubuntu 22.04+, Debian 12+, Mint 21+)**:
+  ```bash
+  sudo apt update
+  sudo apt install -y libwebkit2gtk-4.1-dev build-essential curl libssl-dev libgtk-3-dev libayatana-appindicator3-dev librsvg2-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
+  ```
 
 ### Installation
 
@@ -133,7 +147,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [MintMind](https://github.com/microsoft/vscode) - For inspiration and extension compatibility
+- [Visual Studio Code](https://github.com/microsoft/vscode) - For inspiration and extension compatibility
 - [Tauri](https://tauri.app/) - For the amazing desktop app framework
 - [Bun](https://bun.sh/) - For the fast JavaScript runtime
 
@@ -144,7 +158,7 @@ MintMind uses **Tauri** for its desktop application framework:
 - **Frontend**: TypeScript, Monaco Editor (web technologies)
 - **Backend**: Rust (native performance and security)
 - **IPC**: Tauri commands and events
-- **Webview**: System webview (WebKit on macOS/Linux, WebView2 on Windows)
+- **Webview**: WebKitGTK 4.1+ (Linux x86_64)
 - **Bundle Size**: ~15-20MB (vs. ~150MB with legacy Electron)
 - **Memory Usage**: ~60% lower than Electron
 - **Startup Time**: ~70% faster than Electron
@@ -170,11 +184,11 @@ For historical context and migration details, see:
 
 ![MintMind in action](https://user-images.githubusercontent.com/35271042/118224532-3842c400-b438-11eb-923d-a5f66fa6785a.png)
 
-[MintMind](https://code.visualstudio.com) es una distribución del repositorio `MintMind` con personalizaciones específicas de desarrollo colaborativo liberadas bajo una licencia tradicional [MIT](LICENSE.txt).
+MintMind es un IDE moderno y extensible construido con TypeScript, Tauri y Bun, diseñado para alto rendimiento e integración con IA.
 
 MintMind combina la simplicidad de un editor de código con lo que los desarrolladores necesitan para su ciclo principal de edición-construcción-depuración. Proporciona soporte completo para edición, navegación y comprensión de código junto con depuración ligera, un rico modelo de extensibilidad, e integración ligera con herramientas existentes.
 
-MintMind se actualiza mensualmente con nuevas características y corrección de bugs. Puedes descargarlo para Windows, macOS y Linux en el sitio web de MintMind. Para obtener las últimas versiones diariamente, instala la compilación [Insiders](https://code.visualstudio.com/insiders).
+MintMind se actualiza mensualmente con nuevas características y corrección de bugs. Puedes descargarlo para **Linux x86_64** (Mint 21+, Ubuntu 22.04+) en el sitio web de MintMind. Para compilaciones Insiders diarias, build desde fuente.
 
 ## Guías de Desarrollo
 
@@ -249,9 +263,9 @@ Para desarrollar extensiones, consulta la documentación en [`extensions/README.
 
 Hay muchas formas de participar en este proyecto:
 
-- [Enviar bugs y solicitudes de características](https://github.com/jcn363/vscode/issues), y ayudar a verificarlos cuando se implementen
-- Revisar [cambios en el código fuente](https://github.com/jcn363/vscode/pulls)
-- Revisar la [documentación](https://github.com/jcn363/vscode-docs) y hacer pull requests para cualquier cosa desde errores tipográficos hasta contenido nuevo
+- [Enviar bugs y solicitudes de características](https://github.com/jcn363/mintmind/issues), y ayudar a verificarlos cuando se implementen
+- Revisar [cambios en el código fuente](https://github.com/jcn363/mintmind/pulls)
+- Revisar la [documentación](docs/) y hacer pull requests para cualquier cosa desde errores tipográficos hasta contenido nuevo
 
 Si estás interesado en corregir issues y contribuir directamente al código base,
 consulta los documentos detallados:
@@ -283,14 +297,13 @@ consulta los documentos detallados:
 
 ## Comunidad y Soporte
 
-- Hacer preguntas en [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode)
+- Hacer preguntas en [Stack Overflow](https://stackoverflow.com/questions/tagged/mintmind)
 - [Solicitar nuevas características](CONTRIBUTING.md)
-- Votar por [solicitudes de características populares](https://github.com/jcn363/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
-- [Reportar un issue](https://github.com/jcn363/vscode/issues)
-- Conectar con la comunidad de autores de extensiones en [GitHub Discussions](https://github.com/jcn363/vscode-discussions/discussions) o [Slack](https://aka.ms/vscode-dev-community)
-- Seguir [@code](https://twitter.com/code) y hacernos saber qué piensas!
+- Votar por [solicitudes de características populares](https://github.com/jcn363/mintmind/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
+- [Reportar un issue](https://github.com/jcn363/mintmind/issues)
+- Conectar con la comunidad de autores de extensiones en [GitHub Discussions](https://github.com/jcn363/mintmind-discussions/discussions) o [Discord](https://discord.gg/mintmind)
 
-Consulta nuestro [wiki](https://github.com/jcn363/vscode/wiki/Feedback-Channels) para una descripción de cada uno de estos canales e información sobre otros canales disponibles impulsados por la comunidad.
+Consulta nuestros [discussions](https://github.com/jcn363/mintmind/discussions) para una descripción de cada uno de estos canales e información sobre otros canales disponibles impulsados por la comunidad.
 
 ## Directrices de Desarrollo Global
 
@@ -338,13 +351,13 @@ Para la documentación completa de las directrices de desarrollo, consulta [GLOB
 
 ### Recursos Adicionales
 
-- **Wiki del Proyecto**: [Documentación comunitaria](https://github.com/jcn363/vscode/wiki)
+- **Wiki del Proyecto**: [Documentación comunitaria](docs/)
 - **Blog de Desarrollo**: Actualizaciones y anuncios técnicos
 - **Ejemplos de Código**: Repositorios con ejemplos prácticos
 
 ## Related Projects
 
-Many of the core components and extensions to MintMind live in their own repositories on GitHub. For example, the [node debug adapter](https://github.com/jcn363/vscode-node-debug) and the [mono debug adapter](https://github.com/jcn363/vscode-mono-debug) repositories are separate from each other. For a complete list, please visit the [Related Projects](https://github.com/jcn363/vscode/wiki/Related-Projects) page on our [wiki](https://github.com/jcn363/vscode/wiki).
+Many of the core components and extensions to MintMind live in their own repositories on GitHub. For a complete list, please visit the [Related Projects](docs/RELATED_PROJECTS.md) page in our documentation.
 
 ## Bundled Extensions
 
@@ -352,19 +365,17 @@ MintMind includes a set of built-in extensions located in the [extensions](exten
 
 ## Development Container
 
-This repository includes a MintMind Dev Containers / GitHub Codespaces development container.
+This repository includes a MintMind development container for consistent development environments.
 
-- For [Dev Containers](https://code.visualstudio.com/docs/remote/containers), use the **Dev Containers: Clone Repository in Container Volume...** command which creates a Docker volume for better disk I/O on macOS and Windows.
+- For Dev Containers, use the **Dev Containers: Clone Repository in Container Volume...** command which creates a Docker volume for better disk I/O.
 
-  - If you already have MintMind and Docker installed, you can also click [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/jcn363/vscode) to get started. This will cause MintMind to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
-
-- For Codespaces, install the [GitHub Codespaces](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces) extension in MintMind, and use the **Codespaces: Create New Codespace** command.
+- For GitHub Codespaces, use the **Codespaces: Create New Codespace** command.
 
 Docker / the Codespace should have at least **4 Cores and 6 GB of RAM (8 GB recommended)** to run a full build. See the [development container README](.devcontainer/README.md) for more information.
 
 ## Code of Conduct
 
-This project has adopted the [jcn363 Open Source Code of Conduct](https://opensource.jcn363.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.jcn363.com/codeofconduct/faq/) or contact [opencode@jcn363.com](mailto:opencode@jcn363.com) with any additional questions or comments.
+This project has adopted the MintMind Code of Conduct to foster an inclusive and respectful community. For more information, please refer to our [Code of Conduct](CODE_OF_CONDUCT.md) or contact [conduct@mintmind.dev](mailto:conduct@mintmind.dev) with any questions or concerns.
 
 ## License
 

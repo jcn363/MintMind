@@ -1,8 +1,10 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/markdown-language-features/src/test/copyFile.test.ts, window: extensions/markdown-language-features/src/test/copyFile.test.ts, workspace: extensions/markdown-language-features/src/test/copyFile.test.ts, ExtensionContext: class extensions/markdown-language-features/src/test/copyFile.test.ts, commands: extensions/markdown-language-features/src/test/copyFile.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+beforeAll(() => { (globalThis as any).vscode = { Uri: class {}, window: {}, workspace: {}, ExtensionContext: class {}, commands: {} }; });\n
 import * as assert from 'assert';
 import 'mocha';
 import * as vscode from 'vscode';

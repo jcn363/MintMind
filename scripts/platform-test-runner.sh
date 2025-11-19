@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Cross-platform test runner for Tauri application
+# Linux test runner for MintMind Tauri application
 # Detects OS and runs appropriate test suites
 
 set -e  # Exit on any error

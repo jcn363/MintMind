@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/microsoft-authentication/src/common/test/scopeData.test.ts, window: extensions/microsoft-authentication/src/common/test/scopeData.test.ts, workspace: extensions/microsoft-authentication/src/common/test/scopeData.test.ts, ExtensionContext: class extensions/microsoft-authentication/src/common/test/scopeData.test.ts, commands: extensions/microsoft-authentication/src/common/test/scopeData.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/github/src/test/github.test.ts, window: extensions/github/src/test/github.test.ts, workspace: extensions/github/src/test/github.test.ts, ExtensionContext: class extensions/github/src/test/github.test.ts, commands: extensions/github/src/test/github.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

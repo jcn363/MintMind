@@ -8,7 +8,7 @@ import { isThenable } from './async.js';
 import { CharCode } from './charCode.js';
 import { isEqualOrParent } from './extpath.js';
 import { LRUCache } from './map.js';
-import { basename, extname, posix, sep } from './path.js';
+import { basename, extname, posix, sep } from './path.ts';
 import { isLinux } from './platform.js';
 import { endsWithIgnoreCase, equalsIgnoreCase, escapeRegExpCharacters, ltrim } from './strings.js';
 

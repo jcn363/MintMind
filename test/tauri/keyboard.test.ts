@@ -1,6 +1,6 @@
 import { invoke } from '@tauri-apps/api/core';
 
-jest.mock('@tauri-apps/api/core');
+jest.mock('@tauri-apps/api/core', () => ({ invoke: jest.fn() }));
 
 describe('Keyboard Commands', () => {
   const mockInvoke = invoke as jest.MockedFunction<typeof invoke>;

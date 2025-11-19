@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/configuration-editing/src/test/completion.test.ts, window: extensions/configuration-editing/src/test/completion.test.ts, workspace: extensions/configuration-editing/src/test/completion.test.ts, ExtensionContext: class extensions/configuration-editing/src/test/completion.test.ts, commands: extensions/configuration-editing/src/test/completion.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

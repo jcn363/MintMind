@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mintmind
+  labels:
+    app: mintmind
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mintmind
+  template:
+    metadata:
+      labels:
+        app: mintmind
+    spec:
+      containers:
+      - name: mintmind
+        image: ghcr.io/jcn363/mintmind:latest
+        ports:
+        - containerPort: 1420
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        env:
+        - name: RUST_LOG
+          value: "info"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mintmind-service
+spec:
+  selector:
+    app: mintmind
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 1420
+  type: ClusterIP

@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/git-base/src/test/foldingProvider.test.ts, window: extensions/git-base/src/test/foldingProvider.test.ts, workspace: extensions/git-base/src/test/foldingProvider.test.ts, ExtensionContext: class extensions/git-base/src/test/foldingProvider.test.ts, commands: extensions/git-base/src/test/foldingProvider.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

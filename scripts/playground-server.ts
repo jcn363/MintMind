@@ -146,7 +146,7 @@ class FileServer {
 		if (!isSubPath) {
 			return undefined;
 		}
-		const relativePath = relative.replace(/\\/g, '/');
+		const relativePath = relative;
 		return `/${relativePath}`;
 	}
 

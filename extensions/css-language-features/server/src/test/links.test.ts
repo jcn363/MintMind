@@ -1,3 +1,4 @@
+beforeAll(() => { (globalThis as any).vscode = { Uri: class extensions/css-language-features/server/src/test/links.test.ts, window: extensions/css-language-features/server/src/test/links.test.ts, workspace: extensions/css-language-features/server/src/test/links.test.ts, ExtensionContext: class extensions/css-language-features/server/src/test/links.test.ts, commands: extensions/css-language-features/server/src/test/links.test.ts }; });
 /*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.

@@ -53,21 +53,19 @@ export async function assertThrowsAsync(block: () => any, message: string | Erro
 export function ensureNoDisposablesAreLeakedInTestSuite(): Pick<DisposableStore, 'add'> {
 	let tracker: DisposableTracker | undefined;
 	let store: DisposableStore;
-	setup(() => {
+	beforeAll(() => {
 		store = new DisposableStore();
 		tracker = new DisposableTracker();
 		setDisposableTracker(tracker);
 	});
 
-	teardown(function (this: import('mocha').Context) {
+	afterAll(() => {
 		store.dispose();
 		setDisposableTracker(null);
-		if (this.currentTest?.state !== 'failed') {
-			const result = tracker!.computeLeakingDisposables();
-			if (result) {
-				console.error(result.details);
-				throw new Error(`There are ${result.leaks.length} undisposed disposables!${result.details}`);
-			}
+		const result = tracker!.computeLeakingDisposables();
+		if (result) {
+			console.error(result.details);
+			throw new Error(`There are ${result.leaks.length} undisposed disposables!${result.details}`);
 		}
 	});
 

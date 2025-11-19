@@ -49,8 +49,8 @@ let nodeProcess: INodeProcess | undefined;
 if (typeof $globalThis.vscode !== 'undefined' && typeof $globalThis.vscode.process !== 'undefined') {
 	// Native environment (sandboxed)
 	nodeProcess = $globalThis.vscode.process;
-} else if (typeof process !== 'undefined' && typeof process?.versions?.node === 'string') {
-	// Native environment (non-sandboxed)
+} else if (typeof process !== 'undefined' && typeof process.platform === 'string') {
+	// Native/Bun environment (non-sandboxed)
 	nodeProcess = process;
 }
 
@@ -263,3 +263,7 @@ export function isBigSurOrNewer(osVersion: string): boolean {
 export function isTahoeOrNewer(osVersion: string): boolean {
 	return parseFloat(osVersion) >= 25;
 }
+
+export const isTauriMode = typeof (globalThis as any).__TAURI__ !== 'undefined';
+
+export const isLinuxSnap = isLinux && !!process.env?.['SNAP'] && !!process.env?.['SNAP_REVISION'];
