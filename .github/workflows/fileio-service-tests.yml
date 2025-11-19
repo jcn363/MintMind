@@ -68,7 +68,7 @@ jobs:
         working-directory: cli
 
       - name: Upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: test-results-linux
@@ -129,7 +129,7 @@ jobs:
         working-directory: cli
 
       - name: Upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: test-results-macos
@@ -190,7 +190,7 @@ jobs:
         working-directory: cli
 
       - name: Upload test results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: failure()
         with:
           name: test-results-windows
@@ -267,7 +267,7 @@ jobs:
           echo "TypeScript benchmark completed"
 
       - name: Upload benchmark results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: benchmark-results
           path: |
@@ -293,7 +293,7 @@ jobs:
         working-directory: cli
 
       - name: Upload binary artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: fileio-binary
           path: cli/target/release/fileio
