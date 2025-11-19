@@ -22,7 +22,7 @@ jobs:
       RUSTUP_TOOLCHAIN: stable
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust
         run: |
@@ -83,7 +83,7 @@ jobs:
       RUSTUP_TOOLCHAIN: stable
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust
         run: |
@@ -144,7 +144,7 @@ jobs:
       RUSTUP_TOOLCHAIN: stable-x86_64-pc-windows-msvc
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust
         run: |
@@ -205,7 +205,7 @@ jobs:
       RUSTUP_TOOLCHAIN: stable
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust
         run: |
@@ -281,7 +281,7 @@ jobs:
       RUSTUP_TOOLCHAIN: stable
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Rust
         run: |
